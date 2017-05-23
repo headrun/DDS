@@ -1,0 +1,52 @@
+body {
+  background-image: url(../img/bg.jpg);
+}
+
+.login-box {
+  margin-top: 5%;
+  color: #fff;
+  border-radius: 0px;
+  float: none !important;
+  background-color: #2C9BF4;
+  padding: 60px 75px 40px 75px;
+  max-width: 450px;
+}
+
+.login-label {
+    font-family: sans-serif; 
+    font-weight: 700;
+    font-size: 16px;
+}
+.email {
+    background-image: url(../img/user_name.png);
+    background-repeat: no-repeat;
+    text-indent: 27px;
+    background-size: 15px 18px;
+    background-position: 10px;
+}
+.password {
+    background-image: url(../img/password.png);
+    background-repeat: no-repeat;
+    text-indent: 27px;
+    background-size: 15px 18px;
+    background-position: 10px;
+}
+
+.forgot-pass {
+    font-size: smaller; 
+    margin-bottom: 10px; 
+    color: #fff;
+}
+
+.copyright {
+  color: #fff;
+}
+.login-btn {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  color: #000;
+}
+.logo-img {
+  margin-bottom: 15px;
+}

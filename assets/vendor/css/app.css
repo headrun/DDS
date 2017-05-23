@@ -1,0 +1,267 @@
+.navbar {
+	background-color: #fff;
+    box-shadow: 0 5px 24px -10px rgba(0,0,0,.1);
+    border-bottom: none;
+    padding: 0 20px;
+    height: 70px;
+    color: #eaeaeb;
+}
+
+.navbar > a.menubutton {
+	position: relative;
+    font-size: 22px;
+    line-height: 22px;
+    padding: 24px 10px;
+    padding-left: 0;
+    color: #000;
+    cursor: pointer;
+}
+
+.navbar > a.brand {
+	padding: 12px;
+    position: relative;
+    display: block;
+    height: 100%;
+    text-decoration: none;
+}
+
+.navbar > a.brand > .primarylogo {
+	padding-top: 11px;
+	width: 200px;
+}
+
+.logout {
+	display: block;
+    height: 80px;
+    margin-right: 10px;
+    color: #000;
+    cursor: pointer;
+}
+
+.logout > .dropdown {
+	padding: 23px 20px;
+}
+
+.logout .dropdown-menu {
+	min-width: 117px;
+}
+
+.secondary-logo > img {
+	padding-right: 20px;
+    border-right: 1px solid #eaeaeb;
+    width: 150px;
+}
+
+.sidenav {
+	display: none;
+    height: 100%;
+    width: 240px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #060612;
+    overflow-x: hidden;
+    padding-top: 35px;
+    margin-top: 70px;
+}
+.sidenav > .closebtn {
+	position: absolute;
+    top: 0;
+    right: 5px;
+    font-size: 25px;
+    margin-left: 55px;
+}
+
+.sidenav > a {
+	padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #9d9d9d;
+    display: block;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+
+.sidenav > a.active {
+	color: #fff !important;
+}
+.sidenav a .fa {
+	width: 15px; 
+	position: absolute;  
+	padding-top: 3px;
+}
+.aside-overlay {
+	position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    cursor: pointer;
+    background-color: rgba(0,0,0,.5);
+    z-index: -2;
+}
+.dashboard-content {
+	height: 100%;
+    position: relative;
+    top: 70;
+    background: #EAEAEB;
+    left: 0;
+    padding: 4px 0 0 0;
+}
+
+.top-div {
+	height: 180px;
+    background-color: #2196f3;
+    box-shadow: 2px 3px 10px 0 rgba(0,0,0,.12);
+}
+
+.visualization {
+	height: 100%;
+    padding: 0 10px 50px 10px;
+    overflow: auto;
+}
+.widget-1 {
+	font-family: ProximaNova;
+	padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.widget-2 {
+	font-family: ProximaNova;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.widget-title {
+	color: #fff;
+    margin-left: 75px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.widget-icon img {
+	width: 35px;
+    margin-left: 20px;
+    margin-bottom: -50px;
+    padding-top: 15px;
+}
+thead tr th {
+	color: #004269;
+}
+.table>tbody>tr>td {
+	border-top: 0px !important;
+	padding: 15px 10px;
+}
+.table>thead>tr>th {
+	border-bottom: 0px !important;
+}
+tbody>tr:nth-child(odd) {
+    background: #F8FAFD;
+}
+tbody>tr:nth-child(even) {
+    background: #fff;
+}
+.circle{
+	height:10px;
+	width:10px;
+	border-radius:50%;
+	background-color: green;
+}
+
+/*.logout-dropdown{
+	padding:12px;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover{
+	background-color:#555;
+}
+
+.right-nav{
+	height:75px;
+}
+
+.question{
+	padding:25px 15px 25px 0px;
+}
+
+.welcome{
+	font-size:16px;
+	color:#fff;
+}
+
+.navbar-header{
+	background-color:#96BD3F;
+}
+
+.custom-container{
+	padding-left:0px;
+	padding-right:5px;
+}
+
+.custom-question{
+	color:#fff;
+}
+
+.sidebar{
+	width:100px;
+	height:100%;
+	position:fixed;
+	background-color:black;
+	color:white;
+	display: inline-block;
+}
+
+.page-data-container{
+	display: inline-block;
+	margin-left:100px;
+	padding:5px;
+	width:92%;
+}
+.custom-page-container{
+	padding-left:0px;
+	padding-right:0px;
+}
+.sidebarbtn{
+	background-color: black;
+	color:white;
+	border:none;
+	width:98px;
+	padding-top:5px;
+	padding-bottom:5px;
+}
+.widget{
+	padding-top:5px;
+	padding-bottom: 5px;
+	min-height: 250px;
+
+}
+.widget-heading{
+	 color:#1E3147;
+	 background-color:#BDD0E6;
+	 padding:10px;
+}
+.desc{
+	font-size:16px;
+}
+.project_name{
+	font-weight:bold;
+}
+.middle-widget{
+	width:50%;
+}
+.circle{
+	height:10px;
+	width:10px;
+	border-radius:50%;
+	background-color: green;
+}*/
