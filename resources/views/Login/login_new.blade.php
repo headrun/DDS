@@ -48,6 +48,7 @@
 				<img class="primarylogo" src="/img/summary_icons/tacktion_logo_white.png">
 			</div>
 			<div class="panel panel-default">
+				<h3>DDS</h3>
 				<form>
 					<input type="email" class="form-control" placeholder="Email" name="email" required />
 					<br>

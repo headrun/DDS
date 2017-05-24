@@ -17,6 +17,7 @@
   </div>
   <div class="row">
     <div class=" col-lg-5 col-md-5 col-sm-8 col-xs-8 login-box center-block panel panel-default">
+    <center><h3 style="font-family: ProximaNova;">DDS</h3></center>
     {!! Form::open(array('url' => '/vault/adminlogin', 'id'=>"adminLoginForm", "class"=>"", 'method' => 'post')) !!}
       {!! csrf_field() !!}
       <label class="login-label">Login to Your Account</label>

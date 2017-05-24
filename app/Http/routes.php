@@ -22,3 +22,11 @@ Route::get('/login',function(){
 Route::get('/dashboard',function(){
 	return view('Dashboard.index');
 });
+
+Route::get('/extractor_library',function(){
+	return view('extractor_library');
+});
+
+Route::get('/setup_new_proj',function(){
+	return view('setup_new_proj');
+});

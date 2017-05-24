@@ -26,12 +26,80 @@
     @yield('BaseCSSLib') 
   </head>
   <body>
+
+    <div class="container-fluid">
+  <!-- Fixed navbar -->
+    <nav class="clearfix navbar navbar-default navbar-fixed-top collapsed"">
+      <!--<a class="pull-left menubutton toggle-collapse">
+        <i aria-hidden="true" class="fa fa-bars"></i> 
+      </a>-->
+      <a class="pull-left brand more-padding">
+        <!--<img src="{{url()}}/assets/vendor/img/traction_logo.png" class="primarylogo">-->
+        <h1 style="margin-top: 4px;">D D S</h1>
+      </a>
+      <div class="pull-left center-contetnt"></div>
+      <div class="sidenav" id="mySidenav">
+        <!--<a class="closebtn" href="javascript:void(0)">×</a>-->
+        <a class="home" href="{{url()}}/dashboard">
+          <span>
+            <i class="fa fa-home fa-lg" aria-hidden="true"></i>
+          </span>
+          <span style="margin-left: 35px">Home</span>
+        </a>
+        <a class="extractor_library" href="{{url()}}/extractor_library">
+          <span>
+            <i class="fa fa-book fa-lg" aria-hidden="true"></i>
+          </span>
+          <span style="margin-left: 35px">Extractor Library</span>
+        </a>
+        <a class="ingest" href="#">
+          <span>
+            <i class="fa fa-reply fa-lg" aria-hidden="true"></i>
+          </span>
+          <span style="margin-left: 35px">Ingest</span>
+        </a>
+        <a class="validate" href="#">
+          <span>
+            <i class="fa fa-address-card-o fa-lg" aria-hidden="true"></i>
+          </span>
+          <span style="margin-left: 35px">Validate</span>
+        </a>
+        <a class="transform" href="#">
+          <span>
+            <i class="fa fa-refresh fa-lg" aria-hidden="true"></i>
+          </span>
+          <span style="margin-left: 35px">Transform</span>
+        </a>
+      </div>
+      <div class="aside-overlay"></div>
+      <ul class="pull-right nav navbar-nav">
+        <li>
+          <div class="logout">
+            <div class="dropdown">
+              <span class="dropdown-toggle" data-toggle="dropdown">User Name 
+                <span class="caret"></span>
+              </span>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#">Logout</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <div class="pull-right secondary-logo ng-scope">
+        <img src="{{url()}}/assets/vendor/img/dcube_new.png" class="pull-right">
+      </div>
+    </nav>
+</div>
+
     @yield('BaseContent')
     <script type="text/javascript">
       var url = "{{url()}}";
     </script> 
     @section('JSJquery')
-    <script src="{{url()}}/assets/libs/jquery/dist/jquery.min.js"></script> 
+    <script src="{{url()}}/assets/libs/jQuery/dist/jquery.min.js"></script>
     @show 
     @section('PageLoader')
     <div class="loader">
