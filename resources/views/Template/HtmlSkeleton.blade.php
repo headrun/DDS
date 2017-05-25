@@ -27,7 +27,7 @@
   </head>
   <body>
 
-    <div class="container-fluid">
+    <div class="container-fluid master-layout-class">
   <!-- Fixed navbar -->
     <nav class="clearfix navbar navbar-default navbar-fixed-top collapsed"">
       <!--<a class="pull-left menubutton toggle-collapse">

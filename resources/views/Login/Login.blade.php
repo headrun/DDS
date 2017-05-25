@@ -5,9 +5,6 @@
 @section('BaseCSSLib')
 <link rel="stylesheet" href="{{url()}}/assets/vendor/css/login.css">
 @show
-@section('BaseJSLib')
-<script src="{{url()}}/assets/vendor/admin_mod/js/login.js"></script>
-@show
 @section('BaseContent')
 <div class="container-fluid">
   <div class="row">
@@ -35,3 +32,11 @@
   </div>
 </div>
 @stop
+@section('BaseJSLib')
+<script src="//code.jquery.com/jquery-1.12.4.js"></script>
+<script>
+  $(document).ready(function(){
+      $('.master-layout-class').hide();
+  });
+</script>
+@show
