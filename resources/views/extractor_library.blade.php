@@ -202,4 +202,4 @@
     });*/
     $('a.extractor_library').addClass('active');
 </script>
-@show
+@stop

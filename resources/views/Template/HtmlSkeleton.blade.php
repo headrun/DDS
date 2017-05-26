@@ -23,7 +23,6 @@
     <link rel="stylesheet" href="{{url()}}/assets/vendor/admin_mod/css/loader.css">-->
     @show
     <link rel="stylesheet" href="{{url()}}/assets/vendor/css/app.css">
-    @yield('BaseCSSLib') 
   </head>
   <body>
 
@@ -52,7 +51,7 @@
           </span>
           <span style="margin-left: 35px">Extractor Library</span>
         </a>
-        <a class="ingest" href="#">
+        <a class="ingest" href="{{url()}}/ingestion">
           <span>
             <i class="fa fa-reply fa-lg" aria-hidden="true"></i>
           </span>

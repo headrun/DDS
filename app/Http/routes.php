@@ -30,3 +30,12 @@ Route::get('/extractor_library',function(){
 Route::get('/setup_new_proj',function(){
 	return view('setup_new_proj');
 });
+
+Route::get('/ingestion',function(){
+	return view('ingestion');
+});
+
+
+Route::any('/getTypes', 'CommonController@getTypes');
+Route::any('/getSubTypes', 'CommonController@getSubTypes');
+Route::any('/getExtractor', 'CommonController@getExtractor');
