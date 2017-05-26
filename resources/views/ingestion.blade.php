@@ -1,7 +1,7 @@
 @extends('Template.HtmlSkeleton')
 @section('Title')
 <title>Dcube | Injestion</title>
-@show
+@stop
 @section('BaseContent')
 <div class="container-fluid dashboard-content">
   <div class="visualization">

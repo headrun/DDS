@@ -124,6 +124,7 @@
 	/*height: 100%;*/
     padding: 0 2px 50px 2px;
     overflow: auto;
+    margin-top: 70px;
     background: #EAEAEB;
 }
 .widget-1 {
@@ -154,7 +155,7 @@
 .widget-icon img {
 	width: 35px;
     margin-left: 20px;
-    margin-bottom: -50px; /*-50*/
+    margin-bottom: -60px; /*-50*/
     padding-top: 15px;
 }
 thead tr th {
