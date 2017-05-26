@@ -11,7 +11,7 @@
               <h3 class="widget-title">Extract Library</h3>
               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                   <div class="panel panel-default" style="border-bottom: 4px solid #8bc34a;     padding: 20px;">
-                      <div class="row">  
+                      <div class="row">
                           <div class="widget col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <table class="table" style="font-size:14px" id="mainTable">
                               <thead>
@@ -36,164 +36,146 @@
                                 <tr>
                                   <td>EMR</td>
                                   <td>Humedica-Diagosis</td>
-                                  <td>yes</td>
-                                  <td>yes</td>
-                                  <td>yes</td>
-                                  <td>yes</td>
-                                  <td>yes</td>
-                                </tr>
-                                <tr>
-                                  <td></td>
-                                  <td>Humedica-Procedure </td>
-                                  <td>yes</td>
-                                  <td>yes</td>
-                                  <td>yes</td>
-                                  <td>yes</td>
-                                  <td>yes</td>
-                                </tr>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+</tr>
                                 <tr>
                                   <td></td>
                                   <td>Humedica-Labs  </td>
-                                  <td>yes</td>
-                                  <td>yes</td>
-                                  <td>yes</td>
-                                  <td>yes</td>
-                                  <td>yes</td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
                                 </tr>
                                 <tr>
                                   <td></td>
                                   <td>Humedica-Product  </td>
-                                  <td>yes</td>
-                                  <td>yes</td>
-                                  <td>yes</td>
-                                  <td>yes</td>
-                                  <td>yes</td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
                                 </tr>
                                 <tr>
                                   <td></td>
                                   <td>Symphony</td>
-                                  <td>yes</td>
-                                  <td>yes</td>
-                                  <td>yes</td>
-                                  <td>yes</td>
-                                  <td>yes</td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
                                 </tr>
                                 <tr>
                                   <td></td>
                                   <td>THIN</td>
-                                  <td>yes</td>
-                                  <td>yes</td>
-                                  <td>yes</td>
-                                  <td>yes</td>
-                                  <td>yes</td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+ <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
                                 </tr>
                                 <tr>
                                   <td></td>
                                   <td>Flatiron(oncology)</td>
-                                  <td>yes</td>
-                                  <td>yes</td>
-                                  <td>yes</td>
-                                  <td>yes</td>
-                                  <td>yes</td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
                                 </tr>
                                 <tr>
                                   <td></td>
                                   <td>IMS</td>
-                                  <td>yes</td>
-                                  <td>yes</td>
-                                  <td>yes</td>
-                                  <td>yes</td>
-                                  <td>yes</td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
                                 </tr>
                                 <tr>
                                   <td>Survey </td>
                                   <td>Kantar</td>
-                                  <td>yes</td>
-                                  <td>yes</td>
-                                  <td>No</td>
-                                  <td>No</td>
-                                  <td>yes</td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-times" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-times" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
                                 </tr>
                                 <tr>
                                   <td></td>
                                   <td>NHANES</td>
-                                  <td>yes</td>
-                                  <td>yes</td>
-                                  <td>yes</td>
-                                  <td>yes</td>
-                                  <td>No</td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-times" aria-hidden="true"></i></td>
                                 </tr>
-                                <tr>
-                                  <td>Hospital Data</td>
-                                  <td>Premier</td>
-                                  <td>yes</td>
-                                  <td>yes</td>
-                                  <td>yes</td>
-                                  <td>yes</td>
-                                  <td>yes</td>
-                                </tr>
-                                <tr>
+<tr>
                                   <td>CLAIMS </td>
                                   <td>Symphony</td>
-                                  <td>yes</td>
-                                  <td>yes</td>
-                                  <td>No</td>
-                                  <td>No</td>
-                                  <td>yes</td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-times" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-times" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
                                 </tr>
                                 <tr>
                                   <td></td>
                                   <td>IMS</td>
-                                  <td>yes</td>
-                                  <td>yes</td>
-                                  <td>yes</td>
-                                  <td>yes</td>
-                                  <td>No</td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-times" aria-hidden="true"></i></td>
                                 </tr>
                                 <tr>
                                   <td></td>
                                   <td>TRUVEN</td>
-                                  <td>yes</td>
-                                  <td>No</td>
-                                  <td>yes</td>
-                                  <td>yes</td>
-                                  <td>yes</td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-times" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
                                 </tr>
                                 <tr>
                                   <td></td>
                                   <td>OPTUM</td>
-                                  <td>yes</td>
-                                  <td>yes</td>
-                                  <td>No</td>
-                                  <td>yes</td>
-                                  <td>yes</td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-times" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
                                 </tr>
                                 <tr>
                                   <td>Xponent  </td>
                                   <td>IMS</td>
-                                  <td>yes</td>
-                                  <td>yes</td>
-                                  <td>No</td>
-                                  <td>No</td>
-                                  <td>yes</td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-times" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-times" aria-hidden="true"></i></td>
+<td><i class="fa fa-check" aria-hidden="true"></i></td>
                                 </tr>
                                 <tr>
                                   <td></td>
                                   <td>IMS</td>
-                                  <td>yes</td>
-                                  <td>yes</td>
-                                  <td>yes</td>
-                                  <td>yes</td>
-                                  <td>yes</td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
                                 </tr>
                                 <tr>
                                   <td></td>
                                   <td>Symphony</td>
-                                  <td>yes</td>
-                                  <td>no</td>
-                                  <td>yes</td>
-                                  <td>yes</td>
-                                  <td>yes</td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-times" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
                                 </tr>
                               </tbody>
                             </table>

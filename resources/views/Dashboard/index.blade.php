@@ -127,7 +127,7 @@
                           <tbody>
                             <tr>
                               <td>dcubeddsplatform</td>
-                              <td>available</td>
+                              <td><span class="green circle"></span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;available</td>
                               <td>Healthy</td>
                             </tr>
                           </tbody>
@@ -143,18 +143,18 @@
                           </thead>
                           <tbody>
                             <tr>
-                              <td>Machin-1</td>
+                              <td>Machine-1</td>
+                              <td>13246797</td>
+                              <td><span class="green circle"></span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Running</td>
+                            </tr>
+                            <tr>
+                              <td>Machine-2</td>
                               <td>13246798</td>
                               <td><span class="green circle"></span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Running</td>
                             </tr>
                             <tr>
-                              <td>Machin-2</td>
-                              <td>13246798</td>
-                              <td><span class="green circle"></span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Running</td>
-                            </tr>
-                            <tr>
-                              <td>Machin-2</td>
-                              <td>13246798</td>
+                              <td>Machine-2</td>
+                              <td>13246799</td>
                               <td><span class="green circle"></span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Running</td>
                             </tr>
                           </tbody>
