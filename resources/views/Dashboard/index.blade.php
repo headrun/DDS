@@ -9,7 +9,10 @@
       <div class="top-div">
           <div class="row widget-1">
               <div class="widget-icon"><img src="{{url()}}/assets/vendor/img/new_document_add.png"></div>
-              <h3 class="widget-title">Active Projects and Status</h3>
+              <h3 class="widget-title">
+                Active Projects and Status 
+                <button class="btn btn-default pull-right" data-toggle="modal" data-target="#myModal" style="margin-right: 15px;">View Dag List</button>
+              </h3>
               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                   <div class="panel panel-default" style="border-bottom: 4px solid #8bc34a;     padding: 20px;">
                       <div class="row">  
@@ -172,6 +175,26 @@
       </div>
   </div>
 </div>
+
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Dag List</h4>
+      </div>
+      <div class="modal-body">
+        <iframe src="http://176.9.181.38:8080/admin/" style="width: 100%; height: 500px;"></iframe>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
 @stop
 @section('BaseJSLib')
 <script src="//code.jquery.com/jquery-1.12.4.js"></script>
@@ -213,4 +236,4 @@ else {
     });
     
 </script>
-@show
+@stop
