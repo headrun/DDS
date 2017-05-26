@@ -189,8 +189,7 @@
 </div>
 @stop
 @section('BaseJSLib')
-<script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap.min.js"></script>
+<script src="{{url()}}/assets/vendor/js/jquery.js"></script>
 
 <script type="text/javascript">
     /*$(document).ready(function() {

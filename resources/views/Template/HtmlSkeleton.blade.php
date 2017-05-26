@@ -6,7 +6,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="{{url()}}/assets/vendor/favicon/favicon.ico" />
     @show 
     @section('Title')
-    <title>Worxogo</title>
+    <title>@yield('Title')</title>
     @show
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="{{url()}}/assets/vendor/admin_mod/css/loader.css">-->
     @show
     <link rel="stylesheet" href="{{url()}}/assets/vendor/css/app.css">
+    @yield('BaseCSSLib') 
   </head>
   <body>
 
