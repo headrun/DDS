@@ -58,7 +58,7 @@
           </span>
           <span style="margin-left: 35px">Ingest</span>
         </a>
-        <a class="validate" href="#">
+        <a class="validate" href="{{url()}}/validate">
           <span>
             <i class="fa fa-address-card-o fa-lg" aria-hidden="true"></i>
           </span>
