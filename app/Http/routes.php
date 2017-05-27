@@ -35,6 +35,10 @@ Route::get('/ingestion',function(){
 	return view('ingestion');
 });
 
+Route::any('test', 'AjaxCallTest@test');
+
+Route::any('test1', 'AjaxCallTest@test1');
+
 
 Route::any('/getTypes', 'CommonController@getTypes');
 Route::any('/getSubTypes', 'CommonController@getSubTypes');
