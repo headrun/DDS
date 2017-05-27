@@ -25,21 +25,21 @@
                               </thead>
                               <tbody>
                                 <tr>
-                                  <td><a href="#">Symphony Claims</a></td>
+                                  <td><a href="{{url()}}/symp">Symphony Claims</a></td>
                                   <td><i class="fa fa-check" aria-hidden="true"></i></td>
                                   <td>100%</td>
                                   <td>Not Present</td>
                                   <td>No</td>
                                 </tr>
                                 <tr>
-                                  <td><a href="#">Symphony Presciber Source</a></td>
+                                  <td><a href="{{url()}}/symp_ps">Symphony Presciber Source</a></td>
                                   <td><i class="fa fa-check" aria-hidden="true"></i></td>
                                   <td>100%</td>
                                   <td>Not Present</td>
                                   <td>No</td>
                                 </tr>
                                 <tr>
-                                  <td><a href="#">MMIT</a></td>
+                                  <td><a href="{{url()}}/mmit">MMIT</a></td>
                                   <td><i class="fa fa-check" aria-hidden="true"></i></td>
                                   <td>100%</td>
                                   <td>Present</td>
@@ -81,7 +81,7 @@
                                   <td>No</td>
                                 </tr>
                                 <tr>
-                                  <td><a href="#">Prescriber Allignment </a></td>
+                                  <td><a href="{{url()}}/prescriber_allignment">Prescriber Allignment </a></td>
                                   <td><i class="fa fa-check" aria-hidden="true"></i></td>
                                   <td>100%</td>
                                   <td>Not Present</td>

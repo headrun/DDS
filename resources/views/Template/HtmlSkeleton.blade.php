@@ -52,7 +52,7 @@
           </span>
           <span style="margin-left: 35px">Extractor Library</span>
         </a>
-        <a class="ingest" href="{{url()}}/ingestion">
+        <a class="ingest" href="#">
           <span>
             <i class="fa fa-reply fa-lg" aria-hidden="true"></i>
           </span>

@@ -59,3 +59,7 @@ Route::get('/mmit',function(){
 	return view('mmit');
 });
 
+Route::get('/prescriber_allignment',function(){
+	return view('prescriber_allignment');
+});
+
