@@ -96,9 +96,9 @@ class AjaxCallTest extends Controller
                               ->where('category','=','Data')
                                 ->get();
     $query1 =  array_merge($query1,$q1);
-                $count++;          
+                          
                               }
-                              //return $count;
+                            
 
     foreach ($data['id'] as $value) {
       # code...
