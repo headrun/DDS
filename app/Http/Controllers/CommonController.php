@@ -46,7 +46,12 @@ class CommonController extends Controller
         return Response::json(array('status'=> 'success', 'data'=> $data));
     }
 
-    
+     public function ingestion(){
+        $inputs = Input::all();
+        $values = $inputs['check_box'];
+        $data = array('values');
+        return view('ingestion', compact($data));
+    }
 
     /**
      * Display a listing of the resource.

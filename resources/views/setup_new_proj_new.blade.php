@@ -51,12 +51,15 @@
                           <div class="widget col-lg-12 col-md-12 col-sm-12 col-xs-12d">
                               <h4><span class="label label-primary">Data Tables</span></h4>
                               <br>
-                              <form id="d-tables"></form>
+                              <form  action='{{url()}}/ingestion' method='post'>
+                              {{ csrf_field() }}
+                                <div id="d-tables"></div>
+                              </form>
                                 
                       <br>
                       <div class="row">  
                           <div class="widget col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                              <button class="btn btn-success btn-md pull-right">Proceed to Ingestion</button>
+                              <button class="btn btn-success btn-md  pull-right" id= "sidq1" disabled>Proceed to Ingestion</button>
                           </div>
                       </div>
                   </div>
@@ -114,12 +117,21 @@ $(document).on('change', '.sid', function()
         { // What to do if we succeed
             console.log(response);   
             $('#d-tables').html(response).contents();
+            $("#sidq1").remove();
        
             },
     });
       
     
    });
+$(document).on('change', '.test2', function()
+ {
+      //$('.form-group input[type="checkbox"]:checked').each(function(){ 
+          console.log("reached");
+       $("#sidq").attr("disabled",false);
+
+                           //});
+});
 </script>
 @stop
 

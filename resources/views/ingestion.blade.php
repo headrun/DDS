@@ -38,6 +38,7 @@
                                 </tr>
                               </thead>
                               <tbody>
+                              @foreach($values as $value)
                                 <tr class="each_row">
                                   <td>
                                       <div class="checkbox">
@@ -45,8 +46,8 @@
                                       </div>
                                   </td>
                                   <td>
-                                    Claims
-                                    <input type="hidden" class="data_name" value="Claims">
+                                    {{$value}}
+                                    <input type="hidden" class="data_name" value="{{$value}}">
                                   </td>
                                   <td>
                                       <select class="form-control source_name">
@@ -72,6 +73,7 @@
                                       <!--<i class="fa fa-check fa-2x" style="color: green" aria-hidden="true"></i>-->
                                   </td>
                                 </tr>
+                                @endforeach
                               </tbody>
                             </table>
                           </div>

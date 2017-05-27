@@ -118,14 +118,14 @@ class AjaxCallTest extends Controller
                               }
 
 
-    $result = "<form action='{{url()}}' method='post'>";
+    $result = '';
     
     $result1 = $this->create_html($query1,'Data');
     $result2 = $this->create_html($query2,'Bridging File');
     $result3 = $this->create_html($query3,'Dimension');
     $result = $result.$result1.$result2.$result3;
-    $result = $result."<div><input type='submit' id='btt' class='btn btn-primary pull-right disabled' value='Button'></div>";
-    $result = $result."</form>";
+    $result = $result."<button class='btn btn-success btn-md  pull-right' id= 'sidq' type='submit'>Proceed to Ingestion</button>";
+    
     return $result;
     return Response::json($result);
   }
@@ -136,8 +136,9 @@ class AjaxCallTest extends Controller
     foreach ($query as $value)
     {
       $var = $var."<div class = 'checkbox'>";
-      $var = $var."<label>";
-      $var = $var."<input type='checkbox' class='test2' name = 'check_box[]' value='".$value->description."'>".$value->description."<br>";
+      $var = $var."<label class = 'active'>";
+      
+      $var = $var."<input type='checkbox' checked class='test2' name = 'check_box[]' value='".$value->description." '>".$value->description."<br>";
       $var = $var."</label>";
       $var = $var."</div>";
     }
