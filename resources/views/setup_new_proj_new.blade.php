@@ -1,66 +1,8 @@
 @extends('Template.HtmlSkeleton')
 @section('Title')
 <title>Dcube | Setup New Project</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+@stop
 
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script>
-
-$(document).ready(function(){
-  
-    $('input[type=radio][name=optradio]').change(function(){
-    $.ajax({
-        method: 'POST', // Type of response and matches what we said in the route
-        url: '{{url()}}/test', // This is the url we gave in the route
-        dataType:'html',
-        headers: {
-          'X-CSRF-TOKEN': "{{ csrf_token() }}",
-      },
-        data: {'id' : $(this).val()}, // a JSON object to send back
-        success: function(response)
-        { // What to do if we succeed
-            console.log(response);   
-            $('.selecting').html(response).contents();
-       
-            },
-    });
-  });
-});
-$(document).on('change', '.sid', function()
- {
-      //console.log($('input[id="#sid"]').is(':checked'));
-      //console.log($('#sid').val());
-      var widget_array =  [];
-      $('.form-group input[type="checkbox"]:checked').each(function(){ 
-
-          
-
-          widget_array.push($(this).val());
-      });
-      $.ajax({
-        method: 'POST', // Type of response and matches what we said in the route
-        url: '{{url()}}/test1', // This is the url we gave in the route
-        dataType:'html',
-        headers: {
-          'X-CSRF-TOKEN': "{{ csrf_token() }}",
-      },
-        data: {'id' : widget_array}, // a JSON object to send back
-        success: function(response)
-        { // What to do if we succeed
-            console.log(response);   
-            $('#d-tables').html(response).contents();
-       
-            },
-    });
-      
-    
-   });
-</script>
-@show
 @section('BaseContent')
 <div class="container-fluid dashboard-content">
   <div class="visualization">
@@ -124,5 +66,60 @@ $(document).on('change', '.sid', function()
   </div>
 </div>
 
+@stop
+
+@section('BaseJSLib')
+<script>
+
+$(document).ready(function(){
+  
+    $('input[type=radio][name=optradio]').change(function(){
+    $.ajax({
+        method: 'POST', // Type of response and matches what we said in the route
+        url: '{{url()}}/test', // This is the url we gave in the route
+        dataType:'html',
+        headers: {
+          'X-CSRF-TOKEN': "{{ csrf_token() }}",
+      },
+        data: {'id' : $(this).val()}, // a JSON object to send back
+        success: function(response)
+        { // What to do if we succeed
+            console.log(response);   
+            $('.selecting').html(response).contents();
+       
+            },
+    });
+  });
+});
+$(document).on('change', '.sid', function()
+ {
+      //console.log($('input[id="#sid"]').is(':checked'));
+      //console.log($('#sid').val());
+      var widget_array =  [];
+      $('.form-group input[type="checkbox"]:checked').each(function(){ 
+
+          
+
+          widget_array.push($(this).val());
+      });
+      $.ajax({
+        method: 'POST', // Type of response and matches what we said in the route
+        url: '{{url()}}/test1', // This is the url we gave in the route
+        dataType:'html',
+        headers: {
+          'X-CSRF-TOKEN': "{{ csrf_token() }}",
+      },
+        data: {'id' : widget_array}, // a JSON object to send back
+        success: function(response)
+        { // What to do if we succeed
+            console.log(response);   
+            $('#d-tables').html(response).contents();
+       
+            },
+    });
+      
+    
+   });
+</script>
 @stop
 

@@ -6,7 +6,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="{{url()}}/assets/vendor/favicon/favicon.ico" />
     @show 
     @section('Title')
-    <title>Worxogo</title>
+    <title>@yield('Title')</title>
     @show
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -52,7 +52,7 @@
           </span>
           <span style="margin-left: 35px">Extractor Library</span>
         </a>
-        <a class="ingest" href="#">
+        <a class="ingest" href="{{url()}}/ingestion">
           <span>
             <i class="fa fa-reply fa-lg" aria-hidden="true"></i>
           </span>

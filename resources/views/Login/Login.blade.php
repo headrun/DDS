@@ -1,10 +1,15 @@
 @extends('Template.HtmlSkeleton')
 @section('Title')
 <title>Dcube | Login</title>
-@show
+@stop
 @section('BaseCSSLib')
 <link rel="stylesheet" href="{{url()}}/assets/vendor/css/login.css">
-@show
+<style type="text/css">
+    .master-layout-class {
+        display: none;
+    }
+</style>
+@stop
 @section('BaseContent')
 <div class="container-fluid">
   <div class="row">
@@ -33,10 +38,5 @@
 </div>
 @stop
 @section('BaseJSLib')
-<script src="//code.jquery.com/jquery-1.12.4.js"></script>
-<script>
-  $(document).ready(function(){
-      $('.master-layout-class').hide();
-  });
-</script>
-@show
+<script src="{{url()}}/assets/vendor/js/jquery.js"></script>
+@stop
