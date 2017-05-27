@@ -1,7 +1,7 @@
 @extends('Template.HtmlSkeleton')
 @section('Title')
 <title>Dcube | Injestion</title>
-@show
+@stop
 @section('BaseContent')
 <div class="container-fluid dashboard-content">
   <div class="visualization">
@@ -38,6 +38,7 @@
                                 </tr>
                               </thead>
                               <tbody>
+                              @foreach($values as $value)
                                 <tr class="each_row">
                                   <td>
                                       <div class="checkbox">
@@ -45,8 +46,8 @@
                                       </div>
                                   </td>
                                   <td>
-                                    Claims
-                                    <input type="hidden" class="data_name" value="Claims">
+                                    {{$value}}
+                                    <input type="hidden" class="data_name" value="{{$value}}">
                                   </td>
                                   <td>
                                       <select class="form-control source_name">
@@ -66,12 +67,13 @@
                                   </td>
                                   <td class="extractor_name"></td>
                                   <td>
-                                      <button class="btn btn-warning btn-sm give_inputs" data-toggle="modal" data-target="#jsonModal">Give Inputs</button>
+                                      <button class="btn btn-warning btn-sm give_inputs">Give Inputs</button>
                                   </td>
                                   <td>
                                       <!--<i class="fa fa-check fa-2x" style="color: green" aria-hidden="true"></i>-->
                                   </td>
                                 </tr>
+                                @endforeach
                               </tbody>
                             </table>
                           </div>
@@ -83,7 +85,7 @@
   </div>
 </div>
 
-<div id="Databae" class="modal fade" role="dialog">
+<div id="Database" class="modal fade" role="dialog">
   <div class="modal-dialog modal-md">
 
     <!-- Modal content-->
@@ -225,7 +227,7 @@
 
 
 
-<div id="jsonModal" class="modal fade" role="dialog">
+<div id="JSON" class="modal fade" role="dialog">
   <div class="modal-dialog modal-md">
 
     <!-- Modal content-->
@@ -324,9 +326,29 @@
 @stop
 @section('BaseJSLib')
 <script src="{{url()}}/assets/vendor/js/jquery.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script type="text/javascript">
     $('a.ingest').addClass('active');
 
+    $('.give_inputs').click(function(){
+        
+        var type_name = $('.type_name').val();
+
+        var subtype_name = $('.subtype_name').val();
+        
+        if (type_name == "Database") {
+
+            $('#Database').modal('show');
+
+        }else if(type_name == 'JSON'){
+
+            $('#JSON').modal('show');
+        
+        }else if(type_name == 'FLAT FILE' || subtype_name == 'CSV'){
+
+            $('#FLAT FILE').modal('show');
+        }
+    });
 
     $(document).on('change', '.source_name', function(){
         

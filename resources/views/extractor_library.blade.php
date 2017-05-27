@@ -1,7 +1,7 @@
 @extends('Template.HtmlSkeleton')
 @section('Title')
 <title>Dcube | Extractor Library</title>
-@show
+@stop
 @section('BaseContent')
 <div class="container-fluid dashboard-content">
   <div class="visualization">

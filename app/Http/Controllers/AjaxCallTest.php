@@ -70,7 +70,7 @@ class AjaxCallTest extends Controller
  		{
       $var = $var."<div class='checkbox'>";
       $var = $var."<label>";
- 			$var = $var."<input type ='checkbox' id = '".$value."'>".$value;
+      $var = $var."<input  type ='checkbox' class = 'sid' value = '".$value."' id = 'sid'>".$value;
       $var = $var."</label>";
       $var = $var."</div>";
       
@@ -87,18 +87,18 @@ class AjaxCallTest extends Controller
   public function test1(Request $request)
   {
     $data = $request->all();
-    //return $data;
     $query1= array();
     $query2= array();
     $query3= array();
     foreach ($data['id'] as $value) {
       # code...
-    $query1 =  array_merge($query1,DB::table('cat')->where('sub_type','=',$value )
+      $q1 = DB::table('cat')->where('sub_type','=',$value )
                               ->where('category','=','Data')
-                                ->get());
-                                
+                                ->get();
+    $query1 =  array_merge($query1,$q1);
+                $count++;          
                               }
-                              //return $query1;
+                              //return $count;
 
     foreach ($data['id'] as $value) {
       # code...
@@ -116,16 +116,17 @@ class AjaxCallTest extends Controller
                               }
 
 
-    $result = "<form action='{{url()}}' method='post'>";
+    $result = '';
     
     $result1 = $this->create_html($query1,'Data');
     $result2 = $this->create_html($query2,'Bridging File');
     $result3 = $this->create_html($query3,'Dimension');
     $result = $result.$result1.$result2.$result3;
-    $result = $result."<div><input type='submit' id='btt' class='btn btn-primary pull-right disabled' value='Button'></div>";
-    $result = $result."</form>";
-    return $result;
+
+    $result = $result."<button class='btn btn-success btn-md  pull-right' id= 'sidq' type='submit'>Proceed to Ingestion</button>";
     
+    return $result;
+    return Response::json($result);
   }
 
   public function create_html($query,$data)
@@ -135,8 +136,9 @@ class AjaxCallTest extends Controller
     foreach ($query as $value)
     {
       $var = $var."<div class = 'checkbox'>";
-      $var = $var."<label>";
-      $var = $var."<input type='checkbox' class='test2' name = 'check_box[]' value='".$value->description."'>".$value->description."<br>";
+      $var = $var."<label class = 'active'>";
+      
+      $var = $var."<input type='checkbox' checked class='test2' name = 'check_box[]' value='".$value->description." '>".$value->description."<br>";
       $var = $var."</label>";
       $var = $var."</div>";
     }
