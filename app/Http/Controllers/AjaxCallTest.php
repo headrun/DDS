@@ -119,7 +119,7 @@ class AjaxCallTest extends Controller
     $result = '';
     
     $result1 = $this->create_html($query1,'Data');
-    $result2 = $this->create_html($query2,'Bridging File');
+    $result2 = $this->create_html($query2,'Bridging');
     $result3 = $this->create_html($query3,'Dimension');
     $result = $result.$result1.$result2.$result3;
 
@@ -132,14 +132,16 @@ class AjaxCallTest extends Controller
   public function create_html($query,$data)
   {
 
-    $var = "<div class ='col-lg-4 col-md-4 col-sm-4 col-xs-4'><h4>".$data."</h4>";
+    $var = "<div class ='".$data." &nbsp;col-lg-4 col-md-4 col-sm-4 col-xs-4 '><h4>".$data."</h4>";
     foreach ($query as $value)
     {
+
       $var = $var."<div class = 'checkbox'>";
-      $var = $var."<label class = 'active'>";
-      
-      $var = $var."<input type='checkbox' checked class='test2' name = 'check_box[]' value='".$value->description." '>".$value->description."<br>";
+      $var = $var."<a href ='#' data-toggle = 'popover'>";
+      $var = $var."<label class = 'active' >";
+      $var = $var."<input type='checkbox'  checked  name = 'check_box[]' value='".$value->description."'>".$value->description."<br>";
       $var = $var."</label>";
+      $var = $var."</a>";
       $var = $var."</div>";
     }
     $var = $var."</div>";
