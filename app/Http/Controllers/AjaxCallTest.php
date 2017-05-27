@@ -120,26 +120,28 @@ class AjaxCallTest extends Controller
 
     $result = '';
     
-    $result1 = $this->create_html($query1,'Data');
-    $result2 = $this->create_html($query2,'Bridging File');
-    $result3 = $this->create_html($query3,'Dimension');
+    $result1 = $this->create_html($query1,'Data',1);
+    $result2 = $this->create_html($query2,'Bridging',2);
+    $result3 = $this->create_html($query3,'Dimension',3);
     $result = $result.$result1.$result2.$result3;
     $result = $result."<button class='btn btn-success btn-md  pull-right' id= 'sidq' type='submit'>Proceed to Ingestion</button>";
     
     return $result;
     return Response::json($result);
   }
-  public function create_html($query,$data)
+  public function create_html($query,$data,$d)
   {
 
-    $var = "<div class ='col-lg-4 col-md-4 col-sm-4 col-xs-4'><h4>".$data."</h4>";
+    $var = "<div class ='".$data." &nbsp;col-lg-4 col-md-4 col-sm-4 col-xs-4 '><h4>".$data."</h4>";
     foreach ($query as $value)
     {
+
       $var = $var."<div class = 'checkbox'>";
-      $var = $var."<label class = 'active'>";
-      
-      $var = $var."<input type='checkbox' checked class='test2' name = 'check_box[]' value='".$value->description." '>".$value->description."<br>";
+      $var = $var."<a href ='#' data-toggle = 'popover'>";
+      $var = $var."<label class = 'active' >";
+      $var = $var."<input type='checkbox'  checked  name = 'check_box[]' value='".$value->description."'>".$value->description."<br>";
       $var = $var."</label>";
+      $var = $var."</a>";
       $var = $var."</div>";
     }
     $var = $var."</div>";

@@ -27,12 +27,17 @@ Route::get('/extractor_library',function(){
 	return view('extractor_library');
 });
 
+
 Route::get('/setup_new_proj',function(){
 	return view('setup_new_proj_new');
 });
 
 Route::get('/setup_new_proj_new',function(){
 	return view('setup_new_proj_new');
+});
+
+Route::get('/testing',function(){
+	return view('test');
 });
 
 Route::any('test', 'AjaxCallTest@test');
@@ -43,3 +48,16 @@ Route::any('/ingestion', 'CommonController@ingestion');
 Route::any('/getTypes', 'CommonController@getTypes');
 Route::any('/getSubTypes', 'CommonController@getSubTypes');
 Route::any('/getExtractor', 'CommonController@getExtractor');
+
+Route::get('/symp',function(){
+	return view('symphony_claims');
+});
+
+Route::get('/symp_ps',function(){
+	return view('symphony_presciber_source');
+});
+
+Route::get('/mmit',function(){
+	return view('mmit');
+});
+
