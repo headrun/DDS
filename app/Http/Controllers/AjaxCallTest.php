@@ -70,7 +70,7 @@ class AjaxCallTest extends Controller
  		{
       $var = $var."<div class='checkbox'>";
       $var = $var."<label>";
- 			$var = $var."<input  type ='checkbox' class = 'sid' value = '".$value."' id = 'sid'>".$value;
+      $var = $var."<input  type ='checkbox' class = 'sid' value = '".$value."' id = 'sid'>".$value;
       $var = $var."</label>";
       $var = $var."</div>";
       
@@ -87,8 +87,6 @@ class AjaxCallTest extends Controller
   public function test1(Request $request)
   {
     $data = $request->all();
-    
-    $count= 0;
     $query1= array();
     $query2= array();
     $query3= array();
@@ -120,16 +118,18 @@ class AjaxCallTest extends Controller
 
     $result = '';
     
-    $result1 = $this->create_html($query1,'Data',1);
-    $result2 = $this->create_html($query2,'Bridging',2);
-    $result3 = $this->create_html($query3,'Dimension',3);
+    $result1 = $this->create_html($query1,'Data');
+    $result2 = $this->create_html($query2,'Bridging');
+    $result3 = $this->create_html($query3,'Dimension');
     $result = $result.$result1.$result2.$result3;
+
     $result = $result."<button class='btn btn-success btn-md  pull-right' id= 'sidq' type='submit'>Proceed to Ingestion</button>";
     
     return $result;
     return Response::json($result);
   }
-  public function create_html($query,$data,$d)
+
+  public function create_html($query,$data)
   {
 
     $var = "<div class ='".$data." &nbsp;col-lg-4 col-md-4 col-sm-4 col-xs-4 '><h4>".$data."</h4>";
