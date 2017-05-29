@@ -53,14 +53,19 @@
                               <br>
                               <form action='{{url()}}/ingestion' method='post' id = 'group'>
                               {{ csrf_field() }}
-                                <div id="d-tables"></div>
+                                <div id="d-tables" class="row">
+                                      <div class="col-md-4 data" id="data1"></div>
+                                      <div class="col-md-4 bdf" id="bdf1"></div>
+                                      <div class="col-md-4 dim" id="dim1"></div>
+                                </div>
+                                <div class="Check">
+                                  <button class="btn btn-success btn-md  pull-right" id= "sidq" type = "submit" disabled>Proceed to Ingestion</button>
+                                </div>
                               </form>
                                 
                       <br>
                       <div class="row">  
-                          <div class="widget col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                              <button class="btn btn-success btn-md  pull-right" id= "sidq1" disabled>Proceed to Ingestion</button>
-                          </div>
+                          
                       </div>
                   </div>
               </div>
@@ -1077,6 +1082,7 @@
   </div>
 </div>
 
+
 @stop
 
 @section('BaseJSLib')
@@ -1103,6 +1109,37 @@
       });
     });
 
+$(document).ready(function(){
+  
+    $('input[type=radio][name=optradio]').change(function(){
+    $.ajax({
+        method: 'POST', // Type of response and matches what we said in the route
+        url: '{{url()}}/test', // This is the url we gave in the route
+        dataType:'html',
+        headers: {
+          'X-CSRF-TOKEN': "{{ csrf_token() }}",
+      },
+        data: {'id' : $(this).val()}, // a JSON object to send back
+        success: function(response)
+        { 
+            //console.log(response);
+            console.log(response);
+           
+
+            var d = '<button class="btn btn-success btn-md  pull-right" id= "sidq" type = "submit" disabled>Proceed to Ingestion</button>'
+            $('#d-tables .data').contents().remove();
+            $('#d-tables .bdf').contents().remove();
+            $('#d-tables .dim').contents().remove();
+            //$('#sidq').remove();
+            $('.check').html(d);
+            $('.selecting').html(response).contents();
+            //$(':input[type="submit"]').prop('disabled', true);*/
+        },
+
+    });
+  });
+});
+
   $(document).on('change', '.sid', function()
    {
       var widget_array =  [];
@@ -1111,22 +1148,61 @@
         widget_array.push($(this).val());
 
       });
+      if (widget_array.length){
       $.ajax({
         method: 'POST', // Type of response and matches what we said in the route
         url: '{{url()}}/test1', // This is the url we gave in the route
-        dataType:'html',
+        dataType:'json',
         headers: {
           'X-CSRF-TOKEN': "{{ csrf_token() }}",
-      },
+        },
         data: {'id' : widget_array}, // a JSON object to send back
         success: function(response)
-        { // What to do if we succeed
-            console.log(response);   
-            $('#d-tables').html(response).contents();
-            $("#sidq1").remove();
+        { 
+            var d= response.data;
+            var data ='' , bdf = '', dim = '';
+            for (var i = 0; i < d.length; i++) {
+              if (d[i].category==='Data'){
+                data += "<div class = 'checkbox'>"+
+                  "<a href ='#' data-toggle = 'popover'>"+
+                  "<label class = 'active' >"+
+                  "<input type='checkbox'  class='test2' checked  name = 'check_box[]' value='"+d[i].description+"'>"+d[i].description+"<br>";
+                  data +="</label>";
+                  data +="</a>";
+                  data +="</div>";
+                  
+              }
+              if (d[i].category==='Bridging File'){
+                  bdf += "<div class = 'checkbox'>"+
+                  "<a href ='#' data-toggle = 'popover'>"+
+                  "<label class = 'active' >"+
+                  "<input type='checkbox'  class='test2' checked  name = 'check_box[]' value='"+d[i].description+"'>"+d[i].description+"<br>";
+                  bdf +="</label>";
+                  bdf +="</a>";
+                  bdf +="</div>";
+                  
+
+              }
+              if (d[i].category==='Dimension'){
+                dim += "<div class = 'checkbox'>"+
+                  "<a href ='#' data-toggle = 'popover'>"+
+                  "<label class = 'active' >"+
+                  "<input type='checkbox'  class='test2' checked  name = 'check_box[]' value='"+d[i].description+"'>"+d[i].description+"<br>";
+                  dim +="</label>";
+                  dim +="</a>";
+                  dim +="</div>";
+                  
+              }
+            }
+            var data1= data+bdf+dim;
+            $('#d-tables .data').html(data).contents();
+            $('#d-tables .bdf').html(bdf);
+            $('#d-tables .dim').html(dim);  
+            $(':input[type="submit"]').prop('disabled', false);
        
             },
     });
+    }
    });
 
 $(document).on('change', '#group', function()
@@ -1135,13 +1211,13 @@ $(document).on('change', '#group', function()
       //console.log($('#sid').val());
       var widget_array1 =  [];
       var widget_array2 =  [];
-      $('.Data input[type="checkbox" ]:checked').each(function(){ 
+      $('.data input[type="checkbox" ]:checked').each(function(){ 
 
           
 
           widget_array1.push($(this).val());
       });
-      $('.Bridging input[type="checkbox" ]:checked').each(function(){ 
+      $('.bdf input[type="checkbox" ]:checked').each(function(){ 
 
           
 
@@ -1151,16 +1227,16 @@ $(document).on('change', '#group', function()
       console.log(((widget_array1).length)&&((widget_array2).length));
       if((widget_array1.length) > 0 && (widget_array2.length) > 0)
       {
-          $(':input[type="submit"]').prop('disabled', false);
+          $('.check :input[type="submit"]').prop('disabled', false);
       }
       else
       {
-          $(':input[type="submit"]').prop('disabled', true); 
+          $('.check :input[type="submit"]').prop('disabled', true); 
       }
 });
 
-$(document).on('mouseenter','.test2',function(){ 
-    var id = $(this).val().trim(); 
+$(document).on('mouseenter','.text',function(){ 
+ var id = $(this).text().trim(); 
     if ( id === "Product Dimension" ) {
       id = "ProductDimension";
     }else if( id === "Plan Dimension" ){
@@ -1179,8 +1255,6 @@ $(document).on('mouseenter','.test2',function(){
 
     $('#setUpNewProject').find('.modal-body').html(document.querySelector('#'+id).cloneNode(true));
     $('#setUpNewProject').find('#'+id).css('display', 'table');
-    
-    //$('#setUpNewProject').find('modal-body').removeAttr('hidden');
     $('#setUpNewProject').modal('show');
 });
 
