@@ -1235,8 +1235,8 @@ $(document).on('change', '#group', function()
       }
 });
 
-$(document).on('mouseenter','.test2',function(){ 
-    var id = $(this).val().trim(); 
+$(document).on('mouseenter','.text',function(){ 
+ var id = $(this).text().trim(); 
     if ( id === "Product Dimension" ) {
       id = "ProductDimension";
     }else if( id === "Plan Dimension" ){
