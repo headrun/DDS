@@ -36,14 +36,12 @@ Route::get('/setup_new_proj_new',function(){
 	return view('setup_new_proj_new');
 });
 
-Route::get('/testing',function(){
-	return view('test');
+Route::get('/validate',function(){
+	return view('validate');
 });
 
 Route::any('test', 'AjaxCallTest@test');
-
 Route::any('test1', 'AjaxCallTest@test1');
-
 Route::any('/ingestion', 'CommonController@ingestion');
 Route::any('/getTypes', 'CommonController@getTypes');
 Route::any('/getSubTypes', 'CommonController@getSubTypes');
@@ -59,5 +57,9 @@ Route::get('/symp_ps',function(){
 
 Route::get('/mmit',function(){
 	return view('mmit');
+});
+
+Route::get('/prescriber_allignment',function(){
+	return view('prescriber_allignment');
 });
 

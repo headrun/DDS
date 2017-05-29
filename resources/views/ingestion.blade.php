@@ -8,17 +8,13 @@
       <div class="top-div">
           <div class="row widget-1">
               <h3 class="widget-title" style="margin-left: 20px; margin-bottom: 10px;">
-                  <div class="dropdown">
-                      <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Create project
-                      <span class="caret"></span></button>
-                      <ul class="dropdown-menu">
-                        <li><a href="#">Market Access Reporting v1.0</a></li>
-                        <li><a href="#">Optimix: Market Mix Modelling workflow for RA</a></li>
-                        <li><a href="#">Phast Rx reporting dashboard</a></li>
-                        <li><a href="#">Social Media Campaign Tracking</a></li>
-                        <li><a href="#">Type II Diabetes Prelaunch Dashboard</a></li>
-                      </ul>
-                  </div>
+                  <select class="form-control" style="width: 150px">
+                      <option>Market Access Reporting v1.0</option>
+                      <option>Optimix: Market Mix Modelling workflow for RA</option>
+                      <option>Phast Rx reporting dashboard</option>
+                      <option>Social Media Campaign Tracking</option>
+                      <option>Type II Diabetes Prelaunch Dashboard</option>
+                  </select>
               </h3>
               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                   <div class="panel panel-default" style="border-bottom: 4px solid #8bc34a;     padding: 20px;">
@@ -38,21 +34,23 @@
                                 </tr>
                               </thead>
                               <tbody>
-                              @foreach($values as $value)
+                              @foreach($final_array as $value)
                                 <tr class="each_row">
                                   <td>
                                       <div class="checkbox">
-                                        <label><input type="checkbox" value=""></label>
+                                        <label><input type="checkbox" class="ingest_chkbox"></label>
                                       </div>
                                   </td>
                                   <td>
-                                    {{$value}}
-                                    <input type="hidden" class="data_name" value="{{$value}}">
+                                    {{$value['data']}}
+                                    <input type="hidden" class="data_name" value="{{$value['data']}}">
                                   </td>
                                   <td>
                                       <select class="form-control source_name">
-                                        <option>Symphony</option>
-                                        <option>IMS</option>
+                                        <option></option>
+                                        @foreach($value['sources'] as $src)
+                                          <option value="{{$src['source']}}">{{$src['source']}}</option>
+                                        @endforeach
                                       </select>
                                   </td>
                                   <td>
@@ -67,7 +65,7 @@
                                   </td>
                                   <td class="extractor_name"></td>
                                   <td>
-                                      <button class="btn btn-warning btn-sm give_inputs">Give Inputs</button>
+                                      <button class="btn btn-warning btn-sm give_inputs" disabled>Give Inputs</button>
                                   </td>
                                   <td>
                                       <!--<i class="fa fa-check fa-2x" style="color: green" aria-hidden="true"></i>-->
@@ -77,6 +75,9 @@
                               </tbody>
                             </table>
                           </div>
+                          <center>
+                            <button class="btn btn-primary btn-md select_ingest_btn" disabled>Ingest Selected Data</button>
+                        </center>
                       </div>
                   </div>
               </div>
@@ -323,6 +324,122 @@
   </div>
 </div>
 
+
+<div class="modal fade" id="CSV" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">CSV Modal</h4>
+      </div>
+      <div class="modal-body">
+          <div id='file'>
+            <br>
+            <div ><input class = 'btn btn-primary' type='file' ></div>
+          </div>
+          <hr>
+          <h4><span class="label label-primary">Readen Options</span></h4>
+        <br>
+        <div class="row">
+          <div class ='col-md-6'>
+            <div>
+              <input class = 'btn btn-default' type='text' style="width: 50px"/> 
+              <span >Column Delimiter</span>
+            </div>
+          </div>
+          <div class ='col-md-6'>
+            <div>
+              <input class = 'btn btn-default' type='text' style="width: 50px"/> 
+              <span >Row Delimiter</span>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class ='col-md-6'>
+            <div>
+              <input class = 'btn btn-default' type='text' style="width: 50px"/> 
+              <span >Quote Char</span>
+            </div>
+          </div>
+          <div class ='col-md-6'>
+            <div>
+              <input class = 'btn btn-default' type='text' style="width: 50px"/> 
+              <span >Comment Char</span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class ='col-md-6 '>
+            <div class ='checkbox'>
+              <label><input class = 'btn-primary' type='checkbox'>Has Column Header
+            </label>
+            </div>
+          </div>
+          <div class ='col-md-6'>
+            <div class ='checkbox'>
+            <label><input class = 'btn btn-default' type='checkbox'>Has Row Header
+            </label>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class ='col-md-6 '>
+            <div class ='checkbox'>
+            <label><input class = 'btn btn-default' type='checkbox'>Support Short Lines
+            </label>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class ='col-md-6 checkbox'>
+            <label><input class = 'btn btn-default' type='checkbox'>Skip First Lines
+            </label>
+          </div>
+          <div class ='col-md-6'>
+            <div class='btn-default'>
+                <label>
+                  <select class="form-control" id="sel2" >
+                    @for($i= 0 ; $i<=10; $i++)
+                        <option>{{$i}}</option>
+                    @endfor
+                  </select>
+                </label>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class ='col-md-6 '>
+            <div class ='checkbox'>
+            <label><input class = 'btn btn-default' type='checkbox'>Limit rows
+            </label>
+            </div>
+          </div>
+          <div class ='col-md-6'>
+            <div class='btn-default'>
+            <label>
+              <select class="form-control" id="sel2" >
+              
+              @for($i= 0 ; $i<=50; $i++)
+                  <option>{{$i}}</option>
+              @endfor
+              </select>
+
+            </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Apply</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <span style="margin-right: 60px;"><i class="fa fa-question-circle-o" aria-hidden="true"></i></span>
+      </div>
+    </div>
+  </div>
+</div>
+
 @stop
 @section('BaseJSLib')
 <script src="{{url()}}/assets/vendor/js/jquery.js"></script>
@@ -332,9 +449,9 @@
 
     $('.give_inputs').click(function(){
         
-        var type_name = $('.type_name').val();
+        var type_name = $(this).closest('.each_row').find('.type_name').val();
 
-        var subtype_name = $('.subtype_name').val();
+        var subtype_name = $(this).closest('.each_row').find('.subtype_name').val();
         
         if (type_name == "Database") {
 
@@ -346,13 +463,15 @@
         
         }else if(type_name == 'FLAT FILE' || subtype_name == 'CSV'){
 
-            $('#FLAT FILE').modal('show');
+            $('#CSV').modal('show');
         }
     });
 
     $(document).on('change', '.source_name', function(){
         
         var source_name = $(this).val();
+
+        var that = $(this);
 
         var data_name = $(this).closest('.each_row').find('.data_name').val();
 
@@ -384,7 +503,7 @@
                             options += '<option value="'+resp.data[i].type+'">'+resp.data[i].type+'</option>';
                         }
 
-                        $('select.type_name').html(options);
+                        $(that).closest('.each_row').find('select.type_name').html(options);
                     }
                 }
             }
@@ -396,6 +515,8 @@
     $(document).on('change', '.type_name', function(){
         
         var type_name = $(this).val();
+
+        var that = $(this);
 
         var data_name = $(this).closest('.each_row').find('.data_name').val();
 
@@ -429,7 +550,7 @@
                             options += '<option value="'+resp.data[i].sub_type+'">'+resp.data[i].sub_type+'</option>';
                         }
 
-                        $('select.subtype_name').html(options);
+                        $(that).closest('.each_row').find('select.subtype_name').html(options);
                     }
                 }
             }
@@ -441,6 +562,8 @@
     $(document).on('change', '.subtype_name', function(){
         
         var subtype_name = $(this).val();
+
+        var that = $(this);
 
         var data_name = $(this).closest('.each_row').find('.data_name').val();
 
@@ -469,14 +592,19 @@
 
                     if (resp.data.length > 0) {
                             
-                        $('td.extractor_name').text(resp.data[0].extractor_name)
+                        $(that).closest('.each_row').find('td.extractor_name').text(resp.data[0].extractor_name)
 
-                        $('.give_inputs').attr('disabled', false);
+                        $(that).closest('.each_row').find('.give_inputs').attr('disabled', false);
                     }
                 }
             }
         });
 
+    });
+
+    $('.ingest_chkbox').change(function(){
+
+        $('.select_ingest_btn').attr('disabled', false);
     });
 </script>
 @stop

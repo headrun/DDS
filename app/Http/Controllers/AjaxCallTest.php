@@ -73,51 +73,40 @@ class AjaxCallTest extends Controller
       $var = $var."<input  type ='checkbox' class = 'sid' value = '".$value."' id = 'sid'>".$value;
       $var = $var."</label>";
       $var = $var."</div>";
-      
-      //$var = "working";
-      //return $var;
  		}
-    $var = $var."</div>";
-
- 		//$var = $var."</select>";
-    //$var2 = $var + $var1;
-      
+    $var = $var."</div>";      
  		return $var;
  	}
+
   public function test1(Request $request)
   {
     $data = $request->all();
     $query1= array();
     $query2= array();
     $query3= array();
+    
     foreach ($data['id'] as $value) {
-      # code...
-      $q1 = DB::table('cat')->where('sub_type','=',$value )
+        $q1 = DB::table('cat')->where('sub_type','=',$value )
                               ->where('category','=','Data')
-                                ->get();
-    $query1 =  array_merge($query1,$q1);
-                          
-                              }
-                            
+                              ->get();
+        $query1 =  array_merge($query1,$q1);
+    }
 
     foreach ($data['id'] as $value) {
-      # code...
-    $query2 =  array_merge($query2,DB::table('cat')->where('sub_type','=',$value )
-                              ->where('category','=','Bridging File')
-                                ->get());
-                                
-                              }
-    foreach ($data['id'] as $value) {
-      # code...
-    $query3 =  array_merge($query3,DB::table('cat')->where('sub_type','=',$value )
-                              ->where('category','=','Dimension')
-                                ->get());
-                                
-                              }
+        $query2 =  array_merge($query2,DB::table('cat')
+                                      ->where('sub_type','=',$value )
+                                      ->where('category','=','Bridging File')
+                                      ->get());
+    }
 
+    foreach ($data['id'] as $value) {
+    $query3 =  array_merge($query3,DB::table('cat')
+                                    ->where('sub_type','=',$value )
+                                    ->where('category','=','Dimension')
+                                    ->get());
+    }
 
     $result = '';
-    
     $result1 = $this->create_html($query1,'Data');
     $result2 = $this->create_html($query2,'Bridging');
     $result3 = $this->create_html($query3,'Dimension');
@@ -131,11 +120,8 @@ class AjaxCallTest extends Controller
 
   public function create_html($query,$data)
   {
-
     $var = "<div class ='".$data." &nbsp;col-lg-4 col-md-4 col-sm-4 col-xs-4 '><h4>".$data."</h4>";
-    foreach ($query as $value)
-    {
-
+    foreach ($query as $value){
       $var = $var."<div class = 'checkbox'>";
       $var = $var."<a href ='#' data-toggle = 'popover'>";
       $var = $var."<label class = 'active' >";

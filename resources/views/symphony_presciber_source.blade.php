@@ -1,6 +1,6 @@
 @extends('Template.HtmlSkeleton')
 @section('Title')
-<title>Dcube | Extractor Library</title>
+<title>Dcube | Symphony Presciber Source</title>
 @stop
 @section('BaseContent')
 <div class="container-fluid dashboard-content">
@@ -8,7 +8,7 @@
       <div class="top-div">
           <div class="row widget-1">
               <div class="widget-icon"><img src="{{url()}}/assets/vendor/img/new_document_add.png"></div>
-              <h3 class="widget-title">Extract Library</h3>
+              <h3 class="widget-title">Symphony Presciber Source</h3>
               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                   <div class="panel panel-default" style="border-bottom: 4px solid #8bc34a;     padding: 20px;">
                       <div class="row">

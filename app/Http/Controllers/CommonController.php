@@ -49,7 +49,14 @@ class CommonController extends Controller
      public function ingestion(){
         $inputs = Input::all();
         $values = $inputs['check_box'];
-        $data = array('values');
+        $final_array = array();
+        foreach ($values as $key => $value) {
+            $data = Ingestion::where('data', '=', $value)->groupBy('source')->get();
+            $arr = array('data'=> $value, 'sources'=> $data);
+            array_push($final_array, $arr);
+        }
+
+        $data = array('final_array');
         return view('ingestion', compact($data));
     }
 
