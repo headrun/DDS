@@ -70,6 +70,12 @@
           </span>
           <span style="margin-left: 35px">Transform</span>
         </a>
+        <a class="dcube_struct" href="{{url()}}/struct">
+          <span>
+            <i class="fa fa-area-chart fa-lg" aria-hidden="true"></i>
+          </span>
+          <span style="margin-left: 35px">Dcube Structure</span>
+        </a>
       </div>
       <div class="aside-overlay"></div>
       <ul class="pull-right nav navbar-nav">
