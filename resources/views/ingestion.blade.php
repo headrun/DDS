@@ -323,6 +323,131 @@
 
   </div>
 </div>
+<!-- Modal -->
+                        <div class="modal fade" id="myModal" role="dialog">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+
+
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Modal Header</h4>
+                            </div>
+                            <div class="modal-body">
+                              <div id='file'>
+                                <br>
+                                <div ><input class = 'btn btn-primary' type='file' ></div>
+                              </div>
+                              <hr>
+                            </div>
+                            <div class="modal-body">
+                              <h4>
+                              <span class="label label-primary">Readen Options</span>
+                              </h4>
+                              <br>
+                              <div class="row">
+                                <div class ='col-md-6'>
+                                  <div>
+                                    <input class = 'btn btn-default' type='text' style="width: 50px"/> 
+                                    <span >Column Delimiter</span>
+                                  </div>
+                                </div>
+                                <div class ='col-md-6'>
+                                  <div>
+                                    <input class = 'btn btn-default' type='text' style="width: 50px"/> 
+                                    <span >Row Delimiter</span>
+                                  </div>
+                                </div>
+                              </div>
+                              <br>
+                              <div class="row">
+                                <div class ='col-md-6'>
+                                  <div>
+                                    <input class = 'btn btn-default' type='text' style="width: 50px"/> 
+                                    <span >Quote Char</span>
+                                  </div>
+                                </div>
+                                <div class ='col-md-6'>
+                                  <div>
+                                    <input class = 'btn btn-default' type='text' style="width: 50px"/> 
+                                    <span >Comment Char</span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="modal-body">
+                              <div class="row">
+                                <div class ='col-md-6 '>
+                                  <div class ='checkbox'>
+                                    <label><input class = 'btn-primary' type='checkbox'>Has Column Header
+                                  </label>
+                                  </div>
+                                </div>
+                                <div class ='col-md-6'>
+                                  <div class ='checkbox'>
+                                  <label><input class = 'btn btn-default' type='checkbox'>Has Row Header
+                                  </label>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class ='col-md-6 '>
+                                  <div class ='checkbox'>
+                                  <label><input class = 'btn btn-default' type='checkbox'>Support Short Lines
+                                  </label>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class ='col-md-6 checkbox'>
+                                  <label><input class = 'btn btn-default' type='checkbox'>Skip First Lines
+                                  </label>
+                                </div>
+                                <div class ='col-md-6'>
+                                  <div class='btn-default'>
+                                  <label><select class="form-control" id="sel2" >
+                                    
+                                    @for($i= 0 ; $i<=10; $i++)
+                                        <option>{{$i}}</option>
+                                    @endfor
+                                    </label>
+                                  </select>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class ='col-md-6 '>
+                                  <div class ='checkbox'>
+                                  <label><input class = 'btn btn-default' type='checkbox'>Limit rows
+                                  </label>
+                                  </div>
+                                </div>
+                                <div class ='col-md-6'>
+                                  <div class='btn-default'>
+                                  <label>
+                                    <select class="form-control" id="sel2" >
+                                    
+                                    @for($i= 0 ; $i<=50; $i++)
+                                        <option>{{$i}}</option>
+                                    @endfor
+                                    </select>
+
+                                  </label>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
+                              <button type="button" class="btn btn-default" data-dismiss="modal">Apply</button>
+                              <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                              <span style="margin-right: 60px;"><i class="fa fa-question-circle-o" aria-hidden="true"></i></span>
+                            </div>
+                            </div>
+                            
+                          </div>
+      
+                        </div>
 
 
 <div class="modal fade" id="CSV" role="dialog">

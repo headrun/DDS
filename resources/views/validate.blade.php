@@ -32,7 +32,7 @@
                                   <td>No</td>
                                 </tr>
                                 <tr>
-                                  <td><a href="{{url()}}/symp_ps">Symphony Presciber Source</a></td>
+                                  <td><a href="{{url()}}/Prescriber_Source">Symphony Presciber Source</a></td>
                                   <td><i class="fa fa-check" aria-hidden="true"></i></td>
                                   <td>100%</td>
                                   <td>Not Present</td>
@@ -46,42 +46,42 @@
                                   <td>No</td>
                                 </tr>
                                 <tr>
-                                  <td><a href="#">MMIT to CLAIMS</a></td>
+                                  <td><a href="{{url()}}/mmit_claims">MMIT to CLAIMS</a></td>
                                   <td><i class="fa fa-check" aria-hidden="true"></i></td>
                                   <td>100%</td>
                                   <td>Not Present</td>
                                   <td>No</td>
                                 </tr>
                                 <tr>
-                                  <td><a href="#">Symphony Product Dimension</a></td>
+                                  <td><a href="{{url()}}/Product_Dimension">Symphony Product Dimension</a></td>
                                   <td><i class="fa fa-check" aria-hidden="true"></i></td>
                                   <td>100%</td>
                                   <td>Not Present</td>
                                   <td>Yes</td>
                                 </tr>
                                 <tr>
-                                  <td><a href="#">Symphony Plan Dimension </a></td>
+                                  <td><a href="{{url()}}/Plan_Dimension">Symphony Plan Dimension </a></td>
                                   <td><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></td>
                                   <td>100%</td>
                                   <td>Present</td>
                                   <td>Yes</td>
                                 </tr>
                                 <tr>
-                                  <td><a href="#">Symphony Rejection Reason Dimension</a></td>
+                                  <td><a href="{{url()}}/claims_reject">Symphony Rejection Reason Dimension</a></td>
                                   <td><i class="fa fa-times" aria-hidden="true"></i></td>
                                   <td>82%</td>
                                   <td>Not Present</td>
                                   <td>Yes</td>
                                 </tr>
                                 <tr>
-                                  <td><a href="#">Symphony Prescriber Dimension</a></td>
+                                  <td><a href="{{url()}}/Prescriber_Dimension">Symphony Prescriber Dimension</a></td>
                                   <td><i class="fa fa-check" aria-hidden="true"></i></td>
                                   <td>100%</td>
                                   <td>Not Present</td>
                                   <td>No</td>
                                 </tr>
                                 <tr>
-                                  <td><a href="{{url()}}/prescriber_allignment">Prescriber Allignment </a></td>
+                                  <td><a href="{{url()}}/Allignment">Prescriber Allignment </a></td>
                                   <td><i class="fa fa-check" aria-hidden="true"></i></td>
                                   <td>100%</td>
                                   <td>Not Present</td>

@@ -45,21 +45,47 @@ Route::any('test1', 'AjaxCallTest@test1');
 Route::any('/ingestion', 'CommonController@ingestion');
 Route::any('/getTypes', 'CommonController@getTypes');
 Route::any('/getSubTypes', 'CommonController@getSubTypes');
-Route::any('/getExtractor', 'CommonController@getExtractor');
+Route::any('/getExtractor', 'CommonController@getExtractor');	
 
 Route::get('/symp',function(){
 	return view('symphony_claims');
 });
 
-Route::get('/symp_ps',function(){
-	return view('symphony_presciber_source');
+Route::get('/Product_Dimension',function(){
+	return view('Product_Dimension');
 });
 
 Route::get('/mmit',function(){
 	return view('mmit');
 });
 
-Route::get('/prescriber_allignment',function(){
-	return view('prescriber_allignment');
+Route::get('/Plan_Dimension',function(){
+	return view('Plan_Dimension');
 });
+
+Route::get('/claims_reject',function(){
+	return view('claim_reject');
+});
+
+Route::get('/Prescriber_Source',function(){
+	return view('Prescriber_Source');
+});
+
+Route::get('/Allignment',function(){
+	return view('Allignment');
+});
+
+
+Route::get('/Prescriber_Dimension',function(){
+	return view('Prescriber_Dimension');
+});
+
+
+Route::get('/struct',function(){
+	return view('struct');
+});
+
+
+
+
 

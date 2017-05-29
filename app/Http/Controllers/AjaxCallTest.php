@@ -81,32 +81,15 @@ class AjaxCallTest extends Controller
   public function test1(Request $request)
   {
     $data = $request->all();
-    $query1= array();
-    $query2= array();
-    $query3= array();
-    
-    foreach ($data['id'] as $value) {
-        $q1 = DB::table('cat')->where('sub_type','=',$value )
-                              ->where('category','=','Data')
-                              ->get();
-        $query1 =  array_merge($query1,$q1);
-    }
+    $q1 = DB::table('cat')->whereIn('sub_type', $data['id'])->groupBy('description')->get();
 
-    foreach ($data['id'] as $value) {
-        $query2 =  array_merge($query2,DB::table('cat')
-                                      ->where('sub_type','=',$value )
-                                      ->where('category','=','Bridging File')
-                                      ->get());
+    if ($q1) {
+        return Response::Json(array('status'=> 'success', 'data'=> $q1));
+    }else{
+        return Response::json(array('status'=> 'failure'));
     }
-
-    foreach ($data['id'] as $value) {
-    $query3 =  array_merge($query3,DB::table('cat')
-                                    ->where('sub_type','=',$value )
-                                    ->where('category','=','Dimension')
-                                    ->get());
-    }
-
-    $result = '';
+  }
+    /*$result = '';
     $result1 = $this->create_html($query1,'Data');
     $result2 = $this->create_html($query2,'Bridging');
     $result3 = $this->create_html($query3,'Dimension');
@@ -125,7 +108,7 @@ class AjaxCallTest extends Controller
       $var = $var."<div class = 'checkbox'>";
       $var = $var."<a href ='#' data-toggle = 'popover'>";
       $var = $var."<label class = 'active' >";
-      $var = $var."<input type='checkbox'  checked  name = 'check_box[]' value='".$value->description."'>".$value->description."<br>";
+      $var = $var."<input type='checkbox'  class='test2' checked  name = 'check_box[]' value='".$value->description."'>".$value->description."<br>";
       $var = $var."</label>";
       $var = $var."</a>";
       $var = $var."</div>";
@@ -133,7 +116,7 @@ class AjaxCallTest extends Controller
     $var = $var."</div>";
     
     return $var;
-  }
+  }*/
 
 
 }
