@@ -139,7 +139,7 @@ class AjaxCallTest extends Controller
       $var = $var."<div class = 'checkbox'>";
       $var = $var."<a href ='#' data-toggle = 'popover'>";
       $var = $var."<label class = 'active' >";
-      $var = $var."<input type='checkbox'  checked  name = 'check_box[]' value='".$value->description."'>".$value->description."<br>";
+      $var = $var."<input type='checkbox'  checked class='test2' name = 'check_box[]' value='".$value->description."'><span class='text'>".$value->description."</span>";
       $var = $var."</label>";
       $var = $var."</a>";
       $var = $var."</div>";
