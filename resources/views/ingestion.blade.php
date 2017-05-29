@@ -2,6 +2,25 @@
 @section('Title')
 <title>Dcube | Injestion</title>
 @stop
+@section('BaseCSSLib')
+<style type="text/css">
+    
+    .notifications {
+      position: fixed;
+      z-index: 9999;
+      background: #404040;
+      height: 60px;
+      font-size: 16px;
+      border-radius: 3px;
+      box-shadow: 0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.24);
+      color: #fff;
+    }
+    .notifications.bottom-left, .notifications.cmtDateNotif {
+      right: 20px;
+      bottom: 25px;
+    }
+</style>
+@stop
 @section('BaseContent')
 <div class="container-fluid dashboard-content">
   <div class="visualization">
@@ -67,8 +86,8 @@
                                   <td>
                                       <button class="btn btn-warning btn-sm give_inputs" disabled>Give Inputs</button>
                                   </td>
-                                  <td>
-                                      <!--<i class="fa fa-check fa-2x" style="color: green" aria-hidden="true"></i>-->
+                                  <td class="last_col_tick">
+                                      
                                   </td>
                                 </tr>
                                 @endforeach
@@ -216,7 +235,7 @@
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default">Ok</button>
+        <button type="button" class="btn btn-default modal_ok">Ok</button>
         <button type="button" class="btn btn-default">Apply</button>
         <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
         <span style="margin-right: 60px;"><i class="fa fa-question-circle-o" aria-hidden="true"></i></span>
@@ -314,7 +333,7 @@
           </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default">Ok</button>
+        <button type="button" class="btn btn-default modal_ok">Ok</button>
         <button type="button" class="btn btn-default">Apply</button>
         <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
         <span style="margin-right: 60px;"><i class="fa fa-question-circle-o" aria-hidden="true"></i></span>
@@ -556,8 +575,8 @@
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
-        <button type="button" class="btn btn-default" data-dismiss="modal">Apply</button>
+        <button type="button" class="btn btn-default modal_ok">Ok</button>
+        <button type="button" class="btn btn-default">Apply</button>
         <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
         <span style="margin-right: 60px;"><i class="fa fa-question-circle-o" aria-hidden="true"></i></span>
       </div>
@@ -565,9 +584,12 @@
   </div>
 </div>
 
+<div class='notifications bottom-left'></div>
+
 @stop
 @section('BaseJSLib')
 <script src="{{url()}}/assets/vendor/js/jquery.js"></script>
+<script src="{{url()}}/assets/vendor/js/notify.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script type="text/javascript">
     $('a.ingest').addClass('active');
@@ -577,6 +599,8 @@
         var type_name = $(this).closest('.each_row').find('.type_name').val();
 
         var subtype_name = $(this).closest('.each_row').find('.subtype_name').val();
+
+        window.tick = $(this).closest('.each_row').find('.extractor_name').text();
         
         if (type_name == "Database") {
 
@@ -590,6 +614,23 @@
 
             $('#CSV').modal('show');
         }
+    });
+
+    $(document).on('click', '.modal_ok', function(){
+
+        console.log(window.tick);
+
+        var that = $(this);
+
+        $('.extractor_name').each(function(){
+
+            if ($(this).closest('.each_row').find('.extractor_name').text() == window.tick) {
+
+                $(this).closest('.each_row').find('.last_col_tick').html('<i class="fa fa-check fa-2x" style="color: green" aria-hidden="true"></i>')
+            }
+        });
+
+        $(that).closest('.modal').modal('hide');
     });
 
     $(document).on('change', '.source_name', function(){
@@ -730,6 +771,23 @@
     $('.ingest_chkbox').change(function(){
 
         $('.select_ingest_btn').attr('disabled', false);
+    });
+
+    $('.select_ingest_btn').click(function(){
+
+        $('.bottom-left').notify({
+      
+            type : "inverse",
+
+            closable : true,
+
+            fadeOut: { enabled: true, delay: 6000 },
+
+            message: { html: "<span> Ingested Selected Data  &nbsp;&nbsp;</span>", 
+                      text: false
+                    },
+        
+        }).show();
     });
 </script>
 @stop

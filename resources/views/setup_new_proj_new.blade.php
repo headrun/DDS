@@ -1160,13 +1160,15 @@ $(document).ready(function(){
         success: function(response)
         { 
             var d= response.data;
-            var data ='' , bdf = '', dim = '';
+            var data ='<h4>Data Tables</h4>';
+            var bdf = '<h4>Bridge Files</h4>';
+            var dim = '<h4>Dimension table (Optional)</h4>';
             for (var i = 0; i < d.length; i++) {
               if (d[i].category==='Data'){
                 data += "<div class = 'checkbox'>"+
                   "<a href ='#' data-toggle = 'popover'>"+
                   "<label class = 'active' >"+
-                  "<input type='checkbox'  class='test2' checked  name = 'check_box[]' value='"+d[i].description+"'>"+d[i].description+"<br>";
+                  "<input type='checkbox'  class='test2' checked  name = 'check_box[]' value='"+d[i].description+"'><span class='text'>"+d[i].description+"</span><br>";
                   data +="</label>";
                   data +="</a>";
                   data +="</div>";
@@ -1176,7 +1178,7 @@ $(document).ready(function(){
                   bdf += "<div class = 'checkbox'>"+
                   "<a href ='#' data-toggle = 'popover'>"+
                   "<label class = 'active' >"+
-                  "<input type='checkbox'  class='test2' checked  name = 'check_box[]' value='"+d[i].description+"'>"+d[i].description+"<br>";
+                  "<input type='checkbox'  class='test2' checked  name = 'check_box[]' value='"+d[i].description+"'><span class='text'>"+d[i].description+"</span><br>";
                   bdf +="</label>";
                   bdf +="</a>";
                   bdf +="</div>";
@@ -1187,7 +1189,7 @@ $(document).ready(function(){
                 dim += "<div class = 'checkbox'>"+
                   "<a href ='#' data-toggle = 'popover'>"+
                   "<label class = 'active' >"+
-                  "<input type='checkbox'  class='test2' checked  name = 'check_box[]' value='"+d[i].description+"'>"+d[i].description+"<br>";
+                  "<input type='checkbox'  class='test2' checked  name = 'check_box[]' value='"+d[i].description+"'><span class='text'>"+d[i].description+"</span><br>";
                   dim +="</label>";
                   dim +="</a>";
                   dim +="</div>";
@@ -1207,31 +1209,23 @@ $(document).ready(function(){
 
 $(document).on('change', '#group', function()
  {
-      //console.log($('input[id="#sid"]').is(':checked'));
-      //console.log($('#sid').val());
       var widget_array1 =  [];
       var widget_array2 =  [];
       $('.data input[type="checkbox" ]:checked').each(function(){ 
-
-          
 
           widget_array1.push($(this).val());
       });
       $('.bdf input[type="checkbox" ]:checked').each(function(){ 
 
-          
-
           widget_array2.push($(this).val());
       });
-      console.log((widget_array1).length,((widget_array2).length));
-      console.log(((widget_array1).length)&&((widget_array2).length));
       if((widget_array1.length) > 0 && (widget_array2.length) > 0)
       {
-          $('.check :input[type="submit"]').prop('disabled', false);
+          $('#sidq.btn').prop('disabled', false);
       }
       else
       {
-          $('.check :input[type="submit"]').prop('disabled', true); 
+          $('#sidq.btn').prop('disabled', true); 
       }
 });
 
