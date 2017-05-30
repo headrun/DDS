@@ -96,6 +96,7 @@
                           </div>
                           <center>
                             <button class="btn btn-primary btn-md select_ingest_btn" disabled>Ingest Selected Data</button>
+                            <button class="btn btn-success btn-md " >Save Info</button>
                         </center>
                       </div>
                   </div>

@@ -12,34 +12,59 @@
               <h3 class="widget-title">Setup New Project</h3>
               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                   <div class="panel panel-default" style="border-bottom: 4px solid #8bc34a; padding: 20px;">
+                    <div class = 'project ' style="padding: 20px">
+                      <div class= 'row' >
+                        <div class = 'col-md-4'>
+                         <input type = 'text' class ='btn btn-default' style="width: 100% ; text-align: left;" placeholder="Enter Project Name" id= 'project_text'>
+                        </div>
+                        
+                        
+                        <div class = 'col-md-3' style = 'display: -webkit-inline-box;'>
+                        <span class='btn btn default'>TA:</span>
+                        <select class='form-control' " id= 'ta' style="width: 90%">
+                          <option></option>
+                          <option>Diabetes</option>
+                        </select>
+                        </div>
+                        <div class = 'col-md-3' style = 'display: -webkit-inline-box;''>
+                        <span class='btn btn default'>FA:</span>
+                        
+                        <select class='form-control' " id = 'fa' style="width: 90%";>
+                          <option></option>
+                          <option>Sales</option>
+                        </select>
+                        </div>
+
+                      </div>
+                    </div>
                       <div class="row">  
                           <div class="widget col-lg-6 col-md-6 col-sm-6 col-xs-6">
                               <h4><span class="label label-primary">Choose a Project</span></h4>
                               <br>
-                              <form>
-                                <div class="radio-inline" >
+                              <form style="padding-left: 50px">
+                                <div class="radio" >
                                   <input type="radio" name="optradio" value="Brand Launch">Brand Launch
                                 </div>
-                                <div class="radio-inline">
+                                <div class="radio">
                                   <input type="radio" name="optradio" value="RWE">RWE
                                 </div>
-                                <div class="radio-inline">
+                                <div class="radio">
                                   <input type="radio" name="optradio" value="Digital Analytics">Digital Analytics
                                 </div>
-                                <br><br>
-                                <div class="radio-inline">
+                                
+                                <div class="radio">
                                   <input type="radio" name="optradio" value="Social Media">Social Media
                                 </div>
-                                <div class="radio-inline">
+                                <div class="radio">
                                   <input type="radio" name="optradio" value="Supply Chain">Supply Chain
                                 </div>
-                                <div class="radio-inline">
+                                <div class="radio">
                                   <input type="radio" name="optradio" value="New Project">New Projecct
                                 </div>
                               </form>
                           </div>
                           <div class="widget col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                              <h4><span class="label label-primary">Choose Project Subtype for RWE</span></h4>
+                              <h4><span class="label label-primary">Choose Project Subtype</span></h4>
                               <br>
                               <div class="selecting"></div>
                           </div>
@@ -57,6 +82,11 @@
                                       <div class="col-md-4 data" id="data1"></div>
                                       <div class="col-md-4 bdf" id="bdf1"></div>
                                       <div class="col-md-4 dim" id="dim1"></div>
+                                </div>
+                                <div class = 'hide'>
+                                  <input type='hidden' name= "proj_nam" class="proj_nam" >
+                                  <input type='hidden' name= "ta" class= "ta" >
+                                  <input type='hidden' name= "fa" class= "fa" >
                                 </div>
                                 <div class="Check">
                                   <button class="btn btn-success btn-md  pull-right" id= "sidq" type = "submit" disabled>Proceed to Ingestion</button>
@@ -1140,9 +1170,30 @@ $(document).ready(function(){
   });
 });
 
+$(document).on('change', '#project_text', function()
+   {
+
+      $('.proj_nam').val($(this).val());
+      console.log($('.proj_nam').val());
+    });
+$(document).on('change', '#ta', function()
+   {
+      $('.ta').val($(this).val());
+      console.log($('.ta').val());
+    });
+$(document).on('change', '#fa', function()
+   {
+      $('.fa').val($(this).val());
+      console.log($('.fa').val());
+    });
+
   $(document).on('change', '.sid', function()
    {
+      var widget_array1 =  [];
       var widget_array =  [];
+
+      widget_array1 = [$('#project_text').val(),$('#ta').val(),$('#fa').val()];
+      console.log(widget_array1);
       $('.form-group input[type="checkbox"]:checked').each(function(){ 
         
         widget_array.push($(this).val());
@@ -1196,15 +1247,19 @@ $(document).ready(function(){
                   
               }
             }
+            
             var data1= data+bdf+dim;
             $('#d-tables .data').html(data).contents();
             $('#d-tables .bdf').html(bdf);
             $('#d-tables .dim').html(dim);  
+
             $(':input[type="submit"]').prop('disabled', false);
        
             },
     });
     }
+    var hidden=
+    $('#d-tables .hide').html(hidden);
    });
 
 $(document).on('change', '#group', function()
@@ -1246,10 +1301,10 @@ $(document).on('mouseenter','.text',function(){
     }else if ( id === "PrescriberDetailsDimension" ) {
       id = "PrescriberDetailsDimension";
     }
-
+/*
     $('#setUpNewProject').find('.modal-body').html(document.querySelector('#'+id).cloneNode(true));
     $('#setUpNewProject').find('#'+id).css('display', 'table');
-    $('#setUpNewProject').modal('show');
+    $('#setUpNewProject').modal('show');*/
 });
 
 </script>

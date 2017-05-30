@@ -24,6 +24,20 @@
                                 </tr>
                               </thead>
                               <tbody>
+                              <tr>
+                                  <td><a href="{{url()}}/claims_reject">Symphony Rejection Reason Dimension</a></td>
+                                  <td><i class="fa fa-times" aria-hidden="true"></i></td>
+                                  <td>82%</td>
+                                  <td>Not Present</td>
+                                  <td>Yes</td>
+                                </tr>
+                                <tr>
+                                  <td><a href="{{url()}}/Plan_Dimension">Symphony Plan Dimension </a></td>
+                                  <td><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></td>
+                                  <td>100%</td>
+                                  <td>Present</td>
+                                  <td>Yes</td>
+                                </tr>
                                 <tr>
                                   <td><a href="{{url()}}/symp">Symphony Claims</a></td>
                                   <td><i class="fa fa-check" aria-hidden="true"></i></td>
@@ -59,20 +73,8 @@
                                   <td>Not Present</td>
                                   <td>Yes</td>
                                 </tr>
-                                <tr>
-                                  <td><a href="{{url()}}/Plan_Dimension">Symphony Plan Dimension </a></td>
-                                  <td><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></td>
-                                  <td>100%</td>
-                                  <td>Present</td>
-                                  <td>Yes</td>
-                                </tr>
-                                <tr>
-                                  <td><a href="{{url()}}/claims_reject">Symphony Rejection Reason Dimension</a></td>
-                                  <td><i class="fa fa-times" aria-hidden="true"></i></td>
-                                  <td>82%</td>
-                                  <td>Not Present</td>
-                                  <td>Yes</td>
-                                </tr>
+                                
+                                
                                 <tr>
                                   <td><a href="{{url()}}/Prescriber_Dimension">Symphony Prescriber Dimension</a></td>
                                   <td><i class="fa fa-check" aria-hidden="true"></i></td>

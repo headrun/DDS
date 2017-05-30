@@ -11,15 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/dashboard', 'AjaxCallTest@dash');
+
 
 Route::get('/login',function(){
 	return view('Login.Login');
 });
 
-Route::get('/dashboard',function(){
+Route::get('/',function(){
 	return view('Dashboard.index');
 });
 

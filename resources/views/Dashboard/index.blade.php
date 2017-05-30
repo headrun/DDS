@@ -11,7 +11,7 @@
               <div class="widget-icon"><img src="{{url()}}/assets/vendor/img/new_document_add.png"></div>
               <h3 class="widget-title">
                 Active Projects and Status 
-                <button class="btn btn-default pull-right" data-toggle="modal" data-target="#myModal" style="margin-right: 15px;">View Dag List</button>
+                <button class="btn btn-default pull-right" data-toggle="modal" data-target="#myModal" style="margin-right: 15px;">View Workflow</button>
               </h3>
               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                   <div class="panel panel-default" style="border-bottom: 4px solid #8bc34a;     padding: 20px;">
@@ -30,16 +30,18 @@
                                 </tr>
                               </thead>
                               <tbody>
+                                @foreach($q1 as $value)
                                 <tr>
-                                  <td>Type II Diabetes Prelaunch Dashboard</td>
-                                  <td align="center"><div class="green circle"></div></td>
-                                  <td>Diabetes</td>
-                                  <td>Sales</td>
-                                  <td>16</td>
-                                  <td>23</td>
-                                  <td>21-5-2017</td>
+                                  <td>{{$value->proj_name}}</td>
+                                  <td align="center"><div class="green circle" style="background-color: {{$value->proj_status}}"></div></td>
+                                  <td>{{$value->ta}}</td>
+                                  <td>{{$value->fa}}</td>
+                                  <td>{{$value->uvmtd}}</td>
+                                  <td>{{$value->active_down}}</td>
+                                  <td>{{$value->date}}</td>
                                 </tr>
-                                <tr>
+                                @endforeach
+                               <!--- <tr>
                                   <td>Market Access Reporting v1.0</td>
                                   <td align="center"><div class="green circle"></div></td>
                                   <td>Diabetes</td>
@@ -74,7 +76,7 @@
                                   <td>11</td>
                                   <td>12</td>
                                   <td>29-5-2017</td>
-                                </tr>
+                                </tr>-->
                               </tbody>
                             </table>
                           </div>
@@ -93,7 +95,7 @@
                   <h3 class="widget-title" style="color:#004269">AWS Infrastructure Health</h3>
               </div>
               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                  <div class="panel panel-default" style="border-bottom: 4px solid #f8b118;     padding: 20px;">
+                  <div class="panel panel-default" style="border-bottom: 4px solid #f8b118;     padding: 26px;">
                       <table class="table" style="font-size:14px">
                         <tbody>
                           <tr>

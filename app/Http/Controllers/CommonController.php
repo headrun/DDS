@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use DB;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Response;
@@ -55,9 +55,12 @@ class CommonController extends Controller
             $arr = array('data'=> $value, 'sources'=> $data);
             array_push($final_array, $arr);
         }
-
+        DB::table('active_proj')->insert(
+            ['proj_name' => $inputs['proj_nam'], 'ta' => $inputs['ta'] ,'fa' => $inputs['fa'], 'date' => date('Y-m-d')]
+            );
         $data = array('final_array');
         return view('ingestion', compact($data));
+
     }
 
     /**
