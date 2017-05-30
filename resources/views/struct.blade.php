@@ -2,10 +2,20 @@
 @section('Title')
 <title>Dcube | Injestion</title>
 @stop
+@section('BaseCSSLib')
+<link rel="stylesheet" href="{{url()}}/assets/vendor/css/breadcrumb.css">
+@stop
 @section('BaseContent')
 <div class="container-fluid dashboard-content">
   <div class="visualization">
       <div class="top-div">
+          <div class="breadcrumb flat">
+             <a href="{{url()}}/setup_new_proj">Setup New Project</a>
+             <a href="{{url()}}/ingestion" >Ingest Data</a>
+             <a href="javascript:history.back()" >Validate Data</a>
+             <a href="#" class="active">Map Data</a>
+         </div>
+          <div class="row widget-1" style="padding-top: 30px">
           <div class="row widget-1">
               <div class="widget-icon"><img src="http://176.9.181.46/Dcube/assets/vendor/img/new_document_add.png"></div>
               <h3 class="widget-title">

@@ -2,11 +2,20 @@
 @section('Title')
 <title>Dcube | Validation</title>
 @stop
+@section('BaseCSSLib')
+<link rel="stylesheet" href="{{url()}}/assets/vendor/css/breadcrumb.css">
+@stop
 @section('BaseContent')
 <div class="container-fluid dashboard-content">
   <div class="visualization">
       <div class="top-div">
-          <div class="row widget-1">
+          <div class="breadcrumb flat">
+             <a href="{{url()}}/setup_new_proj">Setup New Project</a>
+             <a href="javascript:history.back()" >Ingest Data</a>
+             <a href="#" class="active">Validate Data</a>
+             <a href="#">Map Data</a>
+         </div>
+          <div class="row widget-1" style="padding-top: 30px">
               <div class="widget-icon"><img src="{{url()}}/assets/vendor/img/new_document_add.png"></div>
               <h3 class="widget-title">Validation Summary</h3>
               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">

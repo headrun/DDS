@@ -3,6 +3,7 @@
 <title>Dcube | Injestion</title>
 @stop
 @section('BaseCSSLib')
+<link rel="stylesheet" href="{{url()}}/assets/vendor/css/breadcrumb.css">
 <style type="text/css">
     
     .notifications {
@@ -25,7 +26,13 @@
 <div class="container-fluid dashboard-content">
   <div class="visualization">
       <div class="top-div">
-          <div class="row widget-1">
+          <div class="breadcrumb flat">
+             <a href="javascript:history.back()">Setup New Project</a>
+             <a href="#" class="active">Ingest Data</a>
+             <a href="#">Validate Data</a>
+             <a href="#">Map Data</a>
+         </div>
+          <div class="row widget-1" style="padding-top: 30px">
               <h3 class="widget-title" style="margin-left: 20px; margin-bottom: 10px;">
                   <select class="form-control" style="width: 150px">
                       <option>Market Access Reporting v1.0</option>
