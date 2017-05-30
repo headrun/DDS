@@ -7,7 +7,10 @@
   <div class="visualization">
       <div class="top-div">
           <div class="row widget-1">
-              
+              <div class="widget-icon"><img src="http://176.9.181.46/Dcube/assets/vendor/img/new_document_add.png"></div>
+              <h3 class="widget-title">
+                Dcube Structure Mapping
+              </h3>
               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                   <div class="panel panel-default" style="border-bottom: 4px solid #8bc34a;     padding: 20px;">
                       <div class="row">  
@@ -1129,3 +1132,9 @@
     </div>
   </div>
 </div>
+@stop
+@section('BaseJSLib')
+<script type="text/javascript">
+    $('a.dcube_struct').addClass('active');
+</script>
+@stop
