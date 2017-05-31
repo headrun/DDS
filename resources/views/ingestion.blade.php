@@ -62,11 +62,12 @@
                                 </tr>
                               </thead>
                               <tbody>
+                              
                               @foreach($final_array as $value)
                                 <tr class="each_row">
                                   <td>
                                       <div class="checkbox">
-                                        <label><input type="checkbox" class="ingest_chkbox"></label>
+                                        <label><input type="checkbox" class="ingest_chkbox" value="{{$value['data']}}"></label>
                                       </div>
                                   </td>
                                   <td>
@@ -104,7 +105,11 @@
                             </table>
                           </div>
                           <center>
-                            <button class="btn btn-primary btn-md select_ingest_btn" disabled>Ingest Selected Data</button>
+                            <form action='{{url()}}/validate' type= "hidden" id="hidden-form">
+                              <div id= 'hidden'></div>
+                              <button class="btn btn-primary btn-md select_ingest_btn" disabled>Ingest Selected Data</button>
+                            </form>
+                            
                             <button class="btn btn-success btn-md " >Save Info</button>
                         </center>
                       </div>
@@ -787,5 +792,19 @@
         
         }).show();
     });
+$(document).on('change', '.checkbox', function()
+{
+  var widget_array1 =  [];
+  var html='';
+  $(' input[type="checkbox" ]:checked').each(function(){ 
+       widget_array1.push($(this).val());
+      });
+  //console.log(widget_array1);
+  for(var i=0;i<widget_array1.length;i++)
+  {
+    html +="<input type='hidden' name = 'checkbox[]'value='"+widget_array1[i]+"'>"
+  }
+  $('#hidden').html(html);
+});
 </script>
 @stop

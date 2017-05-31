@@ -66,7 +66,7 @@ class CommonController extends Controller
         }
         //return $final_array1;
         $data1 = array('final_array1', 'final_array');
-        return view('ingestion', compact($data1) );
+        return view('ingestion', compact($data1));
         
 
     }

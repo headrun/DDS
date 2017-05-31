@@ -33,74 +33,33 @@
                                 </tr>
                               </thead>
                               <tbody>
+                              @foreach($val as $value)
                               <tr>
-                                  <td><a href="{{url()}}/claims_reject">Symphony Rejection Reason Dimension</a></td>
-                                  <td><i class="fa fa-times" aria-hidden="true"></i></td>
-                                  <td>82%</td>
-                                  <td>Not Present</td>
-                                  <td>Yes</td>
+                                  <td><a href="{{url()}}/{{$value->description}}">{{$value->ingested_data}}</a></td>
+                                  @if($value->val_result=='no')
+                                    <td><i class="fa fa-times" aria-hidden="true"></i></td>
+                                  @elseif($value->val_result=='yes')
+                                    <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  @else
+                                    <td><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></td>
+                                  @endif
+                                  <td>{{$value->comp_source}}</td>
+                                  <td>{{$value->duplicates}}</td>
+                                  <td>{{$value->missing_values}}</td>
                                 </tr>
-                                <tr>
-                                  <td><a href="{{url()}}/Plan_Dimension">Symphony Plan Dimension </a></td>
-                                  <td><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></td>
-                                  <td>100%</td>
-                                  <td>Present</td>
-                                  <td>Yes</td>
-                                </tr>
-                                <tr>
-                                  <td><a href="{{url()}}/symp">Symphony Claims</a></td>
-                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
-                                  <td>100%</td>
-                                  <td>Not Present</td>
-                                  <td>No</td>
-                                </tr>
-                                <tr>
-                                  <td><a href="{{url()}}/Prescriber_Source">Symphony Presciber Source</a></td>
-                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
-                                  <td>100%</td>
-                                  <td>Not Present</td>
-                                  <td>No</td>
-                                </tr>
-                                <tr>
-                                  <td><a href="{{url()}}/mmit">MMIT</a></td>
-                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
-                                  <td>100%</td>
-                                  <td>Present</td>
-                                  <td>No</td>
-                                </tr>
-                                <tr>
-                                  <td><a href="{{url()}}/mmit_claims">MMIT to CLAIMS</a></td>
-                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
-                                  <td>100%</td>
-                                  <td>Not Present</td>
-                                  <td>No</td>
-                                </tr>
-                                <tr>
-                                  <td><a href="{{url()}}/Product_Dimension">Symphony Product Dimension</a></td>
-                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
-                                  <td>100%</td>
-                                  <td>Not Present</td>
-                                  <td>Yes</td>
-                                </tr>
-                                
-                                
-                                <tr>
-                                  <td><a href="{{url()}}/Prescriber_Dimension">Symphony Prescriber Dimension</a></td>
-                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
-                                  <td>100%</td>
-                                  <td>Not Present</td>
-                                  <td>No</td>
-                                </tr>
-                                <tr>
-                                  <td><a href="{{url()}}/Allignment">Prescriber Allignment </a></td>
-                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
-                                  <td>100%</td>
-                                  <td>Not Present</td>
-                                  <td>Yes</td>
-                                </tr>
+                              @endforeach
+
                               </tbody>
                             </table>
                           </div>
+                          <form action='{{url()}}/struct' id="hidden-form">
+                              <div id= 'hidden'>
+                              @foreach($val as $va)
+                              <input type="hidden" name="array[]" value="{{$va->description}}">
+                              @endforeach
+                              </div>
+                              <button class="btn btn-primary btn-md select_ingest_btn" >Ingest Selected Data</button>
+                            </form>
                       </div>
                   </div>
               </div>

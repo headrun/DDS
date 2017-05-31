@@ -5,7 +5,7 @@ use DB;
 use Illuminate\Http\Request;
 use Response;
 use App\Category;
-
+use Input;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -96,6 +96,25 @@ class AjaxCallTest extends Controller
     //return $q1[0]->proj_name;
     return view('Dashboard.index', compact($data));
 
+  }
+    public function validate1()
+  {
+    $inputs =Input::all();
+    $values = $inputs['checkbox'];
+    $final_array = array();
+    $val = DB::table('validate')->whereIn('description', $values)->get();
+    $data1 = array('val');
+    return view('validate', compact($data1));
+    
+  }
+  public function struct()
+  {
+    $inputs =Input::all();
+    $val = $inputs['array'];
+    $val = implode(",",$val);
+    $data1 = array('val');
+    return view('struct', compact($data1));
+    
   }
 
 

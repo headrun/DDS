@@ -35,9 +35,7 @@ Route::get('/setup_new_proj_new',function(){
 	return view('setup_new_proj_new');
 });
 
-Route::get('/validate',function(){
-	return view('validate');
-});
+Route::any('/validate','AjaxCallTest@validate1');
 
 Route::any('test', 'AjaxCallTest@test');
 Route::any('test1', 'AjaxCallTest@test1');
@@ -80,9 +78,7 @@ Route::get('/Prescriber_Dimension',function(){
 });
 
 
-Route::get('/struct',function(){
-	return view('struct');
-});
+Route::get('/struct','AjaxCallTest@struct');
 
 
 

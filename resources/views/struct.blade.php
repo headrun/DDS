@@ -37,37 +37,25 @@
                               </thead>
                               <tbody>
                               
-                                <tr class="each_row">
+                                <tr class="each_row" style="display: none;" id='claims'>
                                   <td>
                                       <div class="checkbox">
                                         <label><input type="checkbox" class="ingest_chkbox"></label>
                                       </div>
                                   </td>
-                                  <td>
-                                      
-                                        Symphony_Claims
-                                      
-                                  </td>
-                                  
+                                  <td>Symphony_Claims</td>
                                   <td>
                                       <select class="form-control source_name">
                                         <option>Dcube_Claims
                                         <option>Dcube_Claim_RejRsn_Dim</option>
                                         <option>Dcube_Claim_Dim</option>
-                                     
-                                        
                                       </select>
                                   </td>
-                                  
-                                  <td class="extractor_name"></td>
                                   <td>
                                       <button class="btn btn-info " data-toggle="modal" data-target="#claims">edit mapping</button>
                                   </td>
-                                  <td>
-                                      <!--<i class="fa fa-check fa-2x" style="color: green" aria-hidden="true"></i>-->
-                                  </td>
                                 </tr>
-                                <tr class="each_row">
+                                <tr class="each_row" style="display: none" id='Prescriber_Source'>
                                   <td>
                                       <div class="checkbox">
                                         <label><input type="checkbox" class="ingest_chkbox"></label>
@@ -89,15 +77,13 @@
                                       </select>
                                   </td>
                                   
-                                  <td class="extractor_name"></td>
+
                                   <td>
                                       <button class="btn btn-info " data-toggle="modal" data-target="#presrc">edit mapping</button>
                                   </td>
-                                  <td>
-                                      <!--<i class="fa fa-check fa-2x" style="color: green" aria-hidden="true"></i>-->
                                   </td>
                                 </tr>
-                                <tr class="each_row">
+                                <tr class="each_row" style="display: none" id='mmit'>
                                   <td>
                                       <div class="checkbox">
                                         <label><input type="checkbox" class="ingest_chkbox"></label>
@@ -119,15 +105,12 @@
                                       </select>
                                   </td>
                                   
-                                  <td class="extractor_name"></td>
+
                                   <td>
                                       <button class="btn btn-info " data-toggle="modal" data-target="#mmit" >edit mapping</button>
                                   </td>
-                                  <td>
-                                      <!--<i class="fa fa-check fa-2x" style="color: green" aria-hidden="true"></i>-->
-                                  </td>
                                 </tr>
-                                <tr class="each_row">
+                                <tr class="each_row" style="display: none" id= 'mmit_to_claims'>
                                   <td>
                                       <div class="checkbox">
                                         <label><input type="checkbox" class="ingest_chkbox"></label>
@@ -149,15 +132,12 @@
                                       </select>
                                   </td>
                                   
-                                  <td class="extractor_name"></td>
+
                                   <td>
                                       <button class="btn btn-info " >edit mapping</button>
                                   </td>
-                                  <td>
-                                      <!--<i class="fa fa-check fa-2x" style="color: green" aria-hidden="true"></i>-->
-                                  </td>
                                 </tr>
-                                <tr class="each_row">
+                                <tr class="each_row" style="display: none" id= 'Product_Dimension'>
                                   <td>
                                       <div class="checkbox">
                                         <label><input type="checkbox" class="ingest_chkbox"></label>
@@ -178,16 +158,12 @@
                                         
                                       </select>
                                   </td>
-                                  
-                                  <td class="extractor_name"></td>
                                   <td>
                                       <button class="btn btn-info " data-toggle="modal" data-target="#prodim" >edit mapping</button>
                                   </td>
-                                  <td>
-                                      <!--<i class="fa fa-check fa-2x" style="color: green" aria-hidden="true"></i>-->
-                                  </td>
+                                  
                                 </tr>
-                                <tr class="each_row">
+                                <tr class="each_row" style="display: none" id= 'Plan_Dimension'>
                                   <td>
                                       <div class="checkbox">
                                         <label><input type="checkbox" class="ingest_chkbox"></label>
@@ -209,15 +185,12 @@
                                       </select>
                                   </td>
                                   
-                                  <td class="extractor_name"></td>
+                                  
                                   <td>
                                       <button class="btn btn-info " data-toggle="modal" data-target="#plndim" >edit mapping</button>
                                   </td>
-                                  <td>
-                                      <!--<i class="fa fa-check fa-2x" style="color: green" aria-hidden="true"></i>-->
-                                  </td>
                                 </tr>
-                                <tr class="each_row">
+                                <tr class="each_row" style="display: none" id= 'Rejection_Reason'>
                                   <td>
                                       <div class="checkbox">
                                         <label><input type="checkbox" class="ingest_chkbox"></label>
@@ -238,16 +211,14 @@
                                       </select>
                                   </td>
                                   
-                                  <td class="extractor_name"></td>
+                                  
                                   <td>
                                       <button class="btn btn-info " data-toggle="modal" data-target="#rrdim">edit mapping</button>
                                   </td>
-                                  <td>
-                                      <!--<i class="fa fa-check fa-2x" style="color: green" aria-hidden="true"></i>-->
-                                  </td>
+                                  
                                 </tr>
 
-                                <tr class="each_row">
+                                <tr class="each_row" style="display: none" id='Prescriber_Dimension'>
                                   <td>
                                       <div class="checkbox">
                                         <label><input type="checkbox" class="ingest_chkbox"></label>
@@ -268,16 +239,14 @@
                                       </select>
                                   </td>
                                   
-                                  <td class="extractor_name"></td>
+                                  
                                   <td>
                                       <button class="btn btn-info " data-toggle="modal" data-target="#prsdim">edit mapping</button>
                                   </td>
-                                  <td>
-                                      <!--<i class="fa fa-check fa-2x" style="color: green" aria-hidden="true"></i>-->
-                                  </td>
+                                  
                                 </tr>
 
-                                <tr class="each_row">
+                                <tr class="each_row" style="display: none" id='Prescriber Alignment'>
                                   <td>
                                       <div class="checkbox">
                                         <label><input type="checkbox" class="ingest_chkbox"></label>
@@ -298,13 +267,11 @@
                                       </select>
                                   </td>
                                   
-                                  <td class="extractor_name"></td>
+                                  
                                   <td>
                                       <button class="btn btn-info " data-toggle="modal" data-target="#allign">edit mapping</button>
                                   </td>
-                                  <td>
-                                      <!--<i class="fa fa-check fa-2x" style="color: green" aria-hidden="true"></i>-->
-                                  </td>
+                                  
                                 </tr>
                                 
                               </tbody>
@@ -4381,9 +4348,28 @@
     </div>
   </div>
 </div>
+
 @stop
 @section('BaseJSLib')
 <script type="text/javascript">
     $('a.dcube_struct').addClass('active');
+    var str= "{{$val}}";
+   var val = str.split(",");
+   for(var i=0; i< val.length; i++)
+    {
+        val[i]= val[i].replace(/ /g , "_");
+    }
+    console.log(val);
+$(document).ready(function(){
+
+  for(var i=0; i< val.length; i++)
+  {
+    id = val[i];
+    $('tbody').find('#'+id).show();
+    console.log(id);
+  }
+  
+});
+
 </script>
 @stop
