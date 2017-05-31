@@ -9,7 +9,7 @@
  overflow: hidden;
  background: #060612;
  border-radius: 0px;
- padding-left: 40px;
+ padding-left: 0px;
  /*Lets add the numbers for each link using CSS counters. flag is the name of the counter. to be defined using counter-reset in the parent element of the links*/
  counter-reset: flag; 
 }
@@ -19,18 +19,18 @@
  outline: none;
  display: block;
  float: left;
- font-size: 12px;
+ font-size: 14px;
  line-height: 36px;
  color: white;
  /*need more margin on the left of links to accomodate the numbers*/
- padding: 0 10px 0 60px;
+ padding: 0 100px 0 100px;
  background: #666;
  background: linear-gradient(#666, #333);
  position: relative;
 }
 /*since the first link does not have a triangle before it we can reduce the left padding to make it look consistent with other links*/
 .breadcrumb a:first-child {
- padding-left: 46px;
+ padding-left: 50px;
  border-radius: 5px 0 0 5px; /*to match with the parent's radius*/
 }
 .breadcrumb a:first-child:before {
@@ -38,7 +38,7 @@
 }
 .breadcrumb a:last-child {
  border-radius: 0 5px 5px 0; /*this was to prevent glitches on hover*/
- padding-right: 20px;
+ padding-right: 50px;
 }
 
 /*hover/active styles*/
