@@ -52,7 +52,7 @@
                                       </select>
                                   </td>
                                   <td>
-                                      <button class="btn btn-info " data-toggle="modal" data-target="#claims">edit mapping</button>
+                                      <button class="btn btn-info " data-toggle="modal" data-target="#claim">edit mapping</button>
                                   </td>
                                 </tr>
                                 <tr class="each_row" style="display: none" id='Prescriber_Source'>
@@ -107,7 +107,7 @@
                                   
 
                                   <td>
-                                      <button class="btn btn-info " data-toggle="modal" data-target="#mmit" >edit mapping</button>
+                                      <button class="btn btn-info " data-toggle="modal" data-target="#mmits" >edit mapping</button>
                                   </td>
                                 </tr>
                                 <tr class="each_row" style="display: none" id= 'mmit_to_claims'>
@@ -593,7 +593,7 @@
 
     </div>
   </div>
-  <div id="mmit" class="modal fade" role="dialog">
+  <div id="mmits" class="modal fade" role="dialog">
     <div class="modal-dialog">
 
       <!-- Modal content-->
@@ -3235,7 +3235,7 @@
 
     </div>
   </div>
-  <div id="claims" class="modal fade" role="dialog">
+  <div id="claim" class="modal fade" role="dialog">
     <div class="modal-dialog">
 
       <!-- Modal content-->
