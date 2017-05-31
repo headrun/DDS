@@ -1293,7 +1293,7 @@ $(document).on('change', '#group', function()
       }
 });
 
-$(document).on('mouseenter','.text',function(){ 
+$(document).on('click','.text',function(){ 
  var id = $(this).text().trim(); 
     if ( id === "Product Dimension" ) {
       id = "ProductDimension";
@@ -1310,10 +1310,10 @@ $(document).on('mouseenter','.text',function(){
     }else if ( id === "PrescriberDetailsDimension" ) {
       id = "PrescriberDetailsDimension";
     }
-/*
+
     $('#setUpNewProject').find('.modal-body').html(document.querySelector('#'+id).cloneNode(true));
     $('#setUpNewProject').find('#'+id).css('display', 'table');
-    $('#setUpNewProject').modal('show');*/
+    $('#setUpNewProject').modal('show');
 });
 
 </script>

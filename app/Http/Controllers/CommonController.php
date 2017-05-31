@@ -58,8 +58,16 @@ class CommonController extends Controller
         DB::table('active_proj')->insert(
             ['proj_name' => $inputs['proj_nam'], 'ta' => $inputs['ta'] ,'fa' => $inputs['fa'], 'date' => date('Y-m-d')]
             );
-        $data = array('final_array');
-        return view('ingestion', compact($data));
+        $data1 = DB::table('active_proj')->get();
+        //$data = array('final_array');
+        $final_array1 = array();
+        foreach ($data1 as $value) {
+            array_push($final_array1,$value->proj_name);
+        }
+        //return $final_array1;
+        $data1 = array('final_array1', 'final_array');
+        return view('ingestion', compact($data1) );
+        
 
     }
 

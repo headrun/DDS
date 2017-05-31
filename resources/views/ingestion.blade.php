@@ -35,11 +35,13 @@
           <div class="row widget-1" style="padding-top: 30px">
               <h3 class="widget-title" style="margin-left: 20px; margin-bottom: 10px;">
                   <select class="form-control" style="width: 150px">
-                      <option>Market Access Reporting v1.0</option>
-                      <option>Optimix: Market Mix Modelling workflow for RA</option>
+                      @foreach($final_array1 as $value)
+                      <option>{{$value}}</option>
+                      @endforeach
+                      <!--<option>Optimix: Market Mix Modelling workflow for RA</option>
                       <option>Phast Rx reporting dashboard</option>
                       <option>Social Media Campaign Tracking</option>
-                      <option>Type II Diabetes Prelaunch Dashboard</option>
+                      <option>Type II Diabetes Prelaunch Dashboard</option>-->
                   </select>
               </h3>
               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -130,21 +132,13 @@
                     <div class="col-md-10">
                         <div class="form-group">
                           <label for="email">Host Name:</label>
-                          <select class="form-control">
-                              <option></option>
-                              <option></option>
-                              <option></option>
-                          </select>
+                          <input type="text" class="form-control">
                         </div>  
                     </div>
                     <div class="col-md-2">
                         <div class="form-group">
                           <label for="email">Port:</label>
-                          <select class="form-control">
-                              <option></option>
-                              <option></option>
-                              <option></option>
-                          </select>
+                          <input type="text" class="form-control">
                         </div>
                     </div>
                 </div>
@@ -152,11 +146,7 @@
                     <div class="col-md-12">
                         <div class="form-group">
                           <label for="email">Database Name:</label>
-                          <select class="form-control">
-                              <option></option>
-                              <option></option>
-                              <option></option>
-                          </select>
+                          <input type="text" class="form-control">
                         </div>  
                     </div>
                 </div>
