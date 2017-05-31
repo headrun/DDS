@@ -67,7 +67,7 @@
                                 <tr class="each_row">
                                   <td>
                                       <div class="checkbox">
-                                        <label><input type="checkbox" class="ingest_chkbox" value="{{$value['data']}}"></label>
+                                        <label><input type="checkbox" class="ingest_chkbox" value="{{$value['data']}}" disabled></label>
                                       </div>
                                   </td>
                                   <td>
@@ -105,12 +105,12 @@
                             </table>
                           </div>
                           <center>
-                            <form action='{{url()}}/validate' type= "hidden" id="hidden-form">
+                            <button class="btn btn-success btn-md">Save Info</button>
+                            <button class="btn btn-warning btn-md select_ingest_btn" disabled>Ingest Selected Data</button>
+                            <form action='{{url()}}/validate' type= "hidden" id="hidden-form" style="position: absolute; margin-left: 608px; margin-top: -34px;">
                               <div id= 'hidden'></div>
-                              <button class="btn btn-primary btn-md select_ingest_btn" disabled>Ingest Selected Data</button>
+                              <button class="btn btn-primary btn-md move_to_validate" disabled>Move to validate</button>
                             </form>
-                            
-                            <button class="btn btn-success btn-md " >Save Info</button>
                         </center>
                       </div>
                   </div>
@@ -587,12 +587,26 @@
   </div>
 </div>
 
-<div class='notifications bottom-left'></div>
+<div class="modal fade" id="ingest_started" role="dialog">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <!--<div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title"></h4>
+      </div>-->
+      <div class="modal-body">
+          <h4>Ingestion Started</h4>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 @stop
 @section('BaseJSLib')
 <script src="{{url()}}/assets/vendor/js/jquery.js"></script>
-<script src="{{url()}}/assets/vendor/js/notify.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script type="text/javascript">
     $('a.ingest').addClass('active');
@@ -629,7 +643,31 @@
 
             if ($(this).closest('.each_row').find('.extractor_name').text() == window.tick) {
 
-                $(this).closest('.each_row').find('.last_col_tick').html('<i class="fa fa-check fa-2x" style="color: green" aria-hidden="true"></i>')
+                $(this).closest('.each_row').find('.last_col_tick').html('<i class="fa fa-check fa-2x" style="color: green" aria-hidden="true"></i>');
+
+                $(this).closest('.each_row').find('.ingest_chkbox').prop('checked', true);
+
+                $(this).closest('.each_row').find('.ingest_chkbox').attr('disabled', false);
+
+                $('.select_ingest_btn').attr('disabled', false);
+          
+                $('.move_to_validate').attr('disabled', false);
+
+                var widget_array1 =  [];
+                
+                var html='';
+                
+                $(' input[type="checkbox" ]:checked').each(function(){ 
+                     
+                     widget_array1.push($(this).val());
+                });
+                
+                for(var i=0;i<widget_array1.length;i++){
+                  
+                  html +="<input type='hidden' name = 'checkbox[]'value='"+widget_array1[i]+"'>"
+                }
+                
+                $('#hidden').html(html);
             }
         });
 
@@ -773,38 +811,38 @@
 
     $('.ingest_chkbox').change(function(){
 
-        $('.select_ingest_btn').attr('disabled', false);
+      if($(' input[type="checkbox" ]:checked').length > 0){
+
+          $('.select_ingest_btn').attr('disabled', false);
+          
+          $('.move_to_validate').attr('disabled', false);
+       }else{
+
+          $('.select_ingest_btn').attr('disabled', true);
+          
+          $('.move_to_validate').attr('disabled', true);
+       }
     });
 
     $('.select_ingest_btn').click(function(){
 
-        $('.bottom-left').notify({
-      
-            type : "inverse",
-
-            closable : true,
-
-            fadeOut: { enabled: true, delay: 6000 },
-
-            message: { html: "<span> Ingested Selected Data  &nbsp;&nbsp;</span>", 
-                      text: false
-                    },
-        
-        }).show();
+        $('#ingest_started').modal('show'); 
     });
-$(document).on('change', '.checkbox', function()
-{
-  var widget_array1 =  [];
-  var html='';
-  $(' input[type="checkbox" ]:checked').each(function(){ 
-       widget_array1.push($(this).val());
+
+    $(document).on('change', '.checkbox', function()
+    {
+      var widget_array1 =  [];
+      var html='';
+      $(' input[type="checkbox" ]:checked').each(function(){ 
+           
+           widget_array1.push($(this).val());
       });
-  //console.log(widget_array1);
-  for(var i=0;i<widget_array1.length;i++)
-  {
-    html +="<input type='hidden' name = 'checkbox[]'value='"+widget_array1[i]+"'>"
-  }
-  $('#hidden').html(html);
-});
+      
+      for(var i=0;i<widget_array1.length;i++){
+        
+        html +="<input type='hidden' name = 'checkbox[]'value='"+widget_array1[i]+"'>"
+      }
+      $('#hidden').html(html);
+    });
 </script>
 @stop

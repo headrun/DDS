@@ -44,7 +44,7 @@ Route::any('/getTypes', 'CommonController@getTypes');
 Route::any('/getSubTypes', 'CommonController@getSubTypes');
 Route::any('/getExtractor', 'CommonController@getExtractor');	
 
-Route::get('/symp',function(){
+Route::get('/claims',function(){
 	return view('symphony_claims');
 });
 

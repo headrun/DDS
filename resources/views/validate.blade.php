@@ -35,7 +35,7 @@
                               <tbody>
                               @foreach($val as $value)
                               <tr>
-                                  <td><a href="{{url()}}/{{$value->description}}">{{$value->ingested_data}}</a></td>
+                                  <td><a href="{{url()}}/{{$value->description}}" target="_blank">{{$value->ingested_data}}</a></td>
                                   @if($value->val_result=='no')
                                     <td><i class="fa fa-times" aria-hidden="true"></i></td>
                                   @elseif($value->val_result=='yes')
@@ -58,7 +58,7 @@
                               <input type="hidden" name="array[]" value="{{$va->description}}">
                               @endforeach
                               </div>
-                              <button class="btn btn-primary btn-md select_ingest_btn" >Ingest Selected Data</button>
+                              <button class="btn btn-primary btn-md select_ingest_btn" >Mapping Data</button>
                             </form>
                       </div>
                   </div>

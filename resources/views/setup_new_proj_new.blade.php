@@ -1226,32 +1226,32 @@ $(document).on('change', '#fa', function()
             for (var i = 0; i < d.length; i++) {
               if (d[i].category==='Data'){
                 data += "<div class = 'checkbox'>"+
-                  "<a href ='#' data-toggle = 'popover'>"+
-                  "<label class = 'active' >"+
-                  "<input type='checkbox'  class='test2' checked  name = 'check_box[]' value='"+d[i].description+"'><span class='text'>"+d[i].description+"</span><br>";
+                  //"<a href ='#' data-toggle = 'popover'>"+
+                  "<label class = 'active' style='margin-bottom: -5px;'>"+
+                  "<input type='checkbox'  class='test2' checked  name = 'check_box[]' value='"+d[i].description+"'>";
                   data +="</label>";
-                  data +="</a>";
+                  data +="<span class='text' style='cursor: pointer;'>"+d[i].description+"</span><br>";
                   data +="</div>";
                   
               }
               if (d[i].category==='Bridging File'){
                   bdf += "<div class = 'checkbox'>"+
-                  "<a href ='#' data-toggle = 'popover'>"+
-                  "<label class = 'active' >"+
-                  "<input type='checkbox'  class='test2' checked  name = 'check_box[]' value='"+d[i].description+"'><span class='text'>"+d[i].description+"</span><br>";
+                 // "<a href ='#' data-toggle = 'popover'>"+
+                  "<label class = 'active' style='margin-bottom: -5px;'>"+
+                  "<input type='checkbox'  class='test2' checked  name = 'check_box[]' value='"+d[i].description+"'>";
                   bdf +="</label>";
-                  bdf +="</a>";
+                  bdf +="<span class='text' style='cursor: pointer;'>"+d[i].description+"</span><br>";
                   bdf +="</div>";
                   
 
               }
               if (d[i].category==='Dimension'){
                 dim += "<div class = 'checkbox'>"+
-                  "<a href ='#' data-toggle = 'popover'>"+
-                  "<label class = 'active' >"+
-                  "<input type='checkbox'  class='test2' checked  name = 'check_box[]' value='"+d[i].description+"'><span class='text'>"+d[i].description+"</span><br>";
+                  //"<a href ='#' data-toggle = 'popover'>"+
+                  "<label class = 'active' style='margin-bottom: -5px;'>"+
+                  "<input type='checkbox'  class='test2' checked  name = 'check_box[]' value='"+d[i].description+"'>";
                   dim +="</label>";
-                  dim +="</a>";
+                  dim +="<span class='text' style='cursor: pointer;'>"+d[i].description+"</span><br>";
                   dim +="</div>";
                   
               }
@@ -1262,7 +1262,9 @@ $(document).on('change', '#fa', function()
             $('#d-tables .bdf').html(bdf);
             $('#d-tables .dim').html(dim);  
 
-            $(':input[type="submit"]').prop('disabled', false);
+            if ($('#project_text').val() != '' && $('#ta').val() != '' && $('#fa').val() != '') {
+              $(':input[type="submit"]').prop('disabled', false);
+            }
        
             },
     });
@@ -1271,25 +1273,37 @@ $(document).on('change', '#fa', function()
     $('#d-tables .hide').html(hidden);
    });
 
+
+$(document).on('change', '#project_text, #ta, #fa', function(){
+
+    if ($('#project_text').val() != '' && $('#ta').val() != '' && $('#fa').val() != '') {
+
+        $('#sidq.btn').prop('disabled', false);
+    }
+});
+
 $(document).on('change', '#group', function()
  {
       var widget_array1 =  [];
       var widget_array2 =  [];
-      $('.data input[type="checkbox" ]:checked').each(function(){ 
+      if ($('#project_text').val() != '' && $('#ta').val() != '' && $('#fa').val() != '') {
 
-          widget_array1.push($(this).val());
-      });
-      $('.bdf input[type="checkbox" ]:checked').each(function(){ 
+        $('.data input[type="checkbox" ]:checked').each(function(){ 
 
-          widget_array2.push($(this).val());
-      });
-      if((widget_array1.length) > 0 && (widget_array2.length) > 0)
-      {
-          $('#sidq.btn').prop('disabled', false);
-      }
-      else
-      {
-          $('#sidq.btn').prop('disabled', true); 
+            widget_array1.push($(this).val());
+        });
+        $('.bdf input[type="checkbox" ]:checked').each(function(){ 
+
+            widget_array2.push($(this).val());
+        });
+        if((widget_array1.length) > 0 && (widget_array2.length) > 0)
+        {
+            $('#sidq.btn').prop('disabled', false);
+        }
+        else
+        {
+            $('#sidq.btn').prop('disabled', true); 
+        }
       }
 });
 
