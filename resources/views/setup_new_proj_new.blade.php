@@ -33,6 +33,8 @@
                         <select class='form-control' " id= 'ta' style="width: 90%">
                           <option></option>
                           <option>Diabetes</option>
+                          <option>Oncology</option>
+                          <option>Rheumatoid Arthritis</option>
                         </select>
                         </div>
                         <div class = 'col-md-3' style = 'display: -webkit-inline-box;''>
@@ -41,6 +43,10 @@
                         <select class='form-control' " id = 'fa' style="width: 90%";>
                           <option></option>
                           <option>Sales</option>
+                          <option>Multiple</option>
+                          <option>Market Access</option>
+                          <option>Marketing</option>
+                          <option>R&D</option>
                         </select>
                         </div>
 
@@ -1291,10 +1297,12 @@ $(document).on('change', '#group', function()
         $('.data input[type="checkbox" ]:checked').each(function(){ 
 
             widget_array1.push($(this).val());
+            console.log(widget_array1);
         });
         $('.bdf input[type="checkbox" ]:checked').each(function(){ 
 
             widget_array2.push($(this).val());
+            console.log(widget_array2);
         });
         if((widget_array1.length) > 0 && (widget_array2.length) > 0)
         {

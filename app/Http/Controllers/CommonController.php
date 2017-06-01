@@ -68,6 +68,7 @@ class CommonController extends Controller
         $data1 = array('final_array1', 'final_array');
         return view('ingestion', compact($data1));
         
+        
 
     }
 

@@ -72,6 +72,10 @@ Route::get('/Allignment',function(){
 	return view('Allignment');
 });
 
+Route::get('/kpi_map',function(){
+	return view('kpi_map');
+});
+
 
 Route::get('/Prescriber_Dimension',function(){
 	return view('Prescriber_Dimension');
