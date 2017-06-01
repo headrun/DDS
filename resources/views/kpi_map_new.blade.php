@@ -19,136 +19,108 @@
          </div>
       	 <div class="row widget-1" style="padding-top: 30px">
               <div class="widget-icon"><img src="{{url()}}/assets/vendor/img/new_document_add.png"></div>
-              	<h3 class="widget-title">KPI</h3>
-              	<div class ='row'>
-              		<div class= 'col-md-3'>
-              			<label class = 'label label-warning'>Project Name</label>
-              		</div>
-              	</div>
-              	<div class = "row">
-              		<div class= "col-md-3">
-              			<select class="form-control" id='proj_name'>
-                      <option></option>
-              				@foreach($view as $val)
-              				<option value="{{$val->view}}">{{$val->view}}</option>
-              				@endforeach
-              			</select>
-              		</div>
-              		<div class = "col-md-3 pull-right">
-              			<button class ='btn btn-primary'>View KPI Library</button>
-              		</div>
-		     	</div>
+              	<h3 class="widget-title">Mapping KPI</h3>
 
-		</div>
-	</div>
-   <button class='btn btn-primary' data-toggle="collapse" data-target="#addkpi"><span class="glyphicon glyphicon-plus"></span>ADD KPI</button>
-     <button class='btn btn-primary' data-toggle="collapse" data-target="#kpimap"><span class="glyphicon glyphicon-plus"></span>VIEW PANEL</button>
-		<div class="panel panel-default collapse" id = 'addkpi' >
-			<div class="panel-heading"><h4>ADD KPI</h4></div>
-			<div class="panel-body">
-            	<div class ='row'>
-            		<div class = "col-md-1">
-            			
-            		</div>
-            		<div class = "col-md-2">
-                  <label class ='btn btn-primary'>View </label>
-                </div>
-                <div class = "col-md-2">
-                  <label class ='btn btn-primary'>KPI</label>
-                </div>
-                <div class = "col-md-2">
-                  <label class ='btn btn-primary'>Dimension</label>
-                </div>
-                <div class = "col-md-3">
-                  <label class ='btn btn-primary'>Ready for Deployment</label>
-                </div>
-            	</div>
-            	<br>
-            	<br>
-              <div id = 'save'></div>
-            	<div class ='row' >
-	            	<div class = "col-md-1">
-	            		
-	            	</div>
-	            	<div class = "col-md-2">
-	            	
-	            	</div>
-	            	<div class = "col-md-2">
-	            	
-	            	</div>
-	            	<div class = "col-md-2">
-	            	
-	            	</div>
-	            	<div class = "col-md-2">
-	            	
-	            	</div>
-	            	<div class = "col-md-1">
-	            		<button class ='btn btn-primary'>Ready for Deployment</button>
-	            	</div>
-            	</div>
-			</div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <div class="panel panel-default" style="border-bottom: 4px solid #8bc34a;     padding: 20px;">
+                      <div class = "row">
+                        <div class= "col-md-4">
+                          <label>Select View:</label>
+                          <select class="form-control pull-right" id='proj_name' style="margin-top: -5px; width: 220px">
+                            <option></option>
+                            @foreach($view as $val)
+                            <option value="{{$val->view}}">{{$val->view}}</option>
+                            @endforeach
+                          </select>
+                        </div>
+                        <div class = "col-md-8">
+                          <button class ='btn btn-warning  pull-right'>View KPI Library</button>
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                          <div class="col-md-12">
+                              <div class="panel panel-default" id='addkpi' >
+                                <div class="panel-heading">Saved KPI'S</div>
+                                <div class="panel-body">
+                                    <div class="data">
+                                      
+                                    </div>                                
+                                    <button class="btn btn-success pull-right">Senf for Workflow</button>
+                                </div>
+                              </div>
+                          </div>
+                      </div>
+                      <br>
 
-        </div>
-        <div class="panel panel-default collapse" id = 'kpimap' style="padding: 20px">
-			   <div class="panel-heading"></div>
-			   <div class="panel-body">
-            	<div class ='row'>
-                <div class = "col-md-2">
-                  <label class ='label label-primary'>Functionality Name</label>
+                      <div class="panel panel-default" id='kpimap'>
+                        <div class="panel-heading">KPI Selection</div>
+                        <div class="panel-body">
+                          <div class ='row'>
+                            <div class = "col-md-2">
+                              <label class=''>Functionality Name</label>
+                            </div>
+                            <div class = "col-md-2">
+                              <label class =''>KPI</label>
+                            </div>
+                            <div class = "col-md-3">
+                              <label class =''>KPI Description</label>
+                            </div>
+                            <div class = "col-md-2">
+                              <label class =''>Calculations</label>
+                            </div>
+                            <div class = "col-md-3">
+                              <label class =''>Dimensions</label>
+                            </div>
+                          </div>
+                          <div id="adding">
+                            
+                          </div>
+                          <div class ='row'>
+                            <div class="col-md-12">
+                              <button class ='btn btn-primary pull-right' id='save_btn'>Save</button>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class = "col-md-2">
-                  <label class ='label label-primary'>KPI</label>
-                </div>
-                <div class = "col-md-3">
-                  <label class ='label label-primary'>KPI Description</label>
-                </div>
-                <div class = "col-md-2">
-                  <label class ='label label-primary'>Calculations</label>
-                </div>
-                <div class = "col-md-3">
-                  <label class ='label label-primary'>Dimensions</label>
-                </div>
-	            </div>
-              <hr>
-              <br>
-              <div id="adding">
-                
-              </div>
-
-
-            	<br>
-            	<br>
-            	<br>
-            	<hr>
-            	<div class ='row'>
-	            	<div class = "col-md-1">
-	            		
-	            	</div>
-	            	<div class = "col-md-2">
-	            	
-	            	</div>
-	            	<div class = "col-md-2">
-	            	
-	            	</div>
-	            	<div class = "col-md-2">
-	            	
-	            	</div>
-	            	<div class = "col-md-2">
-	            	
-	            	</div>
-	            	<div class = "col-md-1">
-	            		<button class ='btn btn-primary' id ='save_btn'>Save</button>
-	            	</div>
-            	</div>
-			</div>
-
-        </div>
+		      </div>
+	    </div>
+        <di
   </div>
  </div>
     
 @stop
 @section('BaseJSLib')
 <script type="text/javascript">
+
+  $('#save_btn').click(function(){
+
+      var html_data = "";
+
+      $('.dime').find('input[type="radio"]:checked').each(function(){
+
+          var view = $(this).closest('.row').find('.view').text();
+
+          var kpi = $(this).closest('.row').find('.kpi').text();
+
+          var dimen = $(this).val();
+
+          html_data += '<div class="row" style="margin-bottom: 7px;">'+
+                            '<div class="col-md-3">'+view+'</div>'+
+                            '<div class="col-md-3">'+kpi+'</div>'+
+                            '<div class="col-md-3">'+dimen+'</div>'+
+                            '<div class="col-md-3">'+
+                                '<button class="btn btn-primary">Ready for Deployment</button>'+
+                            '</div>'+
+                        '</div>';
+      });
+
+      $('#addkpi').find('.data').append(html_data);
+  });
+
+
 	$(document).on('change','#proj_name',function()
 	{
 		console.log($(this).val())
@@ -169,37 +141,37 @@
                 {
                    if (!(response[i].Dimension))
                     {
-                      response[i].Dimension= 'Nothing to Display';
+                      response[i].Dimension= '';
                     } 
                     if (!(response[i].kpi))
                     {
-                      response[i].kpi= 'Nothing to Display';
+                      response[i].kpi= '';
                     }
                     if (!(response[i].kpi_desc))
                     {
-                      response[i].kpi_desc= 'Nothing to Display';
+                      response[i].kpi_desc= '';
                     } 
                     if (!(response[i].Calculation))
                     {
-                      response[i].Calculation= 'Nothing to Display';
+                      response[i].Calculation= '';
                     } 
                     
                 }
                 for(var i = 0 ; i< response.length ; i++)
                 {
-                    if (response[i].Dimension !== 'Nothing to Display') 
+                    if (response[i].Dimension !== '') 
                     {
                         dim = '';
-                        dim += "<div class='radio'><label><input type='radio' value=''>Drug";
+                        dim += "<div class='radio'><label><input type='radio' name='Dimension"+i+"' value='Drug'>Drug";
                         dim += "</label>";
                         dim += "</div>";
                         dim += "<div class='radio'>"
-                        dim +=  "<label><input type='radio' value=''>Drug Class"
+                        dim +=  "<label><input type='radio' name='Dimension"+i+"' value='Drug Class'>Drug Class"
                         dim += "</label>"
                         dim += "</div>"
                         dim += "<div class='radio'>"
-                        dim += "<label><input type='radio' value=''>Time Period&nbsp";
-                        dim += "<button class ='btn btn-primary btn-xs' data-toggle='collapse' data-target='#time"+i+"'><span class='glyphicon glyphicon-plus'></span></button>"
+                        dim += "<label><input type='radio' name='Dimension"+i+"' value='Time Period'>Time Period&nbsp";
+                        dim += "<i class='fa fa-plus-circle' data-toggle='collapse' data-target='#time"+i+"'></i>"
                         dim += "<div class='collapse' id='time"+i+"'>";
                         dim += "<div class='checkbox'>";
                         dim += "<label><input type='checkbox' value=''>Year</label>";
@@ -214,8 +186,8 @@
                         dim += "</label>"
                         dim += "</div>";
                         dim += "<div class='radio'>"
-                        dim += "<label><input type='radio' value=''>Geography&nbsp";
-                        dim += "<button class ='btn btn-primary btn-xs'data-toggle='collapse' data-target='#geo"+i+"'><span class='glyphicon glyphicon-plus'></span></button>"
+                        dim += "<label><input type='radio' name='Dimension"+i+"' value='Geography'>Geography&nbsp";
+                        dim += "<i class='fa fa-plus-circle' data-toggle='collapse' data-target='#geo"+i+"'></i>"
                         dim += "<div class='collapse' id='geo"+i+"'>";
                         dim += "<div class='checkbox'>";
                         dim += "<label><input type='checkbox' value=''>State</label>";
@@ -245,21 +217,21 @@
                 {
                   //console.log(response[i].view);
                    html +="<div class= 'row'>";
-                   html +="<div class = 'col-md-2'>"+response[i].View+"";
+                   html +="<div class='col-md-2 view'>"+response[i].View+"";
                 
                    html +="</div>";
-                   html +="<div class = 'col-md-2'>"+response[i].KPI+"";
+                   html +="<div class='col-md-2 kpi'>"+response[i].KPI+"";
                    
                    html +="</div>";
-                   html +="<div class = 'col-md-3'>"+response[i].kpi_desc+"";
+                   html +="<div class='col-md-3'>"+response[i].kpi_desc+"";
                    
                    html +="</div>";
-                   html +="<div class = 'col-md-2'>"+response[i].Calculation+"";
+                   html +="<div class='col-md-2'>"+response[i].Calculation+"";
                    
                    html +="</div>";
-                   html += "<div class = 'col-md-3 dime'>"+response[i].Dimension+"";
+                   html += "<div class='col-md-3 dime'>"+response[i].Dimension+"";
                      html += "</div>";
-                   html += "</div>";
+                   html += "</div><hr>";
                 }
                 $('#adding').html(html).contents();
            
