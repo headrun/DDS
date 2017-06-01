@@ -72,9 +72,10 @@ Route::get('/Allignment',function(){
 	return view('Allignment');
 });
 
-Route::get('/kpi_map',function(){
-	return view('kpi_map');
-});
+Route::get('/kpi_map_new','AjaxCallTest@kpi');
+
+Route::any('/kpi','AjaxCallTest@kpi1');
+
 
 
 Route::get('/Prescriber_Dimension',function(){
