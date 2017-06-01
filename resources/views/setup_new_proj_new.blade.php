@@ -101,6 +101,7 @@
                                   <input type='hidden' name= "proj_nam" class="proj_nam" >
                                   <input type='hidden' name= "ta" class= "ta" >
                                   <input type='hidden' name= "fa" class= "fa" >
+                                  <input type='hidden' name= "proj_type" class= "proj_type" >
                                 </div>
                                 <div class="Check">
                                   <button class="btn btn-success btn-md  pull-right" id= "sidq" type = "submit" disabled>Proceed to Ingestion</button>

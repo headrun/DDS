@@ -47,42 +47,7 @@
                                 </tr>
                                 
                                 @endforeach
-                               <!--- <tr>
-                                  <td>Market Access Reporting v1.0</td>
-                                  <td align="center"><div class="green circle"></div></td>
-                                  <td>Diabetes</td>
-                                  <td>Sales</td>
-                                  <td>13</td>
-                                  <td>20</td>
-                                  <td>23-5-2017</td>
-                                </tr>
-                                <tr>
-                                  <td>Social Media Campaign Tracking</td>
-                                  <td align="center"><div class="green circle"></div></td>
-                                  <td>Diabetes</td>
-                                  <td>Sales</td>
-                                  <td>13</td>
-                                  <td>15</td>
-                                  <td>25-5-2017</td>
-                                </tr>
-                                <tr>
-                                  <td>Phast Rx reporting dashboard</td>
-                                  <td align="center"><div class="green circle"></div></td>
-                                  <td>Diabetes</td>
-                                  <td>Sales</td>
-                                  <td>13</td>
-                                  <td>13</td>
-                                  <td>27-5-2017</td>
-                                </tr>
-                                <tr>
-                                  <td>Optimix: Market Mix Modelling workflow for RA</td>
-                                  <td align="center"><div class="green circle"></div></td>
-                                  <td>Diabetes</td>
-                                  <td>Sales</td>
-                                  <td>11</td>
-                                  <td>12</td>
-                                  <td>29-5-2017</td>
-                                </tr>-->
+                               
                               </tbody>
                             </table>
                           </div>
@@ -164,7 +129,7 @@
                               <td><span class="green circle"></span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Running</td>
                             </tr>
                             <tr>
-                              <td>Machine-2</td>
+                              <td>Machine-3</td>
                               <td>13246799</td>
                               <td><span class="green circle"></span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Running</td>
                             </tr>
