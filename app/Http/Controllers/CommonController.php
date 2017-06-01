@@ -7,6 +7,7 @@ use DB;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Response;
+use Session;
 use App\Ingestion;
 use Input;
 
@@ -79,6 +80,13 @@ class CommonController extends Controller
 
         $data1 = array('ta', 'fa');
         return view('setup_new_proj_new', compact($data1));
+    }
+
+
+    public function save_proj_into_session(){
+        $inputs = Input::all();
+        Session::put('project_name', $inputs['value']);
+        return Response::json(array('status'=> 'success', 'data'=> Session::get('project_name')));
     }
 
     /**

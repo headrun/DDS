@@ -15,7 +15,7 @@
              <a href="#">Ingest Data</a>
              <a href="#">Validate Data</a>
              <a href="#">Map Data</a>
-             <a href="#">KPI</a>
+             <a href="#">Mapping KPI</a>
          </div>
           <div class="row widget-1" style="padding-top: 30px">
               <div class="widget-icon"><img src="{{url()}}/assets/vendor/img/new_document_add.png"></div>
@@ -55,7 +55,7 @@
                           <div class="widget col-lg-6 col-md-6 col-sm-6 col-xs-6">
                               <h4><span class="label label-primary">Choose a Project</span></h4>
                               <br>
-                              <form style="padding-left: 50px">
+                              <form style="padding-left: 50px" id="choose_project">
                                 <div class="radio" >
                                   <input type="radio" name="optradio" value="Brand Launch">Brand Launch
                                 </div>
@@ -1132,6 +1132,25 @@
 
 @section('BaseJSLib')
 <script>
+
+  $('#choose_project').find('input[type="radio"]').change(function(){ 
+      
+      var value = $(this).val();
+
+      $.ajax({
+          method: 'POST', 
+          url: '{{url()}}/save_proj_into_session', 
+          dataType:'json',
+          headers: {
+            'X-CSRF-TOKEN': "{{ csrf_token() }}",
+          },
+          data: {'value' : value},
+          success: function(response) { 
+              
+              console.log(response.data);   
+          }
+      });
+  });
 
   $(document).ready(function(){
       

@@ -4,33 +4,17 @@
 @stop
 @section('BaseCSSLib')
 <link rel="stylesheet" href="{{url()}}/assets/vendor/css/breadcrumb.css">
-<style type="text/css">
-    
-    .notifications {
-      position: fixed;
-      z-index: 9999;
-      background: #404040;
-      height: 60px;
-      font-size: 16px;
-      border-radius: 3px;
-      box-shadow: 0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.24);
-      color: #fff;
-    }
-    .notifications.bottom-left, .notifications.cmtDateNotif {
-      right: 20px;
-      bottom: 25px;
-    }
-</style>
 @stop
 @section('BaseContent')
 <div class="container-fluid dashboard-content">
   <div class="visualization">
       <div class="top-div">
           <div class="breadcrumb flat">
-             <a href="javascript:history.back()">Setup New Project</a>
+             <a href="javascript:history.back()" class="active">Setup New Project</a>
              <a href="#" class="active">Ingest Data</a>
              <a href="#">Validate Data</a>
              <a href="#">Map Data</a>
+             <a href="#">Mapping KPI</a>
          </div>
           <div class="row widget-1" style="padding-top: 30px">
               <h3 class="widget-title" style="margin-left: 20px; margin-bottom: 10px;">

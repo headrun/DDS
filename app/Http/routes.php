@@ -42,7 +42,8 @@ Route::any('test1', 'AjaxCallTest@test1');
 Route::any('/ingestion', 'CommonController@ingestion');
 Route::any('/getTypes', 'CommonController@getTypes');
 Route::any('/getSubTypes', 'CommonController@getSubTypes');
-Route::any('/getExtractor', 'CommonController@getExtractor');	
+Route::any('/getExtractor', 'CommonController@getExtractor');
+Route::any('/save_proj_into_session', 'CommonController@save_proj_into_session');
 
 Route::get('/claims',function(){
 	return view('symphony_claims');
