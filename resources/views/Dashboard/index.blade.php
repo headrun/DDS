@@ -27,6 +27,7 @@
                                   <th>#UVMTD</th>
                                   <th>Active Downloads</th>
                                   <th>Date</th>
+                                  <th>Remove Project</th>
                                 </tr>
                               </thead>
                               <tbody>
@@ -40,6 +41,9 @@
                                   <td>{{$value->uvmtd}}</td>
                                   <td>{{$value->active_down}}</td>
                                   <td>{{$value->date}}</td>
+                                  <td><button type="button" value= '{{$value->proj_name}}' class="btn btn-default btn-sm delete" >
+                                        <span class="glyphicon glyphicon-trash"></span> 
+                                      </button></td>
                                 </tr>
                                 
                                 @endforeach
@@ -211,13 +215,28 @@
         $(this).hide();
         $('.sidenav').show();
         $('.aside-overlay').show();
-    });
-
-    $(document).on('click', '.closebtn, .aside-overlay', function(){
-        $('.sidenav').hide();
-        $('.aside-overlay').hide();
-        $('.menubutton').show();
     });*/
+
+    $(document).on('click', '.delete',function(){
+        console.log($(this).val());
+        $.ajax({
+            method: 'POST', // Type of response and matches what we said in the route
+            url: '{{url()}}/delete_project', // This is the url we gave in the route
+            dataType:'json',
+            headers: {
+              'X-CSRF-TOKEN': "{{ csrf_token() }}",
+          },
+            data: {'id' : $(this).val()}, // a JSON object to send back
+            success: function(response)
+            {
+               if(response)
+              {
+                console.log('Done');
+                location.reload();
+              }
+            },
+        });
+  });
 
     $(document).ready(function() {
         //setTimeout(function(){
@@ -225,19 +244,9 @@
           "searching": false,
           "bPaginate": false,
            //"paging":   false,
-            "info":     false
-        });
-        //}, 1000);
-
- /*       if ( $.fn.dataTable.isDataTable( '#example' ) ) {
-    table = $('#example').DataTable();
-}
-else {
-    table = $('#example').DataTable( {
-        paging: false
-    } );
-}*/
+            "info":     false,
+   
     });
-    
+    });
 </script>
 @stop

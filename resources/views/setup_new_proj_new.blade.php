@@ -15,6 +15,7 @@
              <a href="#">Ingest Data</a>
              <a href="#">Validate Data</a>
              <a href="#">Map Data</a>
+             <a href="#">KPI</a>
          </div>
           <div class="row widget-1" style="padding-top: 30px">
               <div class="widget-icon"><img src="{{url()}}/assets/vendor/img/new_document_add.png"></div>

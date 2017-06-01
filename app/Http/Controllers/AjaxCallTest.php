@@ -142,6 +142,17 @@ class AjaxCallTest extends Controller
     
     
   }
+  public function delete_project()
+  {
+    $inputs =Input::all();
+    //return $inputs;
+    $view = DB::table('active_proj')->where('proj_name' , $inputs)->delete();
+    //$view = DB::table('mapping_kpi')->select('')->get();
+    
+    return 1;
+    
+    
+  }
 
 
 }

@@ -10,6 +10,13 @@
 <div class="container-fluid dashboard-content">
   <div class="visualization">
       <div class="top-div">
+        <div class="breadcrumb flat" style="margin-right: 5px">
+             <a href="#" >Setup New Project</a>
+             <a href="#">Ingest Data</a>
+             <a href="#">Validate Data</a>
+             <a href="#">Map Data</a>
+             <a href="#" class="active">KPI</a>
+         </div>
       	 <div class="row widget-1" style="padding-top: 30px">
               <div class="widget-icon"><img src="{{url()}}/assets/vendor/img/new_document_add.png"></div>
               	<h3 class="widget-title">KPI</h3>
@@ -21,6 +28,7 @@
               	<div class = "row">
               		<div class= "col-md-3">
               			<select class="form-control" id='proj_name'>
+                      <option></option>
               				@foreach($view as $val)
               				<option value="{{$val->view}}">{{$val->view}}</option>
               				@endforeach
@@ -249,7 +257,7 @@
                    html +="<div class = 'col-md-2'>"+response[i].Calculation+"";
                    
                    html +="</div>";
-                   html += "<div class = 'col-md-3'>"+response[i].Dimension+"";
+                   html += "<div class = 'col-md-3 dime'>"+response[i].Dimension+"";
                      html += "</div>";
                    html += "</div>";
                 }
@@ -262,6 +270,7 @@
   {
                 var html = document.getElementById("adding").innerHTML; ;
               $('#save').append(html);     
+              $('#save .dime').remove();
            
     
     });

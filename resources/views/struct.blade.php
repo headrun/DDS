@@ -281,6 +281,7 @@
                                 
                               </tbody>
                             </table>
+                            <button class= 'btn btn-primary pull-right' > Map Selected Data</button>
                           </div>
                           
                       </div>
