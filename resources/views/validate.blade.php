@@ -59,7 +59,7 @@
                               <input type="hidden" name="array[]" value="{{$va->description}}">
                               @endforeach
                               </div>
-                              <button class="btn btn-primary btn-md select_ingest_btn" >Mapping Data</button>
+                              <button class="btn btn-primary btn-md select_ingest_btn pull-right" >Mapping Data</button>
                             </form>
                       </div>
                   </div>

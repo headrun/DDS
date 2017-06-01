@@ -27,9 +27,8 @@ Route::get('/extractor_library',function(){
 });
 
 
-Route::get('/setup_new_proj',function(){
-	return view('setup_new_proj_new');
-});
+Route::get('/setup_new_proj', 'CommonController@setup_new_proj');
+	//return view('setup_new_proj_new');
 
 Route::get('/setup_new_proj_new',function(){
 	return view('setup_new_proj_new');

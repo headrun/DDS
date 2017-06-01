@@ -4,6 +4,11 @@
 @stop
 @section('BaseCSSLib')
 <link rel="stylesheet" href="{{url()}}/assets/vendor/css/breadcrumb.css">
+<style type="text/css">
+  .modal_table>tbody>tr>td {
+      padding: 5px !important;
+  }
+</style>
 @stop
 @section('BaseContent')
 <div class="container-fluid dashboard-content">
@@ -295,10 +300,10 @@
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title">Modal Header</h4>
         </div>
-        <div class="modal-body" style="padding: 50px">
+        <div class="modal-body" style="padding: 10px 50px">
           <div class = "row">
             
-              <table class ='table stripped'>
+              <table class ='table stripped modal_table'>
                 <thead>
                   <tr>
                     <th>Source Column</th>
@@ -602,9 +607,9 @@
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title">Modal Header</h4>
         </div>
-        <div class="modal-body" style="padding: 50px">
+        <div class="modal-body" style="padding: 10px 50px">
           <div class = "row">
-              <table class ='table stripped'>
+              <table class ='table stripped modal_table'>
                 <thead>
                   <tr>
                     <th>Source Column</th>
@@ -1244,9 +1249,9 @@
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title">Modal Header</h4>
         </div>
-        <div class="modal-body" style="padding: 50px">
+        <div class="modal-body" style="padding: 10px 50px">
           <div class = "row">
-             <table class ='table stripped'>
+             <table class ='table stripped modal_table'>
                 <thead>
                   <tr>
                     <th>Source Column</th>
@@ -1556,9 +1561,9 @@
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title">Modal Header</h4>
         </div>
-        <div class="modal-body" style="padding: 50px">
+        <div class="modal-body" style="padding:10px 50px">
           <div class = "row">
-            <table class ='table stripped'>
+            <table class ='table stripped modal_table'>
                 <thead>
                   <tr>
                     <th>Source Column</th>
@@ -1607,9 +1612,9 @@
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title">Modal Header</h4>
         </div>
-        <div class="modal-body" style="padding: 50px">
+        <div class="modal-body" style="padding: 10px 50px">
           <div class = "row">
-            <table class ='table stripped'>
+            <table class ='table stripped modal_table'>
                 <thead>
                   <tr>
                     <th>Source Column</th>
@@ -2056,10 +2061,10 @@
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title">Modal Header</h4>
         </div>
-        <div class="modal-body" style="padding: 50px">
+        <div class="modal-body" style="padding: 10px 50px">
           <div class = "row">
 
-            <table class ='table stripped'>
+            <table class ='table stripped modal_table'>
                 <thead>
                   <tr>
                     <th>Source Column</th>
@@ -2593,9 +2598,9 @@
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title">Modal Header</h4>
         </div>
-        <div class="modal-body" style="padding: 50px">
+        <div class="modal-body" style="padding: 10px 50px">
           <div class = "row">
-            <table class ='table stripped'>
+            <table class ='table stripped modal_table'>
                 <thead>
                   <tr>
                     <th>Source Column</th>
@@ -3244,9 +3249,9 @@
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title">Modal Header</h4>
         </div>
-        <div class="modal-body" style="padding: 50px">
+        <div class="modal-body" style="padding: 10px 50px">
           <div class = "row">
-            <table class ='table stripped'>
+            <table class ='table stripped modal_table'>
                 <thead>
                   <tr>
                     <th>Source Column</th>

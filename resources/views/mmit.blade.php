@@ -34,8 +34,9 @@
                                 </tr>
                                 </tbody>
                                 </table>
+                                <div class="long_table" style="overflow-x: scroll;">
                                 <table class="table" style="font-size:14px" id="mainTable">
-                              <thead><span class='label label-primary' >Source Comparison</span>
+                              <thead><span class='label label-primary' >Duplicates</span>
                                 <tr>
                                   <th>period</th>
                                   <th>client_id</th>
@@ -106,7 +107,7 @@
                                 </tr>
                                 </tbody>
                                 </table>
-
+                                </div>
                           </div>
                           <div class="widget col-lg-6 col-md-6 col-sm-6 col-xs-6">
                             <table class="table" style="font-size:14px" id="mainTable">
