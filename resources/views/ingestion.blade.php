@@ -88,14 +88,21 @@
                               </tbody>
                             </table>
                           </div>
-                          <center>
-                            <button class="btn btn-success btn-md">Save Info</button>
-                            <button class="btn btn-warning btn-md select_ingest_btn" disabled>Ingest Selected Data</button>
-                            <form action='{{url()}}/validate' type= "hidden" id="hidden-form" style="position: absolute; margin-left: 608px; margin-top: -34px;">
-                              <div id= 'hidden'></div>
-                              <button class="btn btn-primary btn-md move_to_validate" disabled>Move to validate</button>
-                            </form>
-                        </center>
+                          <div class="row">
+                            <div class="col-md-5">
+                              <button class="btn btn-success btn-md pull-right">Save Info</button>
+                            </div>
+                            <div class="col-md-2 text-center">
+                              <button class="btn btn-warning btn-md select_ingest_btn" disabled>Ingest Selected Data</button>
+                            </div>
+                            <div class="col-md-5">
+                              <form action='{{url()}}/validate'>
+                                <div id= 'hidden'></div>
+                                <button class="btn btn-primary btn-md move_to_validate pull-left" disabled>Move to validate</button>
+                              </form>
+                            </div>
+                          </div>
+                        
                       </div>
                   </div>
               </div>
@@ -812,11 +819,12 @@ window.extract = [];
     });
 
     $('.select_ingest_btn').click(function(){
-        var html ='';
+        var html ='<ul class="list-group"><span class="btn btn-default">Selected Extractors</span>';
         for (var i = 0; i < window.extract.length; i++)
         {
-            html += "<h4>"+window.extract[i]+",</h4>"
+            html += "<li class='list-group-item'>"+window.extract[i]+"</li>"
         }
+        html += '</ul></div>'
         $('#ing').html(html);
         $('#ingest_started').modal('show'); 
     });
