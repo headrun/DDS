@@ -30,7 +30,8 @@
                                 </tr>
                               </thead>
                               <tbody>
-                                @foreach($q1 as $value)
+                                @foreach($q1 as $i=>$value)
+                                
                                 <tr>
                                   <td>{{$value->proj_name}}</td>
                                   <td align="center"><div class="green circle" style="background-color: {{$value->proj_status}}"></div></td>
@@ -40,6 +41,7 @@
                                   <td>{{$value->active_down}}</td>
                                   <td>{{$value->date}}</td>
                                 </tr>
+                                
                                 @endforeach
                                <!--- <tr>
                                   <td>Market Access Reporting v1.0</td>

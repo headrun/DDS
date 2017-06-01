@@ -43,7 +43,7 @@
                         <select class='form-control' " id = 'fa' style="width: 90%";>
                           <option></option>
                           @foreach($fa as $f)
-                            <option>Sales</option>
+                            <option>{{$f}}</option>
                           @endforeach
                         </select>
                         </div>
@@ -1287,10 +1287,12 @@ $(document).on('change', '#group, #project_text, #ta, #fa', function()
         $('.data input[type="checkbox" ]:checked').each(function(){ 
 
             widget_array1.push($(this).val());
+            console.log(widget_array1);
         });
         $('.bdf input[type="checkbox" ]:checked').each(function(){ 
 
             widget_array2.push($(this).val());
+            console.log(widget_array2);
         });
         if((widget_array1.length) > 0 && (widget_array2.length) > 0)
         {

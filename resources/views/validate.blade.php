@@ -35,6 +35,7 @@
                               <tbody>
                               @foreach($val as $value)
                               <tr>
+                                  
                                   <td><a href="{{url()}}/{{$value->description}}" target="_blank">{{$value->ingested_data}}</a></td>
                                   @if($value->val_result=='no')
                                     <td><i class="fa fa-times" aria-hidden="true"></i></td>
