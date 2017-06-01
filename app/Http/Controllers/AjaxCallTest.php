@@ -121,6 +121,27 @@ class AjaxCallTest extends Controller
     return view('struct', compact($data1));
     
   }
+  public function kpi()
+  {
+    $view = DB::table('mapping_kpi')->select('view')->distinct()->get();
+    //$view = DB::table('mapping_kpi')->select('')->get();
+    $data1 = array('view');
+    return view('kpi_map_new', compact($data1));
+    
+    
+    
+  }
+  public function kpi1()
+  {
+    $inputs =Input::all();
+    //return $inputs;
+    $view = DB::table('mapping_kpi')->where('view' , $inputs['id'])->get();
+    //$view = DB::table('mapping_kpi')->select('')->get();
+    
+    return $view;
+    
+    
+  }
 
 
 }
