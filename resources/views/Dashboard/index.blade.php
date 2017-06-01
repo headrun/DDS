@@ -26,7 +26,7 @@
                                   <th>FA</th>
                                   <th>#UVMTD</th>
                                   <th>Active Downloads</th>
-                                  <th>Date</th>
+                                  <th>Created Date</th>
                                   <th>Remove Project</th>
                                 </tr>
                               </thead>
@@ -41,7 +41,7 @@
                                   <td>{{$value->uvmtd}}</td>
                                   <td>{{$value->active_down}}</td>
                                   <td>{{$value->date}}</td>
-                                  <td><button type="button" value= '{{$value->proj_name}}' class="btn btn-default btn-sm delete" >
+                                  <td><button type="button" value= '{{$value->proj_name}}' class="btn btn-danger btn-sm delete" >
                                         <span class="glyphicon glyphicon-trash"></span> 
                                       </button></td>
                                 </tr>

@@ -15,10 +15,11 @@
   <div class="visualization">
       <div class="top-div">
           <div class="breadcrumb flat">
-             <a href="{{url()}}/setup_new_proj">Setup New Project</a>
-             <a href="{{url()}}/ingestion" >Ingest Data</a>
-             <a href="javascript:history.back()" >Validate Data</a>
+             <a href="{{url()}}/setup_new_proj" class="active">Setup New Project</a>
+             <a href="{{url()}}/ingestion" class="active">Ingest Data</a>
+             <a href="javascript:history.back()" class="active">Validate Data</a>
              <a href="#" class="active">Map Data</a>
+             <a href="#">Mapping KPI</a>
          </div>
           <div class="row widget-1" style="padding-top: 30px">
           <div class="row widget-1">
@@ -281,7 +282,7 @@
                                 
                               </tbody>
                             </table>
-                            <button class= 'btn btn-primary pull-right' > Map Selected Data</button>
+                            <a href="{{url()}}/kpi_map_new" class= 'btn btn-primary pull-right mapping_selected_btn' disabled> Map Selected Data</a>
                           </div>
                           
                       </div>
@@ -4359,23 +4360,40 @@
 @section('BaseJSLib')
 <script type="text/javascript">
     $('a.dcube_struct').addClass('active');
+    
     var str= "{{$val}}";
-   var val = str.split(",");
-   for(var i=0; i< val.length; i++)
-    {
+    
+    var val = str.split(",");
+    
+    for(var i=0; i< val.length; i++) {
+        
         val[i]= val[i].replace(/ /g , "_");
     }
-    console.log(val);
-$(document).ready(function(){
 
-  for(var i=0; i< val.length; i++)
-  {
-    id = val[i];
-    $('tbody').find('#'+id).show();
-    console.log(id);
-  }
+    $(document).ready(function(){
+
+      for(var i=0; i< val.length; i++) {
+        
+        id = val[i];
+        
+        $('tbody').find('#'+id).show();
+        
+        console.log(id);
+      }
   
-});
+    });
+
+    $('.ingest_chkbox').change(function(){
+
+      if($(' input[type="checkbox" ]:checked').length > 0){
+
+          $('.mapping_selected_btn').attr('disabled', false);
+          
+       }else{
+
+          $('.mapping_selected_btn').attr('disabled', true);
+       }
+    });
 
 </script>
 @stop

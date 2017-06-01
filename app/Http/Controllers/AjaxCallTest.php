@@ -5,6 +5,7 @@ use DB;
 use Illuminate\Http\Request;
 use Response;
 use App\Category;
+use Session;
 use Input;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;

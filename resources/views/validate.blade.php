@@ -10,10 +10,11 @@
   <div class="visualization">
       <div class="top-div">
           <div class="breadcrumb flat">
-             <a href="{{url()}}/setup_new_proj">Setup New Project</a>
-             <a href="javascript:history.back()" >Ingest Data</a>
+             <a href="{{url()}}/setup_new_proj" class="active">Setup New Project</a>
+             <a href="javascript:history.back()" class="active">Ingest Data</a>
              <a href="#" class="active">Validate Data</a>
              <a href="#">Map Data</a>
+             <a href="#">Mapping KPI</a>
          </div>
           <div class="row widget-1" style="padding-top: 30px">
               <div class="widget-icon"><img src="{{url()}}/assets/vendor/img/new_document_add.png"></div>
