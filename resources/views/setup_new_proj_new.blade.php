@@ -32,7 +32,9 @@
                         <span class='btn btn default'>TA:</span>
                         <select class='form-control' " id= 'ta' style="width: 90%">
                           <option></option>
-                          <option>Diabetes</option>
+                          @foreach($ta as $t)
+                            <option>{{$t}}</option>
+                          @endforeach
                         </select>
                         </div>
                         <div class = 'col-md-3' style = 'display: -webkit-inline-box;''>
@@ -40,7 +42,9 @@
                         
                         <select class='form-control' " id = 'fa' style="width: 90%";>
                           <option></option>
-                          <option>Sales</option>
+                          @foreach($fa as $f)
+                            <option>Sales</option>
+                          @endforeach
                         </select>
                         </div>
 
@@ -1274,15 +1278,7 @@ $(document).on('change', '#fa', function()
    });
 
 
-$(document).on('change', '#project_text, #ta, #fa', function(){
-
-    if ($('#project_text').val() != '' && $('#ta').val() != '' && $('#fa').val() != '') {
-
-        $('#sidq.btn').prop('disabled', false);
-    }
-});
-
-$(document).on('change', '#group', function()
+$(document).on('change', '#group, #project_text, #ta, #fa', function()
  {
       var widget_array1 =  [];
       var widget_array2 =  [];
