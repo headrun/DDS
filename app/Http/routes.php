@@ -53,7 +53,7 @@ Route::get('/Product_Dimension',function(){
 	return view('Product_Dimension');
 });
 
-Route::get('/mmit',function(){
+Route::get('/Payor_Plan_Data',function(){
 	return view('mmit');
 });
 
@@ -61,8 +61,8 @@ Route::get('/Plan_Dimension',function(){
 	return view('Plan_Dimension');
 });
 
-Route::get('/claims_reject',function(){
-	return view('claim_reject');
+Route::get('/Rejection_Reason',function(){
+	return view('Reject_Reason');
 });
 
 Route::get('/Prescriber_Source',function(){

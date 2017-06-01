@@ -92,7 +92,7 @@ class AjaxCallTest extends Controller
   }
   public function dash()
   {
-    $q1 = DB::table('active_proj')->get();    
+    $q1 = DB::table('active_proj')->orderBy('active_down', 'desc')->get();    
     $data = array('q1');
     //return $q1[0]->proj_name;
     return view('Dashboard.index', compact($data));
@@ -103,7 +103,7 @@ class AjaxCallTest extends Controller
     $inputs =Input::all();
     $values = $inputs['checkbox'];
     $final_array = array();
-    $val = DB::table('validate')->whereIn('description', $values)->get();
+    $val = DB::table('validate')->whereIn('description', $values)->orderBy('val_result')->get();
     foreach ($val as $v) 
     {
       $v->description=str_replace(" ","_",$v->description); 

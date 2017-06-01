@@ -49,7 +49,16 @@ class CommonController extends Controller
 
      public function ingestion(){
         $inputs = Input::all();
-        $values = $inputs['check_box'];
+        $values = array();
+        $proj_name = $ta = $fa= '';
+        if (isset($inputs['check_box']) && !empty($inputs['check_box']))
+            $values = $inputs['check_box'];
+        if (isset($inputs['proj_nam']) && !empty($inputs['proj_nam']))
+            $proj_name = $inputs['proj_nam'];
+        if (isset($inputs['ta']) && !empty($inputs['ta']))
+            $ta = $inputs['ta'];
+        if (isset($inputs['fa']) && !empty($inputs['fa']))
+            $fa = $inputs['fa'];
         $final_array = array();
         foreach ($values as $key => $value) {
             $data = Ingestion::where('data', '=', $value)->groupBy('source')->get();
@@ -57,7 +66,7 @@ class CommonController extends Controller
             array_push($final_array, $arr);
         }
         DB::table('active_proj')->insert(
-            ['proj_name' => $inputs['proj_nam'], 'ta' => $inputs['ta'] ,'fa' => $inputs['fa'], 'date' => date('Y-m-d')]
+            ['proj_name' => $proj_name, 'ta' => $ta ,'fa' => $fa, 'date' => date('Y-m-d')]
             );
         $data1 = DB::table('active_proj')->get();
         //$data = array('final_array');

@@ -23,6 +23,7 @@
 
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                   <div class="panel panel-default" style="border-bottom: 4px solid #8bc34a;     padding: 20px;">
+                      <p><strong>Project Name: </strong> {{Session::get('project_name')}}</p>
                       <div class = "row">
                         <div class= "col-md-4">
                           <label>Select View:</label>
