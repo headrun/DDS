@@ -581,6 +581,8 @@
       <div class="modal-body">
           <h4>Ingestion Started</h4>
       </div>
+      <hr>
+      <div id= 'ing'></div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
       </div>
@@ -616,11 +618,12 @@
             $('#CSV').modal('show');
         }
     });
-
+window.extract = [];
+  
     $(document).on('click', '.modal_ok', function(){
-
-        console.log(window.tick);
-
+          window.extract.push(window.tick);
+        //console.log(window.tick);
+        console.log(window.extract);
         var that = $(this);
 
         $('.extractor_name').each(function(){
@@ -809,7 +812,12 @@
     });
 
     $('.select_ingest_btn').click(function(){
-
+        var html ='';
+        for (var i = 0; i < window.extract.length; i++)
+        {
+            html += "<h4>"+window.extract[i]+",</h4>"
+        }
+        $('#ing').html(html);
         $('#ingest_started').modal('show'); 
     });
 
@@ -828,5 +836,6 @@
       }
       $('#hidden').html(html);
     });
+    
 </script>
 @stop
