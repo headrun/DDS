@@ -17,6 +17,9 @@
              <a href="#">Mapping KPI</a>
          </div>
           <div class="row widget-1" style="padding-top: 30px">
+              <form action="{{url()}}/extractor_library">
+                      <button class="btn btn-danger pull-right" style="margin-top: 20px;margin-right: 50px;" >Extractor Library</button>
+                      </form>
               <h3 class="widget-title" style="margin-left: 20px; margin-bottom: 10px;">
                   <select class="form-control" style="width: 150px">
                       @foreach($final_array1 as $value)
@@ -27,10 +30,14 @@
                       <option>Social Media Campaign Tracking</option>
                       <option>Type II Diabetes Prelaunch Dashboard</option>-->
                   </select>
+                  
               </h3>
+
               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                   <div class="panel panel-default" style="border-bottom: 4px solid #8bc34a;     padding: 20px;">
+
                       <div class="row">  
+
                           <div class="widget col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <table class="table" style="font-size:14px" id="mainTable">
                               <thead>
