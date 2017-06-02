@@ -47,7 +47,7 @@
                                     <div class="data">
                                       
                                     </div>                                
-                                    <button class="btn btn-success pull-right">Senf for Workflow</button>
+                                    <button class="btn btn-success pull-right">Send for Workflow</button>
                                 </div>
                               </div>
                           </div>

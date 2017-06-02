@@ -58,7 +58,7 @@
           </span>
           <span style="margin-left: 35px">Ingest</span>
         </a>
-        <a class="validate" href="{{url()}}/validate">
+        <a class="validate" href="#">
           <span>
             <i class="fa fa-address-card-o fa-lg" aria-hidden="true"></i>
           </span>
@@ -70,7 +70,7 @@
           </span>
           <span style="margin-left: 35px">Transform</span>
         </a>
-        <a class="dcube_struct" href="{{url()}}/struct">
+        <a class="dcube_struct" href="#">
           <span>
             <i class="fa fa-area-chart fa-lg" aria-hidden="true"></i>
           </span>
@@ -79,20 +79,7 @@
       </div>
       <div class="aside-overlay"></div>
       <ul class="pull-right nav navbar-nav">
-        <li>
-          <div class="logout">
-            <div class="dropdown">
-              <span class="dropdown-toggle" data-toggle="dropdown">User Name 
-                <span class="caret"></span>
-              </span>
-              <ul class="dropdown-menu">
-                <li>
-                  <a href="#">Logout</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </li>
+        <li class="btn label" style="margin-top: 20px; margin-left: 5px">Vasu<br> & <br>Sidd</li>
       </ul>
       <div class="pull-right secondary-logo ng-scope">
         <img src="{{url()}}/assets/vendor/img/dcube_new.png" class="pull-right">
