@@ -44,6 +44,15 @@
 </tr>
                                 <tr>
                                   <td></td>
+                                  <td>Humedica-Procedure</td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                </tr>
+                                <tr>
+                                  <td></td>
                                   <td>Humedica-Labs  </td>
                                   <td><i class="fa fa-check" aria-hidden="true"></i></td>
                                   <td><i class="fa fa-check" aria-hidden="true"></i></td>
@@ -71,7 +80,7 @@
                                 </tr>
                                 <tr>
                                   <td></td>
-                                  <td>THIN</td>
+                                  <td>THIN(CEGEDIM)</td>
                                   <td><i class="fa fa-check" aria-hidden="true"></i></td>
                                   <td><i class="fa fa-check" aria-hidden="true"></i></td>
  <td><i class="fa fa-check" aria-hidden="true"></i></td>
@@ -114,7 +123,16 @@
                                   <td><i class="fa fa-check" aria-hidden="true"></i></td>
                                   <td><i class="fa fa-times" aria-hidden="true"></i></td>
                                 </tr>
-<tr>
+                                <tr>
+                                  <td>Hospital Data</td>
+                                  <td>Premier</td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-times" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-times" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                </tr>
+                                <tr>
                                   <td>CLAIMS </td>
                                   <td>Symphony</td>
                                   <td><i class="fa fa-check" aria-hidden="true"></i></td>
@@ -151,16 +169,8 @@
                                   <td><i class="fa fa-check" aria-hidden="true"></i></td>
                                 </tr>
                                 <tr>
-                                  <td>Xponent  </td>
-                                  <td>IMS</td>
-                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
-                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
-                                  <td><i class="fa fa-times" aria-hidden="true"></i></td>
-                                  <td><i class="fa fa-times" aria-hidden="true"></i></td>
-<td><i class="fa fa-check" aria-hidden="true"></i></td>
-                                </tr>
                                 <tr>
-                                  <td></td>
+                                  <td>Prescription(Rx)</td>
                                   <td>IMS</td>
                                   <td><i class="fa fa-check" aria-hidden="true"></i></td>
                                   <td><i class="fa fa-check" aria-hidden="true"></i></td>
@@ -172,11 +182,48 @@
                                   <td></td>
                                   <td>Symphony</td>
                                   <td><i class="fa fa-check" aria-hidden="true"></i></td>
-                                  <td><i class="fa fa-times" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
                                   <td><i class="fa fa-check" aria-hidden="true"></i></td>
                                   <td><i class="fa fa-check" aria-hidden="true"></i></td>
                                   <td><i class="fa fa-check" aria-hidden="true"></i></td>
                                 </tr>
+                                <tr>
+                                  <td>DDS</td>
+                                  <td>IMS</td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                </tr>
+                                <tr>
+                                  <td></td>
+                                  <td>Symphony</td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                </tr>
+                                <tr>
+                                  <td>PROMOTION</td>
+                                  <td>VEEVA CRM </td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                </tr>
+                                <tr>
+                                  <td></td>
+                                  <td>ENQUITY</td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                </tr>
+                                <tr>
                               </tbody>
                             </table>
                           </div>

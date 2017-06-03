@@ -102,11 +102,14 @@ class AjaxCallTest extends Controller
   {
     $inputs =Input::all();
     $values = $inputs['checkbox'];
+    
     $final_array = array();
     $val = DB::table('validate')->whereIn('description', $values)->orderBy('val_result')->get();
+    
     foreach ($val as $v) 
     {
       $v->description=str_replace(" ","_",$v->description); 
+
     }
     
     $data1 = array('val');

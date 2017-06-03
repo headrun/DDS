@@ -652,20 +652,27 @@ window.extract = [];
 
                 $('.select_ingest_btn').attr('disabled', false);
           
-                $('.move_to_validate').attr('disabled', false);
+                
 
                 var widget_array1 =  [];
+
+                var widget_array2 =  [];
                 
                 var html='';
                 
                 $(' input[type="checkbox" ]:checked').each(function(){ 
                      
                      widget_array1.push($(this).val());
+
+                     widget_array2.push($(this).closest('.each_row').find('.source_name').val());                     
+
+                     
                 });
                 
                 for(var i=0;i<widget_array1.length;i++){
                   
-                  html +="<input type='hidden' name = 'checkbox[]'value='"+widget_array1[i]+"'>"
+                  html +="<input type='hidden' name = 'checkbox[]'value='"+widget_array2[i]+"_"+widget_array1[i]+"'>"
+                  console.log(html);
                 }
                 
                 $('#hidden').html(html);
@@ -841,16 +848,27 @@ window.extract = [];
       var widget_array1 =  [];
       var html='';
       $(' input[type="checkbox" ]:checked').each(function(){ 
-           
+           var x = $(this).val();
+           console.log(x);
            widget_array1.push($(this).val());
+           $("#"+x+".source_name").val();
       });
+      $(document).on('change', '.source_name', function()
+      {
+          console.log($(this).val());
+      });
+      
       
       for(var i=0;i<widget_array1.length;i++){
         
-        html +="<input type='hidden' name = 'checkbox[]'value='"+widget_array1[i]+"'>"
+        html +="<input type='hidden' name = 'checkbox[]' value='"+widget_array1[i]+"'>"
       }
       $('#hidden').html(html);
     });
-    
+
+
+ $(document).on('click', '.select_ingest_btn', function(){
+      $('.move_to_validate').attr('disabled', false);
+    });
 </script>
 @stop

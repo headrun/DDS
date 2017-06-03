@@ -43,7 +43,7 @@
                               </thead>
                               <tbody>
                               
-                                <tr class="each_row" style="display: none;" id='claims'>
+                                <tr class="each_row" style="display: none;" id='Symphony_claims'>
                                   <td>
                                       <div class="checkbox">
                                         <label><input type="checkbox" class="ingest_chkbox"></label>
@@ -89,7 +89,7 @@
                                   </td>
                                   </td>
                                 </tr>
-                                <tr class="each_row" style="display: none" id='mmit'>
+                                <tr class="each_row" style="display: none" id='MMIT_Payor_Plan_Data'>
                                   <td>
                                       <div class="checkbox">
                                         <label><input type="checkbox" class="ingest_chkbox"></label>
@@ -116,7 +116,7 @@
                                       <button class="btn btn-info " data-toggle="modal" data-target="#mmits" >edit mapping</button>
                                   </td>
                                 </tr>
-                                <tr class="each_row" style="display: none" id= 'mmit_to_claims'>
+                                <tr class="each_row" style="display: none" id= 'MMIT_Payor_Plan_Data_to_Claims'>
                                   <td>
                                       <div class="checkbox">
                                         <label><input type="checkbox" class="ingest_chkbox"></label>
@@ -143,7 +143,7 @@
                                       <button class="btn btn-info " >edit mapping</button>
                                   </td>
                                 </tr>
-                                <tr class="each_row" style="display: none" id= 'Product_Dimension'>
+                                <tr class="each_row" style="display: none" id= 'Symphony_Product_Dimension'>
                                   <td>
                                       <div class="checkbox">
                                         <label><input type="checkbox" class="ingest_chkbox"></label>
@@ -169,7 +169,7 @@
                                   </td>
                                   
                                 </tr>
-                                <tr class="each_row" style="display: none" id= 'Plan_Dimension'>
+                                <tr class="each_row" style="display: none" id= 'Symphony_Plan_Dimension'>
                                   <td>
                                       <div class="checkbox">
                                         <label><input type="checkbox" class="ingest_chkbox"></label>
@@ -196,7 +196,7 @@
                                       <button class="btn btn-info " data-toggle="modal" data-target="#plndim" >edit mapping</button>
                                   </td>
                                 </tr>
-                                <tr class="each_row" style="display: none" id= 'Rejection_Reason'>
+                                <tr class="each_row" style="display: none" id= 'Symphony_Rejection_Reason'>
                                   <td>
                                       <div class="checkbox">
                                         <label><input type="checkbox" class="ingest_chkbox"></label>
@@ -224,7 +224,7 @@
                                   
                                 </tr>
 
-                                <tr class="each_row" style="display: none" id='Prescriber_Dimension'>
+                                <tr class="each_row" style="display: none" id='Symphony_Prescriber_Dimension'>
                                   <td>
                                       <div class="checkbox">
                                         <label><input type="checkbox" class="ingest_chkbox"></label>
@@ -252,7 +252,7 @@
                                   
                                 </tr>
 
-                                <tr class="each_row" style="display: none" id='Prescriber Alignment'>
+                                <tr class="each_row" style="display: none" id='Symphony_Prescriber Alignment'>
                                   <td>
                                       <div class="checkbox">
                                         <label><input type="checkbox" class="ingest_chkbox"></label>

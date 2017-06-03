@@ -43,7 +43,15 @@
                           <div class="col-md-12">
                               <div class="panel panel-default" id='addkpi' >
                                 <div class="panel-heading">Saved KPI'S</div>
-                                <div class="panel-body">
+                                    <div class="panel-body">
+                                      <div class="row" style="margin-bottom: 7px;">
+                                        <div class="col-md-3 "><label>VIEW</label></div>
+                                        <div class="col-md-3 "><label>KPI</label></div>
+                                        <div class="col-md-3 "><label>DIMENSION</label></div>
+                                        <div class="col-md-3">
+                                          <button class="btn btn-primary">Ready for Deployment</button>
+                                        </div>
+                                      </div>
                                     <div class="data">
                                       
                                     </div>                                
@@ -95,27 +103,108 @@
 @stop
 @section('BaseJSLib')
 <script type="text/javascript">
+$(document).on('change', '.time1', function()
+ {
+      var widget_array1 =  [];
+      var x= "Time Period";
+        $('.time1 input[type="checkbox" ]:checked').each(function(){ 
+          var z= widget_array1.indexOf($(this).val());
+          if(z>=0)
+          {
 
+            widget_array1.splice(z,1);
+          }
+          else
+          {
+                widget_array1.push($(this).val());            
+          }
+        });
+        $(this).closest('.dime').find('.timee').val(x+"("+widget_array1+")");
+        console.log($(this).closest('.dime').find('.timee').val()); 
+      
+});
+$(document).on('change', '.geo1', function()
+ {
+      var widget_array1 =  [];
+      var x= "Geography";
+        $('.geo1 input[type="checkbox" ]:checked').each(function(){ 
+          var z= widget_array1.indexOf($(this).val());
+          if(z>=0)
+          {
+
+            widget_array1.splice(z,1);
+          }
+          else
+          {
+                widget_array1.push($(this).val());            
+          }  
+        });
+        $(this).closest('.dime').find('.geoo').val(x+"("+widget_array1+")");
+        console.log($(this).closest('.dime').find('.geoo').val()); 
+});
+/*$(document).on('click', ' .time', function(){
+      var y ='';
+     $('.time input[type="checkbox"]:checked').each(function(){
+       
+        y +=($(this).val());
+      });
+     console.log(y);
+     var x = $(this).closest('.dime').find('.timee').val();
+      
+      
+      $(this).closest('.dime').find('.timee').val(x+" "+y);
+    //console.log(x+" "+y);
+});
+$(document).on('change', ' .geo', function(){
+      var y = [];
+     $('.geo input[type="checkbox"]:checked').each(function()
+     {
+        y.push($(this).val());
+        console.log(y);  
+     });
+      
+     var x = $(this).closest('.dime').find('.geoo').val('');
+         
+      $(this).closest('.dime').find('.geoo').val(x+" "+y);
+
+      // console.log(x+" "+y);
+     // console.log(x+" "+y);
+      y="";
+      //console.log(y);
+});*/
   $('#save_btn').click(function(){
 
       var html_data = "";
+      var wid_array = [];
+      $('.dime').find('input[type="checkbox"]:checked').each(function(){
+          wid_array.push($(this).val());
 
-      $('.dime').find('input[type="radio"]:checked').each(function(){
+      });
+      
 
+      $('.dime').find('input[type="checkbox"]:checked').each(function(){
+          
+          if ($(this).val()!=="Year" && $(this).val()!=="Quater" && $(this).val()!=="Month" && $(this).val()!=="State" && $(this).val()!=="City" && $(this).val()!=="Territory")
+          {
+            
+          
+          
           var view = $(this).closest('.row').find('.view').text();
 
           var kpi = $(this).closest('.row').find('.kpi').text();
 
           var dimen = $(this).val();
 
+          
           html_data += '<div class="row" style="margin-bottom: 7px;">'+
                             '<div class="col-md-3">'+view+'</div>'+
                             '<div class="col-md-3">'+kpi+'</div>'+
                             '<div class="col-md-3">'+dimen+'</div>'+
                             '<div class="col-md-3">'+
-                                '<button class="btn btn-primary">Ready for Deployment</button>'+
+                                '<center><i class="fa fa-check" aria-hidden="true"/></center>'+
                             '</div>'+
                         '</div>';
+          }
       });
 
       $('#addkpi').find('.data').append(html_data);
@@ -163,47 +252,52 @@
                     if (response[i].Dimension !== '') 
                     {
                         dim = '';
-                        dim += "<div class='radio'><label><input type='radio' name='Dimension"+i+"' value='Drug'>Drug";
+                        dim += "<div class='checkbox'><label><input type='checkbox' name='Dimension"+i+"' value='Drug'>Drug";
                         dim += "</label>";
                         dim += "</div>";
-                        dim += "<div class='radio'>"
-                        dim +=  "<label><input type='radio' name='Dimension"+i+"' value='Drug Class'>Drug Class"
+                        dim += "<div class='checkbox'>"
+                        dim +=  "<label><input type='checkbox' name='Dimension"+i+"' value='Drug Class'>Drug Class"
                         dim += "</label>"
                         dim += "</div>"
-                        dim += "<div class='radio'>"
-                        dim += "<label><input type='radio' name='Dimension"+i+"' value='Time Period'>Time Period&nbsp";
+                        dim += "<div class='checkbox'>"
+                        dim += "<label><input class= 'timee' type='checkbox' name='Dimension'  value='Time Period'>Time Period&nbsp";
                         dim += "<i class='fa fa-plus-circle' data-toggle='collapse' data-target='#time"+i+"'></i>"
                         dim += "<div class='collapse' id='time"+i+"'>";
+                        dim += "<div class='time1'>";
                         dim += "<div class='checkbox'>";
-                        dim += "<label><input type='checkbox' value=''>Year</label>";
+                        dim += "<label><input class='time' type='checkbox' value='Year'>Year</label>";
                         dim += "</div>";
                         dim += "<div class='checkbox'>";
-                        dim += "<label><input type='checkbox' value=''>Quater</label>"
+                        dim += "<label><input class='time' type='checkbox' value='Quater'>Quater</label>"
                         dim += "</div>";
                         dim += "<div class='checkbox'>"
-                        dim += "<label><input type='checkbox' value=''>Month</label>"
+                        dim += "<label><input class='time' type='checkbox' value='Month'>Month</label>"
                         dim += "</div>";
                         dim += "</div>";
                         dim += "</label>"
                         dim += "</div>";
-                        dim += "<div class='radio'>"
-                        dim += "<label><input type='radio' name='Dimension"+i+"' value='Geography'>Geography&nbsp";
-                        dim += "<i class='fa fa-plus-circle' data-toggle='collapse' data-target='#geo"+i+"'></i>"
-                        dim += "<div class='collapse' id='geo"+i+"'>";
-                        dim += "<div class='checkbox'>";
-                        dim += "<label><input type='checkbox' value=''>State</label>";
-                        dim += "</div>";
-                        dim += "<div class='checkbox'>";
-                        dim += "<label><input type='checkbox' value=''>City</label>"
                         dim += "</div>";
                         dim += "<div class='checkbox'>"
-                        dim += "<label><input type='checkbox' value=''>District</label>"
-                        dim += "</div>";
+                        dim += "<label><input class='geoo' type='checkbox' name='Dimension"+i+"' value='Geography'>Geography&nbsp";
+                        dim += "<i class='fa fa-plus-circle' data-toggle='collapse' data-target='#geo"+i+"'></i>"
+                        dim += "<div class='collapse geo' id='geo"+i+"'>";
+                        dim += "<div class='geo1'>";
                         dim += "<div class='checkbox'>";
-                        dim += "<label><input type='checkbox' value=''>Territory</label>";
+
+                        dim += "<label><input type='checkbox' value='State'>State</label>";
                         dim += "</div>";
-                        dim += "<div class='checkbox'>";
-                        dim += "<label><input type='checkbox' value=''>Zip</label>"
+                        dim += "<div class='checkbox geo'>";
+                        dim += "<label><input type='checkbox' value='City'>City</label>"
+                        dim += "</div>";
+                        dim += "<div class='checkbox geo'>"
+                        dim += "<label><input type='checkbox' value='District'>District</label>"
+                        dim += "</div>";
+                        dim += "<div class='checkbox geo'>";
+                        dim += "<label><input type='checkbox' value='Territory'>Territory</label>";
+                        dim += "</div>";
+                        dim += "<div class='checkbox geo'>";
+                        dim += "<label><input type='checkbox' value='Zip'>Zip</label>"
+                        dim += "</div>";
                         dim += "</div>";
                         dim += "</div>";
                         dim += "</label>"
