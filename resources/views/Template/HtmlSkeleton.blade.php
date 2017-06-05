@@ -34,8 +34,8 @@
         <i aria-hidden="true" class="fa fa-bars"></i> 
       </a>-->
       <a class="pull-left brand more-padding">
-        <!--<img src="{{url()}}/assets/vendor/img/traction_logo.png" class="primarylogo">-->
-        <h1 style="margin-top: 4px;">D D S</h1>
+        <img src="{{url()}}/DDS Logo-02.png" class="primarylogo" style="padding-bottom:   50px">
+        
       </a>
       <div class="pull-left center-contetnt"></div>
       <div class="sidenav" id="mySidenav">
