@@ -13,7 +13,7 @@
                   <div class="panel panel-default" style="border-bottom: 4px solid #8bc34a;     padding: 20px;">
                       <div class="row">
                           <div class="widget col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                           <!-- <table class="table" style="font-size:14px" id="mainTable">
+                            <table class="table" style="font-size:14px" id="mainTable">
                               <thead><span class='label label-primary' >Source Comparison</span>
                                 <tr>
                                   <th></th>
@@ -34,10 +34,11 @@
                                 </tr>
                                 </tbody>
                                 </table>
-                                <div class="long_table" style="overflow-x: scroll;">
-                                <table class="table" style="font-size:14px" id="mainTable">
-                              <thead><span class='label label-primary' >Duplicates</span>
-                                <tr>
+                              
+                              <div class="long_table" style="overflow-x: scroll;">
+                             <table class="table" style="font-size:14px" id="mainTable">
+                              <thead><span class='label label-primary' >Duplicates:0</span>
+                             <!--   <tr>
                                   <th>period</th>
                                   <th>client_id</th>
                                   <th>plan_id</th>
@@ -106,8 +107,11 @@
                                   <th>N</th>
                                 </tr>
                                 </tbody>
-                                </table>
-                                </div>
+                                </table>-->
+                                
+                          </thead>
+                          </table>
+                          </div>
                           </div>
                           <div class="widget col-lg-6 col-md-6 col-sm-6 col-xs-6">
                             <table class="table" style="font-size:14px" id="mainTable">
@@ -215,8 +219,8 @@
                                 
                                
                               </tbody>
-                            </table>-->
-                            <h1 class="btn btn-lg">No Data Available</h1>
+                            </table>
+                            
                       </div>
 
                   </div>

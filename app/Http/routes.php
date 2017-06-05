@@ -45,6 +45,23 @@ Route::any('/getSubTypes', 'CommonController@getSubTypes');
 Route::any('/getExtractor', 'CommonController@getExtractor');
 Route::any('/save_proj_into_session', 'CommonController@save_proj_into_session');
 
+
+Route::get('/Symphony_Physican_Rx_Data',function(){
+	return view('Physican_Rx_Data');
+});
+
+Route::get('/IMS_Physican_Rx_Data',function(){
+	return view('Physican_Rx_Data');
+});
+
+Route::get('/IMS_Aggregated_Rx_Data',function(){
+	return view('Aggregated_Rx_Data');
+});
+
+Route::get('/Symphony_Aggregated_Rx_Data',function(){
+	return view('Aggregated_Rx_Data');
+});
+
 Route::get('/Symphony_claims',function(){
 	return view('symphony_claims');
 });
