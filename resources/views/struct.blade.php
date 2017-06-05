@@ -158,7 +158,7 @@
                                   
 
                                   <td>
-                                      <button class="btn btn-info " >edit mapping</button>
+                                      <button class="btn btn-info " data-toggle="modal" data-target="#mmit_to_claims" >edit mapping</button>
                                   </td>
                                 </tr>
                                 <tr class="each_row" style="display: none" id= 'Symphony_Product_Dimension'>
@@ -443,7 +443,21 @@
           </div>
       </div>
   </div>
-  
+  <div id="mmit_to_claims" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body" style="padding: 10px 50px">
+          <h1 class="btn">Nothing to display</h1>
+        </div>
+      </div>
+    </div>
+  </div>
 <!-- Modal -->
   <div id="prodim" class="modal fade" role="dialog">
     <div class="modal-dialog">

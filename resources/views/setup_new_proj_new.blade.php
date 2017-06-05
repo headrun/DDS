@@ -214,6 +214,206 @@
   </div>
 </div>
 
+<div id="AggregatedRxData" style="display: none;">
+  <div class="popover-heading">
+    <strong>Product Dimension</strong>
+  </div>
+  <div class="popover-body">
+    <table class="table table-responsive table-strip AggregatedRxData" border="1">
+      <thead>
+        <tr>
+          <th>Field</th>
+          <th>Datatype</th>
+          <th>Description</th>      
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>market_id_1</td>
+          <td>int8</td>
+          <td>market id</td>
+        </tr>
+        <tr>
+          <td>product_id</td>
+          <td>int8</td>
+          <td>product id</td>
+        </tr>
+        <tr>
+          <td>plan_id</td>
+          <td>int8</td>
+          <td>plan id</td>
+        </tr>
+        <tr>
+          <td>data_type</td>
+          <td>int8</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>week_ending_date</td>
+          <td>int8</td>
+          <td>week ending date of prescription</td>
+        </tr>
+        <tr>
+          <td>month_ending_date</td>
+          <td>int8</td>
+          <td>month ending date of prescription</td>
+        </tr>
+        <tr>
+          <td>sob_group</td>
+          <td>varchar</td>
+          <td>source of business group</td>
+        </tr>
+        <tr>
+          <td>new_rx_count</td>
+          <td>int8</td>
+          <td>new Rx count</td>
+        </tr>
+        <tr>
+          <td>refill_rx_count</td>
+          <td>int8</td>
+          <td>refill Rx count</td>
+        </tr>
+        <tr>
+          <td>total_rx_count</td>
+          <td>int8</td>
+          <td>total Rx count</td>
+        </tr>
+        <tr>
+          <td>new_rx_quantity</td>
+          <td>int8</td>
+          <td>new Rx quantity</td>
+        </tr>
+        <tr>
+          <td>refill_rx_quantity</td>
+          <td>int8</td>
+          <td>refill Rx quantity</td>
+        </tr>
+        <tr>
+          <td>total_rx_quantity</td>
+          <td>int8</td>
+          <td>total Rx quantity</td>
+        </tr>
+        <tr>
+          <td>new_days_supply</td>
+          <td>int8</td>
+          <td>new days of supply</td>
+        </tr>
+        <tr>
+          <td>refill_days_supply</td>
+          <td>int8</td>
+          <td>refill days of supply</td>
+        </tr>
+
+        <tr>
+          <td>total_days_supply</td>
+          <td>int8</td>
+          <td>total days of supply</td>
+        </tr>
+      </tbody>
+    </table>    
+  </div>
+</div>
+
+<div id="PrescriberRxData" style="display: none;">
+  <div class="popover-heading">
+    <strong>Product Dimension</strong>
+  </div>
+  <div class="popover-body">
+    <table class="table table-responsive table-strip PrescriberRxData" border="1">
+      <thead>
+        <tr>
+          <th>Field</th>
+          <th>Datatype</th>
+          <th>Description</th>      
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>market_id_1</td>
+          <td>int8</td>
+          <td>market id</td>
+        </tr>
+        <tr>
+          <td>product_id</td>
+          <td>int8</td>
+          <td>product id</td>
+        </tr>
+        <tr>
+          <td>plan_id</td>
+          <td>int8</td>
+          <td>plan id</td>
+        </tr>
+        <tr>
+          <td>data_type</td>
+          <td>int8</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>week_ending_date</td>
+          <td>int8</td>
+          <td>week ending date of prescription</td>
+        </tr>
+        <tr>
+          <td>month_ending_date</td>
+          <td>int8</td>
+          <td>month ending date of prescription</td>
+        </tr>
+        <tr>
+          <td>sob_group</td>
+          <td>varchar</td>
+          <td>source of business group</td>
+        </tr>
+        <tr>
+          <td>new_rx_count</td>
+          <td>int8</td>
+          <td>new Rx count</td>
+        </tr>
+        <tr>
+          <td>refill_rx_count</td>
+          <td>int8</td>
+          <td>refill Rx count</td>
+        </tr>
+        <tr>
+          <td>total_rx_count</td>
+          <td>int8</td>
+          <td>total Rx count</td>
+        </tr>
+        <tr>
+          <td>new_rx_quantity</td>
+          <td>int8</td>
+          <td>new Rx quantity</td>
+        </tr>
+        <tr>
+          <td>refill_rx_quantity</td>
+          <td>int8</td>
+          <td>refill Rx quantity</td>
+        </tr>
+        <tr>
+          <td>total_rx_quantity</td>
+          <td>int8</td>
+          <td>total Rx quantity</td>
+        </tr>
+        <tr>
+          <td>new_days_supply</td>
+          <td>int8</td>
+          <td>new days of supply</td>
+        </tr>
+        <tr>
+          <td>refill_days_supply</td>
+          <td>int8</td>
+          <td>refill days of supply</td>
+        </tr>
+
+        <tr>
+          <td>total_days_supply</td>
+          <td>int8</td>
+          <td>total days of supply</td>
+        </tr>
+      </tbody>
+    </table>    
+  </div>
+</div>
+
 <div id="claims" style="display: none;">
   <div class="popover-heading">
     <strong>Claims</strong>
@@ -515,12 +715,12 @@
   </div>
 </div>
 
-<div id="mmit" style="display: none;">
+<div id="PayorPlanData" style="display: none;">
   <div class="popover-heading">
-    <strong>MMIT</strong>
+    <strong>PayorPlanData</strong>
   </div>
   <div class="popover-body">
-    <table class="table table-responsive table-strip mmit" border="1">
+    <table class="table table-responsive table-strip PayorPlanData" border="1">
       <thead>
         <tr>
           <th>Field</th>
@@ -634,6 +834,56 @@
           <td>varchar</td>
           <td>Description of restrictions</td>
         </tr>
+      </tbody>
+    </table>    
+  </div>
+</div>
+
+<div id="PayorPlantoClaims" style="display: none;">
+  <div class="popover-heading">
+    <strong>PayorPlanData</strong>
+  </div>
+  <div class="popover-body">
+    <table class="table table-responsive table-strip PayorPlantoClaims" border="1">
+      <thead>
+        <tr>
+          <th>Field</th>
+          <th>Datatype</th>
+          <th>Description</th>      
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>client_id</td>
+          <td>int8</td>
+          <td>client id</td>
+        </tr>
+        <tr>
+          <td>period</td>
+          <td>int8</td>
+          <td>time period of the claim</td>
+        </tr>
+        <tr>
+          <td>org_id</td>
+          <td>int8</td>
+          <td>organization id</td>
+        </tr>
+        <tr>
+          <td>sha_plan_id</td>
+          <td>int8</td>
+          <td>claims plan id</td>
+        </tr>
+        <tr>
+          <td>processing_date</td>
+          <td>varchar</td>
+          <td>claims processing date</td>
+        </tr>
+        <tr>
+          <td>sha_plan_id_rep</td>
+          <td>int8</td>
+          <td>claims plan id</td>
+        </tr>
+        
       </tbody>
     </table>    
   </div>
@@ -1328,7 +1578,16 @@ $(document).on('change', '#group, #project_text, #ta, #fa', function()
 
 $(document).on('click','.text',function(){ 
  var id = $(this).text().trim(); 
-    if ( id === "Product Dimension" ) {
+
+    if ( id === "Prescriber Rx Data" ) {
+      id = "PrescriberRxData";
+    }else if ( id === "Aggregated Rx Data" ) {
+      id = "AggregatedRxData";
+    }else if ( id === "Payor Plan to Claims" ) {
+      id = "PayorPlantoClaims";
+    }else if ( id === "Payor Plan Data" ) {
+      id = "PayorPlanData";
+    }else if ( id === "Product Dimension" ) {
       id = "ProductDimension";
     }else if( id === "Plan Dimension" ){
       id = "PlanDimension";
