@@ -25,8 +25,8 @@
                   <div class="panel panel-default" style="border-bottom: 4px solid #8bc34a;     padding: 20px;">
                       <p><strong>Project Name: </strong> {{Session::get('project_name')}}</p>
                       <div class = "row">
-                        <div class= "col-md-4">
-                          <label>Select View:</label>
+                        <div class= "col-md-5">
+                          <label style="padding: 5px">Select View:</label>
                           <select class="form-control pull-right" id='proj_name' style="margin-top: -5px; width: 220px">
                             <option></option>
                             @foreach($view as $val)
@@ -34,7 +34,7 @@
                             @endforeach
                           </select>
                         </div>
-                        <div class = "col-md-8">
+                        <div class = "col-md-7">
                           <button class ='btn btn-warning  pull-right'>View KPI Library</button>
                         </div>
                       </div>
@@ -48,8 +48,7 @@
                                         <div class="col-md-3 "><label>VIEW</label></div>
                                         <div class="col-md-3 "><label>KPI</label></div>
                                         <div class="col-md-3 "><label>DIMENSION</label></div>
-                                        <div class="col-md-3">
-                                          <button class="btn btn-primary">Ready for Deployment</button>
+                                        <div class="col-md-3"><label>Ready for Deployment</label>
                                         </div>
                                       </div>
                                     <div class="data">
@@ -142,70 +141,69 @@ $(document).on('change', '.geo1', function()
         $(this).closest('.dime').find('.geoo').val(x+"("+widget_array1+")");
         console.log($(this).closest('.dime').find('.geoo').val()); 
 });
-/*$(document).on('click', ' .time', function(){
-      var y ='';
-     $('.time input[type="checkbox"]:checked').each(function(){
-       
-        y +=($(this).val());
-      });
-     console.log(y);
-     var x = $(this).closest('.dime').find('.timee').val();
-      
-      
-      $(this).closest('.dime').find('.timee').val(x+" "+y);
-    //console.log(x+" "+y);
-});
-$(document).on('change', ' .geo', function(){
-      var y = [];
-     $('.geo input[type="checkbox"]:checked').each(function()
-     {
-        y.push($(this).val());
-        console.log(y);  
-     });
-      
-     var x = $(this).closest('.dime').find('.geoo').val('');
-         
-      $(this).closest('.dime').find('.geoo').val(x+" "+y);
-
-      // console.log(x+" "+y);
-     // console.log(x+" "+y);
-      y="";
-      //console.log(y);
-});*/
   $('#save_btn').click(function(){
 
       var html_data = "";
       var wid_array = [];
+      var view;
+      var obj ={};
+      var i=0;
       $('.dime').find('input[type="checkbox"]:checked').each(function(){
-          wid_array.push($(this).val());
+         obj[$(this).closest('.row').find('.kpi').text()]="";
 
+         //console.log(obj);
+         
       });
-      
-
+      //console.log(obj);
+      /*i=0;
       $('.dime').find('input[type="checkbox"]:checked').each(function(){
-          
+         obj[i].kpt=$(this).closest('.row').find('.kpi').text();
+         //console.log(obj[i].kpt);
+         i++;
+      });
+      i=0;
+     */$('.dime').find('input[type="checkbox"]:checked').each(function(){
           if ($(this).val()!=="Year" && $(this).val()!=="Quater" && $(this).val()!=="Month" && $(this).val()!=="State" && $(this).val()!=="City" && $(this).val()!=="Territory")
           {
             
-          
-          
-          var view = $(this).closest('.row').find('.view').text();
-
-          var kpi = $(this).closest('.row').find('.kpi').text();
-
-          var dimen = $(this).val();
-
-          
-          html_data += '<div class="row" style="margin-bottom: 7px;">'+
-                            '<div class="col-md-3">'+view+'</div>'+
-                            '<div class="col-md-3">'+kpi+'</div>'+
-                            '<div class="col-md-3">'+dimen+'</div>'+
-                            '<div class="col-md-3">'+
-                                '<center><i class="fa fa-check" aria-hidden="true"/></center>'+
-                            '</div>'+
-                        '</div>';
+            for (var key in obj) 
+            {
+              if (obj.hasOwnProperty(key)) 
+              {
+                if(key===$(this).closest('.row').find('.kpi').text())
+                {
+                  obj[key]+=($(this).val())+",";
+                }
+              }
+            }
           }
+          view = $(this).closest('.row').find('.view').text();
+          
+         
       });
+     console.log(obj);
+      for(var key in obj)
+      {
+            
+            
+              //var view = $(this).closest('.row').find('.view').text();
+
+              var kpi = key;
+
+              var dimen = obj[key];
+
+              
+              html_data += '<div class="row" style="margin-bottom: 7px;">'+
+                                '<div class="col-md-3">'+view+'</div>'+
+                                '<div class="col-md-3">'+kpi+'</div>'+
+                                '<div class="col-md-3">'+dimen+'</div>'+
+                                '<div class="col-md-3">'+
+                                    '<center><i class="fa fa-check" aria-hidden="true"/></center>'+
+                                '</div>'+
+                            '</div>';
+            
+          }
+
 
       $('#addkpi').find('.data').append(html_data);
   });
@@ -312,19 +310,19 @@ $(document).on('change', ' .geo', function(){
                 {
                   //console.log(response[i].view);
                    html +="<div class= 'row'>";
-                   html +="<div class='col-md-2 view'>"+response[i].View+"";
+                   html +="<div class='col-md-2 view' value='"+response[i].View+"'>"+response[i].View+"";
                 
                    html +="</div>";
-                   html +="<div class='col-md-2 kpi'>"+response[i].KPI+"";
+                   html +="<div class='col-md-2 kpi'value='"+response[i].KPI+"'>"+response[i].KPI+"";
                    
                    html +="</div>";
-                   html +="<div class='col-md-3'>"+response[i].kpi_desc+"";
+                   html +="<div class='col-md-3' value='"+response[i].kpi_desc+"'>"+response[i].kpi_desc+"";
                    
                    html +="</div>";
-                   html +="<div class='col-md-2'>"+response[i].Calculation+"";
+                   html +="<div class='col-md-2' value='"+response[i].Calculation+"'>"+response[i].Calculation+"";
                    
                    html +="</div>";
-                   html += "<div class='col-md-3 dime'>"+response[i].Dimension+"";
+                   html += "<div class='col-md-3 dime' value='"+response[i].Dimensions+"'>"+response[i].Dimension+"";
                      html += "</div>";
                    html += "</div><hr>";
                 }
