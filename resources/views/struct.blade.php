@@ -487,8 +487,8 @@
                        <option>ndc_11_code</option>
                        <option>drug_name</option>
                        <option>brand_generic_flag</option>
-                       <option></option>
-                       <option></option>
+                       <option>Map to Self</option>
+                       <option>Map to Self</option>
                        <option>generic_name</option>
                        <option>strength_desc</option>
                        <option>dosage_form_desc</option>
@@ -508,8 +508,8 @@
                        <option selected>ndc_11_code</option>
                        <option>drug_name</option>
                        <option>brand_generic_flag</option>
-                       <option></option>
-                       <option></option>
+                       <option>Map to Self</option>
+                       <option>Map to Self</option>
                        <option>generic_name</option>
                        <option>strength_desc</option>
                        <option>dosage_form_desc</option>
@@ -529,8 +529,8 @@
                        <option>ndc_11_code</option>
                        <option selected>drug_name</option>
                        <option>brand_generic_flag</option>
-                       <option></option>
-                       <option></option>
+                       <option>Map to Self</option>
+                       <option>Map to Self</option>
                        <option>generic_name</option>
                        <option>strength_desc</option>
                        <option>dosage_form_desc</option>
@@ -550,8 +550,8 @@
                        <option>ndc_11_code</option>
                        <option>drug_name</option>
                        <option selectedv>brand_generic_flag</option>
-                       <option></option>
-                       <option></option>
+                       <option>Map to Self</option>
+                       <option>Map to Self</option>
                        <option>generic_name</option>
                        <option>strength_desc</option>
                        <option>dosage_form_desc</option>
@@ -571,8 +571,8 @@
                        <option>ndc_11_code</option>
                        <option>drug_name</option>
                        <option>brand_generic_flag</option>
-                       <option selected></option>
-                       <option></option>
+                       <option selected>Map to Self</option>
+                       <option>Map to Self</option>
                        <option>generic_name</option>
                        <option>strength_desc</option>
                        <option>dosage_form_desc</option>
@@ -592,8 +592,8 @@
                        <option>ndc_11_code</option>
                        <option>drug_name</option>
                        <option>brand_generic_flag</option>
-                       <option></option>
-                       <option selected></option>
+                       <option>Map to Self</option>
+                       <option selected>Map to Self</option>
                        <option>generic_name</option>
                        <option>strength_desc</option>
                        <option>dosage_form_desc</option>
@@ -613,8 +613,8 @@
                        <option>ndc_11_code</option>
                        <option>drug_name</option>
                        <option>brand_generic_flag</option>
-                       <option></option>
-                       <option></option>
+                       <option>Map to Self</option>
+                       <option>Map to Self</option>
                        <option selected>generic_name</option>
                        <option>strength_desc</option>
                        <option>dosage_form_desc</option>
@@ -634,8 +634,8 @@
                        <option>ndc_11_code</option>
                        <option>drug_name</option>
                        <option>brand_generic_flag</option>
-                       <option></option>
-                       <option></option>
+                       <option>Map to Self</option>
+                       <option>Map to Self</option>
                        <option>generic_name</option>
                        <option selected>strength_desc</option>
                        <option>dosage_form_desc</option>
@@ -655,8 +655,8 @@
                        <option>ndc_11_code</option>
                        <option>drug_name</option>
                        <option>brand_generic_flag</option>
-                       <option></option>
-                       <option></option>
+                       <option>Map to Self</option>
+                       <option>Map to Self</option>
                        <option>generic_name</option>
                        <option>strength_desc</option>
                        <option selected>dosage_form_desc</option>
@@ -676,8 +676,8 @@
                        <option>ndc_11_code</option>
                        <option>drug_name</option>
                        <option>brand_generic_flag</option>
-                       <option></option>
-                       <option></option>
+                       <option>Map to Self</option>
+                       <option>Map to Self</option>
                        <option>generic_name</option>
                        <option>strength_desc</option>
                        <option>dosage_form_desc</option>
@@ -697,8 +697,8 @@
                        <option>ndc_11_code</option>
                        <option>drug_name</option>
                        <option>brand_generic_flag</option>
-                       <option></option>
-                       <option></option>
+                       <option>Map to Self</option>
+                       <option>Map to Self</option>
                        <option>generic_name</option>
                        <option>strength_desc</option>
                        <option>dosage_form_desc</option>
@@ -718,8 +718,8 @@
                        <option>ndc_11_code</option>
                        <option>drug_name</option>
                        <option>brand_generic_flag</option>
-                       <option></option>
-                       <option></option>
+                       <option>Map to Self</option>
+                       <option>Map to Self</option>
                        <option>generic_name</option>
                        <option>strength_desc</option>
                        <option>dosage_form_desc</option>
@@ -739,8 +739,8 @@
                        <option>ndc_11_code</option>
                        <option>drug_name</option>
                        <option>brand_generic_flag</option>
-                       <option></option>
-                       <option></option>
+                       <option>Map to Self</option>
+                       <option>Map to Self</option>
                        <option>generic_name</option>
                        <option>strength_desc</option>
                        <option>dosage_form_desc</option>
@@ -810,7 +810,7 @@
                            <option>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option>Notes</option>
-                           <option></option>
+                           <option>Map to Self</option>
                           </select>
                     </td>
                   </tr>
@@ -840,7 +840,7 @@
                            <option>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option>Notes</option>
-                           <option></option>
+                           <option>Map to Self</option>
                           </select>
                     </td>
                   </tr>
@@ -869,7 +869,7 @@
                            <option>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option>Notes</option>
-                           <option></option>
+                           <option>Map to Self</option>
                           </select>
                     </td>
                   </tr>
@@ -898,7 +898,7 @@
                            <option>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option>Notes</option>
-                           <option></option>
+                           <option>Map to Self</option>
                           </select>
                     </td>
                   </tr>
@@ -927,7 +927,7 @@
                            <option>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option>Notes</option>
-                           <option></option>
+                           <option>Map to Self</option>
                           </select>
                     </td>
                   </tr>
@@ -956,7 +956,7 @@
                            <option>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option>Notes</option>
-                           <option></option>
+                           <option>Map to Self</option>
                           </select>
                     </td>
                   </tr>
@@ -985,7 +985,7 @@
                            <option>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option>Notes</option>
-                           <option></option>
+                           <option>Map to Self</option>
                           </select>
                     </td>
                   </tr>
@@ -1014,7 +1014,7 @@
                            <option>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option>Notes</option>
-                           <option></option>
+                           <option>Map to Self</option>
                           </select>
                     </td>
                   </tr>
@@ -1043,7 +1043,7 @@
                            <option>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option>Notes</option>
-                           <option></option>
+                           <option>Map to Self</option>
                           </select>
                     </td>
                   </tr>
@@ -1072,7 +1072,7 @@
                            <option>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option>Notes</option>
-                           <option></option>
+                           <option>Map to Self</option>
                           </select>
                     </td>
                   </tr>
@@ -1101,7 +1101,7 @@
                            <option>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option>Notes</option>
-                           <option></option>
+                           <option>Map to Self</option>
                           </select>
                     </td>
                   </tr>
@@ -1130,7 +1130,7 @@
                            <option>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option>Notes</option>
-                           <option></option>
+                           <option>Map to Self</option>
                           </select>
                     </td>
                   </tr>
@@ -1159,7 +1159,7 @@
                            <option>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option>Notes</option>
-                           <option></option>
+                           <option>Map to Self</option>
                           </select>
                     </td>
                   </tr>
@@ -1189,7 +1189,7 @@
                            <option>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option>Notes</option>
-                           <option></option>
+                           <option>Map to Self</option>
                           </select>
                     </td>
                   </tr>
@@ -1218,7 +1218,7 @@
                            <option>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option>Notes</option>
-                           <option></option>
+                           <option>Map to Self</option>
                           </select>
                     </td>
                   </tr>
@@ -1247,7 +1247,7 @@
                            <option>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option>Notes</option>
-                           <option></option>
+                           <option>Map to Self</option>
                           </select>
                     </td>
                   </tr>
@@ -1276,7 +1276,7 @@
                            <option>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option>Notes</option>
-                           <option></option>
+                           <option>Map to Self</option>
                           </select>
                     </td>
                   </tr>
@@ -1305,7 +1305,7 @@
                            <option>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option>Notes</option>
-                           <option></option>
+                           <option>Map to Self</option>
                           </select>
                     </td>
                   </tr>
@@ -1334,7 +1334,7 @@
                            <option selected>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option>Notes</option>
-                           <option></option>
+                           <option>Map to Self</option>
                           </select>
                     </td>
                   </tr>
@@ -1363,7 +1363,7 @@
                            <option>step_theraphy</option>
                            <option selected>quantity_limit</option>
                            <option>Notes</option>
-                           <option></option>
+                           <option>Map to Self</option>
                           </select>
                     </td>
                   </tr>
@@ -1392,7 +1392,7 @@
                            <option>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option selected>Notes</option>
-                           <option></option>
+                           <option>Map to Self</option>
                           </select>
                     </td>
                   </tr>
@@ -1794,16 +1794,16 @@
                     <td>market_id_1</td>
                     <td><select class="form-control source_name">
                            <option selected></option>
-                           <option></option>
+                           <option>Map to Self</option>
                            <option>market_id</option>
                            <option>market_name</option>
                            <option>product_id</option>
                            <option>product_name</option>
                            <option>ndc_11_code</option>
-                           <option></option>
-                           <option></option>
-                           <option></option>
-                           <option></option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
                            <option>drug_name</option>
                            <option>generic_name</option>
                            <option>form_code</option>
@@ -1818,17 +1818,17 @@
                   <tr>
                     <td>market_name_1</td>
                     <td><select class="form-control source_name">
-                           <option></option>
+                           <option>Map to Self</option>
                            <option selected></option>
                            <option>market_id</option>
                            <option>market_name</option>
                            <option>product_id</option>
                            <option>product_name</option>
                            <option>ndc_11_code</option>
-                           <option></option>
-                           <option></option>
-                           <option></option>
-                           <option></option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
                            <option>drug_name</option>
                            <option>generic_name</option>
                            <option>form_code</option>
@@ -1841,17 +1841,17 @@
                   <tr>
                     <td>market_id_2</td>
                     <td><select class="form-control source_name">
-                           <option></option>
-                           <option></option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
                            <option selected>market_id</option>
                            <option>market_name</option>
                            <option>product_id</option>
                            <option>product_name</option>
                            <option>ndc_11_code</option>
-                           <option></option>
-                           <option></option>
-                           <option></option>
-                           <option></option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
                            <option>drug_name</option>
                            <option>generic_name</option>
                            <option>form_code</option>
@@ -1864,17 +1864,17 @@
                   <tr>
                     <td>market_name_2</td>
                     <td><select class="form-control source_name">
-                           <option></option>
-                           <option></option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
                            <option>market_id</option>
                            <option selected>market_name</option>
                            <option>product_id</option>
                            <option>product_name</option>
                            <option>ndc_11_code</option>
-                           <option></option>
-                           <option></option>
-                           <option></option>
-                           <option></option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
                            <option>drug_name</option>
                            <option>generic_name</option>
                            <option>form_code</option>
@@ -1887,17 +1887,17 @@
                   <tr>
                     <td>product_id</td>
                     <td><select class="form-control source_name">
-                           <option></option>
-                           <option></option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
                            <option>market_id</option>
                            <option>market_name</option>
                            <option selected>product_id</option>
                            <option>product_name</option>
                            <option>ndc_11_code</option>
-                           <option></option>
-                           <option></option>
-                           <option></option>
-                           <option></option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
                            <option>drug_name</option>
                            <option>generic_name</option>
                            <option>form_code</option>
@@ -1910,17 +1910,17 @@
                   <tr>
                     <td>product_name</td>
                     <td><select class="form-control source_name">
-                           <option></option>
-                           <option></option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
                            <option>market_id</option>
                            <option>market_name</option>
                            <option>product_id</option>
                            <option selected>product_name</option>
                            <option>ndc_11_code</option>
-                           <option></option>
-                           <option></option>
-                           <option></option>
-                           <option></option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
                            <option>drug_name</option>
                            <option>generic_name</option>
                            <option>form_code</option>
@@ -1933,17 +1933,17 @@
                   <tr>
                     <td>ndc</td>
                     <td><select class="form-control source_name">
-                           <option></option>
-                           <option></option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
                            <option>market_id</option>
                            <option>market_name</option>
                            <option>product_id</option>
                            <option>product_name</option>
                            <option selected>ndc_11_code</option>
-                           <option></option>
-                           <option></option>
-                           <option></option>
-                           <option></option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
                            <option>drug_name</option>
                            <option>generic_name</option>
                            <option>form_code</option>
@@ -1956,17 +1956,17 @@
                   <tr>
                     <td>usc</td>
                     <td><select class="form-control source_name">
-                           <option></option>
-                           <option></option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
                            <option>market_id</option>
                            <option>market_name</option>
                            <option>product_id</option>
                            <option>product_name</option>
                            <option>ndc_11_code</option>
                            <option selected></option>
-                           <option></option>
-                           <option></option>
-                           <option></option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
                            <option>drug_name</option>
                            <option>generic_name</option>
                            <option>form_code</option>
@@ -1979,17 +1979,17 @@
                   <tr>
                     <td>usc_description</td>
                     <td><select class="form-control source_name">
-                           <option></option>
-                           <option></option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
                            <option>market_id</option>
                            <option>market_name</option>
                            <option>product_id</option>
                            <option>product_name</option>
                            <option>ndc_11_code</option>
-                           <option></option>
-                           <option selected></option>
-                           <option></option>
-                           <option></option>
+                           <option>Map to Self</option>
+                           <option selected>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
                            <option>drug_name</option>
                            <option>generic_name</option>
                            <option>form_code</option>
@@ -2002,17 +2002,17 @@
                   <tr>
                     <td>bb_usc</td>
                     <td><select class="form-control source_name">
-                           <option></option>
-                           <option></option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
                            <option>market_id</option>
                            <option>market_name</option>
                            <option>product_id</option>
                            <option>product_name</option>
                            <option>ndc_11_code</option>
-                           <option></option>
-                           <option></option>
-                           <option selected></option>
-                           <option></option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option selected>Map to Self</option>
+                           <option>Map to Self</option>
                            <option>drug_name</option>
                            <option>generic_name</option>
                            <option>form_code</option>
@@ -2025,16 +2025,16 @@
                   <tr>
                     <td>bb_usc_description</td>
                     <td> <select class="form-control source_name">
-                           <option></option>
-                           <option></option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
                            <option>market_id</option>
                            <option>market_name</option>
                            <option>product_id</option>
                            <option>product_name</option>
                            <option>ndc_11_code</option>
-                           <option></option>
-                           <option></option>
-                           <option></option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
                            <option selected></option>
                            <option>drug_name</option>
                            <option>generic_name</option>
@@ -2048,17 +2048,17 @@
                   <tr>
                     <td>drug_name</td>
                     <td><select class="form-control source_name">
-                           <option></option>
-                           <option></option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
                            <option>market_id</option>
                            <option>market_name</option>
                            <option>product_id</option>
                            <option>product_name</option>
                            <option>ndc_11_code</option>
-                           <option></option>
-                           <option></option>
-                           <option></option>
-                           <option></option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
                            <option selected>drug_name</option>
                            <option>generic_name</option>
                            <option>form_code</option>
@@ -2071,17 +2071,17 @@
                   <tr>
                     <td>generic_name</td>
                     <td><select class="form-control source_name">
-                           <option></option>
-                           <option></option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
                            <option>market_id</option>
                            <option>market_name</option>
                            <option>product_id</option>
                            <option>product_name</option>
                            <option>ndc_11_code</option>
-                           <option></option>
-                           <option></option>
-                           <option></option>
-                           <option></option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
                            <option>drug_name</option>
                            <option selected>generic_name</option>
                            <option>form_code</option>
@@ -2095,17 +2095,17 @@
                   <tr>
                     <td>form_code</td>
                     <td><select class="form-control source_name">
-                           <option></option>
-                           <option></option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
                            <option>market_id</option>
                            <option>market_name</option>
                            <option>product_id</option>
                            <option>product_name</option>
                            <option>ndc_11_code</option>
-                           <option></option>
-                           <option></option>
-                           <option></option>
-                           <option></option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
                            <option>drug_name</option>
                            <option>generic_name</option>
                            <option selected>form_code</option>
@@ -2119,17 +2119,17 @@
                   <tr>
                     <td>form_description</td>
                     <td><select class="form-control source_name">
-                           <option></option>
-                           <option></option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
                            <option>market_id</option>
                            <option>market_name</option>
                            <option>product_id</option>
                            <option>product_name</option>
                            <option>ndc_11_code</option>
-                           <option></option>
-                           <option></option>
-                           <option></option>
-                           <option></option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
                            <option>drug_name</option>
                            <option>generic_name</option>
                            <option>form_code</option>
@@ -2142,17 +2142,17 @@
                   <tr>
                     <td>strength_description</td>
                     <td><select class="form-control source_name">
-                           <option></option>
-                           <option></option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
                            <option>market_id</option>
                            <option>market_name</option>
                            <option>product_id</option>
                            <option>product_name</option>
                            <option>ndc_11_code</option>
-                           <option></option>
-                           <option></option>
-                           <option></option>
-                           <option></option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
                            <option>drug_name</option>
                            <option>generic_name</option>
                            <option>form_code</option>
@@ -2165,17 +2165,17 @@
                   <tr>
                     <td>package_size</td>
                     <td><select class="form-control source_name">
-                           <option></option>
-                           <option></option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
                            <option>market_id</option>
                            <option>market_name</option>
                            <option>product_id</option>
                            <option>product_name</option>
                            <option>ndc_11_code</option>
-                           <option></option>
-                           <option></option>
-                           <option></option>
-                           <option></option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
                            <option>drug_name</option>
                            <option>generic_name</option>
                            <option>form_code</option>
@@ -2188,17 +2188,17 @@
                   <tr>
                     <td>manufacturer</td>
                     <td><select class="form-control source_name">
-                           <option></option>
-                           <option></option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
                            <option>market_id</option>
                            <option>market_name</option>
                            <option>product_id</option>
                            <option>product_name</option>
                            <option>ndc_11_code</option>
-                           <option></option>
-                           <option></option>
-                           <option></option>
-                           <option></option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
                            <option>drug_name</option>
                            <option>generic_name</option>
                            <option>form_code</option>
