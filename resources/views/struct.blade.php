@@ -61,6 +61,24 @@
                                       <button class="btn btn-info " data-toggle="modal" data-target="#claim">edit mapping</button>
                                   </td>
                                 </tr>
+                                <tr class="each_row" style="display: none;" id='IMS_claims'>
+                                  <td>
+                                      <div class="checkbox">
+                                        <label><input type="checkbox" class="ingest_chkbox"></label>
+                                      </div>
+                                  </td>
+                                  <td>IMS_Claims</td>
+                                  <td>
+                                      <select class="form-control source_name">
+                                        <option>Dcube_Claims
+                                        <option>Dcube_Claim_RejRsn_Dim</option>
+                                        <option>Dcube_Claim_Dim</option>
+                                      </select>
+                                  </td>
+                                  <td>
+                                      <button class="btn btn-info " data-toggle="modal" data-target="#claim">edit mapping</button>
+                                  </td>
+                                </tr>
                                 <tr class="each_row" style="display: none" id='Prescriber_Source'>
                                   <td>
                                       <div class="checkbox">
@@ -116,7 +134,7 @@
                                       <button class="btn btn-info " data-toggle="modal" data-target="#mmits" >edit mapping</button>
                                   </td>
                                 </tr>
-                                <tr class="each_row" style="display: none" id= 'MMIT_Payor_Plan_Data_to_Claims'>
+                                <tr class="each_row" style="display: none" id= 'MMIT_Payor_Plan_to_Claims'>
                                   <td>
                                       <div class="checkbox">
                                         <label><input type="checkbox" class="ingest_chkbox"></label>
@@ -169,6 +187,32 @@
                                   </td>
                                   
                                 </tr>
+                                <tr class="each_row" style="display: none" id= 'IMS_Product_Dimension'>
+                                  <td>
+                                      <div class="checkbox">
+                                        <label><input type="checkbox" class="ingest_chkbox"></label>
+                                      </div>
+                                  </td>
+                                  <td>
+                                      
+                                        IMS Product Dimension
+                                      
+                                  </td>
+                                  
+                                  <td>
+                                      <select class="form-control source_name">
+                                        <option>Dcube_Product_Dim</option>
+                                        <option>Dcube_Prod </option>
+                                        <option>Dcube_Prod_Branded</option>
+                                     
+                                        
+                                      </select>
+                                  </td>
+                                  <td>
+                                      <button class="btn btn-info " data-toggle="modal" data-target="#prodim" >edit mapping</button>
+                                  </td>
+                                  
+                                </tr>
                                 <tr class="each_row" style="display: none" id= 'Symphony_Plan_Dimension'>
                                   <td>
                                       <div class="checkbox">
@@ -196,6 +240,33 @@
                                       <button class="btn btn-info " data-toggle="modal" data-target="#plndim" >edit mapping</button>
                                   </td>
                                 </tr>
+                                <tr class="each_row" style="display: none" id= 'IMS_Plan_Dimension'>
+                                  <td>
+                                      <div class="checkbox">
+                                        <label><input type="checkbox" class="ingest_chkbox"></label>
+                                      </div>
+                                  </td>
+                                  <td>
+                                      
+                                        IMS Plan Dimension 
+                                      
+                                  </td>
+                                  
+                                  <td>
+                                      <select class="form-control source_name">
+                                        <option>Dcube_Plan_Dim</option>
+                                        <option>Dcube_Plan_Hier</option>
+                                        <option>Dcube_Plan_Status</option>
+                                     
+                                        
+                                      </select>
+                                  </td>
+                                  
+                                  
+                                  <td>
+                                      <button class="btn btn-info " data-toggle="modal" data-target="#plndim" >edit mapping</button>
+                                  </td>
+                                </tr>
                                 <tr class="each_row" style="display: none" id= 'Symphony_Rejection_Reason'>
                                   <td>
                                       <div class="checkbox">
@@ -205,6 +276,33 @@
                                   <td>
                                       
                                         Symphony Rejection Reason Dimension
+                                      
+                                  </td>
+                                  
+                                  <td>
+                                      <select class="form-control source_name">
+                                        <option>Dcube_Claim_RejRsn_Dim</option>
+                                        <option>Dcube_Claim_Dim</option>
+                                        <option>Dcube_Claims</option>
+                                        
+                                      </select>
+                                  </td>
+                                  
+                                  
+                                  <td>
+                                      <button class="btn btn-info " data-toggle="modal" data-target="#rrdim">edit mapping</button>
+                                  </td>
+                                  
+                                </tr>
+                                <tr class="each_row" style="display: none" id= 'IMS_Rejection_Reason'>
+                                  <td>
+                                      <div class="checkbox">
+                                        <label><input type="checkbox" class="ingest_chkbox"></label>
+                                      </div>
+                                  </td>
+                                  <td>
+                                      
+                                        IMS Rejection Reason Dimension
                                       
                                   </td>
                                   
@@ -251,8 +349,62 @@
                                   </td>
                                   
                                 </tr>
+                                <tr class="each_row" style="display: none" id='IMS_Prescriber_Dimension'>
+                                  <td>
+                                      <div class="checkbox">
+                                        <label><input type="checkbox" class="ingest_chkbox"></label>
+                                      </div>
+                                  </td>
+                                  <td>
+                                      
+                                        IMS Prescriber Dimension
+                                      
+                                  </td>
+                                  
+                                  <td>
+                                      <select class="form-control source_name">
+                                         <option>Dcube_Presc_Dim</option>
+                                        <option>Dcube_PrescSrc</option>
+                                        <option>Dcube_Presc</option>
+                                        
+                                      </select>
+                                  </td>
+                                  
+                                  
+                                  <td>
+                                      <button class="btn btn-info " data-toggle="modal" data-target="#prsdim">edit mapping</button>
+                                  </td>
+                                  
+                                </tr>
 
                                 <tr class="each_row" style="display: none" id='Symphony_Prescriber Alignment'>
+                                  <td>
+                                      <div class="checkbox">
+                                        <label><input type="checkbox" class="ingest_chkbox"></label>
+                                      </div>
+                                  </td>
+                                  <td>
+                                      
+                                        Prescriber Allignment 
+                                      
+                                  </td>
+                                  
+                                  <td>
+                                      <select class="form-control source_name">
+                                        <option>Dcube_Presc_Allign</option>
+                                        <option>Dcube_Presc_Dim</option>
+                                        <option>Dcube_PrescSrc</option>
+                                        
+                                      </select>
+                                  </td>
+                                  
+                                  
+                                  <td>
+                                      <button class="btn btn-info " data-toggle="modal" data-target="#allign">edit mapping</button>
+                                  </td>
+                                  
+                                </tr>
+                                <tr class="each_row" style="display: none" id='IMS_Prescriber Alignment'>
                                   <td>
                                       <div class="checkbox">
                                         <label><input type="checkbox" class="ingest_chkbox"></label>

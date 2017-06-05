@@ -8,7 +8,7 @@
       <div class="top-div">
           <div class="row widget-1">
               <div class="widget-icon"><img src="{{url()}}/assets/vendor/img/new_document_add.png"></div>
-              <h3 class="widget-title">Symphony Plan Dimension</h3>
+              <h3 class="widget-title">IMS Plan Dimension</h3>
               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                   <div class="panel panel-default" style="border-bottom: 4px solid #8bc34a;     padding: 20px;">
                       <div class="row">

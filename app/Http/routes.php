@@ -45,24 +45,44 @@ Route::any('/getSubTypes', 'CommonController@getSubTypes');
 Route::any('/getExtractor', 'CommonController@getExtractor');
 Route::any('/save_proj_into_session', 'CommonController@save_proj_into_session');
 
-Route::get('/claims',function(){
+Route::get('/Symphony_claims',function(){
 	return view('symphony_claims');
 });
+Route::get('/IMS_claims',function(){
+	return view('IMS_claims');
+});
 
-Route::get('/Product_Dimension',function(){
+Route::get('/Symphony_Product_Dimension',function(){
 	return view('Product_Dimension');
 });
 
-Route::get('/Payor_Plan_Data',function(){
+Route::get('/IMS_Product_Dimension',function(){
+	return view('Product_Dimension');
+});
+
+
+Route::get('/MMIT_Payor_Plan_Data',function(){
 	return view('mmit');
 });
 
-Route::get('/Plan_Dimension',function(){
+Route::get('/MMIT_Payor_Plan_to_Claims',function(){
+	return view('MMIT_Payor_Plan_Data_to_Claims');
+});
+
+
+Route::get('/Symphony_Plan_Dimension',function(){
 	return view('Plan_Dimension');
 });
 
-Route::get('/Rejection_Reason',function(){
+Route::get('/IMS_Plan_Dimension',function(){
+	return view('IMS_plan_dimension');
+});
+
+Route::get('/Symphony_Rejection_Reason',function(){
 	return view('Reject_Reason');
+});
+Route::get('/IMS_Rejection_Reason',function(){
+	return view('IMS_Reject_Reason');
 });
 
 Route::get('/Prescriber_Source',function(){

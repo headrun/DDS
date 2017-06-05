@@ -92,7 +92,7 @@ class AjaxCallTest extends Controller
   }
   public function dash()
   {
-    $q1 = DB::table('active_proj')->orderBy('active_down', 'desc')->get();    
+    $q1 = DB::table('active_proj')->orderBy('id', 'desc')->get();    
     $data = array('q1');
     //return $q1[0]->proj_name;
     return view('Dashboard.index', compact($data));
