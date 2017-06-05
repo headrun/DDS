@@ -45,10 +45,11 @@
                                 <div class="panel-heading">Saved KPI'S</div>
                                     <div class="panel-body">
                                       <div class="row" style="margin-bottom: 7px;">
+                                      <div class="col-md-1 "><label></label></div>
                                         <div class="col-md-3 "><label>VIEW</label></div>
                                         <div class="col-md-3 "><label>KPI</label></div>
                                         <div class="col-md-3 "><label>DIMENSION</label></div>
-                                        <div class="col-md-3"><label>Ready for Deployment</label>
+                                        <div class="col-md-2"><label>Ready for Deployment</label>
                                         </div>
                                       </div>
                                     <div class="data">
@@ -194,10 +195,12 @@ $(document).on('change', '.geo1', function()
 
               
               html_data += '<div class="row" style="margin-bottom: 7px;">'+
+                                    '<div class="col-md-1"><div class="checkbox"><input type="checkbox" style="margin : auto"/>'+
+                                    '</div></div>'+
                                 '<div class="col-md-3">'+view+'</div>'+
                                 '<div class="col-md-3">'+kpi+'</div>'+
                                 '<div class="col-md-3">'+dimen+'</div>'+
-                                '<div class="col-md-3">'+
+                                '<div class="col-md-2">'+
                                     '<center><i class="fa fa-check" aria-hidden="true"/></center>'+
                                 '</div>'+
                             '</div>';

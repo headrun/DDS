@@ -206,7 +206,7 @@
     $(document).ready(function() {
         //setTimeout(function(){
            table =  $('#mainTable').DataTable({
-          "aaSorting": [[ 0, "desc" ]]
+          "aaSorting": [[ 0, "desc" ]],
           "searching": false,
           "bPaginate": false,
            //"paging":   false,
