@@ -84,8 +84,8 @@ class CommonController extends Controller
 
 
     public function setup_new_proj(){
-        $fa = DB::table('active_proj')->where('fa', '!=', '')->distinct('fa')->lists('fa');
-        $ta = DB::table('active_proj')->where('ta', '!=', '')->distinct('ta')->lists('ta');
+        $fa = DB::table('ta_fa')->where('fa', '!=', '')->distinct('fa')->lists('fa');
+        $ta = DB::table('ta_fa')->where('ta', '!=', '')->distinct('ta')->lists('ta');
 
         $data1 = array('ta', 'fa');
         return view('setup_new_proj_new', compact($data1));
