@@ -34,7 +34,7 @@
         <i aria-hidden="true" class="fa fa-bars"></i> 
       </a>-->
       <a class="pull-left brand more-padding">
-        <img src="{{url()}}/DDS Logo-02.png" class="primarylogo" style="padding-bottom:   50px">
+        <img src="{{url()}}/DDS Logo-02.png" class="primarylogo" style="margin-top: -40px ; padding: 20px">
         
       </a>
       <div class="pull-left center-contetnt"></div>

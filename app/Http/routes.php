@@ -121,6 +121,18 @@ Route::get('/Prescriber_Dimension',function(){
 });
 
 
+Route::get('/Symphony_Patient_Dimension',function(){
+	return view('Patient_Dimension');
+});
+
+Route::get('/IMS_Patient_Dimension',function(){
+	return view('Patient_Dimension');
+});
+
+Route::get('/CLIENT_Territory_Alignment',function(){
+	return view('TerritoryAllignment');
+});
+
 Route::get('/struct','AjaxCallTest@struct');
 
 

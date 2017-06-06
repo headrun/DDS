@@ -216,7 +216,7 @@
 
 <div id="AggregatedRxData" style="display: none;">
   <div class="popover-heading">
-    <strong>Product Dimension</strong>
+    <strong>Aggregated Rx Data</strong>
   </div>
   <div class="popover-body">
     <table class="table table-responsive table-strip AggregatedRxData" border="1">
@@ -316,7 +316,7 @@
 
 <div id="PrescriberRxData" style="display: none;">
   <div class="popover-heading">
-    <strong>Product Dimension</strong>
+    <strong>Physician Rx Data</strong>
   </div>
   <div class="popover-body">
     <table class="table table-responsive table-strip PrescriberRxData" border="1">
@@ -717,7 +717,7 @@
 
 <div id="PayorPlanData" style="display: none;">
   <div class="popover-heading">
-    <strong>PayorPlanData</strong>
+    <strong>Payor Plan Data</strong>
   </div>
   <div class="popover-body">
     <table class="table table-responsive table-strip PayorPlanData" border="1">
@@ -841,7 +841,7 @@
 
 <div id="PayorPlantoClaims" style="display: none;">
   <div class="popover-heading">
-    <strong>PayorPlanData</strong>
+    <strong>Payor Plan Data to Claims</strong>
   </div>
   <div class="popover-body">
     <table class="table table-responsive table-strip PayorPlantoClaims" border="1">
@@ -1113,6 +1113,51 @@
         </tr>
       </tbody>
     </table>    
+  </div>
+</div>
+
+<div id="TerritoryAlignment" style="display: none;">
+  <div class="popover-heading">
+    <strong>Territory Alignment</strong>
+  </div>
+  <div class="popover-body">
+    <table class="table table-bordered table-hover table-striped" border="1">
+        <thead>
+          <tr>
+            <th>Field</th>
+            <th>DataType</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Rel_id</td>
+            <td>varchar</td>
+            <td>Rel id of the rep</td>
+          </tr>
+          <tr>
+            <td>Terr_id</td>
+            <td>varchar</td>
+            <td>Territory id</td>
+          </tr><tr>
+            <td>City</td>
+            <td>varchar</td>
+            <td>City of physician</td>
+          </tr><tr>
+            <td>State</td>
+            <td>varchar</td>
+            <td>State of physician</td>
+          </tr><tr>
+            <td>Zip</td>
+            <td>varchar</td>
+            <td>Zip of physician</td>
+          </tr><tr>
+            <td>Cluster_id</td>
+            <td>varchar</td>
+            <td>Cluster id</td>
+          </tr>
+        </tbody>
+      </table>    
   </div>
 </div>
 
@@ -1579,7 +1624,9 @@ $(document).on('change', '#group, #project_text, #ta, #fa', function()
 $(document).on('click','.text',function(){ 
  var id = $(this).text().trim(); 
 
-    if ( id === "Prescriber Rx Data" ) {
+    if ( id === "Territory Alignment" ) {
+      id = "TerritoryAlignment";
+    }else if ( id === "Physican Rx Data" ) {
       id = "PrescriberRxData";
     }else if ( id === "Aggregated Rx Data" ) {
       id = "AggregatedRxData";
@@ -1599,7 +1646,7 @@ $(document).on('click','.text',function(){
       id = "PatientDimension";
     }else if ( id === "Prescribder Alignment") {
       id = "PrescribderAlignment";
-    }else if ( id === "PrescriberDetailsDimension" ) {
+    }else if ( id === "Prescriber Details Dimension" ) {
       id = "PrescriberDetailsDimension";
     }
 

@@ -158,7 +158,7 @@
                                   
 
                                   <td>
-                                      <button class="btn btn-info " data-toggle="modal" data-target="#mmit_to_claims" >edit mapping</button>
+                                      <button class="btn btn-info " data-toggle="modal" data-target="#mmits" >edit mapping</button>
                                   </td>
                                 </tr>
                                 <tr class="each_row" style="display: none" id= 'Symphony_Product_Dimension'>
@@ -434,7 +434,9 @@
                                 
                               </tbody>
                             </table>
-                            <a href="{{url()}}/kpi_map_new" class= 'btn btn-primary pull-right mapping_selected_btn' disabled> Map Selected Data</a>
+                            <form action="{{url()}}/kpi_map_new">
+                            <button type="submit" class= 'btn btn-primary pull-right mapping_selected_btn' disabled> Map Selected Data</button>
+                            </form>
                           </div>
                           
                       </div>
