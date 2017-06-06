@@ -431,6 +431,196 @@
                                   </td>
                                   
                                 </tr>
+                                <tr class="each_row" style="display: none" id='IMS_Patient_Dimension'>
+                                  <td>
+                                      <div class="checkbox">
+                                        <label><input type="checkbox" class="ingest_chkbox"></label>
+                                      </div>
+                                  </td>
+                                  <td>
+                                      
+                                        IMS Patient Dimension
+                                      
+                                  </td>
+                                  
+                                  <td>
+                                      <select class="form-control source_name">
+                                        <option>Dcube_Patient_Dim</option>
+                                        <option>Dcube_Patient</option>
+                                        
+                                        
+                                      </select>
+                                  </td>
+                                  
+                                  
+                                  <td>
+                                      <button class="btn btn-info " data-toggle="modal" data-target="#allign">edit mapping</button>
+                                  </td>
+                                  
+                                </tr>
+                                <tr class="each_row" style="display: none" id='Symphony_Patient_Dimension'>
+                                  <td>
+                                      <div class="checkbox">
+                                        <label><input type="checkbox" class="ingest_chkbox"></label>
+                                      </div>
+                                  </td>
+                                  <td>
+                                      
+                                        Symphony Patient Dimension
+                                      
+                                  </td>
+                                  
+                                  <td>
+                                      <select class="form-control source_name">
+                                        <option>Dcube_Patient_Dim</option>
+                                        <option>Dcube_Patient</option>
+                                        
+                                        
+                                      </select>
+                                  </td>
+                                  
+                                  
+                                  <td>
+                                      <button class="btn btn-info " data-toggle="modal" data-target="#allign">edit mapping</button>
+                                  </td>
+                                  
+                                </tr>
+                                <tr class="each_row" style="display: none" id='Symphony_Physican_Rx_Data'>
+                                  <td>
+                                      <div class="checkbox">
+                                        <label><input type="checkbox" class="ingest_chkbox"></label>
+                                      </div>
+                                  </td>
+                                  <td>
+                                      
+                                        Symphony Physican Rx Data
+                                      
+                                  </td>
+                                  
+                                  <td>
+                                      <select class="form-control source_name">
+                                        <option>Dcube_Phys_Rx_Data</option>
+                                        <option>Dcube_Phys_Dim</option>
+                                        
+                                        
+                                      </select>
+                                  </td>
+                                  
+                                  
+                                  <td>
+                                      <button class="btn btn-info " data-toggle="modal" data-target="#allign">edit mapping</button>
+                                  </td>
+                                  
+                                </tr>
+                                <tr class="each_row" style="display: none" id='IMS_Physican_Rx_Data'>
+                                  <td>
+                                      <div class="checkbox">
+                                        <label><input type="checkbox" class="ingest_chkbox"></label>
+                                      </div>
+                                  </td>
+                                  <td>
+                                      
+                                        IMS Physican Rx Data
+                                      
+                                  </td>
+                                  
+                                  <td>
+                                      <select class="form-control source_name">
+                                        <option>Dcube_Phys_Rx_Data</option>
+                                        <option>Dcube_Phys_Dim</option>
+                                        
+                                        
+                                      </select>
+                                  </td>
+                                  
+                                  
+                                  <td>
+                                      <button class="btn btn-info " data-toggle="modal" data-target="#allign">edit mapping</button>
+                                  </td>
+                                  
+                                </tr>
+                                <tr class="each_row" style="display: none" id='CLIENT_Territory_Alignment'>
+                                  <td>
+                                      <div class="checkbox">
+                                        <label><input type="checkbox" class="ingest_chkbox"></label>
+                                      </div>
+                                  </td>
+                                  <td>
+                                      
+                                        Client Territory Alignment
+                                      
+                                  </td>
+                                  
+                                  <td>
+                                      <select class="form-control source_name">
+                                        <option>Dcube_Cli_Terr_Align</option>
+                                        <option>Dcube_Cli_Ter_Align_Dim</option>
+                                        
+                                        
+                                      </select>
+                                  </td>
+                                  
+                                  
+                                  <td>
+                                      <button class="btn btn-info " data-toggle="modal" data-target="#allign">edit mapping</button>
+                                  </td>
+                                  
+                                </tr>
+                                <tr class="each_row" style="display: none" id='Symphony_Aggregated_Rx_Data'>
+                                  <td>
+                                      <div class="checkbox">
+                                        <label><input type="checkbox" class="ingest_chkbox"></label>
+                                      </div>
+                                  </td>
+                                  <td>
+                                      
+                                        Symphony Aggregated Rx Data
+                                      
+                                  </td>
+                                  
+                                  <td>
+                                      <select class="form-control source_name">
+                                        <option>Dcube_Aggre_Rx_Data</option>
+                                        <option>Dcube_Aggre_Rx_Data_Dim</option>
+                                        
+                                        
+                                      </select>
+                                  </td>
+                                  
+                                  
+                                  <td>
+                                      <button class="btn btn-info " data-toggle="modal" data-target="#allign">edit mapping</button>
+                                  </td>
+                                  
+                                </tr>
+                                <tr class="each_row" style="display: none" id='IMS_Aggregated_Rx_Data'>
+                                  <td>
+                                      <div class="checkbox">
+                                        <label><input type="checkbox" class="ingest_chkbox"></label>
+                                      </div>
+                                  </td>
+                                  <td>
+                                      
+                                        IMS Aggregated Rx Data
+                                      
+                                  </td>
+                                  
+                                  <td>
+                                      <select class="form-control source_name">
+                                        <option>Dcube_Aggre_Rx_Data</option>
+                                        <option>Dcube_Aggre_Rx_Data_Dim</option>
+                                        
+                                        
+                                      </select>
+                                  </td>
+                                  
+                                  
+                                  <td>
+                                      <button class="btn btn-info " data-toggle="modal" data-target="#allign">edit mapping</button>
+                                  </td>
+                                  
+                                </tr>
+
                                 
                               </tbody>
                             </table>
