@@ -117,7 +117,7 @@
         <h4 class="modal-title">Dag List</h4>
       </div>
       <div class="modal-body">
-        <iframe src=" http://176.9.181.38:8080/admin/airflow/graph?dag_id=ABC_Diabetes_PreLaunch" style="width: 100%; height: 500px;"></iframe>
+        <iframe src="http://176.9.181.38:8080/admin/airflow/graph?dag_id=Diabetes_PreLaunch_Tracker" style="width: 100%; height: 500px;"></iframe>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
