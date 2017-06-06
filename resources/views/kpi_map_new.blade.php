@@ -34,8 +34,14 @@
                             @endforeach
                           </select>
                         </div>
-                        <div class = "col-md-7">
-                          <button class ='btn btn-warning  pull-right'>View KPI Library</button>
+                        <div class = "col-md-5">
+                          <form action="{{url()}}/kpilib">
+                          <button class ='btn btn-warning  pull-right' >View KPI Library</button>
+                          </form>
+                        </div>
+                        <div class = "col-md-2">
+                          <button class ='btn btn-info  pull-right' data-toggle="modal" data-target="#myModal" >View Workflow</button>
+                          
                         </div>
                       </div>
                       <br>
@@ -90,19 +96,107 @@
                               <button class ='btn btn-primary pull-right' id='save_btn'>Save</button>
                             </div>
                           </div>
+                          <div class ='row'>
+                            <div class="col-md-12">
+                              <button class ='btn btn-primary pull-left' data-toggle="modal" data-target="#addnewkpi" id='addkpi_btn'>Add New KPI</button>
+                            </div>
+                          </div>
                       </div>
                     </div>
                   </div>
                 </div>
 		      </div>
 	    </div>
-        <di
+      <div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg" style="width: 1230px;">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Dag List</h4>
+      </div>
+      <div class="modal-body">
+        <iframe src=" http://176.9.181.38:8080/admin/airflow/graph?dag_id=ABC_Diabetes_PreLaunch" style="width: 100%; height: 500px;"></iframe>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+    <div id="addnewkpi" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg" style="width: 630px;">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Add New KPI</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row" style="padding: 20px">
+          <div class="col-md-12">
+            <label>Select View:</label>
+            <select class="form-control pull-right new_kpi_view"  style="margin-top: -5px; width: 460px">
+                            <option></option>
+                            @foreach($view as $val)
+                            <option value="{{$val->view}}">{{$val->view}}</option>
+                            @endforeach
+                          </select>
+          </div>
+          
+        </div>
+        <div class="row" style="padding: 20px">
+          <div class="col-md-12">
+            <label>KPI Name:</label>
+            <input type="text" class="form-control pull-right new_kpi_name" style="; width: 460px">
+            
+          </div>
+          
+        </div>
+      
+      <div class="row" style="padding: 20px">
+          <div class="col-md-12">
+            <label>Dimension:</label>
+            <input type="text" class="form-control pull-right new_kpi_dim" style=" width: 460px">
+            
+          </div>
+          
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default new_kpi_add_btn" data-dismiss="modal">Add</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+
+  </div>
+</div>
   </div>
  </div>
     
 @stop
 @section('BaseJSLib')
 <script type="text/javascript">
+$(document).on('click', '.new_kpi_add_btn', function()
+{
+    var view = $('.new_kpi_view').val();
+    var kpi = $('.new_kpi_name').val();
+    var dimen = $('.new_kpi_dim').val();
+    html_data = '<div class="row" style="margin-bottom: 7px;">'+
+                                    '<div class="col-md-1"><div class="checkbox"><input type="checkbox" style="margin : auto"/>'+
+                                    '</div></div>'+
+                                '<div class="col-md-3">'+view+'</div>'+
+                                '<div class="col-md-3">'+kpi+'</div>'+
+                                '<div class="col-md-3">'+dimen+'</div>'+
+                                '<div class="col-md-2">'+
+                                    '<center><img src="{{url()}}/que1.png" class="img-responsive"></center>'+
+                                '</div>'+
+                            '</div>';    
+    $('#addkpi').find('.data').append(html_data);
+});
 $(document).on('change', '.time1', function()
  {
       var widget_array1 =  [];
@@ -173,7 +267,7 @@ $(document).on('change', '.geo1', function()
               {
                 if(key===$(this).closest('.row').find('.kpi').text())
                 {
-                  obj[key]+=($(this).val())+",";
+                  obj[key]+=($(this).val())+"<br>";
                 }
               }
             }

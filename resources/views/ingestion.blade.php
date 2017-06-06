@@ -153,6 +153,14 @@
                         </div>  
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                          <label for="email">Table Name:</label>
+                          <input type="text" class="form-control">
+                        </div>  
+                    </div>
+                </div>
 
                 <!-- second row-->
 
