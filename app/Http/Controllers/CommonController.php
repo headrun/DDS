@@ -47,7 +47,8 @@ class CommonController extends Controller
         return Response::json(array('status'=> 'success', 'data'=> $data));
     }
 
-     public function ingestion(){
+     public function ingestion()
+     {
         $inputs = Input::all();
         $values = array();
         $proj_name = $ta = $fa= '';
@@ -60,20 +61,36 @@ class CommonController extends Controller
         if (isset($inputs['fa']) && !empty($inputs['fa']))
             $fa = $inputs['fa'];
         $final_array = array();
-        foreach ($values as $key => $value) {
+        foreach ($values as $key => $value) 
+        {
             $data = Ingestion::where('data', '=', $value)->groupBy('source')->get();
             $arr = array('data'=> $value, 'sources'=> $data);
             array_push($final_array, $arr);
         }
-        DB::table('active_proj')->insert(
-            ['proj_name' => $proj_name, 'ta' => $ta ,'fa' => $fa, 'date' => date('Y-m-d')]
-            );
-        $data1 = DB::table('active_proj')->get();
-        //$data = array('final_array');
-        $final_array1 = array();
-        foreach ($data1 as $value) {
-            array_push($final_array1,$value->proj_name);
+        if(!(DB::table('active_proj')->where('proj_name',$proj_name)))
+        {
+            DB::table('active_proj')->insert(
+            ['proj_name' => $proj_name, 'ta' => $ta ,'fa' => $fa, 'date' => date('Y-m-d')]);
+            $data1 = DB::table('active_proj')->get();
+            //$data = array('final_array');
+            $final_array1 = array();
+            foreach ($data1 as $value) {
+                array_push($final_array1,$value->proj_name);
+            }
         }
+        else 
+        {
+            DB::table('active_proj')->where('proj_name' , $proj_name)->delete();
+            DB::table('active_proj')->insert(
+            ['proj_name' => $proj_name, 'ta' => $ta ,'fa' => $fa, 'date' => date('Y-m-d')]);
+            $data1 = DB::table('active_proj')->get();
+            //$data = array('final_array');
+            $final_array1 = array();
+            foreach ($data1 as $value) {
+                array_push($final_array1,$value->proj_name);
+            }
+        }
+            
         //return $final_array1;
         $data1 = array('final_array1', 'final_array');
         return view('ingestion', compact($data1));
