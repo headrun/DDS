@@ -33,13 +33,8 @@
                                 	<td>{{$val->Functional_Area}}</td>
                                 	<td>{{$val->KPI}}</td>
                                 	<td>{{$val->kpi_desc}}</td>
-                                	<td>
-                                	<button class="btn btn-info" data-toggle="collapse" data-target="#demo{{$key}}">Click to show Calculations
-                                	</button>
-
-										<div id="demo{{$key}}" class="collapse">
-										{{$val->Calculation}}
-										</div>
+                                	<td>{{$val->Calculation}}</td>
+										
                                 	<td>{{$val->Dimension}}</td>
                                 	</tr>
                                 @endforeach

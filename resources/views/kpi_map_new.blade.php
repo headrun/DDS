@@ -52,9 +52,9 @@
                                     <div class="panel-body">
                                       <div class="row" style="margin-bottom: 7px;">
                                       <div class="col-md-1 "><label></label></div>
-                                        <div class="col-md-3 "><label>VIEW</label></div>
+                                        <div class="col-md-3 "><label>View</label></div>
                                         <div class="col-md-3 "><label>KPI</label></div>
-                                        <div class="col-md-3 "><label>DIMENSION</label></div>
+                                        <div class="col-md-3 "><label>Dimension</label></div>
                                         <div class="col-md-2"><label>Ready for Deployment</label>
                                         </div>
                                       </div>
@@ -416,7 +416,11 @@ $(document).on('change', '.geo1', function()
                    html +="<div class='col-md-3' value='"+response[i].kpi_desc+"'>"+response[i].kpi_desc+"";
                    
                    html +="</div>";
-                   html +="<div class='col-md-2' value='"+response[i].Calculation+"'>"+response[i].Calculation+"";
+                   html +="<div class='col-md-2'>";
+                   html+= '<button class="btn btn-link" data-toggle="collapse" data-target="#demo'+i+'">Show Calculations</button><div id="demo'+i+'" class="collapse">'+response[i].Calculation+'</div>'
+                    
+                    
+                                  
                    
                    html +="</div>";
                    html += "<div class='col-md-3 dime' value='"+response[i].Dimensions+"'>"+response[i].Dimension+"";

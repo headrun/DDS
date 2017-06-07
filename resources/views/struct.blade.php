@@ -627,6 +627,7 @@
                             <form action="{{url()}}/kpi_map_new">
                             <button type="submit" class= 'btn btn-primary pull-right mapping_selected_btn' disabled> Map Selected Data</button>
                             </form>
+                            <button type="submit" class= 'btn btn-info pull-left kpi_library' >View KPI Library</button>
                           </div>
                           
                       </div>
