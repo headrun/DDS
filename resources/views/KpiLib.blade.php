@@ -25,13 +25,21 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($view as $val)
+                                
+                                @foreach($view as $key=>$val)
+                                
                                 	<tr>
                                 	<td>{{$val->View}}</td>
                                 	<td>{{$val->Functional_Area}}</td>
                                 	<td>{{$val->KPI}}</td>
                                 	<td>{{$val->kpi_desc}}</td>
-                                	<td>{{$val->Calculation}}</td>
+                                	<td>
+                                	<button class="btn btn-info" data-toggle="collapse" data-target="#demo{{$key}}">Click to show Calculations
+                                	</button>
+
+										<div id="demo{{$key}}" class="collapse">
+										{{$val->Calculation}}
+										</div>
                                 	<td>{{$val->Dimension}}</td>
                                 	</tr>
                                 @endforeach
@@ -45,3 +53,15 @@
                          </div>
                         </div>
                        </div>
+@stop
+@section('BaseJSLib')
+<script src="{{url()}}/assets/vendor/js/jquery.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$(document).on('click','.cal_btn',function(){
+		console.log($(this).val());
+		$(this).closest('.cal').html($(this).val());
+	});
+</script>
+@stop
+

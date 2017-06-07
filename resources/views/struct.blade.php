@@ -1,6 +1,6 @@
 @extends('Template.HtmlSkeleton')
 @section('Title')
-<title>Dcube | Injestion</title>
+<title>DCube | Injestion</title>
 @stop
 @section('BaseCSSLib')
 <link rel="stylesheet" href="{{url()}}/assets/vendor/css/breadcrumb.css">
@@ -23,9 +23,9 @@
          </div>
           <div class="row widget-1" style="padding-top: 30px">
           <div class="row widget-1">
-              <div class="widget-icon"><img src="http://176.9.181.46/Dcube/assets/vendor/img/new_document_add.png"></div>
+              <div class="widget-icon"><img src="{{url()}}/assets/vendor/img/new_document_add.png"></div>
               <h3 class="widget-title">
-                Dcube Structure Mapping
+                DCube Structure Mapping
               </h3>
               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                   <div class="panel panel-default" style="border-bottom: 4px solid #8bc34a;     padding: 20px;">
@@ -36,7 +36,7 @@
                                 <tr><center>
                                   <th></th>
                                   <th>Source Table</th>
-                                  <th>Dcube Table</th>
+                                  <th>DCube Table</th>
                                   <th>Mapping</th>
                                   </center>
                                 </tr>
@@ -52,9 +52,9 @@
                                   <td>Symphony_Claims</td>
                                   <td>
                                       <select class="form-control source_name">
-                                        <option>Dcube_Claims
-                                        <option>Dcube_Claim_RejRsn_Dim</option>
-                                        <option>Dcube_Claim_Dim</option>
+                                        <option>DCube_Claims
+                                        <option>DCube_Claim_RejRsn_Dim</option>
+                                        <option>DCube_Claim_Dim</option>
                                       </select>
                                   </td>
                                   <td>
@@ -70,9 +70,9 @@
                                   <td>IMS_Claims</td>
                                   <td>
                                       <select class="form-control source_name">
-                                        <option>Dcube_Claims
-                                        <option>Dcube_Claim_RejRsn_Dim</option>
-                                        <option>Dcube_Claim_Dim</option>
+                                        <option>DCube_Claims
+                                        <option>DCube_Claim_RejRsn_Dim</option>
+                                        <option>DCube_Claim_Dim</option>
                                       </select>
                                   </td>
                                   <td>
@@ -93,9 +93,9 @@
                                   
                                   <td>
                                       <select class="form-control source_name">
-                                        <option>Dcube_PrescSrc</option>
-                                        <option>Dcube_Presc_Dim</option>
-                                        <option>Dcube_Presc</option>
+                                        <option>DCube_PrescSrc</option>
+                                        <option>DCube_Presc_Dim</option>
+                                        <option>DCube_Presc</option>
                                      
                                         
                                       </select>
@@ -121,9 +121,9 @@
                                   
                                   <td>
                                       <select class="form-control source_name">
-                                        <option>Dcube_MMIT</option>
-                                        <option>Dcube_MMIT_Claims</option>
-                                        <option>Dcube_MMIT_Dim</option>
+                                        <option>DCube_MMIT</option>
+                                        <option>DCube_MMIT_Claims</option>
+                                        <option>DCube_MMIT_Dim</option>
                                      
                                         
                                       </select>
@@ -148,9 +148,9 @@
                                   
                                   <td>
                                       <select class="form-control source_name">
-                                        <option>Dcube_MMIT_Claims</option>
-                                        <option>Dcube_MMIT</option>
-                                        <option>Dcube_MMIT_Claims</option>
+                                        <option>DCube_MMIT_Claims</option>
+                                        <option>DCube_MMIT</option>
+                                        <option>DCube_MMIT_Claims</option>
                                      
                                         
                                       </select>
@@ -175,9 +175,9 @@
                                   
                                   <td>
                                       <select class="form-control source_name">
-                                        <option>Dcube_Product_Dim</option>
-                                        <option>Dcube_Prod </option>
-                                        <option>Dcube_Prod_Branded</option>
+                                        <option>DCube_Product_Dim</option>
+                                        <option>DCube_Prod </option>
+                                        <option>DCube_Prod_Branded</option>
                                      
                                         
                                       </select>
@@ -201,9 +201,9 @@
                                   
                                   <td>
                                       <select class="form-control source_name">
-                                        <option>Dcube_Product_Dim</option>
-                                        <option>Dcube_Prod </option>
-                                        <option>Dcube_Prod_Branded</option>
+                                        <option>DCube_Product_Dim</option>
+                                        <option>DCube_Prod </option>
+                                        <option>DCube_Prod_Branded</option>
                                      
                                         
                                       </select>
@@ -227,9 +227,9 @@
                                   
                                   <td>
                                       <select class="form-control source_name">
-                                        <option>Dcube_Plan_Dim</option>
-                                        <option>Dcube_Plan_Hier</option>
-                                        <option>Dcube_Plan_Status</option>
+                                        <option>DCube_Plan_Dim</option>
+                                        <option>DCube_Plan_Hier</option>
+                                        <option>DCube_Plan_Status</option>
                                      
                                         
                                       </select>
@@ -254,9 +254,9 @@
                                   
                                   <td>
                                       <select class="form-control source_name">
-                                        <option>Dcube_Plan_Dim</option>
-                                        <option>Dcube_Plan_Hier</option>
-                                        <option>Dcube_Plan_Status</option>
+                                        <option>DCube_Plan_Dim</option>
+                                        <option>DCube_Plan_Hier</option>
+                                        <option>DCube_Plan_Status</option>
                                      
                                         
                                       </select>
@@ -281,9 +281,9 @@
                                   
                                   <td>
                                       <select class="form-control source_name">
-                                        <option>Dcube_Claim_RejRsn_Dim</option>
-                                        <option>Dcube_Claim_Dim</option>
-                                        <option>Dcube_Claims</option>
+                                        <option>DCube_Claim_RejRsn_Dim</option>
+                                        <option>DCube_Claim_Dim</option>
+                                        <option>DCube_Claims</option>
                                         
                                       </select>
                                   </td>
@@ -308,9 +308,9 @@
                                   
                                   <td>
                                       <select class="form-control source_name">
-                                        <option>Dcube_Claim_RejRsn_Dim</option>
-                                        <option>Dcube_Claim_Dim</option>
-                                        <option>Dcube_Claims</option>
+                                        <option>DCube_Claim_RejRsn_Dim</option>
+                                        <option>DCube_Claim_Dim</option>
+                                        <option>DCube_Claims</option>
                                         
                                       </select>
                                   </td>
@@ -336,9 +336,9 @@
                                   
                                   <td>
                                       <select class="form-control source_name">
-                                         <option>Dcube_Presc_Dim</option>
-                                        <option>Dcube_PrescSrc</option>
-                                        <option>Dcube_Presc</option>
+                                         <option>DCube_Presc_Dim</option>
+                                        <option>DCube_PrescSrc</option>
+                                        <option>DCube_Presc</option>
                                         
                                       </select>
                                   </td>
@@ -363,9 +363,9 @@
                                   
                                   <td>
                                       <select class="form-control source_name">
-                                         <option>Dcube_Presc_Dim</option>
-                                        <option>Dcube_PrescSrc</option>
-                                        <option>Dcube_Presc</option>
+                                         <option>DCube_Presc_Dim</option>
+                                        <option>DCube_PrescSrc</option>
+                                        <option>DCube_Presc</option>
                                         
                                       </select>
                                   </td>
@@ -391,9 +391,9 @@
                                   
                                   <td>
                                       <select class="form-control source_name">
-                                        <option>Dcube_Presc_Allign</option>
-                                        <option>Dcube_Presc_Dim</option>
-                                        <option>Dcube_PrescSrc</option>
+                                        <option>DCube_Presc_Allign</option>
+                                        <option>DCube_Presc_Dim</option>
+                                        <option>DCube_PrescSrc</option>
                                         
                                       </select>
                                   </td>
@@ -418,9 +418,9 @@
                                   
                                   <td>
                                       <select class="form-control source_name">
-                                        <option>Dcube_Presc_Allign</option>
-                                        <option>Dcube_Presc_Dim</option>
-                                        <option>Dcube_PrescSrc</option>
+                                        <option>DCube_Presc_Allign</option>
+                                        <option>DCube_Presc_Dim</option>
+                                        <option>DCube_PrescSrc</option>
                                         
                                       </select>
                                   </td>
@@ -445,8 +445,8 @@
                                   
                                   <td>
                                       <select class="form-control source_name">
-                                        <option>Dcube_Patient_Dim</option>
-                                        <option>Dcube_Patient</option>
+                                        <option>DCube_Patient_Dim</option>
+                                        <option>DCube_Patient</option>
                                         
                                         
                                       </select>
@@ -454,7 +454,7 @@
                                   
                                   
                                   <td>
-                                      <button class="btn btn-info " data-toggle="modal" data-target="#allign">edit mapping</button>
+                                      <button class="btn btn-info " data-toggle="modal" data-target="#ptndim">edit mapping</button>
                                   </td>
                                   
                                 </tr>
@@ -472,8 +472,8 @@
                                   
                                   <td>
                                       <select class="form-control source_name">
-                                        <option>Dcube_Patient_Dim</option>
-                                        <option>Dcube_Patient</option>
+                                        <option>DCube_Patient_Dim</option>
+                                        <option>DCube_Patient</option>
                                         
                                         
                                       </select>
@@ -481,7 +481,7 @@
                                   
                                   
                                   <td>
-                                      <button class="btn btn-info " data-toggle="modal" data-target="#allign">edit mapping</button>
+                                      <button class="btn btn-info " data-toggle="modal" data-target="#ptndim">edit mapping</button>
                                   </td>
                                   
                                 </tr>
@@ -499,8 +499,8 @@
                                   
                                   <td>
                                       <select class="form-control source_name">
-                                        <option>Dcube_Phys_Rx_Data</option>
-                                        <option>Dcube_Phys_Dim</option>
+                                        <option>DCube_Phys_Rx_Data</option>
+                                        <option>DCube_Phys_Dim</option>
                                         
                                         
                                       </select>
@@ -508,7 +508,7 @@
                                   
                                   
                                   <td>
-                                      <button class="btn btn-info " data-toggle="modal" data-target="#allign">edit mapping</button>
+                                      <button class="btn btn-info " data-toggle="modal" data-target="#prrxdt">edit mapping</button>
                                   </td>
                                   
                                 </tr>
@@ -526,8 +526,8 @@
                                   
                                   <td>
                                       <select class="form-control source_name">
-                                        <option>Dcube_Phys_Rx_Data</option>
-                                        <option>Dcube_Phys_Dim</option>
+                                        <option>DCube_Phys_Rx_Data</option>
+                                        <option>DCube_Phys_Dim</option>
                                         
                                         
                                       </select>
@@ -535,7 +535,7 @@
                                   
                                   
                                   <td>
-                                      <button class="btn btn-info " data-toggle="modal" data-target="#allign">edit mapping</button>
+                                      <button class="btn btn-info " data-toggle="modal" data-target="#prrxdt">edit mapping</button>
                                   </td>
                                   
                                 </tr>
@@ -547,15 +547,15 @@
                                   </td>
                                   <td>
                                       
-                                        Client Territory Alignment
+                                        Territory Alignment
                                       
                                   </td>
                                   
                                   <td>
                                       <select class="form-control source_name">
-                                        <option>Dcube_Cli_Terr_Align</option>
-                                        <option>Dcube_Cli_Ter_Align_Dim</option>
-                                        
+                                        <option>DCube_Terr_Align</option>
+                                        <option>DCube_Terr_Zip</option>
+                                        <option>DCube_Terr_City</option>
                                         
                                       </select>
                                   </td>
@@ -580,8 +580,8 @@
                                   
                                   <td>
                                       <select class="form-control source_name">
-                                        <option>Dcube_Aggre_Rx_Data</option>
-                                        <option>Dcube_Aggre_Rx_Data_Dim</option>
+                                        <option>DCube_Aggre_Rx_Data</option>
+                                        <option>DCube_Aggre_Rx_Data_Dim</option>
                                         
                                         
                                       </select>
@@ -589,7 +589,7 @@
                                   
                                   
                                   <td>
-                                      <button class="btn btn-info " data-toggle="modal" data-target="#allign">edit mapping</button>
+                                      <button class="btn btn-info " data-toggle="modal" data-target="#agrxdt">edit mapping</button>
                                   </td>
                                   
                                 </tr>
@@ -607,8 +607,8 @@
                                   
                                   <td>
                                       <select class="form-control source_name">
-                                        <option>Dcube_Aggre_Rx_Data</option>
-                                        <option>Dcube_Aggre_Rx_Data_Dim</option>
+                                        <option>DCube_Aggre_Rx_Data</option>
+                                        <option>DCube_Aggre_Rx_Data_Dim</option>
                                         
                                         
                                       </select>
@@ -616,7 +616,7 @@
                                   
                                   
                                   <td>
-                                      <button class="btn btn-info " data-toggle="modal" data-target="#allign">edit mapping</button>
+                                      <button class="btn btn-info " data-toggle="modal" data-target="#agrxdt">edit mapping</button>
                                   </td>
                                   
                                 </tr>
@@ -635,21 +635,7 @@
           </div>
       </div>
   </div>
-  <div id="mmit_to_claims" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Modal Header</h4>
-        </div>
-        <div class="modal-body" style="padding: 10px 50px">
-          <h1 class="btn">Nothing to display</h1>
-        </div>
-      </div>
-    </div>
-  </div>
+  
 <!-- Modal -->
   <div id="prodim" class="modal fade" role="dialog">
     <div class="modal-dialog">
@@ -667,14 +653,14 @@
                 <thead>
                   <tr>
                     <th>Source Column</th>
-                    <th>Dcube Column</th>
+                    <th>DCube Column</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td>drug_id</td>
                     <td>
-                      <select class="form-control source_name"><span>Dcube Column</span>
+                      <select class="form-control source_name"><span>DCube Column</span>
                        <option selected>drug_id</option>
                        <option>ndc_11_code</option>
                        <option>drug_name</option>
@@ -686,11 +672,11 @@
                        
                        <option>Ignore Mapping</option>
                        <option>generic_name</option>
-                       <option>strength_desc</option>
+                       <option>strength_description</option>
                        <option>dosage_form_desc</option>
-                       <option>pckg_size_qty</option>
+                       <option>package_size</option>
                        <option>pckg_desc</option>
-                       <option>drug_mfg_name</option>
+                       <option>manufacturer</option>
                        <option>pckg_launch_date</option>
                        <option>Ignore Mapping</option>
                      </select>
@@ -700,7 +686,7 @@
                   <tr>
                     <td>ndc_11_cde</td>
                     <td>
-                      <select class="form-control source_name"><span>Dcube Column</span>
+                      <select class="form-control source_name"><span>DCube Column</span>
                        <option>drug_id</option>
                        <option selected>ndc_11_code</option>
                        <option>drug_name</option>
@@ -712,11 +698,11 @@
                        
                        <option>Ignore Mapping</option>
                        <option>generic_name</option>
-                       <option>strength_desc</option>
+                       <option>strength_description</option>
                        <option>dosage_form_desc</option>
-                       <option>pckg_size_qty</option>
+                       <option>package_size</option>
                        <option>pckg_desc</option>
-                       <option>drug_mfg_name</option>
+                       <option>manufacturer</option>
                        <option>pckg_launch_date</option>
                        <option>Ignore Mapping</option>
                      </select>
@@ -726,7 +712,7 @@
                   <tr>
                     <td>drug_nam</td>
                     <td>
-                      <select class="form-control source_name"><span>Dcube Column</span>
+                      <select class="form-control source_name"><span>DCube Column</span>
                        <option>drug_id</option>
                        <option>ndc_11_code</option>
                        <option selected>drug_name</option>
@@ -738,11 +724,11 @@
                        
                        <option>Ignore Mapping</option>
                        <option>generic_name</option>
-                       <option>strength_desc</option>
+                       <option>strength_description</option>
                        <option>dosage_form_desc</option>
-                       <option>pckg_size_qty</option>
+                       <option>package_size</option>
                        <option>pckg_desc</option>
-                       <option>drug_mfg_name</option>
+                       <option>manufacturer</option>
                        <option>pckg_launch_date</option>
                        <option>Ignore Mapping</option>
                      </select>
@@ -752,7 +738,7 @@
                   <tr>
                     <td>brnd_gnrc_cde</td>
                     <td>
-                      <select class="form-control source_name"><span>Dcube Column</span>
+                      <select class="form-control source_name"><span>DCube Column</span>
                        <option>drug_id</option>
                        <option>ndc_11_code</option>
                        <option>drug_name</option>
@@ -764,11 +750,11 @@
                        
                        <option>Ignore Mapping</option>
                        <option>generic_name</option>
-                       <option>strength_desc</option>
+                       <option>strength_description</option>
                        <option>dosage_form_desc</option>
-                       <option>pckg_size_qty</option>
+                       <option>package_size</option>
                        <option>pckg_desc</option>
-                       <option>drug_mfg_name</option>
+                       <option>manufacturer</option>
                        <option>pckg_launch_date</option>
                        <option>Ignore Mapping</option>
                      </select>
@@ -778,7 +764,7 @@
                   <tr>
                     <td>usc_cde</td>
                     <td>
-                      <select class="form-control source_name"><span>Dcube Column</span>
+                      <select class="form-control source_name"><span>DCube Column</span>
                        <option>drug_id</option>
                        <option>ndc_11_code</option>
                        <option>drug_name</option>
@@ -790,11 +776,11 @@
                        
                        <option>Ignore Mapping</option>
                        <option>generic_name</option>
-                       <option>strength_desc</option>
+                       <option>strength_description</option>
                        <option>dosage_form_desc</option>
-                       <option>pckg_size_qty</option>
+                       <option>package_size</option>
                        <option>pckg_desc</option>
-                       <option>drug_mfg_name</option>
+                       <option>manufacturer</option>
                        <option>pckg_launch_date</option>
                        <option>Ignore Mapping</option>
                      </select>
@@ -804,7 +790,7 @@
                   <tr>
                     <td>usc_nam</td>
                     <td>
-                      <select class="form-control source_name"><span>Dcube Column</span>
+                      <select class="form-control source_name"><span>DCube Column</span>
                        <option>drug_id</option>
                        <option>ndc_11_code</option>
                        <option>drug_name</option>
@@ -816,12 +802,12 @@
                        
                        <option>Ignore Mapping</option>
                        <option>generic_name</option>
-                       <option>strength_desc</option>
+                       <option>strength_description</option>
                        <option>dosage_form_desc</option>
-                       <option>pckg_size_qty</option>
+                       <option>package_size</option>
                        <option>Ignore Mapping</option>
                        <option>pckg_desc</option>
-                       <option>drug_mfg_name</option>
+                       <option>manufacturer</option>
                        <option>pckg_launch_date</option>
                      </select>
 
@@ -830,7 +816,7 @@
                   <tr>
                     <td>gnrc_drug_nam</td>
                     <td>
-                      <select class="form-control source_name"><span>Dcube Column</span>
+                      <select class="form-control source_name"><span>DCube Column</span>
                        <option>drug_id</option>
                        <option>ndc_11_code</option>
                        <option>drug_name</option>
@@ -842,11 +828,11 @@
                        
                        <option>Ignore Mapping</option>
                        <option selected>generic_name</option>
-                       <option>strength_desc</option>
+                       <option>strength_description</option>
                        <option>dosage_form_desc</option>
-                       <option>pckg_size_qty</option>
+                       <option>package_size</option>
                        <option>pckg_desc</option>
-                       <option>drug_mfg_name</option>
+                       <option>manufacturer</option>
                        <option>Ignore Mapping</option>
                        <option>pckg_launch_date</option>
                      </select>
@@ -856,7 +842,7 @@
                   <tr>
                     <td>strgh_desc</td>
                     <td>
-                      <select class="form-control source_name"><span>Dcube Column</span>
+                      <select class="form-control source_name"><span>DCube Column</span>
                        <option>drug_id</option>
                        <option>ndc_11_code</option>
                        <option>drug_name</option>
@@ -868,11 +854,11 @@
                        
                        <option>Ignore Mapping</option>
                        <option>generic_name</option>
-                       <option selected>strength_desc</option>
+                       <option selected>strength_description</option>
                        <option>dosage_form_desc</option>
-                       <option>pckg_size_qty</option>
+                       <option>package_size</option>
                        <option>pckg_desc</option>
-                       <option>drug_mfg_name</option>
+                       <option>manufacturer</option>
                        <option>Ignore Mapping</option>
                        <option>pckg_launch_date</option>
                      </select>
@@ -882,7 +868,7 @@
                   <tr>
                     <td>dsg_form_desc</td>
                     <td>
-                      <select class="form-control source_name"><span>Dcube Column</span>
+                      <select class="form-control source_name"><span>DCube Column</span>
                        <option>drug_id</option>
                        <option>ndc_11_code</option>
                        <option>drug_name</option>
@@ -894,12 +880,12 @@
                        
                        <option>Ignore Mapping</option>
                        <option>generic_name</option>
-                       <option>strength_desc</option>
+                       <option>strength_description</option>
                        <option selected>dosage_form_desc</option>
-                       <option>pckg_size_qty</option>
+                       <option>package_size</option>
                        <option>pckg_desc</option>
                        <option>Ignore Mapping</option>
-                       <option>drug_mfg_name</option>
+                       <option>manufacturer</option>
                        <option>pckg_launch_date</option>
                      </select>
 
@@ -908,7 +894,7 @@
                   <tr>
                     <td>pkg_sz_qty</td>
                     <td>
-                      <select class="form-control source_name"><span>Dcube Column</span>
+                      <select class="form-control source_name"><span>DCube Column</span>
                        <option>drug_id</option>
                        <option>ndc_11_code</option>
                        <option>drug_name</option>
@@ -920,12 +906,12 @@
                        
                        <option>Ignore Mapping</option>
                        <option>generic_name</option>
-                       <option>strength_desc</option>
+                       <option>strength_description</option>
                        <option>dosage_form_desc</option>
                        <option>Ignore Mapping</option>
-                       <option selected>pckg_size_qty</option>
+                       <option selected>package_size</option>
                        <option>pckg_desc</option>
-                       <option>drug_mfg_name</option>
+                       <option>manufacturer</option>
                        <option>pckg_launch_date</option>
                      </select>
 
@@ -934,7 +920,7 @@
                   <tr>
                     <td>pkg_desc</td>
                     <td>
-                      <select class="form-control source_name"><span>Dcube Column</span>
+                      <select class="form-control source_name"><span>DCube Column</span>
                        <option>drug_id</option>
                        <option>ndc_11_code</option>
                        <option>drug_name</option>
@@ -946,11 +932,11 @@
                        
                        <option>Ignore Mapping</option>
                        <option>generic_name</option>
-                       <option>strength_desc</option>
+                       <option>strength_description</option>
                        <option>dosage_form_desc</option>
-                       <option>pckg_size_qty</option>
+                       <option>package_size</option>
                        <option selected>pckg_desc</option>
-                       <option>drug_mfg_name</option>
+                       <option>manufacturer</option>
                        <option>pckg_launch_date</option>
                        <option>Ignore Mapping</option>
                      </select>
@@ -960,7 +946,7 @@
                   <tr>
                     <td>drug_mfg_nam</td>
                     <td>
-                      <select class="form-control source_name"><span>Dcube Column</span>
+                      <select class="form-control source_name"><span>DCube Column</span>
                        <option>drug_id</option>
                        <option>ndc_11_code</option>
                        <option>drug_name</option>
@@ -972,11 +958,11 @@
                        
                        <option>Ignore Mapping</option>
                        <option>generic_name</option>
-                       <option>strength_desc</option>
+                       <option>strength_description</option>
                        <option>dosage_form_desc</option>
-                       <option>pckg_size_qty</option>
+                       <option>package_size</option>
                        <option>pckg_desc</option>
-                       <option selected>drug_mfg_name</option>
+                       <option selected>manufacturer</option>
                        <option>Ignore Mapping</option>
                        <option>pckg_launch_date</option>
                      </select>
@@ -986,7 +972,7 @@
                   <tr>
                     <td>pkg_lanch_dte</td>
                     <td>
-                      <select class="form-control source_name"><span>Dcube Column</span>
+                      <select class="form-control source_name"><span>DCube Column</span>
                        <option>drug_id</option>
                        <option>ndc_11_code</option>
                        <option>drug_name</option>
@@ -998,12 +984,12 @@
                        
                        <option>Ignore Mapping</option>
                        <option>generic_name</option>
-                       <option>strength_desc</option>
+                       <option>strength_description</option>
                        <option>dosage_form_desc</option>
-                       <option>pckg_size_qty</option>
+                       <option>package_size</option>
                        <option>Ignore Mapping</option>
                        <option>pckg_desc</option>
-                       <option>drug_mfg_name</option>
+                       <option>manufacturer</option>
                        <option selected>pckg_launch_date</option>
                      </select>
 
@@ -1038,7 +1024,7 @@
                 <thead>
                   <tr>
                     <th>Source Column</th>
-                    <th>Dcube Column</th>
+                    <th>DCube Column</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -1057,7 +1043,7 @@
                            <option>pbm</option>
                            <option>pbm_relationship</option>
                            <option>channel</option>
-                           <option>plan_type</option>
+                           <option>plan_types</option>
                            <option>state</option>
                            <option>lives</option>
                            <option>drug</option>
@@ -1067,10 +1053,8 @@
                            <option>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option>Notes</option>
-                           <option>Map to Self</option>
-                           
-                       <option>Ignore Mapping</option>
-                       <option>Ignore Mapping</option>
+                           <option>Map to Self</option>                           
+                           <option>Ignore Mapping</option>
                           </select>
                     </td>
                   </tr>
@@ -1090,7 +1074,7 @@
                            <option>pbm</option>
                            <option>pbm_relationship</option>
                            <option>channel</option>
-                           <option>plan_type</option>
+                           <option>plan_types</option>
                            <option>state</option>
                            <option>lives</option>
                            <option>drug</option>
@@ -1122,7 +1106,7 @@
                            <option>pbm</option>
                            <option>pbm_relationship</option>
                            <option>channel</option>
-                           <option>plan_type</option>
+                           <option>plan_types</option>
                            <option>state</option>
                            <option>lives</option>
                            <option>drug</option>
@@ -1154,7 +1138,7 @@
                            <option>pbm</option>
                            <option>pbm_relationship</option>
                            <option>channel</option>
-                           <option>plan_type</option>
+                           <option>plan_types</option>
                            <option>state</option>
                            <option>lives</option>
                            <option>drug</option>
@@ -1186,7 +1170,7 @@
                            <option>pbm</option>
                            <option>pbm_relationship</option>
                            <option>channel</option>
-                           <option>plan_type</option>
+                           <option>plan_types</option>
                            <option>state</option>
                            <option>lives</option>
                            <option>drug</option>
@@ -1218,7 +1202,7 @@
                            <option>pbm</option>
                            <option>pbm_relationship</option>
                            <option>channel</option>
-                           <option>plan_type</option>
+                           <option>plan_types</option>
                            <option>state</option>
                            <option>lives</option>
                            <option>drug</option>
@@ -1250,7 +1234,7 @@
                            <option>pbm</option>
                            <option>pbm_relationship</option>
                            <option>channel</option>
-                           <option>plan_type</option>
+                           <option>plan_types</option>
                            <option>state</option>
                            <option>lives</option>
                            <option>drug</option>
@@ -1282,7 +1266,7 @@
                            <option >pbm</option>
                            <option>pbm_relationship</option>
                            <option>channel</option>
-                           <option>plan_type</option>
+                           <option>plan_types</option>
                            <option>state</option>
                            <option>lives</option>
                            <option>drug</option>
@@ -1314,7 +1298,7 @@
                            <option>pbm</option>
                            <option selected>pbm_relationship</option>
                            <option>channel</option>
-                           <option>plan_type</option>
+                           <option>plan_types</option>
                            <option>state</option>
                            <option>lives</option>
                            <option>drug</option>
@@ -1346,7 +1330,7 @@
                            <option>pbm</option>
                            <option selected>pbm_relationship</option>
                            <option>channel</option>
-                           <option>plan_type</option>
+                           <option>plan_types</option>
                            <option>state</option>
                            <option>lives</option>
                            <option>drug</option>
@@ -1378,7 +1362,7 @@
                            <option>pbm</option>
                            <option>pbm_relationship</option>
                            <option selected>channel</option>
-                           <option>plan_type</option>
+                           <option>plan_types</option>
                            <option>state</option>
                            <option>lives</option>
                            <option>drug</option>
@@ -1396,7 +1380,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <td>plan_types</td>
+                    <td>plan_typess</td>
                     <td>
                       <select class="form-control source_name">
                            <option>time_period</option>
@@ -1410,7 +1394,7 @@
                            <option>pbm</option>
                            <option>pbm_relationship</option>
                            <option>channel</option>
-                           <option selected>plan_type</option>
+                           <option selected>plan_types</option>
                            <option>state</option>
                            <option>lives</option>
                            <option>drug</option>
@@ -1442,7 +1426,7 @@
                            <option>pbm</option>
                            <option>pbm_relationship</option>
                            <option>channel</option>
-                           <option>plan_type</option>
+                           <option>plan_types</option>
                            <option selected>state</option>
                            <option>lives</option>
                            <option>drug</option>
@@ -1475,7 +1459,7 @@
                            <option>pbm</option>
                            <option>pbm_relationship</option>
                            <option>channel</option>
-                           <option>plan_type</option>
+                           <option>plan_types</option>
                            <option>state</option>
                            <option selected>lives</option>
                            <option>drug</option>
@@ -1507,7 +1491,7 @@
                            <option>pbm</option>
                            <option>pbm_relationship</option>
                            <option>channel</option>
-                           <option>plan_type</option>
+                           <option>plan_types</option>
                            <option>state</option>
                            <option>lives</option>
                            <option selected>drug</option>
@@ -1539,7 +1523,7 @@
                            <option>pbm</option>
                            <option>pbm_relationship</option>
                            <option>channel</option>
-                           <option>plan_type</option>
+                           <option>plan_types</option>
                            <option>state</option>
                            <option>lives</option>
                            <option>drug</option>
@@ -1571,7 +1555,7 @@
                            <option>pbm</option>
                            <option>pbm_relationship</option>
                            <option>channel</option>
-                           <option>plan_type</option>
+                           <option>plan_types</option>
                            <option>state</option>
                            <option>lives</option>
                            <option>drug</option>
@@ -1603,7 +1587,7 @@
                            <option>pbm</option>
                            <option>pbm_relationship</option>
                            <option>channel</option>
-                           <option>plan_type</option>
+                           <option>plan_types</option>
                            <option>state</option>
                            <option>lives</option>
                            <option>drug</option>
@@ -1634,7 +1618,7 @@
                            <option>pbm</option>
                            <option>pbm_relationship</option>
                            <option>channel</option>
-                           <option>plan_type</option>
+                           <option>plan_types</option>
                            <option>state</option>
                            <option>lives</option>
                            <option>drug</option>
@@ -1665,7 +1649,7 @@
                            <option>pbm</option>
                            <option>pbm_relationship</option>
                            <option>channel</option>
-                           <option>plan_type</option>
+                           <option>plan_types</option>
                            <option>state</option>
                            <option>lives</option>
                            <option>drug</option>
@@ -1696,7 +1680,7 @@
                            <option>pbm</option>
                            <option>pbm_relationship</option>
                            <option>channel</option>
-                           <option>plan_type</option>
+                           <option>plan_types</option>
                            <option>state</option>
                            <option>lives</option>
                            <option>drug</option>
@@ -1748,8 +1732,8 @@
                     <td><select class="form-control source_name">
                          <option selected>plan_id</option>
                          <option>plan_name</option>
-                         <option>plan_type_code</option>
-                         <option>plan_type_desc</option>
+                         <option>plan_types_code</option>
+                         <option>plan_types_desc</option>
                          <option>plan_subtype_desc</option>
                          <option>paymt_type_desc</option>
                          <option>natnl_insr_name</option>
@@ -1768,8 +1752,8 @@
                     <td><select class="form-control source_name">
                          <option>plan_id</option>
                          <option selected>plan_name</option>
-                         <option>plan_type_code</option>
-                         <option>plan_type_desc</option>
+                         <option>plan_types_code</option>
+                         <option>plan_types_desc</option>
                          <option>plan_subtype_desc</option>
                          <option>paymt_type_desc</option>
                          <option>natnl_insr_name</option>
@@ -1788,8 +1772,8 @@
                     <td><select class="form-control source_name">
                          <option>plan_id</option>
                          <option>plan_name</option>
-                         <option selected>plan_type_code</option>
-                         <option>plan_type_desc</option>
+                         <option selected>plan_types_code</option>
+                         <option>plan_types_desc</option>
                          <option>plan_subtype_desc</option>
                          <option>paymt_type_desc</option>
                          <option>natnl_insr_name</option>
@@ -1808,8 +1792,8 @@
                     <td><select class="form-control source_name">
                          <option>plan_id</option>
                          <option>plan_name</option>
-                         <option>plan_type_code</option>
-                         <option selected>plan_type_desc</option>
+                         <option>plan_types_code</option>
+                         <option selected>plan_types_desc</option>
                          <option>plan_subtype_desc</option>
                          <option>paymt_type_desc</option>
                          <option>natnl_insr_name</option>
@@ -1828,8 +1812,8 @@
                     <td><select class="form-control source_name">
                          <option>plan_id</option>
                          <option>plan_name</option>
-                         <option>plan_type_code</option>
-                         <option>plan_type_desc</option>
+                         <option>plan_types_code</option>
+                         <option>plan_types_desc</option>
                          <option selected>plan_subtype_desc</option>
                          <option>paymt_type_desc</option>
                          <option>natnl_insr_name</option>
@@ -1848,10 +1832,10 @@
                     <td><select class="form-control source_name">
                          <option>plan_id</option>
                          <option>plan_name</option>
-                         <option>plan_type_code</option>
-                         <option>plan_type_desc</option>
+                         <option>plan_types_code</option>
+                         <option>plan_types_desc</option>
                          <option>plan_subtype_desc</option>
-                         <option selected>paymt_type_desc</option>
+                         <option selected>Ignore Mapping</option>
                          <option>natnl_insr_name</option>
                          <option>natnl_insr_type_desc</option>
                          <option>reg_org_name</option>
@@ -1868,8 +1852,8 @@
                     <td><select class="form-control source_name">
                          <option>plan_id</option>
                          <option>plan_name</option>
-                         <option>plan_type_code</option>
-                         <option>plan_type_desc</option>
+                         <option>plan_types_code</option>
+                         <option>plan_types_desc</option>
                          <option>plan_subtype_desc</option>
                          <option>paymt_type_desc</option>
                          <option selected>natnl_insr_name</option>
@@ -1888,12 +1872,12 @@
                     <td><select class="form-control source_name">
                          <option>plan_id</option>
                          <option>plan_name</option>
-                         <option>plan_type_code</option>
-                         <option>plan_type_desc</option>
+                         <option>plan_types_code</option>
+                         <option>plan_types_desc</option>
                          <option>plan_subtype_desc</option>
                          <option>paymt_type_desc</option>
                          <option>natnl_insr_name</option>
-                         <option selected>natnl_insr_type_desc</option>
+                         <option selected>Map To Self</option>
                          <option>reg_org_name</option>
                          <option>reg_org_type_desc</option>
                          <option>mc_org_name</option>
@@ -1908,8 +1892,8 @@
                     <td><select class="form-control source_name">
                          <option>plan_id</option>
                          <option>plan_name</option>
-                         <option>plan_type_code</option>
-                         <option>plan_type_desc</option>
+                         <option>plan_types_code</option>
+                         <option>plan_types_desc</option>
                          <option>plan_subtype_desc</option>
                          <option>paymt_type_desc</option>
                          <option>natnl_insr_name</option>
@@ -1928,8 +1912,8 @@
                     <td><select class="form-control source_name">
                          <option>plan_id</option>
                          <option>plan_name</option>
-                         <option>plan_type_code</option>
-                         <option>plan_type_desc</option>
+                         <option>plan_types_code</option>
+                         <option>plan_types_desc</option>
                          <option>plan_subtype_desc</option>
                          <option>paymt_type_desc</option>
                          <option>natnl_insr_name</option>
@@ -1948,8 +1932,8 @@
                     <td><select class="form-control source_name">
                          <option>plan_id</option>
                          <option>plan_name</option>
-                         <option>plan_type_code</option>
-                         <option>plan_type_desc</option>
+                         <option>plan_types_code</option>
+                         <option>plan_types_desc</option>
                          <option>plan_subtype_desc</option>
                          <option>paymt_type_desc</option>
                          <option>natnl_insr_name</option>
@@ -1968,8 +1952,8 @@
                     <td><select class="form-control source_name">
                          <option>plan_id</option>
                          <option>plan_name</option>
-                         <option>plan_type_code</option>
-                         <option>plan_type_desc</option>
+                         <option>plan_types_code</option>
+                         <option>plan_types_desc</option>
                          <option>plan_subtype_desc</option>
                          <option>paymt_type_desc</option>
                          <option>natnl_insr_name</option>
@@ -1988,8 +1972,8 @@
                     <td><select class="form-control source_name">
                          <option>plan_id</option>
                          <option>plan_name</option>
-                         <option>plan_type_code</option>
-                         <option>plan_type_desc</option>
+                         <option>plan_types_code</option>
+                         <option>plan_types_desc</option>
                          <option>plan_subtype_desc</option>
                          <option>paymt_type_desc</option>
                          <option>natnl_insr_name</option>
@@ -2009,8 +1993,8 @@
                     <td><select class="form-control source_name">
                          <option>plan_id</option>
                          <option>plan_name</option>
-                         <option>plan_type_code</option>
-                         <option>plan_type_desc</option>
+                         <option>plan_types_code</option>
+                         <option>plan_types_desc</option>
                          <option>plan_subtype_desc</option>
                          <option>paymt_type_desc</option>
                          <option>natnl_insr_name</option>
@@ -2045,13 +2029,13 @@
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title">Modal Header</h4>
         </div>
-        <div class="modal-body" style="padding:10px 50px">
+        <div class="modal-body" style="padding: 10px 50px">
           <div class = "row">
-            <table class ='table stripped modal_table'>
+             <table class ='table stripped modal_table'>
                 <thead>
                   <tr>
                     <th>Source Column</th>
-                    
+                    <th>Dcube Column</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -2059,8 +2043,8 @@
                     <td>claim_rjct_rsn_cde</td>
                     <td>
                     <select class="form-control source_name">
-                       <option selected>claim_rejc_rsn_code</option>
-                       <option>claim_rejc_rsn_desc</option>
+                       <option selected>claim_rejection_reason_code</option>
+                       <option>claim_rejection_reason_desc</option>
                        
                      </select>
                      </td>
@@ -2069,8 +2053,8 @@
                     <td>claim_rjct_rsn_desc</td>
                     <td>
                     <select class="form-control source_name">
-                       <option>claim_rejc_rsn_code</option>
-                       <option selected>claim_rejc_rsn_desc</option>
+                       <option>claim_rejection_reason_code</option>
+                       <option selected>claim_rejection_reason_desc</option>
                        
                      </select>
                      </td>
@@ -2102,7 +2086,7 @@
                 <thead>
                   <tr>
                     <th>Source Column</th>
-                    <th>Dcube Column</th>
+                    <th>DCube Column</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -2134,9 +2118,9 @@
                            <option>generic_name</option>
                            <option>form_code</option>
                            <option>form_desc</option>
-                           <option>strength_desc</option>
-                           <option>pckg_size_qty</option>
-                           <option>drug_mfg_name</option>
+                           <option>strength_description</option>
+                           <option>package_size</option>
+                           <option>manufacturer</option>
                           </select></td>  
                  
                
@@ -2169,9 +2153,9 @@
                            <option>generic_name</option>
                            <option>form_code</option>
                            <option>form_desc</option>
-                           <option>strength_desc</option>
-                           <option>pckg_size_qty</option>
-                           <option>drug_mfg_name</option>
+                           <option>strength_description</option>
+                           <option>package_size</option>
+                           <option>manufacturer</option>
                           </select></td>
                   </tr>
                   <tr>
@@ -2204,9 +2188,9 @@
                            <option>generic_name</option>
                            <option>form_code</option>
                            <option>form_desc</option>
-                           <option>strength_desc</option>
-                           <option>pckg_size_qty</option>
-                           <option>drug_mfg_name</option>
+                           <option>strength_description</option>
+                           <option>package_size</option>
+                           <option>manufacturer</option>
                           </select></td>
                   </tr>
                   <tr>
@@ -2239,9 +2223,9 @@
                            <option>generic_name</option>
                            <option>form_code</option>
                            <option>form_desc</option>
-                           <option>strength_desc</option>
-                           <option>pckg_size_qty</option>
-                           <option>drug_mfg_name</option>
+                           <option>strength_description</option>
+                           <option>package_size</option>
+                           <option>manufacturer</option>
                           </select></td>
                   </tr>
                   <tr>
@@ -2274,9 +2258,9 @@
                            <option>generic_name</option>
                            <option>form_code</option>
                            <option>form_desc</option>
-                           <option>strength_desc</option>
-                           <option>pckg_size_qty</option>
-                           <option>drug_mfg_name</option>
+                           <option>strength_description</option>
+                           <option>package_size</option>
+                           <option>manufacturer</option>
                           </select></td>
                   </tr>
                   <tr>
@@ -2309,9 +2293,9 @@
                            <option>generic_name</option>
                            <option>form_code</option>
                            <option>form_desc</option>
-                           <option>strength_desc</option>
-                           <option>pckg_size_qty</option>
-                           <option>drug_mfg_name</option>
+                           <option>strength_description</option>
+                           <option>package_size</option>
+                           <option>manufacturer</option>
                           </select></td>
                   </tr>
                   <tr>
@@ -2344,9 +2328,9 @@
                            <option>generic_name</option>
                            <option>form_code</option>
                            <option>form_desc</option>
-                           <option>strength_desc</option>
-                           <option>pckg_size_qty</option>
-                           <option>drug_mfg_name</option>
+                           <option>strength_description</option>
+                           <option>package_size</option>
+                           <option>manufacturer</option>
                           </select></td>
                   </tr>
                   <tr>
@@ -2377,9 +2361,9 @@
                            <option>generic_name</option>
                            <option>form_code</option>
                            <option>form_desc</option>
-                           <option>strength_desc</option>
-                           <option>pckg_size_qty</option>
-                           <option>drug_mfg_name</option>
+                           <option>strength_description</option>
+                           <option>package_size</option>
+                           <option>manufacturer</option>
                           </select></td>
                   </tr>
                   <tr>
@@ -2412,9 +2396,9 @@
                            <option>generic_name</option>
                            <option>form_code</option>
                            <option>form_desc</option>
-                           <option>strength_desc</option>
-                           <option>pckg_size_qty</option>
-                           <option>drug_mfg_name</option>
+                           <option>strength_description</option>
+                           <option>package_size</option>
+                           <option>manufacturer</option>
                           </select></td>
                   </tr>
                   <tr>
@@ -2447,9 +2431,9 @@
                            <option>generic_name</option>
                            <option>form_code</option>
                            <option>form_desc</option>
-                           <option>strength_desc</option>
-                           <option>pckg_size_qty</option>
-                           <option>drug_mfg_name</option>
+                           <option>strength_description</option>
+                           <option>package_size</option>
+                           <option>manufacturer</option>
                           </select></td>
                   </tr>
                   <tr>
@@ -2480,9 +2464,9 @@
                            <option>generic_name</option>
                            <option>form_code</option>
                            <option>form_desc</option>
-                           <option>strength_desc</option>
-                           <option>pckg_size_qty</option>
-                           <option>drug_mfg_name</option>
+                           <option>strength_description</option>
+                           <option>package_size</option>
+                           <option>manufacturer</option>
                           </select> </td>
                   </tr>
                   <tr>
@@ -2515,9 +2499,9 @@
                            <option>generic_name</option>
                            <option>form_code</option>
                            <option>form_desc</option>
-                           <option>strength_desc</option>
-                           <option>pckg_size_qty</option>
-                           <option>drug_mfg_name</option>
+                           <option>strength_description</option>
+                           <option>package_size</option>
+                           <option>manufacturer</option>
                           </select></td>
                   </tr>
                   <tr>
@@ -2550,9 +2534,9 @@
                            <option selected>generic_name</option>
                            <option>form_code</option>
                            <option>form_desc</option>
-                           <option>strength_desc</option>
-                           <option>pckg_size_qty</option>
-                           <option>drug_mfg_name</option>
+                           <option>strength_description</option>
+                           <option>package_size</option>
+                           <option>manufacturer</option>
                           </select></td>
                   </tr>
 
@@ -2586,9 +2570,9 @@
                            <option>generic_name</option>
                            <option selected>form_code</option>
                            <option>form_desc</option>
-                           <option>strength_desc</option>
-                           <option>pckg_size_qty</option>
-                           <option>drug_mfg_name</option>
+                           <option>strength_description</option>
+                           <option>package_size</option>
+                           <option>manufacturer</option>
                           </select></td>
                   </tr>
                   
@@ -2622,13 +2606,13 @@
                            <option>generic_name</option>
                            <option>form_code</option>
                            <option selected>form_desc</option>
-                           <option>strength_desc</option>
-                           <option>pckg_size_qty</option>
-                           <option>drug_mfg_name</option>
+                           <option>strength_description</option>
+                           <option>package_size</option>
+                           <option>manufacturer</option>
                           </select></td>
                   </tr>
                   <tr>
-                    <td>strength_description</td>
+                    <td>strength_descriptionription</td>
                     <td><select class="form-control source_name">
                            <option>Map to Self</option>
                            
@@ -2657,9 +2641,9 @@
                            <option>generic_name</option>
                            <option>form_code</option>
                            <option>form_desc</option>
-                           <option selected>strength_desc</option>
-                           <option>pckg_size_qty</option>
-                           <option>drug_mfg_name</option>
+                           <option selected>strength_description</option>
+                           <option>package_size</option>
+                           <option>manufacturer</option>
                           </select></td>
                   </tr>
                   <tr>
@@ -2692,9 +2676,9 @@
                            <option>generic_name</option>
                            <option>form_code</option>
                            <option>form_desc</option>
-                           <option>strength_desc</option>
-                           <option selected>pckg_size_qty</option>
-                           <option>drug_mfg_name</option>
+                           <option>strength_description</option>
+                           <option selected>package_size</option>
+                           <option>manufacturer</option>
                           </select></td>
                   </tr>
                   <tr>
@@ -2727,9 +2711,9 @@
                            <option>generic_name</option>
                            <option>form_code</option>
                            <option>form_desc</option>
-                           <option>strength_desc</option>
-                           <option>pckg_size_qty</option>
-                           <option selected>drug_mfg_name</option>
+                           <option>strength_description</option>
+                           <option>package_size</option>
+                           <option selected>manufacturer</option>
                           </select></td>
                   </tr>
                   
@@ -2760,7 +2744,7 @@
                 <thead>
                   <tr>
                     <th>Source Column</th>
-                    <th>Dcube Column</th>
+                    <th>DCube Column</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -2775,15 +2759,15 @@
                            <option>State</option>
                            <option>Zip</option>
                            <option>Specialty</option>
-                           <option>adpt_decile</option>
-                           <option>simple_decile</option>
-                           <option>comp_decide</option>
-                           <option>cluster</option>
-                           <option>segment</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Ignore Mapping</option>
                            <option>idn</option>
                            <option>idn_segment</option>
                            <option>affiliation_level</option>
-                           <option>acct_hcp_count</option>
+                           <option>Map to Self</option>
                            <option>target_hcp_count</option>
                            <option>np_pa_count</option>
                            <option>trial_hcp_affl_flag</option>
@@ -2802,15 +2786,15 @@
                            <option>State</option>
                            <option>Zip</option>
                            <option>Specialty</option>
-                           <option>adpt_decile</option>
-                           <option>simple_decile</option>
-                           <option>comp_decide</option>
-                           <option>cluster</option>
-                           <option>segment</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Ignore Mapping</option>
                            <option>idn</option>
                            <option>idn_segment</option>
                            <option>affiliation_level</option>
-                           <option>acct_hcp_count</option>
+                           <option>Map to Self</option>
                            <option>target_hcp_count</option>
                            <option>np_pa_count</option>
                            <option>trial_hcp_affl_flag</option>
@@ -2827,15 +2811,15 @@
                            <option>State</option>
                            <option>Zip</option>
                            <option>Specialty</option>
-                           <option>adpt_decile</option>
-                           <option>simple_decile</option>
-                           <option>comp_decide</option>
-                           <option>cluster</option>
-                           <option>segment</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Ignore Mapping</option>
                            <option>idn</option>
                            <option>idn_segment</option>
                            <option>affiliation_level</option>
-                           <option>acct_hcp_count</option>
+                           <option>Map to Self</option>
                            <option>target_hcp_count</option>
                            <option>np_pa_count</option>
                            <option>trial_hcp_affl_flag</option>
@@ -2852,15 +2836,15 @@
                            <option>State</option>
                            <option>Zip</option>
                            <option>Specialty</option>
-                           <option>adpt_decile</option>
-                           <option>simple_decile</option>
-                           <option>comp_decide</option>
-                           <option>cluster</option>
-                           <option>segment</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Ignore Mapping</option>
                            <option>idn</option>
                            <option>idn_segment</option>
                            <option>affiliation_level</option>
-                           <option>acct_hcp_count</option>
+                           <option>Map to Self</option>
                            <option>target_hcp_count</option>
                            <option>np_pa_count</option>
                            <option>trial_hcp_affl_flag</option>
@@ -2877,15 +2861,15 @@
                            <option>State</option>
                            <option>Zip</option>
                            <option>Specialty</option>
-                           <option>adpt_decile</option>
-                           <option>simple_decile</option>
-                           <option>comp_decide</option>
-                           <option>cluster</option>
-                           <option>segment</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Ignore Mapping</option>
                            <option>idn</option>
                            <option>idn_segment</option>
                            <option>affiliation_level</option>
-                           <option>acct_hcp_count</option>
+                           <option>Map to Self</option>
                            <option>target_hcp_count</option>
                            <option>np_pa_count</option>
                            <option>trial_hcp_affl_flag</option>
@@ -2902,15 +2886,15 @@
                            <option selected>State</option>
                            <option>Zip</option>
                            <option>Specialty</option>
-                           <option>adpt_decile</option>
-                           <option>simple_decile</option>
-                           <option>comp_decide</option>
-                           <option>cluster</option>
-                           <option>segment</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Ignore Mapping</option>
                            <option>idn</option>
                            <option>idn_segment</option>
                            <option>affiliation_level</option>
-                           <option>acct_hcp_count</option>
+                           <option>Map to Self</option>
                            <option>target_hcp_count</option>
                            <option>np_pa_count</option>
                            <option>trial_hcp_affl_flag</option>
@@ -2927,15 +2911,15 @@
                            <option>State</option>
                            <option selected>Zip</option>
                            <option>Specialty</option>
-                           <option>adpt_decile</option>
-                           <option>simple_decile</option>
-                           <option>comp_decide</option>
-                           <option>cluster</option>
-                           <option>segment</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Ignore Mapping</option>
                            <option>idn</option>
                            <option>idn_segment</option>
                            <option>affiliation_level</option>
-                           <option>acct_hcp_count</option>
+                           <option>Map to Self</option>
                            <option>target_hcp_count</option>
                            <option>np_pa_count</option>
                            <option>trial_hcp_affl_flag</option>
@@ -2952,22 +2936,22 @@
                            <option>State</option>
                            <option>Zip</option>
                            <option selected>Specialty</option>
-                           <option>adpt_decile</option>
-                           <option>simple_decile</option>
-                           <option>comp_decide</option>
-                           <option>cluster</option>
-                           <option>segment</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Ignore Mapping</option>
                            <option>idn</option>
                            <option>idn_segment</option>
                            <option>affiliation_level</option>
-                           <option>acct_hcp_count</option>
+                           <option>Map to Self</option>
                            <option>target_hcp_count</option>
                            <option>np_pa_count</option>
                            <option>trial_hcp_affl_flag</option>
                           </select>  </td>
                   </tr>
                   <tr>
-                    <td>Adoption Decile</td>
+                    <td>adpt_decile</td>
                     <td><select class="form-control source_name">
                            <option>first_name</option>
                            <option>last_name</option>
@@ -2977,22 +2961,22 @@
                            <option>State</option>
                            <option>Zip</option>
                            <option>Specialty</option>
-                           <option selected>adpt_decile</option>
-                           <option>simple_decile</option>
-                           <option>comp_decide</option>
-                           <option>cluster</option>
-                           <option>segment</option>
+                           <option selected>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Ignore Mapping</option>
                            <option>idn</option>
                            <option>idn_segment</option>
                            <option>affiliation_level</option>
-                           <option>acct_hcp_count</option>
+                           <option>Map to Self</option>
                            <option>target_hcp_count</option>
                            <option>np_pa_count</option>
                            <option>trial_hcp_affl_flag</option>
                           </select>  </td>
                   </tr>
                   <tr>
-                    <td>Simple Decile</td>
+                    <td>simple_decile</td>
                     <td><select class="form-control source_name">
                            <option>first_name</option>
                            <option>last_name</option>
@@ -3002,22 +2986,22 @@
                            <option>State</option>
                            <option>Zip</option>
                            <option>Specialty</option>
-                           <option>adpt_decile</option>
-                           <option selected>simple_decile</option>
-                           <option>comp_decide</option>
-                           <option>cluster</option>
-                           <option>segment</option>
+                           <option>Map to Self</option>
+                           <option selected>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Ignore Mapping</option>
                            <option>idn</option>
                            <option>idn_segment</option>
                            <option>affiliation_level</option>
-                           <option>acct_hcp_count</option>
+                           <option>Map to Self</option>
                            <option>target_hcp_count</option>
                            <option>np_pa_count</option>
                            <option>trial_hcp_affl_flag</option>
                           </select>  </td>
                   </tr>
                   <tr>
-                    <td>Composite Decile</td>
+                    <td>comp_decide</td>
                     <td><select class="form-control source_name">
                            <option>first_name</option>
                            <option>last_name</option>
@@ -3027,22 +3011,22 @@
                            <option>State</option>
                            <option>Zip</option>
                            <option>Specialty</option>
-                           <option>adpt_decile</option>
-                           <option>simple_decile</option>
-                           <option selected>comp_decide</option>
-                           <option>cluster</option>
-                           <option>segment</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option selected>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Ignore Mapping</option>
                            <option>idn</option>
                            <option>idn_segment</option>
                            <option>affiliation_level</option>
-                           <option>acct_hcp_count</option>
+                           <option>Map to Self</option>
                            <option>target_hcp_count</option>
                            <option>np_pa_count</option>
                            <option>trial_hcp_affl_flag</option>
                           </select>  </td>
                   </tr>
                   <tr>
-                    <td>Cluster</td>
+                    <td>cluster</td>
                     <td><select class="form-control source_name">
                            <option>first_name</option>
                            <option>last_name</option>
@@ -3052,15 +3036,15 @@
                            <option>State</option>
                            <option>Zip</option>
                            <option>Specialty</option>
-                           <option>adpt_decile</option>
-                           <option>simple_decile</option>
-                           <option>comp_decide</option>
-                           <option selected>cluster</option>
-                           <option>segment</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option selected>Map to Self</option>
+                           <option>Ignore Mapping</option>
                            <option>idn</option>
                            <option>idn_segment</option>
                            <option>affiliation_level</option>
-                           <option>acct_hcp_count</option>
+                           <option>Map to Self</option>
                            <option>target_hcp_count</option>
                            <option>np_pa_count</option>
                            <option>trial_hcp_affl_flag</option>
@@ -3077,15 +3061,15 @@
                            <option>State</option>
                            <option>Zip</option>
                            <option>Specialty</option>
-                           <option>adpt_decile</option>
-                           <option>simple_decile</option>
-                           <option>comp_decide</option>
-                           <option>cluster</option>
-                           <option selected>segment</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option selected>Ignore Mapping</option>
                            <option>idn</option>
                            <option>idn_segment</option>
                            <option>affiliation_level</option>
-                           <option>acct_hcp_count</option>
+                           <option>Map to Self</option>
                            <option>target_hcp_count</option>
                            <option>np_pa_count</option>
                            <option>trial_hcp_affl_flag</option>
@@ -3103,15 +3087,15 @@
                            <option>State</option>
                            <option>Zip</option>
                            <option>Specialty</option>
-                           <option>adpt_decile</option>
-                           <option>simple_decile</option>
-                           <option>comp_decide</option>
-                           <option>cluster</option>
-                           <option>segment</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Ignore Mapping</option>
                            <option selected>idn</option>
                            <option>idn_segment</option>
                            <option>affiliation_level</option>
-                           <option>acct_hcp_count</option>
+                           <option>Map to Self</option>
                            <option>target_hcp_count</option>
                            <option>np_pa_count</option>
                            <option>trial_hcp_affl_flag</option>
@@ -3129,15 +3113,15 @@
                            <option>State</option>
                            <option>Zip</option>
                            <option>Specialty</option>
-                           <option>adpt_decile</option>
-                           <option>simple_decile</option>
-                           <option>comp_decide</option>
-                           <option>cluster</option>
-                           <option>segment</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Ignore Mapping</option>
                            <option>idn</option>
                            <option selected>idn_segment</option>
                            <option>affiliation_level</option>
-                           <option>acct_hcp_count</option>
+                           <option>Map to Self</option>
                            <option>target_hcp_count</option>
                            <option>np_pa_count</option>
                            <option>trial_hcp_affl_flag</option>
@@ -3154,15 +3138,15 @@
                            <option>State</option>
                            <option>Zip</option>
                            <option>Specialty</option>
-                           <option>adpt_decile</option>
-                           <option>simple_decile</option>
-                           <option>comp_decide</option>
-                           <option>cluster</option>
-                           <option>segment</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Ignore Mapping</option>
                            <option>idn</option>
                            <option>idn_segment</option>
                            <option selected>affiliation_level</option>
-                           <option>acct_hcp_count</option>
+                           <option>Map to Self</option>
                            <option>target_hcp_count</option>
                            <option>np_pa_count</option>
                            <option>trial_hcp_affl_flag</option>
@@ -3179,15 +3163,15 @@
                            <option>State</option>
                            <option>Zip</option>
                            <option>Specialty</option>
-                           <option>adpt_decile</option>
-                           <option>simple_decile</option>
-                           <option>comp_decide</option>
-                           <option>cluster</option>
-                           <option>segment</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Ignore Mapping</option>
                            <option>idn</option>
                            <option>idn_segment</option>
                            <option>affiliation_level</option>
-                           <option selected>acct_hcp_count</option>
+                           <option selected>Map to Self</option>
                            <option>target_hcp_count</option>
                            <option>np_pa_count</option>
                            <option>trial_hcp_affl_flag</option>
@@ -3204,15 +3188,15 @@
                            <option>State</option>
                            <option>Zip</option>
                            <option>Specialty</option>
-                           <option>adpt_decile</option>
-                           <option>simple_decile</option>
-                           <option>comp_decide</option>
-                           <option>cluster</option>
-                           <option>segment</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Ignore Mapping</option>
                            <option>idn</option>
                            <option>idn_segment</option>
                            <option>affiliation_level</option>
-                           <option>acct_hcp_count</option>
+                           <option>Map to Self</option>
                            <option selected>target_hcp_count</option>
                            <option>np_pa_count</option>
                            <option>trial_hcp_affl_flag</option>
@@ -3229,15 +3213,15 @@
                            <option>State</option>
                            <option>Zip</option>
                            <option>Specialty</option>
-                           <option>adpt_decile</option>
-                           <option>simple_decile</option>
-                           <option>comp_decide</option>
-                           <option>cluster</option>
-                           <option>segment</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Ignore Mapping</option>
                            <option>idn</option>
                            <option>idn_segment</option>
                            <option>affiliation_level</option>
-                           <option>acct_hcp_count</option>
+                           <option>Map to Self</option>
                            <option>target_hcp_count</option>
                            <option selected>np_pa_count</option>
                            <option>trial_hcp_affl_flag</option>
@@ -3254,18 +3238,108 @@
                            <option>State</option>
                            <option>Zip</option>
                            <option>Specialty</option>
-                           <option>adpt_decile</option>
-                           <option>simple_decile</option>
-                           <option>comp_decide</option>
-                           <option>cluster</option>
-                           <option>segment</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Map to Self</option>
+                           <option>Ignore Mapping</option>
                            <option>idn</option>
                            <option>idn_segment</option>
                            <option>affiliation_level</option>
-                           <option>acct_hcp_count</option>
+                           <option>Map to Self</option>
                            <option>target_hcp_count</option>
                            <option>np_pa_count</option>
                            <option selected>trial_hcp_affl_flag</option>
+                          </select>  </td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+          </div>
+            
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Save Mappings</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div id="ptndim" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body" style="padding: 10px 50px">
+          <div class = "row">
+
+            <table class ='table stripped modal_table'>
+                <thead>
+                  <tr>
+                    <th>Source Column</th>
+                    <th>DCube Column</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>ptnt_id</td>
+                    <td><select class="form-control source_name">
+                           <option selected>patient_id</option>
+                           <option>patient_birth_year</option>
+                           <option>patient_gender_code</option>
+                           <option>patient_zip_code</option>
+                           <option>Map to Self</option>
+                           <option>Ignore Mapping</option>
+                          </select>  
+               
+                      </td>
+                  </tr>
+                  <tr>
+                    <td>ptnt_brth_yr_nbr</td>
+                    <td><select class="form-control source_name">
+                           <option>patient_id</option>
+                           <option selected>patient_birth_year</option>
+                           <option>patient_gender_code</option>
+                           <option>patient_zip_code</option>
+                           <option>Map to Self</option>
+                           <option>Ignore Mapping</option>
+                          </select>  </td>
+                  </tr>
+                  <tr>
+                    <td>ptnt_gndr_cde</td>
+                    <td><select class="form-control source_name">
+                           <option>patient_id</option>
+                           <option>patient_birth_year</option>
+                           <option selected>patient_gender_code</option>
+                           <option>patient_zip_code</option>
+                           <option>Map to Self</option>
+                           <option>Ignore Mapping</option>
+                          </select>  </td>
+                  </tr>
+                  <tr>
+                    <td>ptnt_zip3_cde</td>
+                    <td><select class="form-control source_name">
+                           <option>patient_id</option>
+                           <option>patient_birth_year</option>
+                           <option>patient_gender_code</option>
+                           <option selected>patient_zip_code</option>
+                           <option>Map to Self</option>
+                           <option>Ignore Mapping</option>
+                          </select>  </td>
+                  </tr>
+                  <tr>
+                    <td>ptnt_st_cde</td>
+                    <td><select class="form-control source_name">
+                           <option>patient_id</option>
+                           <option>patient_birth_year</option>
+                           <option>patient_gender_code</option>
+                           <option>patient_zip_code</option>
+                           <option selected>Map to Self</option>
+                           <option>Ignore Mapping</option>
                           </select>  </td>
                   </tr>
                   
@@ -3296,14 +3370,14 @@
                 <thead>
                   <tr>
                     <th>Source Column</th>
-                    <th>Dcube Column</th>
+                    <th>DCube Column</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td>rel_id</td>
                     <td><select class="form-control source_name">
-                          <option selected>rel_id</option>
+                          <option selected>relation_id</option>
                           <option>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option>writer_type</option>
@@ -3321,10 +3395,11 @@
                           <option>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option>type_of_practice_code</option>
+                          <option>Map to Self</option>
                           <option>npi</option>
                           <option>territory_id</option>
                           <option>call_status_code</option>
+                          <option>Ignore Mapping</option>
                         </select>
 
                     </td>
@@ -3332,7 +3407,7 @@
                   <tr>
                     <td>provider_id_number</td>
                     <td><select class="form-control source_name">
-                          <option>rel_id</option>
+                          <option>relation_id</option>
                           <option selected>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option>writer_type</option>
@@ -3350,17 +3425,18 @@
                           <option>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option>type_of_practice_code</option>
+                          <option>Map to Self</option>
                           <option>npi</option>
                           <option>territory_id</option>
                           <option>call_status_code</option>
+                          <option>Ignore Mapping</option>
                         </select>
                     </td>
                   </tr>
                   <tr>
                     <td>data_agent_code</td>
                     <td><select class="form-control source_name">
-                          <option>rel_id</option>
+                          <option>relation_id</option>
                           <option>provider_id_number</option>
                           <option selected>data_agent_code</option>
                           <option>writer_type</option>
@@ -3378,17 +3454,18 @@
                           <option>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option>type_of_practice_code</option>
+                          <option>Map to Self</option>
                           <option>npi</option>
                           <option>territory_id</option>
                           <option>call_status_code</option>
+                          <option>Ignore Mapping</option>
                         </select>
                       </td>
                   </tr>
                   <tr>
                     <td>writer_type</td>
                     <td><select class="form-control source_name">
-                          <option>rel_id</option>
+                          <option>relation_id</option>
                           <option>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option selected>writer_type</option>
@@ -3406,17 +3483,18 @@
                           <option>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option>type_of_practice_code</option>
+                          <option>Map to Self</option>
                           <option>npi</option>
                           <option>territory_id</option>
                           <option>call_status_code</option>
+                          <option>Ignore Mapping</option>
                         </select>
                     </td>
                   </tr>
                   <tr>
                     <td>first_name</td>
                     <td><select class="form-control source_name">
-                          <option>rel_id</option>
+                          <option>relation_id</option>
                           <option>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option>writer_type</option>
@@ -3434,17 +3512,18 @@
                           <option>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option>type_of_practice_code</option>
+                          <option>Map to Self</option>
                           <option>npi</option>
                           <option>territory_id</option>
                           <option>call_status_code</option>
+                          <option>Ignore Mapping</option>
                         </select>
                         </td>
                   </tr>
                   <tr>
                     <td>middle_name</td>
                     <td><select class="form-control source_name">
-                          <option>rel_id</option>
+                          <option>relation_id</option>
                           <option>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option>writer_type</option>
@@ -3462,17 +3541,18 @@
                           <option>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option>type_of_practice_code</option>
+                          <option>Map to Self</option>
                           <option>npi</option>
                           <option>territory_id</option>
                           <option>call_status_code</option>
+                          <option>Ignore Mapping</option>
                         </select>
                         </td>
                   </tr>
                   <tr>
                     <td>last_name</td>
                     <td><select class="form-control source_name">
-                          <option>rel_id</option>
+                          <option>relation_id</option>
                           <option>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option>writer_type</option>
@@ -3490,17 +3570,18 @@
                           <option>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option>type_of_practice_code</option>
+                          <option>Map to Self</option>
                           <option>npi</option>
                           <option>territory_id</option>
                           <option>call_status_code</option>
+                          <option>Ignore Mapping</option>
                         </select>
                         </td>
                   </tr>
                   <tr>
                     <td>title</td>
                     <td><select class="form-control source_name">
-                          <option>rel_id</option>
+                          <option>relation_id</option>
                           <option>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option>writer_type</option>
@@ -3518,17 +3599,18 @@
                           <option>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option>type_of_practice_code</option>
+                          <option>Map to Self</option>
                           <option>npi</option>
                           <option>territory_id</option>
                           <option>call_status_code</option>
+                          <option>Ignore Mapping</option>
                         </select>
                         </td>
                   </tr>
                   <tr>
                     <td>specialty_code</td>
                     <td><select class="form-control source_name">
-                          <option>rel_id</option>
+                          <option>relation_id</option>
                           <option>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option>writer_type</option>
@@ -3546,17 +3628,18 @@
                           <option>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option>type_of_practice_code</option>
+                          <option>Map to Self</option>
                           <option>npi</option>
                           <option>territory_id</option>
                           <option>call_status_code</option>
+                          <option>Ignore Mapping</option>
                         </select>
                         </td>
                   </tr>
                   <tr>
                     <td>specialty_desc</td>
                     <td><select class="form-control source_name">
-                          <option>rel_id</option>
+                          <option>relation_id</option>
                           <option>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option>writer_type</option>
@@ -3574,17 +3657,18 @@
                           <option>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option>type_of_practice_code</option>
+                          <option>Map to Self</option>
                           <option>npi</option>
                           <option>territory_id</option>
                           <option>call_status_code</option>
+                          <option>Ignore Mapping</option>
                         </select>
                         </td>
                   </tr>
                   <tr>
                     <td>address</td>
                     <td><select class="form-control source_name">
-                          <option>rel_id</option>
+                          <option>relation_id</option>
                           <option>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option>writer_type</option>
@@ -3602,17 +3686,18 @@
                           <option>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option>type_of_practice_code</option>
+                          <option>Map to Self</option>
                           <option>npi</option>
                           <option>territory_id</option>
                           <option>call_status_code</option>
+                          <option>Ignore Mapping</option>
                         </select>
                         </td>
                   </tr>
                   <tr>
                     <td>city</td>
                     <td><select class="form-control source_name">
-                          <option>rel_id</option>
+                          <option>relation_id</option>
                           <option>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option>writer_type</option>
@@ -3630,17 +3715,18 @@
                           <option>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option>type_of_practice_code</option>
+                          <option>Map to Self</option>
                           <option>npi</option>
                           <option>territory_id</option>
                           <option>call_status_code</option>
+                          <option>Ignore Mapping</option>
                         </select>
                         </td>
                   </tr>
                   <tr>
                     <td>state</td>
                     <td><select class="form-control source_name">
-                          <option>rel_id</option>
+                          <option>relation_id</option>
                           <option>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option>writer_type</option>
@@ -3658,10 +3744,11 @@
                           <option>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option>type_of_practice_code</option>
+                          <option>Map to Self</option>
                           <option>npi</option>
                           <option>territory_id</option>
                           <option>call_status_code</option>
+                          <option>Ignore Mapping</option>
                         </select>
                         </td>
                   </tr>
@@ -3669,7 +3756,7 @@
                   <tr>
                     <td>zip_code</td>
                     <td><select class="form-control source_name">
-                          <option>rel_id</option>
+                          <option>relation_id</option>
                           <option>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option>writer_type</option>
@@ -3687,10 +3774,11 @@
                           <option>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option>type_of_practice_code</option>
+                          <option>Map to Self</option>
                           <option>npi</option>
                           <option>territory_id</option>
                           <option>call_status_code</option>
+                          <option>Ignore Mapping</option>
                         </select>
                         </td>
                   </tr>
@@ -3698,7 +3786,7 @@
                   <tr>
                     <td>ama_no_contact</td>
                     <td><select class="form-control source_name">
-                          <option>rel_id</option>
+                          <option>relation_id</option>
                           <option>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option>writer_type</option>
@@ -3716,10 +3804,11 @@
                           <option>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option>type_of_practice_code</option>
+                          <option>Map to Self</option>
                           <option>npi</option>
                           <option>territory_id</option>
                           <option>call_status_code</option>
+                          <option>Ignore Mapping</option>
                         </select>
                         </td>
 
@@ -3727,7 +3816,7 @@
                   <tr>
                     <td>ama_pdrp_indicator</td>
                     <td><select class="form-control source_name">
-                          <option>rel_id</option>
+                          <option>relation_id</option>
                           <option>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option>writer_type</option>
@@ -3745,17 +3834,18 @@
                           <option selected>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option>type_of_practice_code</option>
+                          <option>Map to Self</option>
                           <option>npi</option>
                           <option>territory_id</option>
                           <option>call_status_code</option>
+                          <option>Ignore Mapping</option>
                         </select>
                         </td>
                   </tr>
                   <tr>
                     <td>ama_pdrp_date</td>
                     <td><select class="form-control source_name">
-                          <option>rel_id</option>
+                          <option>relation_id</option>
                           <option>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option>writer_type</option>
@@ -3773,17 +3863,18 @@
                           <option>ama_pdrp_indicator</option>
                           <option selected>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option>type_of_practice_code</option>
+                          <option>Map to Self</option>
                           <option>npi</option>
                           <option>territory_id</option>
                           <option>call_status_code</option>
+                          <option>Ignore Mapping</option>
                         </select>
                         </td>
                   </tr>
                   <tr>
                     <td>presumed_dead_ind</td>
                     <td><select class="form-control source_name">
-                          <option>rel_id</option>
+                          <option>relation_id</option>
                           <option>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option>writer_type</option>
@@ -3801,17 +3892,18 @@
                           <option>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option selected>presumed_dead_ind</option>
-                          <option>type_of_practice_code</option>
+                          <option>Map to Self</option>
                           <option>npi</option>
                           <option>territory_id</option>
                           <option>call_status_code</option>
+                          <option>Ignore Mapping</option>
                         </select>
                         </td>
                   </tr>
                   <tr>
                     <td>type_of_practice_code</td>
                     <td><select class="form-control source_name">
-                          <option>rel_id</option>
+                          <option>relation_id</option>
                           <option>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option>writer_type</option>
@@ -3829,17 +3921,18 @@
                           <option>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option selected>type_of_practice_code</option>
+                          <option selected>Map to Self</option>
                           <option>npi</option>
                           <option>territory_id</option>
                           <option>call_status_code</option>
+                          <option>Ignore Mapping</option>
                         </select>
                         </td>
                   </tr>
                   <tr>
                     <td>npi</td>
                     <td><select class="form-control source_name">
-                          <option>rel_id</option>
+                          <option>relation_id</option>
                           <option>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option>writer_type</option>
@@ -3857,17 +3950,18 @@
                           <option>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option>type_of_practice_code</option>
+                          <option>Map to Self</option>
                           <option selected>npi</option>
                           <option>territory_id</option>
                           <option>call_status_code</option>
+                          <option>Ignore Mapping</option>
                         </select>
                         </td>
                   </tr>
                   <tr>
                     <td>territory_id</td>
                     <td><select class="form-control source_name">
-                          <option>rel_id</option>
+                          <option>relation_id</option>
                           <option>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option>writer_type</option>
@@ -3885,17 +3979,19 @@
                           <option>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option>type_of_practice_code</option>
+                          <option>Map to Self</option>
                           <option>npi</option>
                           <option selected>territory_id</option>
                           <option>call_status_code</option>
+                          <option>Ignore Mapping</option>
                         </select>
                         </td>
                   </tr>
                   <tr>
                     <td>call_status_code</td>
+                    <option>Ignore Mapping</option>
                     <td><select class="form-control source_name">
-                          <option>rel_id</option>
+                          <option>relation_id</option>
                           <option>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option>writer_type</option>
@@ -3913,10 +4009,11 @@
                           <option>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option>type_of_practice_code</option>
+                          <option>Map to Self</option>
                           <option>npi</option>
                           <option>territory_id</option>
                           <option selected>call_status_code</option>
+                          <option>Ignore Mapping</option>
                         </select>
                         </td>
                   </tr>
@@ -3947,7 +4044,7 @@
                 <thead>
                   <tr>
                     <th>Source Column</th>
-                    <th>Dcube Column</th>
+                    <th>DCube Column</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -3957,32 +4054,32 @@
                           <option selected>claim_id</option>
                           <option>ptnt_id</option>
                           <option>drug_id</option>
-                          <option>mdcl_prctr_id</option>
-                          <option>prmry_plan_id</option>
-                          <option>ptnt_pay_amt</option>
-                          <option>prmry_plan_pay_amt</option>
-                          <option>scnry_plan_id</option>
-                          <option>scnry_plan_pay_amt</option>
-                          <option>ptnt_oop_pay_amt</option>
-                          <option>refil_cde</option>
-                          <option>dspnd_qty</option>
-                          <option>days_sply_cnt</option>
-                          <option>rx_fill_dte</option>
-                          <option>ptnt_claim_seq_nbr</option>
-                          <option>claim_stus_cde</option>
-                          <option>claim_rjct_rsn_cde</option>
-                          <option>rvrsl_lag</option>
-                          <option>encyd_rx_id</option>
-                          <option>days_until_next_fill_cnt</option>
-                          <option>copay_30_amt</option>
+                          <option>medical_practitioner_id</option>
+                          <option>primary_plan_id</option>
+                          <option>patient_pay_amount</option>
+                          <option>primary_plan_pay_amount</option>
+                          <option>secondary_plan_id</option>
+                          <option>secondary_plan_pay_amount</option>
+                          <option>patient_oop_pay_amount</option>
+                          <option>refill_code</option>
+                          <option>dispensed_quantity</option>
+                          <option>days_supply</option>
+                          <option>rx_fill_date</option>
+                          <option>patient_claim_sequence_number</option>
+                          <option>claim_status_code</option>
+                          <option>claim_rjct_rsn_code</option>
+                          <option></option>
+                          <option></option>
+                          <option>days_until_next_fill_count</option>
+                          <option>copay_30_amount</option>
                           <option>sob_cde</option>
                           <option>new_to_prdct_ind</option>
-                          <option>cncmt_ind</option>
-                          <option>final_claim_cde</option>
-                          <option>prmry_plan_grp_nbr</option>
-                          <option>scnry_plan_grp_nbr</option>
-                          <option>daw_cde</option>
-                          <option>athrz_refil_cnt</option>
+                          <option></option>
+                          <option>final_claim_code</option>
+                          <option>primary_plan_group_number</option>
+                          <option>secondary_plan_group_number</option>
+                          <option>daw_code</option>
+                          <option>Map to Self</option>
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -3993,32 +4090,32 @@
                           <option>claim_id</option>
                           <option selected>ptnt_id</option>
                           <option>drug_id</option>
-                          <option>mdcl_prctr_id</option>
-                          <option>prmry_plan_id</option>
-                          <option>ptnt_pay_amt</option>
-                          <option>prmry_plan_pay_amt</option>
-                          <option>scnry_plan_id</option>
-                          <option>scnry_plan_pay_amt</option>
-                          <option>ptnt_oop_pay_amt</option>
-                          <option>refil_cde</option>
-                          <option>dspnd_qty</option>
-                          <option>days_sply_cnt</option>
-                          <option>rx_fill_dte</option>
-                          <option>ptnt_claim_seq_nbr</option>
-                          <option>claim_stus_cde</option>
-                          <option>claim_rjct_rsn_cde</option>
-                          <option>rvrsl_lag</option>
-                          <option>encyd_rx_id</option>
-                          <option>days_until_next_fill_cnt</option>
-                          <option>copay_30_amt</option>
+                          <option>medical_practitioner_id</option>
+                          <option>primary_plan_id</option>
+                          <option>patient_pay_amount</option>
+                          <option>primary_plan_pay_amount</option>
+                          <option>secondary_plan_id</option>
+                          <option>secondary_plan_pay_amount</option>
+                          <option>patient_oop_pay_amount</option>
+                          <option>refill_code</option>
+                          <option>dispensed_quantity</option>
+                          <option>days_supply</option>
+                          <option>rx_fill_date</option>
+                          <option>patient_claim_sequence_number</option>
+                          <option>claim_status_code</option>
+                          <option>claim_rjct_rsn_code</option>
+                          <option></option>
+                          <option></option>
+                          <option>days_until_next_fill_count</option>
+                          <option>copay_30_amount</option>
                           <option>sob_cde</option>
                           <option>new_to_prdct_ind</option>
-                          <option>cncmt_ind</option>
-                          <option>final_claim_cde</option>
-                          <option>prmry_plan_grp_nbr</option>
-                          <option>scnry_plan_grp_nbr</option>
-                          <option>daw_cde</option>
-                          <option>athrz_refil_cnt</option>
+                          <option></option>
+                          <option>final_claim_code</option>
+                          <option>primary_plan_group_number</option>
+                          <option>secondary_plan_group_number</option>
+                          <option>daw_code</option>
+                          <option>Map to Self</option>
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4029,32 +4126,32 @@
                           <option>claim_id</option>
                           <option>ptnt_id</option>
                           <option selected>drug_id</option>
-                          <option>mdcl_prctr_id</option>
-                          <option>prmry_plan_id</option>
-                          <option>ptnt_pay_amt</option>
-                          <option>prmry_plan_pay_amt</option>
-                          <option>scnry_plan_id</option>
-                          <option>scnry_plan_pay_amt</option>
-                          <option>ptnt_oop_pay_amt</option>
-                          <option>refil_cde</option>
-                          <option>dspnd_qty</option>
-                          <option>days_sply_cnt</option>
-                          <option>rx_fill_dte</option>
-                          <option>ptnt_claim_seq_nbr</option>
-                          <option>claim_stus_cde</option>
-                          <option>claim_rjct_rsn_cde</option>
-                          <option>rvrsl_lag</option>
-                          <option>encyd_rx_id</option>
-                          <option>days_until_next_fill_cnt</option>
-                          <option>copay_30_amt</option>
+                          <option>medical_practitioner_id</option>
+                          <option>primary_plan_id</option>
+                          <option>patient_pay_amount</option>
+                          <option>primary_plan_pay_amount</option>
+                          <option>secondary_plan_id</option>
+                          <option>secondary_plan_pay_amount</option>
+                          <option>patient_oop_pay_amount</option>
+                          <option>refill_code</option>
+                          <option>dispensed_quantity</option>
+                          <option>days_supply</option>
+                          <option>rx_fill_date</option>
+                          <option>patient_claim_sequence_number</option>
+                          <option>claim_status_code</option>
+                          <option>claim_rjct_rsn_code</option>
+                          <option></option>
+                          <option></option>
+                          <option>days_until_next_fill_count</option>
+                          <option>copay_30_amount</option>
                           <option>sob_cde</option>
                           <option>new_to_prdct_ind</option>
-                          <option>cncmt_ind</option>
-                          <option>final_claim_cde</option>
-                          <option>prmry_plan_grp_nbr</option>
-                          <option>scnry_plan_grp_nbr</option>
-                          <option>daw_cde</option>
-                          <option>athrz_refil_cnt</option>
+                          <option></option>
+                          <option>final_claim_code</option>
+                          <option>primary_plan_group_number</option>
+                          <option>secondary_plan_group_number</option>
+                          <option>daw_code</option>
+                          <option>Map to Self</option>
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4065,32 +4162,32 @@
                           <option>claim_id</option>
                           <option>ptnt_id</option>
                           <option>drug_id</option>
-                          <option selected>mdcl_prctr_id</option>
-                          <option>prmry_plan_id</option>
-                          <option>ptnt_pay_amt</option>
-                          <option>prmry_plan_pay_amt</option>
-                          <option>scnry_plan_id</option>
-                          <option>scnry_plan_pay_amt</option>
-                          <option>ptnt_oop_pay_amt</option>
-                          <option>refil_cde</option>
-                          <option>dspnd_qty</option>
-                          <option>days_sply_cnt</option>
-                          <option>rx_fill_dte</option>
-                          <option>ptnt_claim_seq_nbr</option>
-                          <option>claim_stus_cde</option>
-                          <option>claim_rjct_rsn_cde</option>
-                          <option>rvrsl_lag</option>
-                          <option>encyd_rx_id</option>
-                          <option>days_until_next_fill_cnt</option>
-                          <option>copay_30_amt</option>
+                          <option selected>medical_practitioner_id</option>
+                          <option>primary_plan_id</option>
+                          <option>patient_pay_amount</option>
+                          <option>primary_plan_pay_amount</option>
+                          <option>secondary_plan_id</option>
+                          <option>secondary_plan_pay_amount</option>
+                          <option>patient_oop_pay_amount</option>
+                          <option>refill_code</option>
+                          <option>dispensed_quantity</option>
+                          <option>days_supply</option>
+                          <option>rx_fill_date</option>
+                          <option>patient_claim_sequence_number</option>
+                          <option>claim_status_code</option>
+                          <option>claim_rjct_rsn_code</option>
+                          <option></option>
+                          <option></option>
+                          <option>days_until_next_fill_count</option>
+                          <option>copay_30_amount</option>
                           <option>sob_cde</option>
                           <option>new_to_prdct_ind</option>
-                          <option>cncmt_ind</option>
-                          <option>final_claim_cde</option>
-                          <option>prmry_plan_grp_nbr</option>
-                          <option>scnry_plan_grp_nbr</option>
-                          <option>daw_cde</option>
-                          <option>athrz_refil_cnt</option>
+                          <option></option>
+                          <option>final_claim_code</option>
+                          <option>primary_plan_group_number</option>
+                          <option>secondary_plan_group_number</option>
+                          <option>daw_code</option>
+                          <option>Map to Self</option>
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4101,32 +4198,32 @@
                           <option>claim_id</option>
                           <option>ptnt_id</option>
                           <option>drug_id</option>
-                          <option>mdcl_prctr_id</option>
-                          <option selected>prmry_plan_id</option>
-                          <option>ptnt_pay_amt</option>
-                          <option>prmry_plan_pay_amt</option>
-                          <option>scnry_plan_id</option>
-                          <option>scnry_plan_pay_amt</option>
-                          <option>ptnt_oop_pay_amt</option>
-                          <option>refil_cde</option>
-                          <option>dspnd_qty</option>
-                          <option>days_sply_cnt</option>
-                          <option>rx_fill_dte</option>
-                          <option>ptnt_claim_seq_nbr</option>
-                          <option>claim_stus_cde</option>
-                          <option>claim_rjct_rsn_cde</option>
-                          <option>rvrsl_lag</option>
-                          <option>encyd_rx_id</option>
-                          <option>days_until_next_fill_cnt</option>
-                          <option>copay_30_amt</option>
+                          <option>medical_practitioner_id</option>
+                          <option selected>primary_plan_id</option>
+                          <option>patient_pay_amount</option>
+                          <option>primary_plan_pay_amount</option>
+                          <option>secondary_plan_id</option>
+                          <option>secondary_plan_pay_amount</option>
+                          <option>patient_oop_pay_amount</option>
+                          <option>refill_code</option>
+                          <option>dispensed_quantity</option>
+                          <option>days_supply</option>
+                          <option>rx_fill_date</option>
+                          <option>patient_claim_sequence_number</option>
+                          <option>claim_status_code</option>
+                          <option>claim_rjct_rsn_code</option>
+                          <option></option>
+                          <option></option>
+                          <option>days_until_next_fill_count</option>
+                          <option>copay_30_amount</option>
                           <option>sob_cde</option>
                           <option>new_to_prdct_ind</option>
-                          <option>cncmt_ind</option>
-                          <option>final_claim_cde</option>
-                          <option>prmry_plan_grp_nbr</option>
-                          <option>scnry_plan_grp_nbr</option>
-                          <option>daw_cde</option>
-                          <option>athrz_refil_cnt</option>
+                          <option></option>
+                          <option>final_claim_code</option>
+                          <option>primary_plan_group_number</option>
+                          <option>secondary_plan_group_number</option>
+                          <option>daw_code</option>
+                          <option>Map to Self</option>
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4137,32 +4234,32 @@
                           <option>claim_id</option>
                           <option>ptnt_id</option>
                           <option>drug_id</option>
-                          <option>mdcl_prctr_id</option>
-                          <option>prmry_plan_id</option>
-                          <option selected>ptnt_pay_amt</option>
-                          <option>prmry_plan_pay_amt</option>
-                          <option>scnry_plan_id</option>
-                          <option>scnry_plan_pay_amt</option>
-                          <option>ptnt_oop_pay_amt</option>
-                          <option>refil_cde</option>
-                          <option>dspnd_qty</option>
-                          <option>days_sply_cnt</option>
-                          <option>rx_fill_dte</option>
-                          <option>ptnt_claim_seq_nbr</option>
-                          <option>claim_stus_cde</option>
-                          <option>claim_rjct_rsn_cde</option>
-                          <option>rvrsl_lag</option>
-                          <option>encyd_rx_id</option>
-                          <option>days_until_next_fill_cnt</option>
-                          <option>copay_30_amt</option>
+                          <option>medical_practitioner_id</option>
+                          <option>primary_plan_id</option>
+                          <option selected>patient_pay_amount</option>
+                          <option>primary_plan_pay_amount</option>
+                          <option>secondary_plan_id</option>
+                          <option>secondary_plan_pay_amount</option>
+                          <option>patient_oop_pay_amount</option>
+                          <option>refill_code</option>
+                          <option>dispensed_quantity</option>
+                          <option>days_supply</option>
+                          <option>rx_fill_date</option>
+                          <option>patient_claim_sequence_number</option>
+                          <option>claim_status_code</option>
+                          <option>claim_rjct_rsn_code</option>
+                          <option></option>
+                          <option></option>
+                          <option>days_until_next_fill_count</option>
+                          <option>copay_30_amount</option>
                           <option>sob_cde</option>
                           <option>new_to_prdct_ind</option>
-                          <option>cncmt_ind</option>
-                          <option>final_claim_cde</option>
-                          <option>prmry_plan_grp_nbr</option>
-                          <option>scnry_plan_grp_nbr</option>
-                          <option>daw_cde</option>
-                          <option>athrz_refil_cnt</option>
+                          <option></option>
+                          <option>final_claim_code</option>
+                          <option>primary_plan_group_number</option>
+                          <option>secondary_plan_group_number</option>
+                          <option>daw_code</option>
+                          <option>Map to Self</option>
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4173,32 +4270,32 @@
                           <option>claim_id</option>
                           <option>ptnt_id</option>
                           <option>drug_id</option>
-                          <option>mdcl_prctr_id</option>
-                          <option>prmry_plan_id</option>
-                          <option>ptnt_pay_amt</option>
-                          <option selected>prmry_plan_pay_amt</option>
-                          <option>scnry_plan_id</option>
-                          <option>scnry_plan_pay_amt</option>
-                          <option>ptnt_oop_pay_amt</option>
-                          <option>refil_cde</option>
-                          <option>dspnd_qty</option>
-                          <option>days_sply_cnt</option>
-                          <option>rx_fill_dte</option>
-                          <option>ptnt_claim_seq_nbr</option>
-                          <option>claim_stus_cde</option>
-                          <option>claim_rjct_rsn_cde</option>
-                          <option>rvrsl_lag</option>
-                          <option>encyd_rx_id</option>
-                          <option>days_until_next_fill_cnt</option>
-                          <option>copay_30_amt</option>
+                          <option>medical_practitioner_id</option>
+                          <option>primary_plan_id</option>
+                          <option>patient_pay_amount</option>
+                          <option selected>primary_plan_pay_amount</option>
+                          <option>secondary_plan_id</option>
+                          <option>secondary_plan_pay_amount</option>
+                          <option>patient_oop_pay_amount</option>
+                          <option>refill_code</option>
+                          <option>dispensed_quantity</option>
+                          <option>days_supply</option>
+                          <option>rx_fill_date</option>
+                          <option>patient_claim_sequence_number</option>
+                          <option>claim_status_code</option>
+                          <option>claim_rjct_rsn_code</option>
+                          <option></option>
+                          <option></option>
+                          <option>days_until_next_fill_count</option>
+                          <option>copay_30_amount</option>
                           <option>sob_cde</option>
                           <option>new_to_prdct_ind</option>
-                          <option>cncmt_ind</option>
-                          <option>final_claim_cde</option>
-                          <option>prmry_plan_grp_nbr</option>
-                          <option>scnry_plan_grp_nbr</option>
-                          <option>daw_cde</option>
-                          <option>athrz_refil_cnt</option>
+                          <option></option>
+                          <option>final_claim_code</option>
+                          <option>primary_plan_group_number</option>
+                          <option>secondary_plan_group_number</option>
+                          <option>daw_code</option>
+                          <option>Map to Self</option>
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4209,32 +4306,32 @@
                           <option>claim_id</option>
                           <option>ptnt_id</option>
                           <option>drug_id</option>
-                          <option>mdcl_prctr_id</option>
-                          <option>prmry_plan_id</option>
-                          <option>ptnt_pay_amt</option>
-                          <option>prmry_plan_pay_amt</option>
-                          <option selected>scnry_plan_id</option>
-                          <option>scnry_plan_pay_amt</option>
-                          <option>ptnt_oop_pay_amt</option>
-                          <option>refil_cde</option>
-                          <option>dspnd_qty</option>
-                          <option>days_sply_cnt</option>
-                          <option>rx_fill_dte</option>
-                          <option>ptnt_claim_seq_nbr</option>
-                          <option>claim_stus_cde</option>
-                          <option>claim_rjct_rsn_cde</option>
-                          <option>rvrsl_lag</option>
-                          <option>encyd_rx_id</option>
-                          <option>days_until_next_fill_cnt</option>
-                          <option>copay_30_amt</option>
+                          <option>medical_practitioner_id</option>
+                          <option>primary_plan_id</option>
+                          <option>patient_pay_amount</option>
+                          <option>primary_plan_pay_amount</option>
+                          <option selected>secondary_plan_id</option>
+                          <option>secondary_plan_pay_amount</option>
+                          <option>patient_oop_pay_amount</option>
+                          <option>refill_code</option>
+                          <option>dispensed_quantity</option>
+                          <option>days_supply</option>
+                          <option>rx_fill_date</option>
+                          <option>patient_claim_sequence_number</option>
+                          <option>claim_status_code</option>
+                          <option>claim_rjct_rsn_code</option>
+                          <option></option>
+                          <option></option>
+                          <option>days_until_next_fill_count</option>
+                          <option>copay_30_amount</option>
                           <option>sob_cde</option>
                           <option>new_to_prdct_ind</option>
-                          <option>cncmt_ind</option>
-                          <option>final_claim_cde</option>
-                          <option>prmry_plan_grp_nbr</option>
-                          <option>scnry_plan_grp_nbr</option>
-                          <option>daw_cde</option>
-                          <option>athrz_refil_cnt</option>
+                          <option></option>
+                          <option>final_claim_code</option>
+                          <option>primary_plan_group_number</option>
+                          <option>secondary_plan_group_number</option>
+                          <option>daw_code</option>
+                          <option>Map to Self</option>
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4245,32 +4342,32 @@
                           <option>claim_id</option>
                           <option>ptnt_id</option>
                           <option>drug_id</option>
-                          <option>mdcl_prctr_id</option>
-                          <option>prmry_plan_id</option>
-                          <option>ptnt_pay_amt</option>
-                          <option>prmry_plan_pay_amt</option>
-                          <option>scnry_plan_id</option>
-                          <option selected>scnry_plan_pay_amt</option>
-                          <option>ptnt_oop_pay_amt</option>
-                          <option>refil_cde</option>
-                          <option>dspnd_qty</option>
-                          <option>days_sply_cnt</option>
-                          <option>rx_fill_dte</option>
-                          <option>ptnt_claim_seq_nbr</option>
-                          <option>claim_stus_cde</option>
-                          <option>claim_rjct_rsn_cde</option>
-                          <option>rvrsl_lag</option>
-                          <option>encyd_rx_id</option>
-                          <option>days_until_next_fill_cnt</option>
-                          <option>copay_30_amt</option>
+                          <option>medical_practitioner_id</option>
+                          <option>primary_plan_id</option>
+                          <option>patient_pay_amount</option>
+                          <option>primary_plan_pay_amount</option>
+                          <option>secondary_plan_id</option>
+                          <option selected>secondary_plan_pay_amount</option>
+                          <option>patient_oop_pay_amount</option>
+                          <option>refill_code</option>
+                          <option>dispensed_quantity</option>
+                          <option>days_supply</option>
+                          <option>rx_fill_date</option>
+                          <option>patient_claim_sequence_number</option>
+                          <option>claim_status_code</option>
+                          <option>claim_rjct_rsn_code</option>
+                          <option></option>
+                          <option></option>
+                          <option>days_until_next_fill_count</option>
+                          <option>copay_30_amount</option>
                           <option>sob_cde</option>
                           <option>new_to_prdct_ind</option>
-                          <option>cncmt_ind</option>
-                          <option>final_claim_cde</option>
-                          <option>prmry_plan_grp_nbr</option>
-                          <option>scnry_plan_grp_nbr</option>
-                          <option>daw_cde</option>
-                          <option>athrz_refil_cnt</option>
+                          <option></option>
+                          <option>final_claim_code</option>
+                          <option>primary_plan_group_number</option>
+                          <option>secondary_plan_group_number</option>
+                          <option>daw_code</option>
+                          <option>Map to Self</option>
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4281,32 +4378,32 @@
                           <option>claim_id</option>
                           <option>ptnt_id</option>
                           <option>drug_id</option>
-                          <option>mdcl_prctr_id</option>
-                          <option>prmry_plan_id</option>
-                          <option>ptnt_pay_amt</option>
-                          <option>prmry_plan_pay_amt</option>
-                          <option>scnry_plan_id</option>
-                          <option>scnry_plan_pay_amt</option>
-                          <option selected>ptnt_oop_pay_amt</option>
-                          <option>refil_cde</option>
-                          <option>dspnd_qty</option>
-                          <option>days_sply_cnt</option>
-                          <option>rx_fill_dte</option>
-                          <option>ptnt_claim_seq_nbr</option>
-                          <option>claim_stus_cde</option>
-                          <option>claim_rjct_rsn_cde</option>
-                          <option>rvrsl_lag</option>
-                          <option>encyd_rx_id</option>
-                          <option>days_until_next_fill_cnt</option>
-                          <option>copay_30_amt</option>
+                          <option>medical_practitioner_id</option>
+                          <option>primary_plan_id</option>
+                          <option>patient_pay_amount</option>
+                          <option>primary_plan_pay_amount</option>
+                          <option>secondary_plan_id</option>
+                          <option>secondary_plan_pay_amount</option>
+                          <option selected>patient_oop_pay_amount</option>
+                          <option>refill_code</option>
+                          <option>dispensed_quantity</option>
+                          <option>days_supply</option>
+                          <option>rx_fill_date</option>
+                          <option>patient_claim_sequence_number</option>
+                          <option>claim_status_code</option>
+                          <option>claim_rjct_rsn_code</option>
+                          <option></option>
+                          <option></option>
+                          <option>days_until_next_fill_count</option>
+                          <option>copay_30_amount</option>
                           <option>sob_cde</option>
                           <option>new_to_prdct_ind</option>
-                          <option>cncmt_ind</option>
-                          <option>final_claim_cde</option>
-                          <option>prmry_plan_grp_nbr</option>
-                          <option>scnry_plan_grp_nbr</option>
-                          <option>daw_cde</option>
-                          <option>athrz_refil_cnt</option>
+                          <option></option>
+                          <option>final_claim_code</option>
+                          <option>primary_plan_group_number</option>
+                          <option>secondary_plan_group_number</option>
+                          <option>daw_code</option>
+                          <option>Map to Self</option>
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4317,32 +4414,32 @@
                           <option>claim_id</option>
                           <option>ptnt_id</option>
                           <option>drug_id</option>
-                          <option>mdcl_prctr_id</option>
-                          <option>prmry_plan_id</option>
-                          <option>ptnt_pay_amt</option>
-                          <option>prmry_plan_pay_amt</option>
-                          <option>scnry_plan_id</option>
-                          <option>scnry_plan_pay_amt</option>
-                          <option>ptnt_oop_pay_amt</option>
-                          <option selected>refil_cde</option>
-                          <option>dspnd_qty</option>
-                          <option>days_sply_cnt</option>
-                          <option>rx_fill_dte</option>
-                          <option>ptnt_claim_seq_nbr</option>
-                          <option>claim_stus_cde</option>
-                          <option>claim_rjct_rsn_cde</option>
-                          <option>rvrsl_lag</option>
-                          <option>encyd_rx_id</option>
-                          <option>days_until_next_fill_cnt</option>
-                          <option>copay_30_amt</option>
+                          <option>medical_practitioner_id</option>
+                          <option>primary_plan_id</option>
+                          <option>patient_pay_amount</option>
+                          <option>primary_plan_pay_amount</option>
+                          <option>secondary_plan_id</option>
+                          <option>secondary_plan_pay_amount</option>
+                          <option>patient_oop_pay_amount</option>
+                          <option selected>refill_code</option>
+                          <option>dispensed_quantity</option>
+                          <option>days_supply</option>
+                          <option>rx_fill_date</option>
+                          <option>patient_claim_sequence_number</option>
+                          <option>claim_status_code</option>
+                          <option>claim_rjct_rsn_code</option>
+                          <option></option>
+                          <option></option>
+                          <option>days_until_next_fill_count</option>
+                          <option>copay_30_amount</option>
                           <option>sob_cde</option>
                           <option>new_to_prdct_ind</option>
-                          <option>cncmt_ind</option>
-                          <option>final_claim_cde</option>
-                          <option>prmry_plan_grp_nbr</option>
-                          <option>scnry_plan_grp_nbr</option>
-                          <option>daw_cde</option>
-                          <option>athrz_refil_cnt</option>
+                          <option></option>
+                          <option>final_claim_code</option>
+                          <option>primary_plan_group_number</option>
+                          <option>secondary_plan_group_number</option>
+                          <option>daw_code</option>
+                          <option>Map to Self</option>
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4353,32 +4450,32 @@
                           <option>claim_id</option>
                           <option>ptnt_id</option>
                           <option>drug_id</option>
-                          <option>mdcl_prctr_id</option>
-                          <option>prmry_plan_id</option>
-                          <option>ptnt_pay_amt</option>
-                          <option>prmry_plan_pay_amt</option>
-                          <option>scnry_plan_id</option>
-                          <option>scnry_plan_pay_amt</option>
-                          <option>ptnt_oop_pay_amt</option>
-                          <option>refil_cde</option>
-                          <option selected>dspnd_qty</option>
-                          <option>days_sply_cnt</option>
-                          <option>rx_fill_dte</option>
-                          <option>ptnt_claim_seq_nbr</option>
-                          <option>claim_stus_cde</option>
-                          <option>claim_rjct_rsn_cde</option>
-                          <option>rvrsl_lag</option>
-                          <option>encyd_rx_id</option>
-                          <option>days_until_next_fill_cnt</option>
-                          <option>copay_30_amt</option>
+                          <option>medical_practitioner_id</option>
+                          <option>primary_plan_id</option>
+                          <option>patient_pay_amount</option>
+                          <option>primary_plan_pay_amount</option>
+                          <option>secondary_plan_id</option>
+                          <option>secondary_plan_pay_amount</option>
+                          <option>patient_oop_pay_amount</option>
+                          <option>refill_code</option>
+                          <option selected>dispensed_quantity</option>
+                          <option>days_supply</option>
+                          <option>rx_fill_date</option>
+                          <option>patient_claim_sequence_number</option>
+                          <option>claim_status_code</option>
+                          <option>claim_rjct_rsn_code</option>
+                          <option></option>
+                          <option></option>
+                          <option>days_until_next_fill_count</option>
+                          <option>copay_30_amount</option>
                           <option>sob_cde</option>
                           <option>new_to_prdct_ind</option>
-                          <option>cncmt_ind</option>
-                          <option>final_claim_cde</option>
-                          <option>prmry_plan_grp_nbr</option>
-                          <option>scnry_plan_grp_nbr</option>
-                          <option>daw_cde</option>
-                          <option>athrz_refil_cnt</option>
+                          <option></option>
+                          <option>final_claim_code</option>
+                          <option>primary_plan_group_number</option>
+                          <option>secondary_plan_group_number</option>
+                          <option>daw_code</option>
+                          <option>Map to Self</option>
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4389,32 +4486,32 @@
                           <option>claim_id</option>
                           <option>ptnt_id</option>
                           <option>drug_id</option>
-                          <option>mdcl_prctr_id</option>
-                          <option>prmry_plan_id</option>
-                          <option>ptnt_pay_amt</option>
-                          <option>prmry_plan_pay_amt</option>
-                          <option>scnry_plan_id</option>
-                          <option>scnry_plan_pay_amt</option>
-                          <option>ptnt_oop_pay_amt</option>
-                          <option>refil_cde</option>
-                          <option>dspnd_qty</option>
-                          <option selected>days_sply_cnt</option>
-                          <option>rx_fill_dte</option>
-                          <option>ptnt_claim_seq_nbr</option>
-                          <option>claim_stus_cde</option>
-                          <option>claim_rjct_rsn_cde</option>
-                          <option>rvrsl_lag</option>
-                          <option>encyd_rx_id</option>
-                          <option>days_until_next_fill_cnt</option>
-                          <option>copay_30_amt</option>
+                          <option>medical_practitioner_id</option>
+                          <option>primary_plan_id</option>
+                          <option>patient_pay_amount</option>
+                          <option>primary_plan_pay_amount</option>
+                          <option>secondary_plan_id</option>
+                          <option>secondary_plan_pay_amount</option>
+                          <option>patient_oop_pay_amount</option>
+                          <option>refill_code</option>
+                          <option>dispensed_quantity</option>
+                          <option selected>days_supply</option>
+                          <option>rx_fill_date</option>
+                          <option>patient_claim_sequence_number</option>
+                          <option>claim_status_code</option>
+                          <option>claim_rjct_rsn_code</option>
+                          <option></option>
+                          <option></option>
+                          <option>days_until_next_fill_count</option>
+                          <option>copay_30_amount</option>
                           <option>sob_cde</option>
                           <option>new_to_prdct_ind</option>
-                          <option>cncmt_ind</option>
-                          <option>final_claim_cde</option>
-                          <option>prmry_plan_grp_nbr</option>
-                          <option>scnry_plan_grp_nbr</option>
-                          <option>daw_cde</option>
-                          <option>athrz_refil_cnt</option>
+                          <option></option>
+                          <option>final_claim_code</option>
+                          <option>primary_plan_group_number</option>
+                          <option>secondary_plan_group_number</option>
+                          <option>daw_code</option>
+                          <option>Map to Self</option>
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4426,32 +4523,32 @@
                           <option>claim_id</option>
                           <option>ptnt_id</option>
                           <option>drug_id</option>
-                          <option>mdcl_prctr_id</option>
-                          <option>prmry_plan_id</option>
-                          <option>ptnt_pay_amt</option>
-                          <option>prmry_plan_pay_amt</option>
-                          <option>scnry_plan_id</option>
-                          <option>scnry_plan_pay_amt</option>
-                          <option>ptnt_oop_pay_amt</option>
-                          <option>refil_cde</option>
-                          <option>dspnd_qty</option>
-                          <option>days_sply_cnt</option>
-                          <option selected>rx_fill_dte</option>
-                          <option>ptnt_claim_seq_nbr</option>
-                          <option>claim_stus_cde</option>
-                          <option>claim_rjct_rsn_cde</option>
-                          <option>rvrsl_lag</option>
-                          <option>encyd_rx_id</option>
-                          <option>days_until_next_fill_cnt</option>
-                          <option>copay_30_amt</option>
+                          <option>medical_practitioner_id</option>
+                          <option>primary_plan_id</option>
+                          <option>patient_pay_amount</option>
+                          <option>primary_plan_pay_amount</option>
+                          <option>secondary_plan_id</option>
+                          <option>secondary_plan_pay_amount</option>
+                          <option>patient_oop_pay_amount</option>
+                          <option>refill_code</option>
+                          <option>dispensed_quantity</option>
+                          <option>days_supply</option>
+                          <option selected>rx_fill_date</option>
+                          <option>patient_claim_sequence_number</option>
+                          <option>claim_status_code</option>
+                          <option>claim_rjct_rsn_code</option>
+                          <option></option>
+                          <option></option>
+                          <option>days_until_next_fill_count</option>
+                          <option>copay_30_amount</option>
                           <option>sob_cde</option>
                           <option>new_to_prdct_ind</option>
-                          <option>cncmt_ind</option>
-                          <option>final_claim_cde</option>
-                          <option>prmry_plan_grp_nbr</option>
-                          <option>scnry_plan_grp_nbr</option>
-                          <option>daw_cde</option>
-                          <option>athrz_refil_cnt</option>
+                          <option></option>
+                          <option>final_claim_code</option>
+                          <option>primary_plan_group_number</option>
+                          <option>secondary_plan_group_number</option>
+                          <option>daw_code</option>
+                          <option>Map to Self</option>
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4463,32 +4560,32 @@
                           <option>claim_id</option>
                           <option>ptnt_id</option>
                           <option>drug_id</option>
-                          <option>mdcl_prctr_id</option>
-                          <option>prmry_plan_id</option>
-                          <option>ptnt_pay_amt</option>
-                          <option>prmry_plan_pay_amt</option>
-                          <option>scnry_plan_id</option>
-                          <option>scnry_plan_pay_amt</option>
-                          <option>ptnt_oop_pay_amt</option>
-                          <option>refil_cde</option>
-                          <option>dspnd_qty</option>
-                          <option>days_sply_cnt</option>
-                          <option>rx_fill_dte</option>
-                          <option selected>ptnt_claim_seq_nbr</option>
-                          <option>claim_stus_cde</option>
-                          <option>claim_rjct_rsn_cde</option>
-                          <option>rvrsl_lag</option>
-                          <option>encyd_rx_id</option>
-                          <option>days_until_next_fill_cnt</option>
-                          <option>copay_30_amt</option>
+                          <option>medical_practitioner_id</option>
+                          <option>primary_plan_id</option>
+                          <option>patient_pay_amount</option>
+                          <option>primary_plan_pay_amount</option>
+                          <option>secondary_plan_id</option>
+                          <option>secondary_plan_pay_amount</option>
+                          <option>patient_oop_pay_amount</option>
+                          <option>refill_code</option>
+                          <option>dispensed_quantity</option>
+                          <option>days_supply</option>
+                          <option>rx_fill_date</option>
+                          <option selected>patient_claim_sequence_number</option>
+                          <option>claim_status_code</option>
+                          <option>claim_rjct_rsn_code</option>
+                          <option></option>
+                          <option></option>
+                          <option>days_until_next_fill_count</option>
+                          <option>copay_30_amount</option>
                           <option>sob_cde</option>
                           <option>new_to_prdct_ind</option>
-                          <option>cncmt_ind</option>
-                          <option>final_claim_cde</option>
-                          <option>prmry_plan_grp_nbr</option>
-                          <option>scnry_plan_grp_nbr</option>
-                          <option>daw_cde</option>
-                          <option>athrz_refil_cnt</option>
+                          <option></option>
+                          <option>final_claim_code</option>
+                          <option>primary_plan_group_number</option>
+                          <option>secondary_plan_group_number</option>
+                          <option>daw_code</option>
+                          <option>Map to Self</option>
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4499,32 +4596,32 @@
                           <option>claim_id</option>
                           <option>ptnt_id</option>
                           <option>drug_id</option>
-                          <option>mdcl_prctr_id</option>
-                          <option>prmry_plan_id</option>
-                          <option>ptnt_pay_amt</option>
-                          <option>prmry_plan_pay_amt</option>
-                          <option>scnry_plan_id</option>
-                          <option>scnry_plan_pay_amt</option>
-                          <option>ptnt_oop_pay_amt</option>
-                          <option>refil_cde</option>
-                          <option>dspnd_qty</option>
-                          <option>days_sply_cnt</option>
-                          <option>rx_fill_dte</option>
-                          <option>ptnt_claim_seq_nbr</option>
-                          <option selected>claim_stus_cde</option>
-                          <option>claim_rjct_rsn_cde</option>
-                          <option>rvrsl_lag</option>
-                          <option>encyd_rx_id</option>
-                          <option>days_until_next_fill_cnt</option>
-                          <option>copay_30_amt</option>
+                          <option>medical_practitioner_id</option>
+                          <option>primary_plan_id</option>
+                          <option>patient_pay_amount</option>
+                          <option>primary_plan_pay_amount</option>
+                          <option>secondary_plan_id</option>
+                          <option>secondary_plan_pay_amount</option>
+                          <option>patient_oop_pay_amount</option>
+                          <option>refill_code</option>
+                          <option>dispensed_quantity</option>
+                          <option>days_supply</option>
+                          <option>rx_fill_date</option>
+                          <option>patient_claim_sequence_number</option>
+                          <option selected>claim_status_code</option>
+                          <option>claim_rjct_rsn_code</option>
+                          <option></option>
+                          <option></option>
+                          <option>days_until_next_fill_count</option>
+                          <option>copay_30_amount</option>
                           <option>sob_cde</option>
                           <option>new_to_prdct_ind</option>
-                          <option>cncmt_ind</option>
-                          <option>final_claim_cde</option>
-                          <option>prmry_plan_grp_nbr</option>
-                          <option>scnry_plan_grp_nbr</option>
-                          <option>daw_cde</option>
-                          <option>athrz_refil_cnt</option>
+                          <option></option>
+                          <option>final_claim_code</option>
+                          <option>primary_plan_group_number</option>
+                          <option>secondary_plan_group_number</option>
+                          <option>daw_code</option>
+                          <option>Map to Self</option>
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4535,68 +4632,68 @@
                           <option>claim_id</option>
                           <option>ptnt_id</option>
                           <option>drug_id</option>
-                          <option>mdcl_prctr_id</option>
-                          <option>prmry_plan_id</option>
-                          <option>ptnt_pay_amt</option>
-                          <option>prmry_plan_pay_amt</option>
-                          <option>scnry_plan_id</option>
-                          <option>scnry_plan_pay_amt</option>
-                          <option>ptnt_oop_pay_amt</option>
-                          <option>refil_cde</option>
-                          <option>dspnd_qty</option>
-                          <option>days_sply_cnt</option>
-                          <option>rx_fill_dte</option>
-                          <option>ptnt_claim_seq_nbr</option>
-                          <option>claim_stus_cde</option>
-                          <option selected>claim_rjct_rsn_cde</option>
-                          <option>rvrsl_lag</option>
-                          <option>encyd_rx_id</option>
-                          <option>days_until_next_fill_cnt</option>
-                          <option>copay_30_amt</option>
+                          <option>medical_practitioner_id</option>
+                          <option>primary_plan_id</option>
+                          <option>patient_pay_amount</option>
+                          <option>primary_plan_pay_amount</option>
+                          <option>secondary_plan_id</option>
+                          <option>secondary_plan_pay_amount</option>
+                          <option>patient_oop_pay_amount</option>
+                          <option>refill_code</option>
+                          <option>dispensed_quantity</option>
+                          <option>days_supply</option>
+                          <option>rx_fill_date</option>
+                          <option>patient_claim_sequence_number</option>
+                          <option>claim_status_code</option>
+                          <option selected>claim_rjct_rsn_code</option>
+                          <option></option>
+                          <option></option>
+                          <option>days_until_next_fill_count</option>
+                          <option>copay_30_amount</option>
                           <option>sob_cde</option>
                           <option>new_to_prdct_ind</option>
-                          <option>cncmt_ind</option>
-                          <option>final_claim_cde</option>
-                          <option>prmry_plan_grp_nbr</option>
-                          <option>scnry_plan_grp_nbr</option>
-                          <option>daw_cde</option>
-                          <option>athrz_refil_cnt</option>
+                          <option></option>
+                          <option>final_claim_code</option>
+                          <option>primary_plan_group_number</option>
+                          <option>secondary_plan_group_number</option>
+                          <option>daw_code</option>
+                          <option>Map to Self</option>
                           <option>deletion_flag</option>
           
                         </select></td>
                   </tr>
                   <tr>
                     <td>rvrsl_lag</td>
-                    <td><select class="form-control source_name">
+                    <td><select ss="form-control source_name">
                           <option>claim_id</option>
                           <option>ptnt_id</option>
                           <option>drug_id</option>
-                          <option>mdcl_prctr_id</option>
-                          <option>prmry_plan_id</option>
-                          <option>ptnt_pay_amt</option>
-                          <option>prmry_plan_pay_amt</option>
-                          <option>scnry_plan_id</option>
-                          <option>scnry_plan_pay_amt</option>
-                          <option>ptnt_oop_pay_amt</option>
-                          <option>refil_cde</option>
-                          <option>dspnd_qty</option>
-                          <option>days_sply_cnt</option>
-                          <option>rx_fill_dte</option>
-                          <option>ptnt_claim_seq_nbr</option>
-                          <option>claim_stus_cde</option>
-                          <option>claim_rjct_rsn_cde</option>
-                          <option selected>rvrsl_lag</option>
-                          <option>encyd_rx_id</option>
-                          <option>days_until_next_fill_cnt</option>
-                          <option>copay_30_amt</option>
+                          <option>medical_practitioner_id</option>
+                          <option>primary_plan_id</option>
+                          <option>patient_pay_amount</option>
+                          <option>primary_plan_pay_amount</option>
+                          <option>secondary_plan_id</option>
+                          <option>secondary_plan_pay_amount</option>
+                          <option>patient_oop_pay_amount</option>
+                          <option>refill_code</option>
+                          <option>dispensed_quantity</option>
+                          <option>days_supply</option>
+                          <option>rx_fill_date</option>
+                          <option>patient_claim_sequence_number</option>
+                          <option>claim_status_code</option>
+                          <option>claim_rjct_rsn_code</option>
+                          <option selected>Map to Self</option>
+                          <option>Map to Self</option>
+                          <option>days_until_next_fill_count</option>
+                          <option>copay_30_amount</option>
                           <option>sob_cde</option>
                           <option>new_to_prdct_ind</option>
-                          <option>cncmt_ind</option>
-                          <option>final_claim_cde</option>
-                          <option>prmry_plan_grp_nbr</option>
-                          <option>scnry_plan_grp_nbr</option>
-                          <option>daw_cde</option>
-                          <option>athrz_refil_cnt</option>
+                          <option></option>
+                          <option>final_claim_code</option>
+                          <option>primary_plan_group_number</option>
+                          <option>secondary_plan_group_number</option>
+                          <option>daw_code</option>
+                          <option>Map to Self</option>
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4607,32 +4704,32 @@
                           <option>claim_id</option>
                           <option>ptnt_id</option>
                           <option>drug_id</option>
-                          <option>mdcl_prctr_id</option>
-                          <option>prmry_plan_id</option>
-                          <option>ptnt_pay_amt</option>
-                          <option>prmry_plan_pay_amt</option>
-                          <option>scnry_plan_id</option>
-                          <option>scnry_plan_pay_amt</option>
-                          <option>ptnt_oop_pay_amt</option>
-                          <option>refil_cde</option>
-                          <option>dspnd_qty</option>
-                          <option>days_sply_cnt</option>
-                          <option>rx_fill_dte</option>
-                          <option>ptnt_claim_seq_nbr</option>
-                          <option>claim_stus_cde</option>
-                          <option>claim_rjct_rsn_cde</option>
-                          <option>rvrsl_lag</option>
-                          <option selected>encyd_rx_id</option>
-                          <option>days_until_next_fill_cnt</option>
-                          <option>copay_30_amt</option>
+                          <option>medical_practitioner_id</option>
+                          <option>primary_plan_id</option>
+                          <option>patient_pay_amount</option>
+                          <option>primary_plan_pay_amount</option>
+                          <option>secondary_plan_id</option>
+                          <option>secondary_plan_pay_amount</option>
+                          <option>patient_oop_pay_amount</option>
+                          <option>refill_code</option>
+                          <option>dispensed_quantity</option>
+                          <option>days_supply</option>
+                          <option>rx_fill_date</option>
+                          <option>patient_claim_sequence_number</option>
+                          <option>claim_status_code</option>
+                          <option>claim_rjct_rsn_code</option>
+                          <option></option>
+                          <option selected>Map to Self</option>
+                          <option>days_until_next_fill_count</option>
+                          <option>copay_30_amount</option>
                           <option>sob_cde</option>
                           <option>new_to_prdct_ind</option>
-                          <option>cncmt_ind</option>
-                          <option>final_claim_cde</option>
-                          <option>prmry_plan_grp_nbr</option>
-                          <option>scnry_plan_grp_nbr</option>
-                          <option>daw_cde</option>
-                          <option>athrz_refil_cnt</option>
+                          <option></option>
+                          <option>final_claim_code</option>
+                          <option>primary_plan_group_number</option>
+                          <option>secondary_plan_group_number</option>
+                          <option>daw_code</option>
+                          <option>Map to Self</option>
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4643,32 +4740,32 @@
                           <option>claim_id</option>
                           <option>ptnt_id</option>
                           <option>drug_id</option>
-                          <option>mdcl_prctr_id</option>
-                          <option>prmry_plan_id</option>
-                          <option>ptnt_pay_amt</option>
-                          <option>prmry_plan_pay_amt</option>
-                          <option>scnry_plan_id</option>
-                          <option>scnry_plan_pay_amt</option>
-                          <option>ptnt_oop_pay_amt</option>
-                          <option>refil_cde</option>
-                          <option>dspnd_qty</option>
-                          <option>days_sply_cnt</option>
-                          <option>rx_fill_dte</option>
-                          <option>ptnt_claim_seq_nbr</option>
-                          <option>claim_stus_cde</option>
-                          <option>claim_rjct_rsn_cde</option>
-                          <option>rvrsl_lag</option>
-                          <option>encyd_rx_id</option>
-                          <option selected>days_until_next_fill_cnt</option>
-                          <option>copay_30_amt</option>
+                          <option>medical_practitioner_id</option>
+                          <option>primary_plan_id</option>
+                          <option>patient_pay_amount</option>
+                          <option>primary_plan_pay_amount</option>
+                          <option>secondary_plan_id</option>
+                          <option>secondary_plan_pay_amount</option>
+                          <option>patient_oop_pay_amount</option>
+                          <option>refill_code</option>
+                          <option>dispensed_quantity</option>
+                          <option>days_supply</option>
+                          <option>rx_fill_date</option>
+                          <option>patient_claim_sequence_number</option>
+                          <option>claim_status_code</option>
+                          <option>claim_rjct_rsn_code</option>
+                          <option></option>
+                          <option></option>
+                          <option selected>days_until_next_fill_count</option>
+                          <option>copay_30_amount</option>
                           <option>sob_cde</option>
                           <option>new_to_prdct_ind</option>
-                          <option>cncmt_ind</option>
-                          <option>final_claim_cde</option>
-                          <option>prmry_plan_grp_nbr</option>
-                          <option>scnry_plan_grp_nbr</option>
-                          <option>daw_cde</option>
-                          <option>athrz_refil_cnt</option>
+                          <option></option>
+                          <option>final_claim_code</option>
+                          <option>primary_plan_group_number</option>
+                          <option>secondary_plan_group_number</option>
+                          <option>daw_code</option>
+                          <option>Map to Self</option>
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4679,32 +4776,32 @@
                           <option>claim_id</option>
                           <option>ptnt_id</option>
                           <option>drug_id</option>
-                          <option>mdcl_prctr_id</option>
-                          <option>prmry_plan_id</option>
-                          <option>ptnt_pay_amt</option>
-                          <option>prmry_plan_pay_amt</option>
-                          <option>scnry_plan_id</option>
-                          <option>scnry_plan_pay_amt</option>
-                          <option>ptnt_oop_pay_amt</option>
-                          <option>refil_cde</option>
-                          <option>dspnd_qty</option>
-                          <option>days_sply_cnt</option>
-                          <option>rx_fill_dte</option>
-                          <option>ptnt_claim_seq_nbr</option>
-                          <option>claim_stus_cde</option>
-                          <option>claim_rjct_rsn_cde</option>
-                          <option>rvrsl_lag</option>
-                          <option>encyd_rx_id</option>
-                          <option>days_until_next_fill_cnt</option>
-                          <option selected>copay_30_amt</option>
+                          <option>medical_practitioner_id</option>
+                          <option>primary_plan_id</option>
+                          <option>patient_pay_amount</option>
+                          <option>primary_plan_pay_amount</option>
+                          <option>secondary_plan_id</option>
+                          <option>secondary_plan_pay_amount</option>
+                          <option>patient_oop_pay_amount</option>
+                          <option>refill_code</option>
+                          <option>dispensed_quantity</option>
+                          <option>days_supply</option>
+                          <option>rx_fill_date</option>
+                          <option>patient_claim_sequence_number</option>
+                          <option>claim_status_code</option>
+                          <option>claim_rjct_rsn_code</option>
+                          <option></option>
+                          <option></option>
+                          <option>days_until_next_fill_count</option>
+                          <option selected>copay_30_amount</option>
                           <option>sob_cde</option>
                           <option>new_to_prdct_ind</option>
-                          <option>cncmt_ind</option>
-                          <option>final_claim_cde</option>
-                          <option>prmry_plan_grp_nbr</option>
-                          <option>scnry_plan_grp_nbr</option>
-                          <option>daw_cde</option>
-                          <option>athrz_refil_cnt</option>
+                          <option></option>
+                          <option>final_claim_code</option>
+                          <option>primary_plan_group_number</option>
+                          <option>secondary_plan_group_number</option>
+                          <option>daw_code</option>
+                          <option>Map to Self</option>
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4715,32 +4812,32 @@
                           <option>claim_id</option>
                           <option>ptnt_id</option>
                           <option>drug_id</option>
-                          <option>mdcl_prctr_id</option>
-                          <option>prmry_plan_id</option>
-                          <option>ptnt_pay_amt</option>
-                          <option>prmry_plan_pay_amt</option>
-                          <option>scnry_plan_id</option>
-                          <option>scnry_plan_pay_amt</option>
-                          <option>ptnt_oop_pay_amt</option>
-                          <option>refil_cde</option>
-                          <option>dspnd_qty</option>
-                          <option>days_sply_cnt</option>
-                          <option>rx_fill_dte</option>
-                          <option>ptnt_claim_seq_nbr</option>
-                          <option>claim_stus_cde</option>
-                          <option>claim_rjct_rsn_cde</option>
-                          <option>rvrsl_lag</option>
-                          <option>encyd_rx_id</option>
-                          <option>days_until_next_fill_cnt</option>
-                          <option>copay_30_amt</option>
+                          <option>medical_practitioner_id</option>
+                          <option>primary_plan_id</option>
+                          <option>patient_pay_amount</option>
+                          <option>primary_plan_pay_amount</option>
+                          <option>secondary_plan_id</option>
+                          <option>secondary_plan_pay_amount</option>
+                          <option>patient_oop_pay_amount</option>
+                          <option>refill_code</option>
+                          <option>dispensed_quantity</option>
+                          <option>days_supply</option>
+                          <option>rx_fill_date</option>
+                          <option>patient_claim_sequence_number</option>
+                          <option>claim_status_code</option>
+                          <option>claim_rjct_rsn_code</option>
+                          <option></option>
+                          <option></option>
+                          <option>days_until_next_fill_count</option>
+                          <option>copay_30_amount</option>
                           <option selected>sob_cde</option>
                           <option>new_to_prdct_ind</option>
-                          <option>cncmt_ind</option>
-                          <option>final_claim_cde</option>
-                          <option>prmry_plan_grp_nbr</option>
-                          <option>scnry_plan_grp_nbr</option>
-                          <option>daw_cde</option>
-                          <option>athrz_refil_cnt</option>
+                          <option></option>
+                          <option>final_claim_code</option>
+                          <option>primary_plan_group_number</option>
+                          <option>secondary_plan_group_number</option>
+                          <option>daw_code</option>
+                          <option>Map to Self</option>
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4751,32 +4848,32 @@
                           <option>claim_id</option>
                           <option>ptnt_id</option>
                           <option>drug_id</option>
-                          <option>mdcl_prctr_id</option>
-                          <option>prmry_plan_id</option>
-                          <option>ptnt_pay_amt</option>
-                          <option>prmry_plan_pay_amt</option>
-                          <option>scnry_plan_id</option>
-                          <option>scnry_plan_pay_amt</option>
-                          <option>ptnt_oop_pay_amt</option>
-                          <option>refil_cde</option>
-                          <option>dspnd_qty</option>
-                          <option>days_sply_cnt</option>
-                          <option>rx_fill_dte</option>
-                          <option>ptnt_claim_seq_nbr</option>
-                          <option>claim_stus_cde</option>
-                          <option>claim_rjct_rsn_cde</option>
-                          <option>rvrsl_lag</option>
-                          <option>encyd_rx_id</option>
-                          <option>days_until_next_fill_cnt</option>
-                          <option>copay_30_amt</option>
+                          <option>medical_practitioner_id</option>
+                          <option>primary_plan_id</option>
+                          <option>patient_pay_amount</option>
+                          <option>primary_plan_pay_amount</option>
+                          <option>secondary_plan_id</option>
+                          <option>secondary_plan_pay_amount</option>
+                          <option>patient_oop_pay_amount</option>
+                          <option>refill_code</option>
+                          <option>dispensed_quantity</option>
+                          <option>days_supply</option>
+                          <option>rx_fill_date</option>
+                          <option>patient_claim_sequence_number</option>
+                          <option>claim_status_code</option>
+                          <option>claim_rjct_rsn_code</option>
+                          <option></option>
+                          <option></option>
+                          <option>days_until_next_fill_count</option>
+                          <option>copay_30_amount</option>
                           <option>sob_cde</option>
                           <option selected>new_to_prdct_ind</option>
-                          <option>cncmt_ind</option>
-                          <option>final_claim_cde</option>
-                          <option>prmry_plan_grp_nbr</option>
-                          <option>scnry_plan_grp_nbr</option>
-                          <option>daw_cde</option>
-                          <option>athrz_refil_cnt</option>
+                          <option></option>
+                          <option>final_claim_code</option>
+                          <option>primary_plan_group_number</option>
+                          <option>secondary_plan_group_number</option>
+                          <option>daw_code</option>
+                          <option>Map to Self</option>
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4787,32 +4884,32 @@
                           <option>claim_id</option>
                           <option>ptnt_id</option>
                           <option>drug_id</option>
-                          <option>mdcl_prctr_id</option>
-                          <option>prmry_plan_id</option>
-                          <option>ptnt_pay_amt</option>
-                          <option>prmry_plan_pay_amt</option>
-                          <option>scnry_plan_id</option>
-                          <option>scnry_plan_pay_amt</option>
-                          <option>ptnt_oop_pay_amt</option>
-                          <option>refil_cde</option>
-                          <option>dspnd_qty</option>
-                          <option>days_sply_cnt</option>
-                          <option>rx_fill_dte</option>
-                          <option>ptnt_claim_seq_nbr</option>
-                          <option>claim_stus_cde</option>
-                          <option>claim_rjct_rsn_cde</option>
-                          <option>rvrsl_lag</option>
-                          <option>encyd_rx_id</option>
-                          <option>days_until_next_fill_cnt</option>
-                          <option>copay_30_amt</option>
+                          <option>medical_practitioner_id</option>
+                          <option>primary_plan_id</option>
+                          <option>patient_pay_amount</option>
+                          <option>primary_plan_pay_amount</option>
+                          <option>secondary_plan_id</option>
+                          <option>secondary_plan_pay_amount</option>
+                          <option>patient_oop_pay_amount</option>
+                          <option>refill_code</option>
+                          <option>dispensed_quantity</option>
+                          <option>days_supply</option>
+                          <option>rx_fill_date</option>
+                          <option>patient_claim_sequence_number</option>
+                          <option>claim_status_code</option>
+                          <option>claim_rjct_rsn_code</option>
+                          <option></option>
+                          <option></option>
+                          <option>days_until_next_fill_count</option>
+                          <option>copay_30_amount</option>
                           <option>sob_cde</option>
                           <option>new_to_prdct_ind</option>
-                          <option selected>cncmt_ind</option>
-                          <option>final_claim_cde</option>
-                          <option>prmry_plan_grp_nbr</option>
-                          <option>scnry_plan_grp_nbr</option>
-                          <option>daw_cde</option>
-                          <option>athrz_refil_cnt</option>
+                          <option selected>Map to Self</option>
+                          <option>final_claim_code</option>
+                          <option>primary_plan_group_number</option>
+                          <option>secondary_plan_group_number</option>
+                          <option>daw_code</option>
+                          <option>Map to Self</option>
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4823,32 +4920,32 @@
                           <option>claim_id</option>
                           <option>ptnt_id</option>
                           <option>drug_id</option>
-                          <option>mdcl_prctr_id</option>
-                          <option>prmry_plan_id</option>
-                          <option>ptnt_pay_amt</option>
-                          <option>prmry_plan_pay_amt</option>
-                          <option>scnry_plan_id</option>
-                          <option>scnry_plan_pay_amt</option>
-                          <option>ptnt_oop_pay_amt</option>
-                          <option>refil_cde</option>
-                          <option>dspnd_qty</option>
-                          <option>days_sply_cnt</option>
-                          <option>rx_fill_dte</option>
-                          <option>ptnt_claim_seq_nbr</option>
-                          <option>claim_stus_cde</option>
-                          <option>claim_rjct_rsn_cde</option>
-                          <option>rvrsl_lag</option>
-                          <option>encyd_rx_id</option>
-                          <option>days_until_next_fill_cnt</option>
-                          <option>copay_30_amt</option>
+                          <option>medical_practitioner_id</option>
+                          <option>primary_plan_id</option>
+                          <option>patient_pay_amount</option>
+                          <option>primary_plan_pay_amount</option>
+                          <option>secondary_plan_id</option>
+                          <option>secondary_plan_pay_amount</option>
+                          <option>patient_oop_pay_amount</option>
+                          <option>refill_code</option>
+                          <option>dispensed_quantity</option>
+                          <option>days_supply</option>
+                          <option>rx_fill_date</option>
+                          <option>patient_claim_sequence_number</option>
+                          <option>claim_status_code</option>
+                          <option>claim_rjct_rsn_code</option>
+                          <option></option>
+                          <option></option>
+                          <option>days_until_next_fill_count</option>
+                          <option>copay_30_amount</option>
                           <option>sob_cde</option>
                           <option>new_to_prdct_ind</option>
-                          <option>cncmt_ind</option>
-                          <option selected>final_claim_cde</option>
-                          <option>prmry_plan_grp_nbr</option>
-                          <option>scnry_plan_grp_nbr</option>
-                          <option>daw_cde</option>
-                          <option>athrz_refil_cnt</option>
+                          <option></option>
+                          <option selected>final_claim_code</option>
+                          <option>primary_plan_group_number</option>
+                          <option>secondary_plan_group_number</option>
+                          <option>daw_code</option>
+                          <option>Map to Self</option>
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4859,32 +4956,32 @@
                           <option>claim_id</option>
                           <option>ptnt_id</option>
                           <option>drug_id</option>
-                          <option>mdcl_prctr_id</option>
-                          <option>prmry_plan_id</option>
-                          <option>ptnt_pay_amt</option>
-                          <option>prmry_plan_pay_amt</option>
-                          <option>scnry_plan_id</option>
-                          <option>scnry_plan_pay_amt</option>
-                          <option>ptnt_oop_pay_amt</option>
-                          <option>refil_cde</option>
-                          <option>dspnd_qty</option>
-                          <option>days_sply_cnt</option>
-                          <option>rx_fill_dte</option>
-                          <option>ptnt_claim_seq_nbr</option>
-                          <option>claim_stus_cde</option>
-                          <option>claim_rjct_rsn_cde</option>
-                          <option>rvrsl_lag</option>
-                          <option>encyd_rx_id</option>
-                          <option>days_until_next_fill_cnt</option>
-                          <option>copay_30_amt</option>
+                          <option>medical_practitioner_id</option>
+                          <option>primary_plan_id</option>
+                          <option>patient_pay_amount</option>
+                          <option>primary_plan_pay_amount</option>
+                          <option>secondary_plan_id</option>
+                          <option>secondary_plan_pay_amount</option>
+                          <option>patient_oop_pay_amount</option>
+                          <option>refill_code</option>
+                          <option>dispensed_quantity</option>
+                          <option>days_supply</option>
+                          <option>rx_fill_date</option>
+                          <option>patient_claim_sequence_number</option>
+                          <option>claim_status_code</option>
+                          <option>claim_rjct_rsn_code</option>
+                          <option></option>
+                          <option></option>
+                          <option>days_until_next_fill_count</option>
+                          <option>copay_30_amount</option>
                           <option>sob_cde</option>
                           <option>new_to_prdct_ind</option>
-                          <option>cncmt_ind</option>
-                          <option>final_claim_cde</option>
-                          <option selected>prmry_plan_grp_nbr</option>
-                          <option>scnry_plan_grp_nbr</option>
-                          <option>daw_cde</option>
-                          <option>athrz_refil_cnt</option>
+                          <option></option>
+                          <option>final_claim_code</option>
+                          <option selected>primary_plan_group_number</option>
+                          <option>secondary_plan_group_number</option>
+                          <option>daw_code</option>
+                          <option>Map to Self</option>
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4895,32 +4992,32 @@
                           <option>claim_id</option>
                           <option>ptnt_id</option>
                           <option>drug_id</option>
-                          <option>mdcl_prctr_id</option>
-                          <option>prmry_plan_id</option>
-                          <option>ptnt_pay_amt</option>
-                          <option>prmry_plan_pay_amt</option>
-                          <option>scnry_plan_id</option>
-                          <option>scnry_plan_pay_amt</option>
-                          <option>ptnt_oop_pay_amt</option>
-                          <option>refil_cde</option>
-                          <option>dspnd_qty</option>
-                          <option>days_sply_cnt</option>
-                          <option>rx_fill_dte</option>
-                          <option>ptnt_claim_seq_nbr</option>
-                          <option>claim_stus_cde</option>
-                          <option>claim_rjct_rsn_cde</option>
-                          <option>rvrsl_lag</option>
-                          <option>encyd_rx_id</option>
-                          <option>days_until_next_fill_cnt</option>
-                          <option>copay_30_amt</option>
+                          <option>medical_practitioner_id</option>
+                          <option>primary_plan_id</option>
+                          <option>patient_pay_amount</option>
+                          <option>primary_plan_pay_amount</option>
+                          <option>secondary_plan_id</option>
+                          <option>secondary_plan_pay_amount</option>
+                          <option>patient_oop_pay_amount</option>
+                          <option>refill_code</option>
+                          <option>dispensed_quantity</option>
+                          <option>days_supply</option>
+                          <option>rx_fill_date</option>
+                          <option>patient_claim_sequence_number</option>
+                          <option>claim_status_code</option>
+                          <option>claim_rjct_rsn_code</option>
+                          <option></option>
+                          <option></option>
+                          <option>days_until_next_fill_count</option>
+                          <option>copay_30_amount</option>
                           <option>sob_cde</option>
                           <option>new_to_prdct_ind</option>
-                          <option>cncmt_ind</option>
-                          <option>final_claim_cde</option>
-                          <option>prmry_plan_grp_nbr</option>
-                          <option selected>scnry_plan_grp_nbr</option>
-                          <option>daw_cde</option>
-                          <option>athrz_refil_cnt</option>
+                          <option></option>
+                          <option>final_claim_code</option>
+                          <option>primary_plan_group_number</option>
+                          <option selected>secondary_plan_group_number</option>
+                          <option>daw_code</option>
+                          <option>Map to Self</option>
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4931,32 +5028,32 @@
                           <option>claim_id</option>
                           <option>ptnt_id</option>
                           <option>drug_id</option>
-                          <option>mdcl_prctr_id</option>
-                          <option>prmry_plan_id</option>
-                          <option>ptnt_pay_amt</option>
-                          <option>prmry_plan_pay_amt</option>
-                          <option>scnry_plan_id</option>
-                          <option>scnry_plan_pay_amt</option>
-                          <option>ptnt_oop_pay_amt</option>
-                          <option>refil_cde</option>
-                          <option>dspnd_qty</option>
-                          <option>days_sply_cnt</option>
-                          <option>rx_fill_dte</option>
-                          <option>ptnt_claim_seq_nbr</option>
-                          <option>claim_stus_cde</option>
-                          <option>claim_rjct_rsn_cde</option>
-                          <option>rvrsl_lag</option>
-                          <option>encyd_rx_id</option>
-                          <option>days_until_next_fill_cnt</option>
-                          <option>copay_30_amt</option>
+                          <option>medical_practitioner_id</option>
+                          <option>primary_plan_id</option>
+                          <option>patient_pay_amount</option>
+                          <option>primary_plan_pay_amount</option>
+                          <option>secondary_plan_id</option>
+                          <option>secondary_plan_pay_amount</option>
+                          <option>patient_oop_pay_amount</option>
+                          <option>refill_code</option>
+                          <option>dispensed_quantity</option>
+                          <option>days_supply</option>
+                          <option>rx_fill_date</option>
+                          <option>patient_claim_sequence_number</option>
+                          <option>claim_status_code</option>
+                          <option>claim_rjct_rsn_code</option>
+                          <option></option>
+                          <option></option>
+                          <option>days_until_next_fill_count</option>
+                          <option>copay_30_amount</option>
                           <option>sob_cde</option>
                           <option>new_to_prdct_ind</option>
-                          <option>cncmt_ind</option>
-                          <option>final_claim_cde</option>
-                          <option>prmry_plan_grp_nbr</option>
-                          <option>scnry_plan_grp_nbr</option>
-                          <option selected>daw_cde</option>
-                          <option>athrz_refil_cnt</option>
+                          <option></option>
+                          <option>final_claim_code</option>
+                          <option>primary_plan_group_number</option>
+                          <option>secondary_plan_group_number</option>
+                          <option selected>daw_code</option>
+                          <option>Map to Self</option>
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4967,32 +5064,32 @@
                           <option>claim_id</option>
                           <option>ptnt_id</option>
                           <option>drug_id</option>
-                          <option>mdcl_prctr_id</option>
-                          <option>prmry_plan_id</option>
-                          <option>ptnt_pay_amt</option>
-                          <option>prmry_plan_pay_amt</option>
-                          <option>scnry_plan_id</option>
-                          <option>scnry_plan_pay_amt</option>
-                          <option>ptnt_oop_pay_amt</option>
-                          <option>refil_cde</option>
-                          <option>dspnd_qty</option>
-                          <option>days_sply_cnt</option>
-                          <option>rx_fill_dte</option>
-                          <option>ptnt_claim_seq_nbr</option>
-                          <option>claim_stus_cde</option>
-                          <option>claim_rjct_rsn_cde</option>
-                          <option>rvrsl_lag</option>
-                          <option>encyd_rx_id</option>
-                          <option>days_until_next_fill_cnt</option>
-                          <option>copay_30_amt</option>
+                          <option>medical_practitioner_id</option>
+                          <option>primary_plan_id</option>
+                          <option>patient_pay_amount</option>
+                          <option>primary_plan_pay_amount</option>
+                          <option>secondary_plan_id</option>
+                          <option>secondary_plan_pay_amount</option>
+                          <option>patient_oop_pay_amount</option>
+                          <option>refill_code</option>
+                          <option>dispensed_quantity</option>
+                          <option>days_supply</option>
+                          <option>rx_fill_date</option>
+                          <option>patient_claim_sequence_number</option>
+                          <option>claim_status_code</option>
+                          <option>claim_rjct_rsn_code</option>
+                          <option></option>
+                          <option></option>
+                          <option>days_until_next_fill_count</option>
+                          <option>copay_30_amount</option>
                           <option>sob_cde</option>
                           <option>new_to_prdct_ind</option>
-                          <option>cncmt_ind</option>
-                          <option>final_claim_cde</option>
-                          <option>prmry_plan_grp_nbr</option>
-                          <option>scnry_plan_grp_nbr</option>
-                          <option>daw_cde</option>
-                          <option selected>athrz_refil_cnt</option>
+                          <option></option>
+                          <option>final_claim_code</option>
+                          <option>primary_plan_group_number</option>
+                          <option>secondary_plan_group_number</option>
+                          <option>daw_code</option>
+                          <option selected>Map to Self</option>
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -5003,36 +5100,924 @@
                           <option>claim_id</option>
                           <option>ptnt_id</option>
                           <option>drug_id</option>
-                          <option>mdcl_prctr_id</option>
-                          <option>prmry_plan_id</option>
-                          <option>ptnt_pay_amt</option>
-                          <option>prmry_plan_pay_amt</option>
-                          <option>scnry_plan_id</option>
-                          <option>scnry_plan_pay_amt</option>
-                          <option>ptnt_oop_pay_amt</option>
-                          <option>refil_cde</option>
-                          <option>dspnd_qty</option>
-                          <option>days_sply_cnt</option>
-                          <option>rx_fill_dte</option>
-                          <option>ptnt_claim_seq_nbr</option>
-                          <option>claim_stus_cde</option>
-                          <option>claim_rjct_rsn_cde</option>
-                          <option>rvrsl_lag</option>
-                          <option>encyd_rx_id</option>
-                          <option>days_until_next_fill_cnt</option>
-                          <option>copay_30_amt</option>
+                          <option>medical_practitioner_id</option>
+                          <option>primary_plan_id</option>
+                          <option>patient_pay_amount</option>
+                          <option>primary_plan_pay_amount</option>
+                          <option>secondary_plan_id</option>
+                          <option>secondary_plan_pay_amount</option>
+                          <option>patient_oop_pay_amount</option>
+                          <option>refill_code</option>
+                          <option>dispensed_quantity</option>
+                          <option>days_supply</option>
+                          <option>rx_fill_date</option>
+                          <option>patient_claim_sequence_number</option>
+                          <option>claim_status_code</option>
+                          <option>claim_rjct_rsn_code</option>
+                          <option></option>
+                          <option></option>
+                          <option>days_until_next_fill_count</option>
+                          <option>copay_30_amount</option>
                           <option>sob_cde</option>
                           <option>new_to_prdct_ind</option>
-                          <option>cncmt_ind</option>
-                          <option>final_claim_cde</option>
-                          <option>prmry_plan_grp_nbr</option>
-                          <option>scnry_plan_grp_nbr</option>
-                          <option>daw_cde</option>
-                          <option>athrz_refil_cnt</option>
+                          <option></option>
+                          <option>final_claim_code</option>
+                          <option>primary_plan_group_number</option>
+                          <option>secondary_plan_group_number</option>
+                          <option>daw_code</option>
+                          <option>Map to Self</option>
                           <option selected>deletion_flag</option>
           
                         </select></td>
                   </tr>
+                </tbody>
+              </table>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Save Mappings</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div id="agrxdt" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body" style="padding: 10px 50px">
+          <div class = "row">
+            <table class ='table stripped modal_table'>
+                <thead>
+                  <tr>
+                    <th>Source Column</th>
+                    <th>DCube Column</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>market_id_1</td>
+                    <td><select class="form-control source_name">
+                          <option selected>market_id</option>
+                          <option>product_id</option>
+                          <option>plan_id</option>
+                          <option>Map to Self</option>
+                          <option>week_ending_date</option>
+                          <option>month_ending_date</option>
+                          <option>sob_group</option>
+                          <option>new_rx_count</option>
+                          <option>refill_rx_count</option>
+                          <option>total_rx_count</option>
+                          <option>new_rx_quantity</option>
+                          <option>refill_rx_quantity</option>
+                          <option>total_rx_quantity</option>
+                          <option>new_days_supply</option>
+                          <option>refill_days_supply</option>
+                          <option>total_days_supply</option>
+                          <option>Map to Self</option>
+                          <option>Ignore Mapping</option>
+                        </select>
+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>product_id</td>
+                    <td><select class="form-control source_name">
+                          <option>market_id</option>
+                          <option selected>product_id</option>
+                          <option>plan_id</option>
+                          <option>Map to Self</option>
+                          <option>week_ending_date</option>
+                          <option>month_ending_date</option>
+                          <option>sob_group</option>
+                          <option>new_rx_count</option>
+                          <option>refill_rx_count</option>
+                          <option>total_rx_count</option>
+                          <option>new_rx_quantity</option>
+                          <option>refill_rx_quantity</option>
+                          <option>total_rx_quantity</option>
+                          <option>new_days_supply</option>
+                          <option>refill_days_supply</option>
+                          <option>total_days_supply</option>
+                          <option>Map to Self</option>
+                          <option>Ignore Mapping</option>
+                        </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>plan_id</td>
+                    <td><select class="form-control source_name">
+                          <option>market_id</option>
+                          <option>product_id</option>
+                          <option selected>plan_id</option>
+                          <option>Map to Self</option>
+                          <option>week_ending_date</option>
+                          <option>month_ending_date</option>
+                          <option>sob_group</option>
+                          <option>new_rx_count</option>
+                          <option>refill_rx_count</option>
+                          <option>total_rx_count</option>
+                          <option>new_rx_quantity</option>
+                          <option>refill_rx_quantity</option>
+                          <option>total_rx_quantity</option>
+                          <option>new_days_supply</option>
+                          <option>refill_days_supply</option>
+                          <option>total_days_supply</option>
+                          <option>Map to Self</option>
+                          <option>Ignore Mapping</option>
+                        </select>
+                      </td>
+                  </tr>
+                  <tr>
+                    <td>data_type</td>
+                    <td><select class="form-control source_name">
+                          <option>market_id</option>
+                          <option>product_id</option>
+                          <option>plan_id</option>
+                          <option selected>Map to Self</option>
+                          <option>week_ending_date</option>
+                          <option>month_ending_date</option>
+                          <option>sob_group</option>
+                          <option>new_rx_count</option>
+                          <option>refill_rx_count</option>
+                          <option>total_rx_count</option>
+                          <option>new_rx_quantity</option>
+                          <option>refill_rx_quantity</option>
+                          <option>total_rx_quantity</option>
+                          <option>new_days_supply</option>
+                          <option>refill_days_supply</option>
+                          <option>total_days_supply</option>
+                          <option>Map to Self</option>
+                          <option>Ignore Mapping</option>
+                        </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>wk_ending_dt</td>
+                    <td><select class="form-control source_name">
+                          <option>market_id</option>
+                          <option>product_id</option>
+                          <option>plan_id</option>
+                          <option>Map to Self</option>
+                          <option selected>week_ending_date</option>
+                          <option>month_ending_date</option>
+                          <option>sob_group</option>
+                          <option>new_rx_count</option>
+                          <option>refill_rx_count</option>
+                          <option>total_rx_count</option>
+                          <option>new_rx_quantity</option>
+                          <option>refill_rx_quantity</option>
+                          <option>total_rx_quantity</option>
+                          <option>new_days_supply</option>
+                          <option>refill_days_supply</option>
+                          <option>total_days_supply</option>
+                          <option>Map to Self</option>
+                          <option>Ignore Mapping</option>
+                        </select>
+                        </td>
+                  </tr>
+                  <tr>
+                    <td>mnth_ending_dt</td>
+                    <td><select class="form-control source_name">
+                          <option>market_id</option>
+                          <option>product_id</option>
+                          <option>plan_id</option>
+                          <option>Map to Self</option>
+                          <option>week_ending_date</option>
+                          <option selected>month_ending_date</option>
+                          <option>sob_group</option>
+                          <option>new_rx_count</option>
+                          <option>refill_rx_count</option>
+                          <option>total_rx_count</option>
+                          <option>new_rx_quantity</option>
+                          <option>refill_rx_quantity</option>
+                          <option>total_rx_quantity</option>
+                          <option>new_days_supply</option>
+                          <option>refill_days_supply</option>
+                          <option>total_days_supply</option>
+                          <option>Map to Self</option>
+                          <option>Ignore Mapping</option>
+                        </select>
+                        </td>
+                  </tr>
+                  <tr>
+                    <td>sob_group</td>
+                    <td><select class="form-control source_name">
+                          <option>market_id</option>
+                          <option>product_id</option>
+                          <option>plan_id</option>
+                          <option>Map to Self</option>
+                          <option>week_ending_date</option>
+                          <option>month_ending_date</option>
+                          <option selected>sob_group</option>
+                          <option>new_rx_count</option>
+                          <option>refill_rx_count</option>
+                          <option>total_rx_count</option>
+                          <option>new_rx_quantity</option>
+                          <option>refill_rx_quantity</option>
+                          <option>total_rx_quantity</option>
+                          <option>new_days_supply</option>
+                          <option>refill_days_supply</option>
+                          <option>total_days_supply</option>
+                          <option>Map to Self</option>
+                          <option>Ignore Mapping</option>
+                        </select>
+                        </td>
+                  </tr>
+                  <tr>
+                    <td>new_rx_cnt</td>
+                    <td><select class="form-control source_name">
+                          <option>market_id</option>
+                          <option>product_id</option>
+                          <option>plan_id</option>
+                          <option>Map to Self</option>
+                          <option>week_ending_date</option>
+                          <option>month_ending_date</option>
+                          <option>sob_group</option>
+                          <option selected>new_rx_count</option>
+                          <option>refill_rx_count</option>
+                          <option>total_rx_count</option>
+                          <option>new_rx_quantity</option>
+                          <option>refill_rx_quantity</option>
+                          <option>total_rx_quantity</option>
+                          <option>new_days_supply</option>
+                          <option>refill_days_supply</option>
+                          <option>total_days_supply</option>
+                          <option>Map to Self</option>
+                          <option>Ignore Mapping</option>
+                        </select>
+                        </td>
+                  </tr>
+                  <tr>
+                    <td>refill_rx_cnt</td>
+                    <td><select class="form-control source_name">
+                          
+                          <option>market_id</option>
+                          <option>product_id</option>
+                          <option>plan_id</option>
+                          <option>Map to Self</option>
+                          <option>week_ending_date</option>
+                          <option>month_ending_date</option>
+                          <option>sob_group</option>
+                          <option>new_rx_count</option>
+                          <option selected>refill_rx_count</option>
+                          <option>total_rx_count</option>
+                          <option>new_rx_quantity</option>
+                          <option>refill_rx_quantity</option>
+                          <option>total_rx_quantity</option>
+                          <option>new_days_supply</option>
+                          <option>refill_days_supply</option>
+                          <option>total_days_supply</option>
+                          <option>Map to Self</option>
+                          <option>Ignore Mapping</option>
+                        </select>
+                        </td>
+                  </tr>
+                  <tr>
+                    <td>tot_rx_cnt</td>
+                    <td><select class="form-control source_name">
+                          <option>market_id</option>
+                          <option>product_id</option>
+                          <option>plan_id</option>
+                          <option>Map to Self</option>
+                          <option>week_ending_date</option>
+                          <option>month_ending_date</option>
+                          <option>sob_group</option>
+                          <option>new_rx_count</option>
+                          <option>refill_rx_count</option>
+                          <option selected>total_rx_count</option>
+                          <option>new_rx_quantity</option>
+                          <option>refill_rx_quantity</option>
+                          <option>total_rx_quantity</option>
+                          <option>new_days_supply</option>
+                          <option>refill_days_supply</option>
+                          <option>total_days_supply</option>
+                          <option>Map to Self</option>
+                          <option>Ignore Mapping</option>
+                        </select>
+                        </td>
+                  </tr>
+                  <tr>
+                    <td>new_rx_qty</td>
+                    <td><select class="form-control source_name">
+                          <option>market_id</option>
+                          <option>product_id</option>
+                          <option>plan_id</option>
+                          <option>Map to Self</option>
+                          <option>week_ending_date</option>
+                          <option>month_ending_date</option>
+                          <option>sob_group</option>
+                          <option>new_rx_count</option>
+                          <option>refill_rx_count</option>
+                          <option>total_rx_count</option>
+                          <option selected>new_rx_quantity</option>
+                          <option>refill_rx_quantity</option>
+                          <option>total_rx_quantity</option>
+                          <option>new_days_supply</option>
+                          <option>refill_days_supply</option>
+                          <option>total_days_supply</option>
+                          <option>Map to Self</option>
+                          <option>Ignore Mapping</option>
+                        </select>
+                        </td>
+                  </tr>
+                  <tr>
+                    <td>refill_rx_qty</td>
+                    <td><select class="form-control source_name">
+                          <option>market_id</option>
+                          <option>product_id</option>
+                          <option>plan_id</option>
+                          <option>Map to Self</option>
+                          <option>week_ending_date</option>
+                          <option>month_ending_date</option>
+                          <option>sob_group</option>
+                          <option>new_rx_count</option>
+                          <option>refill_rx_count</option>
+                          <option>total_rx_count</option>
+                          <option>new_rx_quantity</option>
+                          <option selected>refill_rx_quantity</option>
+                          <option>total_rx_quantity</option>
+                          <option>new_days_supply</option>
+                          <option>refill_days_supply</option>
+                          <option>total_days_supply</option>
+                          <option>Map to Self</option>
+                          <option>Ignore Mapping</option>
+                        </select>
+                        </td>
+                  </tr>
+                  <tr>
+                    <td>tot_rx_qty</td>
+                    <td><select class="form-control source_name">
+                          <option>market_id</option>
+                          <option>product_id</option>
+                          <option>plan_id</option>
+                          <option>Map to Self</option>
+                          <option>week_ending_date</option>
+                          <option>month_ending_date</option>
+                          <option>sob_group</option>
+                          <option>new_rx_count</option>
+                          <option>refill_rx_count</option>
+                          <option>total_rx_count</option>
+                          <option>new_rx_quantity</option>
+                          <option>refill_rx_quantity</option>
+                          <option selected>total_rx_quantity</option>
+                          <option>new_days_supply</option>
+                          <option>refill_days_supply</option>
+                          <option>total_days_supply</option>
+                          <option>Map to Self</option>
+                          <option>Ignore Mapping</option>
+                        </select>
+                        </td>
+                  </tr>
+
+                  <tr>
+                    <td>new_days_supply</td>
+                    <td><select class="form-control source_name">
+                          <option>market_id</option>
+                          <option>product_id</option>
+                          <option>plan_id</option>
+                          <option>Map to Self</option>
+                          <option>week_ending_date</option>
+                          <option>month_ending_date</option>
+                          <option>sob_group</option>
+                          <option>new_rx_count</option>
+                          <option>refill_rx_count</option>
+                          <option>total_rx_count</option>
+                          <option>new_rx_quantity</option>
+                          <option>refill_rx_quantity</option>
+                          <option>total_rx_quantity</option>
+                          <option selected>new_days_supply</option>
+                          <option>refill_days_supply</option>
+                          <option>total_days_supply</option>
+                          <option>Map to Self</option>
+                          <option>Ignore Mapping</option>
+                        </select>
+                        </td>
+                  </tr>
+                  
+                  <tr>
+                    <td>refill_days_supply</td>
+                    <td><select class="form-control source_name">
+                          <option>market_id</option>
+                          <option>product_id</option>
+                          <option>plan_id</option>
+                          <option>Map to Self</option>
+                          <option>week_ending_date</option>
+                          <option>month_ending_date</option>
+                          <option>sob_group</option>
+                          <option>new_rx_count</option>
+                          <option>refill_rx_count</option>
+                          <option>total_rx_count</option>
+                          <option>new_rx_quantity</option>
+                          <option>refill_rx_quantity</option>
+                          <option>total_rx_quantity</option>
+                          <option>new_days_supply</option>
+                          <option selected>refill_days_supply</option>
+                          <option>total_days_supply</option>
+                          <option>Map to Self</option>
+                          <option>Ignore Mapping</option>
+                        </select>
+                        </td>
+
+                  </tr>
+                  <tr>
+                    <td>tot_days_supply</td>
+                    <td><select class="form-control source_name">
+                          <option>market_id</option>
+                          <option>product_id</option>
+                          <option>plan_id</option>
+                          <option>Map to Self</option>
+                          <option>week_ending_date</option>
+                          <option>month_ending_date</option>
+                          <option>sob_group</option>
+                          <option>new_rx_count</option>
+                          <option>refill_rx_count</option>
+                          <option>total_rx_count</option>
+                          <option>new_rx_quantity</option>
+                          <option>refill_rx_quantity</option>
+                          <option>total_rx_quantity</option>
+                          <option>new_days_supply</option>
+                          <option>refill_days_supply</option>
+                          <option selected>total_days_supply</option>
+                          <option>Map to Self</option>
+                          <option>Ignore Mapping</option>
+                        </select>
+                        </td>
+                  </tr>
+                  <tr>
+                    <td>daw_cde</td>
+                    <td><select class="form-control source_name">
+                          <option>market_id</option>
+                          <option>product_id</option>
+                          <option>plan_id</option>
+                          <option>Map to Self</option>
+                          <option>week_ending_date</option>
+                          <option>month_ending_date</option>
+                          <option>sob_group</option>
+                          <option>new_rx_count</option>
+                          <option>refill_rx_count</option>
+                          <option>total_rx_count</option>
+                          <option>new_rx_quantity</option>
+                          <option>refill_rx_quantity</option>
+                          <option>total_rx_quantity</option>
+                          <option>new_days_supply</option>
+                          <option>refill_days_supply</option>
+                          <option>total_days_supply</option>
+                          <option selected>Map to Self</option>
+                          <option>Ignore Mapping</option>
+                        </select>
+                        </td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Save Mappings</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div id="prrxdt" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body" style="padding: 10px 50px">
+          <div class = "row">
+            <table class ='table stripped modal_table'>
+                <thead>
+                  <tr>
+                    <th>Source Column</th>
+                    <th>DCube Column</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>market_id_1</td>
+                    <td><select class="form-control source_name">
+                          <option selected>market_id</option>
+                          <option>product_id</option>
+                          <option>plan_id</option>
+                          <option>Map to Self</option>
+                          <option>week_ending_date</option>
+                          <option>month_ending_date</option>
+                          <option>sob_group</option>
+                          <option>new_rx_count</option>
+                          <option>refill_rx_count</option>
+                          <option>total_rx_count</option>
+                          <option>new_rx_quantity</option>
+                          <option>refill_rx_quantity</option>
+                          <option>total_rx_quantity</option>
+                          <option>new_days_supply</option>
+                          <option>refill_days_supply</option>
+                          <option>total_days_supply</option>
+                          <option>Map to Self</option>
+                          <option>Ignore Mapping</option>
+                        </select>
+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>product_id</td>
+                    <td><select class="form-control source_name">
+                          <option>market_id</option>
+                          <option selected>product_id</option>
+                          <option>plan_id</option>
+                          <option>Map to Self</option>
+                          <option>week_ending_date</option>
+                          <option>month_ending_date</option>
+                          <option>sob_group</option>
+                          <option>new_rx_count</option>
+                          <option>refill_rx_count</option>
+                          <option>total_rx_count</option>
+                          <option>new_rx_quantity</option>
+                          <option>refill_rx_quantity</option>
+                          <option>total_rx_quantity</option>
+                          <option>new_days_supply</option>
+                          <option>refill_days_supply</option>
+                          <option>total_days_supply</option>
+                          <option>Map to Self</option>
+                          <option>Ignore Mapping</option>
+                        </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>plan_id</td>
+                    <td><select class="form-control source_name">
+                          <option>market_id</option>
+                          <option>product_id</option>
+                          <option selected>plan_id</option>
+                          <option>Map to Self</option>
+                          <option>week_ending_date</option>
+                          <option>month_ending_date</option>
+                          <option>sob_group</option>
+                          <option>new_rx_count</option>
+                          <option>refill_rx_count</option>
+                          <option>total_rx_count</option>
+                          <option>new_rx_quantity</option>
+                          <option>refill_rx_quantity</option>
+                          <option>total_rx_quantity</option>
+                          <option>new_days_supply</option>
+                          <option>refill_days_supply</option>
+                          <option>total_days_supply</option>
+                          <option>Map to Self</option>
+                          <option>Ignore Mapping</option>
+                        </select>
+                      </td>
+                  </tr>
+                  <tr>
+                    <td>data_type</td>
+                    <td><select class="form-control source_name">
+                          <option>market_id</option>
+                          <option>product_id</option>
+                          <option>plan_id</option>
+                          <option selected>Map to Self</option>
+                          <option>week_ending_date</option>
+                          <option>month_ending_date</option>
+                          <option>sob_group</option>
+                          <option>new_rx_count</option>
+                          <option>refill_rx_count</option>
+                          <option>total_rx_count</option>
+                          <option>new_rx_quantity</option>
+                          <option>refill_rx_quantity</option>
+                          <option>total_rx_quantity</option>
+                          <option>new_days_supply</option>
+                          <option>refill_days_supply</option>
+                          <option>total_days_supply</option>
+                          <option>Map to Self</option>
+                          <option>Ignore Mapping</option>
+                        </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>wk_ending_dt</td>
+                    <td><select class="form-control source_name">
+                          <option>market_id</option>
+                          <option>product_id</option>
+                          <option>plan_id</option>
+                          <option>Map to Self</option>
+                          <option selected>week_ending_date</option>
+                          <option>month_ending_date</option>
+                          <option>sob_group</option>
+                          <option>new_rx_count</option>
+                          <option>refill_rx_count</option>
+                          <option>total_rx_count</option>
+                          <option>new_rx_quantity</option>
+                          <option>refill_rx_quantity</option>
+                          <option>total_rx_quantity</option>
+                          <option>new_days_supply</option>
+                          <option>refill_days_supply</option>
+                          <option>total_days_supply</option>
+                          <option>Map to Self</option>
+                          <option>Ignore Mapping</option>
+                        </select>
+                        </td>
+                  </tr>
+                  <tr>
+                    <td>mnth_ending_dt</td>
+                    <td><select class="form-control source_name">
+                          <option>market_id</option>
+                          <option>product_id</option>
+                          <option>plan_id</option>
+                          <option>Map to Self</option>
+                          <option>week_ending_date</option>
+                          <option selected>month_ending_date</option>
+                          <option>sob_group</option>
+                          <option>new_rx_count</option>
+                          <option>refill_rx_count</option>
+                          <option>total_rx_count</option>
+                          <option>new_rx_quantity</option>
+                          <option>refill_rx_quantity</option>
+                          <option>total_rx_quantity</option>
+                          <option>new_days_supply</option>
+                          <option>refill_days_supply</option>
+                          <option>total_days_supply</option>
+                          <option>Map to Self</option>
+                          <option>Ignore Mapping</option>
+                        </select>
+                        </td>
+                  </tr>
+                  <tr>
+                    <td>sob_group</td>
+                    <td><select class="form-control source_name">
+                          <option>market_id</option>
+                          <option>product_id</option>
+                          <option>plan_id</option>
+                          <option>Map to Self</option>
+                          <option>week_ending_date</option>
+                          <option>month_ending_date</option>
+                          <option selected>sob_group</option>
+                          <option>new_rx_count</option>
+                          <option>refill_rx_count</option>
+                          <option>total_rx_count</option>
+                          <option>new_rx_quantity</option>
+                          <option>refill_rx_quantity</option>
+                          <option>total_rx_quantity</option>
+                          <option>new_days_supply</option>
+                          <option>refill_days_supply</option>
+                          <option>total_days_supply</option>
+                          <option>Map to Self</option>
+                          <option>Ignore Mapping</option>
+                        </select>
+                        </td>
+                  </tr>
+                  <tr>
+                    <td>new_rx_cnt</td>
+                    <td><select class="form-control source_name">
+                          <option>market_id</option>
+                          <option>product_id</option>
+                          <option>plan_id</option>
+                          <option>Map to Self</option>
+                          <option>week_ending_date</option>
+                          <option>month_ending_date</option>
+                          <option>sob_group</option>
+                          <option selected>new_rx_count</option>
+                          <option>refill_rx_count</option>
+                          <option>total_rx_count</option>
+                          <option>new_rx_quantity</option>
+                          <option>refill_rx_quantity</option>
+                          <option>total_rx_quantity</option>
+                          <option>new_days_supply</option>
+                          <option>refill_days_supply</option>
+                          <option>total_days_supply</option>
+                          <option>Map to Self</option>
+                          <option>Ignore Mapping</option>
+                        </select>
+                        </td>
+                  </tr>
+                  <tr>
+                    <td>refill_rx_cnt</td>
+                    <td><select class="form-control source_name">
+                          
+                          <option>market_id</option>
+                          <option>product_id</option>
+                          <option>plan_id</option>
+                          <option>Map to Self</option>
+                          <option>week_ending_date</option>
+                          <option>month_ending_date</option>
+                          <option>sob_group</option>
+                          <option>new_rx_count</option>
+                          <option selected>refill_rx_count</option>
+                          <option>total_rx_count</option>
+                          <option>new_rx_quantity</option>
+                          <option>refill_rx_quantity</option>
+                          <option>total_rx_quantity</option>
+                          <option>new_days_supply</option>
+                          <option>refill_days_supply</option>
+                          <option>total_days_supply</option>
+                          <option>Map to Self</option>
+                          <option>Ignore Mapping</option>
+                        </select>
+                        </td>
+                  </tr>
+                  <tr>
+                    <td>tot_rx_cnt</td>
+                    <td><select class="form-control source_name">
+                          <option>market_id</option>
+                          <option>product_id</option>
+                          <option>plan_id</option>
+                          <option>Map to Self</option>
+                          <option>week_ending_date</option>
+                          <option>month_ending_date</option>
+                          <option>sob_group</option>
+                          <option>new_rx_count</option>
+                          <option>refill_rx_count</option>
+                          <option selected>total_rx_count</option>
+                          <option>new_rx_quantity</option>
+                          <option>refill_rx_quantity</option>
+                          <option>total_rx_quantity</option>
+                          <option>new_days_supply</option>
+                          <option>refill_days_supply</option>
+                          <option>total_days_supply</option>
+                          <option>Map to Self</option>
+                          <option>Ignore Mapping</option>
+                        </select>
+                        </td>
+                  </tr>
+                  <tr>
+                    <td>new_rx_qty</td>
+                    <td><select class="form-control source_name">
+                          <option>market_id</option>
+                          <option>product_id</option>
+                          <option>plan_id</option>
+                          <option>Map to Self</option>
+                          <option>week_ending_date</option>
+                          <option>month_ending_date</option>
+                          <option>sob_group</option>
+                          <option>new_rx_count</option>
+                          <option>refill_rx_count</option>
+                          <option>total_rx_count</option>
+                          <option selected>new_rx_quantity</option>
+                          <option>refill_rx_quantity</option>
+                          <option>total_rx_quantity</option>
+                          <option>new_days_supply</option>
+                          <option>refill_days_supply</option>
+                          <option>total_days_supply</option>
+                          <option>Map to Self</option>
+                          <option>Ignore Mapping</option>
+                        </select>
+                        </td>
+                  </tr>
+                  <tr>
+                    <td>refill_rx_qty</td>
+                    <td><select class="form-control source_name">
+                          <option>market_id</option>
+                          <option>product_id</option>
+                          <option>plan_id</option>
+                          <option>Map to Self</option>
+                          <option>week_ending_date</option>
+                          <option>month_ending_date</option>
+                          <option>sob_group</option>
+                          <option>new_rx_count</option>
+                          <option>refill_rx_count</option>
+                          <option>total_rx_count</option>
+                          <option>new_rx_quantity</option>
+                          <option selected>refill_rx_quantity</option>
+                          <option>total_rx_quantity</option>
+                          <option>new_days_supply</option>
+                          <option>refill_days_supply</option>
+                          <option>total_days_supply</option>
+                          <option>Map to Self</option>
+                          <option>Ignore Mapping</option>
+                        </select>
+                        </td>
+                  </tr>
+                  <tr>
+                    <td>tot_rx_qty</td>
+                    <td><select class="form-control source_name">
+                          <option>market_id</option>
+                          <option>product_id</option>
+                          <option>plan_id</option>
+                          <option>Map to Self</option>
+                          <option>week_ending_date</option>
+                          <option>month_ending_date</option>
+                          <option>sob_group</option>
+                          <option>new_rx_count</option>
+                          <option>refill_rx_count</option>
+                          <option>total_rx_count</option>
+                          <option>new_rx_quantity</option>
+                          <option>refill_rx_quantity</option>
+                          <option selected>total_rx_quantity</option>
+                          <option>new_days_supply</option>
+                          <option>refill_days_supply</option>
+                          <option>total_days_supply</option>
+                          <option>Map to Self</option>
+                          <option>Ignore Mapping</option>
+                        </select>
+                        </td>
+                  </tr>
+
+                  <tr>
+                    <td>new_days_supply</td>
+                    <td><select class="form-control source_name">
+                          <option>market_id</option>
+                          <option>product_id</option>
+                          <option>plan_id</option>
+                          <option>Map to Self</option>
+                          <option>week_ending_date</option>
+                          <option>month_ending_date</option>
+                          <option>sob_group</option>
+                          <option>new_rx_count</option>
+                          <option>refill_rx_count</option>
+                          <option>total_rx_count</option>
+                          <option>new_rx_quantity</option>
+                          <option>refill_rx_quantity</option>
+                          <option>total_rx_quantity</option>
+                          <option selected>new_days_supply</option>
+                          <option>refill_days_supply</option>
+                          <option>total_days_supply</option>
+                          <option>Map to Self</option>
+                          <option>Ignore Mapping</option>
+                        </select>
+                        </td>
+                  </tr>
+                  
+                  <tr>
+                    <td>refill_days_supply</td>
+                    <td><select class="form-control source_name">
+                          <option>market_id</option>
+                          <option>product_id</option>
+                          <option>plan_id</option>
+                          <option>Map to Self</option>
+                          <option>week_ending_date</option>
+                          <option>month_ending_date</option>
+                          <option>sob_group</option>
+                          <option>new_rx_count</option>
+                          <option>refill_rx_count</option>
+                          <option>total_rx_count</option>
+                          <option>new_rx_quantity</option>
+                          <option>refill_rx_quantity</option>
+                          <option>total_rx_quantity</option>
+                          <option>new_days_supply</option>
+                          <option selected>refill_days_supply</option>
+                          <option>total_days_supply</option>
+                          <option>Map to Self</option>
+                          <option>Ignore Mapping</option>
+                        </select>
+                        </td>
+
+                  </tr>
+                  <tr>
+                    <td>tot_days_supply</td>
+                    <td><select class="form-control source_name">
+                          <option>market_id</option>
+                          <option>product_id</option>
+                          <option>plan_id</option>
+                          <option>Map to Self</option>
+                          <option>week_ending_date</option>
+                          <option>month_ending_date</option>
+                          <option>sob_group</option>
+                          <option>new_rx_count</option>
+                          <option>refill_rx_count</option>
+                          <option>total_rx_count</option>
+                          <option>new_rx_quantity</option>
+                          <option>refill_rx_quantity</option>
+                          <option>total_rx_quantity</option>
+                          <option>new_days_supply</option>
+                          <option>refill_days_supply</option>
+                          <option selected>total_days_supply</option>
+                          <option>Map to Self</option>
+                          <option>Ignore Mapping</option>
+                        </select>
+                        </td>
+                  </tr>
+                  <tr>
+                    <td>daw_cde</td>
+                    <td><select class="form-control source_name">
+                          <option>market_id</option>
+                          <option>product_id</option>
+                          <option>plan_id</option>
+                          <option>Map to Self</option>
+                          <option>week_ending_date</option>
+                          <option>month_ending_date</option>
+                          <option>sob_group</option>
+                          <option>new_rx_count</option>
+                          <option>refill_rx_count</option>
+                          <option>total_rx_count</option>
+                          <option>new_rx_quantity</option>
+                          <option>refill_rx_quantity</option>
+                          <option>total_rx_quantity</option>
+                          <option>new_days_supply</option>
+                          <option>refill_days_supply</option>
+                          <option>total_days_supply</option>
+                          <option selected>Map to Self</option>
+                          <option>Ignore Mapping</option>
+                        </select>
+                        </td>
+                  </tr>
+                  
                 </tbody>
               </table>
           </div>
@@ -5049,7 +6034,7 @@
 @stop
 @section('BaseJSLib')
 <script type="text/javascript">
-    $('a.dcube_struct').addClass('active');
+    $('a.DCube_struct').addClass('active');
     
     var str= "{{$val}}";
     

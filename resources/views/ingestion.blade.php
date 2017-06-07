@@ -17,9 +17,9 @@
              <a href="#">Mapping KPI</a>
          </div>
           <div class="row widget-1" style="padding-top: 30px">
-              <form action="{{url()}}/extractor_library">
-                      <button class="btn btn-danger pull-right" style="margin-top: 20px;margin-right: 50px;" >Extractor Library</button>
-                      </form>
+              
+              <a href="{{url()}}/extractor_library" target="_blank" class="btn btn-danger pull-right" style="margin-top: 20px;margin-right: 50px;" >Extractor Library</a>
+                
               <h3 class="widget-title" style="margin-left: 20px; margin-bottom: 10px;">
                   <select class="form-control" style="width: 150px">
                       @foreach($final_array1 as $value)
