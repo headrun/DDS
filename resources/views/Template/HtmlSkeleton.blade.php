@@ -66,15 +66,16 @@
         </a>
         <a class="transform" href="#">
           <span>
-            <i class="fa fa-refresh fa-lg" aria-hidden="true"></i>
-          </span>
-          <span style="margin-left: 35px">Transform</span>
-        </a>
-        <a class="dcube_struct" href="#">
-          <span>
             <i class="fa fa-area-chart fa-lg" aria-hidden="true"></i>
           </span>
           <span style="margin-left: 35px">Dcube Structure</span>
+        </a>
+        <a class="dcube_struct" href="#">
+          
+          <span>
+            <i class="fa fa-refresh fa-lg" aria-hidden="true"></i>
+          </span>
+          <span style="margin-left: 35px">Transform</span>
         </a>
       </div>
       <div class="aside-overlay"></div>

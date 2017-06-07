@@ -4052,7 +4052,7 @@
                     <td>claim_id</td>
                     <td><select class="form-control source_name">
                           <option selected>claim_id</option>
-                          <option>ptnt_id</option>
+                          <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
                           <option>primary_plan_id</option>
@@ -4088,7 +4088,7 @@
                     <td>ptnt_id</td>
                     <td><select class="form-control source_name">
                           <option>claim_id</option>
-                          <option selected>ptnt_id</option>
+                          <option selected>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
                           <option>primary_plan_id</option>
@@ -4124,7 +4124,7 @@
                     <td>drug_id</td>
                     <td><select class="form-control source_name">
                           <option>claim_id</option>
-                          <option>ptnt_id</option>
+                          <option>patient_id</option>
                           <option selected>drug_id</option>
                           <option>medical_practitioner_id</option>
                           <option>primary_plan_id</option>
@@ -4160,7 +4160,7 @@
                     <td>mdcl_prctr_id</td>
                     <td><select class="form-control source_name">
                           <option>claim_id</option>
-                          <option>ptnt_id</option>
+                          <option>patient_id</option>
                           <option>drug_id</option>
                           <option selected>medical_practitioner_id</option>
                           <option>primary_plan_id</option>
@@ -4196,7 +4196,7 @@
                     <td>prmry_plan_id</td>
                     <td><select class="form-control source_name">
                           <option>claim_id</option>
-                          <option>ptnt_id</option>
+                          <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
                           <option selected>primary_plan_id</option>
@@ -4232,7 +4232,7 @@
                     <td>ptnt_pay_amt</td>
                     <td><select class="form-control source_name">
                           <option>claim_id</option>
-                          <option>ptnt_id</option>
+                          <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
                           <option>primary_plan_id</option>
@@ -4268,7 +4268,7 @@
                     <td>prmry_plan_pay_amt</td>
                     <td><select class="form-control source_name">
                           <option>claim_id</option>
-                          <option>ptnt_id</option>
+                          <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
                           <option>primary_plan_id</option>
@@ -4304,7 +4304,7 @@
                     <td>scnry_plan_id</td>
                     <td><select class="form-control source_name">
                           <option>claim_id</option>
-                          <option>ptnt_id</option>
+                          <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
                           <option>primary_plan_id</option>
@@ -4340,7 +4340,7 @@
                     <td>scnry_plan_pay_amt</td>
                     <td><select class="form-control source_name">
                           <option>claim_id</option>
-                          <option>ptnt_id</option>
+                          <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
                           <option>primary_plan_id</option>
@@ -4376,7 +4376,7 @@
                     <td>ptnt_oop_pay_amt</td>
                     <td><select class="form-control source_name">
                           <option>claim_id</option>
-                          <option>ptnt_id</option>
+                          <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
                           <option>primary_plan_id</option>
@@ -4412,7 +4412,7 @@
                     <td>refil_cde</td>
                     <td><select class="form-control source_name">
                           <option>claim_id</option>
-                          <option>ptnt_id</option>
+                          <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
                           <option>primary_plan_id</option>
@@ -4448,7 +4448,7 @@
                     <td>dspnd_qty</td>
                     <td><select class="form-control source_name">
                           <option>claim_id</option>
-                          <option>ptnt_id</option>
+                          <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
                           <option>primary_plan_id</option>
@@ -4484,7 +4484,7 @@
                     <td>days_sply_cnt</td>
                     <td><select class="form-control source_name">
                           <option>claim_id</option>
-                          <option>ptnt_id</option>
+                          <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
                           <option>primary_plan_id</option>
@@ -4521,7 +4521,7 @@
                     <td>rx_fill_dte</td>
                     <td><select class="form-control source_name">
                           <option>claim_id</option>
-                          <option>ptnt_id</option>
+                          <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
                           <option>primary_plan_id</option>
@@ -4558,7 +4558,7 @@
                     <td>ptnt_claim_seq_nbr</td>
                     <td><select class="form-control source_name">
                           <option>claim_id</option>
-                          <option>ptnt_id</option>
+                          <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
                           <option>primary_plan_id</option>
@@ -4594,7 +4594,7 @@
                     <td>claim_stus_cde</td>
                     <td><select class="form-control source_name">
                           <option>claim_id</option>
-                          <option>ptnt_id</option>
+                          <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
                           <option>primary_plan_id</option>
@@ -4630,7 +4630,7 @@
                     <td>claim_rjct_rsn_cde</td>
                     <td><select class="form-control source_name">
                           <option>claim_id</option>
-                          <option>ptnt_id</option>
+                          <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
                           <option>primary_plan_id</option>
@@ -4666,7 +4666,7 @@
                     <td>rvrsl_lag</td>
                     <td><select ss="form-control source_name">
                           <option>claim_id</option>
-                          <option>ptnt_id</option>
+                          <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
                           <option>primary_plan_id</option>
@@ -4702,7 +4702,7 @@
                     <td>encyd_rx_id</td>
                     <td><select class="form-control source_name">
                           <option>claim_id</option>
-                          <option>ptnt_id</option>
+                          <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
                           <option>primary_plan_id</option>
@@ -4738,7 +4738,7 @@
                     <td>days_until_next_fill_cnt</td>
                     <td><select class="form-control source_name">
                           <option>claim_id</option>
-                          <option>ptnt_id</option>
+                          <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
                           <option>primary_plan_id</option>
@@ -4774,7 +4774,7 @@
                     <td>copay_30_amt</td>
                     <td><select class="form-control source_name">
                           <option>claim_id</option>
-                          <option>ptnt_id</option>
+                          <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
                           <option>primary_plan_id</option>
@@ -4810,7 +4810,7 @@
                     <td>sob_cde</td>
                     <td><select class="form-control source_name">
                           <option>claim_id</option>
-                          <option>ptnt_id</option>
+                          <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
                           <option>primary_plan_id</option>
@@ -4846,7 +4846,7 @@
                     <td>new_to_prdct_ind</td>
                     <td><select class="form-control source_name">
                           <option>claim_id</option>
-                          <option>ptnt_id</option>
+                          <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
                           <option>primary_plan_id</option>
@@ -4882,7 +4882,7 @@
                     <td>cncmt_ind</td>
                     <td><select class="form-control source_name">
                           <option>claim_id</option>
-                          <option>ptnt_id</option>
+                          <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
                           <option>primary_plan_id</option>
@@ -4918,7 +4918,7 @@
                     <td>final_claim_cde</td>
                     <td><select class="form-control source_name">
                           <option>claim_id</option>
-                          <option>ptnt_id</option>
+                          <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
                           <option>primary_plan_id</option>
@@ -4954,7 +4954,7 @@
                     <td>prmry_plan_grp_nbr</td>
                     <td><select class="form-control source_name">
                           <option>claim_id</option>
-                          <option>ptnt_id</option>
+                          <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
                           <option>primary_plan_id</option>
@@ -4990,7 +4990,7 @@
                     <td>scnry_plan_grp_nbr</td>
                     <td><select class="form-control source_name">
                           <option>claim_id</option>
-                          <option>ptnt_id</option>
+                          <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
                           <option>primary_plan_id</option>
@@ -5026,7 +5026,7 @@
                     <td>daw_cde</td>
                     <td><select class="form-control source_name">
                           <option>claim_id</option>
-                          <option>ptnt_id</option>
+                          <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
                           <option>primary_plan_id</option>
@@ -5062,7 +5062,7 @@
                     <td>athrz_refil_cnt</td>
                     <td><select class="form-control source_name">
                           <option>claim_id</option>
-                          <option>ptnt_id</option>
+                          <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
                           <option>primary_plan_id</option>
@@ -5098,7 +5098,7 @@
                     <td>deletion_flag</td>
                     <td><select class="form-control source_name">
                           <option>claim_id</option>
-                          <option>ptnt_id</option>
+                          <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
                           <option>primary_plan_id</option>
