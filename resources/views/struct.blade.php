@@ -4665,7 +4665,7 @@
                   </tr>
                   <tr>
                     <td>rvrsl_lag</td>
-                    <td><select ss="form-control source_name">
+                    <td><select class="form-control source_name">
                           <option>claim_id</option>
                           <option>patient_id</option>
                           <option>drug_id</option>
@@ -5612,6 +5612,9 @@
                           <option>product_id</option>
                           <option>plan_id</option>
                           <option>Map to Self</option>
+                          <option>relation_id</option>
+                          <option>writer_type</option>
+                          <option>Map to Self</option>
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -5637,6 +5640,9 @@
                           <option selected>product_id</option>
                           <option>plan_id</option>
                           <option>Map to Self</option>
+                          <option>relation_id</option>
+                          <option>writer_type</option>
+                          <option>Map to Self</option>
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -5660,6 +5666,9 @@
                           <option>market_id</option>
                           <option>product_id</option>
                           <option selected>plan_id</option>
+                          <option>Map to Self</option>
+                          <option>relation_id</option>
+                          <option>writer_type</option>
                           <option>Map to Self</option>
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
@@ -5685,6 +5694,9 @@
                           <option>product_id</option>
                           <option>plan_id</option>
                           <option selected>Map to Self</option>
+                          <option>relation_id</option>
+                          <option>writer_type</option>
+                          <option>Map to Self</option>
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -5703,11 +5715,95 @@
                     </td>
                   </tr>
                   <tr>
+                    <td>rel_id</td>
+                    <td><select class="form-control source_name">
+                          <option>market_id</option>
+                          <option>product_id</option>
+                          <option>plan_id</option>
+                          <option>Map to Self</option>
+                          <option selected>relation_id</option>
+                          <option>writer_type</option>
+                          <option>Map to Self</option>
+                          <option>week_ending_date</option>
+                          <option>month_ending_date</option>
+                          <option>sob_group</option>
+                          <option>new_rx_count</option>
+                          <option>refill_rx_count</option>
+                          <option>total_rx_count</option>
+                          <option>new_rx_quantity</option>
+                          <option>refill_rx_quantity</option>
+                          <option>total_rx_quantity</option>
+                          <option>new_days_supply</option>
+                          <option>refill_days_supply</option>
+                          <option>total_days_supply</option>
+                          <option>Map to Self</option>
+                          <option>Ignore Mapping</option>
+                        </select>
+                        </td>
+                  </tr>
+                  <tr>
+                    <td>writer_type</td>
+                    <td><select class="form-control source_name">
+                          <option>market_id</option>
+                          <option>product_id</option>
+                          <option>plan_id</option>
+                          <option>Map to Self</option>
+                          <option>relation_id</option>
+                          <option selected>writer_type</option>
+                          <option>Map to Self</option>
+                          <option>week_ending_date</option>
+                          <option>month_ending_date</option>
+                          <option>sob_group</option>
+                          <option>new_rx_count</option>
+                          <option>refill_rx_count</option>
+                          <option>total_rx_count</option>
+                          <option>new_rx_quantity</option>
+                          <option>refill_rx_quantity</option>
+                          <option>total_rx_quantity</option>
+                          <option>new_days_supply</option>
+                          <option>refill_days_supply</option>
+                          <option>total_days_supply</option>
+                          <option>Map to Self</option>
+                          <option>Ignore Mapping</option>
+                        </select>
+                        </td>
+                  </tr>
+                  <tr>
+                    <td>payment_type_indicator</td>
+                    <td><select class="form-control source_name">
+                          <option>market_id</option>
+                          <option>product_id</option>
+                          <option>plan_id</option>
+                          <option>Map to Self</option>
+                          <option>relation_id</option>
+                          <option>writer_type</option>
+                          <option selected>Map to Self</option>
+                          <option>week_ending_date</option>
+                          <option>month_ending_date</option>
+                          <option>sob_group</option>
+                          <option>new_rx_count</option>
+                          <option>refill_rx_count</option>
+                          <option>total_rx_count</option>
+                          <option>new_rx_quantity</option>
+                          <option>refill_rx_quantity</option>
+                          <option>total_rx_quantity</option>
+                          <option>new_days_supply</option>
+                          <option>refill_days_supply</option>
+                          <option>total_days_supply</option>
+                          <option>Map to Self</option>
+                          <option>Ignore Mapping</option>
+                        </select>
+                        </td>
+                  </tr>
+                  <tr>
                     <td>wk_ending_dt</td>
                     <td><select class="form-control source_name">
                           <option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
+                          <option>Map to Self</option>
+                          <option>relation_id</option>
+                          <option>writer_type</option>
                           <option>Map to Self</option>
                           <option selected>week_ending_date</option>
                           <option>month_ending_date</option>
@@ -5733,6 +5829,9 @@
                           <option>product_id</option>
                           <option>plan_id</option>
                           <option>Map to Self</option>
+                          <option>relation_id</option>
+                          <option>writer_type</option>
+                          <option>Map to Self</option>
                           <option>week_ending_date</option>
                           <option selected>month_ending_date</option>
                           <option>sob_group</option>
@@ -5756,6 +5855,9 @@
                           <option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
+                          <option>Map to Self</option>
+                          <option>relation_id</option>
+                          <option>writer_type</option>
                           <option>Map to Self</option>
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
@@ -5781,6 +5883,9 @@
                           <option>product_id</option>
                           <option>plan_id</option>
                           <option>Map to Self</option>
+                          <option>relation_id</option>
+                          <option>writer_type</option>
+                          <option>Map to Self</option>
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -5801,15 +5906,17 @@
                   <tr>
                     <td>refill_rx_cnt</td>
                     <td><select class="form-control source_name">
-                          
                           <option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
                           <option>Map to Self</option>
+                          <option>relation_id</option>
+                          <option>writer_type</option>
+                          <option>Map to Self</option>
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
-                          <option>new_rx_count</option>
+                          <option >new_rx_count</option>
                           <option selected>refill_rx_count</option>
                           <option>total_rx_count</option>
                           <option>new_rx_quantity</option>
@@ -5830,10 +5937,13 @@
                           <option>product_id</option>
                           <option>plan_id</option>
                           <option>Map to Self</option>
+                          <option>relation_id</option>
+                          <option>writer_type</option>
+                          <option>Map to Self</option>
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
-                          <option>new_rx_count</option>
+                          <option >new_rx_count</option>
                           <option>refill_rx_count</option>
                           <option selected>total_rx_count</option>
                           <option>new_rx_quantity</option>
@@ -5847,6 +5957,7 @@
                         </select>
                         </td>
                   </tr>
+
                   <tr>
                     <td>new_rx_qty</td>
                     <td><select class="form-control source_name">
@@ -5854,10 +5965,13 @@
                           <option>product_id</option>
                           <option>plan_id</option>
                           <option>Map to Self</option>
+                          <option>relation_id</option>
+                          <option>writer_type</option>
+                          <option>Map to Self</option>
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
-                          <option>new_rx_count</option>
+                          <option >new_rx_count</option>
                           <option>refill_rx_count</option>
                           <option>total_rx_count</option>
                           <option selected>new_rx_quantity</option>
@@ -5871,6 +5985,7 @@
                         </select>
                         </td>
                   </tr>
+                  
                   <tr>
                     <td>refill_rx_qty</td>
                     <td><select class="form-control source_name">
@@ -5878,10 +5993,13 @@
                           <option>product_id</option>
                           <option>plan_id</option>
                           <option>Map to Self</option>
+                          <option>relation_id</option>
+                          <option>writer_type</option>
+                          <option>Map to Self</option>
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
-                          <option>new_rx_count</option>
+                          <option >new_rx_count</option>
                           <option>refill_rx_count</option>
                           <option>total_rx_count</option>
                           <option>new_rx_quantity</option>
@@ -5894,6 +6012,7 @@
                           <option>Ignore Mapping</option>
                         </select>
                         </td>
+
                   </tr>
                   <tr>
                     <td>tot_rx_qty</td>
@@ -5902,10 +6021,13 @@
                           <option>product_id</option>
                           <option>plan_id</option>
                           <option>Map to Self</option>
+                          <option>relation_id</option>
+                          <option>writer_type</option>
+                          <option>Map to Self</option>
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
-                          <option>new_rx_count</option>
+                          <option >new_rx_count</option>
                           <option>refill_rx_count</option>
                           <option>total_rx_count</option>
                           <option>new_rx_quantity</option>
@@ -5919,7 +6041,6 @@
                         </select>
                         </td>
                   </tr>
-
                   <tr>
                     <td>new_days_supply</td>
                     <td><select class="form-control source_name">
@@ -5927,10 +6048,13 @@
                           <option>product_id</option>
                           <option>plan_id</option>
                           <option>Map to Self</option>
+                          <option>relation_id</option>
+                          <option>writer_type</option>
+                          <option>Map to Self</option>
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
-                          <option>new_rx_count</option>
+                          <option >new_rx_count</option>
                           <option>refill_rx_count</option>
                           <option>total_rx_count</option>
                           <option>new_rx_quantity</option>
@@ -5944,7 +6068,6 @@
                         </select>
                         </td>
                   </tr>
-                  
                   <tr>
                     <td>refill_days_supply</td>
                     <td><select class="form-control source_name">
@@ -5952,10 +6075,13 @@
                           <option>product_id</option>
                           <option>plan_id</option>
                           <option>Map to Self</option>
+                          <option>relation_id</option>
+                          <option>writer_type</option>
+                          <option>Map to Self</option>
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
-                          <option>new_rx_count</option>
+                          <option >new_rx_count</option>
                           <option>refill_rx_count</option>
                           <option>total_rx_count</option>
                           <option>new_rx_quantity</option>
@@ -5968,7 +6094,6 @@
                           <option>Ignore Mapping</option>
                         </select>
                         </td>
-
                   </tr>
                   <tr>
                     <td>tot_days_supply</td>
@@ -5977,10 +6102,13 @@
                           <option>product_id</option>
                           <option>plan_id</option>
                           <option>Map to Self</option>
+                          <option>relation_id</option>
+                          <option>writer_type</option>
+                          <option>Map to Self</option>
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
-                          <option>new_rx_count</option>
+                          <option >new_rx_count</option>
                           <option>refill_rx_count</option>
                           <option>total_rx_count</option>
                           <option>new_rx_quantity</option>
@@ -6001,10 +6129,13 @@
                           <option>product_id</option>
                           <option>plan_id</option>
                           <option>Map to Self</option>
+                          <option>relation_id</option>
+                          <option>writer_type</option>
+                          <option>Map to Self</option>
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
-                          <option>new_rx_count</option>
+                          <option >new_rx_count</option>
                           <option>refill_rx_count</option>
                           <option>total_rx_count</option>
                           <option>new_rx_quantity</option>
