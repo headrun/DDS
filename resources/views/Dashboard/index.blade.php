@@ -66,7 +66,7 @@
                   <h3 class="widget-title" style="color:#004269">AWS Infrastructure Health</h3>
               </div>
               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                  <div class="panel panel-default" style="border-bottom: 4px solid #f8b118;     padding: 26px;">
+                  <div class="panel panel-default" style="border-bottom: 4px solid #f8b118;     padding: 51px;">
                       <table class="table" style="font-size:14px">
                         <tbody>
                           <tr>
@@ -81,9 +81,7 @@
                           <tr>
                             <td>MMIT May data…………………………...........06/15/2017</td>
                           </tr>
-                          <tr>
-                            <td>Optimix: Market Mix Modelling workflow for RA</td>
-                          </tr>
+                          
                         </tbody>
                       </table>
                   </div>
