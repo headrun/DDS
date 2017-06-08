@@ -565,7 +565,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Selected Sources</h4>
+          <h4 class="modal-title">Mapping Started</h4>
         </div>
         <div class="modal-body" style="padding: 10px 50px">
         <div id= 'text_add'></div>
@@ -601,16 +601,14 @@
                     <td>drug_id</td>
                     <td>
                       <select class="form-control source_name"><span>DCube Column</span>
+
+                       <option>Ignore Mapping</option>                       
                        <option selected>drug_id</option>
                        <option>ndc_11_code</option>
                        <option>drug_name</option>
                        <option>brand_generic_flag</option>
-                       <option>Map to Self</option>
-                       
-                       <option>Ignore Mapping</option>
-                       <option>Map to Self</option>
-                       
-                       <option>Ignore Mapping</option>
+                       <option>Map as is</option>
+                       <option>Map as is</option>
                        <option>generic_name</option>
                        <option>strength_description</option>
                        <option>dosage_form_desc</option>
@@ -618,7 +616,7 @@
                        <option>pckg_desc</option>
                        <option>manufacturer</option>
                        <option>pckg_launch_date</option>
-                       <option>Ignore Mapping</option>
+                       
                      </select>
 
                     </td>
@@ -627,16 +625,14 @@
                     <td>ndc_11_cde</td>
                     <td>
                       <select class="form-control source_name"><span>DCube Column</span>
+
+                       <option>Ignore Mapping</option>                       
                        <option>drug_id</option>
                        <option selected>ndc_11_code</option>
                        <option>drug_name</option>
                        <option>brand_generic_flag</option>
-                       <option>Map to Self</option>
-                       
-                       <option>Ignore Mapping</option>
-                       <option>Map to Self</option>
-                       
-                       <option>Ignore Mapping</option>
+                       <option>Map as is</option>
+                       <option>Map as is</option>                       
                        <option>generic_name</option>
                        <option>strength_description</option>
                        <option>dosage_form_desc</option>
@@ -644,7 +640,7 @@
                        <option>pckg_desc</option>
                        <option>manufacturer</option>
                        <option>pckg_launch_date</option>
-                       <option>Ignore Mapping</option>
+                       
                      </select>
 
                     </td>
@@ -653,16 +649,14 @@
                     <td>drug_nam</td>
                     <td>
                       <select class="form-control source_name"><span>DCube Column</span>
+
+                       <option>Ignore Mapping</option>                       
                        <option>drug_id</option>
                        <option>ndc_11_code</option>
                        <option selected>drug_name</option>
                        <option>brand_generic_flag</option>
-                       <option>Map to Self</option>
-                       
-                       <option>Ignore Mapping</option>
-                       <option>Map to Self</option>
-                       
-                       <option>Ignore Mapping</option>
+                       <option>Map as is</option>
+                       <option>Map as is</option>
                        <option>generic_name</option>
                        <option>strength_description</option>
                        <option>dosage_form_desc</option>
@@ -670,7 +664,7 @@
                        <option>pckg_desc</option>
                        <option>manufacturer</option>
                        <option>pckg_launch_date</option>
-                       <option>Ignore Mapping</option>
+                       
                      </select>
 
                     </td>
@@ -679,16 +673,18 @@
                     <td>brnd_gnrc_cde</td>
                     <td>
                       <select class="form-control source_name"><span>DCube Column</span>
+
+                       <option>Ignore Mapping</option>                       
                        <option>drug_id</option>
                        <option>ndc_11_code</option>
                        <option>drug_name</option>
                        <option selectedv>brand_generic_flag</option>
-                       <option>Map to Self</option>
+                       <option>Map as is</option>
                        
-                       <option>Ignore Mapping</option>
-                       <option>Map to Self</option>
                        
-                       <option>Ignore Mapping</option>
+                       <option>Map as is</option>
+                       
+                       
                        <option>generic_name</option>
                        <option>strength_description</option>
                        <option>dosage_form_desc</option>
@@ -696,7 +692,7 @@
                        <option>pckg_desc</option>
                        <option>manufacturer</option>
                        <option>pckg_launch_date</option>
-                       <option>Ignore Mapping</option>
+                       
                      </select>
 
                     </td>
@@ -705,16 +701,18 @@
                     <td>usc_cde</td>
                     <td>
                       <select class="form-control source_name"><span>DCube Column</span>
+
+                       <option>Ignore Mapping</option>                       
                        <option>drug_id</option>
                        <option>ndc_11_code</option>
                        <option>drug_name</option>
                        <option>brand_generic_flag</option>
-                       <option selected>Map to Self</option>
+                       <option selected>Map as is</option>
                        
-                       <option>Ignore Mapping</option>
-                       <option>Map to Self</option>
                        
-                       <option>Ignore Mapping</option>
+                       <option>Map as is</option>
+                       
+                       
                        <option>generic_name</option>
                        <option>strength_description</option>
                        <option>dosage_form_desc</option>
@@ -722,7 +720,7 @@
                        <option>pckg_desc</option>
                        <option>manufacturer</option>
                        <option>pckg_launch_date</option>
-                       <option>Ignore Mapping</option>
+                       
                      </select>
 
                     </td>
@@ -731,21 +729,23 @@
                     <td>usc_nam</td>
                     <td>
                       <select class="form-control source_name"><span>DCube Column</span>
+
+                       <option>Ignore Mapping</option>                       
                        <option>drug_id</option>
                        <option>ndc_11_code</option>
                        <option>drug_name</option>
                        <option>brand_generic_flag</option>
-                       <option>Map to Self</option>
+                       <option>Map as is</option>
                        
-                       <option>Ignore Mapping</option>
-                       <option selected>Map to Self</option>
                        
-                       <option>Ignore Mapping</option>
+                       <option selected>Map as is</option>
+                       
+                       
                        <option>generic_name</option>
                        <option>strength_description</option>
                        <option>dosage_form_desc</option>
                        <option>package_size</option>
-                       <option>Ignore Mapping</option>
+                       
                        <option>pckg_desc</option>
                        <option>manufacturer</option>
                        <option>pckg_launch_date</option>
@@ -757,23 +757,25 @@
                     <td>gnrc_drug_nam</td>
                     <td>
                       <select class="form-control source_name"><span>DCube Column</span>
+
+                       <option>Ignore Mapping</option>                       
                        <option>drug_id</option>
                        <option>ndc_11_code</option>
                        <option>drug_name</option>
                        <option>brand_generic_flag</option>
-                       <option>Map to Self</option>
+                       <option>Map as is</option>
                        
-                       <option>Ignore Mapping</option>
-                       <option>Map to Self</option>
                        
-                       <option>Ignore Mapping</option>
+                       <option>Map as is</option>
+                       
+                       
                        <option selected>generic_name</option>
                        <option>strength_description</option>
                        <option>dosage_form_desc</option>
                        <option>package_size</option>
                        <option>pckg_desc</option>
                        <option>manufacturer</option>
-                       <option>Ignore Mapping</option>
+                       
                        <option>pckg_launch_date</option>
                      </select>
 
@@ -783,23 +785,25 @@
                     <td>strgh_desc</td>
                     <td>
                       <select class="form-control source_name"><span>DCube Column</span>
+
+                       <option>Ignore Mapping</option>                       
                        <option>drug_id</option>
                        <option>ndc_11_code</option>
                        <option>drug_name</option>
                        <option>brand_generic_flag</option>
-                       <option>Map to Self</option>
+                       <option>Map as is</option>
                        
-                       <option>Ignore Mapping</option>
-                       <option>Map to Self</option>
                        
-                       <option>Ignore Mapping</option>
+                       <option>Map as is</option>
+                       
+                       
                        <option>generic_name</option>
                        <option selected>strength_description</option>
                        <option>dosage_form_desc</option>
                        <option>package_size</option>
                        <option>pckg_desc</option>
                        <option>manufacturer</option>
-                       <option>Ignore Mapping</option>
+                       
                        <option>pckg_launch_date</option>
                      </select>
 
@@ -809,22 +813,24 @@
                     <td>dsg_form_desc</td>
                     <td>
                       <select class="form-control source_name"><span>DCube Column</span>
+
+                       <option>Ignore Mapping</option>                       
                        <option>drug_id</option>
                        <option>ndc_11_code</option>
                        <option>drug_name</option>
                        <option>brand_generic_flag</option>
-                       <option>Map to Self</option>
+                       <option>Map as is</option>
                        
-                       <option>Ignore Mapping</option>
-                       <option>Map to Self</option>
                        
-                       <option>Ignore Mapping</option>
+                       <option>Map as is</option>
+                       
+                       
                        <option>generic_name</option>
                        <option>strength_description</option>
                        <option selected>dosage_form_desc</option>
                        <option>package_size</option>
                        <option>pckg_desc</option>
-                       <option>Ignore Mapping</option>
+                       
                        <option>manufacturer</option>
                        <option>pckg_launch_date</option>
                      </select>
@@ -835,20 +841,22 @@
                     <td>pkg_sz_qty</td>
                     <td>
                       <select class="form-control source_name"><span>DCube Column</span>
+
+                       <option>Ignore Mapping</option>                       
                        <option>drug_id</option>
                        <option>ndc_11_code</option>
                        <option>drug_name</option>
                        <option>brand_generic_flag</option>
-                       <option>Map to Self</option>
+                       <option>Map as is</option>
                        
-                       <option>Ignore Mapping</option>
-                       <option>Map to Self</option>
                        
-                       <option>Ignore Mapping</option>
+                       <option>Map as is</option>
+                       
+                       
                        <option>generic_name</option>
                        <option>strength_description</option>
                        <option>dosage_form_desc</option>
-                       <option>Ignore Mapping</option>
+                       
                        <option selected>package_size</option>
                        <option>pckg_desc</option>
                        <option>manufacturer</option>
@@ -861,16 +869,18 @@
                     <td>pkg_desc</td>
                     <td>
                       <select class="form-control source_name"><span>DCube Column</span>
+
+                       <option>Ignore Mapping</option>                       
                        <option>drug_id</option>
                        <option>ndc_11_code</option>
                        <option>drug_name</option>
                        <option>brand_generic_flag</option>
-                       <option>Map to Self</option>
+                       <option>Map as is</option>
                        
-                       <option>Ignore Mapping</option>
-                       <option>Map to Self</option>
                        
-                       <option>Ignore Mapping</option>
+                       <option>Map as is</option>
+                       
+                       
                        <option>generic_name</option>
                        <option>strength_description</option>
                        <option>dosage_form_desc</option>
@@ -878,7 +888,7 @@
                        <option selected>pckg_desc</option>
                        <option>manufacturer</option>
                        <option>pckg_launch_date</option>
-                       <option>Ignore Mapping</option>
+                       
                      </select>
 
                     </td>
@@ -887,23 +897,25 @@
                     <td>drug_mfg_nam</td>
                     <td>
                       <select class="form-control source_name"><span>DCube Column</span>
+
+                       <option>Ignore Mapping</option>                       
                        <option>drug_id</option>
                        <option>ndc_11_code</option>
                        <option>drug_name</option>
                        <option>brand_generic_flag</option>
-                       <option>Map to Self</option>
+                       <option>Map as is</option>
                        
-                       <option>Ignore Mapping</option>
-                       <option>Map to Self</option>
                        
-                       <option>Ignore Mapping</option>
+                       <option>Map as is</option>
+                       
+                       
                        <option>generic_name</option>
                        <option>strength_description</option>
                        <option>dosage_form_desc</option>
                        <option>package_size</option>
                        <option>pckg_desc</option>
                        <option selected>manufacturer</option>
-                       <option>Ignore Mapping</option>
+                       
                        <option>pckg_launch_date</option>
                      </select>
 
@@ -913,21 +925,23 @@
                     <td>pkg_lanch_dte</td>
                     <td>
                       <select class="form-control source_name"><span>DCube Column</span>
+
+                       <option>Ignore Mapping</option>                       
                        <option>drug_id</option>
                        <option>ndc_11_code</option>
                        <option>drug_name</option>
                        <option>brand_generic_flag</option>
-                       <option>Map to Self</option>
+                       <option>Map as is</option>
                        
-                       <option>Ignore Mapping</option>
-                       <option>Map to Self</option>
                        
-                       <option>Ignore Mapping</option>
+                       <option>Map as is</option>
+                       
+                       
                        <option>generic_name</option>
                        <option>strength_description</option>
                        <option>dosage_form_desc</option>
                        <option>package_size</option>
-                       <option>Ignore Mapping</option>
+                       
                        <option>pckg_desc</option>
                        <option>manufacturer</option>
                        <option selected>pckg_launch_date</option>
@@ -972,7 +986,8 @@
                     <td>period</td>
                     <td>
                       <select class="form-control source_name">
-                           <option selected>time_period</option>
+                           
+                                                 <option>Ignore Mapping</option><option selected>time_period</option>
                            <option>client_id</option>
                            <option>plan_id</option>
                            <option>plan</option>
@@ -993,8 +1008,8 @@
                            <option>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option>Notes</option>
-                           <option>Map to Self</option>                           
-                           <option>Ignore Mapping</option>
+                           <option>Map as is</option>                           
+                           
                           </select>
                     </td>
                   </tr>
@@ -1003,7 +1018,8 @@
                     <td>client_id</td>
                     <td>
                       <select class="form-control source_name">
-                           <option>time_period</option>
+                           
+                                                 <option>Ignore Mapping</option><option>time_period</option>
                            <option selected>client_id</option>
                            <option>plan_id</option>
                            <option>plan</option>
@@ -1024,10 +1040,10 @@
                            <option>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option>Notes</option>
-                           <option>Map to Self</option>
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                       <option>Ignore Mapping</option>
+                       
+                       
                           </select>
                     </td>
                   </tr>
@@ -1035,7 +1051,8 @@
                     <td>plan_id</td>
                     <td>
                       <select class="form-control source_name">
-                           <option>time_period</option>
+                           
+                                                 <option>Ignore Mapping</option><option>time_period</option>
                            <option>client_id</option>
                            <option selected>plan_id</option>
                            <option>plan</option>
@@ -1056,10 +1073,10 @@
                            <option>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option>Notes</option>
-                           <option>Map to Self</option>
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                       <option>Ignore Mapping</option>
+                       
+                       
                           </select>
                     </td>
                   </tr>
@@ -1067,7 +1084,8 @@
                     <td>plan</td>
                     <td>
                       <select class="form-control source_name">
-                           <option>time_period</option>
+                           
+                                                 <option>Ignore Mapping</option><option>time_period</option>
                            <option>client_id</option>
                            <option>plan_id</option>
                            <option selected>plan</option>
@@ -1088,10 +1106,10 @@
                            <option>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option>Notes</option>
-                           <option>Map to Self</option>
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                       <option>Ignore Mapping</option>
+                       
+                       
                           </select>
                     </td>
                   </tr>
@@ -1099,7 +1117,8 @@
                     <td>formulary_id</td>
                     <td>
                       <select class="form-control source_name">
-                           <option>time_period</option>
+                           
+                                                 <option>Ignore Mapping</option><option>time_period</option>
                            <option>client_id</option>
                            <option>plan_id</option>
                            <option>plan</option>
@@ -1120,10 +1139,10 @@
                            <option>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option>Notes</option>
-                           <option>Map to Self</option>
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                       <option>Ignore Mapping</option>
+                       
+                       
                           </select>
                     </td>
                   </tr>
@@ -1131,7 +1150,8 @@
                     <td>formulary_name</td>
                     <td>
                       <select class="form-control source_name">
-                           <option>time_period</option>
+                           
+                                                 <option>Ignore Mapping</option><option>time_period</option>
                            <option>client_id</option>
                            <option>plan_id</option>
                            <option>plan</option>
@@ -1152,10 +1172,10 @@
                            <option>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option>Notes</option>
-                           <option>Map to Self</option>
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                       <option>Ignore Mapping</option>
+                       
+                       
                           </select>
                     </td>
                   </tr>
@@ -1163,7 +1183,8 @@
                     <td>contorller</td>
                     <td>
                       <select class="form-control source_name">
-                           <option>time_period</option>
+                           
+                                                 <option>Ignore Mapping</option><option>time_period</option>
                            <option>client_id</option>
                            <option>plan_id</option>
                            <option>plan</option>
@@ -1184,10 +1205,10 @@
                            <option>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option>Notes</option>
-                           <option>Map to Self</option>
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                       <option>Ignore Mapping</option>
+                       
+                       
                           </select>
                     </td>
                   </tr>
@@ -1195,7 +1216,8 @@
                     <td>parent</td>
                     <td>
                       <select class="form-control source_name">
-                           <option>time_period</option>
+                           
+                                                 <option>Ignore Mapping</option><option>time_period</option>
                            <option>client_id</option>
                            <option>plan_id</option>
                            <option>plan</option>
@@ -1216,10 +1238,10 @@
                            <option>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option>Notes</option>
-                           <option>Map to Self</option>
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                       <option>Ignore Mapping</option>
+                       
+                       
                           </select>
                     </td>
                   </tr>
@@ -1227,7 +1249,8 @@
                     <td>pbm</td>
                     <td>
                       <select class="form-control source_name">
-                           <option>time_period</option>
+                           
+                                                 <option>Ignore Mapping</option><option>time_period</option>
                            <option>client_id</option>
                            <option>plan_id</option>
                            <option>plan</option>
@@ -1248,10 +1271,10 @@
                            <option>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option>Notes</option>
-                           <option>Map to Self</option>
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                       <option>Ignore Mapping</option>
+                       
+                       
                           </select>
                     </td>
                   </tr>
@@ -1259,7 +1282,8 @@
                     <td>pbm_relationship</td>
                     <td>
                       <select class="form-control source_name">
-                           <option>time_period</option>
+                           
+                                                 <option>Ignore Mapping</option><option>time_period</option>
                            <option>client_id</option>
                            <option>plan_id</option>
                            <option>plan</option>
@@ -1280,10 +1304,10 @@
                            <option>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option>Notes</option>
-                           <option>Map to Self</option>
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                       <option>Ignore Mapping</option>
+                       
+                       
                           </select>
                     </td>
                   </tr>
@@ -1291,7 +1315,8 @@
                     <td>channel</td>
                     <td>
                       <select class="form-control source_name">
-                           <option>time_period</option>
+                           
+                                                 <option>Ignore Mapping</option><option>time_period</option>
                            <option>client_id</option>
                            <option>plan_id</option>
                            <option>plan</option>
@@ -1312,10 +1337,10 @@
                            <option>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option>Notes</option>
-                           <option>Map to Self</option>
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                       <option>Ignore Mapping</option>
+                       
+                       
                           </select>
                     </td>
                   </tr>
@@ -1323,7 +1348,8 @@
                     <td>plan_typess</td>
                     <td>
                       <select class="form-control source_name">
-                           <option>time_period</option>
+                           
+                                                 <option>Ignore Mapping</option><option>time_period</option>
                            <option>client_id</option>
                            <option>plan_id</option>
                            <option>plan</option>
@@ -1344,10 +1370,10 @@
                            <option>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option>Notes</option>
-                           <option>Map to Self</option>
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                       <option>Ignore Mapping</option>
+                       
+                       
                           </select>
                     </td>
                   </tr>
@@ -1355,7 +1381,8 @@
                     <td>state</td>
                     <td>
                       <select class="form-control source_name">
-                           <option>time_period</option>
+                           
+                                                 <option>Ignore Mapping</option><option>time_period</option>
                            <option>client_id</option>
                            <option>plan_id</option>
                            <option>plan</option>
@@ -1376,10 +1403,10 @@
                            <option>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option>Notes</option>
-                           <option>Map to Self</option>
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                       <option>Ignore Mapping</option>
+                       
+                       
                           </select>
                     </td>
                   </tr>
@@ -1388,7 +1415,8 @@
                     <td>lives</td>
                     <td>
                       <select class="form-control source_name">
-                           <option>time_period</option>
+                           
+                                                 <option>Ignore Mapping</option><option>time_period</option>
                            <option>client_id</option>
                            <option>plan_id</option>
                            <option>plan</option>
@@ -1409,10 +1437,10 @@
                            <option>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option>Notes</option>
-                           <option>Map to Self</option>
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                       <option>Ignore Mapping</option>
+                       
+                       
                           </select>
                     </td>
                   </tr>
@@ -1420,7 +1448,8 @@
                     <td>drug</td>
                     <td>
                       <select class="form-control source_name">
-                           <option>time_period</option>
+                           
+                                                 <option>Ignore Mapping</option><option>time_period</option>
                            <option>client_id</option>
                            <option>plan_id</option>
                            <option>plan</option>
@@ -1441,10 +1470,10 @@
                            <option>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option>Notes</option>
-                           <option>Map to Self</option>
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                       <option>Ignore Mapping</option>
+                       
+                       
                           </select>
                     </td>
                   </tr>
@@ -1452,7 +1481,8 @@
                     <td>universal_staus</td>
                     <td>
                       <select class="form-control source_name">
-                           <option>time_period</option>
+                           
+                                                 <option>Ignore Mapping</option><option>time_period</option>
                            <option>client_id</option>
                            <option>plan_id</option>
                            <option>plan</option>
@@ -1473,10 +1503,10 @@
                            <option>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option>Notes</option>
-                           <option>Map to Self</option>
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                       <option>Ignore Mapping</option>
+                       
+                       
                           </select>
                     </td>
                   </tr>
@@ -1484,7 +1514,8 @@
                     <td>raw_status</td>
                     <td>
                       <select class="form-control source_name">
-                           <option>time_period</option>
+                           
+                                                 <option>Ignore Mapping</option><option>time_period</option>
                            <option>client_id</option>
                            <option>plan_id</option>
                            <option>plan</option>
@@ -1505,10 +1536,10 @@
                            <option>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option>Notes</option>
-                           <option>Map to Self</option>
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                       <option>Ignore Mapping</option>
+                       
+                       
                           </select>
                     </td>
                   </tr>
@@ -1516,7 +1547,8 @@
                     <td>pa</td>
                     <td>
                       <select class="form-control source_name">
-                           <option>time_period</option>
+                           
+                                                 <option>Ignore Mapping</option><option>time_period</option>
                            <option>client_id</option>
                            <option>plan_id</option>
                            <option>plan</option>
@@ -1537,9 +1569,9 @@
                            <option>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option>Notes</option>
-                           <option>Map to Self</option>
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
+                       
                           </select>
                     </td>
                   </tr>
@@ -1547,7 +1579,8 @@
                     <td>st</td>
                     <td>
                       <select class="form-control source_name">
-                           <option>time_period</option>
+                           
+                                                 <option>Ignore Mapping</option><option>time_period</option>
                            <option>client_id</option>
                            <option>plan_id</option>
                            <option>plan</option>
@@ -1568,9 +1601,9 @@
                            <option selected>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option>Notes</option>
-                           <option>Map to Self</option>
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
+                       
                           </select>
                     </td>
                   </tr>
@@ -1578,7 +1611,8 @@
                     <td>ql</td>
                     <td>
                       <select class="form-control source_name">
-                           <option>time_period</option>
+                           
+                                                 <option>Ignore Mapping</option><option>time_period</option>
                            <option>client_id</option>
                            <option>plan_id</option>
                            <option>plan</option>
@@ -1599,9 +1633,9 @@
                            <option>step_theraphy</option>
                            <option selected>quantity_limit</option>
                            <option>Notes</option>
-                           <option>Map to Self</option>
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
+                       
                           </select>
                     </td>
                   </tr>
@@ -1609,7 +1643,8 @@
                     <td>Notes</td>
                     <td>
                       <select class="form-control source_name">
-                           <option>time_period</option>
+                           
+                                                 <option>Ignore Mapping</option><option>time_period</option>
                            <option>client_id</option>
                            <option>plan_id</option>
                            <option>plan</option>
@@ -1630,9 +1665,9 @@
                            <option>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option selected>Notes</option>
-                           <option>Map to Self</option>
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
+                       
                           </select>
                     </td>
                   </tr>
@@ -1670,7 +1705,8 @@
                   <tr>
                     <td>plan_id</td>
                     <td><select class="form-control source_name">
-                         <option selected>plan_id</option>
+                         
+                                               <option>Ignore Mapping</option><option selected>plan_id</option>
                          <option>plan_name</option>
                          <option>plan_types_code</option>
                          <option>plan_types_desc</option>
@@ -1690,7 +1726,8 @@
                   <tr>
                     <td>plan_nam</td>
                     <td><select class="form-control source_name">
-                         <option>plan_id</option>
+                         
+                                               <option>Ignore Mapping</option><option>plan_id</option>
                          <option selected>plan_name</option>
                          <option>plan_types_code</option>
                          <option>plan_types_desc</option>
@@ -1710,7 +1747,8 @@
                   <tr>
                     <td>plan_typ_cde</td>
                     <td><select class="form-control source_name">
-                         <option>plan_id</option>
+                         
+                                               <option>Ignore Mapping</option><option>plan_id</option>
                          <option>plan_name</option>
                          <option selected>plan_types_code</option>
                          <option>plan_types_desc</option>
@@ -1730,7 +1768,8 @@
                   <tr>
                     <td>plan_typ_desc</td>
                     <td><select class="form-control source_name">
-                         <option>plan_id</option>
+                         
+                                               <option>Ignore Mapping</option><option>plan_id</option>
                          <option>plan_name</option>
                          <option>plan_types_code</option>
                          <option selected>plan_types_desc</option>
@@ -1750,7 +1789,8 @@
                   <tr>
                     <td>plan_sbtyp_desc</td>
                     <td><select class="form-control source_name">
-                         <option>plan_id</option>
+                         
+                                               <option>Ignore Mapping</option><option>plan_id</option>
                          <option>plan_name</option>
                          <option>plan_types_code</option>
                          <option>plan_types_desc</option>
@@ -1770,12 +1810,13 @@
                   <tr>
                     <td>pymt_typ_desc</td>
                     <td><select class="form-control source_name">
-                         <option>plan_id</option>
+                         
+                                               <option>Ignore Mapping</option><option>plan_id</option>
                          <option>plan_name</option>
                          <option>plan_types_code</option>
                          <option>plan_types_desc</option>
                          <option>plan_subtype_desc</option>
-                         <option selected>Ignore Mapping</option>
+                         
                          <option>natnl_insr_name</option>
                          <option>natnl_insr_type_desc</option>
                          <option>reg_org_name</option>
@@ -1790,7 +1831,8 @@
                   <tr>
                     <td>ntnl_insr_nam</td>
                     <td><select class="form-control source_name">
-                         <option>plan_id</option>
+                         
+                                               <option>Ignore Mapping</option><option>plan_id</option>
                          <option>plan_name</option>
                          <option>plan_types_code</option>
                          <option>plan_types_desc</option>
@@ -1810,7 +1852,8 @@
                   <tr>
                     <td>ntnl_insr_typ_desc</td>
                     <td><select class="form-control source_name">
-                         <option>plan_id</option>
+                         
+                                               <option>Ignore Mapping</option><option>plan_id</option>
                          <option>plan_name</option>
                          <option>plan_types_code</option>
                          <option>plan_types_desc</option>
@@ -1830,7 +1873,8 @@
                   <tr>
                     <td>rgnl_org_nam</td>
                     <td><select class="form-control source_name">
-                         <option>plan_id</option>
+                         
+                                               <option>Ignore Mapping</option><option>plan_id</option>
                          <option>plan_name</option>
                          <option>plan_types_code</option>
                          <option>plan_types_desc</option>
@@ -1850,7 +1894,8 @@
                   <tr>
                     <td>reg_org_name</td>
                     <td><select class="form-control source_name">
-                         <option>plan_id</option>
+                         
+                                               <option>Ignore Mapping</option><option>plan_id</option>
                          <option>plan_name</option>
                          <option>plan_types_code</option>
                          <option>plan_types_desc</option>
@@ -1870,7 +1915,8 @@
                   <tr>
                     <td>mc_org_nam</td>
                     <td><select class="form-control source_name">
-                         <option>plan_id</option>
+                         
+                                               <option>Ignore Mapping</option><option>plan_id</option>
                          <option>plan_name</option>
                          <option>plan_types_code</option>
                          <option>plan_types_desc</option>
@@ -1890,7 +1936,8 @@
                   <tr>
                     <td>mc_org_typ_desc</td>
                     <td><select class="form-control source_name">
-                         <option>plan_id</option>
+                         
+                                               <option>Ignore Mapping</option><option>plan_id</option>
                          <option>plan_name</option>
                          <option>plan_types_code</option>
                          <option>plan_types_desc</option>
@@ -1910,7 +1957,8 @@
                   <tr>
                     <td>bnfts_admtr_nam</td>
                     <td><select class="form-control source_name">
-                         <option>plan_id</option>
+                         
+                                               <option>Ignore Mapping</option><option>plan_id</option>
                          <option>plan_name</option>
                          <option>plan_types_code</option>
                          <option>plan_types_desc</option>
@@ -1931,7 +1979,8 @@
                   <tr>
                     <td>bnfts_admtr_typ_desc</td>
                     <td><select class="form-control source_name">
-                         <option>plan_id</option>
+                         
+                                               <option>Ignore Mapping</option><option>plan_id</option>
                          <option>plan_name</option>
                          <option>plan_types_code</option>
                          <option>plan_types_desc</option>
@@ -1983,7 +2032,8 @@
                     <td>claim_rjct_rsn_cde</td>
                     <td>
                     <select class="form-control source_name">
-                       <option selected>claim_rejection_reason_code</option>
+                       
+                                             <option>Ignore Mapping</option><option selected>claim_rejection_reason_code</option>
                        <option>claim_rejection_reason_desc</option>
                        
                      </select>
@@ -1993,7 +2043,8 @@
                     <td>claim_rjct_rsn_desc</td>
                     <td>
                     <select class="form-control source_name">
-                       <option>claim_rejection_reason_code</option>
+                       
+                                             <option>Ignore Mapping</option><option>claim_rejection_reason_code</option>
                        <option selected>claim_rejection_reason_desc</option>
                        
                      </select>
@@ -2033,27 +2084,28 @@
                   <tr>
                     <td>market_id_1</td>
                     <td><select class="form-control source_name">
-                           <option selected></option>
-                           <option>Map to Self</option>
                            
-                       <option>Ignore Mapping</option>
+                                                 <option>Ignore Mapping</option><option selected></option>
+                           <option>Map as is</option>
+                           
+                       
                            <option>market_id</option>
                            <option>market_name</option>
                            <option>product_id</option>
                            <option>product_name</option>
                            <option>ndc_11_code</option>
-                           <option>Map to Self</option>
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                       
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                       
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                       
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
+                       
                            <option>drug_name</option>
                            <option>generic_name</option>
                            <option>form_code</option>
@@ -2068,27 +2120,28 @@
                   <tr>
                     <td>market_name_1</td>
                     <td><select class="form-control source_name">
-                           <option>Map to Self</option>
                            
-                       <option>Ignore Mapping</option>
+                                                 <option>Ignore Mapping</option><option>Map as is</option>
+                           
+                       
                            <option selected></option>
                            <option>market_id</option>
                            <option>market_name</option>
                            <option>product_id</option>
                            <option>product_name</option>
                            <option>ndc_11_code</option>
-                           <option>Map to Self</option>
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                       
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                       
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                       
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
+                       
                            <option>drug_name</option>
                            <option>generic_name</option>
                            <option>form_code</option>
@@ -2101,29 +2154,30 @@
                   <tr>
                     <td>market_id_2</td>
                     <td><select class="form-control source_name">
-                           <option>Map to Self</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                                                 <option>Ignore Mapping</option><option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
+                       
+                           <option>Map as is</option>
+                           
+                       
                            <option selected>market_id</option>
                            <option>market_name</option>
                            <option>product_id</option>
                            <option>product_name</option>
                            <option>ndc_11_code</option>
-                           <option>Map to Self</option>
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                       
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                       
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                       
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
+                       
                            <option>drug_name</option>
                            <option>generic_name</option>
                            <option>form_code</option>
@@ -2136,29 +2190,30 @@
                   <tr>
                     <td>market_name_2</td>
                     <td><select class="form-control source_name">
-                           <option>Map to Self</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                                                 <option>Ignore Mapping</option><option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
+                       
+                           <option>Map as is</option>
+                           
+                       
                            <option>market_id</option>
                            <option selected>market_name</option>
                            <option>product_id</option>
                            <option>product_name</option>
                            <option>ndc_11_code</option>
-                           <option>Map to Self</option>
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                       
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                       
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                       
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
+                       
                            <option>drug_name</option>
                            <option>generic_name</option>
                            <option>form_code</option>
@@ -2171,29 +2226,30 @@
                   <tr>
                     <td>product_id</td>
                     <td><select class="form-control source_name">
-                           <option>Map to Self</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                                                 <option>Ignore Mapping</option><option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
+                       
+                           <option>Map as is</option>
+                           
+                       
                            <option>market_id</option>
                            <option>market_name</option>
                            <option selected>product_id</option>
                            <option>product_name</option>
                            <option>ndc_11_code</option>
-                           <option>Map to Self</option>
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                       
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                       
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                       
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
+                       
                            <option>drug_name</option>
                            <option>generic_name</option>
                            <option>form_code</option>
@@ -2206,29 +2262,30 @@
                   <tr>
                     <td>product_name</td>
                     <td><select class="form-control source_name">
-                           <option>Map to Self</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                                                 <option>Ignore Mapping</option><option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
+                       
+                           <option>Map as is</option>
+                           
+                       
                            <option>market_id</option>
                            <option>market_name</option>
                            <option>product_id</option>
                            <option selected>product_name</option>
                            <option>ndc_11_code</option>
-                           <option>Map to Self</option>
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                       
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                       
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                       
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
+                       
                            <option>drug_name</option>
                            <option>generic_name</option>
                            <option>form_code</option>
@@ -2241,29 +2298,30 @@
                   <tr>
                     <td>ndc</td>
                     <td><select class="form-control source_name">
-                           <option>Map to Self</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                                                 <option>Ignore Mapping</option><option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
+                       
+                           <option>Map as is</option>
+                           
+                       
                            <option>market_id</option>
                            <option>market_name</option>
                            <option>product_id</option>
                            <option>product_name</option>
                            <option selected>ndc_11_code</option>
-                           <option>Map to Self</option>
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                       
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                       
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                       
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
+                       
                            <option>drug_name</option>
                            <option>generic_name</option>
                            <option>form_code</option>
@@ -2276,27 +2334,28 @@
                   <tr>
                     <td>usc</td>
                     <td><select class="form-control source_name">
-                           <option>Map to Self</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                                                 <option>Ignore Mapping</option><option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
+                       
+                           <option>Map as is</option>
+                           
+                       
                            <option>market_id</option>
                            <option>market_name</option>
                            <option>product_id</option>
                            <option>product_name</option>
                            <option>ndc_11_code</option>
                            <option selected></option>
-                           <option>Map to Self</option>
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                       
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                       
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
+                       
                            <option>drug_name</option>
                            <option>generic_name</option>
                            <option>form_code</option>
@@ -2309,29 +2368,30 @@
                   <tr>
                     <td>usc_description</td>
                     <td><select class="form-control source_name">
-                           <option>Map to Self</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                                                 <option>Ignore Mapping</option><option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
+                       
+                           <option>Map as is</option>
+                           
+                       
                            <option>market_id</option>
                            <option>market_name</option>
                            <option>product_id</option>
                            <option>product_name</option>
                            <option>ndc_11_code</option>
-                           <option>Map to Self</option>
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option selected>Map to Self</option>
+                       
+                           <option selected>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                       
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                       
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
+                       
                            <option>drug_name</option>
                            <option>generic_name</option>
                            <option>form_code</option>
@@ -2344,29 +2404,30 @@
                   <tr>
                     <td>bb_usc</td>
                     <td><select class="form-control source_name">
-                           <option>Map to Self</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                                                 <option>Ignore Mapping</option><option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
+                       
+                           <option>Map as is</option>
+                           
+                       
                            <option>market_id</option>
                            <option>market_name</option>
                            <option>product_id</option>
                            <option>product_name</option>
                            <option>ndc_11_code</option>
-                           <option>Map to Self</option>
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                       
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option selected>Map to Self</option>
+                       
+                           <option selected>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                       
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
+                       
                            <option>drug_name</option>
                            <option>generic_name</option>
                            <option>form_code</option>
@@ -2379,26 +2440,27 @@
                   <tr>
                     <td>bb_usc_description</td>
                     <td> <select class="form-control source_name">
-                           <option>Map to Self</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                                                 <option>Ignore Mapping</option><option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
+                       
+                           <option>Map as is</option>
+                           
+                       
                            <option>market_id</option>
                            <option>market_name</option>
                            <option>product_id</option>
                            <option>product_name</option>
                            <option>ndc_11_code</option>
-                           <option>Map to Self</option>
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                       
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                       
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
+                       
                            <option selected></option>
                            <option>drug_name</option>
                            <option>generic_name</option>
@@ -2412,29 +2474,30 @@
                   <tr>
                     <td>drug_name</td>
                     <td><select class="form-control source_name">
-                           <option>Map to Self</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                                                 <option>Ignore Mapping</option><option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
+                       
+                           <option>Map as is</option>
+                           
+                       
                            <option>market_id</option>
                            <option>market_name</option>
                            <option>product_id</option>
                            <option>product_name</option>
                            <option>ndc_11_code</option>
-                           <option>Map to Self</option>
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                       
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                       
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                       
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
+                       
                            <option selected>drug_name</option>
                            <option>generic_name</option>
                            <option>form_code</option>
@@ -2447,29 +2510,30 @@
                   <tr>
                     <td>generic_name</td>
                     <td><select class="form-control source_name">
-                           <option>Map to Self</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                                                 <option>Ignore Mapping</option><option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
+                       
+                           <option>Map as is</option>
+                           
+                       
                            <option>market_id</option>
                            <option>market_name</option>
                            <option>product_id</option>
                            <option>product_name</option>
                            <option>ndc_11_code</option>
-                           <option>Map to Self</option>
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                       
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                       
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                       
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
+                       
                            <option>drug_name</option>
                            <option selected>generic_name</option>
                            <option>form_code</option>
@@ -2483,29 +2547,30 @@
                   <tr>
                     <td>form_code</td>
                     <td><select class="form-control source_name">
-                           <option>Map to Self</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                                                 <option>Ignore Mapping</option><option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
+                       
+                           <option>Map as is</option>
+                           
+                       
                            <option>market_id</option>
                            <option>market_name</option>
                            <option>product_id</option>
                            <option>product_name</option>
                            <option>ndc_11_code</option>
-                           <option>Map to Self</option>
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                       
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                       
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                       
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
+                       
                            <option>drug_name</option>
                            <option>generic_name</option>
                            <option selected>form_code</option>
@@ -2519,29 +2584,30 @@
                   <tr>
                     <td>form_description</td>
                     <td><select class="form-control source_name">
-                           <option>Map to Self</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                                                 <option>Ignore Mapping</option><option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
+                       
+                           <option>Map as is</option>
+                           
+                       
                            <option>market_id</option>
                            <option>market_name</option>
                            <option>product_id</option>
                            <option>product_name</option>
                            <option>ndc_11_code</option>
-                           <option>Map to Self</option>
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                       
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                       
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                       
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
+                       
                            <option>drug_name</option>
                            <option>generic_name</option>
                            <option>form_code</option>
@@ -2554,29 +2620,30 @@
                   <tr>
                     <td>strength_descriptionription</td>
                     <td><select class="form-control source_name">
-                           <option>Map to Self</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                                                 <option>Ignore Mapping</option><option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
+                       
+                           <option>Map as is</option>
+                           
+                       
                            <option>market_id</option>
                            <option>market_name</option>
                            <option>product_id</option>
                            <option>product_name</option>
                            <option>ndc_11_code</option>
-                           <option>Map to Self</option>
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                       
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                       
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                       
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
+                       
                            <option>drug_name</option>
                            <option>generic_name</option>
                            <option>form_code</option>
@@ -2589,29 +2656,30 @@
                   <tr>
                     <td>package_size</td>
                     <td><select class="form-control source_name">
-                           <option>Map to Self</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                                                 <option>Ignore Mapping</option><option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
+                       
+                           <option>Map as is</option>
+                           
+                       
                            <option>market_id</option>
                            <option>market_name</option>
                            <option>product_id</option>
                            <option>product_name</option>
                            <option>ndc_11_code</option>
-                           <option>Map to Self</option>
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                       
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                       
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                       
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
+                       
                            <option>drug_name</option>
                            <option>generic_name</option>
                            <option>form_code</option>
@@ -2624,29 +2692,30 @@
                   <tr>
                     <td>manufacturer</td>
                     <td><select class="form-control source_name">
-                           <option>Map to Self</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                                                 <option>Ignore Mapping</option><option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
+                       
+                           <option>Map as is</option>
+                           
+                       
                            <option>market_id</option>
                            <option>market_name</option>
                            <option>product_id</option>
                            <option>product_name</option>
                            <option>ndc_11_code</option>
-                           <option>Map to Self</option>
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                       
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                       
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
-                           <option>Map to Self</option>
+                       
+                           <option>Map as is</option>
                            
-                       <option>Ignore Mapping</option>
+                       
                            <option>drug_name</option>
                            <option>generic_name</option>
                            <option>form_code</option>
@@ -2691,7 +2760,8 @@
                   <tr>
                     <td>First Name</td>
                     <td><select class="form-control source_name">
-                           <option selected>first_name</option>
+                           
+                                                 <option>Ignore Mapping</option><option selected>first_name</option>
                            <option>last_name</option>
                            <option>Account</option>
                            <option>Address</option>
@@ -2699,15 +2769,15 @@
                            <option>State</option>
                            <option>Zip</option>
                            <option>Specialty</option>
-                           <option>Map to Self</option>
-                           <option>Map to Self</option>
-                           <option>Map to Self</option>
-                           <option>Map to Self</option>
-                           <option>Ignore Mapping</option>
+                           <option>Map as is</option>
+                           <option>Map as is</option>
+                           <option>Map as is</option>
+                           <option>Map as is</option>
+                           
                            <option>idn</option>
                            <option>idn_segment</option>
                            <option>affiliation_level</option>
-                           <option>Map to Self</option>
+                           <option>Map as is</option>
                            <option>target_hcp_count</option>
                            <option>np_pa_count</option>
                            <option>trial_hcp_affl_flag</option>
@@ -2718,7 +2788,8 @@
                   <tr>
                     <td>Last Name</td>
                     <td><select class="form-control source_name">
-                           <option>first_name</option>
+                           
+                                                 <option>Ignore Mapping</option><option>first_name</option>
                            <option selected>last_name</option>
                            <option>Account</option>
                            <option>Address</option>
@@ -2726,15 +2797,15 @@
                            <option>State</option>
                            <option>Zip</option>
                            <option>Specialty</option>
-                           <option>Map to Self</option>
-                           <option>Map to Self</option>
-                           <option>Map to Self</option>
-                           <option>Map to Self</option>
-                           <option>Ignore Mapping</option>
+                           <option>Map as is</option>
+                           <option>Map as is</option>
+                           <option>Map as is</option>
+                           <option>Map as is</option>
+                           
                            <option>idn</option>
                            <option>idn_segment</option>
                            <option>affiliation_level</option>
-                           <option>Map to Self</option>
+                           <option>Map as is</option>
                            <option>target_hcp_count</option>
                            <option>np_pa_count</option>
                            <option>trial_hcp_affl_flag</option>
@@ -2743,7 +2814,8 @@
                   <tr>
                     <td>Account</td>
                     <td><select class="form-control source_name">
-                           <option>first_name</option>
+                           
+                                                 <option>Ignore Mapping</option><option>first_name</option>
                            <option>last_name</option>
                            <option selected>Account</option>
                            <option>Address</option>
@@ -2751,15 +2823,15 @@
                            <option>State</option>
                            <option>Zip</option>
                            <option>Specialty</option>
-                           <option>Map to Self</option>
-                           <option>Map to Self</option>
-                           <option>Map to Self</option>
-                           <option>Map to Self</option>
-                           <option>Ignore Mapping</option>
+                           <option>Map as is</option>
+                           <option>Map as is</option>
+                           <option>Map as is</option>
+                           <option>Map as is</option>
+                           
                            <option>idn</option>
                            <option>idn_segment</option>
                            <option>affiliation_level</option>
-                           <option>Map to Self</option>
+                           <option>Map as is</option>
                            <option>target_hcp_count</option>
                            <option>np_pa_count</option>
                            <option>trial_hcp_affl_flag</option>
@@ -2768,7 +2840,8 @@
                   <tr>
                     <td>Address</td>
                     <td><select class="form-control source_name">
-                           <option>first_name</option>
+                           
+                                                 <option>Ignore Mapping</option><option>first_name</option>
                            <option>last_name</option>
                            <option>Account</option>
                            <option selected>Address</option>
@@ -2776,15 +2849,15 @@
                            <option>State</option>
                            <option>Zip</option>
                            <option>Specialty</option>
-                           <option>Map to Self</option>
-                           <option>Map to Self</option>
-                           <option>Map to Self</option>
-                           <option>Map to Self</option>
-                           <option>Ignore Mapping</option>
+                           <option>Map as is</option>
+                           <option>Map as is</option>
+                           <option>Map as is</option>
+                           <option>Map as is</option>
+                           
                            <option>idn</option>
                            <option>idn_segment</option>
                            <option>affiliation_level</option>
-                           <option>Map to Self</option>
+                           <option>Map as is</option>
                            <option>target_hcp_count</option>
                            <option>np_pa_count</option>
                            <option>trial_hcp_affl_flag</option>
@@ -2793,7 +2866,8 @@
                   <tr>
                     <td>City</td>
                     <td><select class="form-control source_name">
-                           <option>first_name</option>
+                           
+                                                 <option>Ignore Mapping</option><option>first_name</option>
                            <option>last_name</option>
                            <option>Account</option>
                            <option>Address</option>
@@ -2801,15 +2875,15 @@
                            <option>State</option>
                            <option>Zip</option>
                            <option>Specialty</option>
-                           <option>Map to Self</option>
-                           <option>Map to Self</option>
-                           <option>Map to Self</option>
-                           <option>Map to Self</option>
-                           <option>Ignore Mapping</option>
+                           <option>Map as is</option>
+                           <option>Map as is</option>
+                           <option>Map as is</option>
+                           <option>Map as is</option>
+                           
                            <option>idn</option>
                            <option>idn_segment</option>
                            <option>affiliation_level</option>
-                           <option>Map to Self</option>
+                           <option>Map as is</option>
                            <option>target_hcp_count</option>
                            <option>np_pa_count</option>
                            <option>trial_hcp_affl_flag</option>
@@ -2818,7 +2892,8 @@
                   <tr>
                     <td>State</td>
                     <td><select class="form-control source_name">
-                           <option>first_name</option>
+                           
+                                                 <option>Ignore Mapping</option><option>first_name</option>
                            <option>last_name</option>
                            <option>Account</option>
                            <option>Address</option>
@@ -2826,15 +2901,15 @@
                            <option selected>State</option>
                            <option>Zip</option>
                            <option>Specialty</option>
-                           <option>Map to Self</option>
-                           <option>Map to Self</option>
-                           <option>Map to Self</option>
-                           <option>Map to Self</option>
-                           <option>Ignore Mapping</option>
+                           <option>Map as is</option>
+                           <option>Map as is</option>
+                           <option>Map as is</option>
+                           <option>Map as is</option>
+                           
                            <option>idn</option>
                            <option>idn_segment</option>
                            <option>affiliation_level</option>
-                           <option>Map to Self</option>
+                           <option>Map as is</option>
                            <option>target_hcp_count</option>
                            <option>np_pa_count</option>
                            <option>trial_hcp_affl_flag</option>
@@ -2843,7 +2918,8 @@
                   <tr>
                     <td>Zip</td>
                     <td><select class="form-control source_name">
-                           <option>first_name</option>
+                           
+                                                 <option>Ignore Mapping</option><option>first_name</option>
                            <option>last_name</option>
                            <option>Account</option>
                            <option>Address</option>
@@ -2851,15 +2927,15 @@
                            <option>State</option>
                            <option selected>Zip</option>
                            <option>Specialty</option>
-                           <option>Map to Self</option>
-                           <option>Map to Self</option>
-                           <option>Map to Self</option>
-                           <option>Map to Self</option>
-                           <option>Ignore Mapping</option>
+                           <option>Map as is</option>
+                           <option>Map as is</option>
+                           <option>Map as is</option>
+                           <option>Map as is</option>
+                           
                            <option>idn</option>
                            <option>idn_segment</option>
                            <option>affiliation_level</option>
-                           <option>Map to Self</option>
+                           <option>Map as is</option>
                            <option>target_hcp_count</option>
                            <option>np_pa_count</option>
                            <option>trial_hcp_affl_flag</option>
@@ -2868,7 +2944,8 @@
                   <tr>
                     <td>Specialty</td>
                     <td><select class="form-control source_name">
-                           <option>first_name</option>
+                           
+                                                 <option>Ignore Mapping</option><option>first_name</option>
                            <option>last_name</option>
                            <option>Account</option>
                            <option>Address</option>
@@ -2876,15 +2953,15 @@
                            <option>State</option>
                            <option>Zip</option>
                            <option selected>Specialty</option>
-                           <option>Map to Self</option>
-                           <option>Map to Self</option>
-                           <option>Map to Self</option>
-                           <option>Map to Self</option>
-                           <option>Ignore Mapping</option>
+                           <option>Map as is</option>
+                           <option>Map as is</option>
+                           <option>Map as is</option>
+                           <option>Map as is</option>
+                           
                            <option>idn</option>
                            <option>idn_segment</option>
                            <option>affiliation_level</option>
-                           <option>Map to Self</option>
+                           <option>Map as is</option>
                            <option>target_hcp_count</option>
                            <option>np_pa_count</option>
                            <option>trial_hcp_affl_flag</option>
@@ -2893,7 +2970,8 @@
                   <tr>
                     <td>adpt_decile</td>
                     <td><select class="form-control source_name">
-                           <option>first_name</option>
+                           
+                                                 <option>Ignore Mapping</option><option>first_name</option>
                            <option>last_name</option>
                            <option>Account</option>
                            <option>Address</option>
@@ -2901,15 +2979,15 @@
                            <option>State</option>
                            <option>Zip</option>
                            <option>Specialty</option>
-                           <option selected>Map to Self</option>
-                           <option>Map to Self</option>
-                           <option>Map to Self</option>
-                           <option>Map to Self</option>
-                           <option>Ignore Mapping</option>
+                           <option selected>Map as is</option>
+                           <option>Map as is</option>
+                           <option>Map as is</option>
+                           <option>Map as is</option>
+                           
                            <option>idn</option>
                            <option>idn_segment</option>
                            <option>affiliation_level</option>
-                           <option>Map to Self</option>
+                           <option>Map as is</option>
                            <option>target_hcp_count</option>
                            <option>np_pa_count</option>
                            <option>trial_hcp_affl_flag</option>
@@ -2918,7 +2996,8 @@
                   <tr>
                     <td>simple_decile</td>
                     <td><select class="form-control source_name">
-                           <option>first_name</option>
+                           
+                                                 <option>Ignore Mapping</option><option>first_name</option>
                            <option>last_name</option>
                            <option>Account</option>
                            <option>Address</option>
@@ -2926,15 +3005,15 @@
                            <option>State</option>
                            <option>Zip</option>
                            <option>Specialty</option>
-                           <option>Map to Self</option>
-                           <option selected>Map to Self</option>
-                           <option>Map to Self</option>
-                           <option>Map to Self</option>
-                           <option>Ignore Mapping</option>
+                           <option>Map as is</option>
+                           <option selected>Map as is</option>
+                           <option>Map as is</option>
+                           <option>Map as is</option>
+                           
                            <option>idn</option>
                            <option>idn_segment</option>
                            <option>affiliation_level</option>
-                           <option>Map to Self</option>
+                           <option>Map as is</option>
                            <option>target_hcp_count</option>
                            <option>np_pa_count</option>
                            <option>trial_hcp_affl_flag</option>
@@ -2943,7 +3022,8 @@
                   <tr>
                     <td>comp_decide</td>
                     <td><select class="form-control source_name">
-                           <option>first_name</option>
+                           
+                                                 <option>Ignore Mapping</option><option>first_name</option>
                            <option>last_name</option>
                            <option>Account</option>
                            <option>Address</option>
@@ -2951,15 +3031,15 @@
                            <option>State</option>
                            <option>Zip</option>
                            <option>Specialty</option>
-                           <option>Map to Self</option>
-                           <option>Map to Self</option>
-                           <option selected>Map to Self</option>
-                           <option>Map to Self</option>
-                           <option>Ignore Mapping</option>
+                           <option>Map as is</option>
+                           <option>Map as is</option>
+                           <option selected>Map as is</option>
+                           <option>Map as is</option>
+                           
                            <option>idn</option>
                            <option>idn_segment</option>
                            <option>affiliation_level</option>
-                           <option>Map to Self</option>
+                           <option>Map as is</option>
                            <option>target_hcp_count</option>
                            <option>np_pa_count</option>
                            <option>trial_hcp_affl_flag</option>
@@ -2968,7 +3048,8 @@
                   <tr>
                     <td>cluster</td>
                     <td><select class="form-control source_name">
-                           <option>first_name</option>
+                           
+                                                 <option>Ignore Mapping</option><option>first_name</option>
                            <option>last_name</option>
                            <option>Account</option>
                            <option>Address</option>
@@ -2976,15 +3057,15 @@
                            <option>State</option>
                            <option>Zip</option>
                            <option>Specialty</option>
-                           <option>Map to Self</option>
-                           <option>Map to Self</option>
-                           <option>Map to Self</option>
-                           <option selected>Map to Self</option>
-                           <option>Ignore Mapping</option>
+                           <option>Map as is</option>
+                           <option>Map as is</option>
+                           <option>Map as is</option>
+                           <option selected>Map as is</option>
+                           
                            <option>idn</option>
                            <option>idn_segment</option>
                            <option>affiliation_level</option>
-                           <option>Map to Self</option>
+                           <option>Map as is</option>
                            <option>target_hcp_count</option>
                            <option>np_pa_count</option>
                            <option>trial_hcp_affl_flag</option>
@@ -2993,7 +3074,8 @@
                   <tr>
                     <td>Segment</td>
                     <td><select class="form-control source_name">
-                           <option>first_name</option>
+                           
+                                                 <option>Ignore Mapping</option><option>first_name</option>
                            <option>last_name</option>
                            <option>Account</option>
                            <option>Address</option>
@@ -3001,15 +3083,15 @@
                            <option>State</option>
                            <option>Zip</option>
                            <option>Specialty</option>
-                           <option>Map to Self</option>
-                           <option>Map to Self</option>
-                           <option>Map to Self</option>
-                           <option>Map to Self</option>
-                           <option selected>Ignore Mapping</option>
+                           <option>Map as is</option>
+                           <option>Map as is</option>
+                           <option>Map as is</option>
+                           <option>Map as is</option>
+                           
                            <option>idn</option>
                            <option>idn_segment</option>
                            <option>affiliation_level</option>
-                           <option>Map to Self</option>
+                           <option>Map as is</option>
                            <option>target_hcp_count</option>
                            <option>np_pa_count</option>
                            <option>trial_hcp_affl_flag</option>
@@ -3019,7 +3101,8 @@
                   <tr>
                     <td>IDN</td>
                     <td><select class="form-control source_name">
-                           <option>first_name</option>
+                           
+                                                 <option>Ignore Mapping</option><option>first_name</option>
                            <option>last_name</option>
                            <option>Account</option>
                            <option>Address</option>
@@ -3027,15 +3110,15 @@
                            <option>State</option>
                            <option>Zip</option>
                            <option>Specialty</option>
-                           <option>Map to Self</option>
-                           <option>Map to Self</option>
-                           <option>Map to Self</option>
-                           <option>Map to Self</option>
-                           <option>Ignore Mapping</option>
+                           <option>Map as is</option>
+                           <option>Map as is</option>
+                           <option>Map as is</option>
+                           <option>Map as is</option>
+                           
                            <option selected>idn</option>
                            <option>idn_segment</option>
                            <option>affiliation_level</option>
-                           <option>Map to Self</option>
+                           <option>Map as is</option>
                            <option>target_hcp_count</option>
                            <option>np_pa_count</option>
                            <option>trial_hcp_affl_flag</option>
@@ -3045,7 +3128,8 @@
                   <tr>
                     <td>IDN Segment</td>
                     <td><select class="form-control source_name">
-                           <option>first_name</option>
+                           
+                                                 <option>Ignore Mapping</option><option>first_name</option>
                            <option>last_name</option>
                            <option>Account</option>
                            <option>Address</option>
@@ -3053,15 +3137,15 @@
                            <option>State</option>
                            <option>Zip</option>
                            <option>Specialty</option>
-                           <option>Map to Self</option>
-                           <option>Map to Self</option>
-                           <option>Map to Self</option>
-                           <option>Map to Self</option>
-                           <option>Ignore Mapping</option>
+                           <option>Map as is</option>
+                           <option>Map as is</option>
+                           <option>Map as is</option>
+                           <option>Map as is</option>
+                           
                            <option>idn</option>
                            <option selected>idn_segment</option>
                            <option>affiliation_level</option>
-                           <option>Map to Self</option>
+                           <option>Map as is</option>
                            <option>target_hcp_count</option>
                            <option>np_pa_count</option>
                            <option>trial_hcp_affl_flag</option>
@@ -3070,7 +3154,8 @@
                   <tr>
                     <td>Affiliation Level</td>
                     <td><select class="form-control source_name">
-                           <option>first_name</option>
+                           
+                                                 <option>Ignore Mapping</option><option>first_name</option>
                            <option>last_name</option>
                            <option>Account</option>
                            <option>Address</option>
@@ -3078,15 +3163,15 @@
                            <option>State</option>
                            <option>Zip</option>
                            <option>Specialty</option>
-                           <option>Map to Self</option>
-                           <option>Map to Self</option>
-                           <option>Map to Self</option>
-                           <option>Map to Self</option>
-                           <option>Ignore Mapping</option>
+                           <option>Map as is</option>
+                           <option>Map as is</option>
+                           <option>Map as is</option>
+                           <option>Map as is</option>
+                           
                            <option>idn</option>
                            <option>idn_segment</option>
                            <option selected>affiliation_level</option>
-                           <option>Map to Self</option>
+                           <option>Map as is</option>
                            <option>target_hcp_count</option>
                            <option>np_pa_count</option>
                            <option>trial_hcp_affl_flag</option>
@@ -3095,7 +3180,8 @@
                   <tr>
                     <td>Account HCP Count</td>
                     <td><select class="form-control source_name">
-                           <option>first_name</option>
+                           
+                                                 <option>Ignore Mapping</option><option>first_name</option>
                            <option>last_name</option>
                            <option>Account</option>
                            <option>Address</option>
@@ -3103,15 +3189,15 @@
                            <option>State</option>
                            <option>Zip</option>
                            <option>Specialty</option>
-                           <option>Map to Self</option>
-                           <option>Map to Self</option>
-                           <option>Map to Self</option>
-                           <option>Map to Self</option>
-                           <option>Ignore Mapping</option>
+                           <option>Map as is</option>
+                           <option>Map as is</option>
+                           <option>Map as is</option>
+                           <option>Map as is</option>
+                           
                            <option>idn</option>
                            <option>idn_segment</option>
                            <option>affiliation_level</option>
-                           <option selected>Map to Self</option>
+                           <option selected>Map as is</option>
                            <option>target_hcp_count</option>
                            <option>np_pa_count</option>
                            <option>trial_hcp_affl_flag</option>
@@ -3120,7 +3206,8 @@
                   <tr>
                     <td>Target HCP Count</td>
                     <td><select class="form-control source_name">
-                           <option>first_name</option>
+                           
+                                                 <option>Ignore Mapping</option><option>first_name</option>
                            <option>last_name</option>
                            <option>Account</option>
                            <option>Address</option>
@@ -3128,15 +3215,15 @@
                            <option>State</option>
                            <option>Zip</option>
                            <option>Specialty</option>
-                           <option>Map to Self</option>
-                           <option>Map to Self</option>
-                           <option>Map to Self</option>
-                           <option>Map to Self</option>
-                           <option>Ignore Mapping</option>
+                           <option>Map as is</option>
+                           <option>Map as is</option>
+                           <option>Map as is</option>
+                           <option>Map as is</option>
+                           
                            <option>idn</option>
                            <option>idn_segment</option>
                            <option>affiliation_level</option>
-                           <option>Map to Self</option>
+                           <option>Map as is</option>
                            <option selected>target_hcp_count</option>
                            <option>np_pa_count</option>
                            <option>trial_hcp_affl_flag</option>
@@ -3145,7 +3232,8 @@
                   <tr>
                     <td>NP/PA Count</td>
                     <td><select class="form-control source_name">
-                           <option>first_name</option>
+                           
+                                                 <option>Ignore Mapping</option><option>first_name</option>
                            <option>last_name</option>
                            <option>Account</option>
                            <option>Address</option>
@@ -3153,15 +3241,15 @@
                            <option>State</option>
                            <option>Zip</option>
                            <option>Specialty</option>
-                           <option>Map to Self</option>
-                           <option>Map to Self</option>
-                           <option>Map to Self</option>
-                           <option>Map to Self</option>
-                           <option>Ignore Mapping</option>
+                           <option>Map as is</option>
+                           <option>Map as is</option>
+                           <option>Map as is</option>
+                           <option>Map as is</option>
+                           
                            <option>idn</option>
                            <option>idn_segment</option>
                            <option>affiliation_level</option>
-                           <option>Map to Self</option>
+                           <option>Map as is</option>
                            <option>target_hcp_count</option>
                            <option selected>np_pa_count</option>
                            <option>trial_hcp_affl_flag</option>
@@ -3170,7 +3258,8 @@
                   <tr>
                     <td>Trial HCP Affiliation Flag</td>
                     <td><select class="form-control source_name">
-                           <option>first_name</option>
+                           
+                                                 <option>Ignore Mapping</option><option>first_name</option>
                            <option>last_name</option>
                            <option>Account</option>
                            <option>Address</option>
@@ -3178,15 +3267,15 @@
                            <option>State</option>
                            <option>Zip</option>
                            <option>Specialty</option>
-                           <option>Map to Self</option>
-                           <option>Map to Self</option>
-                           <option>Map to Self</option>
-                           <option>Map to Self</option>
-                           <option>Ignore Mapping</option>
+                           <option>Map as is</option>
+                           <option>Map as is</option>
+                           <option>Map as is</option>
+                           <option>Map as is</option>
+                           
                            <option>idn</option>
                            <option>idn_segment</option>
                            <option>affiliation_level</option>
-                           <option>Map to Self</option>
+                           <option>Map as is</option>
                            <option>target_hcp_count</option>
                            <option>np_pa_count</option>
                            <option selected>trial_hcp_affl_flag</option>
@@ -3228,12 +3317,13 @@
                   <tr>
                     <td>ptnt_id</td>
                     <td><select class="form-control source_name">
-                           <option selected>patient_id</option>
+                           
+                                                 <option>Ignore Mapping</option><option selected>patient_id</option>
                            <option>patient_birth_year</option>
                            <option>patient_gender_code</option>
                            <option>patient_zip_code</option>
-                           <option>Map to Self</option>
-                           <option>Ignore Mapping</option>
+                           <option>Map as is</option>
+                           
                           </select>  
                
                       </td>
@@ -3241,45 +3331,49 @@
                   <tr>
                     <td>ptnt_brth_yr_nbr</td>
                     <td><select class="form-control source_name">
-                           <option>patient_id</option>
+                           
+                                                 <option>Ignore Mapping</option><option>patient_id</option>
                            <option selected>patient_birth_year</option>
                            <option>patient_gender_code</option>
                            <option>patient_zip_code</option>
-                           <option>Map to Self</option>
-                           <option>Ignore Mapping</option>
+                           <option>Map as is</option>
+                           
                           </select>  </td>
                   </tr>
                   <tr>
                     <td>ptnt_gndr_cde</td>
                     <td><select class="form-control source_name">
-                           <option>patient_id</option>
+                           
+                                                 <option>Ignore Mapping</option><option>patient_id</option>
                            <option>patient_birth_year</option>
                            <option selected>patient_gender_code</option>
                            <option>patient_zip_code</option>
-                           <option>Map to Self</option>
-                           <option>Ignore Mapping</option>
+                           <option>Map as is</option>
+                           
                           </select>  </td>
                   </tr>
                   <tr>
                     <td>ptnt_zip3_cde</td>
                     <td><select class="form-control source_name">
-                           <option>patient_id</option>
+                           
+                                                 <option>Ignore Mapping</option><option>patient_id</option>
                            <option>patient_birth_year</option>
                            <option>patient_gender_code</option>
                            <option selected>patient_zip_code</option>
-                           <option>Map to Self</option>
-                           <option>Ignore Mapping</option>
+                           <option>Map as is</option>
+                           
                           </select>  </td>
                   </tr>
                   <tr>
                     <td>ptnt_st_cde</td>
                     <td><select class="form-control source_name">
-                           <option>patient_id</option>
+                           
+                                                 <option>Ignore Mapping</option><option>patient_id</option>
                            <option>patient_birth_year</option>
                            <option>patient_gender_code</option>
                            <option>patient_zip_code</option>
-                           <option selected>Map to Self</option>
-                           <option>Ignore Mapping</option>
+                           <option selected>Map as is</option>
+                           
                           </select>  </td>
                   </tr>
                   
@@ -3317,7 +3411,8 @@
                   <tr>
                     <td>rel_id</td>
                     <td><select class="form-control source_name">
-                          <option selected>relation_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option selected>relation_id</option>
                           <option>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option>writer_type</option>
@@ -3335,11 +3430,11 @@
                           <option>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>npi</option>
                           <option>territory_id</option>
                           <option>call_status_code</option>
-                          <option>Ignore Mapping</option>
+                          
                         </select>
 
                     </td>
@@ -3347,7 +3442,8 @@
                   <tr>
                     <td>provider_id_number</td>
                     <td><select class="form-control source_name">
-                          <option>relation_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>relation_id</option>
                           <option selected>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option>writer_type</option>
@@ -3365,18 +3461,19 @@
                           <option>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>npi</option>
                           <option>territory_id</option>
                           <option>call_status_code</option>
-                          <option>Ignore Mapping</option>
+                          
                         </select>
                     </td>
                   </tr>
                   <tr>
                     <td>data_agent_code</td>
                     <td><select class="form-control source_name">
-                          <option>relation_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>relation_id</option>
                           <option>provider_id_number</option>
                           <option selected>data_agent_code</option>
                           <option>writer_type</option>
@@ -3394,18 +3491,19 @@
                           <option>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>npi</option>
                           <option>territory_id</option>
                           <option>call_status_code</option>
-                          <option>Ignore Mapping</option>
+                          
                         </select>
                       </td>
                   </tr>
                   <tr>
                     <td>writer_type</td>
                     <td><select class="form-control source_name">
-                          <option>relation_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>relation_id</option>
                           <option>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option selected>writer_type</option>
@@ -3423,18 +3521,19 @@
                           <option>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>npi</option>
                           <option>territory_id</option>
                           <option>call_status_code</option>
-                          <option>Ignore Mapping</option>
+                          
                         </select>
                     </td>
                   </tr>
                   <tr>
                     <td>first_name</td>
                     <td><select class="form-control source_name">
-                          <option>relation_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>relation_id</option>
                           <option>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option>writer_type</option>
@@ -3452,18 +3551,19 @@
                           <option>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>npi</option>
                           <option>territory_id</option>
                           <option>call_status_code</option>
-                          <option>Ignore Mapping</option>
+                          
                         </select>
                         </td>
                   </tr>
                   <tr>
                     <td>middle_name</td>
                     <td><select class="form-control source_name">
-                          <option>relation_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>relation_id</option>
                           <option>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option>writer_type</option>
@@ -3481,18 +3581,19 @@
                           <option>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>npi</option>
                           <option>territory_id</option>
                           <option>call_status_code</option>
-                          <option>Ignore Mapping</option>
+                          
                         </select>
                         </td>
                   </tr>
                   <tr>
                     <td>last_name</td>
                     <td><select class="form-control source_name">
-                          <option>relation_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>relation_id</option>
                           <option>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option>writer_type</option>
@@ -3510,18 +3611,19 @@
                           <option>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>npi</option>
                           <option>territory_id</option>
                           <option>call_status_code</option>
-                          <option>Ignore Mapping</option>
+                          
                         </select>
                         </td>
                   </tr>
                   <tr>
                     <td>title</td>
                     <td><select class="form-control source_name">
-                          <option>relation_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>relation_id</option>
                           <option>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option>writer_type</option>
@@ -3539,18 +3641,19 @@
                           <option>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>npi</option>
                           <option>territory_id</option>
                           <option>call_status_code</option>
-                          <option>Ignore Mapping</option>
+                          
                         </select>
                         </td>
                   </tr>
                   <tr>
                     <td>specialty_code</td>
                     <td><select class="form-control source_name">
-                          <option>relation_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>relation_id</option>
                           <option>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option>writer_type</option>
@@ -3568,18 +3671,19 @@
                           <option>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>npi</option>
                           <option>territory_id</option>
                           <option>call_status_code</option>
-                          <option>Ignore Mapping</option>
+                          
                         </select>
                         </td>
                   </tr>
                   <tr>
                     <td>specialty_desc</td>
                     <td><select class="form-control source_name">
-                          <option>relation_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>relation_id</option>
                           <option>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option>writer_type</option>
@@ -3597,18 +3701,19 @@
                           <option>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>npi</option>
                           <option>territory_id</option>
                           <option>call_status_code</option>
-                          <option>Ignore Mapping</option>
+                          
                         </select>
                         </td>
                   </tr>
                   <tr>
                     <td>address</td>
                     <td><select class="form-control source_name">
-                          <option>relation_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>relation_id</option>
                           <option>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option>writer_type</option>
@@ -3626,18 +3731,19 @@
                           <option>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>npi</option>
                           <option>territory_id</option>
                           <option>call_status_code</option>
-                          <option>Ignore Mapping</option>
+                          
                         </select>
                         </td>
                   </tr>
                   <tr>
                     <td>city</td>
                     <td><select class="form-control source_name">
-                          <option>relation_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>relation_id</option>
                           <option>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option>writer_type</option>
@@ -3655,18 +3761,19 @@
                           <option>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>npi</option>
                           <option>territory_id</option>
                           <option>call_status_code</option>
-                          <option>Ignore Mapping</option>
+                          
                         </select>
                         </td>
                   </tr>
                   <tr>
                     <td>state</td>
                     <td><select class="form-control source_name">
-                          <option>relation_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>relation_id</option>
                           <option>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option>writer_type</option>
@@ -3684,11 +3791,11 @@
                           <option>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>npi</option>
                           <option>territory_id</option>
                           <option>call_status_code</option>
-                          <option>Ignore Mapping</option>
+                          
                         </select>
                         </td>
                   </tr>
@@ -3696,7 +3803,8 @@
                   <tr>
                     <td>zip_code</td>
                     <td><select class="form-control source_name">
-                          <option>relation_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>relation_id</option>
                           <option>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option>writer_type</option>
@@ -3714,11 +3822,11 @@
                           <option>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>npi</option>
                           <option>territory_id</option>
                           <option>call_status_code</option>
-                          <option>Ignore Mapping</option>
+                          
                         </select>
                         </td>
                   </tr>
@@ -3726,7 +3834,8 @@
                   <tr>
                     <td>ama_no_contact</td>
                     <td><select class="form-control source_name">
-                          <option>relation_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>relation_id</option>
                           <option>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option>writer_type</option>
@@ -3744,11 +3853,11 @@
                           <option>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>npi</option>
                           <option>territory_id</option>
                           <option>call_status_code</option>
-                          <option>Ignore Mapping</option>
+                          
                         </select>
                         </td>
 
@@ -3756,7 +3865,8 @@
                   <tr>
                     <td>ama_pdrp_indicator</td>
                     <td><select class="form-control source_name">
-                          <option>relation_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>relation_id</option>
                           <option>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option>writer_type</option>
@@ -3774,18 +3884,19 @@
                           <option selected>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>npi</option>
                           <option>territory_id</option>
                           <option>call_status_code</option>
-                          <option>Ignore Mapping</option>
+                          
                         </select>
                         </td>
                   </tr>
                   <tr>
                     <td>ama_pdrp_date</td>
                     <td><select class="form-control source_name">
-                          <option>relation_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>relation_id</option>
                           <option>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option>writer_type</option>
@@ -3803,18 +3914,19 @@
                           <option>ama_pdrp_indicator</option>
                           <option selected>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>npi</option>
                           <option>territory_id</option>
                           <option>call_status_code</option>
-                          <option>Ignore Mapping</option>
+                          
                         </select>
                         </td>
                   </tr>
                   <tr>
                     <td>presumed_dead_ind</td>
                     <td><select class="form-control source_name">
-                          <option>relation_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>relation_id</option>
                           <option>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option>writer_type</option>
@@ -3832,18 +3944,19 @@
                           <option>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option selected>presumed_dead_ind</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>npi</option>
                           <option>territory_id</option>
                           <option>call_status_code</option>
-                          <option>Ignore Mapping</option>
+                          
                         </select>
                         </td>
                   </tr>
                   <tr>
                     <td>type_of_practice_code</td>
                     <td><select class="form-control source_name">
-                          <option>relation_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>relation_id</option>
                           <option>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option>writer_type</option>
@@ -3861,18 +3974,19 @@
                           <option>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option selected>Map to Self</option>
+                          <option selected>Map as is</option>
                           <option>npi</option>
                           <option>territory_id</option>
                           <option>call_status_code</option>
-                          <option>Ignore Mapping</option>
+                          
                         </select>
                         </td>
                   </tr>
                   <tr>
                     <td>npi</td>
                     <td><select class="form-control source_name">
-                          <option>relation_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>relation_id</option>
                           <option>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option>writer_type</option>
@@ -3890,18 +4004,19 @@
                           <option>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option selected>npi</option>
                           <option>territory_id</option>
                           <option>call_status_code</option>
-                          <option>Ignore Mapping</option>
+                          
                         </select>
                         </td>
                   </tr>
                   <tr>
                     <td>territory_id</td>
                     <td><select class="form-control source_name">
-                          <option>relation_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>relation_id</option>
                           <option>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option>writer_type</option>
@@ -3919,19 +4034,20 @@
                           <option>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>npi</option>
                           <option selected>territory_id</option>
                           <option>call_status_code</option>
-                          <option>Ignore Mapping</option>
+                          
                         </select>
                         </td>
                   </tr>
                   <tr>
                     <td>call_status_code</td>
-                    <option>Ignore Mapping</option>
+                    
                     <td><select class="form-control source_name">
-                          <option>relation_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>relation_id</option>
                           <option>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option>writer_type</option>
@@ -3949,11 +4065,11 @@
                           <option>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>npi</option>
                           <option>territory_id</option>
                           <option selected>call_status_code</option>
-                          <option>Ignore Mapping</option>
+                          
                         </select>
                         </td>
                   </tr>
@@ -3991,7 +4107,8 @@
                   <tr>
                     <td>claim_id</td>
                     <td><select class="form-control source_name">
-                          <option selected>claim_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option selected>claim_id</option>
                           <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
@@ -4019,7 +4136,7 @@
                           <option>primary_plan_group_number</option>
                           <option>secondary_plan_group_number</option>
                           <option>daw_code</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4027,7 +4144,8 @@
                   <tr>
                     <td>ptnt_id</td>
                     <td><select class="form-control source_name">
-                          <option>claim_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>claim_id</option>
                           <option selected>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
@@ -4055,7 +4173,7 @@
                           <option>primary_plan_group_number</option>
                           <option>secondary_plan_group_number</option>
                           <option>daw_code</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4063,7 +4181,8 @@
                   <tr>
                     <td>drug_id</td>
                     <td><select class="form-control source_name">
-                          <option>claim_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>claim_id</option>
                           <option>patient_id</option>
                           <option selected>drug_id</option>
                           <option>medical_practitioner_id</option>
@@ -4091,7 +4210,7 @@
                           <option>primary_plan_group_number</option>
                           <option>secondary_plan_group_number</option>
                           <option>daw_code</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4099,7 +4218,8 @@
                   <tr>
                     <td>mdcl_prctr_id</td>
                     <td><select class="form-control source_name">
-                          <option>claim_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>claim_id</option>
                           <option>patient_id</option>
                           <option>drug_id</option>
                           <option selected>medical_practitioner_id</option>
@@ -4127,7 +4247,7 @@
                           <option>primary_plan_group_number</option>
                           <option>secondary_plan_group_number</option>
                           <option>daw_code</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4135,7 +4255,8 @@
                   <tr>
                     <td>prmry_plan_id</td>
                     <td><select class="form-control source_name">
-                          <option>claim_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>claim_id</option>
                           <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
@@ -4163,7 +4284,7 @@
                           <option>primary_plan_group_number</option>
                           <option>secondary_plan_group_number</option>
                           <option>daw_code</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4171,7 +4292,8 @@
                   <tr>
                     <td>ptnt_pay_amt</td>
                     <td><select class="form-control source_name">
-                          <option>claim_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>claim_id</option>
                           <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
@@ -4199,7 +4321,7 @@
                           <option>primary_plan_group_number</option>
                           <option>secondary_plan_group_number</option>
                           <option>daw_code</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4207,7 +4329,8 @@
                   <tr>
                     <td>prmry_plan_pay_amt</td>
                     <td><select class="form-control source_name">
-                          <option>claim_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>claim_id</option>
                           <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
@@ -4235,7 +4358,7 @@
                           <option>primary_plan_group_number</option>
                           <option>secondary_plan_group_number</option>
                           <option>daw_code</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4243,7 +4366,8 @@
                   <tr>
                     <td>scnry_plan_id</td>
                     <td><select class="form-control source_name">
-                          <option>claim_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>claim_id</option>
                           <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
@@ -4271,7 +4395,7 @@
                           <option>primary_plan_group_number</option>
                           <option>secondary_plan_group_number</option>
                           <option>daw_code</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4279,7 +4403,8 @@
                   <tr>
                     <td>scnry_plan_pay_amt</td>
                     <td><select class="form-control source_name">
-                          <option>claim_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>claim_id</option>
                           <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
@@ -4307,7 +4432,7 @@
                           <option>primary_plan_group_number</option>
                           <option>secondary_plan_group_number</option>
                           <option>daw_code</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4315,7 +4440,8 @@
                   <tr>
                     <td>ptnt_oop_pay_amt</td>
                     <td><select class="form-control source_name">
-                          <option>claim_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>claim_id</option>
                           <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
@@ -4343,7 +4469,7 @@
                           <option>primary_plan_group_number</option>
                           <option>secondary_plan_group_number</option>
                           <option>daw_code</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4351,7 +4477,8 @@
                   <tr>
                     <td>refil_cde</td>
                     <td><select class="form-control source_name">
-                          <option>claim_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>claim_id</option>
                           <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
@@ -4379,7 +4506,7 @@
                           <option>primary_plan_group_number</option>
                           <option>secondary_plan_group_number</option>
                           <option>daw_code</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4387,7 +4514,8 @@
                   <tr>
                     <td>dspnd_qty</td>
                     <td><select class="form-control source_name">
-                          <option>claim_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>claim_id</option>
                           <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
@@ -4415,7 +4543,7 @@
                           <option>primary_plan_group_number</option>
                           <option>secondary_plan_group_number</option>
                           <option>daw_code</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4423,7 +4551,8 @@
                   <tr>
                     <td>days_sply_cnt</td>
                     <td><select class="form-control source_name">
-                          <option>claim_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>claim_id</option>
                           <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
@@ -4451,7 +4580,7 @@
                           <option>primary_plan_group_number</option>
                           <option>secondary_plan_group_number</option>
                           <option>daw_code</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4460,7 +4589,8 @@
                   <tr>
                     <td>rx_fill_dte</td>
                     <td><select class="form-control source_name">
-                          <option>claim_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>claim_id</option>
                           <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
@@ -4488,7 +4618,7 @@
                           <option>primary_plan_group_number</option>
                           <option>secondary_plan_group_number</option>
                           <option>daw_code</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4497,7 +4627,8 @@
                   <tr>
                     <td>ptnt_claim_seq_nbr</td>
                     <td><select class="form-control source_name">
-                          <option>claim_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>claim_id</option>
                           <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
@@ -4525,7 +4656,7 @@
                           <option>primary_plan_group_number</option>
                           <option>secondary_plan_group_number</option>
                           <option>daw_code</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4533,7 +4664,8 @@
                   <tr>
                     <td>claim_stus_cde</td>
                     <td><select class="form-control source_name">
-                          <option>claim_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>claim_id</option>
                           <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
@@ -4561,7 +4693,7 @@
                           <option>primary_plan_group_number</option>
                           <option>secondary_plan_group_number</option>
                           <option>daw_code</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4569,7 +4701,8 @@
                   <tr>
                     <td>claim_rjct_rsn_cde</td>
                     <td><select class="form-control source_name">
-                          <option>claim_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>claim_id</option>
                           <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
@@ -4597,7 +4730,7 @@
                           <option>primary_plan_group_number</option>
                           <option>secondary_plan_group_number</option>
                           <option>daw_code</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4605,7 +4738,8 @@
                   <tr>
                     <td>rvrsl_lag</td>
                     <td><select class="form-control source_name">
-                          <option>claim_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>claim_id</option>
                           <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
@@ -4622,8 +4756,8 @@
                           <option>patient_claim_sequence_number</option>
                           <option>claim_status_code</option>
                           <option>claim_rjct_rsn_code</option>
-                          <option selected>Map to Self</option>
-                          <option>Map to Self</option>
+                          <option selected>Map as is</option>
+                          <option>Map as is</option>
                           <option>days_until_next_fill_count</option>
                           <option>copay_30_amount</option>
                           <option>sob_cde</option>
@@ -4633,7 +4767,7 @@
                           <option>primary_plan_group_number</option>
                           <option>secondary_plan_group_number</option>
                           <option>daw_code</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4641,7 +4775,8 @@
                   <tr>
                     <td>encyd_rx_id</td>
                     <td><select class="form-control source_name">
-                          <option>claim_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>claim_id</option>
                           <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
@@ -4659,7 +4794,7 @@
                           <option>claim_status_code</option>
                           <option>claim_rjct_rsn_code</option>
                           <option></option>
-                          <option selected>Map to Self</option>
+                          <option selected>Map as is</option>
                           <option>days_until_next_fill_count</option>
                           <option>copay_30_amount</option>
                           <option>sob_cde</option>
@@ -4669,7 +4804,7 @@
                           <option>primary_plan_group_number</option>
                           <option>secondary_plan_group_number</option>
                           <option>daw_code</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4677,7 +4812,8 @@
                   <tr>
                     <td>days_until_next_fill_cnt</td>
                     <td><select class="form-control source_name">
-                          <option>claim_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>claim_id</option>
                           <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
@@ -4705,7 +4841,7 @@
                           <option>primary_plan_group_number</option>
                           <option>secondary_plan_group_number</option>
                           <option>daw_code</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4713,7 +4849,8 @@
                   <tr>
                     <td>copay_30_amt</td>
                     <td><select class="form-control source_name">
-                          <option>claim_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>claim_id</option>
                           <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
@@ -4741,7 +4878,7 @@
                           <option>primary_plan_group_number</option>
                           <option>secondary_plan_group_number</option>
                           <option>daw_code</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4749,7 +4886,8 @@
                   <tr>
                     <td>sob_cde</td>
                     <td><select class="form-control source_name">
-                          <option>claim_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>claim_id</option>
                           <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
@@ -4777,7 +4915,7 @@
                           <option>primary_plan_group_number</option>
                           <option>secondary_plan_group_number</option>
                           <option>daw_code</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4785,7 +4923,8 @@
                   <tr>
                     <td>new_to_prdct_ind</td>
                     <td><select class="form-control source_name">
-                          <option>claim_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>claim_id</option>
                           <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
@@ -4813,7 +4952,7 @@
                           <option>primary_plan_group_number</option>
                           <option>secondary_plan_group_number</option>
                           <option>daw_code</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4821,7 +4960,8 @@
                   <tr>
                     <td>cncmt_ind</td>
                     <td><select class="form-control source_name">
-                          <option>claim_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>claim_id</option>
                           <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
@@ -4844,12 +4984,12 @@
                           <option>copay_30_amount</option>
                           <option>sob_cde</option>
                           <option>new_to_prdct_ind</option>
-                          <option selected>Map to Self</option>
+                          <option selected>Map as is</option>
                           <option>final_claim_code</option>
                           <option>primary_plan_group_number</option>
                           <option>secondary_plan_group_number</option>
                           <option>daw_code</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4857,7 +4997,8 @@
                   <tr>
                     <td>final_claim_cde</td>
                     <td><select class="form-control source_name">
-                          <option>claim_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>claim_id</option>
                           <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
@@ -4885,7 +5026,7 @@
                           <option>primary_plan_group_number</option>
                           <option>secondary_plan_group_number</option>
                           <option>daw_code</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4893,7 +5034,8 @@
                   <tr>
                     <td>prmry_plan_grp_nbr</td>
                     <td><select class="form-control source_name">
-                          <option>claim_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>claim_id</option>
                           <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
@@ -4921,7 +5063,7 @@
                           <option selected>primary_plan_group_number</option>
                           <option>secondary_plan_group_number</option>
                           <option>daw_code</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4929,7 +5071,8 @@
                   <tr>
                     <td>scnry_plan_grp_nbr</td>
                     <td><select class="form-control source_name">
-                          <option>claim_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>claim_id</option>
                           <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
@@ -4957,7 +5100,7 @@
                           <option>primary_plan_group_number</option>
                           <option selected>secondary_plan_group_number</option>
                           <option>daw_code</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4965,7 +5108,8 @@
                   <tr>
                     <td>daw_cde</td>
                     <td><select class="form-control source_name">
-                          <option>claim_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>claim_id</option>
                           <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
@@ -4993,7 +5137,7 @@
                           <option>primary_plan_group_number</option>
                           <option>secondary_plan_group_number</option>
                           <option selected>daw_code</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -5001,7 +5145,8 @@
                   <tr>
                     <td>athrz_refil_cnt</td>
                     <td><select class="form-control source_name">
-                          <option>claim_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>claim_id</option>
                           <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
@@ -5029,7 +5174,7 @@
                           <option>primary_plan_group_number</option>
                           <option>secondary_plan_group_number</option>
                           <option>daw_code</option>
-                          <option selected>Map to Self</option>
+                          <option selected>Map as is</option>
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -5037,7 +5182,8 @@
                   <tr>
                     <td>deletion_flag</td>
                     <td><select class="form-control source_name">
-                          <option>claim_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>claim_id</option>
                           <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
@@ -5065,7 +5211,7 @@
                           <option>primary_plan_group_number</option>
                           <option>secondary_plan_group_number</option>
                           <option>daw_code</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option selected>deletion_flag</option>
           
                         </select></td>
@@ -5103,10 +5249,11 @@
                   <tr>
                     <td>market_id_1</td>
                     <td><select class="form-control source_name">
-                          <option selected>market_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option selected>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -5119,8 +5266,8 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map to Self</option>
-                          <option>Ignore Mapping</option>
+                          <option>Map as is</option>
+                          
                         </select>
 
                     </td>
@@ -5128,10 +5275,11 @@
                   <tr>
                     <td>product_id</td>
                     <td><select class="form-control source_name">
-                          <option>market_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>market_id</option>
                           <option selected>product_id</option>
                           <option>plan_id</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -5144,18 +5292,19 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map to Self</option>
-                          <option>Ignore Mapping</option>
+                          <option>Map as is</option>
+                          
                         </select>
                     </td>
                   </tr>
                   <tr>
                     <td>plan_id</td>
                     <td><select class="form-control source_name">
-                          <option>market_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>market_id</option>
                           <option>product_id</option>
                           <option selected>plan_id</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -5168,18 +5317,19 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map to Self</option>
-                          <option>Ignore Mapping</option>
+                          <option>Map as is</option>
+                          
                         </select>
                       </td>
                   </tr>
                   <tr>
                     <td>data_type</td>
                     <td><select class="form-control source_name">
-                          <option>market_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option selected>Map to Self</option>
+                          <option selected>Map as is</option>
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -5192,18 +5342,19 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map to Self</option>
-                          <option>Ignore Mapping</option>
+                          <option>Map as is</option>
+                          
                         </select>
                     </td>
                   </tr>
                   <tr>
                     <td>wk_ending_dt</td>
                     <td><select class="form-control source_name">
-                          <option>market_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option selected>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -5216,18 +5367,19 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map to Self</option>
-                          <option>Ignore Mapping</option>
+                          <option>Map as is</option>
+                          
                         </select>
                         </td>
                   </tr>
                   <tr>
                     <td>mnth_ending_dt</td>
                     <td><select class="form-control source_name">
-                          <option>market_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>week_ending_date</option>
                           <option selected>month_ending_date</option>
                           <option>sob_group</option>
@@ -5240,18 +5392,19 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map to Self</option>
-                          <option>Ignore Mapping</option>
+                          <option>Map as is</option>
+                          
                         </select>
                         </td>
                   </tr>
                   <tr>
                     <td>sob_group</td>
                     <td><select class="form-control source_name">
-                          <option>market_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option selected>sob_group</option>
@@ -5264,18 +5417,19 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map to Self</option>
-                          <option>Ignore Mapping</option>
+                          <option>Map as is</option>
+                          
                         </select>
                         </td>
                   </tr>
                   <tr>
                     <td>new_rx_cnt</td>
                     <td><select class="form-control source_name">
-                          <option>market_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -5288,19 +5442,20 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map to Self</option>
-                          <option>Ignore Mapping</option>
+                          <option>Map as is</option>
+                          
                         </select>
                         </td>
                   </tr>
                   <tr>
                     <td>refill_rx_cnt</td>
                     <td><select class="form-control source_name">
-                          
+
+                       <option>Ignore Mapping</option>                          
                           <option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -5313,18 +5468,19 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map to Self</option>
-                          <option>Ignore Mapping</option>
+                          <option>Map as is</option>
+                          
                         </select>
                         </td>
                   </tr>
                   <tr>
                     <td>tot_rx_cnt</td>
                     <td><select class="form-control source_name">
-                          <option>market_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -5337,18 +5493,19 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map to Self</option>
-                          <option>Ignore Mapping</option>
+                          <option>Map as is</option>
+                          
                         </select>
                         </td>
                   </tr>
                   <tr>
                     <td>new_rx_qty</td>
                     <td><select class="form-control source_name">
-                          <option>market_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -5361,18 +5518,19 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map to Self</option>
-                          <option>Ignore Mapping</option>
+                          <option>Map as is</option>
+                          
                         </select>
                         </td>
                   </tr>
                   <tr>
                     <td>refill_rx_qty</td>
                     <td><select class="form-control source_name">
-                          <option>market_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -5385,18 +5543,19 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map to Self</option>
-                          <option>Ignore Mapping</option>
+                          <option>Map as is</option>
+                          
                         </select>
                         </td>
                   </tr>
                   <tr>
                     <td>tot_rx_qty</td>
                     <td><select class="form-control source_name">
-                          <option>market_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -5409,8 +5568,8 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map to Self</option>
-                          <option>Ignore Mapping</option>
+                          <option>Map as is</option>
+                          
                         </select>
                         </td>
                   </tr>
@@ -5418,10 +5577,11 @@
                   <tr>
                     <td>new_days_supply</td>
                     <td><select class="form-control source_name">
-                          <option>market_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -5434,8 +5594,8 @@
                           <option selected>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map to Self</option>
-                          <option>Ignore Mapping</option>
+                          <option>Map as is</option>
+                          
                         </select>
                         </td>
                   </tr>
@@ -5443,10 +5603,11 @@
                   <tr>
                     <td>refill_days_supply</td>
                     <td><select class="form-control source_name">
-                          <option>market_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -5459,8 +5620,8 @@
                           <option>new_days_supply</option>
                           <option selected>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map to Self</option>
-                          <option>Ignore Mapping</option>
+                          <option>Map as is</option>
+                          
                         </select>
                         </td>
 
@@ -5468,10 +5629,11 @@
                   <tr>
                     <td>tot_days_supply</td>
                     <td><select class="form-control source_name">
-                          <option>market_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -5484,18 +5646,19 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option selected>total_days_supply</option>
-                          <option>Map to Self</option>
-                          <option>Ignore Mapping</option>
+                          <option>Map as is</option>
+                          
                         </select>
                         </td>
                   </tr>
                   <tr>
                     <td>daw_cde</td>
                     <td><select class="form-control source_name">
-                          <option>market_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -5508,8 +5671,8 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option selected>Map to Self</option>
-                          <option>Ignore Mapping</option>
+                          <option selected>Map as is</option>
+                          
                         </select>
                         </td>
                   </tr>
@@ -5547,13 +5710,14 @@
                   <tr>
                     <td>market_id_1</td>
                     <td><select class="form-control source_name">
-                          <option selected>market_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option selected>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>relation_id</option>
                           <option>writer_type</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -5566,8 +5730,8 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map to Self</option>
-                          <option>Ignore Mapping</option>
+                          <option>Map as is</option>
+                          
                         </select>
 
                     </td>
@@ -5575,13 +5739,14 @@
                   <tr>
                     <td>product_id</td>
                     <td><select class="form-control source_name">
-                          <option>market_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>market_id</option>
                           <option selected>product_id</option>
                           <option>plan_id</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>relation_id</option>
                           <option>writer_type</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -5594,21 +5759,22 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map to Self</option>
-                          <option>Ignore Mapping</option>
+                          <option>Map as is</option>
+                          
                         </select>
                     </td>
                   </tr>
                   <tr>
                     <td>plan_id</td>
                     <td><select class="form-control source_name">
-                          <option>market_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>market_id</option>
                           <option>product_id</option>
                           <option selected>plan_id</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>relation_id</option>
                           <option>writer_type</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -5621,21 +5787,22 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map to Self</option>
-                          <option>Ignore Mapping</option>
+                          <option>Map as is</option>
+                          
                         </select>
                       </td>
                   </tr>
                   <tr>
                     <td>data_type</td>
                     <td><select class="form-control source_name">
-                          <option>market_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option selected>Map to Self</option>
+                          <option selected>Map as is</option>
                           <option>relation_id</option>
                           <option>writer_type</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -5648,21 +5815,22 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map to Self</option>
-                          <option>Ignore Mapping</option>
+                          <option>Map as is</option>
+                          
                         </select>
                     </td>
                   </tr>
                   <tr>
                     <td>rel_id</td>
                     <td><select class="form-control source_name">
-                          <option>market_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option selected>relation_id</option>
                           <option>writer_type</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -5675,21 +5843,22 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map to Self</option>
-                          <option>Ignore Mapping</option>
+                          <option>Map as is</option>
+                          
                         </select>
                         </td>
                   </tr>
                   <tr>
                     <td>writer_type</td>
                     <td><select class="form-control source_name">
-                          <option>market_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>relation_id</option>
                           <option selected>writer_type</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -5702,21 +5871,22 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map to Self</option>
-                          <option>Ignore Mapping</option>
+                          <option>Map as is</option>
+                          
                         </select>
                         </td>
                   </tr>
                   <tr>
                     <td>payment_type_indicator</td>
                     <td><select class="form-control source_name">
-                          <option>market_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>relation_id</option>
                           <option>writer_type</option>
-                          <option selected>Map to Self</option>
+                          <option selected>Map as is</option>
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -5729,21 +5899,22 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map to Self</option>
-                          <option>Ignore Mapping</option>
+                          <option>Map as is</option>
+                          
                         </select>
                         </td>
                   </tr>
                   <tr>
                     <td>wk_ending_dt</td>
                     <td><select class="form-control source_name">
-                          <option>market_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>relation_id</option>
                           <option>writer_type</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option selected>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -5756,21 +5927,22 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map to Self</option>
-                          <option>Ignore Mapping</option>
+                          <option>Map as is</option>
+                          
                         </select>
                         </td>
                   </tr>
                   <tr>
                     <td>mnth_ending_dt</td>
                     <td><select class="form-control source_name">
-                          <option>market_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>relation_id</option>
                           <option>writer_type</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>week_ending_date</option>
                           <option selected>month_ending_date</option>
                           <option>sob_group</option>
@@ -5783,21 +5955,22 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map to Self</option>
-                          <option>Ignore Mapping</option>
+                          <option>Map as is</option>
+                          
                         </select>
                         </td>
                   </tr>
                   <tr>
                     <td>sob_group</td>
                     <td><select class="form-control source_name">
-                          <option>market_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>relation_id</option>
                           <option>writer_type</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option selected>sob_group</option>
@@ -5810,21 +5983,22 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map to Self</option>
-                          <option>Ignore Mapping</option>
+                          <option>Map as is</option>
+                          
                         </select>
                         </td>
                   </tr>
                   <tr>
                     <td>new_rx_cnt</td>
                     <td><select class="form-control source_name">
-                          <option>market_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>relation_id</option>
                           <option>writer_type</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -5837,21 +6011,22 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map to Self</option>
-                          <option>Ignore Mapping</option>
+                          <option>Map as is</option>
+                          
                         </select>
                         </td>
                   </tr>
                   <tr>
                     <td>refill_rx_cnt</td>
                     <td><select class="form-control source_name">
-                          <option>market_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>relation_id</option>
                           <option>writer_type</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -5864,21 +6039,22 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map to Self</option>
-                          <option>Ignore Mapping</option>
+                          <option>Map as is</option>
+                          
                         </select>
                         </td>
                   </tr>
                   <tr>
                     <td>tot_rx_cnt</td>
                     <td><select class="form-control source_name">
-                          <option>market_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>relation_id</option>
                           <option>writer_type</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -5891,8 +6067,8 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map to Self</option>
-                          <option>Ignore Mapping</option>
+                          <option>Map as is</option>
+                          
                         </select>
                         </td>
                   </tr>
@@ -5900,13 +6076,14 @@
                   <tr>
                     <td>new_rx_qty</td>
                     <td><select class="form-control source_name">
-                          <option>market_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>relation_id</option>
                           <option>writer_type</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -5919,8 +6096,8 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map to Self</option>
-                          <option>Ignore Mapping</option>
+                          <option>Map as is</option>
+                          
                         </select>
                         </td>
                   </tr>
@@ -5928,13 +6105,14 @@
                   <tr>
                     <td>refill_rx_qty</td>
                     <td><select class="form-control source_name">
-                          <option>market_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>relation_id</option>
                           <option>writer_type</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -5947,8 +6125,8 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map to Self</option>
-                          <option>Ignore Mapping</option>
+                          <option>Map as is</option>
+                          
                         </select>
                         </td>
 
@@ -5956,13 +6134,14 @@
                   <tr>
                     <td>tot_rx_qty</td>
                     <td><select class="form-control source_name">
-                          <option>market_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>relation_id</option>
                           <option>writer_type</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -5975,21 +6154,22 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map to Self</option>
-                          <option>Ignore Mapping</option>
+                          <option>Map as is</option>
+                          
                         </select>
                         </td>
                   </tr>
                   <tr>
                     <td>new_days_supply</td>
                     <td><select class="form-control source_name">
-                          <option>market_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>relation_id</option>
                           <option>writer_type</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -6002,21 +6182,22 @@
                           <option selected>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map to Self</option>
-                          <option>Ignore Mapping</option>
+                          <option>Map as is</option>
+                          
                         </select>
                         </td>
                   </tr>
                   <tr>
                     <td>refill_days_supply</td>
                     <td><select class="form-control source_name">
-                          <option>market_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>relation_id</option>
                           <option>writer_type</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -6029,21 +6210,22 @@
                           <option>new_days_supply</option>
                           <option selected>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map to Self</option>
-                          <option>Ignore Mapping</option>
+                          <option>Map as is</option>
+                          
                         </select>
                         </td>
                   </tr>
                   <tr>
                     <td>tot_days_supply</td>
                     <td><select class="form-control source_name">
-                          <option>market_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>relation_id</option>
                           <option>writer_type</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -6056,21 +6238,22 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option selected>total_days_supply</option>
-                          <option>Map to Self</option>
-                          <option>Ignore Mapping</option>
+                          <option>Map as is</option>
+                          
                         </select>
                         </td>
                   </tr>
                   <tr>
                     <td>daw_cde</td>
                     <td><select class="form-control source_name">
-                          <option>market_id</option>
+                          
+                                                 <option>Ignore Mapping</option><option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>relation_id</option>
                           <option>writer_type</option>
-                          <option>Map to Self</option>
+                          <option>Map as is</option>
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -6083,8 +6266,8 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option selected>Map to Self</option>
-                          <option>Ignore Mapping</option>
+                          <option selected>Map as is</option>
+                          
                         </select>
                         </td>
                   </tr>
@@ -6144,8 +6327,9 @@
         var html ='<ul class="list-group"><span class="label label-info">Selected</span>';
         $('.each_row').find('input[type="checkbox"]:checked').each(function(){
             console.log($(this).closest('.each_row').find('.val').text());
-            html += "<li class='list-group-item'>"+$(this).closest('.each_row').find('.val').text()+"</li>"
-            //console.log($(this).closest('.source_name').find('option:selected').text());
+            html += "<li class='list-group-item'>"+$(this).closest('.each_row').find('.val').text()+
+            "    ->    "+$(this).closest('.each_row').find('.source_name').val()+"</li>";
+            
 
         })
         html += '</ul>'

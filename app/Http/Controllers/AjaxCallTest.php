@@ -36,8 +36,8 @@ class AjaxCallTest extends Controller
  	}
  	private function check_array($data)
  	{
-    $brand = array('Market Overview','Market Access','Source of Business','Physcian Segmentation','Performance Index','Sales Force Effectiveness');
-    $pre = array('Market Overview','Market Access','Source of Business','Physcian Segmentation','Performance Index');
+    $brand = array('Market Overview','Market Access','Marketing','Source of Business','Sales Force Effectiveness');
+    $pre = array('Market Overview','Market Access','Marketing','Source of Business');
     $rew = array('Unmet Need Identifier','Cohort Generator','Cohort Analyzer','Patient Journey Tracker');
     $digital_ana = array('Campaign Tracking','Campaign Effectiveness Measurement');
     $social_media =array('Sentiment Analysis','Social Influencer Mapping & Tracking');
