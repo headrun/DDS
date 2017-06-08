@@ -201,16 +201,16 @@
         });
   });
 
-    $(document).ready(function() {
+   /* $(document).ready(function() {
         //setTimeout(function(){
            table =  $('#mainTable').DataTable({
           "aaSorting": [[ 0, "desc" ]],
           "searching": false,
           "bPaginate": false,
-           //"paging":   false,
+           "paging":   false,
             "info":     false,
    
     });
-    });
+    });*/
 </script>
 @stop

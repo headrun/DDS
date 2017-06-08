@@ -100,6 +100,7 @@ class AjaxCallTest extends Controller
     $data = array('q1');
     //return $q1[0]->proj_name;
     //return $q1;
+    
     return view('Dashboard.index', compact($data));
 
   }
