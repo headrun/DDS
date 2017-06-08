@@ -322,7 +322,7 @@ $(document).on('change', '.geo1', function()
             data: {'id' : $(this).val()}, // a JSON object to send back
             success: function(response)
             { // What to do if we succeed
-                //console.log(response);   
+                
                 var dim ="";
                 var html ="";
                 for(var i = 0 ; i< response.length ; i++)
@@ -345,7 +345,80 @@ $(document).on('change', '.geo1', function()
                     } 
                     
                 }
+
                 for(var i = 0 ; i< response.length ; i++)
+                {
+
+                  response[i].Dimension= response[i].Dimension.split(",");
+                  for(var j = 0 ; j< response[i].Dimension.length; j++)
+                  {
+                    if(response[i].Dimension[j])
+                    {
+                      dim = "";
+                      console.log(response[i].Dimension[j]);
+                      if(response[i].Dimension[j] === " time period(year.quarter.month)" || response[i].Dimension[j]=== " time period(YoY.YTD.QTD.MTD)")
+                      {
+
+                        dim += "<div class='checkbox'>"
+                        dim += "<input class= 'timee' type='checkbox' name='Dimension'  value='Time Period'>Time Period&nbsp";
+                        dim += "<i class='fa fa-plus-circle' data-toggle='collapse' data-target='#time"+i+"'></i>"
+                        dim += "<div class='collapse' id='time"+i+"'>";
+                        dim += "<div class='time1'>";
+                        dim += "<div class='checkbox'>";
+                        dim += "<label><input class='time' type='checkbox' value='Year'>Year</label>";
+                        dim += "</div>";
+                        dim += "<div class='checkbox'>";
+                        dim += "<label><input class='time' type='checkbox' value='Quater'>Quater</label>"
+                        dim += "</div>";
+                        dim += "<div class='checkbox'>"
+                        dim += "<label><input class='time' type='checkbox' value='Month'>Month</label>"
+                        dim += "</div>";
+                        dim += "</div>";
+                        dim += "</div>";
+                        
+
+                      }
+                      else if(response[i].Dimension[j] === "geography(state.city.district.territory.zip)")
+                      {
+                        dim += "<div class='checkbox'>"
+                        dim += "<input class='geoo' type='checkbox' name='Dimension"+i+"' value='Geography'>Geography&nbsp";
+                        dim += "<i class='fa fa-plus-circle' data-toggle='collapse' data-target='#geo"+i+"'></i>"
+                        dim += "<div class='collapse geo' id='geo"+i+"'>";
+                        dim += "<div class='geo1'>";
+                        dim += "<div class='checkbox'>";
+
+                        dim += "<label><input type='checkbox' value='State'>State</label>";
+                        dim += "</div>";
+                        dim += "<div class='checkbox geo'>";
+                        dim += "<label><input type='checkbox' value='City'>City</label>"
+                        dim += "</div>";
+                        dim += "<div class='checkbox geo'>"
+                        dim += "<label><input type='checkbox' value='District'>District</label>"
+                        dim += "</div>";
+                        dim += "<div class='checkbox geo'>";
+                        dim += "<label><input type='checkbox' value='Territory'>Territory</label>";
+                        dim += "</div>";
+                        dim += "<div class='checkbox geo'>";
+                        dim += "<label><input type='checkbox' value='Zip'>Zip</label>"
+                        dim += "</div>";
+                        dim += "</div>";
+                        dim += "</div>";
+
+
+                      }
+                      else
+                      {
+                        dim += "<div class='checkbox'><input type='checkbox' name='Dimension"+response[i].Dimension[j]+"' value='"+response[i].Dimension[j]+"'>"+response[i].Dimension[j]+"";
+                      }
+                      dim += "</div>";
+                      response[i].Dimension[j] = dim;
+                    }
+                  }
+                  response[i].Dimension = response[i].Dimension.join(" ");
+                 // console.log(response[i].Dimension);
+                }
+                
+                /*for(var i = 0 ; i< response.length ; i++)
                 {
                     if (response[i].Dimension !== '') 
                     {
@@ -405,7 +478,7 @@ $(document).on('change', '.geo1', function()
                     }
                     
                     
-                }
+                }*/
                 for(var i = 0 ; i< response.length ; i++)
                 {
                   //console.log(response[i].view);
