@@ -601,14 +601,12 @@
                     <td>drug_id</td>
                     <td>
                       <select class="form-control source_name"><span>DCube Column</span>
-
-                       <option>Ignore Mapping</option>                       
+                       <option>Exclude</option>                       
                        <option selected>drug_id</option>
                        <option>ndc_11_code</option>
                        <option>drug_name</option>
                        <option>brand_generic_flag</option>
-                       <option>Map as is</option>
-                       <option>Map as is</option>
+                       <option>Import as is</option>
                        <option>generic_name</option>
                        <option>strength_description</option>
                        <option>dosage_form_desc</option>
@@ -616,7 +614,6 @@
                        <option>pckg_desc</option>
                        <option>manufacturer</option>
                        <option>pckg_launch_date</option>
-                       
                      </select>
 
                     </td>
@@ -625,14 +622,12 @@
                     <td>ndc_11_cde</td>
                     <td>
                       <select class="form-control source_name"><span>DCube Column</span>
-
-                       <option>Ignore Mapping</option>                       
+                       <option>Exclude</option>                       
                        <option>drug_id</option>
                        <option selected>ndc_11_code</option>
                        <option>drug_name</option>
                        <option>brand_generic_flag</option>
-                       <option>Map as is</option>
-                       <option>Map as is</option>                       
+                       <option>Import as is</option>
                        <option>generic_name</option>
                        <option>strength_description</option>
                        <option>dosage_form_desc</option>
@@ -650,13 +645,12 @@
                     <td>
                       <select class="form-control source_name"><span>DCube Column</span>
 
-                       <option>Ignore Mapping</option>                       
+                       <option>Exclude</option>                       
                        <option>drug_id</option>
                        <option>ndc_11_code</option>
                        <option selected>drug_name</option>
                        <option>brand_generic_flag</option>
-                       <option>Map as is</option>
-                       <option>Map as is</option>
+                       <option>Import as is</option>
                        <option>generic_name</option>
                        <option>strength_description</option>
                        <option>dosage_form_desc</option>
@@ -674,17 +668,12 @@
                     <td>
                       <select class="form-control source_name"><span>DCube Column</span>
 
-                       <option>Ignore Mapping</option>                       
+                       <option>Exclude</option>                       
                        <option>drug_id</option>
                        <option>ndc_11_code</option>
                        <option>drug_name</option>
                        <option selectedv>brand_generic_flag</option>
-                       <option>Map as is</option>
-                       
-                       
-                       <option>Map as is</option>
-                       
-                       
+                       <option>Import as is</option>
                        <option>generic_name</option>
                        <option>strength_description</option>
                        <option>dosage_form_desc</option>
@@ -702,17 +691,12 @@
                     <td>
                       <select class="form-control source_name"><span>DCube Column</span>
 
-                       <option>Ignore Mapping</option>                       
+                       <option>Exclude</option>                       
                        <option>drug_id</option>
                        <option>ndc_11_code</option>
                        <option>drug_name</option>
                        <option>brand_generic_flag</option>
-                       <option selected>Map as is</option>
-                       
-                       
-                       <option>Map as is</option>
-                       
-                       
+                       <option selected>Import as is</option>
                        <option>generic_name</option>
                        <option>strength_description</option>
                        <option>dosage_form_desc</option>
@@ -730,22 +714,16 @@
                     <td>
                       <select class="form-control source_name"><span>DCube Column</span>
 
-                       <option>Ignore Mapping</option>                       
+                       <option>Exclude</option>                       
                        <option>drug_id</option>
                        <option>ndc_11_code</option>
                        <option>drug_name</option>
                        <option>brand_generic_flag</option>
-                       <option>Map as is</option>
-                       
-                       
-                       <option selected>Map as is</option>
-                       
-                       
+                       <option selected>Import as is</option>
                        <option>generic_name</option>
                        <option>strength_description</option>
                        <option>dosage_form_desc</option>
                        <option>package_size</option>
-                       
                        <option>pckg_desc</option>
                        <option>manufacturer</option>
                        <option>pckg_launch_date</option>
@@ -758,15 +736,15 @@
                     <td>
                       <select class="form-control source_name"><span>DCube Column</span>
 
-                       <option>Ignore Mapping</option>                       
+                       <option>Exclude</option>                       
                        <option>drug_id</option>
                        <option>ndc_11_code</option>
                        <option>drug_name</option>
                        <option>brand_generic_flag</option>
-                       <option>Map as is</option>
+                       <option>Import as is</option>
                        
                        
-                       <option>Map as is</option>
+                       <option>Import as is</option>
                        
                        
                        <option selected>generic_name</option>
@@ -786,17 +764,12 @@
                     <td>
                       <select class="form-control source_name"><span>DCube Column</span>
 
-                       <option>Ignore Mapping</option>                       
+                       <option>Exclude</option>                       
                        <option>drug_id</option>
                        <option>ndc_11_code</option>
                        <option>drug_name</option>
                        <option>brand_generic_flag</option>
-                       <option>Map as is</option>
-                       
-                       
-                       <option>Map as is</option>
-                       
-                       
+                       <option>Import as is</option>
                        <option>generic_name</option>
                        <option selected>strength_description</option>
                        <option>dosage_form_desc</option>
@@ -814,23 +787,17 @@
                     <td>
                       <select class="form-control source_name"><span>DCube Column</span>
 
-                       <option>Ignore Mapping</option>                       
+                       <option>Exclude</option>                       
                        <option>drug_id</option>
                        <option>ndc_11_code</option>
                        <option>drug_name</option>
                        <option>brand_generic_flag</option>
-                       <option>Map as is</option>
-                       
-                       
-                       <option>Map as is</option>
-                       
-                       
+                       <option>Import as is</option>
                        <option>generic_name</option>
                        <option>strength_description</option>
                        <option selected>dosage_form_desc</option>
                        <option>package_size</option>
                        <option>pckg_desc</option>
-                       
                        <option>manufacturer</option>
                        <option>pckg_launch_date</option>
                      </select>
@@ -842,21 +809,15 @@
                     <td>
                       <select class="form-control source_name"><span>DCube Column</span>
 
-                       <option>Ignore Mapping</option>                       
+                       <option>Exclude</option>                       
                        <option>drug_id</option>
                        <option>ndc_11_code</option>
                        <option>drug_name</option>
                        <option>brand_generic_flag</option>
-                       <option>Map as is</option>
-                       
-                       
-                       <option>Map as is</option>
-                       
-                       
+                       <option>Import as is</option>
                        <option>generic_name</option>
                        <option>strength_description</option>
                        <option>dosage_form_desc</option>
-                       
                        <option selected>package_size</option>
                        <option>pckg_desc</option>
                        <option>manufacturer</option>
@@ -870,17 +831,12 @@
                     <td>
                       <select class="form-control source_name"><span>DCube Column</span>
 
-                       <option>Ignore Mapping</option>                       
+                       <option>Exclude</option>                       
                        <option>drug_id</option>
                        <option>ndc_11_code</option>
                        <option>drug_name</option>
                        <option>brand_generic_flag</option>
-                       <option>Map as is</option>
-                       
-                       
-                       <option>Map as is</option>
-                       
-                       
+                       <option>Import as is</option>
                        <option>generic_name</option>
                        <option>strength_description</option>
                        <option>dosage_form_desc</option>
@@ -898,24 +854,18 @@
                     <td>
                       <select class="form-control source_name"><span>DCube Column</span>
 
-                       <option>Ignore Mapping</option>                       
+                       <option>Exclude</option>                       
                        <option>drug_id</option>
                        <option>ndc_11_code</option>
                        <option>drug_name</option>
                        <option>brand_generic_flag</option>
-                       <option>Map as is</option>
-                       
-                       
-                       <option>Map as is</option>
-                       
-                       
+                       <option>Import as is</option>
                        <option>generic_name</option>
                        <option>strength_description</option>
                        <option>dosage_form_desc</option>
                        <option>package_size</option>
                        <option>pckg_desc</option>
                        <option selected>manufacturer</option>
-                       
                        <option>pckg_launch_date</option>
                      </select>
 
@@ -926,22 +876,16 @@
                     <td>
                       <select class="form-control source_name"><span>DCube Column</span>
 
-                       <option>Ignore Mapping</option>                       
+                       <option>Exclude</option>                       
                        <option>drug_id</option>
                        <option>ndc_11_code</option>
                        <option>drug_name</option>
                        <option>brand_generic_flag</option>
-                       <option>Map as is</option>
-                       
-                       
-                       <option>Map as is</option>
-                       
-                       
+                       <option>Import as is</option>
                        <option>generic_name</option>
                        <option>strength_description</option>
                        <option>dosage_form_desc</option>
                        <option>package_size</option>
-                       
                        <option>pckg_desc</option>
                        <option>manufacturer</option>
                        <option selected>pckg_launch_date</option>
@@ -987,7 +931,8 @@
                     <td>
                       <select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option selected>time_period</option>
+                           <option>Exclude</option>
+                           <option selected>time_period</option>
                            <option>client_id</option>
                            <option>plan_id</option>
                            <option>plan</option>
@@ -1008,7 +953,7 @@
                            <option>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option>Notes</option>
-                           <option>Map as is</option>                           
+                           <option>Import as is</option>                           
                            
                           </select>
                     </td>
@@ -1019,7 +964,7 @@
                     <td>
                       <select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option>time_period</option>
+                                                 <option>Exclude</option><option>time_period</option>
                            <option selected>client_id</option>
                            <option>plan_id</option>
                            <option>plan</option>
@@ -1040,7 +985,7 @@
                            <option>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option>Notes</option>
-                           <option>Map as is</option>
+                           <option>Import as is</option>
                            
                        
                        
@@ -1052,7 +997,7 @@
                     <td>
                       <select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option>time_period</option>
+                                                 <option>Exclude</option><option>time_period</option>
                            <option>client_id</option>
                            <option selected>plan_id</option>
                            <option>plan</option>
@@ -1073,7 +1018,7 @@
                            <option>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option>Notes</option>
-                           <option>Map as is</option>
+                           <option>Import as is</option>
                            
                        
                        
@@ -1085,7 +1030,7 @@
                     <td>
                       <select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option>time_period</option>
+                                                 <option>Exclude</option><option>time_period</option>
                            <option>client_id</option>
                            <option>plan_id</option>
                            <option selected>plan</option>
@@ -1106,7 +1051,7 @@
                            <option>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option>Notes</option>
-                           <option>Map as is</option>
+                           <option>Import as is</option>
                            
                        
                        
@@ -1118,7 +1063,7 @@
                     <td>
                       <select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option>time_period</option>
+                                                 <option>Exclude</option><option>time_period</option>
                            <option>client_id</option>
                            <option>plan_id</option>
                            <option>plan</option>
@@ -1139,7 +1084,7 @@
                            <option>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option>Notes</option>
-                           <option>Map as is</option>
+                           <option>Import as is</option>
                            
                        
                        
@@ -1151,7 +1096,7 @@
                     <td>
                       <select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option>time_period</option>
+                                                 <option>Exclude</option><option>time_period</option>
                            <option>client_id</option>
                            <option>plan_id</option>
                            <option>plan</option>
@@ -1172,7 +1117,7 @@
                            <option>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option>Notes</option>
-                           <option>Map as is</option>
+                           <option>Import as is</option>
                            
                        
                        
@@ -1184,7 +1129,7 @@
                     <td>
                       <select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option>time_period</option>
+                                                 <option>Exclude</option><option>time_period</option>
                            <option>client_id</option>
                            <option>plan_id</option>
                            <option>plan</option>
@@ -1205,7 +1150,7 @@
                            <option>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option>Notes</option>
-                           <option>Map as is</option>
+                           <option>Import as is</option>
                            
                        
                        
@@ -1217,7 +1162,7 @@
                     <td>
                       <select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option>time_period</option>
+                                                 <option>Exclude</option><option>time_period</option>
                            <option>client_id</option>
                            <option>plan_id</option>
                            <option>plan</option>
@@ -1238,7 +1183,7 @@
                            <option>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option>Notes</option>
-                           <option>Map as is</option>
+                           <option>Import as is</option>
                            
                        
                        
@@ -1250,7 +1195,7 @@
                     <td>
                       <select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option>time_period</option>
+                                                 <option>Exclude</option><option>time_period</option>
                            <option>client_id</option>
                            <option>plan_id</option>
                            <option>plan</option>
@@ -1271,7 +1216,7 @@
                            <option>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option>Notes</option>
-                           <option>Map as is</option>
+                           <option>Import as is</option>
                            
                        
                        
@@ -1283,7 +1228,7 @@
                     <td>
                       <select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option>time_period</option>
+                                                 <option>Exclude</option><option>time_period</option>
                            <option>client_id</option>
                            <option>plan_id</option>
                            <option>plan</option>
@@ -1304,7 +1249,7 @@
                            <option>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option>Notes</option>
-                           <option>Map as is</option>
+                           <option>Import as is</option>
                            
                        
                        
@@ -1316,7 +1261,7 @@
                     <td>
                       <select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option>time_period</option>
+                                                 <option>Exclude</option><option>time_period</option>
                            <option>client_id</option>
                            <option>plan_id</option>
                            <option>plan</option>
@@ -1337,7 +1282,7 @@
                            <option>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option>Notes</option>
-                           <option>Map as is</option>
+                           <option>Import as is</option>
                            
                        
                        
@@ -1349,7 +1294,7 @@
                     <td>
                       <select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option>time_period</option>
+                                                 <option>Exclude</option><option>time_period</option>
                            <option>client_id</option>
                            <option>plan_id</option>
                            <option>plan</option>
@@ -1370,7 +1315,7 @@
                            <option>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option>Notes</option>
-                           <option>Map as is</option>
+                           <option>Import as is</option>
                            
                        
                        
@@ -1382,7 +1327,7 @@
                     <td>
                       <select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option>time_period</option>
+                                                 <option>Exclude</option><option>time_period</option>
                            <option>client_id</option>
                            <option>plan_id</option>
                            <option>plan</option>
@@ -1403,7 +1348,7 @@
                            <option>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option>Notes</option>
-                           <option>Map as is</option>
+                           <option>Import as is</option>
                            
                        
                        
@@ -1416,7 +1361,7 @@
                     <td>
                       <select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option>time_period</option>
+                                                 <option>Exclude</option><option>time_period</option>
                            <option>client_id</option>
                            <option>plan_id</option>
                            <option>plan</option>
@@ -1437,7 +1382,7 @@
                            <option>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option>Notes</option>
-                           <option>Map as is</option>
+                           <option>Import as is</option>
                            
                        
                        
@@ -1449,7 +1394,7 @@
                     <td>
                       <select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option>time_period</option>
+                                                 <option>Exclude</option><option>time_period</option>
                            <option>client_id</option>
                            <option>plan_id</option>
                            <option>plan</option>
@@ -1470,7 +1415,7 @@
                            <option>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option>Notes</option>
-                           <option>Map as is</option>
+                           <option>Import as is</option>
                            
                        
                        
@@ -1482,7 +1427,7 @@
                     <td>
                       <select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option>time_period</option>
+                                                 <option>Exclude</option><option>time_period</option>
                            <option>client_id</option>
                            <option>plan_id</option>
                            <option>plan</option>
@@ -1503,7 +1448,7 @@
                            <option>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option>Notes</option>
-                           <option>Map as is</option>
+                           <option>Import as is</option>
                            
                        
                        
@@ -1515,7 +1460,7 @@
                     <td>
                       <select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option>time_period</option>
+                                                 <option>Exclude</option><option>time_period</option>
                            <option>client_id</option>
                            <option>plan_id</option>
                            <option>plan</option>
@@ -1536,7 +1481,7 @@
                            <option>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option>Notes</option>
-                           <option>Map as is</option>
+                           <option>Import as is</option>
                            
                        
                        
@@ -1548,7 +1493,7 @@
                     <td>
                       <select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option>time_period</option>
+                                                 <option>Exclude</option><option>time_period</option>
                            <option>client_id</option>
                            <option>plan_id</option>
                            <option>plan</option>
@@ -1569,7 +1514,7 @@
                            <option>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option>Notes</option>
-                           <option>Map as is</option>
+                           <option>Import as is</option>
                            
                        
                           </select>
@@ -1580,7 +1525,7 @@
                     <td>
                       <select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option>time_period</option>
+                                                 <option>Exclude</option><option>time_period</option>
                            <option>client_id</option>
                            <option>plan_id</option>
                            <option>plan</option>
@@ -1601,7 +1546,7 @@
                            <option selected>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option>Notes</option>
-                           <option>Map as is</option>
+                           <option>Import as is</option>
                            
                        
                           </select>
@@ -1612,7 +1557,7 @@
                     <td>
                       <select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option>time_period</option>
+                                                 <option>Exclude</option><option>time_period</option>
                            <option>client_id</option>
                            <option>plan_id</option>
                            <option>plan</option>
@@ -1633,7 +1578,7 @@
                            <option>step_theraphy</option>
                            <option selected>quantity_limit</option>
                            <option>Notes</option>
-                           <option>Map as is</option>
+                           <option>Import as is</option>
                            
                        
                           </select>
@@ -1644,7 +1589,7 @@
                     <td>
                       <select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option>time_period</option>
+                                                 <option>Exclude</option><option>time_period</option>
                            <option>client_id</option>
                            <option>plan_id</option>
                            <option>plan</option>
@@ -1665,7 +1610,7 @@
                            <option>step_theraphy</option>
                            <option>quantity_limit</option>
                            <option selected>Notes</option>
-                           <option>Map as is</option>
+                           <option>Import as is</option>
                            
                        
                           </select>
@@ -1706,7 +1651,7 @@
                     <td>plan_id</td>
                     <td><select class="form-control source_name">
                          
-                                               <option>Ignore Mapping</option><option selected>plan_id</option>
+                                               <option>Exclude</option><option selected>plan_id</option>
                          <option>plan_name</option>
                          <option>plan_types_code</option>
                          <option>plan_types_desc</option>
@@ -1727,7 +1672,7 @@
                     <td>plan_nam</td>
                     <td><select class="form-control source_name">
                          
-                                               <option>Ignore Mapping</option><option>plan_id</option>
+                                               <option>Exclude</option><option>plan_id</option>
                          <option selected>plan_name</option>
                          <option>plan_types_code</option>
                          <option>plan_types_desc</option>
@@ -1748,7 +1693,7 @@
                     <td>plan_typ_cde</td>
                     <td><select class="form-control source_name">
                          
-                                               <option>Ignore Mapping</option><option>plan_id</option>
+                                               <option>Exclude</option><option>plan_id</option>
                          <option>plan_name</option>
                          <option selected>plan_types_code</option>
                          <option>plan_types_desc</option>
@@ -1769,7 +1714,7 @@
                     <td>plan_typ_desc</td>
                     <td><select class="form-control source_name">
                          
-                                               <option>Ignore Mapping</option><option>plan_id</option>
+                                               <option>Exclude</option><option>plan_id</option>
                          <option>plan_name</option>
                          <option>plan_types_code</option>
                          <option selected>plan_types_desc</option>
@@ -1790,7 +1735,7 @@
                     <td>plan_sbtyp_desc</td>
                     <td><select class="form-control source_name">
                          
-                                               <option>Ignore Mapping</option><option>plan_id</option>
+                                               <option>Exclude</option><option>plan_id</option>
                          <option>plan_name</option>
                          <option>plan_types_code</option>
                          <option>plan_types_desc</option>
@@ -1811,7 +1756,7 @@
                     <td>pymt_typ_desc</td>
                     <td><select class="form-control source_name">
                          
-                                               <option>Ignore Mapping</option><option>plan_id</option>
+                                               <option>Exclude</option><option>plan_id</option>
                          <option>plan_name</option>
                          <option>plan_types_code</option>
                          <option>plan_types_desc</option>
@@ -1832,7 +1777,7 @@
                     <td>ntnl_insr_nam</td>
                     <td><select class="form-control source_name">
                          
-                                               <option>Ignore Mapping</option><option>plan_id</option>
+                                               <option>Exclude</option><option>plan_id</option>
                          <option>plan_name</option>
                          <option>plan_types_code</option>
                          <option>plan_types_desc</option>
@@ -1853,7 +1798,7 @@
                     <td>ntnl_insr_typ_desc</td>
                     <td><select class="form-control source_name">
                          
-                                               <option>Ignore Mapping</option><option>plan_id</option>
+                                               <option>Exclude</option><option>plan_id</option>
                          <option>plan_name</option>
                          <option>plan_types_code</option>
                          <option>plan_types_desc</option>
@@ -1874,7 +1819,7 @@
                     <td>rgnl_org_nam</td>
                     <td><select class="form-control source_name">
                          
-                                               <option>Ignore Mapping</option><option>plan_id</option>
+                                               <option>Exclude</option><option>plan_id</option>
                          <option>plan_name</option>
                          <option>plan_types_code</option>
                          <option>plan_types_desc</option>
@@ -1895,7 +1840,7 @@
                     <td>reg_org_name</td>
                     <td><select class="form-control source_name">
                          
-                                               <option>Ignore Mapping</option><option>plan_id</option>
+                                               <option>Exclude</option><option>plan_id</option>
                          <option>plan_name</option>
                          <option>plan_types_code</option>
                          <option>plan_types_desc</option>
@@ -1916,7 +1861,7 @@
                     <td>mc_org_nam</td>
                     <td><select class="form-control source_name">
                          
-                                               <option>Ignore Mapping</option><option>plan_id</option>
+                                               <option>Exclude</option><option>plan_id</option>
                          <option>plan_name</option>
                          <option>plan_types_code</option>
                          <option>plan_types_desc</option>
@@ -1937,7 +1882,7 @@
                     <td>mc_org_typ_desc</td>
                     <td><select class="form-control source_name">
                          
-                                               <option>Ignore Mapping</option><option>plan_id</option>
+                                               <option>Exclude</option><option>plan_id</option>
                          <option>plan_name</option>
                          <option>plan_types_code</option>
                          <option>plan_types_desc</option>
@@ -1958,7 +1903,7 @@
                     <td>bnfts_admtr_nam</td>
                     <td><select class="form-control source_name">
                          
-                                               <option>Ignore Mapping</option><option>plan_id</option>
+                                               <option>Exclude</option><option>plan_id</option>
                          <option>plan_name</option>
                          <option>plan_types_code</option>
                          <option>plan_types_desc</option>
@@ -1980,7 +1925,7 @@
                     <td>bnfts_admtr_typ_desc</td>
                     <td><select class="form-control source_name">
                          
-                                               <option>Ignore Mapping</option><option>plan_id</option>
+                                               <option>Exclude</option><option>plan_id</option>
                          <option>plan_name</option>
                          <option>plan_types_code</option>
                          <option>plan_types_desc</option>
@@ -2033,7 +1978,7 @@
                     <td>
                     <select class="form-control source_name">
                        
-                                             <option>Ignore Mapping</option><option selected>claim_rejection_reason_code</option>
+                                             <option>Exclude</option><option selected>claim_rejection_reason_code</option>
                        <option>claim_rejection_reason_desc</option>
                        
                      </select>
@@ -2044,7 +1989,7 @@
                     <td>
                     <select class="form-control source_name">
                        
-                                             <option>Ignore Mapping</option><option>claim_rejection_reason_code</option>
+                                             <option>Exclude</option><option>claim_rejection_reason_code</option>
                        <option selected>claim_rejection_reason_desc</option>
                        
                      </select>
@@ -2085,27 +2030,13 @@
                     <td>market_id_1</td>
                     <td><select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option selected></option>
-                           <option>Map as is</option>
-                           
-                       
+                           <option>Exclude</option><option selected></option>
+                           <option>Import as is</option>
                            <option>market_id</option>
                            <option>market_name</option>
                            <option>product_id</option>
                            <option>product_name</option>
                            <option>ndc_11_code</option>
-                           <option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
                            <option>drug_name</option>
                            <option>generic_name</option>
                            <option>form_code</option>
@@ -2121,27 +2052,13 @@
                     <td>market_name_1</td>
                     <td><select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option>Map as is</option>
-                           
-                       
+                           <option>Exclude</option><option>Import as is</option>
                            <option selected></option>
                            <option>market_id</option>
                            <option>market_name</option>
                            <option>product_id</option>
                            <option>product_name</option>
                            <option>ndc_11_code</option>
-                           <option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
                            <option>drug_name</option>
                            <option>generic_name</option>
                            <option>form_code</option>
@@ -2155,29 +2072,12 @@
                     <td>market_id_2</td>
                     <td><select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
-                           <option selected>market_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option selected>market_id</option>
                            <option>market_name</option>
                            <option>product_id</option>
                            <option>product_name</option>
                            <option>ndc_11_code</option>
-                           <option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
                            <option>drug_name</option>
                            <option>generic_name</option>
                            <option>form_code</option>
@@ -2191,29 +2091,12 @@
                     <td>market_name_2</td>
                     <td><select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
+                           <option>Exclude</option><option>Import as is</option>
                            <option>market_id</option>
                            <option selected>market_name</option>
                            <option>product_id</option>
                            <option>product_name</option>
                            <option>ndc_11_code</option>
-                           <option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
                            <option>drug_name</option>
                            <option>generic_name</option>
                            <option>form_code</option>
@@ -2227,29 +2110,12 @@
                     <td>product_id</td>
                     <td><select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
+                           <option>Exclude</option><option>Import as is</option>
                            <option>market_id</option>
                            <option>market_name</option>
                            <option selected>product_id</option>
                            <option>product_name</option>
                            <option>ndc_11_code</option>
-                           <option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
                            <option>drug_name</option>
                            <option>generic_name</option>
                            <option>form_code</option>
@@ -2263,29 +2129,12 @@
                     <td>product_name</td>
                     <td><select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
+                           <option>Exclude</option><option>Import as is</option>
                            <option>market_id</option>
                            <option>market_name</option>
                            <option>product_id</option>
                            <option selected>product_name</option>
                            <option>ndc_11_code</option>
-                           <option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
                            <option>drug_name</option>
                            <option>generic_name</option>
                            <option>form_code</option>
@@ -2299,29 +2148,12 @@
                     <td>ndc</td>
                     <td><select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
+                                                 <option>Exclude</option><option>Import as is</option>
                            <option>market_id</option>
                            <option>market_name</option>
                            <option>product_id</option>
                            <option>product_name</option>
                            <option selected>ndc_11_code</option>
-                           <option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
                            <option>drug_name</option>
                            <option>generic_name</option>
                            <option>form_code</option>
@@ -2335,27 +2167,12 @@
                     <td>usc</td>
                     <td><select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
+                           <option>Exclude</option><option selected>Import as is</option>
                            <option>market_id</option>
                            <option>market_name</option>
                            <option>product_id</option>
                            <option>product_name</option>
                            <option>ndc_11_code</option>
-                           <option selected></option>
-                           <option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
                            <option>drug_name</option>
                            <option>generic_name</option>
                            <option>form_code</option>
@@ -2369,29 +2186,12 @@
                     <td>usc_description</td>
                     <td><select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
+                    <option>Exclude</option><option selected>Import as is</option>
                            <option>market_id</option>
                            <option>market_name</option>
                            <option>product_id</option>
                            <option>product_name</option>
                            <option>ndc_11_code</option>
-                           <option>Map as is</option>
-                           
-                       
-                           <option selected>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
                            <option>drug_name</option>
                            <option>generic_name</option>
                            <option>form_code</option>
@@ -2405,29 +2205,12 @@
                     <td>bb_usc</td>
                     <td><select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
-                           <option>market_id</option>
+                          <option>Exclude</option><option selected>Import as is</option>
+                          <option>market_id</option>
                            <option>market_name</option>
                            <option>product_id</option>
                            <option>product_name</option>
                            <option>ndc_11_code</option>
-                           <option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
-                           <option selected>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
                            <option>drug_name</option>
                            <option>generic_name</option>
                            <option>form_code</option>
@@ -2441,27 +2224,12 @@
                     <td>bb_usc_description</td>
                     <td> <select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
+                           <option>Exclude</option><option selected>Import as is</option>
                            <option>market_id</option>
                            <option>market_name</option>
                            <option>product_id</option>
                            <option>product_name</option>
                            <option>ndc_11_code</option>
-                           <option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
-                           <option selected></option>
                            <option>drug_name</option>
                            <option>generic_name</option>
                            <option>form_code</option>
@@ -2469,35 +2237,19 @@
                            <option>strength_description</option>
                            <option>package_size</option>
                            <option>manufacturer</option>
-                          </select> </td>
+                          </select> 
+                    </td>
                   </tr>
                   <tr>
                     <td>drug_name</td>
                     <td><select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
+                           <option>Exclude</option><option>Import as is</option>
                            <option>market_id</option>
                            <option>market_name</option>
                            <option>product_id</option>
                            <option>product_name</option>
                            <option>ndc_11_code</option>
-                           <option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
                            <option selected>drug_name</option>
                            <option>generic_name</option>
                            <option>form_code</option>
@@ -2511,29 +2263,11 @@
                     <td>generic_name</td>
                     <td><select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
-                           <option>market_id</option>
+                                                 <option>Exclude</option><option>Import as is</option><option>market_id</option>
                            <option>market_name</option>
                            <option>product_id</option>
                            <option>product_name</option>
                            <option>ndc_11_code</option>
-                           <option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
                            <option>drug_name</option>
                            <option selected>generic_name</option>
                            <option>form_code</option>
@@ -2548,29 +2282,12 @@
                     <td>form_code</td>
                     <td><select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
+                           <option>Exclude</option><option>Import as is</option>
                            <option>market_id</option>
                            <option>market_name</option>
                            <option>product_id</option>
                            <option>product_name</option>
                            <option>ndc_11_code</option>
-                           <option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
                            <option>drug_name</option>
                            <option>generic_name</option>
                            <option selected>form_code</option>
@@ -2585,29 +2302,12 @@
                     <td>form_description</td>
                     <td><select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
+                           <option>Exclude</option><option>Import as is</option>
                            <option>market_id</option>
                            <option>market_name</option>
                            <option>product_id</option>
                            <option>product_name</option>
                            <option>ndc_11_code</option>
-                           <option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
                            <option>drug_name</option>
                            <option>generic_name</option>
                            <option>form_code</option>
@@ -2621,29 +2321,12 @@
                     <td>strength_descriptionription</td>
                     <td><select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
+                          <option>Exclude</option><option>Import as is</option>
                            <option>market_id</option>
                            <option>market_name</option>
                            <option>product_id</option>
                            <option>product_name</option>
                            <option>ndc_11_code</option>
-                           <option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
                            <option>drug_name</option>
                            <option>generic_name</option>
                            <option>form_code</option>
@@ -2657,29 +2340,12 @@
                     <td>package_size</td>
                     <td><select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
+                          <option>Exclude</option><option>Import as is</option>
                            <option>market_id</option>
                            <option>market_name</option>
                            <option>product_id</option>
                            <option>product_name</option>
                            <option>ndc_11_code</option>
-                           <option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
                            <option>drug_name</option>
                            <option>generic_name</option>
                            <option>form_code</option>
@@ -2693,29 +2359,12 @@
                     <td>manufacturer</td>
                     <td><select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
+                           <option>Exclude</option><option>Import as is</option>
                            <option>market_id</option>
                            <option>market_name</option>
                            <option>product_id</option>
                            <option>product_name</option>
                            <option>ndc_11_code</option>
-                           <option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
-                           <option>Map as is</option>
-                           
-                       
                            <option>drug_name</option>
                            <option>generic_name</option>
                            <option>form_code</option>
@@ -2761,7 +2410,8 @@
                     <td>First Name</td>
                     <td><select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option selected>first_name</option>
+                           <option>Exclude</option><option>Import as is</option>
+                           <option selected>first_name</option>
                            <option>last_name</option>
                            <option>Account</option>
                            <option>Address</option>
@@ -2769,15 +2419,9 @@
                            <option>State</option>
                            <option>Zip</option>
                            <option>Specialty</option>
-                           <option>Map as is</option>
-                           <option>Map as is</option>
-                           <option>Map as is</option>
-                           <option>Map as is</option>
-                           
                            <option>idn</option>
                            <option>idn_segment</option>
                            <option>affiliation_level</option>
-                           <option>Map as is</option>
                            <option>target_hcp_count</option>
                            <option>np_pa_count</option>
                            <option>trial_hcp_affl_flag</option>
@@ -2789,7 +2433,8 @@
                     <td>Last Name</td>
                     <td><select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option>first_name</option>
+                           <option>Exclude</option><option>Import as is</option>
+                           <option>first_name</option>
                            <option selected>last_name</option>
                            <option>Account</option>
                            <option>Address</option>
@@ -2797,15 +2442,10 @@
                            <option>State</option>
                            <option>Zip</option>
                            <option>Specialty</option>
-                           <option>Map as is</option>
-                           <option>Map as is</option>
-                           <option>Map as is</option>
-                           <option>Map as is</option>
-                           
                            <option>idn</option>
                            <option>idn_segment</option>
                            <option>affiliation_level</option>
-                           <option>Map as is</option>
+                           <option>Import as is</option>
                            <option>target_hcp_count</option>
                            <option>np_pa_count</option>
                            <option>trial_hcp_affl_flag</option>
@@ -2815,7 +2455,8 @@
                     <td>Account</td>
                     <td><select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option>first_name</option>
+                           <option>Exclude</option><option>Import as is</option>
+                           <option>first_name</option>
                            <option>last_name</option>
                            <option selected>Account</option>
                            <option>Address</option>
@@ -2823,15 +2464,9 @@
                            <option>State</option>
                            <option>Zip</option>
                            <option>Specialty</option>
-                           <option>Map as is</option>
-                           <option>Map as is</option>
-                           <option>Map as is</option>
-                           <option>Map as is</option>
-                           
                            <option>idn</option>
                            <option>idn_segment</option>
                            <option>affiliation_level</option>
-                           <option>Map as is</option>
                            <option>target_hcp_count</option>
                            <option>np_pa_count</option>
                            <option>trial_hcp_affl_flag</option>
@@ -2841,7 +2476,8 @@
                     <td>Address</td>
                     <td><select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option>first_name</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>first_name</option>
                            <option>last_name</option>
                            <option>Account</option>
                            <option selected>Address</option>
@@ -2849,15 +2485,9 @@
                            <option>State</option>
                            <option>Zip</option>
                            <option>Specialty</option>
-                           <option>Map as is</option>
-                           <option>Map as is</option>
-                           <option>Map as is</option>
-                           <option>Map as is</option>
-                           
                            <option>idn</option>
                            <option>idn_segment</option>
                            <option>affiliation_level</option>
-                           <option>Map as is</option>
                            <option>target_hcp_count</option>
                            <option>np_pa_count</option>
                            <option>trial_hcp_affl_flag</option>
@@ -2867,7 +2497,8 @@
                     <td>City</td>
                     <td><select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option>first_name</option>
+                           <option>Exclude</option><option>Import as is</option>
+                           <option>first_name</option>
                            <option>last_name</option>
                            <option>Account</option>
                            <option>Address</option>
@@ -2875,15 +2506,9 @@
                            <option>State</option>
                            <option>Zip</option>
                            <option>Specialty</option>
-                           <option>Map as is</option>
-                           <option>Map as is</option>
-                           <option>Map as is</option>
-                           <option>Map as is</option>
-                           
                            <option>idn</option>
                            <option>idn_segment</option>
                            <option>affiliation_level</option>
-                           <option>Map as is</option>
                            <option>target_hcp_count</option>
                            <option>np_pa_count</option>
                            <option>trial_hcp_affl_flag</option>
@@ -2893,7 +2518,8 @@
                     <td>State</td>
                     <td><select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option>first_name</option>
+                           <option>Exclude</option><option>Import as is</option>
+                           <option>first_name</option>
                            <option>last_name</option>
                            <option>Account</option>
                            <option>Address</option>
@@ -2901,15 +2527,9 @@
                            <option selected>State</option>
                            <option>Zip</option>
                            <option>Specialty</option>
-                           <option>Map as is</option>
-                           <option>Map as is</option>
-                           <option>Map as is</option>
-                           <option>Map as is</option>
-                           
                            <option>idn</option>
                            <option>idn_segment</option>
                            <option>affiliation_level</option>
-                           <option>Map as is</option>
                            <option>target_hcp_count</option>
                            <option>np_pa_count</option>
                            <option>trial_hcp_affl_flag</option>
@@ -2919,7 +2539,8 @@
                     <td>Zip</td>
                     <td><select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option>first_name</option>
+                           <option>Exclude</option><option>Import as is</option>
+                           <option>first_name</option>
                            <option>last_name</option>
                            <option>Account</option>
                            <option>Address</option>
@@ -2927,15 +2548,9 @@
                            <option>State</option>
                            <option selected>Zip</option>
                            <option>Specialty</option>
-                           <option>Map as is</option>
-                           <option>Map as is</option>
-                           <option>Map as is</option>
-                           <option>Map as is</option>
-                           
                            <option>idn</option>
                            <option>idn_segment</option>
                            <option>affiliation_level</option>
-                           <option>Map as is</option>
                            <option>target_hcp_count</option>
                            <option>np_pa_count</option>
                            <option>trial_hcp_affl_flag</option>
@@ -2945,7 +2560,8 @@
                     <td>Specialty</td>
                     <td><select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option>first_name</option>
+                           <option>Exclude</option><option>Import as is</option>
+                           <option>first_name</option>
                            <option>last_name</option>
                            <option>Account</option>
                            <option>Address</option>
@@ -2953,15 +2569,9 @@
                            <option>State</option>
                            <option>Zip</option>
                            <option selected>Specialty</option>
-                           <option>Map as is</option>
-                           <option>Map as is</option>
-                           <option>Map as is</option>
-                           <option>Map as is</option>
-                           
                            <option>idn</option>
                            <option>idn_segment</option>
                            <option>affiliation_level</option>
-                           <option>Map as is</option>
                            <option>target_hcp_count</option>
                            <option>np_pa_count</option>
                            <option>trial_hcp_affl_flag</option>
@@ -2971,7 +2581,8 @@
                     <td>adpt_decile</td>
                     <td><select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option>first_name</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>first_name</option>
                            <option>last_name</option>
                            <option>Account</option>
                            <option>Address</option>
@@ -2979,15 +2590,9 @@
                            <option>State</option>
                            <option>Zip</option>
                            <option>Specialty</option>
-                           <option selected>Map as is</option>
-                           <option>Map as is</option>
-                           <option>Map as is</option>
-                           <option>Map as is</option>
-                           
                            <option>idn</option>
                            <option>idn_segment</option>
                            <option>affiliation_level</option>
-                           <option>Map as is</option>
                            <option>target_hcp_count</option>
                            <option>np_pa_count</option>
                            <option>trial_hcp_affl_flag</option>
@@ -2997,7 +2602,8 @@
                     <td>simple_decile</td>
                     <td><select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option>first_name</option>
+                           <option>Exclude</option><option>Import as is</option>
+                           <option>first_name</option>
                            <option>last_name</option>
                            <option>Account</option>
                            <option>Address</option>
@@ -3005,16 +2611,10 @@
                            <option>State</option>
                            <option>Zip</option>
                            <option>Specialty</option>
-                           <option>Map as is</option>
-                           <option selected>Map as is</option>
-                           <option>Map as is</option>
-                           <option>Map as is</option>
-                           
                            <option>idn</option>
                            <option>idn_segment</option>
                            <option>affiliation_level</option>
-                           <option>Map as is</option>
-                           <option>target_hcp_count</option>
+                          <option>target_hcp_count</option>
                            <option>np_pa_count</option>
                            <option>trial_hcp_affl_flag</option>
                           </select>  </td>
@@ -3023,7 +2623,8 @@
                     <td>comp_decide</td>
                     <td><select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option>first_name</option>
+                           <option>Exclude</option><option>Import as is</option>
+                           <option>first_name</option>
                            <option>last_name</option>
                            <option>Account</option>
                            <option>Address</option>
@@ -3031,15 +2632,10 @@
                            <option>State</option>
                            <option>Zip</option>
                            <option>Specialty</option>
-                           <option>Map as is</option>
-                           <option>Map as is</option>
-                           <option selected>Map as is</option>
-                           <option>Map as is</option>
-                           
                            <option>idn</option>
                            <option>idn_segment</option>
                            <option>affiliation_level</option>
-                           <option>Map as is</option>
+                           
                            <option>target_hcp_count</option>
                            <option>np_pa_count</option>
                            <option>trial_hcp_affl_flag</option>
@@ -3049,7 +2645,8 @@
                     <td>cluster</td>
                     <td><select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option>first_name</option>
+                           <option>Exclude</option><option>Import as is</option>
+                           <option>first_name</option>
                            <option>last_name</option>
                            <option>Account</option>
                            <option>Address</option>
@@ -3057,16 +2654,10 @@
                            <option>State</option>
                            <option>Zip</option>
                            <option>Specialty</option>
-                           <option>Map as is</option>
-                           <option>Map as is</option>
-                           <option>Map as is</option>
-                           <option selected>Map as is</option>
-                           
                            <option>idn</option>
                            <option>idn_segment</option>
                            <option>affiliation_level</option>
-                           <option>Map as is</option>
-                           <option>target_hcp_count</option>
+                            <option>target_hcp_count</option>
                            <option>np_pa_count</option>
                            <option>trial_hcp_affl_flag</option>
                           </select>  </td>
@@ -3075,7 +2666,8 @@
                     <td>Segment</td>
                     <td><select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option>first_name</option>
+                           <option>Exclude</option><option>Import as is</option>
+                           <option>first_name</option>
                            <option>last_name</option>
                            <option>Account</option>
                            <option>Address</option>
@@ -3083,15 +2675,10 @@
                            <option>State</option>
                            <option>Zip</option>
                            <option>Specialty</option>
-                           <option>Map as is</option>
-                           <option>Map as is</option>
-                           <option>Map as is</option>
-                           <option>Map as is</option>
-                           
                            <option>idn</option>
                            <option>idn_segment</option>
                            <option>affiliation_level</option>
-                           <option>Map as is</option>
+                           <option>Import as is</option>
                            <option>target_hcp_count</option>
                            <option>np_pa_count</option>
                            <option>trial_hcp_affl_flag</option>
@@ -3102,7 +2689,8 @@
                     <td>IDN</td>
                     <td><select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option>first_name</option>
+                           <option>Exclude</option><option>Import as is</option>
+                           <option>first_name</option>
                            <option>last_name</option>
                            <option>Account</option>
                            <option>Address</option>
@@ -3110,15 +2698,10 @@
                            <option>State</option>
                            <option>Zip</option>
                            <option>Specialty</option>
-                           <option>Map as is</option>
-                           <option>Map as is</option>
-                           <option>Map as is</option>
-                           <option>Map as is</option>
-                           
                            <option selected>idn</option>
                            <option>idn_segment</option>
                            <option>affiliation_level</option>
-                           <option>Map as is</option>
+                           <option>Import as is</option>
                            <option>target_hcp_count</option>
                            <option>np_pa_count</option>
                            <option>trial_hcp_affl_flag</option>
@@ -3129,7 +2712,8 @@
                     <td>IDN Segment</td>
                     <td><select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option>first_name</option>
+                        <option>Exclude</option><option>Import as is</option>
+                           <option>first_name</option>
                            <option>last_name</option>
                            <option>Account</option>
                            <option>Address</option>
@@ -3137,15 +2721,9 @@
                            <option>State</option>
                            <option>Zip</option>
                            <option>Specialty</option>
-                           <option>Map as is</option>
-                           <option>Map as is</option>
-                           <option>Map as is</option>
-                           <option>Map as is</option>
-                           
-                           <option>idn</option>
+                            <option>idn</option>
                            <option selected>idn_segment</option>
                            <option>affiliation_level</option>
-                           <option>Map as is</option>
                            <option>target_hcp_count</option>
                            <option>np_pa_count</option>
                            <option>trial_hcp_affl_flag</option>
@@ -3155,7 +2733,8 @@
                     <td>Affiliation Level</td>
                     <td><select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option>first_name</option>
+                           <option>Exclude</option><option>Import as is</option>
+                           <option>first_name</option>
                            <option>last_name</option>
                            <option>Account</option>
                            <option>Address</option>
@@ -3163,15 +2742,9 @@
                            <option>State</option>
                            <option>Zip</option>
                            <option>Specialty</option>
-                           <option>Map as is</option>
-                           <option>Map as is</option>
-                           <option>Map as is</option>
-                           <option>Map as is</option>
-                           
                            <option>idn</option>
                            <option>idn_segment</option>
                            <option selected>affiliation_level</option>
-                           <option>Map as is</option>
                            <option>target_hcp_count</option>
                            <option>np_pa_count</option>
                            <option>trial_hcp_affl_flag</option>
@@ -3181,7 +2754,8 @@
                     <td>Account HCP Count</td>
                     <td><select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option>first_name</option>
+                           <option>Exclude</option><option>Import as is</option>
+                           <option>first_name</option>
                            <option>last_name</option>
                            <option>Account</option>
                            <option>Address</option>
@@ -3189,15 +2763,10 @@
                            <option>State</option>
                            <option>Zip</option>
                            <option>Specialty</option>
-                           <option>Map as is</option>
-                           <option>Map as is</option>
-                           <option>Map as is</option>
-                           <option>Map as is</option>
-                           
                            <option>idn</option>
                            <option>idn_segment</option>
                            <option>affiliation_level</option>
-                           <option selected>Map as is</option>
+                           
                            <option>target_hcp_count</option>
                            <option>np_pa_count</option>
                            <option>trial_hcp_affl_flag</option>
@@ -3207,7 +2776,8 @@
                     <td>Target HCP Count</td>
                     <td><select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option>first_name</option>
+                           <option>Exclude</option><option>Import as is</option>
+                           <option>first_name</option>
                            <option>last_name</option>
                            <option>Account</option>
                            <option>Address</option>
@@ -3215,15 +2785,10 @@
                            <option>State</option>
                            <option>Zip</option>
                            <option>Specialty</option>
-                           <option>Map as is</option>
-                           <option>Map as is</option>
-                           <option>Map as is</option>
-                           <option>Map as is</option>
-                           
                            <option>idn</option>
                            <option>idn_segment</option>
                            <option>affiliation_level</option>
-                           <option>Map as is</option>
+                           
                            <option selected>target_hcp_count</option>
                            <option>np_pa_count</option>
                            <option>trial_hcp_affl_flag</option>
@@ -3233,7 +2798,8 @@
                     <td>NP/PA Count</td>
                     <td><select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option>first_name</option>
+                           <option>Exclude</option><option>Import as is</option>
+                           <option>first_name</option>
                            <option>last_name</option>
                            <option>Account</option>
                            <option>Address</option>
@@ -3241,15 +2807,10 @@
                            <option>State</option>
                            <option>Zip</option>
                            <option>Specialty</option>
-                           <option>Map as is</option>
-                           <option>Map as is</option>
-                           <option>Map as is</option>
-                           <option>Map as is</option>
-                           
                            <option>idn</option>
                            <option>idn_segment</option>
                            <option>affiliation_level</option>
-                           <option>Map as is</option>
+                           
                            <option>target_hcp_count</option>
                            <option selected>np_pa_count</option>
                            <option>trial_hcp_affl_flag</option>
@@ -3259,7 +2820,8 @@
                     <td>Trial HCP Affiliation Flag</td>
                     <td><select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option>first_name</option>
+                           <option>Exclude</option><option>Import as is</option>
+                           <option>first_name</option>
                            <option>last_name</option>
                            <option>Account</option>
                            <option>Address</option>
@@ -3267,15 +2829,10 @@
                            <option>State</option>
                            <option>Zip</option>
                            <option>Specialty</option>
-                           <option>Map as is</option>
-                           <option>Map as is</option>
-                           <option>Map as is</option>
-                           <option>Map as is</option>
-                           
                            <option>idn</option>
                            <option>idn_segment</option>
                            <option>affiliation_level</option>
-                           <option>Map as is</option>
+                           <option>Import as is</option>
                            <option>target_hcp_count</option>
                            <option>np_pa_count</option>
                            <option selected>trial_hcp_affl_flag</option>
@@ -3318,11 +2875,12 @@
                     <td>ptnt_id</td>
                     <td><select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option selected>patient_id</option>
+                           <option>Exclude</option><option>Import as is</option>
+                           <option selected>patient_id</option>
                            <option>patient_birth_year</option>
                            <option>patient_gender_code</option>
                            <option>patient_zip_code</option>
-                           <option>Map as is</option>
+                           
                            
                           </select>  
                
@@ -3332,11 +2890,12 @@
                     <td>ptnt_brth_yr_nbr</td>
                     <td><select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option>patient_id</option>
+                           <option>Exclude</option><option>Import as is</option>
+                           <option >patient_id</option>
                            <option selected>patient_birth_year</option>
                            <option>patient_gender_code</option>
                            <option>patient_zip_code</option>
-                           <option>Map as is</option>
+                           
                            
                           </select>  </td>
                   </tr>
@@ -3344,11 +2903,12 @@
                     <td>ptnt_gndr_cde</td>
                     <td><select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option>patient_id</option>
+                           <option>Exclude</option><option>Import as is</option>
+                           <option >patient_id</option>
                            <option>patient_birth_year</option>
                            <option selected>patient_gender_code</option>
                            <option>patient_zip_code</option>
-                           <option>Map as is</option>
+                           
                            
                           </select>  </td>
                   </tr>
@@ -3356,11 +2916,12 @@
                     <td>ptnt_zip3_cde</td>
                     <td><select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option>patient_id</option>
+                           <option>Exclude</option><option>Import as is</option>
+                           <option >patient_id</option>
                            <option>patient_birth_year</option>
                            <option>patient_gender_code</option>
                            <option selected>patient_zip_code</option>
-                           <option>Map as is</option>
+                           
                            
                           </select>  </td>
                   </tr>
@@ -3368,11 +2929,12 @@
                     <td>ptnt_st_cde</td>
                     <td><select class="form-control source_name">
                            
-                                                 <option>Ignore Mapping</option><option>patient_id</option>
+                           <option>Exclude</option><option>Import as is</option>
+                           <option >patient_id</option>
                            <option>patient_birth_year</option>
                            <option>patient_gender_code</option>
                            <option>patient_zip_code</option>
-                           <option selected>Map as is</option>
+                           
                            
                           </select>  </td>
                   </tr>
@@ -3412,7 +2974,8 @@
                     <td>rel_id</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option selected>relation_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option selected>relation_id</option>
                           <option>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option>writer_type</option>
@@ -3430,7 +2993,6 @@
                           <option>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option>Map as is</option>
                           <option>npi</option>
                           <option>territory_id</option>
                           <option>call_status_code</option>
@@ -3443,7 +3005,8 @@
                     <td>provider_id_number</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>relation_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>relation_id</option>
                           <option selected>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option>writer_type</option>
@@ -3461,7 +3024,6 @@
                           <option>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option>Map as is</option>
                           <option>npi</option>
                           <option>territory_id</option>
                           <option>call_status_code</option>
@@ -3473,7 +3035,8 @@
                     <td>data_agent_code</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>relation_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>relation_id</option>
                           <option>provider_id_number</option>
                           <option selected>data_agent_code</option>
                           <option>writer_type</option>
@@ -3491,7 +3054,7 @@
                           <option>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option>Map as is</option>
+                          
                           <option>npi</option>
                           <option>territory_id</option>
                           <option>call_status_code</option>
@@ -3503,7 +3066,8 @@
                     <td>writer_type</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>relation_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>relation_id</option>
                           <option>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option selected>writer_type</option>
@@ -3521,7 +3085,7 @@
                           <option>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option>Map as is</option>
+                          
                           <option>npi</option>
                           <option>territory_id</option>
                           <option>call_status_code</option>
@@ -3533,7 +3097,8 @@
                     <td>first_name</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>relation_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>relation_id</option>
                           <option>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option>writer_type</option>
@@ -3551,7 +3116,7 @@
                           <option>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option>Map as is</option>
+                          
                           <option>npi</option>
                           <option>territory_id</option>
                           <option>call_status_code</option>
@@ -3563,7 +3128,8 @@
                     <td>middle_name</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>relation_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>relation_id</option>
                           <option>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option>writer_type</option>
@@ -3581,7 +3147,6 @@
                           <option>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option>Map as is</option>
                           <option>npi</option>
                           <option>territory_id</option>
                           <option>call_status_code</option>
@@ -3593,7 +3158,8 @@
                     <td>last_name</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>relation_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>relation_id</option>
                           <option>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option>writer_type</option>
@@ -3611,7 +3177,7 @@
                           <option>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option>Map as is</option>
+                          
                           <option>npi</option>
                           <option>territory_id</option>
                           <option>call_status_code</option>
@@ -3623,7 +3189,8 @@
                     <td>title</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>relation_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>relation_id</option>
                           <option>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option>writer_type</option>
@@ -3641,7 +3208,7 @@
                           <option>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option>Map as is</option>
+                          
                           <option>npi</option>
                           <option>territory_id</option>
                           <option>call_status_code</option>
@@ -3653,7 +3220,8 @@
                     <td>specialty_code</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>relation_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>relation_id</option>
                           <option>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option>writer_type</option>
@@ -3671,7 +3239,6 @@
                           <option>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option>Map as is</option>
                           <option>npi</option>
                           <option>territory_id</option>
                           <option>call_status_code</option>
@@ -3683,7 +3250,8 @@
                     <td>specialty_desc</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>relation_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>relation_id</option>
                           <option>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option>writer_type</option>
@@ -3701,7 +3269,7 @@
                           <option>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option>Map as is</option>
+                          
                           <option>npi</option>
                           <option>territory_id</option>
                           <option>call_status_code</option>
@@ -3713,7 +3281,8 @@
                     <td>address</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>relation_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>relation_id</option>
                           <option>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option>writer_type</option>
@@ -3731,7 +3300,7 @@
                           <option>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option>Map as is</option>
+                          
                           <option>npi</option>
                           <option>territory_id</option>
                           <option>call_status_code</option>
@@ -3743,7 +3312,8 @@
                     <td>city</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>relation_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>relation_id</option>
                           <option>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option>writer_type</option>
@@ -3761,7 +3331,7 @@
                           <option>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option>Map as is</option>
+                          
                           <option>npi</option>
                           <option>territory_id</option>
                           <option>call_status_code</option>
@@ -3773,7 +3343,8 @@
                     <td>state</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>relation_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>relation_id</option>
                           <option>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option>writer_type</option>
@@ -3791,7 +3362,7 @@
                           <option>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option>Map as is</option>
+                          
                           <option>npi</option>
                           <option>territory_id</option>
                           <option>call_status_code</option>
@@ -3804,7 +3375,8 @@
                     <td>zip_code</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>relation_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>relation_id</option>
                           <option>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option>writer_type</option>
@@ -3822,7 +3394,7 @@
                           <option>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option>Map as is</option>
+                          
                           <option>npi</option>
                           <option>territory_id</option>
                           <option>call_status_code</option>
@@ -3835,7 +3407,8 @@
                     <td>ama_no_contact</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>relation_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>relation_id</option>
                           <option>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option>writer_type</option>
@@ -3853,7 +3426,7 @@
                           <option>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option>Map as is</option>
+                          
                           <option>npi</option>
                           <option>territory_id</option>
                           <option>call_status_code</option>
@@ -3866,7 +3439,8 @@
                     <td>ama_pdrp_indicator</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>relation_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>relation_id</option>
                           <option>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option>writer_type</option>
@@ -3884,7 +3458,7 @@
                           <option selected>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option>Map as is</option>
+                          
                           <option>npi</option>
                           <option>territory_id</option>
                           <option>call_status_code</option>
@@ -3896,7 +3470,8 @@
                     <td>ama_pdrp_date</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>relation_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>relation_id</option>
                           <option>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option>writer_type</option>
@@ -3914,7 +3489,7 @@
                           <option>ama_pdrp_indicator</option>
                           <option selected>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option>Map as is</option>
+                          
                           <option>npi</option>
                           <option>territory_id</option>
                           <option>call_status_code</option>
@@ -3926,7 +3501,8 @@
                     <td>presumed_dead_ind</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>relation_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>relation_id</option>
                           <option>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option>writer_type</option>
@@ -3944,7 +3520,7 @@
                           <option>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option selected>presumed_dead_ind</option>
-                          <option>Map as is</option>
+                          
                           <option>npi</option>
                           <option>territory_id</option>
                           <option>call_status_code</option>
@@ -3956,7 +3532,8 @@
                     <td>type_of_practice_code</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>relation_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>relation_id</option>
                           <option>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option>writer_type</option>
@@ -3974,7 +3551,7 @@
                           <option>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option selected>Map as is</option>
+                          
                           <option>npi</option>
                           <option>territory_id</option>
                           <option>call_status_code</option>
@@ -3986,7 +3563,8 @@
                     <td>npi</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>relation_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>relation_id</option>
                           <option>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option>writer_type</option>
@@ -4004,7 +3582,7 @@
                           <option>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option>Map as is</option>
+                          
                           <option selected>npi</option>
                           <option>territory_id</option>
                           <option>call_status_code</option>
@@ -4016,7 +3594,8 @@
                     <td>territory_id</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>relation_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>relation_id</option>
                           <option>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option>writer_type</option>
@@ -4034,7 +3613,7 @@
                           <option>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option>Map as is</option>
+                          
                           <option>npi</option>
                           <option selected>territory_id</option>
                           <option>call_status_code</option>
@@ -4047,7 +3626,8 @@
                     
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>relation_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>relation_id</option>
                           <option>provider_id_number</option>
                           <option>data_agent_code</option>
                           <option>writer_type</option>
@@ -4065,7 +3645,7 @@
                           <option>ama_pdrp_indicator</option>
                           <option>ama_pdrp_date</option>
                           <option>presumed_dead_ind</option>
-                          <option>Map as is</option>
+                          
                           <option>npi</option>
                           <option>territory_id</option>
                           <option selected>call_status_code</option>
@@ -4108,7 +3688,8 @@
                     <td>claim_id</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option selected>claim_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option selected>claim_id</option>
                           <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
@@ -4125,18 +3706,15 @@
                           <option>patient_claim_sequence_number</option>
                           <option>claim_status_code</option>
                           <option>claim_rjct_rsn_code</option>
-                          <option></option>
-                          <option></option>
                           <option>days_until_next_fill_count</option>
                           <option>copay_30_amount</option>
                           <option>sob_cde</option>
                           <option>new_to_prdct_ind</option>
-                          <option></option>
                           <option>final_claim_code</option>
                           <option>primary_plan_group_number</option>
                           <option>secondary_plan_group_number</option>
                           <option>daw_code</option>
-                          <option>Map as is</option>
+                          
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4145,7 +3723,8 @@
                     <td>ptnt_id</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>claim_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>claim_id</option>
                           <option selected>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
@@ -4162,18 +3741,18 @@
                           <option>patient_claim_sequence_number</option>
                           <option>claim_status_code</option>
                           <option>claim_rjct_rsn_code</option>
-                          <option></option>
-                          <option></option>
+                          
+                          
                           <option>days_until_next_fill_count</option>
                           <option>copay_30_amount</option>
                           <option>sob_cde</option>
                           <option>new_to_prdct_ind</option>
-                          <option></option>
+                          
                           <option>final_claim_code</option>
                           <option>primary_plan_group_number</option>
                           <option>secondary_plan_group_number</option>
                           <option>daw_code</option>
-                          <option>Map as is</option>
+
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4182,7 +3761,8 @@
                     <td>drug_id</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>claim_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>claim_id</option>
                           <option>patient_id</option>
                           <option selected>drug_id</option>
                           <option>medical_practitioner_id</option>
@@ -4199,18 +3779,18 @@
                           <option>patient_claim_sequence_number</option>
                           <option>claim_status_code</option>
                           <option>claim_rjct_rsn_code</option>
-                          <option></option>
-                          <option></option>
+                          
+                          
                           <option>days_until_next_fill_count</option>
                           <option>copay_30_amount</option>
                           <option>sob_cde</option>
                           <option>new_to_prdct_ind</option>
-                          <option></option>
+                          
                           <option>final_claim_code</option>
                           <option>primary_plan_group_number</option>
                           <option>secondary_plan_group_number</option>
                           <option>daw_code</option>
-                          <option>Map as is</option>
+                          
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4219,7 +3799,8 @@
                     <td>mdcl_prctr_id</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>claim_id</option>
+                        <option>Exclude</option><option>Import as is</option>
+                          <option>claim_id</option>
                           <option>patient_id</option>
                           <option>drug_id</option>
                           <option selected>medical_practitioner_id</option>
@@ -4236,18 +3817,18 @@
                           <option>patient_claim_sequence_number</option>
                           <option>claim_status_code</option>
                           <option>claim_rjct_rsn_code</option>
-                          <option></option>
-                          <option></option>
+                          
+                          
                           <option>days_until_next_fill_count</option>
                           <option>copay_30_amount</option>
                           <option>sob_cde</option>
                           <option>new_to_prdct_ind</option>
-                          <option></option>
+                          
                           <option>final_claim_code</option>
                           <option>primary_plan_group_number</option>
                           <option>secondary_plan_group_number</option>
                           <option>daw_code</option>
-                          <option>Map as is</option>
+                          
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4256,7 +3837,8 @@
                     <td>prmry_plan_id</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>claim_id</option>
+                                                 <option>Exclude</option><option>Import as is</option>
+                          <option>claim_id</option>
                           <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
@@ -4273,18 +3855,18 @@
                           <option>patient_claim_sequence_number</option>
                           <option>claim_status_code</option>
                           <option>claim_rjct_rsn_code</option>
-                          <option></option>
-                          <option></option>
+                          
+                          
                           <option>days_until_next_fill_count</option>
                           <option>copay_30_amount</option>
                           <option>sob_cde</option>
                           <option>new_to_prdct_ind</option>
-                          <option></option>
+                          
                           <option>final_claim_code</option>
                           <option>primary_plan_group_number</option>
                           <option>secondary_plan_group_number</option>
                           <option>daw_code</option>
-                          <option>Map as is</option>
+                          
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4293,7 +3875,8 @@
                     <td>ptnt_pay_amt</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>claim_id</option>
+                         <option>Exclude</option><option>Import as is</option>
+                          <option>claim_id</option>
                           <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
@@ -4310,18 +3893,18 @@
                           <option>patient_claim_sequence_number</option>
                           <option>claim_status_code</option>
                           <option>claim_rjct_rsn_code</option>
-                          <option></option>
-                          <option></option>
+                          
+                          
                           <option>days_until_next_fill_count</option>
                           <option>copay_30_amount</option>
                           <option>sob_cde</option>
                           <option>new_to_prdct_ind</option>
-                          <option></option>
+                          
                           <option>final_claim_code</option>
                           <option>primary_plan_group_number</option>
                           <option>secondary_plan_group_number</option>
                           <option>daw_code</option>
-                          <option>Map as is</option>
+                          
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4330,7 +3913,8 @@
                     <td>prmry_plan_pay_amt</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>claim_id</option>
+                        <option>Exclude</option><option>Import as is</option>
+                          <option>claim_id</option>
                           <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
@@ -4347,18 +3931,18 @@
                           <option>patient_claim_sequence_number</option>
                           <option>claim_status_code</option>
                           <option>claim_rjct_rsn_code</option>
-                          <option></option>
-                          <option></option>
+                          
+                          
                           <option>days_until_next_fill_count</option>
                           <option>copay_30_amount</option>
                           <option>sob_cde</option>
                           <option>new_to_prdct_ind</option>
-                          <option></option>
+                          
                           <option>final_claim_code</option>
                           <option>primary_plan_group_number</option>
                           <option>secondary_plan_group_number</option>
                           <option>daw_code</option>
-                          <option>Map as is</option>
+                          
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4367,7 +3951,8 @@
                     <td>scnry_plan_id</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>claim_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>claim_id</option>
                           <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
@@ -4384,18 +3969,18 @@
                           <option>patient_claim_sequence_number</option>
                           <option>claim_status_code</option>
                           <option>claim_rjct_rsn_code</option>
-                          <option></option>
-                          <option></option>
+                          
+                          
                           <option>days_until_next_fill_count</option>
                           <option>copay_30_amount</option>
                           <option>sob_cde</option>
                           <option>new_to_prdct_ind</option>
-                          <option></option>
+                          
                           <option>final_claim_code</option>
                           <option>primary_plan_group_number</option>
                           <option>secondary_plan_group_number</option>
                           <option>daw_code</option>
-                          <option>Map as is</option>
+                          
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4404,7 +3989,8 @@
                     <td>scnry_plan_pay_amt</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>claim_id</option>
+                        <option>Exclude</option><option>Import as is</option>
+                          <option>claim_id</option>
                           <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
@@ -4421,18 +4007,18 @@
                           <option>patient_claim_sequence_number</option>
                           <option>claim_status_code</option>
                           <option>claim_rjct_rsn_code</option>
-                          <option></option>
-                          <option></option>
+                          
+                          
                           <option>days_until_next_fill_count</option>
                           <option>copay_30_amount</option>
                           <option>sob_cde</option>
                           <option>new_to_prdct_ind</option>
-                          <option></option>
+                          
                           <option>final_claim_code</option>
                           <option>primary_plan_group_number</option>
                           <option>secondary_plan_group_number</option>
                           <option>daw_code</option>
-                          <option>Map as is</option>
+                          
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4441,7 +4027,8 @@
                     <td>ptnt_oop_pay_amt</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>claim_id</option>
+                        <option>Exclude</option><option>Import as is</option>
+                          <option>claim_id</option>
                           <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
@@ -4458,18 +4045,18 @@
                           <option>patient_claim_sequence_number</option>
                           <option>claim_status_code</option>
                           <option>claim_rjct_rsn_code</option>
-                          <option></option>
-                          <option></option>
+                          
+                          
                           <option>days_until_next_fill_count</option>
                           <option>copay_30_amount</option>
                           <option>sob_cde</option>
                           <option>new_to_prdct_ind</option>
-                          <option></option>
+                          
                           <option>final_claim_code</option>
                           <option>primary_plan_group_number</option>
                           <option>secondary_plan_group_number</option>
                           <option>daw_code</option>
-                          <option>Map as is</option>
+                          
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4478,7 +4065,8 @@
                     <td>refil_cde</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>claim_id</option>
+                    <option>Exclude</option><option>Import as is</option>
+                          <option>claim_id</option>
                           <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
@@ -4495,18 +4083,18 @@
                           <option>patient_claim_sequence_number</option>
                           <option>claim_status_code</option>
                           <option>claim_rjct_rsn_code</option>
-                          <option></option>
-                          <option></option>
+                          
+                          
                           <option>days_until_next_fill_count</option>
                           <option>copay_30_amount</option>
                           <option>sob_cde</option>
                           <option>new_to_prdct_ind</option>
-                          <option></option>
+                          
                           <option>final_claim_code</option>
                           <option>primary_plan_group_number</option>
                           <option>secondary_plan_group_number</option>
                           <option>daw_code</option>
-                          <option>Map as is</option>
+                          
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4515,7 +4103,8 @@
                     <td>dspnd_qty</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>claim_id</option>
+                        <option>Exclude</option><option>Import as is</option>
+                          <option>claim_id</option>
                           <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
@@ -4532,18 +4121,18 @@
                           <option>patient_claim_sequence_number</option>
                           <option>claim_status_code</option>
                           <option>claim_rjct_rsn_code</option>
-                          <option></option>
-                          <option></option>
+                          
+                          
                           <option>days_until_next_fill_count</option>
                           <option>copay_30_amount</option>
                           <option>sob_cde</option>
                           <option>new_to_prdct_ind</option>
-                          <option></option>
+                          
                           <option>final_claim_code</option>
                           <option>primary_plan_group_number</option>
                           <option>secondary_plan_group_number</option>
                           <option>daw_code</option>
-                          <option>Map as is</option>
+                          
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4552,7 +4141,8 @@
                     <td>days_sply_cnt</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>claim_id</option>
+                        <option>Exclude</option><option>Import as is</option>
+                          <option>claim_id</option>
                           <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
@@ -4569,18 +4159,18 @@
                           <option>patient_claim_sequence_number</option>
                           <option>claim_status_code</option>
                           <option>claim_rjct_rsn_code</option>
-                          <option></option>
-                          <option></option>
+                          
+                          
                           <option>days_until_next_fill_count</option>
                           <option>copay_30_amount</option>
                           <option>sob_cde</option>
                           <option>new_to_prdct_ind</option>
-                          <option></option>
+                          
                           <option>final_claim_code</option>
                           <option>primary_plan_group_number</option>
                           <option>secondary_plan_group_number</option>
                           <option>daw_code</option>
-                          <option>Map as is</option>
+                          
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4590,7 +4180,8 @@
                     <td>rx_fill_dte</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>claim_id</option>
+                        <option>Exclude</option><option>Import as is</option>
+                          <option>claim_id</option>
                           <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
@@ -4607,18 +4198,18 @@
                           <option>patient_claim_sequence_number</option>
                           <option>claim_status_code</option>
                           <option>claim_rjct_rsn_code</option>
-                          <option></option>
-                          <option></option>
+                          
+                          
                           <option>days_until_next_fill_count</option>
                           <option>copay_30_amount</option>
                           <option>sob_cde</option>
                           <option>new_to_prdct_ind</option>
-                          <option></option>
+                          
                           <option>final_claim_code</option>
                           <option>primary_plan_group_number</option>
                           <option>secondary_plan_group_number</option>
                           <option>daw_code</option>
-                          <option>Map as is</option>
+                          
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4628,7 +4219,8 @@
                     <td>ptnt_claim_seq_nbr</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>claim_id</option>
+                    <option>Exclude</option><option>Import as is</option>
+                          <option>claim_id</option>
                           <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
@@ -4645,18 +4237,18 @@
                           <option selected>patient_claim_sequence_number</option>
                           <option>claim_status_code</option>
                           <option>claim_rjct_rsn_code</option>
-                          <option></option>
-                          <option></option>
+                          
+                          
                           <option>days_until_next_fill_count</option>
                           <option>copay_30_amount</option>
                           <option>sob_cde</option>
                           <option>new_to_prdct_ind</option>
-                          <option></option>
+                          
                           <option>final_claim_code</option>
                           <option>primary_plan_group_number</option>
                           <option>secondary_plan_group_number</option>
                           <option>daw_code</option>
-                          <option>Map as is</option>
+                          
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4665,7 +4257,8 @@
                     <td>claim_stus_cde</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>claim_id</option>
+                      <option>Exclude</option><option>Import as is</option>
+                          <option>claim_id</option>
                           <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
@@ -4682,18 +4275,18 @@
                           <option>patient_claim_sequence_number</option>
                           <option selected>claim_status_code</option>
                           <option>claim_rjct_rsn_code</option>
-                          <option></option>
-                          <option></option>
+                          
+                          
                           <option>days_until_next_fill_count</option>
                           <option>copay_30_amount</option>
                           <option>sob_cde</option>
                           <option>new_to_prdct_ind</option>
-                          <option></option>
+                          
                           <option>final_claim_code</option>
                           <option>primary_plan_group_number</option>
                           <option>secondary_plan_group_number</option>
                           <option>daw_code</option>
-                          <option>Map as is</option>
+                          
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4702,7 +4295,8 @@
                     <td>claim_rjct_rsn_cde</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>claim_id</option>
+                        <option>Exclude</option><option>Import as is</option>
+                          <option>claim_id</option>
                           <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
@@ -4719,18 +4313,18 @@
                           <option>patient_claim_sequence_number</option>
                           <option>claim_status_code</option>
                           <option selected>claim_rjct_rsn_code</option>
-                          <option></option>
-                          <option></option>
+                          
+                          
                           <option>days_until_next_fill_count</option>
                           <option>copay_30_amount</option>
                           <option>sob_cde</option>
                           <option>new_to_prdct_ind</option>
-                          <option></option>
+                          
                           <option>final_claim_code</option>
                           <option>primary_plan_group_number</option>
                           <option>secondary_plan_group_number</option>
                           <option>daw_code</option>
-                          <option>Map as is</option>
+                          
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4739,7 +4333,8 @@
                     <td>rvrsl_lag</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>claim_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>claim_id</option>
                           <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
@@ -4756,18 +4351,18 @@
                           <option>patient_claim_sequence_number</option>
                           <option>claim_status_code</option>
                           <option>claim_rjct_rsn_code</option>
-                          <option selected>Map as is</option>
-                          <option>Map as is</option>
+                          <option selected>Import as is</option>
+                          <option>Import as is</option>
                           <option>days_until_next_fill_count</option>
                           <option>copay_30_amount</option>
                           <option>sob_cde</option>
                           <option>new_to_prdct_ind</option>
-                          <option></option>
+                          
                           <option>final_claim_code</option>
                           <option>primary_plan_group_number</option>
                           <option>secondary_plan_group_number</option>
                           <option>daw_code</option>
-                          <option>Map as is</option>
+                          
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4776,7 +4371,8 @@
                     <td>encyd_rx_id</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>claim_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>claim_id</option>
                           <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
@@ -4793,18 +4389,18 @@
                           <option>patient_claim_sequence_number</option>
                           <option>claim_status_code</option>
                           <option>claim_rjct_rsn_code</option>
-                          <option></option>
-                          <option selected>Map as is</option>
+                          
+                          <option selected>Import as is</option>
                           <option>days_until_next_fill_count</option>
                           <option>copay_30_amount</option>
                           <option>sob_cde</option>
                           <option>new_to_prdct_ind</option>
-                          <option></option>
+                          
                           <option>final_claim_code</option>
                           <option>primary_plan_group_number</option>
                           <option>secondary_plan_group_number</option>
                           <option>daw_code</option>
-                          <option>Map as is</option>
+                          
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4813,7 +4409,8 @@
                     <td>days_until_next_fill_cnt</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>claim_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>claim_id</option>
                           <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
@@ -4830,18 +4427,18 @@
                           <option>patient_claim_sequence_number</option>
                           <option>claim_status_code</option>
                           <option>claim_rjct_rsn_code</option>
-                          <option></option>
-                          <option></option>
+                          
+                          
                           <option selected>days_until_next_fill_count</option>
                           <option>copay_30_amount</option>
                           <option>sob_cde</option>
                           <option>new_to_prdct_ind</option>
-                          <option></option>
+                          
                           <option>final_claim_code</option>
                           <option>primary_plan_group_number</option>
                           <option>secondary_plan_group_number</option>
                           <option>daw_code</option>
-                          <option>Map as is</option>
+                          
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4850,7 +4447,8 @@
                     <td>copay_30_amt</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>claim_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>claim_id</option>
                           <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
@@ -4867,18 +4465,18 @@
                           <option>patient_claim_sequence_number</option>
                           <option>claim_status_code</option>
                           <option>claim_rjct_rsn_code</option>
-                          <option></option>
-                          <option></option>
+                          
+                          
                           <option>days_until_next_fill_count</option>
                           <option selected>copay_30_amount</option>
                           <option>sob_cde</option>
                           <option>new_to_prdct_ind</option>
-                          <option></option>
+                          
                           <option>final_claim_code</option>
                           <option>primary_plan_group_number</option>
                           <option>secondary_plan_group_number</option>
                           <option>daw_code</option>
-                          <option>Map as is</option>
+                          
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4887,7 +4485,8 @@
                     <td>sob_cde</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>claim_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>claim_id</option>
                           <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
@@ -4904,18 +4503,18 @@
                           <option>patient_claim_sequence_number</option>
                           <option>claim_status_code</option>
                           <option>claim_rjct_rsn_code</option>
-                          <option></option>
-                          <option></option>
+                          
+                          
                           <option>days_until_next_fill_count</option>
                           <option>copay_30_amount</option>
                           <option selected>sob_cde</option>
                           <option>new_to_prdct_ind</option>
-                          <option></option>
+                          
                           <option>final_claim_code</option>
                           <option>primary_plan_group_number</option>
                           <option>secondary_plan_group_number</option>
                           <option>daw_code</option>
-                          <option>Map as is</option>
+                          
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4924,7 +4523,8 @@
                     <td>new_to_prdct_ind</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>claim_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>claim_id</option>
                           <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
@@ -4941,18 +4541,18 @@
                           <option>patient_claim_sequence_number</option>
                           <option>claim_status_code</option>
                           <option>claim_rjct_rsn_code</option>
-                          <option></option>
-                          <option></option>
+                          
+                          
                           <option>days_until_next_fill_count</option>
                           <option>copay_30_amount</option>
                           <option>sob_cde</option>
                           <option selected>new_to_prdct_ind</option>
-                          <option></option>
+                          
                           <option>final_claim_code</option>
                           <option>primary_plan_group_number</option>
                           <option>secondary_plan_group_number</option>
                           <option>daw_code</option>
-                          <option>Map as is</option>
+                          
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4961,7 +4561,8 @@
                     <td>cncmt_ind</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>claim_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>claim_id</option>
                           <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
@@ -4978,18 +4579,18 @@
                           <option>patient_claim_sequence_number</option>
                           <option>claim_status_code</option>
                           <option>claim_rjct_rsn_code</option>
-                          <option></option>
-                          <option></option>
+                          
+                          
                           <option>days_until_next_fill_count</option>
                           <option>copay_30_amount</option>
                           <option>sob_cde</option>
                           <option>new_to_prdct_ind</option>
-                          <option selected>Map as is</option>
+                          <option selected>Import as is</option>
                           <option>final_claim_code</option>
                           <option>primary_plan_group_number</option>
                           <option>secondary_plan_group_number</option>
                           <option>daw_code</option>
-                          <option>Map as is</option>
+                          
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -4998,7 +4599,8 @@
                     <td>final_claim_cde</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>claim_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>claim_id</option>
                           <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
@@ -5015,18 +4617,18 @@
                           <option>patient_claim_sequence_number</option>
                           <option>claim_status_code</option>
                           <option>claim_rjct_rsn_code</option>
-                          <option></option>
-                          <option></option>
+                          
+                          
                           <option>days_until_next_fill_count</option>
                           <option>copay_30_amount</option>
                           <option>sob_cde</option>
                           <option>new_to_prdct_ind</option>
-                          <option></option>
+                          
                           <option selected>final_claim_code</option>
                           <option>primary_plan_group_number</option>
                           <option>secondary_plan_group_number</option>
                           <option>daw_code</option>
-                          <option>Map as is</option>
+                          
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -5035,7 +4637,8 @@
                     <td>prmry_plan_grp_nbr</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>claim_id</option>
+                         <option>Exclude</option><option>Import as is</option>
+                          <option>claim_id</option>
                           <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
@@ -5052,18 +4655,18 @@
                           <option>patient_claim_sequence_number</option>
                           <option>claim_status_code</option>
                           <option>claim_rjct_rsn_code</option>
-                          <option></option>
-                          <option></option>
+                          
+                          
                           <option>days_until_next_fill_count</option>
                           <option>copay_30_amount</option>
                           <option>sob_cde</option>
                           <option>new_to_prdct_ind</option>
-                          <option></option>
+                          
                           <option>final_claim_code</option>
                           <option selected>primary_plan_group_number</option>
                           <option>secondary_plan_group_number</option>
                           <option>daw_code</option>
-                          <option>Map as is</option>
+                          
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -5072,7 +4675,8 @@
                     <td>scnry_plan_grp_nbr</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>claim_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>claim_id</option>
                           <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
@@ -5089,18 +4693,18 @@
                           <option>patient_claim_sequence_number</option>
                           <option>claim_status_code</option>
                           <option>claim_rjct_rsn_code</option>
-                          <option></option>
-                          <option></option>
+                          
+                          
                           <option>days_until_next_fill_count</option>
                           <option>copay_30_amount</option>
                           <option>sob_cde</option>
                           <option>new_to_prdct_ind</option>
-                          <option></option>
+                          
                           <option>final_claim_code</option>
                           <option>primary_plan_group_number</option>
                           <option selected>secondary_plan_group_number</option>
                           <option>daw_code</option>
-                          <option>Map as is</option>
+                          
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -5109,7 +4713,8 @@
                     <td>daw_cde</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>claim_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>claim_id</option>
                           <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
@@ -5126,18 +4731,18 @@
                           <option>patient_claim_sequence_number</option>
                           <option>claim_status_code</option>
                           <option>claim_rjct_rsn_code</option>
-                          <option></option>
-                          <option></option>
+                          
+                          
                           <option>days_until_next_fill_count</option>
                           <option>copay_30_amount</option>
                           <option>sob_cde</option>
                           <option>new_to_prdct_ind</option>
-                          <option></option>
+                          
                           <option>final_claim_code</option>
                           <option>primary_plan_group_number</option>
                           <option>secondary_plan_group_number</option>
                           <option selected>daw_code</option>
-                          <option>Map as is</option>
+                          <option>Import as is</option>
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -5146,7 +4751,8 @@
                     <td>athrz_refil_cnt</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>claim_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>claim_id</option>
                           <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
@@ -5163,18 +4769,18 @@
                           <option>patient_claim_sequence_number</option>
                           <option>claim_status_code</option>
                           <option>claim_rjct_rsn_code</option>
-                          <option></option>
-                          <option></option>
+                          
+                          
                           <option>days_until_next_fill_count</option>
                           <option>copay_30_amount</option>
                           <option>sob_cde</option>
                           <option>new_to_prdct_ind</option>
-                          <option></option>
+                          
                           <option>final_claim_code</option>
                           <option>primary_plan_group_number</option>
                           <option>secondary_plan_group_number</option>
                           <option>daw_code</option>
-                          <option selected>Map as is</option>
+                          
                           <option>deletion_flag</option>
           
                         </select></td>
@@ -5183,7 +4789,8 @@
                     <td>deletion_flag</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>claim_id</option>
+                        <option>Exclude</option><option>Import as is</option>
+                          <option>claim_id</option>
                           <option>patient_id</option>
                           <option>drug_id</option>
                           <option>medical_practitioner_id</option>
@@ -5200,18 +4807,18 @@
                           <option>patient_claim_sequence_number</option>
                           <option>claim_status_code</option>
                           <option>claim_rjct_rsn_code</option>
-                          <option></option>
-                          <option></option>
+                          
+                          
                           <option>days_until_next_fill_count</option>
                           <option>copay_30_amount</option>
                           <option>sob_cde</option>
                           <option>new_to_prdct_ind</option>
-                          <option></option>
+                          
                           <option>final_claim_code</option>
                           <option>primary_plan_group_number</option>
                           <option>secondary_plan_group_number</option>
                           <option>daw_code</option>
-                          <option>Map as is</option>
+                          
                           <option selected>deletion_flag</option>
           
                         </select></td>
@@ -5250,10 +4857,11 @@
                     <td>market_id_1</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option selected>market_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option selected>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map as is</option>
+                          
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -5266,7 +4874,7 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map as is</option>
+                          
                           
                         </select>
 
@@ -5276,10 +4884,11 @@
                     <td>product_id</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>market_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>market_id</option>
                           <option selected>product_id</option>
                           <option>plan_id</option>
-                          <option>Map as is</option>
+                          
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -5292,7 +4901,7 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map as is</option>
+                          
                           
                         </select>
                     </td>
@@ -5301,10 +4910,11 @@
                     <td>plan_id</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>market_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>market_id</option>
                           <option>product_id</option>
                           <option selected>plan_id</option>
-                          <option>Map as is</option>
+                          
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -5317,7 +4927,7 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map as is</option>
+                          
                           
                         </select>
                       </td>
@@ -5326,10 +4936,11 @@
                     <td>data_type</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>market_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option selected>Map as is</option>
+                          
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -5342,7 +4953,7 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map as is</option>
+                          
                           
                         </select>
                     </td>
@@ -5351,10 +4962,11 @@
                     <td>wk_ending_dt</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>market_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map as is</option>
+                          
                           <option selected>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -5367,7 +4979,7 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map as is</option>
+                          
                           
                         </select>
                         </td>
@@ -5376,10 +4988,11 @@
                     <td>mnth_ending_dt</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>market_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map as is</option>
+                          
                           <option>week_ending_date</option>
                           <option selected>month_ending_date</option>
                           <option>sob_group</option>
@@ -5392,7 +5005,7 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map as is</option>
+                          
                           
                         </select>
                         </td>
@@ -5401,10 +5014,11 @@
                     <td>sob_group</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>market_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map as is</option>
+                          
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option selected>sob_group</option>
@@ -5417,7 +5031,7 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map as is</option>
+                          
                           
                         </select>
                         </td>
@@ -5426,10 +5040,11 @@
                     <td>new_rx_cnt</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>market_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map as is</option>
+                          
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -5442,7 +5057,7 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map as is</option>
+                          
                           
                         </select>
                         </td>
@@ -5451,11 +5066,11 @@
                     <td>refill_rx_cnt</td>
                     <td><select class="form-control source_name">
 
-                       <option>Ignore Mapping</option>                          
+                       <option>Exclude</option><option>Import as is</option>
                           <option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map as is</option>
+                          
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -5468,7 +5083,7 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map as is</option>
+                          
                           
                         </select>
                         </td>
@@ -5477,10 +5092,11 @@
                     <td>tot_rx_cnt</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>market_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map as is</option>
+                          
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -5493,7 +5109,7 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map as is</option>
+                          
                           
                         </select>
                         </td>
@@ -5502,10 +5118,11 @@
                     <td>new_rx_qty</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>market_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map as is</option>
+                          
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -5518,7 +5135,7 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map as is</option>
+                          
                           
                         </select>
                         </td>
@@ -5527,10 +5144,11 @@
                     <td>refill_rx_qty</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>market_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map as is</option>
+                          
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -5543,7 +5161,7 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map as is</option>
+                          
                           
                         </select>
                         </td>
@@ -5552,10 +5170,11 @@
                     <td>tot_rx_qty</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>market_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map as is</option>
+                          
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -5568,7 +5187,7 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map as is</option>
+                          
                           
                         </select>
                         </td>
@@ -5578,10 +5197,11 @@
                     <td>new_days_supply</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>market_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map as is</option>
+                          
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -5594,7 +5214,7 @@
                           <option selected>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map as is</option>
+                          
                           
                         </select>
                         </td>
@@ -5604,10 +5224,11 @@
                     <td>refill_days_supply</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>market_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map as is</option>
+                          
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -5620,7 +5241,7 @@
                           <option>new_days_supply</option>
                           <option selected>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map as is</option>
+                          
                           
                         </select>
                         </td>
@@ -5630,10 +5251,11 @@
                     <td>tot_days_supply</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>market_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map as is</option>
+                          
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -5646,7 +5268,7 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option selected>total_days_supply</option>
-                          <option>Map as is</option>
+                          
                           
                         </select>
                         </td>
@@ -5655,10 +5277,11 @@
                     <td>daw_cde</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>market_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map as is</option>
+                          
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -5671,7 +5294,7 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option selected>Map as is</option>
+                          
                           
                         </select>
                         </td>
@@ -5711,13 +5334,14 @@
                     <td>market_id_1</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option selected>market_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option selected>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map as is</option>
+                          
                           <option>relation_id</option>
                           <option>writer_type</option>
-                          <option>Map as is</option>
+                          
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -5730,7 +5354,7 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map as is</option>
+                          
                           
                         </select>
 
@@ -5740,13 +5364,14 @@
                     <td>product_id</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>market_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>market_id</option>
                           <option selected>product_id</option>
                           <option>plan_id</option>
-                          <option>Map as is</option>
+                          
                           <option>relation_id</option>
                           <option>writer_type</option>
-                          <option>Map as is</option>
+                          
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -5759,7 +5384,7 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map as is</option>
+                          
                           
                         </select>
                     </td>
@@ -5768,13 +5393,14 @@
                     <td>plan_id</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>market_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>market_id</option>
                           <option>product_id</option>
                           <option selected>plan_id</option>
-                          <option>Map as is</option>
+                          
                           <option>relation_id</option>
                           <option>writer_type</option>
-                          <option>Map as is</option>
+                          
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -5787,7 +5413,7 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map as is</option>
+                          
                           
                         </select>
                       </td>
@@ -5796,13 +5422,14 @@
                     <td>data_type</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>market_id</option>
+                      <option>Exclude</option><option>Import as is</option>
+                          <option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option selected>Map as is</option>
+                          
                           <option>relation_id</option>
                           <option>writer_type</option>
-                          <option>Map as is</option>
+                          
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -5815,7 +5442,7 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map as is</option>
+                          
                           
                         </select>
                     </td>
@@ -5824,13 +5451,14 @@
                     <td>rel_id</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>market_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map as is</option>
+                          
                           <option selected>relation_id</option>
                           <option>writer_type</option>
-                          <option>Map as is</option>
+                          
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -5843,7 +5471,7 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map as is</option>
+                          
                           
                         </select>
                         </td>
@@ -5852,13 +5480,14 @@
                     <td>writer_type</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>market_id</option>
+                                                 <option>Exclude</option><option>Import as is</option>
+                          <option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map as is</option>
+                          
                           <option>relation_id</option>
                           <option selected>writer_type</option>
-                          <option>Map as is</option>
+                          
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -5871,7 +5500,7 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map as is</option>
+                          
                           
                         </select>
                         </td>
@@ -5880,13 +5509,14 @@
                     <td>payment_type_indicator</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>market_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map as is</option>
+                          
                           <option>relation_id</option>
                           <option>writer_type</option>
-                          <option selected>Map as is</option>
+                          
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -5899,7 +5529,7 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map as is</option>
+                          
                           
                         </select>
                         </td>
@@ -5908,13 +5538,14 @@
                     <td>wk_ending_dt</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>market_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map as is</option>
+                          
                           <option>relation_id</option>
                           <option>writer_type</option>
-                          <option>Map as is</option>
+                          
                           <option selected>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -5927,7 +5558,7 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map as is</option>
+                          
                           
                         </select>
                         </td>
@@ -5936,13 +5567,14 @@
                     <td>mnth_ending_dt</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>market_id</option>
+                    <option>Exclude</option><option>Import as is</option>
+                          <option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map as is</option>
+                          
                           <option>relation_id</option>
                           <option>writer_type</option>
-                          <option>Map as is</option>
+                          
                           <option>week_ending_date</option>
                           <option selected>month_ending_date</option>
                           <option>sob_group</option>
@@ -5955,7 +5587,7 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map as is</option>
+                          
                           
                         </select>
                         </td>
@@ -5964,13 +5596,14 @@
                     <td>sob_group</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>market_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map as is</option>
+                          
                           <option>relation_id</option>
                           <option>writer_type</option>
-                          <option>Map as is</option>
+                          
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option selected>sob_group</option>
@@ -5983,7 +5616,7 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map as is</option>
+                          
                           
                         </select>
                         </td>
@@ -5992,13 +5625,14 @@
                     <td>new_rx_cnt</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>market_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map as is</option>
+                          
                           <option>relation_id</option>
                           <option>writer_type</option>
-                          <option>Map as is</option>
+                          
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -6011,7 +5645,7 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map as is</option>
+                          
                           
                         </select>
                         </td>
@@ -6020,13 +5654,14 @@
                     <td>refill_rx_cnt</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>market_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map as is</option>
+                          
                           <option>relation_id</option>
                           <option>writer_type</option>
-                          <option>Map as is</option>
+                          
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -6039,7 +5674,7 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map as is</option>
+                         
                           
                         </select>
                         </td>
@@ -6048,13 +5683,14 @@
                     <td>tot_rx_cnt</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>market_id</option>
+                         <option>Exclude</option><option>Import as is</option>
+                          <option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map as is</option>
+                          
                           <option>relation_id</option>
                           <option>writer_type</option>
-                          <option>Map as is</option>
+                          
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -6067,7 +5703,7 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map as is</option>
+                          
                           
                         </select>
                         </td>
@@ -6077,13 +5713,14 @@
                     <td>new_rx_qty</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>market_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map as is</option>
+                          
                           <option>relation_id</option>
                           <option>writer_type</option>
-                          <option>Map as is</option>
+                          
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -6096,7 +5733,7 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map as is</option>
+                          
                           
                         </select>
                         </td>
@@ -6106,13 +5743,14 @@
                     <td>refill_rx_qty</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>market_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map as is</option>
+                          
                           <option>relation_id</option>
                           <option>writer_type</option>
-                          <option>Map as is</option>
+                          
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -6125,7 +5763,7 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map as is</option>
+                          
                           
                         </select>
                         </td>
@@ -6135,13 +5773,14 @@
                     <td>tot_rx_qty</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>market_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map as is</option>
+                          
                           <option>relation_id</option>
                           <option>writer_type</option>
-                          <option>Map as is</option>
+                          
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -6154,7 +5793,7 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map as is</option>
+                          
                           
                         </select>
                         </td>
@@ -6163,13 +5802,14 @@
                     <td>new_days_supply</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>market_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map as is</option>
+                          
                           <option>relation_id</option>
                           <option>writer_type</option>
-                          <option>Map as is</option>
+                          
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -6182,7 +5822,7 @@
                           <option selected>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map as is</option>
+                          
                           
                         </select>
                         </td>
@@ -6191,13 +5831,14 @@
                     <td>refill_days_supply</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>market_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map as is</option>
+                          
                           <option>relation_id</option>
                           <option>writer_type</option>
-                          <option>Map as is</option>
+                          
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -6210,7 +5851,7 @@
                           <option>new_days_supply</option>
                           <option selected>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option>Map as is</option>
+                          
                           
                         </select>
                         </td>
@@ -6219,13 +5860,14 @@
                     <td>tot_days_supply</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>market_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map as is</option>
+                          
                           <option>relation_id</option>
                           <option>writer_type</option>
-                          <option>Map as is</option>
+                          
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -6238,7 +5880,7 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option selected>total_days_supply</option>
-                          <option>Map as is</option>
+                          
                           
                         </select>
                         </td>
@@ -6247,13 +5889,14 @@
                     <td>daw_cde</td>
                     <td><select class="form-control source_name">
                           
-                                                 <option>Ignore Mapping</option><option>market_id</option>
+                          <option>Exclude</option><option>Import as is</option>
+                          <option>market_id</option>
                           <option>product_id</option>
                           <option>plan_id</option>
-                          <option>Map as is</option>
+                          
                           <option>relation_id</option>
                           <option>writer_type</option>
-                          <option>Map as is</option>
+                          
                           <option>week_ending_date</option>
                           <option>month_ending_date</option>
                           <option>sob_group</option>
@@ -6266,7 +5909,7 @@
                           <option>new_days_supply</option>
                           <option>refill_days_supply</option>
                           <option>total_days_supply</option>
-                          <option selected>Map as is</option>
+                          
                           
                         </select>
                         </td>

@@ -62,7 +62,7 @@
                                     <div class="data">
                                       
                                     </div>                                
-                                    <button class="btn btn-success pull-right">Send for Workflow</button>
+                                    <button class="btn btn-success pull-right" data-toggle="modal" data-target="#send_to_workflow">Send for Workflow</button>
                                 </div>
                               </div>
                           </div>
@@ -108,7 +108,7 @@
                 </div>
 		      </div>
 	    </div>
-      <div id="myModal" class="modal fade" role="dialog">
+ <div id="myModal" class="modal fade" role="dialog">
   <div class="modal-dialog modal-lg" style="width: 1230px;">
 
     <!-- Modal content-->
@@ -119,6 +119,25 @@
       </div>
       <div class="modal-body">
         <iframe src="http://176.9.181.38:8080/admin/airflow/graph?dag_id=Diabetes_PreLaunch_Tracker" style="width: 100%; height: 500px;"></iframe>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div id="send_to_workflow" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg" style="width: 170px;">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Work Flow</h4>
+      </div>
+      <div class="modal-body">
+        <label>Sent to Workflow</label>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
