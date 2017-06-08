@@ -85,11 +85,7 @@
                                         <label><input type="checkbox" class="ingest_chkbox"></label>
                                       </div>
                                   </td>
-                                  <td class="val">
-                                      
-                                        Symphony_PrescSrc
-                                      
-                                  </td>
+                                  <td class="val">Symphony_PrescSrc</td>
                                   
                                   <td>
                                       <select class="form-control source_name">
@@ -113,11 +109,7 @@
                                         <label><input type="checkbox" class="ingest_chkbox"></label>
                                       </div>
                                   </td>
-                                  <td class="val">
-                                      
-                                        MMIT
-                                      
-                                  </td>
+                                  <td class="val">MMIT</td>
                                   
                                   <td>
                                       <select class="form-control source_name">
@@ -140,11 +132,7 @@
                                         <label><input type="checkbox" class="ingest_chkbox"></label>
                                       </div>
                                   </td>
-                                  <td class="val">
-                                      
-                                        MMIT to CLAIMS
-                                      
-                                  </td>
+                                  <td class="val">MMIT to CLAIMS</td>
                                   
                                   <td>
                                       <select class="form-control source_name">
@@ -167,11 +155,7 @@
                                         <label><input type="checkbox" class="ingest_chkbox"></label>
                                       </div>
                                   </td>
-                                  <td class="val">
-                                      
-                                        Symphony Product Dimension
-                                      
-                                  </td>
+                                  <td class="val">Symphony Product Dimension</td>
                                   
                                   <td>
                                       <select class="form-control source_name">
@@ -193,11 +177,7 @@
                                         <label><input type="checkbox" class="ingest_chkbox"></label>
                                       </div>
                                   </td>
-                                  <td class="val">
-                                      
-                                        IMS Product Dimension
-                                      
-                                  </td>
+                                  <td class="val">IMS Product Dimension</td>
                                   
                                   <td>
                                       <select class="form-control source_name">
@@ -219,11 +199,7 @@
                                         <label><input type="checkbox" class="ingest_chkbox"></label>
                                       </div>
                                   </td>
-                                  <td class="val">
-                                      
-                                        Symphony Plan Dimension 
-                                      
-                                  </td>
+                                  <td class="val">Symphony Plan Dimension</td>
                                   
                                   <td>
                                       <select class="form-control source_name">
@@ -246,11 +222,7 @@
                                         <label><input type="checkbox" class="ingest_chkbox"></label>
                                       </div>
                                   </td>
-                                  <td class="val">
-                                      
-                                        IMS Plan Dimension 
-                                      
-                                  </td>
+                                  <td class="val">IMS Plan Dimension</td>
                                   
                                   <td>
                                       <select class="form-control source_name">
@@ -273,11 +245,7 @@
                                         <label><input type="checkbox" class="ingest_chkbox"></label>
                                       </div>
                                   </td>
-                                  <td class="val">
-                                      
-                                        Symphony Rejection Reason Dimension
-                                      
-                                  </td>
+                                  <td class="val">Symphony Rejection Reason Dimension</td>
                                   
                                   <td>
                                       <select class="form-control source_name">
@@ -300,11 +268,7 @@
                                         <label><input type="checkbox" class="ingest_chkbox"></label>
                                       </div>
                                   </td>
-                                  <td class="val">
-                                      
-                                        IMS Rejection Reason Dimension
-                                      
-                                  </td>
+                                  <td class="val">IMS Rejection Reason Dimension</td>
                                   
                                   <td>
                                       <select class="form-control source_name">
@@ -328,11 +292,7 @@
                                         <label><input type="checkbox" class="ingest_chkbox"></label>
                                       </div>
                                   </td>
-                                  <td class="val">
-                                      
-                                        Symphony Prescriber Dimension
-                                      
-                                  </td>
+                                  <td class="val">Symphony Prescriber Dimension</td>
                                   
                                   <td>
                                       <select class="form-control source_name">
@@ -355,11 +315,7 @@
                                         <label><input type="checkbox" class="ingest_chkbox"></label>
                                       </div>
                                   </td>
-                                  <td class="val">
-                                      
-                                        IMS Prescriber Dimension
-                                      
-                                  </td>
+                                  <td class="val">IMS Prescriber Dimension</td>
                                   
                                   <td>
                                       <select class="form-control source_name">
@@ -383,11 +339,7 @@
                                         <label><input type="checkbox" class="ingest_chkbox"></label>
                                       </div>
                                   </td>
-                                  <td class="val">
-                                      
-                                        Prescriber Allignment 
-                                      
-                                  </td>
+                                  <td class="val">Prescriber Allignment</td>
                                   
                                   <td>
                                       <select class="form-control source_name">
@@ -410,11 +362,7 @@
                                         <label><input type="checkbox" class="ingest_chkbox"></label>
                                       </div>
                                   </td>
-                                  <td class="val">
-                                      
-                                        Prescriber Allignment 
-                                      
-                                  </td>
+                                  <td class="val">Prescriber Allignment</td>
                                   
                                   <td>
                                       <select class="form-control source_name">
@@ -437,11 +385,7 @@
                                         <label><input type="checkbox" class="ingest_chkbox"></label>
                                       </div>
                                   </td>
-                                  <td class="val">
-                                      
-                                        IMS Patient Dimension
-                                      
-                                  </td>
+                                  <td class="val">IMS Patient Dimension</td>
                                   
                                   <td>
                                       <select class="form-control source_name">
@@ -464,11 +408,7 @@
                                         <label><input type="checkbox" class="ingest_chkbox"></label>
                                       </div>
                                   </td>
-                                  <td class="val">
-                                      
-                                        Symphony Patient Dimension
-                                      
-                                  </td>
+                                  <td class="val">Symphony Patient Dimension</td>
                                   
                                   <td>
                                       <select class="form-control source_name">
@@ -491,11 +431,7 @@
                                         <label><input type="checkbox" class="ingest_chkbox"></label>
                                       </div>
                                   </td>
-                                  <td class="val">
-                                      
-                                        Symphony Physican Rx Data
-                                      
-                                  </td>
+                                  <td class="val">Symphony Physican Rx Data</td>
                                   
                                   <td>
                                       <select class="form-control source_name">
@@ -518,11 +454,7 @@
                                         <label><input type="checkbox" class="ingest_chkbox"></label>
                                       </div>
                                   </td>
-                                  <td class="val">
-                                      
-                                        IMS Physican Rx Data
-                                      
-                                  </td>
+                                  <td class="val">IMS Physican Rx Data</td>
                                   
                                   <td>
                                       <select class="form-control source_name">
@@ -545,11 +477,7 @@
                                         <label><input type="checkbox" class="ingest_chkbox"></label>
                                       </div>
                                   </td>
-                                  <td class="val">
-                                      
-                                        Territory Alignment
-                                      
-                                  </td>
+                                  <td class="val">Territory Alignment</td>
                                   
                                   <td>
                                       <select class="form-control source_name">
@@ -572,11 +500,7 @@
                                         <label><input type="checkbox" class="ingest_chkbox"></label>
                                       </div>
                                   </td>
-                                  <td class="val">
-                                      
-                                        Symphony Aggregated Rx Data
-                                      
-                                  </td>
+                                  <td class="val">Symphony Aggregated Rx Data</td>
                                   
                                   <td>
                                       <select class="form-control source_name">
@@ -599,11 +523,7 @@
                                         <label><input type="checkbox" class="ingest_chkbox"></label>
                                       </div>
                                   </td>
-                                  <td class="val">
-                                      
-                                        IMS Aggregated Rx Data
-                                      
-                                  </td>
+                                  <td class="val">IMS Aggregated Rx Data</td>
                                   
                                   <td>
                                       <select class="form-control source_name">
@@ -645,10 +565,10 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Modal Header</h4>
+          <h4 class="modal-title">Selected Sources</h4>
         </div>
         <div class="modal-body" style="padding: 10px 50px">
-
+        <div id= 'text_add'></div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -6221,10 +6141,15 @@
        }
     });
     $('#map_data').click(function(){
+        var html ='<ul class="list-group"><span class="label label-info">Selected</span>';
         $('.each_row').find('input[type="checkbox"]:checked').each(function(){
             console.log($(this).closest('.each_row').find('.val').text());
+            html += "<li class='list-group-item'>"+$(this).closest('.each_row').find('.val').text()+"</li>"
+            //console.log($(this).closest('.source_name').find('option:selected').text());
 
         })
+        html += '</ul>'
+        $('#text_add').html(html);
     });
 </script>
 @stop
