@@ -545,7 +545,7 @@
                               </tbody>
                             </table>
                             <form action="{{url()}}/kpi_map_new">
-                            <button type="submit" class= 'btn btn-primary pull-right mapping_selected_btn' disabled>View KPI Page</button>
+                            <button type="submit" class= 'btn btn-primary pull-right mapping_selected_btn' disabled>KPI Mapping</button>
                             </form>
 
                             <button class= 'btn btn-info pull-left' id="map_data" data-toggle="modal" data-target="#mpsldt" style="margin-left: 30px">Map Selected Data</button>
