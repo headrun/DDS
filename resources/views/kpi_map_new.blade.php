@@ -141,10 +141,12 @@
           <div class="col-md-12">
             <label>Select View:</label>
             <select class="form-control pull-right new_kpi_view"  style="margin-top: -5px; width: 460px">
+                            
                             <option></option>
-                            @foreach($view as $val)
-                            <option value="{{$val->view}}">{{$val->view}}</option>
-                            @endforeach
+                            <option>Market Overview</option>
+                            <option>Market Access</option>
+                            <option>SOB</option>
+                            <option>Marketing</option>
                           </select>
           </div>
           
