@@ -17,7 +17,7 @@
                               <thead><span class='label label-primary' >Library</span>
                               <tr>
                                   <th>View</th>
-                                  <th>Funcional Area</th>
+                                  
                                   <th>KPI</th>
                                   <th>KPI Description</th>
                                   <th>Calculation</th>
@@ -30,7 +30,7 @@
                                 
                                 	<tr>
                                 	<td>{{$val->View}}</td>
-                                	<td>{{$val->Functional_Area}}</td>
+                                	
                                 	<td>{{$val->KPI}}</td>
                                 	<td>{{$val->kpi_desc}}</td>
                                 	<td>{{$val->Calculation}}</td>
