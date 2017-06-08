@@ -21,7 +21,8 @@
     <div class=" col-lg-5 col-md-5 col-sm-8 col-xs-8 login-box center-block panel panel-default">
     <center><img src="{{url()}}/DDS Logo-02.png" class="primarylogo img-responsive" style="margin-top: -40px ;
     margin-bottom:  -40px ; padding: 40px"></center>
-    {!! Form::open(array('url' => '/vault/adminlogin', 'id'=>"adminLoginForm", "class"=>"", 'method' => 'post')) !!}
+    <!--{!! Form::open(array('url' => '/vault/adminlogin', 'id'=>"adminLoginForm", "class"=>"", 'method' => 'post')) !!}-->
+    <form action="{{url()}}/login1" method="post">
       {!! csrf_field() !!}
       <label class="login-label">Login to Your Account</label>
       <input type="email" class="form-control email" placeholder="Email" name="email" required />
@@ -30,9 +31,9 @@
       <br>
       <a class="pull-right forgot-pass" href="#">Forgot password ?</a>
       <br>
-      <button  type="button" class="btn btn-default form-control login-btn" 
-        onclick="window.location.assign('{{url()}}/dashboard')"> Login</button>
-    {!! Form::close() !!}
+      <button  type="submit" class="btn btn-default form-control login-btn"> Login</button>
+    </form>
+    <!--{!! Form::close() !!}-->
       <center><small class="copyright">&copy; <?php echo date("Y"); ?> Dcube. All Rights Reserved</small></center>
     </div>
   </div>

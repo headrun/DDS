@@ -35,9 +35,9 @@
                           </select>
                         </div>
                         <div class = "col-md-5">
-                          <form action="{{url()}}/kpilib">
-                          <button class ='btn btn-warning  pull-right' >View KPI Library</button>
-                          </form>
+                          
+                          <a href="{{url()}}/kpilib" target="_blank" class ='btn btn-warning  pull-right' >View KPI Library</a>
+                          
                         </div>
                         <div class = "col-md-2">
                           <button class ='btn btn-info  pull-right' data-toggle="modal" data-target="#myModal" >View Workflow</button>
@@ -192,7 +192,7 @@ $(document).on('click', '.new_kpi_add_btn', function()
                                 '<div class="col-md-3">'+kpi+'</div>'+
                                 '<div class="col-md-3">'+dimen+'</div>'+
                                 '<div class="col-md-2">'+
-                                    '<center><img src="{{url()}}/que1.png" class="img-responsive"></center>'+
+                                    '<label class="label label-danger">Queued</label>'+
                                 '</div>'+
                             '</div>';    
     $('#addkpi').find('.data').append(html_data);

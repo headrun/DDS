@@ -68,7 +68,7 @@
           <span>
             <i class="fa fa-area-chart fa-lg" aria-hidden="true"></i>
           </span>
-          <span style="margin-left: 35px">Dcube Structure</span>
+          <span style="margin-left: 35px">D Cube Structure</span>
         </a>
         <a class="dcube_struct" href="#">
           
@@ -80,7 +80,7 @@
       </div>
       <div class="aside-overlay"></div>
       <ul class="pull-right nav navbar-nav">
-        <li class="btn label" style="margin-top: 20px; margin-left: 5px">Vasu<br> & <br>Sidd</li>
+        <li class="btn label" style="margin-top: 20px; margin-left: 5px"></li>
       </ul>
       <div class="pull-right secondary-logo ng-scope">
         <img src="{{url()}}/assets/vendor/img/dcube_new.png" class="pull-right">

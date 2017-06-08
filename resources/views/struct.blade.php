@@ -46,10 +46,10 @@
                                 <tr class="each_row" style="display: none;" id='Symphony_claims'>
                                   <td>
                                       <div class="checkbox">
-                                        <label><input type="checkbox" class="ingest_chkbox"></label>
+                                        <label><input type="checkbox" class="ingest_chkbox" value="Symphony_Claims"></label>
                                       </div>
                                   </td>
-                                  <td>Symphony_Claims</td>
+                                  <td class="val">Symphony_Claims</td>
                                   <td>
                                       <select class="form-control source_name">
                                         <option>DCube_Claims
@@ -64,10 +64,10 @@
                                 <tr class="each_row" style="display: none;" id='IMS_claims'>
                                   <td>
                                       <div class="checkbox">
-                                        <label><input type="checkbox" class="ingest_chkbox"></label>
+                                        <label><input type="checkbox" class="ingest_chkbox" value="IMS_Claims"></label>
                                       </div>
                                   </td>
-                                  <td>IMS_Claims</td>
+                                  <td class="val">IMS_Claims</td>
                                   <td>
                                       <select class="form-control source_name">
                                         <option>DCube_Claims
@@ -85,7 +85,7 @@
                                         <label><input type="checkbox" class="ingest_chkbox"></label>
                                       </div>
                                   </td>
-                                  <td>
+                                  <td class="val">
                                       
                                         Symphony_PrescSrc
                                       
@@ -113,7 +113,7 @@
                                         <label><input type="checkbox" class="ingest_chkbox"></label>
                                       </div>
                                   </td>
-                                  <td>
+                                  <td class="val">
                                       
                                         MMIT
                                       
@@ -140,7 +140,7 @@
                                         <label><input type="checkbox" class="ingest_chkbox"></label>
                                       </div>
                                   </td>
-                                  <td>
+                                  <td class="val">
                                       
                                         MMIT to CLAIMS
                                       
@@ -167,7 +167,7 @@
                                         <label><input type="checkbox" class="ingest_chkbox"></label>
                                       </div>
                                   </td>
-                                  <td>
+                                  <td class="val">
                                       
                                         Symphony Product Dimension
                                       
@@ -193,7 +193,7 @@
                                         <label><input type="checkbox" class="ingest_chkbox"></label>
                                       </div>
                                   </td>
-                                  <td>
+                                  <td class="val">
                                       
                                         IMS Product Dimension
                                       
@@ -219,7 +219,7 @@
                                         <label><input type="checkbox" class="ingest_chkbox"></label>
                                       </div>
                                   </td>
-                                  <td>
+                                  <td class="val">
                                       
                                         Symphony Plan Dimension 
                                       
@@ -246,7 +246,7 @@
                                         <label><input type="checkbox" class="ingest_chkbox"></label>
                                       </div>
                                   </td>
-                                  <td>
+                                  <td class="val">
                                       
                                         IMS Plan Dimension 
                                       
@@ -273,7 +273,7 @@
                                         <label><input type="checkbox" class="ingest_chkbox"></label>
                                       </div>
                                   </td>
-                                  <td>
+                                  <td class="val">
                                       
                                         Symphony Rejection Reason Dimension
                                       
@@ -300,7 +300,7 @@
                                         <label><input type="checkbox" class="ingest_chkbox"></label>
                                       </div>
                                   </td>
-                                  <td>
+                                  <td class="val">
                                       
                                         IMS Rejection Reason Dimension
                                       
@@ -328,7 +328,7 @@
                                         <label><input type="checkbox" class="ingest_chkbox"></label>
                                       </div>
                                   </td>
-                                  <td>
+                                  <td class="val">
                                       
                                         Symphony Prescriber Dimension
                                       
@@ -355,7 +355,7 @@
                                         <label><input type="checkbox" class="ingest_chkbox"></label>
                                       </div>
                                   </td>
-                                  <td>
+                                  <td class="val">
                                       
                                         IMS Prescriber Dimension
                                       
@@ -383,7 +383,7 @@
                                         <label><input type="checkbox" class="ingest_chkbox"></label>
                                       </div>
                                   </td>
-                                  <td>
+                                  <td class="val">
                                       
                                         Prescriber Allignment 
                                       
@@ -410,7 +410,7 @@
                                         <label><input type="checkbox" class="ingest_chkbox"></label>
                                       </div>
                                   </td>
-                                  <td>
+                                  <td class="val">
                                       
                                         Prescriber Allignment 
                                       
@@ -437,7 +437,7 @@
                                         <label><input type="checkbox" class="ingest_chkbox"></label>
                                       </div>
                                   </td>
-                                  <td>
+                                  <td class="val">
                                       
                                         IMS Patient Dimension
                                       
@@ -464,7 +464,7 @@
                                         <label><input type="checkbox" class="ingest_chkbox"></label>
                                       </div>
                                   </td>
-                                  <td>
+                                  <td class="val">
                                       
                                         Symphony Patient Dimension
                                       
@@ -491,7 +491,7 @@
                                         <label><input type="checkbox" class="ingest_chkbox"></label>
                                       </div>
                                   </td>
-                                  <td>
+                                  <td class="val">
                                       
                                         Symphony Physican Rx Data
                                       
@@ -518,7 +518,7 @@
                                         <label><input type="checkbox" class="ingest_chkbox"></label>
                                       </div>
                                   </td>
-                                  <td>
+                                  <td class="val">
                                       
                                         IMS Physican Rx Data
                                       
@@ -545,7 +545,7 @@
                                         <label><input type="checkbox" class="ingest_chkbox"></label>
                                       </div>
                                   </td>
-                                  <td>
+                                  <td class="val">
                                       
                                         Territory Alignment
                                       
@@ -572,7 +572,7 @@
                                         <label><input type="checkbox" class="ingest_chkbox"></label>
                                       </div>
                                   </td>
-                                  <td>
+                                  <td class="val">
                                       
                                         Symphony Aggregated Rx Data
                                       
@@ -599,7 +599,7 @@
                                         <label><input type="checkbox" class="ingest_chkbox"></label>
                                       </div>
                                   </td>
-                                  <td>
+                                  <td class="val">
                                       
                                         IMS Aggregated Rx Data
                                       
@@ -625,9 +625,10 @@
                               </tbody>
                             </table>
                             <form action="{{url()}}/kpi_map_new">
-                            <button type="submit" class= 'btn btn-primary pull-right mapping_selected_btn' disabled> Map Selected Data</button>
+                            <button type="submit" class= 'btn btn-primary pull-right mapping_selected_btn' disabled>View KPI Page</button>
                             </form>
-                            <button type="submit" class= 'btn btn-info pull-left kpi_library' >View KPI Library</button>
+
+                            <button class= 'btn btn-info pull-left' id="map_data" data-toggle="modal" data-target="#mpsldt" style="margin-left: 30px">Map Selected Data</button>
                           </div>
                           
                       </div>
@@ -637,6 +638,24 @@
       </div>
   </div>
   
+  <div id="mpsldt" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body" style="padding: 10px 50px">
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 <!-- Modal -->
   <div id="prodim" class="modal fade" role="dialog">
     <div class="modal-dialog">
@@ -6201,6 +6220,11 @@
           $('.mapping_selected_btn').attr('disabled', true);
        }
     });
+    $('#map_data').click(function(){
+        $('.each_row').find('input[type="checkbox"]:checked').each(function(){
+            console.log($(this).closest('.each_row').find('.val').text());
 
+        })
+    });
 </script>
 @stop

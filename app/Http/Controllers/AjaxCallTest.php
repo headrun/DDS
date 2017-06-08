@@ -37,6 +37,7 @@ class AjaxCallTest extends Controller
  	private function check_array($data)
  	{
     $brand = array('Market Overview','Market Access','Source of Business','Physcian Segmentation','Performance Index','Sales Force Effectiveness');
+    $pre = array('Market Overview','Market Access','Source of Business','Physcian Segmentation','Performance Index');
     $rew = array('Unmet Need Identifier','Cohort Generator','Cohort Analyzer','Patient Journey Tracker');
     $digital_ana = array('Campaign Tracking','Campaign Effectiveness Measurement');
     $social_media =array('Sentiment Analysis','Social Influencer Mapping & Tracking');
@@ -46,6 +47,9 @@ class AjaxCallTest extends Controller
  			case 'Brand Launch':
  				return $this->html_change($brand,$data);
  				break;
+      case 'Pre Launch':
+        return $this->html_change($pre,$data);
+        break;
  			case 'RWE':
  				return $this->html_change($rew,$data);
  				break;
@@ -167,6 +171,22 @@ class AjaxCallTest extends Controller
     
     $data1 = array('view');
     return view('KpiLib', compact($data1));    
+    
+  }
+  public function login()
+  {
+    $inputs =Input::all();
+    //return $inputs;
+    $view = DB::table('users')->where('email' , $inputs['email'])
+                              ->where('password',$inputs['password'])
+                              ->get();
+    //$view = DB::table('mapping_kpi')->select('')->get();
+    if ($view)
+      return redirect('/dashboard');
+    else
+      return view('Login.Login');
+    
+    
     
   }
 

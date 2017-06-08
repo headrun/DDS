@@ -13,6 +13,8 @@
 
 Route::get('/dashboard', 'AjaxCallTest@dash');
 
+Route::any('/login1', 'AjaxCallTest@login');
+
 
 Route::get('/login',function(){
 	return view('Login.Login');
