@@ -36,8 +36,8 @@ class AjaxCallTest extends Controller
  	}
  	private function check_array($data)
  	{
-    $brand = array('Market Overview','Market Access','Marketing','Source of Business','Sales Force Effectiveness');
-    $pre = array('Market Overview','Market Access','Marketing','Source of Business');
+    $brand = array('Market Overview','Market Access','Source of Business','Sales Force Effectiveness','Marketing');
+    $pre = array('Market Overview','Market Access','Source of Business','Marketing');
     $rew = array('Unmet Need Identifier','Cohort Generator','Cohort Analyzer','Patient Journey Tracker');
     $digital_ana = array('Campaign Tracking','Campaign Effectiveness Measurement');
     $social_media =array('Sentiment Analysis','Social Influencer Mapping & Tracking');
@@ -144,7 +144,7 @@ class AjaxCallTest extends Controller
   {
     $inputs =Input::all();
     //return $inputs;
-    
+
     $view = DB::table('mapping_kpi')->where('view' , $inputs['id'])->get();
     //$view = DB::table('mapping_kpi')->select('')->get();
     
