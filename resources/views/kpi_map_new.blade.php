@@ -25,9 +25,11 @@
                   <div class="panel panel-default" style="border-bottom: 4px solid #8bc34a;     padding: 20px;">
                       <p><strong>Project Type: </strong> {{Session::get('project_name')}}</p>
                       <div class = "row">
-                        <div class= "col-md-5">
+                        <div class= "col-md-2">
                           <label style="padding: 5px">Select View:</label>
-                          <select class="form-control pull-right" id='proj_name' style="margin-top: -5px; width: 220px">
+                        </div>
+                        <div class="col-md-3">
+                          <select class="form-control " id='proj_name' style="margin-top: -5px; width: 220px; margin-left: -70px">
                             <option></option>
                             <option>Market Overview</option>
                             <option>Market Access</option>
