@@ -29,9 +29,10 @@
                           <label style="padding: 5px">Select View:</label>
                           <select class="form-control pull-right" id='proj_name' style="margin-top: -5px; width: 220px">
                             <option></option>
-                            @foreach($view as $val)
-                            <option value="{{$val->view}}">{{$val->view}}</option>
-                            @endforeach
+                            <option>Market Overview</option>
+                            <option>Market Access</option>
+                            <option>SOB</option>
+                            <option>Marketing</option>
                           </select>
                         </div>
                         <div class = "col-md-5">
