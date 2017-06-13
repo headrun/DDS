@@ -11,11 +11,13 @@
               	<h3 class="widget-title">KPI LIBRARY</h3>
               	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                   <div class="panel panel-default" style="border-bottom: 4px solid #8bc34a;     padding: 20px;">
-                      <div class="row">
-                          <div class="widget col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                            
-                              <div class="col-md-3">
-                                <select class="form-control " id='proj_name' style="margin-top: -5px; width: 220px; ">
+                      <div class = "row">
+                        <div class= "col-md-2">
+                          <label style="padding: 5px">Select View:</label>
+                        </div>
+                        <div class="col-md-3">
+                          <select class="form-control " id='proj_name' style="margin-top: -5px; width: 220px; margin-left: -70px">
+                                <option></option>
                                 @foreach($view as $key=>$val)
                                   @if($val->View=="Source of Business")
                                     <option>SoB</option>
@@ -29,7 +31,7 @@
                       </div>
                       <div class ='row'>
                         <div class = "col-md-2">
-                          <label class=''>Functionality Name</label>
+                          <label class=''>View Name</label>
                         </div>
                         <div class = "col-md-2">
                           <label class =''>KPI</label>
@@ -45,7 +47,10 @@
                         </div>
                       </div>
                       <div id="adding">
-                        
+                      <div class="row">
+                      
+                      </div>
+                      </div>
                       </div>
                     </div>
                   </div>
@@ -76,6 +81,53 @@ $(document).on('change','#proj_name',function()
               'X-CSRF-TOKEN': "{{ csrf_token() }}",
             },
             data: {'id' : $(this).val()}, // a JSON object to send back
+            success: function(response)
+            { // What to do if we succeed
+                
+                
+                console.log(response);
+                for(var i = 0 ; i< response.length ; i++)
+                {
+                  //console.log(response[i].view);
+                   html +="<div class= 'row'>";
+                   html +="<div class='col-md-2 view' value='"+response[i].View+"'>"+response[i].View+"";
+                
+                   html +="</div>";
+                   html +="<div class='col-md-2 kpi'value='"+response[i].KPI+"'>"+response[i].KPI+"";
+                   
+                   html +="</div>";
+                   html +="<div class='col-md-3' value='"+response[i].kpi_desc+"'>"+response[i].kpi_desc+"";
+                   
+                   html +="</div>";
+                   html +="<div class='col-md-2'>";
+                   html+= '<button class="btn btn-link" data-toggle="collapse" data-target="#demo'+i+'">Show Calculations</button><div id="demo'+i+'" class="collapse">'+response[i].Calculation+'</div>'
+                    
+                    
+                                  
+                   
+                   html +="</div>";
+                   html += "<div class='col-md-3 dime' value='"+response[i].Dimensions+"'>"+response[i].Dimension+"";
+                     html += "</div>";
+                   html += "</div><hr>";
+                }
+                $('#adding').html(html).contents();
+            }
+
+          });
+          
+  });
+$(document).ready(function()
+  {
+    var html = "";
+    console.log($(this).val())
+    $.ajax({
+            method: 'POST', // Type of response and matches what we said in the route
+            url: '{{url()}}/kpi', // This is the url we gave in the route
+            dataType:'json',
+            headers: {
+              'X-CSRF-TOKEN': "{{ csrf_token() }}",
+            },
+            data: {'id' : "Market Access"}, // a JSON object to send back
             success: function(response)
             { // What to do if we succeed
                 
