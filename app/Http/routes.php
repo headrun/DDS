@@ -135,6 +135,8 @@ Route::get('/CLIENT_Territory_Alignment',function(){
 	return view('TerritoryAllignment');
 });
 
+
+
 Route::get('/kpilib','AjaxCallTest@kpiLib');
 
 Route::get('/struct','AjaxCallTest@struct');

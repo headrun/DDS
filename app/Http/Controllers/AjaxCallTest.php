@@ -168,7 +168,7 @@ class AjaxCallTest extends Controller
   {
     //$inputs =Input::all();
     //return $inputs;
-    $view = DB::table('mapping_kpi')->get();
+    $view = DB::table('mapping_kpi')->select('View')->distinct()->get();
     //$view = DB::table('mapping_kpi')->select('')->get();
     
     $data1 = array('view');
