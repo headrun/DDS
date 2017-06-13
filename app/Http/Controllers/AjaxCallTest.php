@@ -44,16 +44,12 @@ class AjaxCallTest extends Controller
     $supply_chain = array('Portfolio performance','Service level Monitoring','Inventory Health');
  		//return $data;
  		switch ($data) {
-
-
-
-			case 'Pre Launch':
-        			return $this->html_change($pre,$data);
-       				 break;
  			case 'Brand Launch':
  				return $this->html_change($brand,$data);
  				break;
-    
+      case 'Pre Launch':
+        return $this->html_change($pre,$data);
+        break;
  			case 'RWE':
  				return $this->html_change($rew,$data);
  				break;
