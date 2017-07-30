@@ -114,7 +114,45 @@ class CommonController extends Controller
     public function save_proj_into_session(){
         $inputs = Input::all();
         Session::put('project_name', $inputs['value']);
+
         return Response::json(array('status'=> 'success', 'data'=> Session::get('project_name')));
+    }
+
+    public function saveMappingKpi(){
+        $inputs =  Input::all();
+        $extInfo = DB::table('kpi_selection_info')->select('project_name')->get();
+        
+        if ($inputs['viewId'] != 0) {
+            DB::table('kpi_selection_info')
+                ->where('project_name', $inputs['view_type'])
+                ->update([
+                    'kpi' => json_encode($inputs['kpi_arr']),
+                    'sub_kpi'=>$inputs['sub_kpi'],
+                    'dimension'=>json_encode($inputs['dim_arr'])
+                ]);
+        }else{
+            DB::table('kpi_selection_info')->insert([
+                'id'=> '',
+                'project_name'=> $inputs['view_type'],
+                'kpi'=> json_encode($inputs['kpi_arr']),
+                'sub_kpi'=>$inputs['sub_kpi'],
+                'dimension'=>json_encode($inputs['dim_arr'])
+            ]);
+        }
+        
+        return Response::json(array('status'=> 'success', 'data'=> $inputs));
+    }
+
+    public function getMappingKpi(){
+        $inputs = Input::all();
+
+        $kpis_data = DB::table('kpi_selection_info')->where('project_name', '=', $inputs['kpiKey'])->get();
+
+        if ($kpis_data == '') {
+            $kpis_data = 'undifined';            
+        }
+
+        return Response::json(array('status'=> 'success', 'data'=> $kpis_data));
     }
 
     /**

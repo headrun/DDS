@@ -22,6 +22,7 @@ Route::get('/login',function(){
 
 Route::get('/',function(){
 	return view('Dashboard.index');
+	// return view('Dashboard.index');
 });
 
 Route::get('/extractor_library',function(){
@@ -46,6 +47,8 @@ Route::any('/getTypes', 'CommonController@getTypes');
 Route::any('/getSubTypes', 'CommonController@getSubTypes');
 Route::any('/getExtractor', 'CommonController@getExtractor');
 Route::any('/save_proj_into_session', 'CommonController@save_proj_into_session');
+Route::any('/saveMappingKpi', 'CommonController@saveMappingKpi');
+Route::any('/getMappingKpi', 'CommonController@getMappingKpi');
 
 
 Route::get('/Symphony_Physican_Rx_Data',function(){
@@ -116,12 +119,9 @@ Route::get('/kpi_map_new','AjaxCallTest@kpi');
 
 Route::any('/kpi','AjaxCallTest@kpi1');
 
-
-
 Route::get('/Prescriber_Dimension',function(){
 	return view('Prescriber_Dimension');
 });
-
 
 Route::get('/Symphony_Patient_Dimension',function(){
 	return view('Patient_Dimension');
@@ -135,13 +135,9 @@ Route::get('/CLIENT_Territory_Alignment',function(){
 	return view('TerritoryAllignment');
 });
 
-
-
 Route::get('/kpilib','AjaxCallTest@kpiLib');
 
 Route::get('/struct','AjaxCallTest@struct');
-
-
 
 
 
