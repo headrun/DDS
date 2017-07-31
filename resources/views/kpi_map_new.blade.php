@@ -79,10 +79,13 @@
                                 <br>
                                 <div id="choose_project">
                                   <div class="radio">
-                                    <input type="hidden" name="view_type" id="viewType" value="0">
+                                    <input type="text" name="view_type" id="viewType" value="0">
                                   </div>
                                   <div class="radio">
-                                    <input type="hidden" name="view_id" id="viewId" value="0">
+                                    <input type="text" name="view_id" id="viewId" value="0">
+                                  </div>
+                                  <div class="radio">
+                                    <input type="text" name="sub_kpi_val" id="sub_kpi_val" value="0">
                                   </div>
                                   <div class="radio kpiArr"></div>
                                 </div>
@@ -479,6 +482,7 @@ $('#proj_name').change(function(){
   if (kpiKey != '') {
     $('#kpimap').show();
     $('#viewType').val(kpiKey);
+    $('.savedData').hide();
 
     $.ajax({
         url : "{{url()}}/getMappingKpi",
@@ -493,6 +497,7 @@ $('#proj_name').change(function(){
           var argValue = '';
           if (response.data.length > 0){
             $('#viewId').val(response.data[0]['id']);
+            $('#sub_kpi_val').val(response.data[0]['sub_kpi']);
             var kpi_type = '';
 
             // kpi checked values
@@ -533,7 +538,8 @@ $('#proj_name').change(function(){
             }
 
           }else{ // View type empty
-
+            $('#viewId').val(0);
+            $('#sub_kpi_val').val(0);
             kpiFunction();
 
             $('.kpi_type').find('input[type="checkbox"]').each(function(){
@@ -565,6 +571,9 @@ $('#proj_name').change(function(){
           product_selection_calculation = [],
           view_type = $('#proj_name').val(),
           viewId = $('#viewId').val();
+          exe_sub_kpi = $('#sub_kpi_val').val();
+
+console.log('Project Name: '+view_type);
 
       $('#choose_project').find('input[type="checkbox"]:checked').each(function(){
         kpi_arr.push($(this).val());
@@ -590,7 +599,7 @@ $('#proj_name').change(function(){
         headers: {
              'X-CSRF-TOKEN': "{{ csrf_token() }}",
         },
-        data: {'kpi_arr':kpi_arr,'sub_kpi':sub_kpi,'dim_arr':dim_arr,'view_type':view_type,'viewId':viewId},
+        data: {'kpi_arr':kpi_arr,'sub_kpi':sub_kpi,'dim_arr':dim_arr,'view_type':view_type,'viewId':viewId,'exe_sub_kpi':exe_sub_kpi},
         success: function(response){
           if (response.status == 'success') {
             console.log(response.data);
@@ -602,11 +611,7 @@ $('#proj_name').change(function(){
             }
             kpi_arr += '</div>';
 
-            // var sub_kpi_arr = '<div class="col-md-2">';
-            // for (var i = 0; i < response.data.sub_kpi_arr.length; i++) {
-            //   sub_kpi_arr += response.data.sub_kpi_arr[i]+'<br>';
-            // }
-            // sub_kpi_arr += '</div>';
+            $('.savedData').show();
 
             var dim_arr = '<div class="col-md-3">';
             for (var i = 0; i < response.data.dim_arr.length; i++) {

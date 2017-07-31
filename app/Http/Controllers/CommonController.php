@@ -122,14 +122,22 @@ class CommonController extends Controller
         $inputs =  Input::all();
         $extInfo = DB::table('kpi_selection_info')->select('project_name')->get();
         
-        if ($inputs['viewId'] != 0) {
+        if ($inputs['viewId'] != 0 && $inputs['exe_sub_kpi'] == $inputs['sub_kpi']) {
             DB::table('kpi_selection_info')
-                ->where('project_name', $inputs['view_type'])
+                ->where('project_name', '=', $inputs['view_type'])
+                ->where('sub_kpi', '=', $inputs['exe_sub_kpi'])
                 ->update([
                     'kpi' => json_encode($inputs['kpi_arr']),
-                    'sub_kpi'=>$inputs['sub_kpi'],
                     'dimension'=>json_encode($inputs['dim_arr'])
                 ]);
+        }elseif($inputs['exe_sub_kpi'] != $inputs['sub_kpi']){
+            DB::table('kpi_selection_info')->insert([
+                'id'=> '',
+                'project_name'=> $inputs['view_type'],
+                'kpi'=> json_encode($inputs['kpi_arr']),
+                'sub_kpi'=>$inputs['sub_kpi'],
+                'dimension'=>json_encode($inputs['dim_arr'])
+            ]);
         }else{
             DB::table('kpi_selection_info')->insert([
                 'id'=> '',
