@@ -17,9 +17,9 @@
              <a href="javascript:history.back()" class="active">Map Data</a>
              <a href="#" class="active">Mapping KPI</a>
          </div>
-      	 <div class="row widget-1" style="padding-top: 30px">
+         <div class="row widget-1" style="padding-top: 30px">
               <div class="widget-icon"><img src="{{url()}}/assets/vendor/img/new_document_add.png"></div>
-              	<h3 class="widget-title">Mapping KPI</h3>
+                <h3 class="widget-title">Mapping KPI</h3>
 
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                   <div class="panel panel-default" style="border-bottom: 4px solid #8bc34a;     padding: 20px;">
@@ -29,7 +29,7 @@
                           <label style="padding: 5px">Select View:</label>
                         </div>
                         <div class="col-md-3">
-                          <select class="form-control " id='proj_name' style="margin-top: -5px; width: 220px; margin-left: -70px">
+                          <select class="form-control .proj_name" id='proj_name' style="margin-top: -5px; width: 220px; margin-left: -70px">
                             <option></option>
                             <option>Market Overview</option>
                             <option>Market Access</option>
@@ -47,69 +47,117 @@
                           
                         </div>
                       </div>
+
                       <br>
-                      <div class="row">
+
+                        <div class="row">
                           <div class="col-md-12">
                               <div class="panel panel-default" id='addkpi' >
                                 <div class="panel-heading">Saved KPI'S</div>
                                     <div class="panel-body">
                                       <div class="row" style="margin-bottom: 7px;">
-                                      <div class="col-md-1 "><label></label></div>
                                         <div class="col-md-3 "><label>View</label></div>
-                                        <div class="col-md-3 "><label>KPI</label></div>
+                                        <div class="col-md-2 "><label>KPI</label></div>
+                                        <div class="col-md-2 "><label>Sub KPI</label></div>
                                         <div class="col-md-3 "><label>Dimension</label></div>
-                                        <div class="col-md-2"><label>Ready for Deployment</label>
-                                        </div>
+                                        <div class="col-md-2"><label>Ready for Deployment</label></div>
                                       </div>
-                                    <div class="data">
-                                      
-                                    </div>                                
+                                    <div class="savedData"></div>                                
                                     <button class="btn btn-success pull-right" data-toggle="modal" data-target="#send_to_workflow">Send for Workflow</button>
                                 </div>
                               </div>
+                            </div>
                           </div>
-                      </div>
-                      <br>
-
-                      <div class="panel panel-default" id='kpimap'>
+                        <br>
+                      <div class="panel panel-default">
                         <div class="panel-heading">KPI Selection</div>
                         <div class="panel-body">
+                          <form id='kpimap'>
+                          <div class="row">
+                            <div class="widget col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <h4><span class="label label-primary">KPI</span></h4>
+                                <br>
+                                <div id="choose_project">
+                                  <div class="radio">
+                                    <input type="hidden" name="view_type" id="viewType" value="0">
+                                  </div>
+                                  <div class="radio">
+                                    <input type="hidden" name="view_id" id="viewId" value="0">
+                                  </div>
+                                  <div class="radio kpiArr"></div>
+                                </div>
+                            </div>
+                            <div class="widget col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <h4><span class="label label-primary">Sub KPI</span></h4>
+                                <br>
+                                <div>
+                                  <div id="calSubKpi">
+                                    <div class="selectingSubKpi calSubKpi radio"></div>
+                                  </div>
+                                </div>
+                            </div>
+                          </div>
+                          <hr>
+                          <div class="row" id="dimensionInfo">  
+                          <div class="widget col-lg-12 col-md-12 col-sm-12 col-xs-12d">
+                              <h4><span class="label label-primary">Dimension</span></h4>
+                              <br>
+                              <div class="row">
+                                <div class="widget col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                                  <h4><span class="label label-primary">Product Selection</span></h4>
+                                  <br>
+                                  <div id="product_selection">
+                                    <div class="radio product_selection kpi_dim"></div>
+                                  </div>
+                                </div>
+
+                                <div class="widget col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                                  <h4><span class="label label-primary">Time Period Selection</span></h4>
+                                  <br>
+                                  <div id="time_period_selection">
+                                    <div class="radio time_period_selection kpi_dim"></div>
+                                  </div>
+                                </div>
+
+                                <div class="widget col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                                  <h4><span class="label label-primary">Geography</span></h4>
+                                  <br>
+                                  <div id="geography">
+                                    <div class="radio geography"></div>
+                                    <div class="radio">
+                                      <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="widget col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                                  <h4><span class="label label-primary">Calculation</span></h4>
+                                  <br>
+                                  <div id="product_selection_calculation">
+                                    <div class="radio calculateSubKpi"></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                        <hr>
+
                           <div class ='row'>
-                            <div class = "col-md-2">
-                              <label class=''>Functionality Name</label>
+                            <div class="col-md-6">
+                              <!-- <button class ='btn btn-primary pull-left' data-toggle="modal" data-target="#addnewkpi" id='addkpi_btn'>Add New KPI</button> -->
                             </div>
-                            <div class = "col-md-2">
-                              <label class =''>KPI</label>
-                            </div>
-                            <div class = "col-md-3">
-                              <label class =''>KPI Description</label>
-                            </div>
-                            <div class = "col-md-2">
-                              <label class =''>Calculations</label>
-                            </div>
-                            <div class = "col-md-3">
-                              <label class =''>Dimensions</label>
+                            <div class="col-md-6">
+                              <button class ='btn btn-primary pull-right' type="button" id='save_btn'>Save</button>
                             </div>
                           </div>
-                          <div id="adding">
-                            
-                          </div>
-                          <div class ='row'>
-                            <div class="col-md-12">
-                              <button class ='btn btn-primary pull-right' id='save_btn'>Save</button>
-                            </div>
-                          </div>
-                          <div class ='row'>
-                            <div class="col-md-12">
-                              <button class ='btn btn-primary pull-left' data-toggle="modal" data-target="#addnewkpi" id='addkpi_btn'>Add New KPI</button>
-                            </div>
-                          </div>
+                          </form>
                       </div>
                     </div>
+
                   </div>
                 </div>
-		      </div>
-	    </div>
+          </div>
+      </div>
  <div id="myModal" class="modal fade" role="dialog">
   <div class="modal-dialog modal-lg" style="width: 1230px;">
 
@@ -204,6 +252,171 @@
 @stop
 @section('BaseJSLib')
 <script type="text/javascript">
+  
+$(document).ready(function(){
+  // kpi fields
+  function kpiFunction(){
+    var kpi = [];
+    var kpiVal = '';
+    kpi = [               
+          'TRx',
+          'MBS$(Revenue)',
+          'NRx'
+    ];
+
+    for (var i=0; i<kpi.length; i++) {
+        kpiVal += '<input type="checkbox" class="kpi_type" name="checkSubKPI" value="'+kpi[i]+'"> '+kpi[i]+'<br>';
+    }
+
+    $('.kpiArr').html(kpiVal).contents();
+  }
+
+  $('#dimensionInfo').hide();
+  $('#kpimap').hide();
+
+  $('#choose_project').find('input[type="checkbox"]').change(function(){ 
+      
+      var value = $('input[type="checkbox"]:checked').val();
+      // console.log('Selected project: '+value);
+
+      subKpiFunction(value);
+  });
+  
+// sub kpi fields
+  function subKpiFunction(value){
+    var subKpi = [];
+      var subKpiVal = '';
+      if (typeof value != 'undefined') {
+        subKpi = [
+                'Absolute Volume',
+                'Share',
+                'Volume Change',
+                'Share Change'
+        ];
+      }else{
+        subKpi.length = 0;
+      }
+      if(subKpi.length > 0 ){
+        for (var i=0; i<subKpi.length; i++) {
+            subKpiVal += '<input type="radio" class="check_sub_kpi" name="checkSubKPI" value="'+subKpi[i]+'"> '+subKpi[i]+'<br>';
+        }
+      }
+
+      $('.selectingSubKpi').html(subKpiVal).contents();
+  }
+
+  // product selection fields
+  function productSelection(value){
+   var proSelArr = [];
+      var proSelVal = '';
+      if (typeof value != 'undefined') {
+        proSelArr = [
+                'Drug',
+                'Drug Class'
+        ];
+      }else{
+        proSelArr.length = 0;
+      }
+      if(proSelArr.length > 0 ){
+        for (var i=0; i<proSelArr.length; i++) {
+            proSelVal += '<input type="checkbox" class="check_sub_kpi kpi_dim" name="product_selection" value="'+proSelArr[i]+'"> '+proSelArr[i]+'<br>';
+        }
+      }
+
+      $('.product_selection').html(proSelVal).contents(); 
+  }
+
+  // time period selection fields
+
+  function timePeriodSelection(value){
+    var timePerSelArr = [];
+      var timePerSelVal = '';
+      if (typeof value != 'undefined') {
+        timePerSelArr = [
+                'Month',
+                'Quarter',
+                'Year'
+        ];
+      }else{
+        timePerSelArr.length = 0;
+      }
+      if(timePerSelArr.length > 0 ){
+        for (var i=0; i<timePerSelArr.length; i++) {
+            timePerSelVal += '<input type="checkbox" class="time_period_selection kpi_dim" name="time_period_selection" value="'+timePerSelArr[i]+'"> '+timePerSelArr[i]+'<br>';
+        }
+      }
+
+      $('.time_period_selection').html(timePerSelVal).contents(); 
+  }
+
+  // Geography fields
+  function geography(value){
+    var geographylArr = [];
+      var geographyVal = '';
+      if (typeof value != 'undefined') {
+        geographylArr = [
+                'National',
+                'State',
+                'City',
+                'ZIP'
+        ];
+      }else{
+        geographylArr.length = 0;
+      }
+      if(geographylArr.length > 0 ){
+        for (var i=0; i<geographylArr.length; i++) {
+            geographyVal += '<input type="checkbox" class="geography" name="time_period_selection" value="'+geographylArr[i]+'"> '+geographylArr[i]+'<br>';
+        }
+      }
+
+      $('.geography').html(geographyVal).contents(); 
+  }  
+
+// dimension calculations
+function dimeCalculation(){
+    var calWithSubKpi = [],
+        mergeWithSubKpi = '',
+        selectedEle = [];
+
+    $('#calSubKpi .check_sub_kpi:checked').each(function(){
+      
+      selectedEle.push($(this).val());
+
+    });
+
+    if (selectedEle.length == 0) {
+        $('#dimensionInfo').hide();
+    }else {
+      $('#dimensionInfo').show();
+    }
+    
+    for(i=0; i<selectedEle.length; i++){
+
+        if(selectedEle[i] == 'Share' || selectedEle[i] == 'Share Change'){
+            
+            calWithSubKpi.push('Share-Drug Class share in Market', 'Product share in Drug Class');
+        }else {
+            
+            calWithSubKpi.push('Change-Yoy', 'YTD', 'QTD');
+        }
+    }
+      var unique = calWithSubKpi.filter(function(elem, index, self) {
+          return index == self.indexOf(elem);
+      });
+      for(var ele=0; ele<unique.length; ele++){
+            mergeWithSubKpi += '<input type="checkbox" class="dim_cal" name="merge_with_sub_kpi" value="'+unique[ele]+'"> '+unique[ele]+'<br>';
+      }
+
+    $('.calculateSubKpi').html(mergeWithSubKpi).contents();
+}
+
+  $(document).on('change' ,'#calSubKpi .check_sub_kpi', function(){
+    var value = $('#calSubKpi .check_sub_kpi:checked').val();
+
+    dimeCalculation();
+
+  });
+
 $(document).on('click', '.new_kpi_add_btn', function()
 {
     var view = $('.new_kpi_view').val();
@@ -225,7 +438,7 @@ $(document).on('change', '.time1', function()
  {
       var widget_array1 =  [];
       var x= "Time Period";
-        $('.time1 input[type="checkbox" ]:checked').each(function(){ 
+        $('.time1 input[type="checkbox" ]:checked').each(function(){
           var z= widget_array1.indexOf($(this).val());
           if(z>=0)
           {
@@ -234,7 +447,7 @@ $(document).on('change', '.time1', function()
           }
           else
           {
-                widget_array1.push($(this).val());            
+            widget_array1.push($(this).val());            
           }
         });
         $(this).closest('.dime').find('.timee').val(x+"("+widget_array1+")");
@@ -260,282 +473,161 @@ $(document).on('change', '.geo1', function()
         $(this).closest('.dime').find('.geoo').val(x+"("+widget_array1+")");
         console.log($(this).closest('.dime').find('.geoo').val()); 
 });
-  $('#save_btn').click(function(){
 
-      var html_data = "";
-      var wid_array = [];
-      var view;
-      var obj ={};
-      var i=0;
-      $('.dime').find('input[type="checkbox"]:checked').each(function(){
-         obj[$(this).closest('.row').find('.kpi').text()]="";
+$('#proj_name').change(function(){
+  var kpiKey = $(this).val();
+  if (kpiKey != '') {
+    $('#kpimap').show();
+    $('#viewType').val(kpiKey);
 
-         //console.log(obj);
-         
-      });
-      //console.log(obj);
-      /*i=0;
-      $('.dime').find('input[type="checkbox"]:checked').each(function(){
-         obj[i].kpt=$(this).closest('.row').find('.kpi').text();
-         //console.log(obj[i].kpt);
-         i++;
-      });
-      i=0;
-     */$('.dime').find('input[type="checkbox"]:checked').each(function(){
-          if ($(this).val()!=="Year" && $(this).val()!=="Quater" && $(this).val()!=="Month" && $(this).val()!=="State" && $(this).val()!=="City" && $(this).val()!=="Territory")
-          {
+    $.ajax({
+        url : "{{url()}}/getMappingKpi",
+        type: "POST",
+        dataType: 'json',
+        headers: {
+             'X-CSRF-TOKEN': "{{ csrf_token() }}",
+        },
+        data: {'kpiKey':kpiKey},
+        success: function(response){
+          console.log(response.data[0]);
+          var argValue = '';
+          if (response.data.length > 0){
+            $('#viewId').val(response.data[0]['id']);
+            var kpi_type = '';
+
+            // kpi checked values
+            kpiFunction();
+
+            kpi_type = JSON.parse(response.data[0]['kpi']);
+
+            for (var i=0; i<kpi_type.length; i++) {
+              $('input[value="'+kpi_type[i]+'"]').attr( 'checked', true );
+            } 
             
-            for (var key in obj) 
-            {
-              if (obj.hasOwnProperty(key)) 
-              {
-                if(key===$(this).closest('.row').find('.kpi').text())
-                {
-                  obj[key]+=($(this).val())+"<br>";
-                }
-              }
+            var sub_kpi = response.data[0]['sub_kpi'];
+            
+            if (kpi_type.length > 0) {
+              argValue = kpi_type[0];
+
+              subKpiFunction(argValue);
+              $('input[value="'+sub_kpi+'"]').attr('checked', 'true');
             }
+
+            if (sub_kpi.length > 0) {
+              argValue = sub_kpi;
+              $('#dimensionInfo').show();
+
+              var kpi_dim = JSON.parse(response.data[0]['dimension']);
+
+              productSelection(argValue);
+              timePeriodSelection(argValue);
+              geography(argValue);
+              dimeCalculation();
+
+              for (var j = 0; j < kpi_dim.length; j++) {
+                $('input[value="'+kpi_dim[j]+'"]').attr('checked', 'true');
+              }
+
+            } else{
+              $('#dimensionInfo').hide();
+            }
+
+          }else{ // View type empty
+
+            kpiFunction();
+
+            $('.kpi_type').find('input[type="checkbox"]').each(function(){
+              $(this).attr( 'checked', false );
+            });
+            
+            subKpiFunction(argValue);
+            productSelection(argValue);
+            timePeriodSelection(argValue);
+            geography(argValue);
+            dimeCalculation();            
           }
-          view = $(this).closest('.row').find('.view').text();
-          
-         
-      });
-     console.log(obj);
-      for(var key in obj)
-      {
-            
-            
-              //var view = $(this).closest('.row').find('.view').text();
 
-              var kpi = key;
-
-              var dimen = obj[key];
-
-              
-              html_data += '<div class="row" style="margin-bottom: 7px;">'+
-                                    '<div class="col-md-1"><div class="checkbox"><input type="checkbox" style="margin : auto"/>'+
-                                    '</div></div>'+
-                                '<div class="col-md-3">'+view+'</div>'+
-                                '<div class="col-md-3">'+kpi+'</div>'+
-                                '<div class="col-md-3">'+dimen+'</div>'+
-                                '<div class="col-md-2">'+
-                                    '<center><i class="fa fa-check" aria-hidden="true"/></center>'+
-                                '</div>'+
-                            '</div>';
-            
-          }
-
-
-      $('#addkpi').find('.data').append(html_data);
-  });
-
-
-	$(document).on('change','#proj_name',function()
-	{
-		console.log($(this).val())
-		$.ajax({
-            method: 'POST', // Type of response and matches what we said in the route
-            url: '{{url()}}/kpi', // This is the url we gave in the route
-            dataType:'json',
-            headers: {
-              'X-CSRF-TOKEN': "{{ csrf_token() }}",
-          },
-            data: {'id' : $(this).val()}, // a JSON object to send back
-            success: function(response)
-            { // What to do if we succeed
-                
-                var dim ="";
-                var html ="";
-                for(var i = 0 ; i< response.length ; i++)
-                {
-                   if (!(response[i].Dimension))
-                    {
-                      response[i].Dimension= '';
-                    } 
-                    if (!(response[i].kpi))
-                    {
-                      response[i].kpi= '';
-                    }
-                    if (!(response[i].kpi_desc))
-                    {
-                      response[i].kpi_desc= '';
-                    } 
-                    if (!(response[i].Calculation))
-                    {
-                      response[i].Calculation= '';
-                    } 
-                    
-                }
-
-                for(var i = 0 ; i< response.length ; i++)
-                {
-
-                  response[i].Dimension= response[i].Dimension.split(",");
-                  for(var j = 0 ; j< response[i].Dimension.length; j++)
-                  {
-                    if(response[i].Dimension[j])
-                    {
-                      dim = "";
-                      console.log(response[i].Dimension[j]);
-                      if(response[i].Dimension[j] === " time period(year.quarter.month)" || response[i].Dimension[j]=== " time period(YoY.YTD.QTD.MTD)")
-                      {
-
-                        dim += "<div class='checkbox'>"
-                        dim += "<input class= 'timee' type='checkbox' name='Dimension'  value='Time Period'>Time Period&nbsp";
-                        dim += "<i class='fa fa-plus-circle' data-toggle='collapse' data-target='#time"+i+"'></i>"
-                        dim += "<div class='collapse' id='time"+i+"'>";
-                        dim += "<div class='time1'>";
-                        dim += "<div class='checkbox'>";
-                        dim += "<label><input class='time' type='checkbox' value='Year'>Year</label>";
-                        dim += "</div>";
-                        dim += "<div class='checkbox'>";
-                        dim += "<label><input class='time' type='checkbox' value='Quater'>Quater</label>"
-                        dim += "</div>";
-                        dim += "<div class='checkbox'>"
-                        dim += "<label><input class='time' type='checkbox' value='Month'>Month</label>"
-                        dim += "</div>";
-                        dim += "</div>";
-                        dim += "</div>";
-                        
-
-                      }
-                      else if(response[i].Dimension[j] === "geography(state.city.district.territory.zip)")
-                      {
-                        dim += "<div class='checkbox'>"
-                        dim += "<input class='geoo' type='checkbox' name='Dimension"+i+"' value='Geography'>Geography&nbsp";
-                        dim += "<i class='fa fa-plus-circle' data-toggle='collapse' data-target='#geo"+i+"'></i>"
-                        dim += "<div class='collapse geo' id='geo"+i+"'>";
-                        dim += "<div class='geo1'>";
-                        dim += "<div class='checkbox'>";
-
-                        dim += "<label><input type='checkbox' value='State'>State</label>";
-                        dim += "</div>";
-                        dim += "<div class='checkbox geo'>";
-                        dim += "<label><input type='checkbox' value='City'>City</label>"
-                        dim += "</div>";
-                        dim += "<div class='checkbox geo'>"
-                        dim += "<label><input type='checkbox' value='District'>District</label>"
-                        dim += "</div>";
-                        dim += "<div class='checkbox geo'>";
-                        dim += "<label><input type='checkbox' value='Territory'>Territory</label>";
-                        dim += "</div>";
-                        dim += "<div class='checkbox geo'>";
-                        dim += "<label><input type='checkbox' value='Zip'>Zip</label>"
-                        dim += "</div>";
-                        dim += "</div>";
-                        dim += "</div>";
-
-
-                      }
-                      else
-                      {
-                        dim += "<div class='checkbox'><input type='checkbox' name='Dimension"+response[i].Dimension[j]+"' value='"+response[i].Dimension[j]+"'>"+response[i].Dimension[j]+"";
-                      }
-                      dim += "</div>";
-                      response[i].Dimension[j] = dim;
-                    }
-                  }
-                  response[i].Dimension = response[i].Dimension.join(" ");
-                 // console.log(response[i].Dimension);
-                }
-                
-                /*for(var i = 0 ; i< response.length ; i++)
-                {
-                    if (response[i].Dimension !== '') 
-                    {
-                        dim = '';
-                        dim += "<div class='checkbox'><label><input type='checkbox' name='Dimension"+i+"' value='Drug'>Drug";
-                        dim += "</label>";
-                        dim += "</div>";
-                        dim += "<div class='checkbox'>"
-                        dim +=  "<label><input type='checkbox' name='Dimension"+i+"' value='Drug Class'>Drug Class"
-                        dim += "</label>"
-                        dim += "</div>"
-                        dim += "<div class='checkbox'>"
-                        dim += "<label><input class= 'timee' type='checkbox' name='Dimension'  value='Time Period'>Time Period&nbsp";
-                        dim += "<i class='fa fa-plus-circle' data-toggle='collapse' data-target='#time"+i+"'></i>"
-                        dim += "<div class='collapse' id='time"+i+"'>";
-                        dim += "<div class='time1'>";
-                        dim += "<div class='checkbox'>";
-                        dim += "<label><input class='time' type='checkbox' value='Year'>Year</label>";
-                        dim += "</div>";
-                        dim += "<div class='checkbox'>";
-                        dim += "<label><input class='time' type='checkbox' value='Quater'>Quater</label>"
-                        dim += "</div>";
-                        dim += "<div class='checkbox'>"
-                        dim += "<label><input class='time' type='checkbox' value='Month'>Month</label>"
-                        dim += "</div>";
-                        dim += "</div>";
-                        dim += "</label>"
-                        dim += "</div>";
-                        dim += "</div>";
-                        dim += "<div class='checkbox'>"
-                        dim += "<label><input class='geoo' type='checkbox' name='Dimension"+i+"' value='Geography'>Geography&nbsp";
-                        dim += "<i class='fa fa-plus-circle' data-toggle='collapse' data-target='#geo"+i+"'></i>"
-                        dim += "<div class='collapse geo' id='geo"+i+"'>";
-                        dim += "<div class='geo1'>";
-                        dim += "<div class='checkbox'>";
-
-                        dim += "<label><input type='checkbox' value='State'>State</label>";
-                        dim += "</div>";
-                        dim += "<div class='checkbox geo'>";
-                        dim += "<label><input type='checkbox' value='City'>City</label>"
-                        dim += "</div>";
-                        dim += "<div class='checkbox geo'>"
-                        dim += "<label><input type='checkbox' value='District'>District</label>"
-                        dim += "</div>";
-                        dim += "<div class='checkbox geo'>";
-                        dim += "<label><input type='checkbox' value='Territory'>Territory</label>";
-                        dim += "</div>";
-                        dim += "<div class='checkbox geo'>";
-                        dim += "<label><input type='checkbox' value='Zip'>Zip</label>"
-                        dim += "</div>";
-                        dim += "</div>";
-                        dim += "</div>";
-                        dim += "</label>"
-                        dim += "</div>";
-                        //console.log ( response[i].Dimension);
-                        response[i].Dimension = dim;
-                    }
-                    
-                    
-                }*/
-                for(var i = 0 ; i< response.length ; i++)
-                {
-                  //console.log(response[i].view);
-                   html +="<div class= 'row'>";
-                   html +="<div class='col-md-2 view' value='"+response[i].View+"'>"+response[i].View+"";
-                
-                   html +="</div>";
-                   html +="<div class='col-md-2 kpi'value='"+response[i].KPI+"'>"+response[i].KPI+"";
-                   
-                   html +="</div>";
-                   html +="<div class='col-md-3' value='"+response[i].kpi_desc+"'>"+response[i].kpi_desc+"";
-                   
-                   html +="</div>";
-                   html +="<div class='col-md-2'>";
-                   html+= '<button class="btn btn-link" data-toggle="collapse" data-target="#demo'+i+'">Show Calculations</button><div id="demo'+i+'" class="collapse">'+response[i].Calculation+'</div>'
-                    
-                    
-                                  
-                   
-                   html +="</div>";
-                   html += "<div class='col-md-3 dime' value='"+response[i].Dimensions+"'>"+response[i].Dimension+"";
-                     html += "</div>";
-                   html += "</div><hr>";
-                }
-                $('#adding').html(html).contents();
-           
-            },
-        });
-	});
-  $(document).on('click','#save_btn',function()
-  {
-                var html = document.getElementById("adding").innerHTML; ;
-              $('#save').append(html);     
-              $('#save .dime').remove();
-           
-    
+        }
     });
+  }else{
+    $('#kpimap').hide();
+  }
+});
+
+  $('#save_btn').click(function(e){
+      e.preventDefault();
+      var dim_arr = [],
+          kpi_arr = [],
+          sub_kpi = '',
+          product_selection = [],
+          time_period_selection = [],
+          geography = [],
+          product_selection_calculation = [],
+          view_type = $('#proj_name').val(),
+          viewId = $('#viewId').val();
+
+      $('#choose_project').find('input[type="checkbox"]:checked').each(function(){
+        kpi_arr.push($(this).val());
+
+      });
+
+      sub_kpi = $('#calSubKpi').find('input[name="checkSubKPI"]:checked').val();
+      //  find('input[name=myRadio]:checked').val();
+      //  sub_kpi = checkSubKPI.filter(':checked').val(); 
+          console.log('Sub KPI value: '+sub_kpi);
+
+      // });
+
+      $('#dimensionInfo').find('input[type="checkbox"]:checked').each(function(){
+        dim_arr.push($(this).val());
+
+      });
+
+      $.ajax({
+        url : "{{url()}}/saveMappingKpi",
+        type: "POST",
+        dataType: 'json',
+        headers: {
+             'X-CSRF-TOKEN': "{{ csrf_token() }}",
+        },
+        data: {'kpi_arr':kpi_arr,'sub_kpi':sub_kpi,'dim_arr':dim_arr,'view_type':view_type,'viewId':viewId},
+        success: function(response){
+          if (response.status == 'success') {
+            console.log(response.data);
+            alert('Saved Successfully...!');
+
+            var kpi_arr = '<div class="col-md-2">';
+            for (var i = 0; i < response.data.kpi_arr.length; i++) {
+              kpi_arr += response.data.kpi_arr[i]+'<br>';
+            }
+            kpi_arr += '</div>';
+
+            // var sub_kpi_arr = '<div class="col-md-2">';
+            // for (var i = 0; i < response.data.sub_kpi_arr.length; i++) {
+            //   sub_kpi_arr += response.data.sub_kpi_arr[i]+'<br>';
+            // }
+            // sub_kpi_arr += '</div>';
+
+            var dim_arr = '<div class="col-md-3">';
+            for (var i = 0; i < response.data.dim_arr.length; i++) {
+              dim_arr += response.data.dim_arr[i]+'<br>';
+            }
+            dim_arr += '</div>';            
+            
+            var html = '<div class="row">'+
+                      '<div class="col-md-3 ">'+response.data['view_type']+'</div>'+
+                      kpi_arr+
+                      '<div class="col-md-2 ">'+response.data['sub_kpi']+'</div>'+
+                      dim_arr+
+                      '<div class="col-md-2"><i class="fa fa-check" area-hidden="true"></i></div>'+
+                    '</div>';
+
+            $('.savedData').html(html);
+          }
+        },
+      });
+      
+  });
+});
 </script>
 @stop

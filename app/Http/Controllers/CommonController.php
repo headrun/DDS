@@ -107,7 +107,7 @@ class CommonController extends Controller
         $ta = DB::table('ta_fa')->where('ta', '!=', '')->distinct('ta')->lists('ta');
 
         $data1 = array('ta', 'fa');
-        return view('setup_new_proj_new', compact($data1));
+        return view('kpi_map_new', compact($data1));
     }
 
 
