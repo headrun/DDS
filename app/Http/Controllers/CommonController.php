@@ -97,10 +97,54 @@ class CommonController extends Controller
         $data1 = array('final_array1', 'final_array');
         return view('ingestion', compact($data1));
         
-        
-
     }
 
+    public function getExeFlow(){
+        $inputs =  Input::all();
+
+        $getKpiMaps = DB::table('kpi_selection_info')
+                        ->where('project_name', '=', $inputs['kpiKey'])
+                        ->get();
+
+        $totFlows = compact('getKpiMaps');
+
+        if (count($getKpiMaps) > 0) {
+            return Response::json(array('status'=> 'success', 'data'=> $totFlows));
+        }else{
+            return Response::json(array('status'=> 'fail'));
+        }
+    }
+
+    public function getFlowForEdit(){
+        $inputs = Input::all();
+
+        $flowInfo = DB::table('kpi_selection_info')
+                        ->where('id', '=', $inputs['flowId'])
+                        ->get();
+        
+        if (count($flowInfo) > 0) {
+            return Response::json(array('status'=> 'success', 'data'=> $flowInfo));
+        }else{
+            return Response::json(array('status'=> 'fail'));
+        }
+    }
+
+    public function getDimensionValOfSubKpi(){
+        $inputs =  Input::all();
+        
+        $getDimeValues = DB::table('kpi_selection_info')
+                            ->where('project_name', '=', $inputs['viewType'])
+                            ->where('kpi', '=', json_encode($inputs['kpiKey']))
+                            ->where('sub_kpi', '=', $inputs['subKpi'])
+                            ->get();
+
+        if (count($getDimeValues) > 0) {
+            return Response::json(array('status'=> 'success', 'data'=> $getDimeValues));
+        }else{
+            return Response::json(array('status'=> 'nodata'));
+        }
+
+    }
 
     public function setup_new_proj(){
         $fa = DB::table('ta_fa')->where('fa', '!=', '')->distinct('fa')->lists('fa');
@@ -120,25 +164,19 @@ class CommonController extends Controller
 
     public function saveMappingKpi(){
         $inputs =  Input::all();
-        $extInfo = DB::table('kpi_selection_info')->select('project_name')->get();
         
-        if ($inputs['viewId'] != 0 && $inputs['exe_sub_kpi'] == $inputs['sub_kpi']) {
+        if ($inputs['viewId'] != 0) {
+            // update query
             DB::table('kpi_selection_info')
-                ->where('project_name', '=', $inputs['view_type'])
-                ->where('sub_kpi', '=', $inputs['exe_sub_kpi'])
+                ->where('id', '=', $inputs['viewId'])
                 ->update([
-                    'kpi' => json_encode($inputs['kpi_arr']),
+                    'kpi'=>json_encode($inputs['kpi_arr']),
+                    'sub_kpi'=>$inputs['sub_kpi'],
                     'dimension'=>json_encode($inputs['dim_arr'])
                 ]);
-        }elseif($inputs['exe_sub_kpi'] != $inputs['sub_kpi']){
-            DB::table('kpi_selection_info')->insert([
-                'id'=> '',
-                'project_name'=> $inputs['view_type'],
-                'kpi'=> json_encode($inputs['kpi_arr']),
-                'sub_kpi'=>$inputs['sub_kpi'],
-                'dimension'=>json_encode($inputs['dim_arr'])
-            ]);
+
         }else{
+            // insert query
             DB::table('kpi_selection_info')->insert([
                 'id'=> '',
                 'project_name'=> $inputs['view_type'],
@@ -146,9 +184,20 @@ class CommonController extends Controller
                 'sub_kpi'=>$inputs['sub_kpi'],
                 'dimension'=>json_encode($inputs['dim_arr'])
             ]);
+
         }
-        
-        return Response::json(array('status'=> 'success', 'data'=> $inputs));
+        $getKpiMaps = DB::table('kpi_selection_info')
+                    ->where('project_name', '=', $inputs['view_type'])
+                    ->get();
+
+        $totFlows = compact('getKpiMaps');
+
+        if (count($getKpiMaps) > 0) {
+            return Response::json(array('status'=> 'success', 'data'=> $totFlows));
+        }else{
+            return Response::json(array('status'=> 'fail'));
+        }
+
     }
 
     public function getMappingKpi(){

@@ -48,30 +48,14 @@
                         </div>
                       </div>
 
-                      <br>
-
-                        <div class="row">
-                          <div class="col-md-12">
-                              <div class="panel panel-default" id='addkpi' >
-                                <div class="panel-heading">Saved KPI'S</div>
-                                    <div class="panel-body">
-                                      <div class="row" style="margin-bottom: 7px;">
-                                        <div class="col-md-3 "><label>View</label></div>
-                                        <div class="col-md-2 "><label>KPI</label></div>
-                                        <div class="col-md-2 "><label>Sub KPI</label></div>
-                                        <div class="col-md-3 "><label>Dimension</label></div>
-                                        <div class="col-md-2"><label>Ready for Deployment</label></div>
-                                      </div>
-                                    <div class="savedData"></div>                                
-                                    <button class="btn btn-success pull-right" data-toggle="modal" data-target="#send_to_workflow">Send for Workflow</button>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
                         <br>
                       <div class="panel panel-default">
                         <div class="panel-heading">KPI Selection</div>
                         <div class="panel-body">
+                        <div class="wrongSelection"></div>
+                          <div class="radio">
+                            <input type="hidden" name="view_type" id="viewType" value="0">
+                          </div>
                           <form id='kpimap'>
                           <div class="row">
                             <div class="widget col-lg-6 col-md-6 col-sm-6 col-xs-6">
@@ -79,13 +63,10 @@
                                 <br>
                                 <div id="choose_project">
                                   <div class="radio">
-                                    <input type="text" name="view_type" id="viewType" value="0">
+                                    <input type="hidden" name="view_id" id="viewId" value="0">
                                   </div>
                                   <div class="radio">
-                                    <input type="text" name="view_id" id="viewId" value="0">
-                                  </div>
-                                  <div class="radio">
-                                    <input type="text" name="sub_kpi_val" id="sub_kpi_val" value="0">
+                                    <input type="hidden" name="sub_kpi_val" id="sub_kpi_val" value="0">
                                   </div>
                                   <div class="radio kpiArr"></div>
                                 </div>
@@ -126,7 +107,7 @@
                                   <h4><span class="label label-primary">Geography</span></h4>
                                   <br>
                                   <div id="geography">
-                                    <div class="radio geography"></div>
+                                    <div class="radio geography kpi_dim"></div>
                                     <div class="radio">
                                       <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                     </div>
@@ -137,7 +118,7 @@
                                   <h4><span class="label label-primary">Calculation</span></h4>
                                   <br>
                                   <div id="product_selection_calculation">
-                                    <div class="radio calculateSubKpi"></div>
+                                    <div class="radio calculateSubKpi kpi_dim"></div>
                                   </div>
                                 </div>
                               </div>
@@ -147,6 +128,7 @@
 
                           <div class ='row'>
                             <div class="col-md-6">
+                            <input type="reset" name="newKpi" value="Add New KPI" id="addNewKpi" class="btn btn-primary">
                               <!-- <button class ='btn btn-primary pull-left' data-toggle="modal" data-target="#addnewkpi" id='addkpi_btn'>Add New KPI</button> -->
                             </div>
                             <div class="col-md-6">
@@ -154,6 +136,28 @@
                             </div>
                           </div>
                           </form>
+
+
+                      <br>
+
+                        <div class="row" id="savedFlows">
+                          <div class="col-md-12">
+                              <div class="panel panel-default" id='addkpi' >
+                                <div class="panel-heading">Saved KPI'S</div>
+                                    <div class="panel-body flowsInfo">
+                                      <div class="row" style="margin-bottom: 7px;">
+                                        <div class="col-md-3 "><label>View</label></div>
+                                        <div class="col-md-2 "><label>KPI</label></div>
+                                        <div class="col-md-2 "><label>Sub KPI</label></div>
+                                        <div class="col-md-3 "><label>Dimension</label></div>
+                                        <div class="col-md-2"><label>Ready for Deployment</label></div>
+                                      </div>
+                                    <div class="savedData"></div>                                
+                                    <button class="btn btn-success pull-right" data-toggle="modal" data-target="#send_to_workflow">Send for Workflow</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                       </div>
                     </div>
 
@@ -171,7 +175,7 @@
         <h4 class="modal-title">Dag List</h4>
       </div>
       <div class="modal-body">
-        <iframe src="http://176.9.181.38:8080/admin/airflow/graph?dag_id=Diabetes_PreLaunch_Tracker" style="width: 100%; height: 500px;"></iframe>
+        <iframe src="http://176.9.181.46:8080/admin/" style="width: 100%; height: 500px;"></iframe>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -199,56 +203,7 @@
 
   </div>
 </div>
-    <div id="addnewkpi" class="modal fade" role="dialog">
-  <div class="modal-dialog modal-lg" style="width: 630px;">
 
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Add New KPI</h4>
-      </div>
-      <div class="modal-body">
-        <div class="row" style="padding: 20px">
-          <div class="col-md-12">
-            <label>Select View:</label>
-            <select class="form-control pull-right new_kpi_view"  style="margin-top: -5px; width: 460px">
-                            
-                            <option></option>
-                            <option>Market Overview</option>
-                            <option>Market Access</option>
-                            <option>SOB</option>
-                            <option>Marketing</option>
-                          </select>
-          </div>
-          
-        </div>
-        <div class="row" style="padding: 20px">
-          <div class="col-md-12">
-            <label>KPI Name:</label>
-            <input type="text" class="form-control pull-right new_kpi_name" style="; width: 460px">
-            
-          </div>
-          
-        </div>
-      
-      <div class="row" style="padding: 20px">
-          <div class="col-md-12">
-            <label>Dimension:</label>
-            <input type="text" class="form-control pull-right new_kpi_dim" style=" width: 460px">
-            
-          </div>
-          
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default new_kpi_add_btn" data-dismiss="modal">Add</button>
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-      </div>
-    </div>
-
-  </div>
-</div>
   </div>
  </div>
     
@@ -257,6 +212,24 @@
 <script type="text/javascript">
   
 $(document).ready(function(){
+
+  $('#kpimap').hide();
+  $('#savedFlows').hide();
+  $('.savedData').hide();
+  $('#dimensionInfo').hide();
+
+  $('#addNewKpi').click(function(){
+    var value = 'kpi';
+    $('#kpimap').find('input, select').not(':button, :submit, :reset, :hidden').val('').removeAttr('checked').removeAttr('selected');
+
+    kpiFunction();
+    subKpiFunction(value);
+    productSelection(value);
+    timePeriodSelection(value);
+    geography(value);
+    dimeCalculation();
+  });
+
   // kpi fields
   function kpiFunction(){
     var kpi = [];
@@ -274,17 +247,6 @@ $(document).ready(function(){
     $('.kpiArr').html(kpiVal).contents();
   }
 
-  $('#dimensionInfo').hide();
-  $('#kpimap').hide();
-
-  $('#choose_project').find('input[type="checkbox"]').change(function(){ 
-      
-      var value = $('input[type="checkbox"]:checked').val();
-      // console.log('Selected project: '+value);
-
-      subKpiFunction(value);
-  });
-  
 // sub kpi fields
   function subKpiFunction(value){
     var subKpi = [];
@@ -330,7 +292,6 @@ $(document).ready(function(){
   }
 
   // time period selection fields
-
   function timePeriodSelection(value){
     var timePerSelArr = [];
       var timePerSelVal = '';
@@ -368,7 +329,7 @@ $(document).ready(function(){
       }
       if(geographylArr.length > 0 ){
         for (var i=0; i<geographylArr.length; i++) {
-            geographyVal += '<input type="checkbox" class="geography" name="time_period_selection" value="'+geographylArr[i]+'"> '+geographylArr[i]+'<br>';
+            geographyVal += '<input type="checkbox" class="geography kpi_dim" name="time_period_selection" value="'+geographylArr[i]+'"> '+geographylArr[i]+'<br>';
         }
       }
 
@@ -379,46 +340,35 @@ $(document).ready(function(){
 function dimeCalculation(){
     var calWithSubKpi = [],
         mergeWithSubKpi = '',
-        selectedEle = [];
+        sub_kpi = '';
 
     $('#calSubKpi .check_sub_kpi:checked').each(function(){
-      
-      selectedEle.push($(this).val());
-
+      sub_kpi = $(this).val();
     });
 
-    if (selectedEle.length == 0) {
-        $('#dimensionInfo').hide();
-    }else {
-      $('#dimensionInfo').show();
-    }
-    
-    for(i=0; i<selectedEle.length; i++){
+    // productSelection(sub_kpi);
+    // timePeriodSelection(sub_kpi);
+    // geography(sub_kpi);
 
-        if(selectedEle[i] == 'Share' || selectedEle[i] == 'Share Change'){
-            
-            calWithSubKpi.push('Share-Drug Class share in Market', 'Product share in Drug Class');
-        }else {
-            
-            calWithSubKpi.push('Change-Yoy', 'YTD', 'QTD');
-        }
+    $('#dimensionInfo').show();
+
+    if(sub_kpi == 'Share' || sub_kpi == 'Share Change'){
+          
+      calWithSubKpi.push('Share-Drug Class share in Market', 'Product share in Drug Class');
+    }else {
+          
+      calWithSubKpi.push('YOY', 'YTD', 'QTD');
     }
-      var unique = calWithSubKpi.filter(function(elem, index, self) {
-          return index == self.indexOf(elem);
-      });
-      for(var ele=0; ele<unique.length; ele++){
-            mergeWithSubKpi += '<input type="checkbox" class="dim_cal" name="merge_with_sub_kpi" value="'+unique[ele]+'"> '+unique[ele]+'<br>';
-      }
+
+    var unique = calWithSubKpi.filter(function(elem, index, self) {
+        return index == self.indexOf(elem);
+    });
+    for(var ele=0; ele<unique.length; ele++){
+          mergeWithSubKpi += '<input type="checkbox" class="dim_cal kpi_dim" name="merge_with_sub_kpi" value="'+unique[ele]+'"> '+unique[ele]+'<br>';
+    }
 
     $('.calculateSubKpi').html(mergeWithSubKpi).contents();
 }
-
-  $(document).on('change' ,'#calSubKpi .check_sub_kpi', function(){
-    var value = $('#calSubKpi .check_sub_kpi:checked').val();
-
-    dimeCalculation();
-
-  });
 
 $(document).on('click', '.new_kpi_add_btn', function()
 {
@@ -477,15 +427,40 @@ $(document).on('change', '.geo1', function()
         console.log($(this).closest('.dime').find('.geoo').val()); 
 });
 
+// change view
 $('#proj_name').change(function(){
   var kpiKey = $(this).val();
+  $('#viewType').val(kpiKey);
   if (kpiKey != '') {
-    $('#kpimap').show();
-    $('#viewType').val(kpiKey);
-    $('.savedData').hide();
+    $('.wrongSelection').hide(); // wrong selection message
+    $('#kpimap').show();  // KPI checkbox division
+    $('.savedData').show(); // view flows of data
+    $('#savedFlows').show(); // view flows titles
+    $('#dimensionInfo').hide(); // dimension related division
+
+    kpiFunction(kpiKey);
+    subKpiFunction(kpiKey);
+    productSelection(kpiKey);
+    timePeriodSelection(kpiKey);
+    geography(kpiKey);
+    dimeCalculation();
+
+    // $('#choose_project').find('input[type="checkbox"]').change(function(){ 
+    //     var value = $('input[type="checkbox"]:checked').val();
+    //     console.log('Selected project: '+$(this).val());
+
+    //     subKpiFunction(value);
+    // });
+
+    $(document).on('change' ,'#calSubKpi .check_sub_kpi', function(){
+      var value = $('#calSubKpi .check_sub_kpi:checked').val();
+
+      dimeCalculation();
+
+    });
 
     $.ajax({
-        url : "{{url()}}/getMappingKpi",
+        url : "{{url()}}/getExeFlow",
         type: "POST",
         dataType: 'json',
         headers: {
@@ -493,71 +468,103 @@ $('#proj_name').change(function(){
         },
         data: {'kpiKey':kpiKey},
         success: function(response){
-          console.log(response.data[0]);
-          var argValue = '';
-          if (response.data.length > 0){
-            $('#viewId').val(response.data[0]['id']);
-            $('#sub_kpi_val').val(response.data[0]['sub_kpi']);
-            var kpi_type = '';
+          var html = '';
 
-            // kpi checked values
-            kpiFunction();
+          if (response.status == 'success') {
+            var flowRes = response.data.getKpiMaps;
 
-            kpi_type = JSON.parse(response.data[0]['kpi']);
+            for (var i = 0; i < flowRes.length; i++) {
+              var viewName = flowRes[i]['project_name'];
+              var kpiFlow = JSON.parse(flowRes[i]['kpi']);
+              var subKpiFlow = flowRes[i]['sub_kpi'];
+              var dimFlow = JSON.parse(flowRes[i]['dimension']);
+              var flowId = flowRes[i]['id'];
+              
+              $('.savedData').show();
 
-            for (var i=0; i<kpi_type.length; i++) {
-              $('input[value="'+kpi_type[i]+'"]').attr( 'checked', true );
-            } 
-            
-            var sub_kpi = response.data[0]['sub_kpi'];
-            
-            if (kpi_type.length > 0) {
-              argValue = kpi_type[0];
-
-              subKpiFunction(argValue);
-              $('input[value="'+sub_kpi+'"]').attr('checked', 'true');
-            }
-
-            if (sub_kpi.length > 0) {
-              argValue = sub_kpi;
-              $('#dimensionInfo').show();
-
-              var kpi_dim = JSON.parse(response.data[0]['dimension']);
-
-              productSelection(argValue);
-              timePeriodSelection(argValue);
-              geography(argValue);
-              dimeCalculation();
-
-              for (var j = 0; j < kpi_dim.length; j++) {
-                $('input[value="'+kpi_dim[j]+'"]').attr('checked', 'true');
+              var kpi_arr = '<div class="col-md-2">';
+              for (var kpi = 0; kpi < kpiFlow.length; kpi++) {
+                kpi_arr += kpiFlow[kpi]+'<br>';
               }
+              kpi_arr += '</div>';
 
-            } else{
-              $('#dimensionInfo').hide();
+              var dim_arr = '<div class="col-md-3">';
+              for (var dim = 0; dim < dimFlow.length; dim++) {
+                dim_arr += dimFlow[dim]+'<br>';
+              }
+              dim_arr += '</div>';            
+              
+              html += '<div class="row">'+
+                          '<div class="col-md-3 ">'+viewName+'</div>'+
+                          kpi_arr+
+                          '<div class="col-md-2 ">'+subKpiFlow+'</div>'+
+                          dim_arr+
+                          '<div class="col-md-2"><input type="hidden" value="'+flowId+'" class="flowId"><button type="button" class="btn-xs btn-primary edit-flow"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></div>'+
+                        '</div><hr><br>';
+
             }
-
-          }else{ // View type empty
-            $('#viewId').val(0);
-            $('#sub_kpi_val').val(0);
-            kpiFunction();
-
-            $('.kpi_type').find('input[type="checkbox"]').each(function(){
-              $(this).attr( 'checked', false );
-            });
             
-            subKpiFunction(argValue);
-            productSelection(argValue);
-            timePeriodSelection(argValue);
-            geography(argValue);
-            dimeCalculation();            
+          }else{
+            html += '<b>No data to show.<br>Please insert data to '+kpiKey+' view.</b>';
           }
-
+          $('.savedData').html(html).contents();
         }
+
     });
   }else{
     $('#kpimap').hide();
+    $('#savedFlows').hide();
+    $('.wrongSelection').show();
+    $('.wrongSelection').html('<b>Please, Select correct view...!</b>').contents();
   }
+});
+
+$('body').on('click', '.edit-flow', function(){
+
+  var flowId = $(this).closest('.col-md-2').find('.flowId').val();
+
+  $.ajax({
+    url : "{{url()}}/getFlowForEdit",
+        type: "POST",
+        dataType: 'json',
+        headers: {
+             'X-CSRF-TOKEN': "{{ csrf_token() }}",
+        },
+        data: {'flowId':flowId},
+        success: function(response){
+          if (response.status == 'success') {
+            var flow = response.data[0];
+            var kpiArr = JSON.parse(flow['kpi']);
+            var dimArr = JSON.parse(flow['dimension']);
+
+            console.log(flow);
+            $('#viewId').val(flow['id']);
+
+            kpiFunction(kpiArr);
+            // kpi checked values
+            for (var kpi = 0; kpi < kpiArr.length; kpi++) {
+              $('input[value="'+kpiArr[kpi]+'"]').attr('checked', 'true');
+            }
+
+            subKpiFunction(kpiArr);
+
+            // subkpi cheked value
+            $('input[value="'+flow['sub_kpi']+'"]').attr('checked', 'true');
+
+            productSelection(kpiArr);
+            timePeriodSelection(kpiArr);
+            geography(kpiArr);
+            dimeCalculation();
+
+            // dimensions checked values
+            for (var dim = 0; dim < dimArr.length; dim++) {
+              $('input[value="'+dimArr[dim]+'"]').attr('checked', 'true');
+            }
+
+          }
+        }
+  });
+
 });
 
   $('#save_btn').click(function(e){
@@ -569,11 +576,10 @@ $('#proj_name').change(function(){
           time_period_selection = [],
           geography = [],
           product_selection_calculation = [],
-          view_type = $('#proj_name').val(),
+          view_type = $('#viewType').val(),
           viewId = $('#viewId').val();
-          exe_sub_kpi = $('#sub_kpi_val').val();
-
-console.log('Project Name: '+view_type);
+          // exe_sub_kpi = $('#sub_kpi_val').val();
+          console.log(view_type);
 
       $('#choose_project').find('input[type="checkbox"]:checked').each(function(){
         kpi_arr.push($(this).val());
@@ -581,16 +587,15 @@ console.log('Project Name: '+view_type);
       });
 
       sub_kpi = $('#calSubKpi').find('input[name="checkSubKPI"]:checked').val();
-      //  find('input[name=myRadio]:checked').val();
-      //  sub_kpi = checkSubKPI.filter(':checked').val(); 
-          console.log('Sub KPI value: '+sub_kpi);
-
-      // });
 
       $('#dimensionInfo').find('input[type="checkbox"]:checked').each(function(){
         dim_arr.push($(this).val());
 
       });
+
+      console.log(kpi_arr);
+      console.log(sub_kpi);
+      console.log(dim_arr);
 
       $.ajax({
         url : "{{url()}}/saveMappingKpi",
@@ -599,37 +604,53 @@ console.log('Project Name: '+view_type);
         headers: {
              'X-CSRF-TOKEN': "{{ csrf_token() }}",
         },
-        data: {'kpi_arr':kpi_arr,'sub_kpi':sub_kpi,'dim_arr':dim_arr,'view_type':view_type,'viewId':viewId,'exe_sub_kpi':exe_sub_kpi},
+        data: {'kpi_arr':kpi_arr,'sub_kpi':sub_kpi,'dim_arr':dim_arr,'view_type':view_type,'viewId':viewId},
         success: function(response){
+          var html = '';
+          
           if (response.status == 'success') {
-            console.log(response.data);
+            // console.log(response.data);
             alert('Saved Successfully...!');
 
-            var kpi_arr = '<div class="col-md-2">';
-            for (var i = 0; i < response.data.kpi_arr.length; i++) {
-              kpi_arr += response.data.kpi_arr[i]+'<br>';
+            var flowRes = response.data.getKpiMaps;
+
+            for (var i = 0; i < flowRes.length; i++) {
+              var viewName = flowRes[i]['project_name'];
+              var viewId = flowRes[i]['id'];
+              var kpiFlow = JSON.parse(flowRes[i]['kpi']);
+              var subKpiFlow = flowRes[i]['sub_kpi'];
+              var dimFlow = JSON.parse(flowRes[i]['dimension']);
+              
+              $('.savedData').show();
+
+              var kpi_arr = '<div class="col-md-2">';
+              for (var kpi = 0; kpi < kpiFlow.length; kpi++) {
+                kpi_arr += kpiFlow[kpi]+'<br>';
+              }
+              kpi_arr += '</div>';
+
+              var dim_arr = '<div class="col-md-3">';
+              for (var dim = 0; dim < dimFlow.length; dim++) {
+                dim_arr += dimFlow[dim]+'<br>';
+              }
+              dim_arr += '</div>';            
+              
+              html += '<div class="row">'+
+                          '<div class="col-md-3 ">'+viewName+'</div>'+
+                          kpi_arr+
+                          '<div class="col-md-2 ">'+subKpiFlow+'</div>'+
+                          dim_arr+
+                          '<div class="col-md-2"><input type="hidden" value="'+viewId+'" class="flowId"><button type="button" class="btn-xs btn-primary edit-flow"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></div>'+
+                        '</div><hr><br>';
+
             }
-            kpi_arr += '</div>';
 
-            $('.savedData').show();
+            $('.savedData').html(html).contents();
 
-            var dim_arr = '<div class="col-md-3">';
-            for (var i = 0; i < response.data.dim_arr.length; i++) {
-              dim_arr += response.data.dim_arr[i]+'<br>';
-            }
-            dim_arr += '</div>';            
-            
-            var html = '<div class="row">'+
-                      '<div class="col-md-3 ">'+response.data['view_type']+'</div>'+
-                      kpi_arr+
-                      '<div class="col-md-2 ">'+response.data['sub_kpi']+'</div>'+
-                      dim_arr+
-                      '<div class="col-md-2"><i class="fa fa-check" area-hidden="true"></i></div>'+
-                    '</div>';
+            // $("#kpimap").get(0).reset();
 
-            $('.savedData').html(html);
           }
-        },
+        }
       });
       
   });

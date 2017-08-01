@@ -49,6 +49,10 @@ Route::any('/getExtractor', 'CommonController@getExtractor');
 Route::any('/save_proj_into_session', 'CommonController@save_proj_into_session');
 Route::any('/saveMappingKpi', 'CommonController@saveMappingKpi');
 Route::any('/getMappingKpi', 'CommonController@getMappingKpi');
+Route::any('/getDimensionValOfSubKpi', 'CommonController@getDimensionValOfSubKpi');
+
+Route::any('/getExeFlow', 'CommonController@getExeFlow');
+Route::any('/getFlowForEdit', 'CommonController@getFlowForEdit');
 
 
 Route::get('/Symphony_Physican_Rx_Data',function(){
