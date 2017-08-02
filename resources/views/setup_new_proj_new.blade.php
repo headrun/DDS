@@ -250,6 +250,7 @@ $(document).ready(function(){
     timePeriodSelection(value);
     geography(value);
     dimeCalculation();
+    $('#product_selection_calculation').hide(); // dimension calculations
   });
 
   // kpi fields
@@ -463,7 +464,7 @@ $('#proj_name').change(function(){
     $('.savedData').show(); // view flows of data
     $('#savedFlows').show(); // view flows titles
     $('#dimensionInfo').hide(); // dimension related division
-    $('#product_selection_calculation').hide();
+    $('#product_selection_calculation').hide(); // dimension calculations
 
     kpiFunction(kpiKey);
     subKpiFunction(kpiKey);
