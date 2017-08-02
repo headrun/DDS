@@ -204,6 +204,28 @@
   </div>
 </div>
 
+<div id="sucessMsg" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg" style="width: 170px;">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Sucess</h4>
+      </div>
+      <div class="modal-body">
+        <label>Saved&nbsp;Successfully...!</label>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
   </div>
  </div>
     
@@ -609,7 +631,9 @@ $('body').on('click', '.edit-flow', function(){
           
           if (response.status == 'success') {
             // console.log(response.data);
-            alert('Saved Successfully...!');
+
+            // alert('Saved Successfully...!');
+            $('#sucessMsg').modal('show'); 
 
             var flowRes = response.data.getKpiMaps;
 
