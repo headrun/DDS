@@ -217,7 +217,7 @@
         <label>Saved&nbsp;Successfully...!</label>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
       </div>
     </div>
 
@@ -373,12 +373,17 @@ function dimeCalculation(){
 
     $('#dimensionInfo').show();
 
-    if(sub_kpi == 'Share' || sub_kpi == 'Share Change'){
+    if(sub_kpi == 'Absolute Volume'){
+      calWithSubKpi = [];
+    }else if(sub_kpi == 'Share'){
           
-      calWithSubKpi.push('Share-Drug Class share in Market', 'Product share in Drug Class');
+      calWithSubKpi.push('Drug Class share in Market', 'Product share in Drug Class');
+    }else if(sub_kpi == 'Volume Change'){
+
+      calWithSubKpi.push('YoY', 'Current year vs previous');
     }else {
           
-      calWithSubKpi.push('YOY', 'YTD', 'QTD');
+      calWithSubKpi.push('Drug Class share in Market', 'Product share in Drug Class', 'YoY', 'Current year vs previous');
     }
 
     var unique = calWithSubKpi.filter(function(elem, index, self) {
@@ -458,6 +463,7 @@ $('#proj_name').change(function(){
     $('.savedData').show(); // view flows of data
     $('#savedFlows').show(); // view flows titles
     $('#dimensionInfo').hide(); // dimension related division
+    $('#product_selection_calculation').hide();
 
     kpiFunction(kpiKey);
     subKpiFunction(kpiKey);
@@ -475,7 +481,7 @@ $('#proj_name').change(function(){
 
     $(document).on('change' ,'#calSubKpi .check_sub_kpi', function(){
       var value = $('#calSubKpi .check_sub_kpi:checked').val();
-
+      $('#product_selection_calculation').show();
       dimeCalculation();
 
     });
@@ -520,7 +526,7 @@ $('#proj_name').change(function(){
                           kpi_arr+
                           '<div class="col-md-2 ">'+subKpiFlow+'</div>'+
                           dim_arr+
-                          '<div class="col-md-2"><input type="hidden" value="'+flowId+'" class="flowId"><button type="button" class="btn-xs btn-primary edit-flow"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></div>'+
+                          '<div class="col-md-2"><input type="hidden" value="'+flowId+'" class="flowId"><button type="button" class="btn-xs btn-primary edit-flow"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button>&nbsp;&nbsp;<button type="button" class="btn-xs btn-danger delete-flow"><i class="fa fa-trash-o" aria-hidden="true"></i></button></div>'+
                         '</div><hr><br>';
 
             }
@@ -540,12 +546,32 @@ $('#proj_name').change(function(){
   }
 });
 
+// $('.flowsInfo').on('click', '.delete-flow', function(){
+//   var flowId = $(this).closest('.col-md-2').find('.flowId').val();
+//   // console.log('Deleted record is: '+flowId);
+
+//   $.ajax({
+//         url : "{{url()}}/getFlowForDelete",
+//         type: "POST",
+//         dataType: 'json',
+//         headers: {
+//              'X-CSRF-TOKEN': "{{ csrf_token() }}",
+//         },
+//         data: {'flowId':flowId},
+//         success: function(response){
+//           if (response.status == 'success') {
+
+//           }
+//         }
+//   });
+// });
+
 $('body').on('click', '.edit-flow', function(){
 
   var flowId = $(this).closest('.col-md-2').find('.flowId').val();
 
   $.ajax({
-    url : "{{url()}}/getFlowForEdit",
+        url : "{{url()}}/getFlowForEdit",
         type: "POST",
         dataType: 'json',
         headers: {
