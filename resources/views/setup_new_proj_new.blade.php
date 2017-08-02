@@ -146,11 +146,12 @@
                                 <div class="panel-heading">Saved KPI'S</div>
                                     <div class="panel-body flowsInfo">
                                       <div class="row" style="margin-bottom: 7px;">
+                                        <div class="col-md-1"><label>Id</label></div>
                                         <div class="col-md-3 "><label>View</label></div>
                                         <div class="col-md-2 "><label>KPI</label></div>
                                         <div class="col-md-2 "><label>Sub KPI</label></div>
-                                        <div class="col-md-3 "><label>Dimension</label></div>
-                                        <div class="col-md-2"><label>Ready for Deployment</label></div>
+                                        <div class="col-md-2 "><label>Dimension</label></div>
+                                        <div class="col-md-2"><label></label></div>
                                       </div>
                                     <div class="savedData"></div>                                
                                     <button class="btn btn-success pull-right" data-toggle="modal" data-target="#send_to_workflow">Send for Workflow</button>
@@ -205,7 +206,7 @@
 </div>
 
 <div id="sucessMsg" class="modal fade" role="dialog">
-  <div class="modal-dialog modal-lg" style="width: 170px;">
+  <div class="modal-dialog modal-lg" style="width: 200px;">
 
     <!-- Modal content-->
     <div class="modal-content">
@@ -224,7 +225,25 @@
   </div>
 </div>
 
+<div id="deleteMsg" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg" style="width: 200px;">
 
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Sucess</h4>
+      </div>
+      <div class="modal-body">
+        <label>Deleted&nbsp;Successfully...!</label>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
+      </div>
+    </div>
+
+  </div>
+</div>
 
   </div>
  </div>
@@ -516,18 +535,19 @@ $('#proj_name').change(function(){
               }
               kpi_arr += '</div>';
 
-              var dim_arr = '<div class="col-md-3">';
+              var dim_arr = '<div class="col-md-2">';
               for (var dim = 0; dim < dimFlow.length; dim++) {
                 dim_arr += dimFlow[dim]+'<br>';
               }
               dim_arr += '</div>';            
               
               html += '<div class="row">'+
+                          '<div class="col-md-1 ">'+flowId+'</div>'+
                           '<div class="col-md-3 ">'+viewName+'</div>'+
                           kpi_arr+
                           '<div class="col-md-2 ">'+subKpiFlow+'</div>'+
                           dim_arr+
-                          '<div class="col-md-2"><input type="hidden" value="'+flowId+'" class="flowId"><button type="button" class="btn-xs btn-primary edit-flow"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button>&nbsp;&nbsp;<button type="button" class="btn-xs btn-danger delete-flow"><i class="fa fa-trash-o" aria-hidden="true"></i></button></div>'+
+                          '<div class="col-md-2"><input type="hidden" value="'+flowId+'" class="flowId"><button type="button" class="btn-xs btn-primary edit-flow"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button>&nbsp;&nbsp;<button type="button" class="btn-xs btn-danger delete-flow confirm-delete"><i class="fa fa-trash-o" aria-hidden="true"></i></button></div>'+
                         '</div><hr><br>';
 
             }
@@ -547,25 +567,67 @@ $('#proj_name').change(function(){
   }
 });
 
-// $('.flowsInfo').on('click', '.delete-flow', function(){
-//   var flowId = $(this).closest('.col-md-2').find('.flowId').val();
-//   // console.log('Deleted record is: '+flowId);
+$('.flowsInfo').on('click', '.delete-flow', function(){
+  var flowId = $(this).closest('.col-md-2').find('.flowId').val();
+  var view_type = $('#viewType').val();
+  console.log('Deleted record is: '+flowId);
+  console.log('View name is: '+view_type);
 
-//   $.ajax({
-//         url : "{{url()}}/getFlowForDelete",
-//         type: "POST",
-//         dataType: 'json',
-//         headers: {
-//              'X-CSRF-TOKEN': "{{ csrf_token() }}",
-//         },
-//         data: {'flowId':flowId},
-//         success: function(response){
-//           if (response.status == 'success') {
+  $.ajax({
+        url : "{{url()}}/getFlowForDelete",
+        type: "POST",
+        dataType: 'json',
+        headers: {
+             'X-CSRF-TOKEN': "{{ csrf_token() }}",
+        },
+        data: {'flowId':flowId,'view_type':view_type},
+        success: function(response){
+          var html = '';
+          if (response.status == 'success') {
+            $('#deleteMsg').modal('show');
 
-//           }
-//         }
-//   });
-// });
+            var flowRes = response.data.getKpiMaps;
+
+            for (var i = 0; i < flowRes.length; i++) {
+              var viewName = flowRes[i]['project_name'];
+              var viewId = flowRes[i]['id'];
+              var kpiFlow = JSON.parse(flowRes[i]['kpi']);
+              var subKpiFlow = flowRes[i]['sub_kpi'];
+              var dimFlow = JSON.parse(flowRes[i]['dimension']);
+              
+              $('.savedData').show();
+
+              var kpi_arr = '<div class="col-md-2">';
+              for (var kpi = 0; kpi < kpiFlow.length; kpi++) {
+                kpi_arr += kpiFlow[kpi]+'<br>';
+              }
+              kpi_arr += '</div>';
+
+              var dim_arr = '<div class="col-md-2">';
+              for (var dim = 0; dim < dimFlow.length; dim++) {
+                dim_arr += dimFlow[dim]+'<br>';
+              }
+              dim_arr += '</div>';            
+              
+              html += '<div class="row">'+
+                          '<div class="col-md-1 ">'+flowId+'</div>'+
+                          '<div class="col-md-3 ">'+viewName+'</div>'+
+                          kpi_arr+
+                          '<div class="col-md-2 ">'+subKpiFlow+'</div>'+
+                          dim_arr+
+                          '<div class="col-md-2"><input type="hidden" value="'+viewId+'" class="flowId"><button type="button" class="btn-xs btn-primary edit-flow"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button>&nbsp;&nbsp;<button type="button" class="btn-xs btn-danger delete-flow confirm-delete"><i class="fa fa-trash-o" aria-hidden="true"></i></button></div>'+
+                        '</div><hr><br>';
+
+            }
+
+            $('.savedData').html(html).contents();
+          }else{
+            html += '<b>No data to show.<br>Please insert data to '+kpiKey+' view.</b>';
+          }
+        }
+  });
+
+});
 
 $('body').on('click', '.edit-flow', function(){
 
@@ -679,25 +741,24 @@ $('body').on('click', '.edit-flow', function(){
               }
               kpi_arr += '</div>';
 
-              var dim_arr = '<div class="col-md-3">';
+              var dim_arr = '<div class="col-md-2">';
               for (var dim = 0; dim < dimFlow.length; dim++) {
                 dim_arr += dimFlow[dim]+'<br>';
               }
               dim_arr += '</div>';            
               
               html += '<div class="row">'+
+                          '<div class="col-md-1 ">'+flowId+'</div>'+
                           '<div class="col-md-3 ">'+viewName+'</div>'+
                           kpi_arr+
                           '<div class="col-md-2 ">'+subKpiFlow+'</div>'+
                           dim_arr+
-                          '<div class="col-md-2"><input type="hidden" value="'+viewId+'" class="flowId"><button type="button" class="btn-xs btn-primary edit-flow"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></div>'+
+                          '<div class="col-md-2"><input type="hidden" value="'+viewId+'" class="flowId"><button type="button" class="btn-xs btn-primary edit-flow"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button>&nbsp;&nbsp;<button type="button" class="btn-xs btn-danger delete-flow confirm-delete"><i class="fa fa-trash-o" aria-hidden="true"></i></button></div>'+
                         '</div><hr><br>';
 
             }
 
             $('.savedData').html(html).contents();
-
-            // $("#kpimap").get(0).reset();
 
           }
         }

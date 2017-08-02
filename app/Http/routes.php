@@ -60,7 +60,7 @@ Route::any('/getDimensionValOfSubKpi', 'CommonController@getDimensionValOfSubKpi
 
 Route::any('/getExeFlow', 'CommonController@getExeFlow');
 Route::any('/getFlowForEdit', 'CommonController@getFlowForEdit');
-
+Route::any('/getFlowForDelete', 'CommonController@getFlowForDelete');
 
 Route::get('/Symphony_Physican_Rx_Data',function(){
 	return view('Physican_Rx_Data');

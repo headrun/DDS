@@ -200,6 +200,26 @@ class CommonController extends Controller
 
     }
 
+    public function getFlowForDelete(){
+        $inputs = Input::all();
+
+        DB::table('kpi_selection_info')
+            ->where('id', '=', $inputs['flowId'])
+            ->delete();
+
+        $getKpiMaps = DB::table('kpi_selection_info')
+                    ->where('project_name', '=', $inputs['view_type'])
+                    ->get();
+
+        $totFlows = compact('getKpiMaps');
+
+        if (count($getKpiMaps) > 0) {
+            return Response::json(array('status'=> 'success', 'data'=> $totFlows));
+        }else{
+            return Response::json(array('status'=> 'fail'));
+        }
+    }
+
     public function getMappingKpi(){
         $inputs = Input::all();
 
