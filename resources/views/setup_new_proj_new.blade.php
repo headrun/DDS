@@ -610,7 +610,7 @@ $('.flowsInfo').on('click', '.delete-flow', function(){
               dim_arr += '</div>';            
               
               html += '<div class="row">'+
-                          '<div class="col-md-1 ">'+flowId+'</div>'+
+                          '<div class="col-md-1 ">'+viewId+'</div>'+
                           '<div class="col-md-3 ">'+viewName+'</div>'+
                           kpi_arr+
                           '<div class="col-md-2 ">'+subKpiFlow+'</div>'+
@@ -748,7 +748,7 @@ $('body').on('click', '.edit-flow', function(){
               dim_arr += '</div>';            
               
               html += '<div class="row">'+
-                          '<div class="col-md-1 ">'+flowId+'</div>'+
+                          '<div class="col-md-1 ">'+viewId+'</div>'+
                           '<div class="col-md-3 ">'+viewName+'</div>'+
                           kpi_arr+
                           '<div class="col-md-2 ">'+subKpiFlow+'</div>'+
