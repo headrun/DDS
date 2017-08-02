@@ -12,6 +12,7 @@
 */
 
 Route::get('/dashboard', 'AjaxCallTest@dash');
+Route::get('/', 'AjaxCallTest@dash');
 
 Route::any('/login1', 'AjaxCallTest@login');
 
@@ -20,10 +21,10 @@ Route::get('/login',function(){
 	return view('Login.Login');
 });
 
-Route::get('/',function(){
-	return view('Dashboard.index');
-	// return view('Dashboard.index');
-});
+// Route::get('/',function(){
+// 	return view('Dashboard.index');
+// 	// return view('Dashboard.index');
+// });
 
 Route::get('/extractor_library',function(){
 	return view('extractor_library');
@@ -32,13 +33,19 @@ Route::get('/extractor_library',function(){
 
 Route::get('/setup_new_proj','CommonController@setup_new_proj');
 
+Route::get('/mapping_kpi',function(){
+	return view('mapping_kpi');
+});
+
 Route::any('/delete_project','AjaxCallTest@delete_project');
+
+
 
 Route::get('/setup_new_proj_new',function(){
 	return view('setup_new_proj_new');
 });
 
-Route::any('/validate','AjaxCallTest@validate1');
+Route::any('/validate','CommonController@validate1');
 
 Route::any('test', 'AjaxCallTest@test');
 Route::any('test1', 'AjaxCallTest@test1');

@@ -104,24 +104,26 @@ class AjaxCallTest extends Controller
     return view('Dashboard.index', compact($data));
 
   }
-    public function validate1()
-  {
+
+  public function validate1(){
     $inputs =Input::all();
     $values = $inputs['checkbox'];
+
+    return $values;
     
     $final_array = array();
     $val = DB::table('validate')->whereIn('description', $values)->orderBy('val_result')->get();
     
     foreach ($val as $v) 
     {
-      $v->description=str_replace(" ","_",$v->description); 
-
+      $v->description=str_replace(" ","_",$v->description);
     }
     
     $data1 = array('val');
     return view('validate', compact($data1));
     
   }
+
   public function struct()
   {
     $inputs =Input::all();
@@ -131,16 +133,16 @@ class AjaxCallTest extends Controller
     return view('struct', compact($data1));
     
   }
+  
   public function kpi()
   {
     $view = DB::table('mapping_kpi')->select('view')->distinct()->get();
     //$view = DB::table('mapping_kpi')->select('')->get();
     $data1 = array('view');
-    return view('kpi_map_new', compact($data1));
-    
-    
-    
+    // return view('kpi_map_new', compact($data1));
+    return view('setup_new_proj_new', compact($data1));
   }
+
   public function kpi1()
   {
     $inputs =Input::all();
@@ -187,10 +189,6 @@ class AjaxCallTest extends Controller
       return redirect('/dashboard');
     else
       return view('Login.Login');
-    
-    
-    
   }
-
 
 }

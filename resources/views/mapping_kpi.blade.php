@@ -319,9 +319,10 @@ $(document).ready(function(){
       var geographyVal = '';
       if (typeof value != 'undefined') {
         geographylArr = [
+                'National',
                 'State',
                 'City',
-                'Territory'
+                'ZIP'
         ];
       }else{
         geographylArr.length = 0;

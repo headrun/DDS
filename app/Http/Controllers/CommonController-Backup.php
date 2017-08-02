@@ -115,20 +115,6 @@ class CommonController extends Controller
         }
     }
 
-    public function getFlowForEdit(){
-        $inputs = Input::all();
-
-        $flowInfo = DB::table('kpi_selection_info')
-                        ->where('id', '=', $inputs['flowId'])
-                        ->get();
-        
-        if (count($flowInfo) > 0) {
-            return Response::json(array('status'=> 'success', 'data'=> $flowInfo));
-        }else{
-            return Response::json(array('status'=> 'fail'));
-        }
-    }
-
     public function getDimensionValOfSubKpi(){
         $inputs =  Input::all();
         
@@ -164,19 +150,36 @@ class CommonController extends Controller
 
     public function saveMappingKpi(){
         $inputs =  Input::all();
+        $extInfo = DB::table('kpi_selection_info')->select('project_name')->get();
         
-        if ($inputs['viewId'] != 0) {
-            // update query
+        $check = DB::table('kpi_selection_info')
+                    ->where('project_name', '=', $inputs['view_type'])
+                    ->where('kpi', '=', json_encode($inputs['kpi_arr']))
+                    ->where('sub_kpi', '=', $inputs['sub_kpi'])
+                    ->get();
+
+        if (count($check) > 0) {
+            //update command
             DB::table('kpi_selection_info')
-                ->where('id', '=', $inputs['viewId'])
+                ->where('project_name', '=', $inputs['view_type'])
+                ->where('kpi', '=', json_encode($inputs['kpi_arr']))
+                ->where('sub_kpi', '=', $inputs['exe_sub_kpi'])
                 ->update([
-                    'kpi'=>json_encode($inputs['kpi_arr']),
-                    'sub_kpi'=>$inputs['sub_kpi'],
                     'dimension'=>json_encode($inputs['dim_arr'])
                 ]);
+        }
 
-        }else{
-            // insert query
+
+
+        if (($inputs['viewId'] != 0 && $inputs['exe_sub_kpi'] == $inputs['sub_kpi']) || $inputs['viewId'] != 0 && $inputs['exe_sub_kpi'] != $inputs['sub_kpi']) {
+            DB::table('kpi_selection_info')
+                ->where('project_name', '=', $inputs['view_type'])
+                ->where('sub_kpi', '=', $inputs['sub_kpi'])
+                ->update([
+                    'kpi' => json_encode($inputs['kpi_arr']),
+                    'dimension'=>json_encode($inputs['dim_arr'])
+                ]);
+        }elseif($inputs['exe_sub_kpi'] != $inputs['sub_kpi']){
             DB::table('kpi_selection_info')->insert([
                 'id'=> '',
                 'project_name'=> $inputs['view_type'],
@@ -184,20 +187,17 @@ class CommonController extends Controller
                 'sub_kpi'=>$inputs['sub_kpi'],
                 'dimension'=>json_encode($inputs['dim_arr'])
             ]);
-
-        }
-        $getKpiMaps = DB::table('kpi_selection_info')
-                    ->where('project_name', '=', $inputs['view_type'])
-                    ->get();
-
-        $totFlows = compact('getKpiMaps');
-
-        if (count($getKpiMaps) > 0) {
-            return Response::json(array('status'=> 'success', 'data'=> $totFlows));
         }else{
-            return Response::json(array('status'=> 'fail'));
+            DB::table('kpi_selection_info')->insert([
+                'id'=> '',
+                'project_name'=> $inputs['view_type'],
+                'kpi'=> json_encode($inputs['kpi_arr']),
+                'sub_kpi'=>$inputs['sub_kpi'],
+                'dimension'=>json_encode($inputs['dim_arr'])
+            ]);
         }
-
+        
+        return Response::json(array('status'=> 'success', 'data'=> $inputs));
     }
 
     public function getMappingKpi(){
@@ -210,25 +210,6 @@ class CommonController extends Controller
         }
 
         return Response::json(array('status'=> 'success', 'data'=> $kpis_data));
-    }
-
-    public function validate1(){
-        $inputs =Input::all();
-        $values = $inputs['checkbox'];
-
-        // return $values;
-        
-        $final_array = array();
-        $val = DB::table('validate')->whereIn('description', $values)->orderBy('val_result')->get();
-        
-        foreach ($val as $v) 
-        {
-          $v->description=str_replace(" ","_",$v->description);
-        }
-        
-        $data1 = array('val');
-        return view('validate', compact($data1));
-        
     }
 
     /**
