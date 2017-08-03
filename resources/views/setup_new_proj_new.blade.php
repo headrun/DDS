@@ -137,7 +137,6 @@
                           </div>
                           </form>
 
-
                       <br>
 
                         <div class="row" id="savedFlows">
@@ -583,6 +582,7 @@ $('.flowsInfo').on('click', '.delete-flow', function(){
         data: {'flowId':flowId,'view_type':view_type},
         success: function(response){
           var html = '';
+          var kpiKey = response.kpiKey;
           if (response.status == 'success') {
             $('#deleteMsg').modal('show');
 
@@ -622,7 +622,9 @@ $('.flowsInfo').on('click', '.delete-flow', function(){
 
             $('.savedData').html(html).contents();
           }else{
+            $('#deleteMsg').modal('show');
             html += '<b>No data to show.<br>Please insert data to '+kpiKey+' view.</b>';
+            $('.savedData').html(html).contents();
           }
         }
   });

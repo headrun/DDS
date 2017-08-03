@@ -216,7 +216,7 @@ class CommonController extends Controller
         if (count($getKpiMaps) > 0) {
             return Response::json(array('status'=> 'success', 'data'=> $totFlows));
         }else{
-            return Response::json(array('status'=> 'fail'));
+            return Response::json(array('status'=> 'fail', 'data'=> 'Deleted Successfully...!', 'kpiKey'=> $inputs['view_type']));
         }
     }
 
