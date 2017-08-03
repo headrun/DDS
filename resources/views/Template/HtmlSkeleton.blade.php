@@ -77,6 +77,21 @@
           </span>
           <span style="margin-left: 35px">Transform</span>
         </a>
+        <a class="self_service" href="#">
+          
+          <span>
+            <!-- <i class="fa fa-refresh fa-lg" aria-hidden="true"></i> -->
+            <img src="{{ url('/assets/vendor/img/Self-Service-Icon.png') }}" width="20px">
+          </span>
+          <span style="margin-left: 12px">Self Service</span>
+        </a>
+        <a class="analytics" href="#">
+          
+          <span>
+            <i class="fa fa-line-chart" aria-hidden="true"></i>
+          </span>
+          <span style="margin-left: 35px">Analytics</span>
+        </a>
       </div>
       <div class="aside-overlay"></div>
       <ul class="pull-right nav navbar-nav">
