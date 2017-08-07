@@ -132,7 +132,7 @@
                               <!-- <button class ='btn btn-primary pull-left' data-toggle="modal" data-target="#addnewkpi" id='addkpi_btn'>Add New KPI</button> -->
                             </div>
                             <div class="col-md-6">
-                              <button class ='btn btn-primary pull-right' type="button" id='save_btn'>Save</button>
+                              <button class ='btn btn-primary pull-right' type="button" id='save_btn'>Send for Workflow</button>
                             </div>
                           </div>
                           </form>
@@ -153,7 +153,7 @@
                                         <div class="col-md-2"><label></label></div>
                                       </div>
                                     <div class="savedData"></div>                                
-                                    <button class="btn btn-success pull-right" data-toggle="modal" data-target="#send_to_workflow">Send for Workflow</button>
+                                    <!-- <button class="btn btn-success pull-right" data-toggle="modal" data-target="#send_to_workflow">Send for Workflow</button> -->
                                 </div>
                               </div>
                             </div>
