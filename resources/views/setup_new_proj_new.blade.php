@@ -132,7 +132,7 @@
                               <!-- <button class ='btn btn-primary pull-left' data-toggle="modal" data-target="#addnewkpi" id='addkpi_btn'>Add New KPI</button> -->
                             </div>
                             <div class="col-md-6">
-                              <button class ='btn btn-primary pull-right' type="button" id='save_btn'>Send for Workflow</button>
+                              <button class ='btn btn-primary pull-right' type="button" id='save_btn'>Save &amp; Send for Workflow</button>
                             </div>
                           </div>
                           </form>
@@ -662,6 +662,9 @@ $('body').on('click', '.edit-flow', function(){
 
             // subkpi cheked value
             $('input[value="'+flow['sub_kpi']+'"]').attr('checked', 'true');
+            if (flow['sub_kpi'] != 'Absolute Volume') {
+              $('#product_selection_calculation').show(); // dimension calculations
+            }
 
             productSelection(kpiArr);
             timePeriodSelection(kpiArr);

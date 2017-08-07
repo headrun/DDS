@@ -85,7 +85,7 @@
           </span>
           <span style="margin-left: 12px">Self Service</span>
         </a>
-        <a class="analytics" href="#">
+        <a class="analytics" target="_blank" href="https://54.241.166.219:8443/knime/">
           
           <span>
             <i class="fa fa-line-chart" aria-hidden="true"></i>
