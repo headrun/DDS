@@ -54,7 +54,7 @@
                         <div class="panel-body">
                         <div class="wrongSelection"></div>
                           <div class="radio">
-                            <input type="hidden" name="view_type" id="viewType" value="0">
+                            <input type="hidden" name="view_type" id="viewType" value="Market Overview">
                           </div>
                           <form id='kpimap'>
                           <div class="row">
@@ -253,10 +253,100 @@
   
 $(document).ready(function(){
 
-  $('#kpimap').hide();
-  $('#savedFlows').hide();
-  $('.savedData').hide();
-  $('#dimensionInfo').hide();
+  // $('#kpimap').hide();
+  // $('#savedFlows').hide();
+  // $('.savedData').hide();
+  // $('#dimensionInfo').hide();
+  var kpiKey = 'Market Overview';
+  $('.wrongSelection').hide(); // wrong selection message
+    $('#kpimap').show();  // KPI checkbox division
+    $('.savedData').show(); // view flows of data
+    $('#savedFlows').show(); // view flows titles
+    $('#dimensionInfo').hide(); // dimension related division
+    $('#product_selection_calculation').hide(); // dimension calculations
+
+    kpiFunction(kpiKey);
+    subKpiFunction(kpiKey);
+    productSelection(kpiKey);
+    timePeriodSelection(kpiKey);
+    geography(kpiKey);
+    dimeCalculation();
+
+    // $('#choose_project').find('input[type="checkbox"]').change(function(){ 
+    //     var value = $('input[type="checkbox"]:checked').val();
+    //     console.log('Selected project: '+$(this).val());
+
+    //     subKpiFunction(value);
+    // });
+
+    $(document).on('change' ,'#calSubKpi .check_sub_kpi', function(){
+      var value = $('#calSubKpi .check_sub_kpi:checked').val();
+      $('#product_selection_calculation').show();
+      dimeCalculation();
+
+    });
+
+    $.ajax({
+        url : "{{url()}}/getExeFlow",
+        type: "POST",
+        dataType: 'json',
+        headers: {
+             'X-CSRF-TOKEN': "{{ csrf_token() }}",
+        },
+        data: {'kpiKey':kpiKey},
+        success: function(response){
+          var html = '';
+
+          if (response.status == 'success') {
+            var flowRes = response.data.getKpiMaps;
+
+            for (var i = 0; i < flowRes.length; i++) {
+              var viewName = flowRes[i]['project_name'];
+              var kpiFlow = JSON.parse(flowRes[i]['kpi']);
+              var subKpiFlow = JSON.parse(flowRes[i]['sub_kpi']);
+              var dimFlow = JSON.parse(flowRes[i]['dimension']);
+              var flowId = flowRes[i]['id'];
+              
+              $('.savedData').show();
+
+              var kpi_arr = '<div class="col-md-2">';
+              for (var kpi = 0; kpi < kpiFlow.length; kpi++) {
+                kpi_arr += kpiFlow[kpi]+'<br>';
+              }
+              kpi_arr += '</div>';
+
+              var subKpiArr = '<div class="col-md-2">';
+              for (var subkpi = 0; subkpi < subKpiFlow.length; subkpi++) {
+                subKpiArr += subKpiFlow[subkpi]+'<br>';
+              }
+              subKpiArr += '</div>';
+
+              var dim_arr = '<div class="col-md-2">';
+              for (var dim = 0; dim < dimFlow.length; dim++) {
+                dim_arr += dimFlow[dim]+'<br>';
+              }
+              dim_arr += '</div>';            
+              
+              html += '<div class="row">'+
+                          '<div class="col-md-1 ">'+flowId+'</div>'+
+                          '<div class="col-md-3 ">'+viewName+'</div>'+
+                          kpi_arr+
+                          subKpiArr+
+                          dim_arr+
+                          '<div class="col-md-2"><input type="hidden" value="'+flowId+'" class="flowId"><button type="button" class="btn-xs btn-primary edit-flow"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button>&nbsp;&nbsp;<button type="button" class="btn-xs btn-danger delete-flow confirm-delete"><i class="fa fa-trash-o" aria-hidden="true"></i></button></div>'+
+                        '</div><hr><br>';
+
+            }
+            
+          }else{
+            html += '<b>No data to show.<br>Please insert data to '+kpiKey+' view.</b>';
+          }
+          $('.savedData').html(html).contents();
+        }
+
+    });
+
+
 
   $('#addNewKpi').click(function(){
     var value = 'kpi';
