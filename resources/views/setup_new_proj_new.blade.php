@@ -172,7 +172,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Dag List</h4>
+        <h4 class="modal-title">DDS Orchestrator</h4>
       </div>
       <div class="modal-body">
         <iframe src="http://176.9.181.46:8080/admin/" style="width: 100%; height: 500px;"></iframe>
@@ -304,7 +304,7 @@ $(document).ready(function(){
       }
       if(subKpi.length > 0 ){
         for (var i=0; i<subKpi.length; i++) {
-            subKpiVal += '<input type="radio" class="check_sub_kpi" name="checkSubKPI" value="'+subKpi[i]+'"> '+subKpi[i]+'<br>';
+            subKpiVal += '<input type="checkbox" class="check_sub_kpi" name="checkSubKPI" value="'+subKpi[i]+'"> '+subKpi[i]+'<br>';
         }
       }
 
@@ -384,30 +384,34 @@ function dimeCalculation(){
 
     $('#calSubKpi .check_sub_kpi:checked').each(function(){
       sub_kpi = $(this).val();
+
+      $('#dimensionInfo').show();
+
+      if(sub_kpi == 'Absolute Volume'){
+        // calWithSubKpi = '';
+      }else if(sub_kpi == 'Share'){
+            
+        calWithSubKpi.push('Drug Class share in Market', 'Product share in Drug Class');
+      }else if(sub_kpi == 'Volume Change'){
+
+        calWithSubKpi.push('YoY', 'Current year vs previous');
+      }else {
+            
+        calWithSubKpi.push('Drug Class share in Market', 'Product share in Drug Class', 'YoY', 'Current year vs previous');
+      }
+      
     });
 
     // productSelection(sub_kpi);
     // timePeriodSelection(sub_kpi);
     // geography(sub_kpi);
 
-    $('#dimensionInfo').show();
-
-    if(sub_kpi == 'Absolute Volume'){
-      calWithSubKpi = [];
-    }else if(sub_kpi == 'Share'){
-          
-      calWithSubKpi.push('Drug Class share in Market', 'Product share in Drug Class');
-    }else if(sub_kpi == 'Volume Change'){
-
-      calWithSubKpi.push('YoY', 'Current year vs previous');
-    }else {
-          
-      calWithSubKpi.push('Drug Class share in Market', 'Product share in Drug Class', 'YoY', 'Current year vs previous');
-    }
+    
 
     var unique = calWithSubKpi.filter(function(elem, index, self) {
         return index == self.indexOf(elem);
     });
+
     for(var ele=0; ele<unique.length; ele++){
           mergeWithSubKpi += '<input type="checkbox" class="dim_cal kpi_dim" name="merge_with_sub_kpi" value="'+unique[ele]+'"> '+unique[ele]+'<br>';
     }
@@ -522,7 +526,7 @@ $('#proj_name').change(function(){
             for (var i = 0; i < flowRes.length; i++) {
               var viewName = flowRes[i]['project_name'];
               var kpiFlow = JSON.parse(flowRes[i]['kpi']);
-              var subKpiFlow = flowRes[i]['sub_kpi'];
+              var subKpiFlow = JSON.parse(flowRes[i]['sub_kpi']);
               var dimFlow = JSON.parse(flowRes[i]['dimension']);
               var flowId = flowRes[i]['id'];
               
@@ -534,6 +538,12 @@ $('#proj_name').change(function(){
               }
               kpi_arr += '</div>';
 
+              var subKpiArr = '<div class="col-md-2">';
+              for (var subkpi = 0; subkpi < subKpiFlow.length; subkpi++) {
+                subKpiArr += subKpiFlow[subkpi]+'<br>';
+              }
+              subKpiArr += '</div>';
+
               var dim_arr = '<div class="col-md-2">';
               for (var dim = 0; dim < dimFlow.length; dim++) {
                 dim_arr += dimFlow[dim]+'<br>';
@@ -544,7 +554,7 @@ $('#proj_name').change(function(){
                           '<div class="col-md-1 ">'+flowId+'</div>'+
                           '<div class="col-md-3 ">'+viewName+'</div>'+
                           kpi_arr+
-                          '<div class="col-md-2 ">'+subKpiFlow+'</div>'+
+                          subKpiArr+
                           dim_arr+
                           '<div class="col-md-2"><input type="hidden" value="'+flowId+'" class="flowId"><button type="button" class="btn-xs btn-primary edit-flow"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button>&nbsp;&nbsp;<button type="button" class="btn-xs btn-danger delete-flow confirm-delete"><i class="fa fa-trash-o" aria-hidden="true"></i></button></div>'+
                         '</div><hr><br>';
@@ -592,7 +602,7 @@ $('.flowsInfo').on('click', '.delete-flow', function(){
               var viewName = flowRes[i]['project_name'];
               var viewId = flowRes[i]['id'];
               var kpiFlow = JSON.parse(flowRes[i]['kpi']);
-              var subKpiFlow = flowRes[i]['sub_kpi'];
+              var subKpiFlow = JSON.parse(flowRes[i]['sub_kpi']);
               var dimFlow = JSON.parse(flowRes[i]['dimension']);
               
               $('.savedData').show();
@@ -602,6 +612,12 @@ $('.flowsInfo').on('click', '.delete-flow', function(){
                 kpi_arr += kpiFlow[kpi]+'<br>';
               }
               kpi_arr += '</div>';
+
+              var subKpiArr = '<div class="col-md-2">';
+              for (var subkpi = 0; subkpi < subKpiFlow.length; subkpi++) {
+                subKpiArr += subKpiFlow[subkpi]+'<br>';
+              }
+              subKpiArr += '</div>';
 
               var dim_arr = '<div class="col-md-2">';
               for (var dim = 0; dim < dimFlow.length; dim++) {
@@ -613,7 +629,7 @@ $('.flowsInfo').on('click', '.delete-flow', function(){
                           '<div class="col-md-1 ">'+viewId+'</div>'+
                           '<div class="col-md-3 ">'+viewName+'</div>'+
                           kpi_arr+
-                          '<div class="col-md-2 ">'+subKpiFlow+'</div>'+
+                          subKpiArr+
                           dim_arr+
                           '<div class="col-md-2"><input type="hidden" value="'+viewId+'" class="flowId"><button type="button" class="btn-xs btn-primary edit-flow"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button>&nbsp;&nbsp;<button type="button" class="btn-xs btn-danger delete-flow confirm-delete"><i class="fa fa-trash-o" aria-hidden="true"></i></button></div>'+
                         '</div><hr><br>';
@@ -647,6 +663,7 @@ $('body').on('click', '.edit-flow', function(){
           if (response.status == 'success') {
             var flow = response.data[0];
             var kpiArr = JSON.parse(flow['kpi']);
+            var subKpiArr = JSON.parse(flow['sub_kpi']);
             var dimArr = JSON.parse(flow['dimension']);
 
             console.log(flow);
@@ -661,10 +678,13 @@ $('body').on('click', '.edit-flow', function(){
             subKpiFunction(kpiArr);
 
             // subkpi cheked value
-            $('input[value="'+flow['sub_kpi']+'"]').attr('checked', 'true');
-            if (flow['sub_kpi'] != 'Absolute Volume') {
-              $('#product_selection_calculation').show(); // dimension calculations
+            for (var subkpi = 0; subkpi < subKpiArr.length; subkpi++) {
+              // if (subKpiArr[subkpi] != 'Absolute Volume') {
+                   $('#product_selection_calculation').show(); // dimension calculations
+              // }
+              $('input[value="'+subKpiArr[subkpi]+'"]').attr('checked', 'true');
             }
+            // $('input[value="'+flow['sub_kpi']+'"]').attr('checked', 'true');
 
             productSelection(kpiArr);
             timePeriodSelection(kpiArr);
@@ -686,7 +706,7 @@ $('body').on('click', '.edit-flow', function(){
       e.preventDefault();
       var dim_arr = [],
           kpi_arr = [],
-          sub_kpi = '',
+          sub_kpi_arr = [],
           product_selection = [],
           time_period_selection = [],
           geography = [],
@@ -701,7 +721,12 @@ $('body').on('click', '.edit-flow', function(){
 
       });
 
-      sub_kpi = $('#calSubKpi').find('input[name="checkSubKPI"]:checked').val();
+      $('#calSubKpi').find('input[type="checkbox"]:checked').each(function(){
+        sub_kpi_arr.push($(this).val());
+
+      });
+
+      // sub_kpi = $('#calSubKpi').find('input[name="checkSubKPI"]:checked').val();
 
       $('#dimensionInfo').find('input[type="checkbox"]:checked').each(function(){
         dim_arr.push($(this).val());
@@ -709,7 +734,7 @@ $('body').on('click', '.edit-flow', function(){
       });
 
       console.log(kpi_arr);
-      console.log(sub_kpi);
+      console.log(sub_kpi_arr);
       console.log(dim_arr);
 
       $.ajax({
@@ -719,7 +744,7 @@ $('body').on('click', '.edit-flow', function(){
         headers: {
              'X-CSRF-TOKEN': "{{ csrf_token() }}",
         },
-        data: {'kpi_arr':kpi_arr,'sub_kpi':sub_kpi,'dim_arr':dim_arr,'view_type':view_type,'viewId':viewId},
+        data: {'kpi_arr':kpi_arr,'sub_kpi_arr':sub_kpi_arr,'dim_arr':dim_arr,'view_type':view_type,'viewId':viewId},
         success: function(response){
           var html = '';
           
@@ -735,7 +760,7 @@ $('body').on('click', '.edit-flow', function(){
               var viewName = flowRes[i]['project_name'];
               var viewId = flowRes[i]['id'];
               var kpiFlow = JSON.parse(flowRes[i]['kpi']);
-              var subKpiFlow = flowRes[i]['sub_kpi'];
+              var subKpiFlow = JSON.parse(flowRes[i]['sub_kpi']);
               var dimFlow = JSON.parse(flowRes[i]['dimension']);
               
               $('.savedData').show();
@@ -745,6 +770,12 @@ $('body').on('click', '.edit-flow', function(){
                 kpi_arr += kpiFlow[kpi]+'<br>';
               }
               kpi_arr += '</div>';
+
+              var subKpiArr = '<div class="col-md-2">';
+              for (var subkpi = 0; subkpi < subKpiFlow.length; subkpi++) {
+                subKpiArr += subKpiFlow[subkpi]+'<br>';
+              }
+              subKpiArr += '</div>';
 
               var dim_arr = '<div class="col-md-2">';
               for (var dim = 0; dim < dimFlow.length; dim++) {
@@ -756,7 +787,7 @@ $('body').on('click', '.edit-flow', function(){
                           '<div class="col-md-1 ">'+viewId+'</div>'+
                           '<div class="col-md-3 ">'+viewName+'</div>'+
                           kpi_arr+
-                          '<div class="col-md-2 ">'+subKpiFlow+'</div>'+
+                          subKpiArr+
                           dim_arr+
                           '<div class="col-md-2"><input type="hidden" value="'+viewId+'" class="flowId"><button type="button" class="btn-xs btn-primary edit-flow"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button>&nbsp;&nbsp;<button type="button" class="btn-xs btn-danger delete-flow confirm-delete"><i class="fa fa-trash-o" aria-hidden="true"></i></button></div>'+
                         '</div><hr><br>';

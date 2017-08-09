@@ -1549,13 +1549,15 @@ $(document).on('change', '#fa', function()
             var dim = '<h4>Dimension table (Optional)</h4>';
             for (var i = 0; i < d.length; i++) {
               if (d[i].category==='Data'){
-                data += "<div class = 'checkbox'>"+
+                if (d[i].description != 'Aggregated Rx Data') {
+                  data += "<div class = 'checkbox'>"+
                   //"<a href ='#' data-toggle = 'popover'>"+
                   "<label class = 'active' style='margin-bottom: -5px;'>"+
                   "<input type='checkbox'  class='test2' checked  name = 'check_box[]' value='"+d[i].description+"'>";
                   data +="</label>";
                   data +="<span class='text' style='cursor: pointer;'>"+d[i].description+"</span><br>";
                   data +="</div>";
+                }
                   
               }
               if (d[i].category==='Bridging File'){
@@ -1632,9 +1634,9 @@ $(document).on('click','.text',function(){
       id = "TerritoryAlignment";
     }else if ( id === "Physican Rx Data" ) {
       id = "PrescriberRxData";
-    }else if ( id === "Aggregated Rx Data" ) {
+    }/*else if ( id === "Aggregated Rx Data" ) {
       id = "AggregatedRxData";
-    }else if ( id === "Payor Plan to Claims" ) {
+    }*/else if ( id === "Payor Plan to Claims" ) {
       id = "PayorPlantoClaims";
     }else if ( id === "Payor Plan Data" ) {
       id = "PayorPlanData";
