@@ -171,7 +171,7 @@ class CommonController extends Controller
                 ->where('id', '=', $inputs['viewId'])
                 ->update([
                     'kpi'=>json_encode($inputs['kpi_arr']),
-                    'sub_kpi'=>$inputs['sub_kpi'],
+                    'sub_kpi'=>json_encode($inputs['sub_kpi_arr']),
                     'dimension'=>json_encode($inputs['dim_arr'])
                 ]);
 
@@ -181,7 +181,7 @@ class CommonController extends Controller
                 'id'=> '',
                 'project_name'=> $inputs['view_type'],
                 'kpi'=> json_encode($inputs['kpi_arr']),
-                'sub_kpi'=>$inputs['sub_kpi'],
+                'sub_kpi'=>json_encode($inputs['sub_kpi_arr']),
                 'dimension'=>json_encode($inputs['dim_arr'])
             ]);
 

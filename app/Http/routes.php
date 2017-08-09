@@ -11,8 +11,9 @@
 |
 */
 
-Route::get('/dashboard', 'AjaxCallTest@dash');
+
 Route::get('/', 'AjaxCallTest@dash');
+Route::get('/dashboard', 'AjaxCallTest@dash');
 
 Route::any('/login1', 'AjaxCallTest@login');
 
