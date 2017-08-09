@@ -71,16 +71,20 @@
                             <table class="table" style="font-size:14px">
                                 <tbody>
                                 <tr>
-                                    <td>Phast June 2017 Data ………………………….06/15/2017</td>
+                                    <td>Phast June 2017 Data</td>
+                                    <td style="float: right;">06/15/2017</td>
                                 </tr>
                                 <tr>
-                                    <td>PrescriberSource May 2017……………….........06/30/2017</td>
+                                    <td>PrescriberSource May 2017</td>
+                                    <td style="float: right;">06/30/2017</td>
                                 </tr>
                                 <tr>
-                                    <td>Analyst report reviews June….............…………06/15/2017</td>
+                                    <td>Analyst report reviews June</td>
+                                    <td style="float: right;">06/15/2017</td>
                                 </tr>
                                 <tr>
-                                    <td>MMIT May data…………………………...........06/15/2017</td>
+                                    <td>MMIT May data</td>
+                                    <td style="float: right;">06/15/2017</td>
                                 </tr>
 
                                 </tbody>
