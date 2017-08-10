@@ -50,17 +50,22 @@ class CommonController extends Controller
      public function ingestion()
      {
         $inputs = Input::all();
+
         $values = array();
         $proj_name = $ta = $fa= '';
+        
         if (isset($inputs['check_box']) && !empty($inputs['check_box']))
             Session::put('values', $inputs['check_box']);
             
         if (isset($inputs['proj_nam']) && !empty($inputs['proj_nam']))
             $proj_name = $inputs['proj_nam'];
+        
         if (isset($inputs['ta']) && !empty($inputs['ta']))
             $ta = $inputs['ta'];
+
         if (isset($inputs['fa']) && !empty($inputs['fa']))
             $fa = $inputs['fa'];
+
         $final_array = array();
         $values = Session::get('values');
         foreach ($values as $key => $value) 

@@ -127,7 +127,7 @@ class AjaxCallTest extends Controller
   public function struct()
   {
     $inputs =Input::all();
-    $val = $inputs['array'];
+    $val = $inputs['checkbox'];
     $val = implode(",",$val);
     $data1 = array('val');
     return view('struct', compact($data1));

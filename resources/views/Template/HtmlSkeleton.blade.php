@@ -46,52 +46,58 @@
           </span>
           <span style="margin-left: 35px">Home</span>
         </a>
-        <a class="extractor_library" href="{{url()}}/extractor_library">
-          <span>
-            <i class="fa fa-book fa-lg" aria-hidden="true"></i>
-          </span>
-          <span style="margin-left: 35px">Extractor Library</span>
-        </a>
         <a class="ingest" href="#">
           <span>
             <i class="fa fa-reply fa-lg" aria-hidden="true"></i>
           </span>
           <span style="margin-left: 35px">Ingest</span>
         </a>
-        <a class="validate" href="#">
+        <a class="mapping" href="#">
           <span>
-            <i class="fa fa-address-card-o fa-lg" aria-hidden="true"></i>
+            <!-- <i class="fa fa-map-marker" size="30px" aria-hidden="true"></i> -->
+            <img src="{{ url('/assets/vendor/img/mapping.png') }}" width="18px">
           </span>
-          <span style="margin-left: 35px">Validate</span>
+          <span style="margin-left: 12px">Mapping</span>
         </a>
-        <a class="transform" href="#">
+        <a class="kpi_election" href="#">
           <span>
-            <i class="fa fa-area-chart fa-lg" aria-hidden="true"></i>
+            <i class="fa fa-th-list" aria-hidden="true"></i>
           </span>
-          <span style="margin-left: 35px">D Cube Structure</span>
+          <span style="margin-left: 35px">KPI Selection</span>
         </a>
-        <a class="dcube_struct" href="#">
-          
+        <a class="analytics" target="_blank" href="https://54.241.166.219:8443/knime/">
           <span>
-            <i class="fa fa-refresh fa-lg" aria-hidden="true"></i>
+            <i class="fa fa-line-chart" aria-hidden="true"></i>
           </span>
-          <span style="margin-left: 35px">Transform</span>
+          <span style="margin-left: 35px">Analytics Sandbox</span>
         </a>
         <a class="self_service" href="#">
-          
           <span>
             <!-- <i class="fa fa-refresh fa-lg" aria-hidden="true"></i> -->
             <img src="{{ url('/assets/vendor/img/Self-Service-Icon.png') }}" width="20px">
           </span>
           <span style="margin-left: 12px">Self Service</span>
         </a>
-        <a class="analytics" target="_blank" href="https://54.241.166.219:8443/knime/">
-          
+        <a class="extractor_library" href="{{url()}}/extractor_library">
           <span>
-            <i class="fa fa-line-chart" aria-hidden="true"></i>
+            <i class="fa fa-book fa-lg" aria-hidden="true"></i>
           </span>
-          <span style="margin-left: 35px">Analytics</span>
+          <span style="margin-left: 35px">Extractor Library</span>
         </a>
+        <a class="validate" href="{{url()}}/kpilib">
+          <span>
+            <i class="fa fa-address-card-o fa-lg" aria-hidden="true"></i>
+          </span>
+          <span style="margin-left: 35px">KPI Library</span>
+        </a>
+        <a class="transform" target="_blank" href="http://www.hyperbase.dcubeanalytics.com/">
+          <span>
+            <i class="fa fa-area-chart fa-lg" aria-hidden="true"></i>
+          </span>
+          <span style="margin-left: 35px">Hyperbase D</span>
+        </a>
+        
+        
       </div>
       <div class="aside-overlay"></div>
       <ul class="pull-right nav navbar-nav">

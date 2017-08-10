@@ -12,7 +12,7 @@
           <div class="breadcrumb flat">
              <a href="{{url()}}/setup_new_proj" class="active">Setup New Project</a>
              <a href="javascript:history.back()" class="active">Ingest Data</a>
-             <a href="#" class="active">Validate Data</a>
+             <!-- <a href="#" class="active">Validate Data</a> -->
              <a href="#">Map Data</a>
              <a href="#">Mapping KPI</a>
          </div>

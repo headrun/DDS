@@ -28,8 +28,7 @@
                                 </select>
                               </div>
                             </div>
-                      </div>
-                      <div class ='row'>
+                            <div class ='row'>
                         <div class = "col-md-2">
                           <label class=''>View Name</label>
                         </div>
@@ -51,6 +50,8 @@
                       
                       </div>
                       </div>
+                      </div>
+                      
                       </div>
                     </div>
                   </div>

@@ -13,7 +13,7 @@
           <div class="breadcrumb flat">
              <a href="#" class="active">Setup New Project</a>
              <a href="#">Ingest Data</a>
-             <a href="#">Validate Data</a>
+             <!-- <a href="#">Validate Data</a> -->
              <a href="#">Map Data</a>
              <a href="#">Mapping KPI</a>
          </div>
@@ -108,7 +108,7 @@
                                   <input type='hidden' name= "proj_type" class= "proj_type" >
                                 </div>
                                 <div class="Check">
-                                  <button class="btn btn-success btn-md  pull-right" id= "sidq" type = "submit" disabled>Proceed to Ingestion</button>
+                                  <button class="btn btn-success btn-md  pull-right" id= "sidq" type = "submit" disabled>Proceed to Validation</button>
                                 </div>
                               </form>
                                 
