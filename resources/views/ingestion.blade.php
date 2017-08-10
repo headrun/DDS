@@ -12,7 +12,7 @@
           <div class="breadcrumb flat">
              <a href="javascript:history.back()" class="active">Setup New Project</a>
              <a href="#" class="active">Ingest Data</a>
-             <a href="#">Validate Data</a>
+             <!-- <a href="#">Validate Data</a> -->
              <a href="#">Map Data</a>
              <a href="#">Mapping KPI</a>
          </div>
@@ -103,9 +103,9 @@
                               <button class="btn btn-warning btn-md select_ingest_btn" disabled>Ingest Selected Data</button>
                             </div>
                             <div class="col-md-5">
-                              <form action='{{url()}}/validate'>
+                              <form action='{{url()}}/struct'>
                                 <div id= 'hidden'></div>
-                                <button class="btn btn-primary btn-md move_to_validate pull-left" disabled>Move to validate</button>
+                                <button class="btn btn-primary btn-md move_to_validate pull-left" disabled>Move to Map Data</button>
                               </form>
                             </div>
                           </div>

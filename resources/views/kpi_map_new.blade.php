@@ -108,7 +108,7 @@
                                   <input type='hidden' name= "proj_type" class= "proj_type" >
                                 </div>
                                 <div class="Check">
-                                  <button class="btn btn-success btn-md  pull-right" id= "sidq" type = "submit" disabled>Proceed to Validation</button>
+                                  <button class="btn btn-success btn-md  pull-right" id= "sidq" type = "submit" disabled>Proceed to Ingest</button>
                                 </div>
                               </form>
                                 
