@@ -46,7 +46,14 @@
           </span>
           <span style="margin-left: 35px">Home</span>
         </a>
-        <a class="ingest" href="#">
+        <a class="analytics" href="{{url()}}/setup_new_proj">
+          <span>
+            <i class="fa fa-th-list" aria-hidden="true"></i>
+          </span>
+          <span style="margin-left: 35px">Project setup</span>
+        </a>
+
+        <!-- <a class="ingest" href="#">
           <span>
             <i class="fa fa-reply fa-lg" aria-hidden="true"></i>
           </span>
@@ -54,7 +61,6 @@
         </a>
         <a class="mapping" href="#">
           <span>
-            <!-- <i class="fa fa-map-marker" size="30px" aria-hidden="true"></i> -->
             <img src="{{ url('/assets/vendor/img/mapping.png') }}" width="18px">
           </span>
           <span style="margin-left: 12px">Mapping</span>
@@ -64,12 +70,18 @@
             <i class="fa fa-th-list" aria-hidden="true"></i>
           </span>
           <span style="margin-left: 35px">KPI Selection</span>
-        </a>
+        </a> -->
         <a class="analytics" target="_blank" href="https://54.241.166.219:8443/knime/">
           <span>
             <i class="fa fa-line-chart" aria-hidden="true"></i>
           </span>
           <span style="margin-left: 35px">Analytics Sandbox</span>
+        </a>
+        <a class="transform" target="_blank" href="http://www.hyperbase.dcubeanalytics.com/">
+          <span>
+            <i class="fa fa-area-chart fa-lg" aria-hidden="true"></i>
+          </span>
+          <span style="margin-left: 35px">Hyperbase D</span>
         </a>
         <a class="self_service" href="#">
           <span>
@@ -90,13 +102,6 @@
           </span>
           <span style="margin-left: 35px">KPI Library</span>
         </a>
-        <a class="transform" target="_blank" href="http://www.hyperbase.dcubeanalytics.com/">
-          <span>
-            <i class="fa fa-area-chart fa-lg" aria-hidden="true"></i>
-          </span>
-          <span style="margin-left: 35px">Hyperbase D</span>
-        </a>
-        
         
       </div>
       <div class="aside-overlay"></div>
