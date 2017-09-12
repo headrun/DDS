@@ -16,7 +16,9 @@
       <div class="top-div">
           <div class="breadcrumb flat">
              <a href="{{url()}}/setup_new_proj" class="active">Setup New Project</a>
-             <a href="{{url()}}/ingestion" class="active">Ingest Data</a>
+             @foreach($proj_id as $p_id)
+             <a href="{{url()}}/ingestion/{{ $p_id }}" class="active">Ingest Data</a>
+             @endforeach
              <!-- <a href="javascript:history.back()" class="active">Validate Data</a> -->
              <a href="#" class="active">Map Data</a>
              <a href="#">Mapping KPI</a>
@@ -61,7 +63,7 @@
                                       <button class="btn btn-info " data-toggle="modal" data-target="#claim">edit mapping</button>
                                   </td>
                                 </tr>
-                                <tr class="each_row" style="display: none;" id='IMS_claims'>
+                                <tr class="each_row" style="display: none;" id='IMS_Claims'>
                                   <td>
                                       <div class="checkbox">
                                         <label><input type="checkbox" class="ingest_chkbox" value="IMS_Claims"></label>

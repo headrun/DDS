@@ -37,7 +37,6 @@
                   <div class="panel panel-default" style="border-bottom: 4px solid #8bc34a;     padding: 20px;">
 
                       <div class="row">  
-
                           <div class="widget col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <table class="table" style="font-size:14px" id="mainTable">
                               <thead>
@@ -55,43 +54,146 @@
                               <tbody>
                               
                               @foreach($final_array as $value)
-                                <tr class="each_row">
-                                  <td>
-                                      <div class="checkbox">
-                                        <label><input type="checkbox" class="ingest_chkbox" value="{{$value['data']}}" disabled></label>
-                                      </div>
-                                  </td>
-                                  <td>
-                                    {{$value['data']}}
-                                    <input type="hidden" class="data_name" value="{{$value['data']}}">
-                                  </td>
-                                  <td>
-                                      <select class="form-control source_name">
+                              
+                                @if(isset($exeIngestData))
+
+                                  @foreach($exeIngestData as $dataVal)
+                                
+                                    @if($dataVal->key == $value['data'])
+                                      <tr class="each_row">
+                                        <td>
+                                            <div class="checkbox">
+                                              <label><input type="checkbox" class="ingest_chkbox" value="{{$value['data']}}" disabled checked></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                          {{$value['data']}}
+                                          <input type="hidden" class="data_name" id="dataKey" value="{{$value['data']}}">
+                                        </td>
+                                        <td>
+                                            @if(isset($exeIngestion))
+                                              <select class="form-control source_name sourceName">
+                                                  <option></option>
+                                                  @foreach($value['sources'] as $src)
+                                                    @foreach($exeIngestion as $source)
+                                                      @if($source->source == $src['source'])
+                                                        <option value="{{$source->source}}" selected>{{$source->source}}</option>
+                                                      @else
+                                                        <option value="{{$src['source']}}" {{ $source->source == '' ? 'selected' : '' }}>{{$src['source']}}</option>
+                                                      @endif
+                                                    @endforeach
+                                                  @endforeach
+                                              </select>
+                                            @else
+                                              <select class="form-control source_name sourceName">
+                                                <option></option>
+                                                @foreach($value['sources'] as $src)
+                                                    <option value="{{$src['source']}}">{{$src['source']}}</option>
+                                                @endforeach
+                                              </select>
+                                            @endif
+                                        </td>
+                                        <td>
+                                            <select class="form-control type_name typeName">
+                                              @if(isset($source->type))
+                                                <option value="{{$source->type}}" selected>{{$source->type}}</option>
+                                              @endif
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select class="form-control subtype_name subTypeName">
+                                              @if(isset($source->sub_type))
+                                                <option value="{{$source->sub_type}}" selected>{{$source->sub_type}}</option>
+                                              @endif
+                                            </select>
+                                        </td>
+                                        <td class="extractor_name">
+                                          @if(isset($source->sub_type))
+                                            {{ $source->extractor_name }}
+                                          @endif
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-warning btn-sm give_inputs">Give Inputs</button>
+                                        </td>
+                                        <td class="last_col_tick">
+                                          <i class="fa fa-check fa-2x" style="color: green" aria-hidden="true"></i>
+                                        </td>
+                                      </tr>
+                                    @else
+                                      <tr class="each_row">
+                                        <td>
+                                            <div class="checkbox">
+                                              <label><input type="checkbox" class="ingest_chkbox" value="{{$value['data']}}" disabled></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                          {{$value['data']}}
+                                          <input type="hidden" class="data_name" id="dataKey" value="{{$value['data']}}">
+                                        </td>
+                                        <td>
+                                          <select class="form-control source_name sourceName">
+                                            <option></option>
+                                            @foreach($value['sources'] as $src)
+                                                <option value="{{$src['source']}}">{{$src['source']}}</option>
+                                            @endforeach
+                                          </select>
+                                        </td>
+                                        <td>
+                                            <select class="form-control type_name typeName">
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select class="form-control subtype_name subTypeName">
+                                            </select>
+                                        </td>
+                                        <td class="extractor_name">
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-warning btn-sm give_inputs" disabled>Give Inputs</button>
+                                        </td>
+                                        <td class="last_col_tick"></td>
+                                      </tr>
+                                    @endif
+                                    
+                                  @endforeach
+                                
+                                @else
+                                  <tr class="each_row">
+                                    <td>
+                                        <div class="checkbox">
+                                          <label><input type="checkbox" class="ingest_chkbox" value="{{$value['data']}}" disabled></label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                      {{$value['data']}}
+                                      <input type="hidden" class="data_name" id="dataKey" value="{{$value['data']}}">
+                                    </td>
+                                    <td>
+                                      <select class="form-control source_name sourceName">
                                         <option></option>
                                         @foreach($value['sources'] as $src)
-                                          <option value="{{$src['source']}}">{{$src['source']}}</option>
+                                            <option value="{{$src['source']}}">{{$src['source']}}</option>
                                         @endforeach
                                       </select>
-                                  </td>
-                                  <td>
-                                      <select class="form-control type_name">
-                                        
-                                      </select>
-                                  </td>
-                                  <td>
-                                      <select class="form-control subtype_name">
-                                        
-                                      </select>
-                                  </td>
-                                  <td class="extractor_name"></td>
-                                  <td>
-                                      <button class="btn btn-warning btn-sm give_inputs" disabled>Give Inputs</button>
-                                  </td>
-                                  <td class="last_col_tick">
-                                      
-                                  </td>
-                                </tr>
-                                @endforeach
+                                    </td>
+                                    <td>
+                                        <select class="form-control type_name typeName">
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select class="form-control subtype_name subTypeName">
+                                        </select>
+                                    </td>
+                                    <td class="extractor_name">
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-warning btn-sm give_inputs" disabled>Give Inputs</button>
+                                    </td>
+                                    <td class="last_col_tick"></td>
+                                  </tr>
+                                @endif
+                                
+                              @endforeach
                               </tbody>
                             </table>
                           </div>
@@ -105,6 +207,7 @@
                             <div class="col-md-5">
                               <form action='{{url()}}/struct'>
                                 <div id= 'hidden'></div>
+                                    <input type="hidden" name="project_id" id="project_id" value="{{  $proj_id }}">
                                 <button class="btn btn-primary btn-md move_to_validate pull-left" disabled>Move to Map Data</button>
                               </form>
                             </div>
@@ -127,6 +230,7 @@
         <button type="button" class="close" data-dismiss="modal">&times;</button>
         <h4 class="modal-title">Database Screen</h4>
       </div>
+      <form name="dbSubTypeData" id="dbSubTypeData" action="{{ url('dbSubType') }}" method="post">
       <div class="modal-body">
         <div class="row">
             <div class="col-md-12">
@@ -134,30 +238,33 @@
                 <div class="row">
                     <div class="col-md-10">
                         <div class="form-group">
-                          <label for="email">Host Name:</label>
-                          <input type="text" class="form-control">
+                          <label for="hostName">Host Name:</label>
+                          <input type="text" id="hostName" name="hostName" class="form-control">
+                          <input type="hidden" name="ext_name" id="db_ext_name">
+                          <input type="hidden" name="dbTypeName" id="dbTypeName">
+                          <input type="hidden" name="dbDataKey" id="dbDataKey">
                         </div>  
                     </div>
                     <div class="col-md-2">
                         <div class="form-group">
-                          <label for="email">Port:</label>
-                          <input type="text" class="form-control">
+                          <label for="portNo">Port:</label>
+                          <input type="text" id="portNo" name="portNo" class="form-control">
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group">
-                          <label for="email">Database Name:</label>
-                          <input type="text" class="form-control">
+                          <label for="dbTypeEmail">Database Name:</label>
+                          <input type="text" id="dbTypeEmail" name="dbTypeEmail" class="form-control">
                         </div>  
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group">
-                          <label for="email">Table Name:</label>
-                          <input type="text" class="form-control">
+                          <label for="tableName">Table Name:</label>
+                          <input type="text" id="tableName" name="tableName" class="form-control">
                         </div>  
                     </div>
                 </div>
@@ -165,7 +272,7 @@
                 <!-- second row-->
 
                 <h4 style="padding-top: 20px;"><span class="label label-primary">Authentication</span></h4>
-                <div class="radio-inline">
+                <!-- <div class="radio-inline">
                   <input type="radio" name="optradio">Use Credintials
                 </div>
                 <div class="form-group">
@@ -174,68 +281,67 @@
 
                 <div class="radio-inline">
                   <input type="radio" name="optradio">Use Username & Password
+                </div> -->
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                          <label for="userName">Username:</label>
+                          <input type="text" id="userName" name="userName" class="form-control">
+                        </div>  
+                    </div>
                 </div>
-                <form class="form-horizontal">
-                  <div class="form-group">
-                    <label class="control-label col-sm-2" for="email">Username:</label>
-                    <div class="col-sm-10">
-                      <input type="email" class="form-control" id="email">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                          <label for="dbTypePassword">Password:</label>
+                          <input type="password" id="dbTypePassword" name="dbTypePassword" class="form-control">
+                        </div>  
                     </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="control-label col-sm-2" for="pwd">Password:</label>
-                    <div class="col-sm-10"> 
-                      <input type="password" class="form-control" id="pwd">
-                    </div>
-                  </div>
-                </form>
+                </div>
 
                 <!-- third row-->
 
                 <h4 style="padding-top: 20px;"><span class="label label-primary">Timezone Correction</span></h4>
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-6" id="time_zone">
                         <div class="radio-inline">
-                          <input type="radio" name="optradio">No Correction (Use UTC)
+                          <input type="radio" name="optradio" class="optradio" value="No Correction (Use UTC)">No Correction (Use UTC)
                         </div>
-                    </div>
-                    <div class="col-md-6">
+                        <br>
                         <div class="radio-inline">
-                          <input type="radio" name="optradio">Use local timezone
+                          <input type="radio" name="optradio" class="optradio" value="Use Local Timezone">Use Local Timezone
                         </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
+                        <br>
                         <div class="radio-inline">
-                          <input type="radio" name="optradio">Use selected timezone
+                          <input type="radio" name="optradio" class="optradio" value="Use Slected Timezone">Use Selected Timezone
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                          <select class="form-control">
+                          <select name="dbTimeZoneLocation" id="dbTimeZoneLocation" class="form-control">
                               <option>Asia</option>
-                              <option>london</option>
-                              <option>africa</option>
+                              <option>London</option>
+                              <option>Africa</option>
                           </select>
-                        </div>  
+                        </div> 
                     </div>
                 </div>
-
 
                 <!-- foutth row-->
 
                 <h4><span class="label label-primary">Misc</span></h4>
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-12" id="miscChckbox">
                         <div class="checkbox">
-                          <label><input type="checkbox" value="">Allow Spaces in column names</label>
+                          <label><input type="checkbox" class="time_zone" name="miscChecked[]" value="Allow Spaces in column names">Allow Spaces in column names</label>
                         </div>
                         <div class="checkbox">
-                          <label><input type="checkbox" value="">Validate connections on close</label>
+                          <label><input type="checkbox" class="time_zone" name="miscChecked[]" value="Validate connections on close">Validate connections on close</label>
                         </div>
                         <div class="checkbox">
-                          <label><input type="checkbox" value="">retrieve metadata in config</label>
+                          <label><input type="checkbox" class="time_zone" name="miscChecked[]" value="Retrieve metadata in config">Retrieve metadata in config</label>
                         </div>
                     </div>
                 </div>
@@ -244,11 +350,13 @@
         </div>
       </div>
       <div class="modal-footer">
+        <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <button type="button" class="btn btn-default modal_ok">Ok</button>
         <button type="button" class="btn btn-default">Apply</button>
         <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
         <span style="margin-right: 60px;"><i class="fa fa-question-circle-o" aria-hidden="true"></i></span>
       </div>
+      </form>
     </div>
 
   </div>
@@ -271,87 +379,86 @@
             <li><a data-toggle="tab" href="#menu1">Flow Variables</a></li>
             <li><a data-toggle="tab" href="#menu2">Memory Policy</a></li>
           </ul>
-
+        <form name="jsonSubTypeData" id="jsonSubTypeData" enctype="multipart/form-data">
           <div class="tab-content">
-            <div id="home" class="tab-pane fade in active">
-                 <h4 style="padding-top: 20px;"><span class="label label-primary" >Input Location</span></h4>
-                <div class="row">
-                    <div class="col-md-7">
-                        <div class="form-group">
-                          <select class="form-control">
-                              <option>Asia</option>
-                              <option>london</option>
-                              <option>africa</option>
-                          </select>
-                        </div>  
-                    </div>
-                    <div class="col-md-5">
-                        <div class="form-group">
-                          <input type="file" value="browse">
-                        </div>
-                    </div>
-                </div>
-                <!-- second row-->
-                <h4 style="padding-top: 20px;"><span class="label label-primary" >reader page</span></h4>
-                <div class="row">
-                    <div class="col-md-12">
-                        <form class="form-horizontal">
-                            <div class="form-group">
-                              <label class="control-label col-sm-4" for="email">Output Column name:</label>
-                              <div class="col-sm-8">
-                                <input type="email" class="form-control">
-                              </div>
-                            </div>
-                            <div class="form-group"> 
-                              <div class="col-sm-offset-4 col-sm-8">
-                                <div class="checkbox">
-                                  <label><input type="checkbox"> Remember me</label>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="form-group">
-                              <label class="control-label col-sm-4" for="pwd">JSON path</label>
-                              <div class="col-sm-8"> 
-                                <input type="password" class="form-control">
-                              </div>
-                            </div>
-                            <div class="form-group"> 
-                              <div class="col-sm-offset-4 col-sm-8">
-                                <div class="checkbox">
-                                  <label><input type="checkbox"> Fail if path not found</label>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="form-group"> 
-                              <div class="col-sm-offset-4 col-sm-8">
-                                <div class="checkbox">
-                                  <label><input type="checkbox"> Allow Comments in JSON file</label>
-                                </div>
-                              </div>
-                            </div>
-                          </form>
-                    </div>
-                </div>
+              <div id="home" class="tab-pane fade in active">
+                  <h4 style="padding-top: 20px;"><span class="label label-primary" >Input Location</span></h4>
+                  <div class="row">
+                      <div class="col-md-7">
+                          <input type="hidden" name="ext_name" id="json_ext_name">
+                          <input type="hidden" name="jsonTypeName" id="jsonTypeName">
+                          <input type="hidden" name="jsonDataKey" id="jsonDataKey">
+                          <div class="form-group">
+                            <select name="jsonTimeZoneLocation" id="jsonTimeZoneLocation" class="form-control">
+                                <option>Asia</option>
+                                <option>London</option>
+                                <option>Africa</option>
+                            </select>
+                          </div>  
+                      </div>
+                      <div class="col-md-5">
+                          <div class="form-group">
+                            <div ><input type='hidden' id="jsonFileName" name="jsonFileName"></div>
+                            <div><input type='file' accept='image/*' onchange='openFile(event)'></div>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- second row-->
+                  <h4 style="padding-top: 20px;"><span class="label label-primary" >reader page</span></h4>
+                  <div class="row">
+                      <div class="col-md-12">
+                          <div class="form-group">
+                            <label for="jsonEmail">Output Column Name:</label>
+                            <input type="email" id="jsonEmail" name="jsonEmail" class="form-control">
+                          </div>  
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-md-12" id="jRememberMe">
+                          <div class="checkbox">
+                            <label><input type="checkbox" id="jsonRememberMe" class="jsonRememberMe" name="jsonRememberMe" value="Remember Me">Remember me</label>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-md-12">
+                          <div class="form-group">
+                            <label for="jsonPassword">JSON Path:</label>
+                            <input type="password" id="jsonPassword" name="jsonPassword" class="form-control">
+                          </div>  
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-md-12" id="pathNotFoundAndAllowComments">
+                          <div class="checkbox">
+                            <label><input type="checkbox" name="pathNotFoundAndAllowComments[]" value="Fail if path not found">Fail if path not found</label>
+                          </div>
+                          <div class="checkbox">
+                            <label><input type="checkbox" name="pathNotFoundAndAllowComments[]" value="Allow Comments in JSON file">Allow Comments in JSON file</label>
+                          </div>
+                      </div>
+                  </div>
+
+                  </div>
+
             </div>
-            <div id="menu1" class="tab-pane fade">
-              
-            </div>
-            <div id="menu2" class="tab-pane fade">
-              
-            </div>
-          </div>
+            <div id="menu1" class="tab-pane fade"></div>
+            <div id="menu2" class="tab-pane fade"></div>
       </div>
+            
       <div class="modal-footer">
+        <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <button type="button" class="btn btn-default modal_ok">Ok</button>
         <button type="button" class="btn btn-default">Apply</button>
         <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
         <span style="margin-right: 60px;"><i class="fa fa-question-circle-o" aria-hidden="true"></i></span>
       </div>
+      </form>
     </div>
 
   </div>
 </div>
-<!-- Modal -->
+<!-- Modal --><!-- 
                         <div class="modal fade" id="myModal" role="dialog">
                         <div class="modal-dialog">
                           <div class="modal-content">
@@ -475,7 +582,7 @@
                             
                           </div>
       
-                        </div>
+                        </div> -->
 
 
 <div class="modal fade" id="CSV" role="dialog">
@@ -485,10 +592,18 @@
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title">CSV Modal</h4>
       </div>
+      <form name="csvSubTypeData" id="csvSubTypeData" method="post" enctype="multipart/form-data">
       <div class="modal-body">
           <div id='file'>
             <br>
-            <div ><input class = 'btn btn-primary' type='file' ></div>
+            <input type="hidden" name="ext_name" id="csv_ext_name">
+            <input type="hidden" name="csvTypeName" id="csvTypeName">
+            <input type="hidden" name="csvTypeName" id="csvTypeName">
+            <div ><input type='hidden' id="csvDataKey" name="csvDataKey"></div>
+            <!-- <img id="output"> -->
+            <div ><input type='hidden' id="csvFileName" name="csvFileName"></div>
+            <div><input type='file' accept='image/*' onchange='openFile(event)'></div>
+
           </div>
           <hr>
           <h4><span class="label label-primary">Readen Options</span></h4>
@@ -496,13 +611,13 @@
         <div class="row">
           <div class ='col-md-6'>
             <div>
-              <input class = 'btn btn-default' type='text' style="width: 50px"/> 
+              <input class = 'btn btn-default' type='text' id="colDelimiter" name="colDelimiter" style="width: 50px"/> 
               <span >Column Delimiter</span>
             </div>
           </div>
           <div class ='col-md-6'>
             <div>
-              <input class = 'btn btn-default' type='text' style="width: 50px"/> 
+              <input class = 'btn btn-default' id="rowDelimiter" name="rowDelimiter" type='text' style="width: 50px"/> 
               <span >Row Delimiter</span>
             </div>
           </div>
@@ -511,67 +626,59 @@
         <div class="row">
           <div class ='col-md-6'>
             <div>
-              <input class = 'btn btn-default' type='text' style="width: 50px"/> 
+              <input class = 'btn btn-default' id="quoteChar" name="quoteChar" type='text' style="width: 50px"/> 
               <span >Quote Char</span>
             </div>
           </div>
           <div class ='col-md-6'>
             <div>
-              <input class = 'btn btn-default' type='text' style="width: 50px"/> 
+              <input class = 'btn btn-default' id="commentChar" name="commentChar" type='text' style="width: 50px"/> 
               <span >Comment Char</span>
             </div>
           </div>
         </div>
         <div class="row">
-          <div class ='col-md-6 '>
+          <div class ='col-md-6' id="viewResult">
             <div class ='checkbox'>
-              <label><input class = 'btn-primary' type='checkbox'>Has Column Header
+              <label><input class = 'btn-primary' name="viewResult[]" type='checkbox' value="Has Column Header">Has Column Header
             </label>
             </div>
-          </div>
-          <div class ='col-md-6'>
+
             <div class ='checkbox'>
-            <label><input class = 'btn btn-default' type='checkbox'>Has Row Header
+            <label><input class = 'btn btn-default' name="viewResult[]" type='checkbox' value="Has Row Header">Has Row Header
             </label>
             </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class ='col-md-6 '>
+
             <div class ='checkbox'>
-            <label><input class = 'btn btn-default' type='checkbox'>Support Short Lines
+            <label><input class = 'btn btn-default' name="viewResult[]" type='checkbox' value="Support Short Lines">Support Short Lines
             </label>
             </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class ='col-md-6 checkbox'>
-            <label><input class = 'btn btn-default' type='checkbox'>Skip First Lines
+
+            <div class ='checkbox'>
+            <label><input class = 'btn btn-default' name="viewResult[]" type='checkbox' value="Skip First Lines">Skip First Lines
             </label>
+            </div>
+
+            <div class ='checkbox'>
+            <label><input class = 'btn btn-default' name="viewResult[]" type='checkbox' value="Limit rows">Limit rows
+            </label>
+            </div>
+
           </div>
-          <div class ='col-md-6'>
+          <div class ='col-md-6' style="margin-top: 15px">
             <div class='btn-default'>
                 <label>
-                  <select class="form-control" id="sel2" >
+                  <select name="sel1" class="form-control" id="sel1" >
                     @for($i= 0 ; $i<=10; $i++)
                         <option>{{$i}}</option>
                     @endfor
                   </select>
                 </label>
             </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class ='col-md-6 '>
-            <div class ='checkbox'>
-            <label><input class = 'btn btn-default' type='checkbox'>Limit rows
-            </label>
-            </div>
-          </div>
-          <div class ='col-md-6'>
+
             <div class='btn-default'>
             <label>
-              <select class="form-control" id="sel2" >
+              <select name="sel2" class="form-control" id="sel2" >
               
               @for($i= 0 ; $i<=50; $i++)
                   <option>{{$i}}</option>
@@ -582,13 +689,16 @@
             </div>
           </div>
         </div>
+        
       </div>
       <div class="modal-footer">
+        <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <button type="button" class="btn btn-default modal_ok">Ok</button>
         <button type="button" class="btn btn-default">Apply</button>
         <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
         <span style="margin-right: 60px;"><i class="fa fa-question-circle-o" aria-hidden="true"></i></span>
       </div>
+      </form>
     </div>
   </div>
 </div>
@@ -617,36 +727,251 @@
 <script src="{{url()}}/assets/vendor/js/jquery.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script type="text/javascript">
+
+  // function inputLocation(value){
+  //   var continantes = ['Asia', 'London', 'Africa'];
+  //   var options = [];
+  //   for (var i = 0; i < continantes.length; i++) {
+  //     if (value) {
+  //       if (continantes[i] == value) {
+  //         options += '<option>'+continantes[i]+'</option>';
+  //       }  
+  //     }
+  //   }
+
+  // }
+    var openFile = function(event) {
+      var input = event.target;
+
+      var reader = new FileReader();
+      reader.onload = function(){
+        var dataURL = reader.result;
+        if ($('#jsonTypeName').val() == 'JSON') {
+          $('#jsonFileName').val(dataURL);
+        } else {
+          $('#csvFileName').val(dataURL);
+        }
+        // var output = document.getElementById('output');
+        // output.src = dataURL;
+      };
+      reader.readAsDataURL(input.files[0]);
+    };
+
     $('a.ingest').addClass('active');
 
+
+    function sendAjaxToGetPopupDate(id, ext_name, type) {
+        ext_name = ext_name.trim();
+
+        var misc = ['Allow Spaces in column names', 'Validate connections on close', 'Retrieve metadata in config'];
+
+        $.ajax({
+
+            url: '{{url()}}/getIngestionData',
+            type: "POST",
+            dataType: 'json',
+            headers: {
+                
+                'X-CSRF-TOKEN': "{{ csrf_token() }}",
+            },
+            data: {'id': id.value, 'ext_name': ext_name},
+
+            success:function(resp){
+                var res = resp.data.extIngData[0];
+                var misc_arr = [];
+
+                if (resp.status == "success") {
+                  if (type == 'Database') {
+                    $('#hostName').val(res.host_name);
+                    $('#portNo').val(res.port_no);
+                    $('#dbTypeEmail').val(res.db_name);
+                    $('#tableName').val(res.table_name);
+                    $('#userName').val(res.user_name);
+                    $('#dbTypePassword').val(res.password);
+                    
+                    $('#time_zone').find('input[type="radio"]').each(function(){
+                      if ( $(this).val() === res.time_zone ) {
+                        $(this).attr("checked", true);  
+                      }
+                    });
+
+                    var miscArr = JSON.parse(res.misc);
+                    for (var i = 0; i < miscArr.length; i++) {
+                      $('#miscChckbox').find('input[type="checkbox"]').each(function(){
+                        if ( $(this).val() === miscArr[i] ) {
+                          $(this).attr("checked", true);
+                        }
+                      });
+                    }
+
+                    $('#dbTimeZoneLocation').val(res.time_zone_location);
+                    // $('#miscChckbox').val(res.user_name);
+                    for (var i = 0; i < res.misc.length; i++) {
+                      
+                    }
+
+                    $('#miscChckbox').find('input[type="checkbox"]:checked').each(function(){
+                      // $('.time_zone').attr("checked", true);
+                      $(this).attr("checked", true);
+                    });
+                    
+                    for (var dim = 0; dim < misc_arr.length; dim++) {
+                        $('input[value="'+misc_arr[dim]+'"]').attr('checked', 'true');
+                    }
+
+                  } else if (type == 'JSON') {
+                    var pathAndCommentsArr = JSON.parse(res.path_not_found_and_allow_comments);
+                    var jsonRememberMe = res.remember_me;
+
+                    $('#jsonTimeZoneLocation').val(res.json_time_zone_location);
+                    $('#jsonEmail').val(res.reader_page_name);
+                    // $('#jsonRememberMe').val(res.remember_me);
+
+                    // $('#jsonRememberMe').find('input[type="checkbox"]:checked').each(function(){
+                    //   console.log($(this).val());
+                    //   if ( $(this).val() == jsonRememberMe ) {
+                    //       $('#jsonRememberMe').attr("checked", true);
+                    //     }
+                    // });
+
+                    $('#jsonRememberMe').attr("checked", true);
+
+                    for (var dim = 0; dim < jsonRememberMe.length; dim++) {
+                        $('input[value="'+jsonRememberMe[dim]+'"]').attr('checked', 'true');
+                    }
+
+                    $('#jsonPassword').val(res.json_path);
+
+                    $('#pathNotFoundAndAllowComments').find('input[type="checkbox"]:checked').each(function(){
+                      $(this).attr("checked", true);
+                    });
+                    
+                    for (var dim = 0; dim < pathAndCommentsArr.length; dim++) {
+                        $('input[value="'+pathAndCommentsArr[dim]+'"]').attr('checked', 'true');
+                    }
+                  } else {
+                    var viewResult = JSON.parse(res.view_res);
+
+                    $('#colDelimiter').val(res.col_delimiter);
+                    $('#rowDelimiter').val(res.row_delimiter);
+                    $('#quoteChar').val(res.quote_char);
+                    $('#commentChar').val(res.comment_char);
+                    $('#viewResult').val(res.col_delimiter);
+                    $('#viewResult').find('input[type="checkbox"]:checked').each(function(){
+                      $(this).attr("checked", true);
+                    });
+                    
+                    for (var dim = 0; dim < viewResult.length; dim++) {
+                        $('input[value="'+viewResult[dim]+'"]').attr('checked', 'true');
+                    }
+                    $('#sel1').val(res.num_1);
+                    $('#sel2').val(res.num_2);
+                  }
+
+                }
+            }
+        });
+
+    }
+
     $('.give_inputs').click(function(){
-        
+
         var type_name = $(this).closest('.each_row').find('.type_name').val();
 
         var subtype_name = $(this).closest('.each_row').find('.subtype_name').val();
 
         window.tick = $(this).closest('.each_row').find('.extractor_name').text();
+        var extractor_name = $(this).closest('.each_row').find('.extractor_name').text();
+        var extractor_name = extractor_name.trim();
+        // console.log(extractor_name);
+        var dataKey = $(this).closest('.each_row').find('#dataKey').val();
         
-        if (type_name == "Database") {
+        // $('#dbDataKey').val('');
+        // $('#jsonDataKey').val('');
+        // $('#csvDataKey').val('');
+        // $('#db_ext_name').val('');
 
+        if (type_name == "Database") {
+            $('#dbTypeName').val(type_name);
+            $('#jsonTypeName').val('');
+            $('#csvTypeName').val('');
+            $('#db_ext_name').val(extractor_name);
+            $('#dbDataKey').val(dataKey);
+            sendAjaxToGetPopupDate(project_id, extractor_name, type_name);
             $('#Database').modal('show');
 
         }else if(type_name == 'JSON'){
-
+            $('#jsonTypeName').val(type_name);
+            $('#dbTypeName').val('');
+            $('#csvTypeName').val('');
+            $('#json_ext_name').val(extractor_name);
+            $('#jsonDataKey').val(dataKey);
+            sendAjaxToGetPopupDate(project_id, extractor_name, type_name);
             $('#JSON').modal('show');
         
         }else if(type_name == 'FLAT FILE' || subtype_name == 'CSV'){
-
+            $('#csvTypeName').val(type_name);
+            $('#dbTypeName').val('');
+            $('#jsonTypeName').val('');
+            $('#csv_ext_name').val(extractor_name);
+            $('#csvDataKey').val(dataKey);
+            sendAjaxToGetPopupDate(project_id, extractor_name, type_name);
             $('#CSV').modal('show');
         }
+        
     });
-window.extract = [];
+    
+    window.extract = [];
   
-    $(document).on('click', '.modal_ok', function(){
-          window.extract.push(window.tick);
-        //console.log(window.tick);
-        console.log(window.extract);
+    $(document).on('click', '.modal_ok', function(event){
+        event.preventDefault();
+
+        window.extract.push(window.tick);
         var that = $(this);
+        var dbTypeName = $('#dbTypeName').val();
+        var jsonTypeName = $('#jsonTypeName').val();
+        var csvTypeName = $('#csvTypeName').val();
+        var project_id = $('#project_id').val();
+
+        // Database type data
+        var serializedData = '';
+        if (dbTypeName) {
+          serializedData = $('#dbSubTypeData').serialize();  
+          console.log('Database Data: \n'+serializedData);
+        } else if (jsonTypeName) {
+          if (!jQuery('#jsonRememberMe').is(':checked')) {
+              var jsonRememberMe = '';
+          }
+          if (!jQuery('#pathNotFoundAndAllowComments').is(':checked')) {
+              var pathAndCom = '';
+          }
+          serializedData = $('#jsonSubTypeData').serialize();
+          console.log('Json Data: \n'+serializedData);
+        } else if(csvTypeName){
+          serializedData = $('#csvSubTypeData').serialize();
+          console.log('CSV Data: \n'+serializedData);
+        }
+
+
+        $.ajax({
+
+            url: '{{url()}}/saveIngestionData',
+            type: "POST",
+            dataType: 'json',
+            headers: {
+                
+                'X-CSRF-TOKEN': "{{ csrf_token() }}",
+            },
+            data: {'serializedData': serializedData, 'project_id': project_id},
+
+            success:function(resp){
+
+                if (resp.status == "success") {
+                  console.log(resp);
+                  // alert(resp.data);
+                }
+            }
+        });
 
         $('.extractor_name').each(function(){
 
@@ -667,7 +992,7 @@ window.extract = [];
                 var widget_array2 =  [];
                 
                 var html='';
-                
+
                 $(' input[type="checkbox" ]:checked').each(function(){ 
                      
                      widget_array1.push($(this).val());

@@ -101,7 +101,8 @@
                                       <div class="col-md-4 bdf" id="bdf1"></div>
                                       <div class="col-md-4 dim" id="dim1"></div>
                                 </div>
-                                <div class = 'hide'>
+                                <div class = 'hide-'>
+                                  <input type='hidden' name= "proj_id" class="proj_id" >
                                   <input type='hidden' name= "proj_nam" class="proj_nam" >
                                   <input type='hidden' name= "ta" class= "ta" >
                                   <input type='hidden' name= "fa" class= "fa" >
@@ -1503,12 +1504,12 @@ $(document).ready(function(){
   });
 });
 
-$(document).on('change', '#project_text', function()
-   {
+$(document).on('change', '#project_text', function(){
 
       $('.proj_nam').val($(this).val());
       console.log($('.proj_nam').val());
-    });
+
+});
 $(document).on('change', '#ta', function()
    {
       $('.ta').val($(this).val());

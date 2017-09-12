@@ -50,7 +50,7 @@
           <span>
             <i class="fa fa-th-list" aria-hidden="true"></i>
           </span>
-          <span style="margin-left: 35px">Project setup</span>
+          <span style="margin-left: 35px">Project Setup</span>
         </a>
 
         <!-- <a class="ingest" href="#">
