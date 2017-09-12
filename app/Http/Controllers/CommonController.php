@@ -54,8 +54,9 @@ class CommonController extends Controller
         $values = array();
         $proj_name = $ta = $fa= '';
         
-        if (isset($inputs['check_box']) && !empty($inputs['check_box']))
+        if (isset($inputs['check_box']) && !empty($inputs['check_box'])){
             Session::put('values', $inputs['check_box']);
+        }
             
         if (isset($inputs['proj_nam']) && !empty($inputs['proj_nam']))
             $proj_name = $inputs['proj_nam'];
@@ -68,10 +69,12 @@ class CommonController extends Controller
 
         $final_array = array();
         $values = Session::get('values');
+
         foreach ($values as $key => $value) 
         {
             $data = Ingestion::where('data', '=', $value)->groupBy('source')->get();
             $arr = array('data'=> $value, 'sources'=> $data);
+            // return $arr;
             array_push($final_array, $arr);
         }
         if(!(DB::table('active_proj')->where('proj_name',$proj_name)))
@@ -97,11 +100,192 @@ class CommonController extends Controller
                 array_push($final_array1,$value->proj_name);
             }
         }
-            
+
+        $proj_id = DB::table('active_proj')->select('id')->where('proj_name',$proj_name)->get();
+
+        $addProjId = array_push($values,$proj_id[0]->id);
+        $proj_id = json_encode($proj_id[0]->id);
         //return $final_array1;
-        $data1 = array('final_array1', 'final_array');
+        $data1 = array('final_array1', 'final_array', 'proj_id');
         return view('ingestion', compact($data1));
         
+    }
+
+    public function ingestionBackStep(Request $request, $id){
+        $inputs = Input::all();
+
+        $values = array();
+        $proj_name = $ta = $fa= '';
+        
+        if (isset($inputs['check_box']) && !empty($inputs['check_box'])){
+            Session::put('values', $inputs['check_box']);
+        }
+            
+        if (isset($inputs['proj_nam']) && !empty($inputs['proj_nam']))
+            $proj_name = $inputs['proj_nam'];
+        
+        if (isset($inputs['ta']) && !empty($inputs['ta']))
+            $ta = $inputs['ta'];
+
+        if (isset($inputs['fa']) && !empty($inputs['fa']))
+            $fa = $inputs['fa'];
+
+        $final_array = array();
+        $values = Session::get('values');
+
+        foreach ($values as $key => $value){
+            $data = Ingestion::where('data', '=', $value)->groupBy('source')->get();
+            $arr = array('data'=> $value, 'sources'=> $data);
+            // return $arr;
+            array_push($final_array, $arr);
+        }
+
+        if(!(DB::table('active_proj')->where('proj_name',$proj_name)))
+        {
+            DB::table('active_proj')->insert(
+            ['proj_name' => $proj_name, 'ta' => $ta ,'fa' => $fa, 'date' => date('Y-m-d')]);
+            $data1 = DB::table('active_proj')->get();
+            //$data = array('final_array');
+            $final_array1 = array();
+            foreach ($data1 as $value) {
+                array_push($final_array1,$value->proj_name);
+            }
+        }
+        else 
+        {
+            DB::table('active_proj')->where('proj_name' , $proj_name)->delete();
+            DB::table('active_proj')->insert(
+            ['proj_name' => $proj_name, 'ta' => $ta ,'fa' => $fa, 'date' => date('Y-m-d')]);
+            $data1 = DB::table('active_proj')->get();
+            //$data = array('final_array');
+            $final_array1 = array();
+            foreach ($data1 as $value) {
+                array_push($final_array1,$value->proj_name);
+            }
+        }
+        
+        $exeProjectData = DB::table('active_proj')->select()->where('id',$id)->get();
+        $exeProjectData = !empty($exeProjectData) ? json_encode($exeProjectData[0]->id) : '';
+
+        $exeIngestData = DB::table('ingestion_data')->select()->where('proj_id',$id)->get();
+        $exeIngestId = !empty($exeIngestData) ? json_encode($exeIngestData[0]->ing_id) : '';
+
+        $exeIngestion = DB::table('ingestion')->select()->where('id',$exeIngestId)->get();
+        //  $exeIngestionId = json_encode($exeIngestion[0]);
+
+        // return $exeIngestData;
+
+        $proj_det = DB::table('active_proj')->select()->where('id',$id)->get();
+        $proj_id = !empty($proj_det) ?  json_encode($proj_det[0]->id) : '';
+        $data1 = array('final_array1', 'final_array', 'proj_id', 'exeIngestion', 'exeIngestData');
+        return view('ingestion', compact($data1));
+    }
+
+    public function saveIngestionData(){
+        $inputs = Input::all();
+        $params = array();
+
+        parse_str($inputs['serializedData'], $params);
+
+        // $ext_name = str_replace(' ', '', $params['ext_name']);
+        $ext_name = trim($params['ext_name'], ' ');
+        // return $params;
+
+        $ing_data = DB::table('ingestion')->select('id', 'type')->where('extractor_name', $ext_name)->get();
+        // return $ing_data;
+
+        $ing_data = json_encode($ing_data[0]);
+        $ing_data = json_decode($ing_data);
+
+        if ($ing_data->type == 'Database') {
+            $miscChecked = json_encode($params['miscChecked']);
+
+            $exeIngestion = DB::table('ingestion_data')->select('id', 'ing_id')
+                ->where('proj_id', $inputs['project_id'])
+                ->where('ing_id', $ing_data->id)
+                ->get();
+            
+            if (count($exeIngestion)>0) {
+                $exeIngId = $exeIngestion[0];
+
+                DB::table('ingestion_data')
+                    ->where('id', $exeIngId->id)
+                    ->update(array(
+                        'ing_id' => $ing_data->id, 'ext_name' => $ext_name,
+                        'host_name' => $params['hostName'], 'port_no' => $params['portNo'], 
+                        'db_name' => $params['dbTypeEmail'], 'table_name' => $params['tableName'], 'user_name' => $params['userName'], 'password' => $params['dbTypePassword'], 'time_zone' => $params['optradio'], 'time_zone_location' => $params['dbTimeZoneLocation'],
+                        'misc' => $miscChecked
+                    ));
+            } else {
+                DB::table('ingestion_data')->insert([
+                    'proj_id' => $inputs['project_id'], 'ing_id' => $ing_data->id, 'ext_name' => $ext_name, 'key' => $params['dbDataKey'], 'host_name' => $params['hostName'], 'port_no' => $params['portNo'], 'db_name' => $params['dbTypeEmail'], 'table_name' => $params['tableName'], 'user_name' => $params['userName'], 'password' => $params['dbTypePassword'], 'time_zone' => $params['optradio'], 'time_zone_location' => $params['dbTimeZoneLocation'],
+                    'misc' => $miscChecked
+                ]);
+            }
+
+        } else if($ing_data->type == 'JSON'){
+            // return $params['pathNotFoundAndAllowComments'];
+            $path_and_comments = json_encode($params['pathNotFoundAndAllowComments']);
+
+            $exeIngestion = DB::table('ingestion_data')->select('id', 'ing_id')
+                ->where('proj_id', $inputs['project_id'])
+                ->where('ing_id', $ing_data->id)
+                ->get();
+
+            if (count($exeIngestion)>0) {
+                $exeIngId = $exeIngestion[0];
+
+                DB::table('ingestion_data')
+                    ->where('id', $exeIngId->id)
+                    ->update(array(
+                        'ing_id' => $ing_data->id, 'ext_name' => $ext_name,
+                        'json_file' => $params['jsonFileName'], 'reader_page_name' => $params['jsonEmail'], 'remember_me' => $params['jsonRememberMe'], 'json_path' => $params['jsonPassword'], 'path_not_found_and_allow_comments' => $path_and_comments, 'json_time_zone_location' => $params['jsonTimeZoneLocation']
+                    ));
+            } else {
+                DB::table('ingestion_data')->insert([
+                    'proj_id' => $inputs['project_id'], 'ing_id' => $ing_data->id, 'ext_name' => $ext_name, 'key' => $params['jsonDataKey'], 'json_file' => $params['jsonFileName'], 'reader_page_name' => $params['jsonEmail'], 
+                    'remember_me' => $params['jsonRememberMe'], 'json_path' => $params['jsonPassword'], 'path_not_found_and_allow_comments' => $path_and_comments, 'json_time_zone_location' => $params['jsonTimeZoneLocation']
+                ]);    
+            }
+            
+        }else {
+            $view_result = json_encode($params['viewResult']);
+
+            $exeIngestion = DB::table('ingestion_data')->select('id', 'ing_id')
+                ->where('proj_id', $inputs['project_id'])
+                ->where('ing_id', $ing_data->id)
+                ->get();
+
+            if (count($exeIngestion)>0) {
+                $exeIngId = $exeIngestion[0];
+
+                DB::table('ingestion_data')
+                    ->where('id', $exeIngId->id)
+                    ->update(array(
+                        'ing_id' => $ing_data->id, 'ext_name' => $ext_name,
+                        'csv_file' => $params['csvFileName'], 'col_delimiter' => $params['colDelimiter'], 'row_delimiter' => $params['rowDelimiter'],'quote_char' => $params['quoteChar'], 'comment_char' => $params['commentChar'], 'view_res' => $view_result, 'num_1' => $params['sel1'],'num_2' => $params['sel2']
+                    ));
+            } else {
+                DB::table('ingestion_data')->insert([
+                    'proj_id' => $inputs['project_id'], 'ing_id' => $ing_data->id, 'ext_name' => $ext_name, 'key' => $params['csvDataKey'], 'csv_file' => $params['csvFileName'], 'col_delimiter' => $params['colDelimiter'], 'row_delimiter' => $params['rowDelimiter'],'quote_char' => $params['quoteChar'], 'comment_char' => $params['commentChar'], 'view_res' => $view_result, 'num_1' => $params['sel1'],'num_2' => $params['sel2']
+                ]);
+            }
+        }
+        
+        return Response::json(array('status'=> 'success', 'data'=> $params));
+    }
+
+    public function getIngestionData(){
+        $inputs =  Input::all();
+
+        $extIngData = DB::table('ingestion_data')
+            ->where('proj_id', '=', $inputs['id'])
+            ->where('ext_name', '=', $inputs['ext_name'])
+            ->get();        
+
+        $data = compact('extIngData');
+
+        return Response::json(array('status'=> 'success', 'data'=> $data));
     }
 
     public function getExeFlow(){

@@ -52,6 +52,10 @@ Route::any('test', 'AjaxCallTest@test');
 Route::any('test1', 'AjaxCallTest@test1');
 
 Route::any('/ingestion', 'CommonController@ingestion');
+Route::any('/ingestion/{id}', 'CommonController@ingestionBackStep');
+Route::any('/saveIngestionData', 'CommonController@saveIngestionData');
+Route::any('/getIngestionData', 'CommonController@getIngestionData');
+
 
 Route::any('/getTypes', 'CommonController@getTypes');
 Route::any('/getSubTypes', 'CommonController@getSubTypes');
