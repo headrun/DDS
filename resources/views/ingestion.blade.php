@@ -207,7 +207,7 @@
                             <div class="col-md-5">
                               <form action='{{url()}}/struct'>
                                 <div id= 'hidden'></div>
-                                    <input type="text" name="project_id" id="project_id" value="{{  $proj_id }}">
+                                    <input type="text" name="project_id" id="project_id" value="{{ (integer) $proj_id }}">
                                     @if(isset($newPrj))
                                       <input type="text" name="newPrj" id="newPrj" value="{{ $newPrj }}">
                                     @else
@@ -932,7 +932,7 @@
             if (newPrj != 'New Project') {
               sendAjaxToGetPopupDate(project_id, extractor_name, type_name);
             }
-            
+
             $('#CSV').modal('show');
         }
         

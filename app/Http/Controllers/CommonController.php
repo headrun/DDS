@@ -105,7 +105,8 @@ class CommonController extends Controller
 
         $addProjId = array_push($values,$proj_id[0]->id);
         $proj_id = json_encode($proj_id[0]->id);
-        //return $final_array1;
+        $proj_id = (int)$proj_id;
+        // return $proj_id;
         $newPrj = 'New Project';
         $data1 = array('final_array1', 'final_array', 'proj_id', 'newPrj');
         return view('ingestion', compact($data1));
