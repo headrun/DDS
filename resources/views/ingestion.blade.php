@@ -207,7 +207,12 @@
                             <div class="col-md-5">
                               <form action='{{url()}}/struct'>
                                 <div id= 'hidden'></div>
-                                    <input type="hidden" name="project_id" id="project_id" value="{{  $proj_id }}">
+                                    <input type="text" name="project_id" id="project_id" value="{{  $proj_id }}">
+                                    @if(isset($newPrj))
+                                      <input type="text" name="newPrj" id="newPrj" value="{{ $newPrj }}">
+                                    @else
+                                      <input type="text" name="newPrj" id="newPrj" value="Empty">
+                                    @endif
                                 <button class="btn btn-primary btn-md move_to_validate pull-left" disabled>Move to Map Data</button>
                               </form>
                             </div>
@@ -762,8 +767,7 @@
 
     function sendAjaxToGetPopupDate(id, ext_name, type) {
         ext_name = ext_name.trim();
-
-        var misc = ['Allow Spaces in column names', 'Validate connections on close', 'Retrieve metadata in config'];
+        id = parseInt(id.value);
 
         $.ajax({
 
@@ -774,7 +778,7 @@
                 
                 'X-CSRF-TOKEN': "{{ csrf_token() }}",
             },
-            data: {'id': id.value, 'ext_name': ext_name},
+            data: {'id': id, 'ext_name': ext_name},
 
             success:function(resp){
                 var res = resp.data.extIngData[0];
@@ -885,6 +889,7 @@
         var extractor_name = extractor_name.trim();
         // console.log(extractor_name);
         var dataKey = $(this).closest('.each_row').find('#dataKey').val();
+        var newPrj = $('#newPrj').val();
         
         // $('#dbDataKey').val('');
         // $('#jsonDataKey').val('');
@@ -897,7 +902,11 @@
             $('#csvTypeName').val('');
             $('#db_ext_name').val(extractor_name);
             $('#dbDataKey').val(dataKey);
-            sendAjaxToGetPopupDate(project_id, extractor_name, type_name);
+
+            if (newPrj != 'New Project') {
+              sendAjaxToGetPopupDate(project_id, extractor_name, type_name);
+            }
+
             $('#Database').modal('show');
 
         }else if(type_name == 'JSON'){
@@ -906,7 +915,11 @@
             $('#csvTypeName').val('');
             $('#json_ext_name').val(extractor_name);
             $('#jsonDataKey').val(dataKey);
-            sendAjaxToGetPopupDate(project_id, extractor_name, type_name);
+
+            if (newPrj != 'New Project') {
+              sendAjaxToGetPopupDate(project_id, extractor_name, type_name);
+            }
+
             $('#JSON').modal('show');
         
         }else if(type_name == 'FLAT FILE' || subtype_name == 'CSV'){
@@ -915,7 +928,11 @@
             $('#jsonTypeName').val('');
             $('#csv_ext_name').val(extractor_name);
             $('#csvDataKey').val(dataKey);
-            sendAjaxToGetPopupDate(project_id, extractor_name, type_name);
+
+            if (newPrj != 'New Project') {
+              sendAjaxToGetPopupDate(project_id, extractor_name, type_name);
+            }
+            
             $('#CSV').modal('show');
         }
         
