@@ -161,7 +161,7 @@
                                   <tr class="each_row">
                                     <td>
                                         <div class="checkbox">
-                                          <label><input type="checkbox" class="ingest_chkbox" value="{{$value['data']}}" disabled></label>
+                                          <label><input type="checkbox" name="ingest_chkbox" class="ingest_chkbox" value="{{$value['data']}}" disabled></label>
                                         </div>
                                     </td>
                                     <td>
@@ -207,7 +207,7 @@
                             <div class="col-md-5">
                               <form action='{{url()}}/struct'>
                                 <div id= 'hidden'></div>
-                                    <input type="text" name="project_id" id="project_id" value="{{ (integer) $proj_id }}">
+                                    <input type="text" name="project_id" id="project_id" value="{{  $proj_id }}">
                                     @if(isset($newPrj))
                                       <input type="text" name="newPrj" id="newPrj" value="{{ $newPrj }}">
                                     @else
@@ -745,6 +745,37 @@
   //   }
 
   // }
+
+    $(document).ready(function(){
+
+      var checked_arr = [];
+/*
+      $('#mainTable').each($("input[name='ingest_chkbox']:checked"), function(){            
+                checked_arr.push($(this).val());
+            });*/
+      $('#mainTable').find('input[type="checkbox"]:checked').each(function(){
+        checked_arr.push($(this).val());
+
+        var type_name = $(this).closest('.each_row').find('.type_name').val();
+        var project_id = $('#project_id').val();
+        window.tick = $(this).closest('.each_row').find('.extractor_name').text();
+        var extractor_name = $(this).closest('.each_row').find('.extractor_name').text();
+        alert(extractor_name);
+        var extractor_name = extractor_name.trim();
+        var newPrj = $('#newPrj').val();
+
+        if (newPrj != 'New Project') {
+          sendAjaxToGetPopupDate(project_id, extractor_name, type_name);
+        }
+
+      });
+      // var checkedValue = $('.ingest_chkbox:checked').val();
+      // for (var i = 0; i < checked_arr.length; i++) {
+        
+      // }
+
+    });
+
     var openFile = function(event) {
       var input = event.target;
 
@@ -767,8 +798,9 @@
 
     function sendAjaxToGetPopupDate(id, ext_name, type) {
         ext_name = ext_name.trim();
-        id = parseInt(id.value);
 
+        id = parseInt(id);
+        
         $.ajax({
 
             url: '{{url()}}/getIngestionData',
@@ -890,6 +922,7 @@
         // console.log(extractor_name);
         var dataKey = $(this).closest('.each_row').find('#dataKey').val();
         var newPrj = $('#newPrj').val();
+        var project_id = $('#project_id').val();
         
         // $('#dbDataKey').val('');
         // $('#jsonDataKey').val('');

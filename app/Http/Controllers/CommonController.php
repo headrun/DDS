@@ -177,8 +177,9 @@ class CommonController extends Controller
 
         // return $exeIngestData;
 
-        $proj_det = DB::table('active_proj')->select()->where('id',$id)->get();
-        $proj_id = !empty($proj_det) ?  json_encode($proj_det[0]->id) : '';
+        // $proj_det = DB::table('active_proj')->select()->where('id',$id)->get();
+        // $proj_id = !empty($proj_det) ?  json_encode($proj_det[0]->id) : '';
+        $proj_id = $id;
         $data1 = array('final_array1', 'final_array', 'proj_id', 'exeIngestion', 'exeIngestData');
         return view('ingestion', compact($data1));
     }
@@ -283,7 +284,7 @@ class CommonController extends Controller
         $extIngData = DB::table('ingestion_data')
             ->where('proj_id', '=', $inputs['id'])
             ->where('ext_name', '=', $inputs['ext_name'])
-            ->get();        
+            ->get(); 
 
         $data = compact('extIngData');
 
