@@ -209,9 +209,9 @@
                                 <div id= 'hidden'></div>
                                     <input type="text" name="project_id" id="project_id" value="{{  $proj_id }}">
                                     @if(isset($newPrj))
-                                      <input type="text" name="newPrj" id="newPrj" value="{{ $newPrj }}">
+                                      <input type="hidden" name="newPrj" id="newPrj" value="{{ $newPrj }}">
                                     @else
-                                      <input type="text" name="newPrj" id="newPrj" value="Empty">
+                                      <input type="hidden" name="newPrj" id="newPrj" value="Empty">
                                     @endif
                                 <button class="btn btn-primary btn-md move_to_validate pull-left" disabled>Move to Map Data</button>
                               </form>
@@ -760,7 +760,6 @@
         var project_id = $('#project_id').val();
         window.tick = $(this).closest('.each_row').find('.extractor_name').text();
         var extractor_name = $(this).closest('.each_row').find('.extractor_name').text();
-        alert(extractor_name);
         var extractor_name = extractor_name.trim();
         var newPrj = $('#newPrj').val();
 
@@ -800,7 +799,7 @@
         ext_name = ext_name.trim();
 
         id = parseInt(id);
-        
+
         $.ajax({
 
             url: '{{url()}}/getIngestionData',
@@ -1018,7 +1017,6 @@
 
                 if (resp.status == "success") {
                   console.log(resp);
-                  // alert(resp.data);
                 }
             }
         });

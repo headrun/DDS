@@ -167,19 +167,17 @@ class CommonController extends Controller
             }
         }
         
-        $exeProjectData = DB::table('active_proj')->select()->where('id',$id)->get();
-        $exeProjectData = !empty($exeProjectData) ? json_encode($exeProjectData[0]->id) : '';
+        // $exeProjectData = DB::table('active_proj')->select()->where('id',$id)->get();
+        // $exeProjectData = !empty($exeProjectData) ? json_encode($exeProjectData[0]->id) : '';
 
         $exeIngestData = DB::table('ingestion_data')->select()->where('proj_id',$id)->get();
         $exeIngestId = !empty($exeIngestData) ? json_encode($exeIngestData[0]->ing_id) : '';
+        $exeIngestId = (int)trim($exeIngestId, '"');
 
         $exeIngestion = DB::table('ingestion')->select()->where('id',$exeIngestId)->get();
         //  $exeIngestionId = json_encode($exeIngestion[0]);
+        // return $exeIngestion;
 
-        // return $exeIngestData;
-
-        // $proj_det = DB::table('active_proj')->select()->where('id',$id)->get();
-        // $proj_id = !empty($proj_det) ?  json_encode($proj_det[0]->id) : '';
         $proj_id = (int)trim($id, '"');
         $data1 = array('final_array1', 'final_array', 'proj_id', 'exeIngestion', 'exeIngestData');
         return view('ingestion', compact($data1));
