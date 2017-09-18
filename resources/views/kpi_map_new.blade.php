@@ -80,14 +80,14 @@
                               <form style="padding-left: 50px" id="choose_project">
                                   @if(isset($exePrjData))
                                     @foreach($exePrjData as $data)
-                                      <input type="text" name="exeProjTypeCheck" id="exeProjTypeCheck" value="{{$data->proj_type}}">
-                                      <input type="text" name="exeProjSubTypeCheck" id="exeProjSubTypeCheck" value="{{$data->sub_type}}">
-                                      <input type="text" name="exeProjDataCheck" id="exeProjDataCheck" value="{{$data->data}}">
+                                      <input type="hidden" name="exeProjTypeCheck" id="exeProjTypeCheck" value="{{$data->proj_type}}">
+                                      <input type="hidden" name="exeProjSubTypeCheck" id="exeProjSubTypeCheck" value="{{$data->sub_type}}">
+                                      <input type="hidden" name="exeProjDataCheck" id="exeProjDataCheck" value="{{$data->data}}">
                                     @endforeach
                                   @else
-                                    <input type="text" name="exeProjTypeCheck" id="exeProjTypeCheck" value="Empty">
-                                    <input type="text" name="exeProjSubTypeCheck" id="exeProjSubTypeCheck" value="New Project">
-                                    <input type="text" name="exeProjDataCheck" id="exeProjDataCheck" value="Empty">
+                                    <input type="hidden" name="exeProjTypeCheck" id="exeProjTypeCheck" value="Empty">
+                                    <input type="hidden" name="exeProjSubTypeCheck" id="exeProjSubTypeCheck" value="New Project">
+                                    <input type="hidden" name="exeProjDataCheck" id="exeProjDataCheck" value="Empty">
                                   @endif
 
                                   <div id="projectType"></div>
@@ -117,20 +117,20 @@
                                 <div class = 'hide-'>
                                   @if(isset($exePrjData))
                                     @foreach($exePrjData as $data)
-                                      <input type='text' name= "proj_id" class="proj_id" id="proj_id" value="{{$proj_id}}">
-                                      <input type='text' name= "exe_proj_nam" class="proj_nam" id="exe_proj_nam" value="{{$data->proj_name}}">
-                                      <input type='text' name= "exe_ta" class= "ta" id="exe_ta" value="{{$data->ta}}">
-                                      <input type='text' name= "exe_fa" class= "fa" id="exe_fa" value="{{$data->fa}}">
-                                      <input type='text' name= "exe_proj_type" class= "proj_type" id="exe_proj_type" value="{{$data->proj_type}}">
-                                      <input type='text' name= "exe_proj_sub_type" class= "proj_sub_type" id="exe_proj_sub_type" value="{{$data->sub_type}}">
+                                      <input type='hidden' name= "proj_id" class="proj_id" id="proj_id" value="{{$proj_id}}">
+                                      <input type='hidden' name= "exe_proj_nam" class="proj_nam" id="exe_proj_nam" value="{{$data->proj_name}}">
+                                      <input type='hidden' name= "exe_ta" class= "ta" id="exe_ta" value="{{$data->ta}}">
+                                      <input type='hidden' name= "exe_fa" class= "fa" id="exe_fa" value="{{$data->fa}}">
+                                      <input type='hidden' name= "exe_proj_type" class= "proj_type" id="exe_proj_type" value="{{$data->proj_type}}">
+                                      <input type='hidden' name= "exe_proj_sub_type" class= "proj_sub_type" id="exe_proj_sub_type" value="{{$data->sub_type}}">
                                     @endforeach
                                   @else
-                                    <input type='text' name= "proj_id" class="proj_id" id="proj_id" value="0">
-                                    <input type='text' name= "proj_nam" class="proj_nam" >
-                                    <input type='text' name= "ta" class= "ta" >
-                                    <input type='text' name= "fa" class= "fa" >
-                                    <input type='text' name= "proj_type" class= "proj_type" >
-                                    <input type='text' name= "proj_sub_type" class= "proj_sub_type" >
+                                    <input type='hidden' name= "proj_id" class="proj_id" id="proj_id" value="0">
+                                    <input type='hidden' name= "proj_nam" class="proj_nam" >
+                                    <input type='hidden' name= "ta" class= "ta" >
+                                    <input type='hidden' name= "fa" class= "fa" >
+                                    <input type='hidden' name= "proj_type" class= "proj_type" >
+                                    <input type='hidden' name= "proj_sub_type" class= "proj_sub_type" >
                                   @endif
                                   
                                 </div>

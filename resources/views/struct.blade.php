@@ -550,7 +550,7 @@
                               </tbody>
                             </table>
                             <form action="{{url()}}/kpi_map_new">
-                              <input type="text" name="forword_project_id" id="forword_project_id" value="{{ $proj_id }}">
+                              <input type="hidden" name="forword_project_id" id="forword_project_id" value="{{ $proj_id }}">
                               <button type="submit" class= 'btn btn-primary pull-right mapping_selected_btn' disabled>KPI Mapping</button>
                             </form>
 
