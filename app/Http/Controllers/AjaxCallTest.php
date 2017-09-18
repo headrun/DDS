@@ -175,9 +175,12 @@ class AjaxCallTest extends Controller
 
   public function saveMapData(){
     $inputs = Input::all();
-    $exeMapData = DB::table('map_data')->select()->where('proj_id', $inputs['projectId'])->get();
-    $exeMapData = $exeMapData[0];
+    $proj_id = (int)trim($inputs['projectId'], '"');
+
+    $exeMapData = DB::table('map_data')->where('proj_id', $proj_id)->get();
+  
     if (count($exeMapData) > 0) {
+      $exeMapData = $exeMapData[0];
       if ($exeMapData->map_data != $inputs['mapData']) {
         DB::table('map_data')
             ->where('proj_id', '=', $inputs['projectId'])

@@ -252,8 +252,10 @@ class CommonController extends Controller
         $exeIngestId = (int)trim($exeIngestId, '"');
         
         $exeIngestion = [];
+
         foreach ($exeIngestData as $key => $value) {
-            array_push($exeIngestion, DB::table('ingestion')->select()->where('id',json_encode($value->ing_id))->get()[0]);
+            $ingId = (int)trim($value->ing_id, '"');
+            array_push($exeIngestion, DB::table('ingestion')->select()->where('id',$ingId)->get()[0]);
         }
         //  $exeIngestionId = json_encode($exeIngestion[0]);
         // return $exeIngestion;
