@@ -50,78 +50,155 @@ class CommonController extends Controller
      public function ingestion()
      {
         $inputs = Input::all();
-
+        // return $inputs;
         $values = array();
-        $proj_name = $ta = $fa= '';
-        
-        if (isset($inputs['check_box']) && !empty($inputs['check_box'])){
-            Session::put('values', $inputs['check_box']);
-        }
+        $proj_name = $ta = $fa= $proj_type = $proj_sub_type = '';
+
+        if ($inputs['proj_id'] == 0) {
+            if (isset($inputs['check_box']) && !empty($inputs['check_box'])){
+                Session::put('values', $inputs['check_box']);
+                $check_box_data = json_encode($inputs['check_box']);
+            }
+                
+            if (isset($inputs['proj_nam']) && !empty($inputs['proj_nam']))
+                $proj_name = $inputs['proj_nam'];
             
-        if (isset($inputs['proj_nam']) && !empty($inputs['proj_nam']))
-            $proj_name = $inputs['proj_nam'];
-        
-        if (isset($inputs['ta']) && !empty($inputs['ta']))
-            $ta = $inputs['ta'];
+            if (isset($inputs['ta']) && !empty($inputs['ta']))
+                $ta = $inputs['ta'];
 
-        if (isset($inputs['fa']) && !empty($inputs['fa']))
-            $fa = $inputs['fa'];
+            if (isset($inputs['fa']) && !empty($inputs['fa']))
+                $fa = $inputs['fa'];
 
-        $final_array = array();
-        $values = Session::get('values');
+            if (isset($inputs['proj_type']) && !empty($inputs['proj_type']))
+                $proj_type = $inputs['proj_type'];
 
-        foreach ($values as $key => $value) 
-        {
-            $data = Ingestion::where('data', '=', $value)->groupBy('source')->get();
-            $arr = array('data'=> $value, 'sources'=> $data);
-            // return $arr;
-            array_push($final_array, $arr);
-        }
-        if(!(DB::table('active_proj')->where('proj_name',$proj_name)))
-        {
-            DB::table('active_proj')->insert(
-            ['proj_name' => $proj_name, 'ta' => $ta ,'fa' => $fa, 'date' => date('Y-m-d')]);
+            if (isset($inputs['proj_sub_type']) && !empty($inputs['proj_sub_type']))
+                $proj_sub_type = $inputs['proj_sub_type'];
+
+            $final_array = array();
+            $values = Session::get('values');
+            // return $values;
+            foreach ($values as $key => $value) 
+            {
+                $data = Ingestion::where('data', '=', $value)->groupBy('source')->get();
+                $arr = array('data'=> $value, 'sources'=> $data);
+                // return $arr;
+                array_push($final_array, $arr);
+            }
+
+            if(!(DB::table('active_proj')->where('proj_name',$proj_name))){
+                DB::table('active_proj')->insert(
+                ['proj_name' => $proj_name, 'proj_type' => $proj_type, 'sub_type' => $proj_sub_type, 'data' => $check_box_data, 'ta' => $ta ,'fa' => $fa, 'date' => date('Y-m-d')]);
+                $data1 = DB::table('active_proj')->get();
+                $curProj = DB::table('active_proj')->where('id', DB::raw("(select max(`id`) from active_proj)"))->get();    
+
+                $final_array1 = array();
+                foreach ($data1 as $value) {
+                    array_push($final_array1,$value->proj_name);
+                }
+            } else {
+                DB::table('active_proj')->where('proj_name' , $proj_name)->delete();
+                DB::table('active_proj')->insert(
+                ['proj_name' => $proj_name, 'proj_type' => $proj_type, 'sub_type' => $proj_sub_type, 'data' => $check_box_data, 'ta' => $ta ,'fa' => $fa, 'date' => date('Y-m-d')]);
+                $data1 = DB::table('active_proj')->get();
+
+                $curProj = DB::table('active_proj')->where('id', DB::raw("(select max(`id`) from active_proj)"))->get();
+
+                $final_array1 = array();
+                foreach ($data1 as $value) {
+                    array_push($final_array1,$value->proj_name);
+                }
+            }
+
+            $proj_id = $curProj[0]->id;
+
+            $curProjData = DB::table('active_proj')
+                    ->where('id', $proj_id)->get();
+
+            $projName = $curProjData[0]->proj_name;
+
+            $proj_id = (int)trim($proj_id, '"');
+
+            $addProjId = array_push($values,$proj_id);
+            
+            $newPrj = 'New Project';
+            $data1 = array('final_array1', 'final_array', 'projName', 'proj_id', 'newPrj', 'values');
+            return view('ingestion', compact($data1));
+        } else {
+            if (isset($inputs['check_box']) && !empty($inputs['check_box'])){
+                Session::put('values', $inputs['check_box']);
+                $check_box_data = json_encode($inputs['check_box']);
+            }
+                
+            if (isset($inputs['exe_proj_nam']) && !empty($inputs['exe_proj_nam']))
+                $proj_name = $inputs['exe_proj_nam'];
+            
+            if (isset($inputs['exe_ta']) && !empty($inputs['exe_ta']))
+                $ta = $inputs['exe_ta'];
+
+            if (isset($inputs['exe_fa']) && !empty($inputs['exe_fa']))
+                $fa = $inputs['exe_fa'];
+
+            if (isset($inputs['exe_proj_type']) && !empty($inputs['exe_proj_type']))
+                $proj_type = $inputs['exe_proj_type'];
+
+            if (isset($inputs['exe_proj_sub_type']) && !empty($inputs['exe_proj_sub_type']))
+                $proj_sub_type = $inputs['exe_proj_sub_type'];
+
+            $final_array = array();
+            $values = Session::get('values');
+            // return $values;
+            foreach ($values as $key => $value) 
+            {
+                $data = Ingestion::where('data', '=', $value)->groupBy('source')->get();
+                $arr = array('data'=> $value, 'sources'=> $data);
+                // return $arr;
+                array_push($final_array, $arr);
+            }
+
+            DB::table('active_proj')
+            ->where('id', $inputs['proj_id'])
+            ->update(array(
+                        'proj_name' => $proj_name, 'proj_type' => $proj_type,
+                        'sub_type' => $proj_sub_type, 'data' => $check_box_data, 
+                        'ta' => $ta, 'fa' => $fa
+                    ));
+
             $data1 = DB::table('active_proj')->get();
-            //$data = array('final_array');
+
             $final_array1 = array();
             foreach ($data1 as $value) {
                 array_push($final_array1,$value->proj_name);
             }
-        }
-        else 
-        {
-            DB::table('active_proj')->where('proj_name' , $proj_name)->delete();
-            DB::table('active_proj')->insert(
-            ['proj_name' => $proj_name, 'ta' => $ta ,'fa' => $fa, 'date' => date('Y-m-d')]);
-            $data1 = DB::table('active_proj')->get();
-            //$data = array('final_array');
-            $final_array1 = array();
-            foreach ($data1 as $value) {
-                array_push($final_array1,$value->proj_name);
-            }
-        }
 
-        $proj_id = DB::table('active_proj')->select('id')->where('proj_name',$proj_name)->get();
+            $proj_id = $inputs['proj_id'];
 
-        $addProjId = array_push($values,$proj_id[0]->id);
-        $proj_id = json_encode($proj_id[0]->id);
-        // $proj_id = (int)$proj_id;
-        $proj_id = (int)trim($proj_id, '"');
-        // return $proj_id;
-        $newPrj = 'New Project';
-        $data1 = array('final_array1', 'final_array', 'proj_id', 'newPrj');
-        return view('ingestion', compact($data1));
+            $projName = $proj_name;
+
+            $proj_id = (int)trim($proj_id, '"');
+
+            $addProjId = array_push($values,$proj_id);
+            
+            $newPrj = 'New Project';
+            $data1 = array('final_array1', 'final_array', 'projName', 'proj_id', 'newPrj', 'values');
+            return redirect('ingestion'.'/'.$proj_id);
+        }
         
     }
 
     public function ingestionBackStep(Request $request, $id){
+
         $inputs = Input::all();
+        $curProjData = DB::table('active_proj')
+                    ->where('id', $id)->get();
+
+        $projName = $curProjData[0]->proj_name;
 
         $values = array();
         $proj_name = $ta = $fa= '';
         
-        if (isset($inputs['check_box']) && !empty($inputs['check_box'])){
-            Session::put('values', $inputs['check_box']);
+        if (isset($inputs[0]->data) && !empty($inputs[0]->data)){
+            Session::put('values', json_decode($inputs[0]->data));
         }
             
         if (isset($inputs['proj_nam']) && !empty($inputs['proj_nam']))
@@ -135,11 +212,10 @@ class CommonController extends Controller
 
         $final_array = array();
         $values = Session::get('values');
-
+        // return $values;
         foreach ($values as $key => $value){
             $data = Ingestion::where('data', '=', $value)->groupBy('source')->get();
             $arr = array('data'=> $value, 'sources'=> $data);
-            // return $arr;
             array_push($final_array, $arr);
         }
 
@@ -171,15 +247,19 @@ class CommonController extends Controller
         // $exeProjectData = !empty($exeProjectData) ? json_encode($exeProjectData[0]->id) : '';
 
         $exeIngestData = DB::table('ingestion_data')->select()->where('proj_id',$id)->get();
+        // return $exeIngestData;
         $exeIngestId = !empty($exeIngestData) ? json_encode($exeIngestData[0]->ing_id) : '';
         $exeIngestId = (int)trim($exeIngestId, '"');
-
-        $exeIngestion = DB::table('ingestion')->select()->where('id',$exeIngestId)->get();
+        
+        $exeIngestion = [];
+        foreach ($exeIngestData as $key => $value) {
+            array_push($exeIngestion, DB::table('ingestion')->select()->where('id',json_encode($value->ing_id))->get()[0]);
+        }
         //  $exeIngestionId = json_encode($exeIngestion[0]);
         // return $exeIngestion;
 
         $proj_id = (int)trim($id, '"');
-        $data1 = array('final_array1', 'final_array', 'proj_id', 'exeIngestion', 'exeIngestData');
+        $data1 = array('final_array1', 'final_array', 'projName', 'proj_id', 'exeIngestion', 'exeIngestData');
         return view('ingestion', compact($data1));
     }
 
@@ -286,8 +366,12 @@ class CommonController extends Controller
             ->get(); 
 
         $data = compact('extIngData');
-
-        return Response::json(array('status'=> 'success', 'data'=> $data));
+        if (count($extIngData) > 0) {
+            return Response::json(array('status'=> 'success', 'data'=> $data));
+        } else {
+            return Response::json(array('status'=> 'fail'));
+        }
+        
     }
 
     public function getExeFlow(){
@@ -345,6 +429,24 @@ class CommonController extends Controller
         return view('kpi_map_new', compact($data1));
     }
 
+    public function update_exe_proj(Request $request, $id){
+        $proj_id = (int)trim($id, '"');
+        $exePrjData = DB::table('active_proj')->select()->where('id', $proj_id)->get();
+
+        $fa = DB::table('ta_fa')->where('fa', '!=', '')->distinct('fa')->lists('fa');
+        $ta = DB::table('ta_fa')->where('ta', '!=', '')->distinct('ta')->lists('ta');
+        // return $ta;
+        if (count($exePrjData) > 0) {
+            $data1 = array('exePrjData', 'ta', 'fa', 'proj_id');
+            return view('kpi_map_new', compact($data1));
+        } else {
+            $fa = DB::table('ta_fa')->where('fa', '!=', '')->distinct('fa')->lists('fa');
+            $ta = DB::table('ta_fa')->where('ta', '!=', '')->distinct('ta')->lists('ta');
+
+            $data1 = array('ta', 'fa');
+            return view('kpi_map_new', compact($data1));
+        }
+    }
 
     public function save_proj_into_session(){
         $inputs = Input::all();

@@ -25,7 +25,13 @@
                     <div class = 'project ' style="padding: 20px">
                       <div class= 'row' >
                         <div class = 'col-md-4'>
-                         <input type = 'text' class ='btn btn-default' style="width: 100% ; text-align: left;" placeholder="Enter Project Name" id= 'project_text'>
+                          @if(isset($exePrjData))
+                            @foreach($exePrjData as $data)
+                              <input type = 'text' class ='btn btn-default' style="width: 100% ; text-align: left;" placeholder="Enter Project Name" id= 'project_text' value="{{$data->proj_name}}">
+                            @endforeach
+                          @else
+                            <input type = 'text' class ='btn btn-default' style="width: 100% ; text-align: left;" placeholder="Enter Project Name" id= 'project_text'>
+                          @endif
                         </div>
                         
                         
@@ -33,9 +39,17 @@
                         <span class='btn btn default'>TA:</span>
                         <select class='form-control' " id= 'ta' style="width: 90%">
                           <option></option>
-                          @foreach($ta as $t)
-                            <option>{{$t}}</option>
-                          @endforeach
+                          @if(isset($exePrjData))
+                            @foreach($exePrjData as $data)
+                              @foreach($ta as $t)
+                                <option {{$data->ta == $t ? 'selected' : ''}}>{{$t}}</option>
+                              @endforeach
+                            @endforeach
+                          @else
+                            @foreach($ta as $t)
+                              <option>{{$t}}</option>
+                            @endforeach
+                          @endif
                         </select>
                         </div>
                         <div class = 'col-md-3' style = 'display: -webkit-inline-box;''>
@@ -43,9 +57,17 @@
                         
                         <select class='form-control' " id = 'fa' style="width: 90%";>
                           <option></option>
-                          @foreach($fa as $f)
-                            <option>{{$f}}</option>
-                          @endforeach
+                          @if(isset($exePrjData))
+                            @foreach($exePrjData as $data)
+                              @foreach($fa as $f)
+                                <option {{$data->fa == $f ? 'selected' : ''}}>{{$f}}</option>
+                              @endforeach
+                            @endforeach
+                          @else
+                            @foreach($fa as $f)
+                              <option>{{$f}}</option>
+                            @endforeach
+                          @endif
                         </select>
                         </div>
 
@@ -56,35 +78,26 @@
                               <h4><span class="label label-primary">Choose a Project</span></h4>
                               <br>
                               <form style="padding-left: 50px" id="choose_project">
-                                <div class="radio" >
-                                  <input type="radio" name="optradio" value="Pre Launch">Pre Launch
-                                </div>
-                                <div class="radio" >
-				 <input type="radio" name="optradio" value="Brand Launch">Brand Launch
-                                 
-                                </div>
-                                <div class="radio">
-                                  <input type="radio" name="optradio" value="RWE">RWE
-                                </div>
-                                <div class="radio">
-                                  <input type="radio" name="optradio" value="Digital Analytics">Digital Analytics
-                                </div>
-                                
-                                <div class="radio">
-                                  <input type="radio" name="optradio" value="Social Media">Social Media
-                                </div>
-                                <div class="radio">
-                                  <input type="radio" name="optradio" value="Supply Chain">Supply Chain
-                                </div>
-                                <div class="radio">
-                                  <input type="radio" name="optradio" value="New Project">New Projecct
-                                </div>
+                                  @if(isset($exePrjData))
+                                    @foreach($exePrjData as $data)
+                                      <input type="text" name="exeProjTypeCheck" id="exeProjTypeCheck" value="{{$data->proj_type}}">
+                                      <input type="text" name="exeProjSubTypeCheck" id="exeProjSubTypeCheck" value="{{$data->sub_type}}">
+                                      <input type="text" name="exeProjDataCheck" id="exeProjDataCheck" value="{{$data->data}}">
+                                    @endforeach
+                                  @else
+                                    <input type="text" name="exeProjTypeCheck" id="exeProjTypeCheck" value="Empty">
+                                    <input type="text" name="exeProjSubTypeCheck" id="exeProjSubTypeCheck" value="New Project">
+                                    <input type="text" name="exeProjDataCheck" id="exeProjDataCheck" value="Empty">
+                                  @endif
+
+                                  <div id="projectType"></div>
+
                               </form>
                           </div>
                           <div class="widget col-lg-6 col-md-6 col-sm-6 col-xs-6">
                               <h4><span class="label label-primary">Choose Project Subtype</span></h4>
                               <br>
-                              <div class="selecting"></div>
+                              <div class="selecting" id="selecting"></div>
                           </div>
 
                       </div>
@@ -102,11 +115,24 @@
                                       <div class="col-md-4 dim" id="dim1"></div>
                                 </div>
                                 <div class = 'hide-'>
-                                  <input type='hidden' name= "proj_id" class="proj_id" >
-                                  <input type='hidden' name= "proj_nam" class="proj_nam" >
-                                  <input type='hidden' name= "ta" class= "ta" >
-                                  <input type='hidden' name= "fa" class= "fa" >
-                                  <input type='hidden' name= "proj_type" class= "proj_type" >
+                                  @if(isset($exePrjData))
+                                    @foreach($exePrjData as $data)
+                                      <input type='text' name= "proj_id" class="proj_id" id="proj_id" value="{{$proj_id}}">
+                                      <input type='text' name= "exe_proj_nam" class="proj_nam" id="exe_proj_nam" value="{{$data->proj_name}}">
+                                      <input type='text' name= "exe_ta" class= "ta" id="exe_ta" value="{{$data->ta}}">
+                                      <input type='text' name= "exe_fa" class= "fa" id="exe_fa" value="{{$data->fa}}">
+                                      <input type='text' name= "exe_proj_type" class= "proj_type" id="exe_proj_type" value="{{$data->proj_type}}">
+                                      <input type='text' name= "exe_proj_sub_type" class= "proj_sub_type" id="exe_proj_sub_type" value="{{$data->sub_type}}">
+                                    @endforeach
+                                  @else
+                                    <input type='text' name= "proj_id" class="proj_id" id="proj_id" value="0">
+                                    <input type='text' name= "proj_nam" class="proj_nam" >
+                                    <input type='text' name= "ta" class= "ta" >
+                                    <input type='text' name= "fa" class= "fa" >
+                                    <input type='text' name= "proj_type" class= "proj_type" >
+                                    <input type='text' name= "proj_sub_type" class= "proj_sub_type" >
+                                  @endif
+                                  
                                 </div>
                                 <div class="Check">
                                   <button class="btn btn-success btn-md  pull-right" id= "sidq" type = "submit" disabled>Proceed to Ingest</button>
@@ -1433,13 +1459,33 @@
 @section('BaseJSLib')
 <script>
 
+  function projectType(){
+    var prjType = ['Pre Launch','Brand Launch','RWE','Digital Analytics','Social Media','Supply Chain','New Projecct'];
+    var prjTypeArr = '';
+
+    for (var i = 0; i < prjType.length; i++) {
+      if ($('#exeProjTypeCheck').val() == prjType[i]) {
+        prjTypeArr += '<div class="radio">'+
+                      '<input type="radio" name="optradio" class="optradio" value="'+prjType[i]+'" checked="checked">'+prjType[i]+
+                    '</div>';
+
+      } else {
+        prjTypeArr += '<div class="radio">'+
+                      '<input type="radio" name="optradio" class="optradio" value="'+prjType[i]+'">'+prjType[i]+
+                    '</div>';
+      }
+      
+    }
+    $('#projectType').html(prjTypeArr);
+  }
+
   $('#choose_project').find('input[type="radio"]').change(function(){ 
       
       var value = $(this).val();
 
       $.ajax({
           method: 'POST', 
-          url: '{{url()}}/save_proj_into_session', 
+          url: '{{url()}}/save_proj_into_session',
           dataType:'json',
           headers: {
             'X-CSRF-TOKEN': "{{ csrf_token() }}",
@@ -1453,7 +1499,30 @@
   });
 
   $(document).ready(function(){
-      
+      projectType();
+      var checkProjType = $('#exeProjTypeCheck').val();
+      var checkProjSubType = $('#exeProjSubTypeCheck').val();
+      var checkProjSubTypeArr = [];
+      var exeProjDataCheck = $('#exeProjDataCheck').val();
+
+
+      if (checkProjType != 'Empty' && checkProjSubType != 'New Project') {
+        $.ajax({
+            method: 'POST', // Type of response and matches what we said in the route
+            url: '{{url()}}/test', // This is the url we gave in the route
+            dataType:'html',
+            headers: {
+              'X-CSRF-TOKEN': "{{ csrf_token() }}",
+          },
+            data: {'id' : checkProjType, 'checkProjSubType': checkProjSubType}, // a JSON object to send back
+            success: function(response)
+            { // What to do if we succeed
+                // console.log(response);   
+                $('.selecting').html(response).contents();
+           
+            },
+        });
+      }
         $('input[type=radio][name=optradio]').change(function(){
         $.ajax({
             method: 'POST', // Type of response and matches what we said in the route
@@ -1462,18 +1531,92 @@
             headers: {
               'X-CSRF-TOKEN': "{{ csrf_token() }}",
           },
-            data: {'id' : $(this).val()}, // a JSON object to send back
+            data: {'id' : $(this).val(), 'checkProjSubType': checkProjSubType}, // a JSON object to send back
             success: function(response)
             { // What to do if we succeed
-                console.log(response);   
+                // console.log(response);   
                 $('.selecting').html(response).contents();
            
-                },
+            },
         });
       });
+
+      if (exeProjDataCheck != 'Empty' && checkProjSubType != 'New Project') {
+        checkProjSubTypeArr = checkProjSubType.split(",");
+        // console.log(checkProjSubType);
+        if (checkProjSubTypeArr.length > 0) {
+          $.ajax({
+            method: 'POST', // Type of response and matches what we said in the route
+            url: '{{url()}}/test1', // This is the url we gave in the route
+            dataType:'json',
+            headers: {
+              'X-CSRF-TOKEN': "{{ csrf_token() }}",
+            },
+            data: {'id' : checkProjSubTypeArr, 'key': true}, // a JSON object to send back
+            success: function(response){ 
+              // console.log(response);
+              var d = response.data;
+              var test = response.data;
+              var data ='<h4>Data Tables</h4>';
+              var bdf = '<h4>Bridge Files</h4>';
+              var dim = '<h4>Dimension table (Optional)</h4>';
+              
+              for (var ele = 0; ele < test.length; ele++) {
+                d = test[ele];
+                for (var i = 0; i < d.length; i++) {
+                  if (d[i].category==='Data'){
+                    if (d[i].description != 'Aggregated Rx Data') { 
+                      data += "<div class = 'checkbox'>"+
+                      //"<a href ='#' data-toggle = 'popover'>"+
+                      "<label class = 'active' style='margin-bottom: -5px;'>"+
+                      "<input type='checkbox'  class='test2' checked  name = 'check_box[]' value='"+d[i].description+"'>";
+                      data +="</label>";
+                      data +="<span class='text' style='cursor: pointer;'>"+d[i].description+"</span><br>";
+                      data +="</div>";
+                    }
+                      
+                  }
+                  if (d[i].category==='Bridging File'){
+                      bdf += "<div class = 'checkbox'>"+
+                     // "<a href ='#' data-toggle = 'popover'>"+
+                      "<label class = 'active' style='margin-bottom: -5px;'>"+
+                      "<input type='checkbox'  class='test2' checked  name = 'check_box[]' value='"+d[i].description+"'>";
+                      bdf +="</label>";
+                      bdf +="<span class='text' style='cursor: pointer;'>"+d[i].description+"</span><br>";
+                      bdf +="</div>";
+                      
+
+                  }
+                  if (d[i].category==='Dimension'){
+                    dim += "<div class = 'checkbox'>"+
+                      //"<a href ='#' data-toggle = 'popover'>"+
+                      "<label class = 'active' style='margin-bottom: -5px;'>"+
+                      "<input type='checkbox'  class='test2' checked  name = 'check_box[]' value='"+d[i].description+"'>";
+                      dim +="</label>";
+                      dim +="<span class='text' style='cursor: pointer;'>"+d[i].description+"</span><br>";
+                      dim +="</div>";
+                      
+                  }
+                }
+              }
+              
+              var data1= data+bdf+dim;
+              $('#d-tables .data').html(data).contents();
+              $('#d-tables .bdf').html(bdf);
+              $('#d-tables .dim').html(dim);  
+
+              if ($('#project_text').val() != '' && $('#ta').val() != '' && $('#fa').val() != '') {
+                $(':input[type="submit"]').prop('disabled', false);
+              }
+         
+            }
+          });
+        }
+      }
+
     });
 
-$(document).ready(function(){
+/*$(document).ready(function(){
   
     $('input[type=radio][name=optradio]').change(function(){
     $.ajax({
@@ -1497,12 +1640,12 @@ $(document).ready(function(){
             //$('#sidq').remove();
             $('.check').html(d);
             $('.selecting').html(response).contents();
-            //$(':input[type="submit"]').prop('disabled', true);*/
+            //$(':input[type="submit"]').prop('disabled', true);
         },
 
     });
   });
-});
+});*/
 
 $(document).on('change', '#project_text', function(){
 
@@ -1521,18 +1664,26 @@ $(document).on('change', '#fa', function()
       console.log($('.fa').val());
     });
 
+$(document).on('change', '.optradio', function()
+   {
+      $('.proj_type').val($(this).val());
+      console.log($('.fa').val());
+    });
+
   $(document).on('change', '.sid', function()
    {
       var widget_array1 =  [];
       var widget_array =  [];
 
       widget_array1 = [$('#project_text').val(),$('#ta').val(),$('#fa').val()];
-      console.log(widget_array1);
+      // console.log(widget_array1);
       $('.form-group input[type="checkbox"]:checked').each(function(){ 
         
         widget_array.push($(this).val());
 
       });
+      $('.proj_sub_type').val(widget_array);
+      // console.log('On Change function sends value of: '+widget_array);
       if (widget_array.length){
       $.ajax({
         method: 'POST', // Type of response and matches what we said in the route
@@ -1544,45 +1695,91 @@ $(document).on('change', '#fa', function()
         data: {'id' : widget_array}, // a JSON object to send back
         success: function(response)
         { 
-            var d= response.data;
+            // var d= response;
+            // var data ='<h4>Data Tables</h4>';
+            // var bdf = '<h4>Bridge Files</h4>';
+            // var dim = '<h4>Dimension table (Optional)</h4>';
+
+            var d = response.data;
+            var test = response.data;
             var data ='<h4>Data Tables</h4>';
             var bdf = '<h4>Bridge Files</h4>';
             var dim = '<h4>Dimension table (Optional)</h4>';
-            for (var i = 0; i < d.length; i++) {
-              if (d[i].category==='Data'){
-                if (d[i].description != 'Aggregated Rx Data') {
-                  data += "<div class = 'checkbox'>"+
-                  //"<a href ='#' data-toggle = 'popover'>"+
-                  "<label class = 'active' style='margin-bottom: -5px;'>"+
-                  "<input type='checkbox'  class='test2' checked  name = 'check_box[]' value='"+d[i].description+"'>";
-                  data +="</label>";
-                  data +="<span class='text' style='cursor: pointer;'>"+d[i].description+"</span><br>";
-                  data +="</div>";
-                }
-                  
-              }
-              if (d[i].category==='Bridging File'){
-                  bdf += "<div class = 'checkbox'>"+
-                 // "<a href ='#' data-toggle = 'popover'>"+
-                  "<label class = 'active' style='margin-bottom: -5px;'>"+
-                  "<input type='checkbox'  class='test2' checked  name = 'check_box[]' value='"+d[i].description+"'>";
-                  bdf +="</label>";
-                  bdf +="<span class='text' style='cursor: pointer;'>"+d[i].description+"</span><br>";
-                  bdf +="</div>";
-                  
 
-              }
-              if (d[i].category==='Dimension'){
-                dim += "<div class = 'checkbox'>"+
-                  //"<a href ='#' data-toggle = 'popover'>"+
-                  "<label class = 'active' style='margin-bottom: -5px;'>"+
-                  "<input type='checkbox'  class='test2' checked  name = 'check_box[]' value='"+d[i].description+"'>";
-                  dim +="</label>";
-                  dim +="<span class='text' style='cursor: pointer;'>"+d[i].description+"</span><br>";
-                  dim +="</div>";
-                  
+            for (var ele = 0; ele < test.length; ele++) {
+              d = test[ele];
+              for (var i = 0; i < d.length; i++) {
+                if (d[i].category==='Data'){
+                  if (d[i].description != 'Aggregated Rx Data') { 
+                    data += "<div class = 'checkbox'>"+
+                    //"<a href ='#' data-toggle = 'popover'>"+
+                    "<label class = 'active' style='margin-bottom: -5px;'>"+
+                    "<input type='checkbox'  class='test2' checked  name = 'check_box[]' value='"+d[i].description+"'>";
+                    data +="</label>";
+                    data +="<span class='text' style='cursor: pointer;'>"+d[i].description+"</span><br>";
+                    data +="</div>";
+                  }
+                    
+                }
+                if (d[i].category==='Bridging File'){
+                    bdf += "<div class = 'checkbox'>"+
+                   // "<a href ='#' data-toggle = 'popover'>"+
+                    "<label class = 'active' style='margin-bottom: -5px;'>"+
+                    "<input type='checkbox'  class='test2' checked  name = 'check_box[]' value='"+d[i].description+"'>";
+                    bdf +="</label>";
+                    bdf +="<span class='text' style='cursor: pointer;'>"+d[i].description+"</span><br>";
+                    bdf +="</div>";
+                    
+
+                }
+                if (d[i].category==='Dimension'){
+                  dim += "<div class = 'checkbox'>"+
+                    //"<a href ='#' data-toggle = 'popover'>"+
+                    "<label class = 'active' style='margin-bottom: -5px;'>"+
+                    "<input type='checkbox'  class='test2' checked  name = 'check_box[]' value='"+d[i].description+"'>";
+                    dim +="</label>";
+                    dim +="<span class='text' style='cursor: pointer;'>"+d[i].description+"</span><br>";
+                    dim +="</div>";
+                    
+                }
               }
             }
+
+            // for (var i = 0; i < d.length; i++) {
+            //   if (d[i].category==='Data'){
+            //     if (d[i].description != 'Aggregated Rx Data') {
+            //       data += "<div class = 'checkbox'>"+
+            //       //"<a href ='#' data-toggle = 'popover'>"+
+            //       "<label class = 'active' style='margin-bottom: -5px;'>"+
+            //       "<input type='checkbox'  class='test2' checked  name = 'check_box[]' value='"+d[i].description+"'>";
+            //       data +="</label>";
+            //       data +="<span class='text' style='cursor: pointer;'>"+d[i].description+"</span><br>";
+            //       data +="</div>";
+            //     }
+                  
+            //   }
+            //   if (d[i].category==='Bridging File'){
+            //       bdf += "<div class = 'checkbox'>"+
+            //      // "<a href ='#' data-toggle = 'popover'>"+
+            //       "<label class = 'active' style='margin-bottom: -5px;'>"+
+            //       "<input type='checkbox'  class='test2' checked  name = 'check_box[]' value='"+d[i].description+"'>";
+            //       bdf +="</label>";
+            //       bdf +="<span class='text' style='cursor: pointer;'>"+d[i].description+"</span><br>";
+            //       bdf +="</div>";
+                  
+
+            //   }
+            //   if (d[i].category==='Dimension'){
+            //     dim += "<div class = 'checkbox'>"+
+            //       //"<a href ='#' data-toggle = 'popover'>"+
+            //       "<label class = 'active' style='margin-bottom: -5px;'>"+
+            //       "<input type='checkbox'  class='test2' checked  name = 'check_box[]' value='"+d[i].description+"'>";
+            //       dim +="</label>";
+            //       dim +="<span class='text' style='cursor: pointer;'>"+d[i].description+"</span><br>";
+            //       dim +="</div>";
+                  
+            //   }
+            // }
             
             var data1= data+bdf+dim;
             $('#d-tables .data').html(data).contents();
@@ -1593,8 +1790,8 @@ $(document).on('change', '#fa', function()
               $(':input[type="submit"]').prop('disabled', false);
             }
        
-            },
-    });
+          },
+      });
     }
     var hidden=
     $('#d-tables .hide').html(hidden);

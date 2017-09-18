@@ -10,7 +10,12 @@
   <div class="visualization">
       <div class="top-div">
           <div class="breadcrumb flat">
-             <a href="javascript:history.back()" class="active">Setup New Project</a>
+            @if(isset($proj_id))
+              <a href="{{ url()}}/setup_new_proj/{{$proj_id}}" class="active">Setup New Project</a>
+            @else
+              <a href="{{ url()}}/setup_new_proj" class="active">Setup New Project</a>
+            @endif
+             <!-- <a href="{{ url()}}/setup_new_proj/" class="active">Setup New Project</a> -->
              <a href="#" class="active">Ingest Data</a>
              <!-- <a href="#">Validate Data</a> -->
              <a href="#">Map Data</a>
@@ -23,19 +28,19 @@
               <h3 class="widget-title" style="margin-left: 20px; margin-bottom: 10px;">
                   <select class="form-control" style="width: 150px">
                       @foreach($final_array1 as $value)
-                      <option>{{$value}}</option>
+                        @if($projName == $value)
+                          <option selected>{{$projName}}</option>  
+                        @else
+                          <option>{{$value}}</option>
+                        @endif
                       @endforeach
-                      <!--<option>Optimix: Market Mix Modelling workflow for RA</option>
-                      <option>Phast Rx reporting dashboard</option>
-                      <option>Social Media Campaign Tracking</option>
-                      <option>Type II Diabetes Prelaunch Dashboard</option>-->
                   </select>
                   
               </h3>
 
               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                   <div class="panel panel-default" style="border-bottom: 4px solid #8bc34a;     padding: 20px;">
-
+                      
                       <div class="row">  
                           <div class="widget col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <table class="table" style="font-size:14px" id="mainTable">
@@ -52,14 +57,29 @@
                                 </tr>
                               </thead>
                               <tbody>
-                              
+                                <?php
+                                  $exeIngestCount = 0;
+                                  $ArrCount = 0;
+                                ?>
                               @foreach($final_array as $value)
-                              
-                                @if(isset($exeIngestData))
-
-                                  @foreach($exeIngestData as $dataVal)
                                 
-                                    @if($dataVal->key == $value['data'])
+                                <?php
+                                  $checkedData = array();
+                                ?>
+                                @if(isset($exeIngestion))
+                                  @if($exeIngestCount <= $ArrCount)
+                                    @foreach($exeIngestion as $exeData)
+
+                                      @if($value['data'] == $exeData->data)
+                                        <?php
+                                          array_push($checkedData, $exeData->data);
+                                          // array_push($checkedData, $exeData->data);
+                                          if(stripos(json_encode($checkedData),$exeData->data) != false){
+                                            $exeIngestCount++;
+                                            $ArrCount++;
+                                            // echo $exeData->data.'<br>';
+                                          }
+                                        ?>
                                       <tr class="each_row">
                                         <td>
                                             <div class="checkbox">
@@ -71,46 +91,29 @@
                                           <input type="hidden" class="data_name" id="dataKey" value="{{$value['data']}}">
                                         </td>
                                         <td>
-                                            @if(isset($exeIngestion))
-                                              <select class="form-control source_name sourceName">
-                                                  <option></option>
-                                                  @foreach($value['sources'] as $src)
-                                                    @foreach($exeIngestion as $source)
-                                                      @if($source->source == $src['source'])
-                                                        <option value="{{$source->source}}" selected>{{$source->source}}</option>
-                                                      @else
-                                                        <option value="{{$src['source']}}" {{ $source->source == '' ? 'selected' : '' }}>{{$src['source']}}</option>
-                                                      @endif
-                                                    @endforeach
-                                                  @endforeach
-                                              </select>
-                                            @else
-                                              <select class="form-control source_name sourceName">
-                                                <option></option>
+                                          <select class="form-control source_name sourceName">
+                                              <option></option>
                                                 @foreach($value['sources'] as $src)
-                                                    <option value="{{$src['source']}}">{{$src['source']}}</option>
+                                                  @if($exeData->source == $src['source'])
+                                                    <option value="{{$exeData->source}}" selected>{{$exeData->source}}</option>
+                                                  @else
+                                                    <option value="{{$src['source']}}" {{ $exeData->source==$src['source'] ? 'selected' : '' }}>{{$src['source']}}</option>
+                                                  @endif
                                                 @endforeach
-                                              </select>
-                                            @endif
+                                          </select>
                                         </td>
                                         <td>
                                             <select class="form-control type_name typeName">
-                                              @if(isset($source->type))
-                                                <option value="{{$source->type}}" selected>{{$source->type}}</option>
-                                              @endif
+                                              <option value="{{ $exeData->type }}">{{ $exeData->type }}</option>
                                             </select>
                                         </td>
                                         <td>
                                             <select class="form-control subtype_name subTypeName">
-                                              @if(isset($source->sub_type))
-                                                <option value="{{$source->sub_type}}" selected>{{$source->sub_type}}</option>
-                                              @endif
+                                              <option value="{{ $exeData->sub_type }}">{{ $exeData->sub_type }}</option>
                                             </select>
                                         </td>
                                         <td class="extractor_name">
-                                          @if(isset($source->sub_type))
-                                            {{ $source->extractor_name }}
-                                          @endif
+                                            {{ $exeData->extractor_name }}
                                         </td>
                                         <td>
                                             <button class="btn btn-warning btn-sm give_inputs">Give Inputs</button>
@@ -119,7 +122,17 @@
                                           <i class="fa fa-check fa-2x" style="color: green" aria-hidden="true"></i>
                                         </td>
                                       </tr>
-                                    @else
+                                      
+                                      @endif
+                                    @endforeach
+                                    <?php
+                                      // array_push($checkedData, $exeData->data);
+                                      if(stripos(json_encode($checkedData),$value['data']) != true){
+
+                                        $test = $value['data'].'<br>';
+                                        // if ($test != $value['data']) {
+                                      ?>
+                                      @if($test != $value['data'])
                                       <tr class="each_row">
                                         <td>
                                             <div class="checkbox">
@@ -153,46 +166,46 @@
                                         </td>
                                         <td class="last_col_tick"></td>
                                       </tr>
+                                      @endif
+                                      <?php
+                                      }
+                                    ?>
                                     @endif
-                                    
-                                  @endforeach
-                                
-                                @else
-                                  <tr class="each_row">
-                                    <td>
-                                        <div class="checkbox">
-                                          <label><input type="checkbox" name="ingest_chkbox" class="ingest_chkbox" value="{{$value['data']}}" disabled></label>
-                                        </div>
-                                    </td>
-                                    <td>
-                                      {{$value['data']}}
-                                      <input type="hidden" class="data_name" id="dataKey" value="{{$value['data']}}">
-                                    </td>
-                                    <td>
-                                      <select class="form-control source_name sourceName">
-                                        <option></option>
-                                        @foreach($value['sources'] as $src)
-                                            <option value="{{$src['source']}}">{{$src['source']}}</option>
-                                        @endforeach
-                                      </select>
-                                    </td>
-                                    <td>
-                                        <select class="form-control type_name typeName">
-                                        </select>
-                                    </td>
-                                    <td>
-                                        <select class="form-control subtype_name subTypeName">
-                                        </select>
-                                    </td>
-                                    <td class="extractor_name">
-                                    </td>
-                                    <td>
-                                        <button class="btn btn-warning btn-sm give_inputs" disabled>Give Inputs</button>
-                                    </td>
-                                    <td class="last_col_tick"></td>
-                                  </tr>
+                                  @else
+                                    <tr class="each_row">
+                                        <td>
+                                            <div class="checkbox">
+                                              <label><input type="checkbox" class="ingest_chkbox" value="{{$value['data']}}" disabled></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                          {{$value['data']}}
+                                          <input type="hidden" class="data_name" id="dataKey" value="{{$value['data']}}">
+                                        </td>
+                                        <td>
+                                          <select class="form-control source_name sourceName">
+                                            <option></option>
+                                            @foreach($value['sources'] as $src)
+                                                <option value="{{$src['source']}}">{{$src['source']}}</option>
+                                            @endforeach
+                                          </select>
+                                        </td>
+                                        <td>
+                                            <select class="form-control type_name typeName">
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select class="form-control subtype_name subTypeName">
+                                            </select>
+                                        </td>
+                                        <td class="extractor_name">
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-warning btn-sm give_inputs" disabled>Give Inputs</button>
+                                        </td>
+                                        <td class="last_col_tick"></td>
+                                      </tr>
                                 @endif
-                                
                               @endforeach
                               </tbody>
                             </table>
@@ -207,7 +220,7 @@
                             <div class="col-md-5">
                               <form action='{{url()}}/struct'>
                                 <div id= 'hidden'></div>
-                                    <input type="text" name="project_id" id="project_id" value="{{  $proj_id }}">
+                                    <input type="hidden" name="project_id" id="project_id" value="{{  $proj_id }}">
                                     @if(isset($newPrj))
                                       <input type="hidden" name="newPrj" id="newPrj" value="{{ $newPrj }}">
                                     @else
@@ -350,6 +363,21 @@
                         </div>
                     </div>
                 </div>
+                @if(isset($values))
+                  <div class="row hide">
+                      <div class="col-md-12" id="miscChckbox">
+
+                        @foreach($values as $value)
+                          @if(gettype($value) != 'integer')
+                            <div class="checkbox">
+                              <label><input type="checkbox" class="time_zone" name="miscChecked[]" value="{{ $value }}" checked>{{ $value }}</label>
+                            </div>
+                          @endif
+                        @endforeach
+
+                      </div>
+                  </div>
+                @endif
 
             </div>
         </div>
@@ -732,27 +760,11 @@
 <script src="{{url()}}/assets/vendor/js/jquery.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script type="text/javascript">
-
-  // function inputLocation(value){
-  //   var continantes = ['Asia', 'London', 'Africa'];
-  //   var options = [];
-  //   for (var i = 0; i < continantes.length; i++) {
-  //     if (value) {
-  //       if (continantes[i] == value) {
-  //         options += '<option>'+continantes[i]+'</option>';
-  //       }  
-  //     }
-  //   }
-
-  // }
-
+/*
     $(document).ready(function(){
 
       var checked_arr = [];
-/*
-      $('#mainTable').each($("input[name='ingest_chkbox']:checked"), function(){            
-                checked_arr.push($(this).val());
-            });*/
+
       $('#mainTable').find('input[type="checkbox"]:checked').each(function(){
         checked_arr.push($(this).val());
 
@@ -768,13 +780,8 @@
         }
 
       });
-      // var checkedValue = $('.ingest_chkbox:checked').val();
-      // for (var i = 0; i < checked_arr.length; i++) {
-        
-      // }
-
     });
-
+*/
     var openFile = function(event) {
       var input = event.target;
 
@@ -799,6 +806,13 @@
         ext_name = ext_name.trim();
 
         id = parseInt(id);
+        console.log(ext_name);
+        console.log(id);
+        console.log(type);
+
+        $('#dbSubTypeData')[0].reset();
+        $('#jsonSubTypeData')[0].reset();
+        $('#csvSubTypeData')[0].reset();
 
         $.ajax({
 
@@ -812,10 +826,11 @@
             data: {'id': id, 'ext_name': ext_name},
 
             success:function(resp){
-                var res = resp.data.extIngData[0];
-                var misc_arr = [];
 
                 if (resp.status == "success") {
+                  var res = resp.data.extIngData[0];
+                  var misc_arr = [];
+
                   if (type == 'Database') {
                     $('#hostName').val(res.host_name);
                     $('#portNo').val(res.port_no);
@@ -903,6 +918,8 @@
                     $('#sel2').val(res.num_2);
                   }
 
+                } else{
+
                 }
             }
         });
@@ -922,7 +939,12 @@
         var dataKey = $(this).closest('.each_row').find('#dataKey').val();
         var newPrj = $('#newPrj').val();
         var project_id = $('#project_id').val();
+        // console.log(project_id);
         
+        $('#dbSubTypeData')[0].reset();
+        $('#jsonSubTypeData')[0].reset();
+        $('#csvSubTypeData')[0].reset();
+
         // $('#dbDataKey').val('');
         // $('#jsonDataKey').val('');
         // $('#csvDataKey').val('');

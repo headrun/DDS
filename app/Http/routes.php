@@ -33,6 +33,7 @@ Route::get('/extractor_library',function(){
 
 
 Route::get('/setup_new_proj','CommonController@setup_new_proj');
+Route::get('/setup_new_proj/{id}','CommonController@update_exe_proj');
 
 Route::get('/mapping_kpi',function(){
 	return view('mapping_kpi');
@@ -156,6 +157,7 @@ Route::get('/CLIENT_Territory_Alignment',function(){
 Route::get('/kpilib','AjaxCallTest@kpiLib');
 
 Route::get('/struct','AjaxCallTest@struct');
+Route::any('/saveMapData','AjaxCallTest@saveMapData');
 
 
 

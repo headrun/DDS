@@ -15,18 +15,15 @@ class AjaxCallTest extends Controller
 
   
 	
- 	public function test(Request $request)
- 	{
- 		
+ 	public function test(Request $request){
 
  		$data = $request->all(); // This will get all the request data.
  				//Input::all();
-
- 		$users = $this->check_array($data['id']);
+    // return $data;
+ 		$users = $this->check_array($data['id'],$data['checkProjSubType']);
     return $users;
     return Response::json($users);
       	if ($users) {
-
       		return $users;
       	}else{
       		return Response::json(array('status'=> 'failure'));
@@ -34,7 +31,8 @@ class AjaxCallTest extends Controller
       	
         //return $data ; // This will dump and die
  	}
- 	private function check_array($data)
+
+ 	private function check_array($data, $checkedData)
  	{
     $brand = array('Market Overview','Market Access','Source of Business','Sales Force Effectiveness','Marketing');
     $pre = array('Market Overview','Market Access','Source of Business','Marketing');
@@ -45,22 +43,22 @@ class AjaxCallTest extends Controller
  		//return $data;
  		switch ($data) {
  			case 'Brand Launch':
- 				return $this->html_change($brand,$data);
+ 				return $this->html_change($brand,$data,$checkedData);
  				break;
       case 'Pre Launch':
-        return $this->html_change($pre,$data);
+        return $this->html_change($pre,$data,$checkedData);
         break;
  			case 'RWE':
- 				return $this->html_change($rew,$data);
+ 				return $this->html_change($rew,$data,$checkedData);
  				break;
  			case 'Digital Analytics':
- 				return $this->html_change($digital_ana,$data);
+ 				return $this->html_change($digital_ana,$data,$checkedData);
  				break;
  			case 'Social Media':
- 				return $this->html_change($social_media,$data);
+ 				return $this->html_change($social_media,$data,$checkedData);
  				break;
  			case 'Supply Chain':
- 				return $this->html_change($supply_chain,$data);
+ 				return $this->html_change($supply_chain,$data,$checkedData);
  				break;
  			
  			default:
@@ -68,26 +66,65 @@ class AjaxCallTest extends Controller
  				
  		}
  	}
- 	private function html_change($content,$data)
+ 	private function html_change($content,$data,$checkedData)
  	{
     $var = "<form><div class='form-group'>";
- 		foreach ($content as $value) 
- 		{
-      $var = $var."<div class='checkbox'>";
-      $var = $var."<label>";
-      $var = $var."<input  type ='checkbox' class = 'sid' value = '".$value."' id = 'sid'>".$value;
-      $var = $var."</label>";
-      $var = $var."</div>";
- 		}
+    $checkedData = explode(',', $checkedData);
+		foreach ($content as $value) {
+      if (isset($checkedData)) {
+        if (in_array($value, $checkedData)) {
+          $var = $var."<div class='checkbox'>";
+          $var = $var."<label>";
+          $var = $var."<input  type ='checkbox' class = 'sid' name='proj_sub_type[]' value = '".$value."' id = 'sid' checked>".$value;
+          $var = $var."</label>";
+          $var = $var."</div>";
+        } else {
+          $var = $var."<div class='checkbox'>";
+          $var = $var."<label>";
+          $var = $var."<input  type ='checkbox' class = 'sid' name='proj_sub_type[]' value = '".$value."' id = 'sid'>".$value;
+          $var = $var."</label>";
+          $var = $var."</div>";
+        }
+      } else {
+        $var = $var."<div class='checkbox'>";
+        $var = $var."<label>";
+        $var = $var."<input  type ='checkbox' class = 'sid' name='proj_sub_type[]' value = '".$value."' id = 'sid'>".$value;
+        $var = $var."</label>";
+        $var = $var."</div>";
+      }
+      
+    }
+
     $var = $var."</div>";      
- 		return $var;
+ 		return ($var);
  	}
 
   public function test1(Request $request)
   {
     $data = $request->all();
-    $q1 = DB::table('cat')->whereIn('sub_type', $data['id'])->groupBy('description')->get();
+    $dataVal = $data['id'];
+    // return $dataVal;
+    if (isset($data['key'])) {
+      $q1 = [];
+      if (count($dataVal) > 0) {
+        for ($i=0; $i < count($dataVal); $i++) {
+          array_push($q1, DB::table('cat')->where('sub_type', $dataVal[$i])->groupBy('description')->get());
+        }
+      }
+    } else {
+      if (count($dataVal) > 0) {
+        $q1 = [];
+        // return $dataVal;
+        for ($j=0; $j < count($dataVal); $j++) {
+          array_push($q1, DB::table('cat')->where('sub_type', $dataVal[$j])->groupBy('description')->get());
+        }
 
+      } else{
+        $q1 = DB::table('cat')->where('sub_type', $dataVal)->groupBy('description')->get();
+      }
+      // return $q1;
+    }
+    
     if ($q1) {
         return Response::Json(array('status'=> 'success', 'data'=> $q1));
     }else{
@@ -130,18 +167,42 @@ class AjaxCallTest extends Controller
     $proj_id = array($inputs['project_id']);
     $val = $inputs['checkbox'];
     $val = implode(",",$val);
- 
+    $proj_id = (int)trim($proj_id[0], '"');
     $data1 = array('val','proj_id');
     return view('struct', compact($data1));
     
   }
+
+  public function saveMapData(){
+    $inputs = Input::all();
+    $exeMapData = DB::table('map_data')->select()->where('proj_id', $inputs['projectId'])->get();
+    $exeMapData = $exeMapData[0];
+    if (count($exeMapData) > 0) {
+      if ($exeMapData->map_data != $inputs['mapData']) {
+        DB::table('map_data')
+            ->where('proj_id', '=', $inputs['projectId'])
+            ->update(['map_data'=>$inputs['mapData']]);
+      }
+    } else {
+      DB::table('map_data')->insert(
+            ['proj_id' => $inputs['projectId'], 'map_data' => $inputs['mapData']]);
+    }
+
+    return Response::json(array('status'=> 'success', 'data'=> $inputs));
+  }
   
-  public function kpi()
-  {
+  public function kpi(){
+    $inputs = Input::all();
+
+    $project_id = $inputs['forword_project_id'];
+
+    $project_type = DB::table('active_proj')->select('proj_type')->where('id', $project_id)->get();
+    $project_type = $project_type[0]->proj_type;
+
     $view = DB::table('mapping_kpi')->select('view')->distinct()->get();
-    //$view = DB::table('mapping_kpi')->select('')->get();
-    $data1 = array('view');
-    // return view('kpi_map_new', compact($data1));
+
+    $data1 = array('view', 'project_id', 'project_type');
+
     return view('setup_new_proj_new', compact($data1));
   }
 

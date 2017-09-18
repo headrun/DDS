@@ -11,11 +11,19 @@
   <div class="visualization">
       <div class="top-div">
         <div class="breadcrumb flat" style="margin-right: 5px">
-             <a href="{{url()}}/setup_new_proj" class="active">Setup New Project</a>
+          @if($project_id)
+             <a href="{{url()}}/setup_new_proj/{{$project_id}}" class="active">Setup New Project</a>
+             <a href="{{url()}}/ingestion/{{$project_id}}" class="active">Ingest Data</a>
+             <!-- <a href="{{url()}}/validate" class="active">Validate Data</a> -->
+             <a href="javascript:history.back()" class="active">Map Data</a>
+             <a href="#" class="active">Mapping KPI</a>
+          @else
+            <a href="{{url()}}/setup_new_proj" class="active">Setup New Project</a>
              <a href="{{url()}}/ingestion" class="active">Ingest Data</a>
              <!-- <a href="{{url()}}/validate" class="active">Validate Data</a> -->
              <a href="javascript:history.back()" class="active">Map Data</a>
              <a href="#" class="active">Mapping KPI</a>
+          @endif
          </div>
          <div class="row widget-1" style="padding-top: 30px">
               <div class="widget-icon"><img src="{{url()}}/assets/vendor/img/new_document_add.png"></div>
@@ -23,7 +31,9 @@
 
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                   <div class="panel panel-default" style="border-bottom: 4px solid #8bc34a;     padding: 20px;">
-                      <p><strong>Project Type: </strong> {{Session::get('project_name')}}</p>
+                      @if(isset($project_type))
+                        <p><strong>Project Type: </strong>{{$project_type}}</p>
+                      @endif
                       <div class = "row">
                         <div class= "col-md-2">
                           <label style="padding: 5px">Select View:</label>

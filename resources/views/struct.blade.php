@@ -16,9 +16,9 @@
       <div class="top-div">
           <div class="breadcrumb flat">
              <a href="{{url()}}/setup_new_proj" class="active">Setup New Project</a>
-             @foreach($proj_id as $p_id)
-             <a href="{{url()}}/ingestion/{{ $p_id }}" class="active">Ingest Data</a>
-             @endforeach
+             @if(isset($proj_id))
+              <a href="{{url()}}/ingestion/{{ $proj_id }}" class="active">Ingest Data</a>
+             @endif
              <!-- <a href="javascript:history.back()" class="active">Validate Data</a> -->
              <a href="#" class="active">Map Data</a>
              <a href="#">Mapping KPI</a>
@@ -33,6 +33,9 @@
                   <div class="panel panel-default" style="border-bottom: 4px solid #8bc34a;     padding: 20px;">
                       <div class="row">  
                           <div class="widget col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            @if(isset($proj_id))
+                              <input type="hidden" name="project_id" id="project_id" value="{{ $proj_id }}">
+                            @endif
                             <table class="table" style="font-size:14px" id="mainTable">
                               <thead>
                                 <tr><center>
@@ -54,13 +57,13 @@
                                   <td class="val">Symphony_Claims</td>
                                   <td>
                                       <select class="form-control source_name">
-                                        <option>DCube_Claims
+                                        <option>DCube_Claims</option>
                                         <option>DCube_Claim_RejRsn_Dim</option>
                                         <option>DCube_Claim_Dim</option>
                                       </select>
                                   </td>
                                   <td>
-                                      <button class="btn btn-info " data-toggle="modal" data-target="#claim">edit mapping</button>
+                                      <button class="btn btn-info " data-toggle="modal" data-target="#claim">Edit Mapping</button>
                                   </td>
                                 </tr>
                                 <tr class="each_row" style="display: none;" id='IMS_Claims'>
@@ -72,7 +75,7 @@
                                   <td class="val">IMS_Claims</td>
                                   <td>
                                       <select class="form-control source_name">
-                                        <option>DCube_Claims
+                                        <option>DCube_Claims</option>
                                         <option>DCube_Claim_RejRsn_Dim</option>
                                         <option>DCube_Claim_Dim</option>
                                       </select>
@@ -547,10 +550,11 @@
                               </tbody>
                             </table>
                             <form action="{{url()}}/kpi_map_new">
-                            <button type="submit" class= 'btn btn-primary pull-right mapping_selected_btn' disabled>KPI Mapping</button>
+                              <input type="text" name="forword_project_id" id="forword_project_id" value="{{ $proj_id }}">
+                              <button type="submit" class= 'btn btn-primary pull-right mapping_selected_btn' disabled>KPI Mapping</button>
                             </form>
 
-                            <button class= 'btn btn-info pull-left' id="map_data" data-toggle="modal" data-target="#mpsldt" style="margin-left: 30px">Map Selected Data</button>
+                            <button class= 'btn btn-info pull-left' id="map_data" data-toggle="modal" data-target="#mpsldt" style="margin-left: 30px" >Map Selected Data</button>
                           </div>
                           
                       </div>
@@ -570,10 +574,14 @@
           <h4 class="modal-title">Mapping Started</h4>
         </div>
         <div class="modal-body" style="padding: 10px 50px">
-        <div id= 'text_add'></div>
+          <div id= 'text_add'></div>
+          <div>
+            <input type="hidden" name="mapData" id="mapData">
+          </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-default" id="saveMapData" data-dismiss="modal">Ok</button>
+          <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
         </div>
       </div>
     </div>
@@ -5938,10 +5946,10 @@
     var str= "{{$val}}";
     
     var val = str.split(",");
-    
+
     for(var i=0; i< val.length; i++) {
-        
         val[i]= val[i].replace(/ /g , "_");
+        console.log(val[i]);
     }
 
     $(document).ready(function(){
@@ -5952,12 +5960,12 @@
         
         $('tbody').find('#'+id).show();
         
-        console.log(id);
+        // console.log(id);
       }
   
     });
 
-    $('.ingest_chkbox').change(function(){
+    /*$('.ingest_chkbox').change(function(){
 
       if($(' input[type="checkbox" ]:checked').length > 0){
 
@@ -5965,20 +5973,54 @@
           
        }else{
 
-          $('.mapping_selected_btn').attr('disabled', true);
+          $('.mapping_selected_btn').attr('disabled', false);
        }
-    });
+    });*/
     $('#map_data').click(function(){
+        var sourceTable = dCubeTable = [];
         var html ='<ul class="list-group"><span class="label label-info">Selected</span>';
         $('.each_row').find('input[type="checkbox"]:checked').each(function(){
-            console.log($(this).closest('.each_row').find('.val').text());
-            html += "<li class='list-group-item'>"+$(this).closest('.each_row').find('.val').text()+
-            "    ->    "+$(this).closest('.each_row').find('.source_name').val()+"</li>";
+            // console.log($(this).closest('.each_row').find('.val').text());
+
+            sourceTable.push($(this).closest('.each_row').find('.val').text());
+            dCubeTable.push($(this).closest('.each_row').find('.source_name').val());
             
+            html += "<li class='list-group-item' style='margin: 10px 0'>"+$(this).closest('.each_row').find('.val').text()+
+            "    ->    "+$(this).closest('.each_row').find('.source_name').val()+"</li>";
 
         })
-        html += '</ul>'
+        html += '</ul>';
+        
+        // console.log(dCubeTable);
+        $('#mapData').val(dCubeTable);
+
         $('#text_add').html(html);
+    });
+
+    $('#saveMapData').click(function(){
+
+      var mapData = $('#mapData').val();
+      var projectId = $('#project_id').val();
+      $('.mapping_selected_btn').attr('disabled', false);
+
+      $.ajax({
+            url: '{{url()}}/saveMapData',
+            type: "POST",
+            dataType: 'json',
+            headers: {
+                
+                'X-CSRF-TOKEN': "{{ csrf_token() }}",
+            },
+            data: {'mapData': mapData, 'projectId': projectId},
+
+            success:function(resp){
+
+                if (resp.status == "success") {
+                  $('#forword_project_id').val(resp.data.projectId);
+                }
+            }
+        });
+
     });
 </script>
 @stop
