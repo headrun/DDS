@@ -161,16 +161,25 @@ class AjaxCallTest extends Controller
     
   }
 
-  public function struct()
-  {
+  public function struct() {
     $inputs =Input::all();
+    
     $proj_id = array($inputs['project_id']);
     $val = $inputs['checkbox'];
     $val = implode(",",$val);
     $proj_id = (int)trim($proj_id[0], '"');
-    $data1 = array('val','proj_id');
-    return view('struct', compact($data1));
     
+    $checkedData = DB::table('map_data')->where('proj_id', $proj_id)->get();
+
+    if (isset($checkedData)) {
+
+      $data1 = array('val','proj_id', 'checkedData');
+      
+    } else {
+      $data1 = array('val','proj_id');
+    }
+    
+    return view('struct', compact($data1));
   }
 
   public function saveMapData(){

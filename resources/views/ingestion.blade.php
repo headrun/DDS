@@ -929,7 +929,6 @@
     $('.give_inputs').click(function(){
 
         var type_name = $(this).closest('.each_row').find('.type_name').val();
-
         var subtype_name = $(this).closest('.each_row').find('.subtype_name').val();
 
         window.tick = $(this).closest('.each_row').find('.extractor_name').text();

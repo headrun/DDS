@@ -47,7 +47,13 @@
                                 </tr>
                               </thead>
                               <tbody>
-                              
+                              @if(isset($checkedData))
+                                @foreach($checkedData as $value)
+                                  <input type="hidden" name="exeMapData" id="exeMapData" value="{{ $value->map_data }}">
+                                @endforeach
+                              @else
+                                  <input type="hidden" name="exeMapData" id="exeMapData" value="Empty">
+                              @endif
                                 <tr class="each_row" style="display: none;" id='Symphony_Claims'>
                                   <td>
                                       <div class="checkbox">
@@ -5941,6 +5947,54 @@
 @stop
 @section('BaseJSLib')
 <script type="text/javascript">
+    $(document).ready(function(){
+      var exeMapData = $('#exeMapData').val();
+      
+      if (exeMapData != 'Empty') {
+        exeMapData = exeMapData.split(",")
+
+        var filteredStable = exeMapData.filter(function(element, index, array) {
+          return (index % 2 === 0);
+        });
+
+        console.log('Array of checked values: '+filteredStable);
+
+        var filteredDtable = exeMapData.filter(function(element, index, array) {
+          return (index % 2 !== 0);
+        });
+
+      }
+
+      for(var i=0; i< val.length; i++) {
+        
+        id = val[i];
+        
+        $('tbody').find('#'+id).show();
+
+        $('#'+id).each(function(){
+          var value = $(this).find('.val').text();
+            for(var j = 0 ; j < filteredStable.length ;j++){
+              if(filteredStable[j]==value){
+                $(this).closest('.each_row').find('.ingest_chkbox').prop('checked', true);
+              }
+                // $(this).closest('.each_row').find('.source_name').val(filteredDtable[j]);
+            }
+            for (var dCubeEle = 0; dCubeEle < filteredDtable.length; dCubeEle++) {
+              if (filteredDtable[dCubeEle] == $(this).closest('.each_row').find('.source_name').val()) {
+                // $(this).closest('.each_row').find('.source_name').val(filteredDtable[j]);
+                // alert(filteredDtable[dCubeEle]);
+                exeVal = '<option selected>'+filteredDtable[dCubeEle]+'</option>';
+                // $(this).closest('.each_row').find('.source_name').html(exeVal);
+              }
+            }
+
+        });
+        
+      }
+
+    });
+
+
     $('a.DCube_struct').addClass('active');
     
     var str= "{{$val}}";
@@ -5949,21 +6003,8 @@
 
     for(var i=0; i< val.length; i++) {
         val[i]= val[i].replace(/ /g , "_");
-        console.log(val[i]);
+        // console.log(val[i]);
     }
-
-    $(document).ready(function(){
-
-      for(var i=0; i< val.length; i++) {
-        
-        id = val[i];
-        
-        $('tbody').find('#'+id).show();
-        
-        // console.log(id);
-      }
-  
-    });
 
     /*$('.ingest_chkbox').change(function(){
 
