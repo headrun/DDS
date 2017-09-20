@@ -193,12 +193,13 @@ class CommonController extends Controller
                     ->where('id', $id)->get();
 
         $projName = $curProjData[0]->proj_name;
-
+        // return json_decode($curProjData[0]->data);
         $values = array();
         $proj_name = $ta = $fa= '';
+
         
         if (isset($inputs[0]->data) && !empty($inputs[0]->data)){
-            Session::put('values', json_decode($inputs[0]->data));
+            Session::put('values', json_decode($curProjData[0]->data));
         }
             
         if (isset($inputs['proj_nam']) && !empty($inputs['proj_nam']))

@@ -167,12 +167,13 @@ class AjaxCallTest extends Controller
     $proj_id = array($inputs['project_id']);
     $val = $inputs['checkbox'];
     $val = implode(",",$val);
+
     $proj_id = (int)trim($proj_id[0], '"');
     
     $checkedData = DB::table('map_data')->where('proj_id', $proj_id)->get();
 
     if (isset($checkedData)) {
-
+      // return $checkedData;
       $data1 = array('val','proj_id', 'checkedData');
       
     } else {
