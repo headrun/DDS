@@ -85,8 +85,8 @@ class CommonController extends Controller
                 // return $arr;
                 array_push($final_array, $arr);
             }
-
-            if(!(DB::table('active_proj')->where('proj_name',$proj_name))){
+            // return DB::table('active_proj')->where('proj_name',$proj_name)->get();
+            if(!(DB::table('active_proj')->where('proj_name',$proj_name)->get())){
                 DB::table('active_proj')->insert(
                 ['proj_name' => $proj_name, 'proj_type' => $proj_type, 'sub_type' => $proj_sub_type, 'data' => $check_box_data, 'ta' => $ta ,'fa' => $fa, 'date' => date('Y-m-d')]);
                 $data1 = DB::table('active_proj')->get();
@@ -96,10 +96,12 @@ class CommonController extends Controller
                 foreach ($data1 as $value) {
                     array_push($final_array1,$value->proj_name);
                 }
-            } else {
-                DB::table('active_proj')->where('proj_name' , $proj_name)->delete();
-                DB::table('active_proj')->insert(
-                ['proj_name' => $proj_name, 'proj_type' => $proj_type, 'sub_type' => $proj_sub_type, 'data' => $check_box_data, 'ta' => $ta ,'fa' => $fa, 'date' => date('Y-m-d')]);
+            }
+             else {
+                // return 'Else condition return';
+                // DB::table('active_proj')->where('proj_name' , $proj_name)->delete();
+                // DB::table('active_proj')->insert(
+                // ['proj_name' => $proj_name, 'proj_type' => $proj_type, 'sub_type' => $proj_sub_type, 'data' => $check_box_data, 'ta' => $ta ,'fa' => $fa, 'date' => date('Y-m-d')]);
                 $data1 = DB::table('active_proj')->get();
 
                 $curProj = DB::table('active_proj')->where('id', DB::raw("(select max(`id`) from active_proj)"))->get();
@@ -191,7 +193,7 @@ class CommonController extends Controller
         $inputs = Input::all();
         $curProjData = DB::table('active_proj')
                     ->where('id', $id)->get();
-
+        // return $curProjData;
         $projName = $curProjData[0]->proj_name;
 
         $ta = $curProjData[0]->ta;
@@ -212,22 +214,24 @@ class CommonController extends Controller
             array_push($final_array, $arr);
         }
 
-        if(!(DB::table('active_proj')->where('proj_name',$projName)))
+        if(!(DB::table('active_proj')->where('proj_name',$projName)->get()))
         {
-            DB::table('active_proj')->insert(
-            ['proj_name' => $projName, 'ta' => $ta ,'fa' => $fa, 'date' => date('Y-m-d')]);
-            $data1 = DB::table('active_proj')->get();
-            //$data = array('final_array');
-            $final_array1 = array();
-            foreach ($data1 as $value) {
-                array_push($final_array1,$value->proj_name);
-            }
+            // // return 'Back step If condition';
+            // DB::table('active_proj')->insert(
+            // ['proj_name' => $projName, 'ta' => $ta ,'fa' => $fa, 'date' => date('Y-m-d')]);
+            // $data1 = DB::table('active_proj')->get();
+            // //$data = array('final_array');
+            // $final_array1 = array();
+            // foreach ($data1 as $value) {
+            //     array_push($final_array1,$value->proj_name);
+            // }
         }
         else 
         {
-            DB::table('active_proj')->where('proj_name' , $projName)->delete();
-            DB::table('active_proj')->insert(
-            ['proj_name' => $projName, 'ta' => $ta ,'fa' => $fa, 'date' => date('Y-m-d')]);
+            // return 'Back step else condition';
+            // DB::table('active_proj')->where('proj_name' , $projName)->delete();
+            // DB::table('active_proj')->insert(
+            // ['proj_name' => $projName, 'ta' => $ta ,'fa' => $fa, 'date' => date('Y-m-d')]);
             $data1 = DB::table('active_proj')->get();
             //$data = array('final_array');
             $final_array1 = array();
