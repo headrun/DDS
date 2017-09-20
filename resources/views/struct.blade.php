@@ -33,6 +33,7 @@
                   <div class="panel panel-default" style="border-bottom: 4px solid #8bc34a;     padding: 20px;">
                       <div class="row">  
                           <div class="widget col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <input type="hidden" name="checkedVal" id="checkedVal" value="{{ $val }}">
                             @if(isset($proj_id))
                               <input type="hidden" name="project_id" id="project_id" value="{{ $proj_id }}">
                             @endif
@@ -5948,21 +5949,15 @@
 @section('BaseJSLib')
 <script type="text/javascript">
     $(document).ready(function(){
-      var exeMapData = $('#exeMapData').val();
+      var str = $('#checkedVal').val();
+
+      $('a.DCube_struct').addClass('active');
       
-      if (exeMapData != 'Empty') {
-        exeMapData = exeMapData.split(",")
+      var val = str.split(",");
 
-        var filteredStable = exeMapData.filter(function(element, index, array) {
-          return (index % 2 === 0);
-        });
-
-        console.log('Array of checked values: '+filteredStable);
-
-        var filteredDtable = exeMapData.filter(function(element, index, array) {
-          return (index % 2 !== 0);
-        });
-
+      for(var i=0; i< val.length; i++) {
+          val[i]= val[i].replace(/ /g , "_");
+          // console.log(val[i]);
       }
 
       for(var i=0; i< val.length; i++) {
@@ -5971,7 +5966,24 @@
         
         $('tbody').find('#'+id).show();
 
+        var exeMapData = $('#exeMapData').val();
+
         $('#'+id).each(function(){
+          if (exeMapData != 'Empty') {
+            exeMapData = exeMapData.split(",")
+
+            var filteredStable = exeMapData.filter(function(element, index, array) {
+              return (index % 2 === 0);
+            });
+
+            console.log('Array of checked values: '+filteredStable);
+
+            var filteredDtable = exeMapData.filter(function(element, index, array) {
+              return (index % 2 !== 0);
+            });
+
+          }
+
           var value = $(this).find('.val').text();
             for(var j = 0 ; j < filteredStable.length ;j++){
               if(filteredStable[j]==value){
@@ -5990,21 +6002,10 @@
 
         });
         
-      }
+      }      
+      
 
     });
-
-
-    $('a.DCube_struct').addClass('active');
-    
-    var str= "{{$val}}";
-    
-    var val = str.split(",");
-
-    for(var i=0; i< val.length; i++) {
-        val[i]= val[i].replace(/ /g , "_");
-        // console.log(val[i]);
-    }
 
     /*$('.ingest_chkbox').change(function(){
 
@@ -6017,6 +6018,7 @@
           $('.mapping_selected_btn').attr('disabled', false);
        }
     });*/
+
     $('#map_data').click(function(){
         var sourceTable = dCubeTable = [];
         var html ='<ul class="list-group"><span class="label label-info">Selected</span>';
