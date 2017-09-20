@@ -17,11 +17,11 @@
           <div class="breadcrumb flat">
              
              @if(isset($proj_id))
+             <a href="{{url()}}/setup_new_proj/{{ $proj_id }}" class="active">Setup New Project</a>
               <a href="{{url()}}/ingestion/{{ $proj_id }}" class="active">Ingest Data</a>
-              <a href="{{url()}}/setup_new_proj/{{ $proj_id }}" class="active">Setup New Project</a>
              @else
+             <a href="{{url()}}/setup_new_proj" class="active">Setup New Project</a>
               <a href="{{url()}}/ingestion" class="active">Ingest Data</a>
-              <a href="{{url()}}/setup_new_proj" class="active">Setup New Project</a>
              @endif
              <!-- <a href="javascript:history.back()" class="active">Validate Data</a> -->
              <a href="#" class="active">Map Data</a>

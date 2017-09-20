@@ -193,24 +193,16 @@ class CommonController extends Controller
                     ->where('id', $id)->get();
 
         $projName = $curProjData[0]->proj_name;
-        // return json_decode($curProjData[0]->data);
-        $values = array();
-        $proj_name = $ta = $fa= '';
 
+        $ta = $curProjData[0]->ta;
+        $fa = $curProjData[0]->fa;
+
+        $values = array();
         
-        if (isset($inputs[0]->data) && !empty($inputs[0]->data)){
+        if (isset($curProjData[0]->data) && !empty($curProjData[0]->data)){
             Session::put('values', json_decode($curProjData[0]->data));
         }
             
-        if (isset($inputs['proj_nam']) && !empty($inputs['proj_nam']))
-            $proj_name = $inputs['proj_nam'];
-        
-        if (isset($inputs['ta']) && !empty($inputs['ta']))
-            $ta = $inputs['ta'];
-
-        if (isset($inputs['fa']) && !empty($inputs['fa']))
-            $fa = $inputs['fa'];
-
         $final_array = array();
         $values = Session::get('values');
         // return $values;
@@ -220,10 +212,10 @@ class CommonController extends Controller
             array_push($final_array, $arr);
         }
 
-        if(!(DB::table('active_proj')->where('proj_name',$proj_name)))
+        if(!(DB::table('active_proj')->where('proj_name',$projName)))
         {
             DB::table('active_proj')->insert(
-            ['proj_name' => $proj_name, 'ta' => $ta ,'fa' => $fa, 'date' => date('Y-m-d')]);
+            ['proj_name' => $projName, 'ta' => $ta ,'fa' => $fa, 'date' => date('Y-m-d')]);
             $data1 = DB::table('active_proj')->get();
             //$data = array('final_array');
             $final_array1 = array();
@@ -233,9 +225,9 @@ class CommonController extends Controller
         }
         else 
         {
-            DB::table('active_proj')->where('proj_name' , $proj_name)->delete();
+            DB::table('active_proj')->where('proj_name' , $projName)->delete();
             DB::table('active_proj')->insert(
-            ['proj_name' => $proj_name, 'ta' => $ta ,'fa' => $fa, 'date' => date('Y-m-d')]);
+            ['proj_name' => $projName, 'ta' => $ta ,'fa' => $fa, 'date' => date('Y-m-d')]);
             $data1 = DB::table('active_proj')->get();
             //$data = array('final_array');
             $final_array1 = array();
