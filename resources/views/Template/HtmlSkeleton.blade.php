@@ -23,10 +23,34 @@
     <link rel="stylesheet" href="{{url()}}/assets/vendor/admin_mod/css/loader.css">-->
     @show
     <link rel="stylesheet" href="{{url()}}/assets/vendor/css/app.css">
-    @yield('BaseCSSLib') 
+    @yield('BaseCSSLib')
+
+    <style>
+      .dropdown-logout {
+          position: relative;
+          display: inline-block;
+      }
+
+      .dropdown-logout-content {
+          display: none;
+          position: absolute;
+          background-color: #f9f9f9;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          padding: 12px 16px;
+          z-index: 1;
+      }
+
+      .dropdown-logout:hover .dropdown-logout-content {
+          display: block;
+      }
+    </style>
+
   </head>
   <body>
 
+    @if (Auth::guest())
+    @else
     <div class="container-fluid master-layout-class">
   <!-- Fixed navbar -->
     <nav class="clearfix navbar navbar-default navbar-fixed-top collapsed"">
@@ -106,13 +130,42 @@
       </div>
       <div class="aside-overlay"></div>
       <ul class="pull-right nav navbar-nav">
-        <li class="btn label" style="margin-top: 20px; margin-left: 5px"></li>
+        <!-- <li class="btn label" style="margin-top: 20px; margin-left: 5px"></li> -->
+        <li>
+          <img src="{{url()}}/assets/vendor/img/dcube_new.png" width="145px">
+        </li>
+        
+        <li class="dropdown-logout">
+          <a href="#" class="dropdown-logout" data-toggle="dropdown-logout" style="padding: 28px 0 0 15px; color: #0D596B; font-size: 15px; font-weight: 600">
+            <i class="fa fa-user-circle-o" aria-hidden="true" style="font-size: 18px"></i>
+              {{ Auth::user()->name }} <span class="caret"></span>
+          </a>
+
+          <ul class="dropdown-logout-content">
+              <!-- <li><a href="{{ url('/new-invent/'.Auth::User()->id) }}">New invention</a></li> -->
+              <li>
+                  <a href="{{ url('/logout') }}"
+                     onclick="event.preventDefault();
+                           document.getElementById('logout-form').submit();">
+                      Logout
+                  </a>
+
+                  <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                      {{ csrf_field() }}
+                  </form>
+              </li>
+          </ul>
+          <!-- <div class="nav navbar-nav" style="padding: 28px 0 0 15px; color: #0D596B; font-size: 15px; font-weight: 600">
+            <i class="fa fa-user-circle-o" aria-hidden="true" style="font-size: 18px"></i> vinay</div> -->
+        </li>
       </ul>
-      <div class="pull-right secondary-logo ng-scope">
-        <img src="{{url()}}/assets/vendor/img/dcube_new.png" class="pull-right">
+      <!-- <div class="secondary-logo ng-scope">
+        <img src="{{url()}}/assets/vendor/img/dcube_new.png">
       </div>
+      <div class="pull-right nav navbar-nav">vinay</div> -->
     </nav>
 </div>
+    @endif
 
     @yield('BaseContent')
     <script type="text/javascript">

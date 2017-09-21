@@ -9,6 +9,7 @@ use Session;
 use Input;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Auth;
 
 class AjaxCallTest extends Controller
 {
@@ -253,18 +254,27 @@ class AjaxCallTest extends Controller
     return view('KpiLib', compact($data1));    
     
   }
-  public function login()
+
+  public function login(Request $request)
   {
-    $inputs =Input::all();
-    //return $inputs;
-    $view = DB::table('users')->where('email' , $inputs['email'])
-                              ->where('password',$inputs['password'])
-                              ->get();
-    //$view = DB::table('mapping_kpi')->select('')->get();
-    if ($view)
+    $inputs = $request->all();
+
+    if(Auth::attempt(array('email' => $inputs['email'], 'password' => $inputs['password']))){
       return redirect('/dashboard');
-    else
-      return view('Login.Login');
+    } else {
+      Session::flash('message', 'Please login with valid credentials...!');
+      return redirect('login');
+    }
+  }
+
+  public function logout(){
+    
+    Auth::logout();
+
+    Session::flush();
+    
+    return redirect('/');
+
   }
 
 }

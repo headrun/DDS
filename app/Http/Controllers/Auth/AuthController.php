@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Auth;
+// namespace App\Http\Controllers\AuthController;
 
 use App\User;
 use Validator;
@@ -31,6 +32,7 @@ class AuthController extends Controller
     public function __construct()
     {
         $this->middleware('guest', ['except' => 'getLogout']);
+        // $this->middleware('auth');
     }
 
     /**
@@ -62,4 +64,5 @@ class AuthController extends Controller
             'password' => bcrypt($data['password']),
         ]);
     }
+
 }

@@ -407,11 +407,13 @@
         <h4 class="modal-title">Json Modal</h4>
       </div>
       <div class="modal-body">
+          
           <ul class="nav nav-tabs">
             <li class="active"><a data-toggle="tab" href="#home">Settings</a></li>
             <li><a data-toggle="tab" href="#menu1">Flow Variables</a></li>
             <li><a data-toggle="tab" href="#menu2">Memory Policy</a></li>
           </ul>
+
         <form name="jsonSubTypeData" id="jsonSubTypeData" enctype="multipart/form-data">
           <div class="tab-content">
               <div id="home" class="tab-pane fade in active">

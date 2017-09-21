@@ -24,6 +24,11 @@
     <!--{!! Form::open(array('url' => '/vault/adminlogin', 'id'=>"adminLoginForm", "class"=>"", 'method' => 'post')) !!}-->
     <form action="{{url()}}/login1" method="post">
       {!! csrf_field() !!}
+
+      @if (Session::has('message'))
+        <div class="alert alert-danger">{{ Session::get('message') }}</div>
+      @endif
+
       <label class="login-label">Login to Your Account</label>
       <input type="email" class="form-control email" placeholder="Email" name="email" required />
       <br>
