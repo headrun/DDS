@@ -207,13 +207,13 @@ class CommonController extends Controller
             
         $final_array = array();
         $values = Session::get('values');
-        // return $values;
+        
         foreach ($values as $key => $value){
             $data = Ingestion::where('data', '=', $value)->groupBy('source')->get();
             $arr = array('data'=> $value, 'sources'=> $data);
             array_push($final_array, $arr);
         }
-
+        
         if(!(DB::table('active_proj')->where('proj_name',$projName)->get()))
         {
             // // return 'Back step If condition';
@@ -264,6 +264,7 @@ class CommonController extends Controller
 
     public function saveIngestionData(){
         $inputs = Input::all();
+
         $params = array();
 
         parse_str($inputs['serializedData'], $params);
@@ -277,6 +278,8 @@ class CommonController extends Controller
 
         $ing_data = json_encode($ing_data[0]);
         $ing_data = json_decode($ing_data);
+
+        // return $ing_data;
 
         if ($ing_data->type == 'Database') {
             $miscChecked = json_encode($params['miscChecked']);
@@ -304,7 +307,7 @@ class CommonController extends Controller
                 ]);
             }
 
-        } else if($ing_data->type == 'JSON'){
+        } else if($ing_data->type == 'API'){
             // return $params['pathNotFoundAndAllowComments'];
             $path_and_comments = json_encode($params['pathNotFoundAndAllowComments']);
 
@@ -327,6 +330,29 @@ class CommonController extends Controller
                     'proj_id' => $inputs['project_id'], 'ing_id' => $ing_data->id, 'ext_name' => $ext_name, 'key' => $params['jsonDataKey'], 'json_file' => $params['jsonFileName'], 'reader_page_name' => $params['jsonEmail'], 
                     'remember_me' => $params['jsonRememberMe'], 'json_path' => $params['jsonPassword'], 'path_not_found_and_allow_comments' => $path_and_comments, 'json_time_zone_location' => $params['jsonTimeZoneLocation']
                 ]);    
+            }
+            
+        } else if($ing_data->type == 'S3'){
+            // return $ing_data->id;
+            // return $params['pathNotFoundAndAllowComments'];
+            // $path_and_comments = json_encode($params['pathNotFoundAndAllowComments']);
+
+            $exeIngestion = DB::table('ingestion_data')->select('id', 'ing_id')
+                ->where('proj_id', $inputs['project_id'])
+                ->where('ing_id', $ing_data->id)
+                ->get();
+
+            if (count($exeIngestion)>0) {
+                $exeIngId = $exeIngestion[0];
+
+                DB::table('ingestion_data')
+                    ->where('id', $exeIngId->id)
+                    ->update(array(
+                        'ing_id' => $ing_data->id, 'ext_name' => $ext_name,
+                        's3_key' => $params['s3Key'], 's3_ecret' => $params['s3Secret'], 's3_bucket' => $params['s3Bucket'], 's3_file' => $params['s3File']));
+            } else {
+                DB::table('ingestion_data')->insert([
+                    'proj_id' => $inputs['project_id'], 'ing_id' => $ing_data->id, 'ext_name' => $ext_name, 's3_key' => $params['s3Key'], 's3_ecret' => $params['s3Secret'], 's3_bucket' => $params['s3Bucket'], 's3_file' => $params['s3File']]);    
             }
             
         }else {

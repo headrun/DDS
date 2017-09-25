@@ -26,7 +26,10 @@
       {!! csrf_field() !!}
 
       @if (Session::has('message'))
-        <div class="alert alert-danger">{{ Session::get('message') }}</div>
+        <div class="alert alert-danger">
+          <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>&nbsp;
+          {{ Session::get('message') }}
+        </div>
       @endif
 
       <label class="login-label">Login to Your Account</label>

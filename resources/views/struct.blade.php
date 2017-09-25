@@ -37,7 +37,8 @@
                   <div class="panel panel-default" style="border-bottom: 4px solid #8bc34a;     padding: 20px;">
                       <div class="row">  
                           <div class="widget col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <input type="hidden" name="checkedVal" id="checkedVal" value="{{ $val }}">
+                            <input type="hidden" name="checkedVal" id="checkedVal" value="{{json_encode($d_struct_id)}}">
+
                             @if(isset($proj_id))
                               <input type="hidden" name="project_id" id="project_id" value="{{ $proj_id }}">
                             @endif
@@ -59,505 +60,28 @@
                               @else
                                   <input type="hidden" name="exeMapData" id="exeMapData" value="Empty">
                               @endif
-                                <tr class="each_row" style="display: none;" id='Symphony_Claims'>
+
+                              @foreach($map_data as $val)
+                                <tr class="each_row" id='{{$val->source_id}}'>
                                   <td>
                                       <div class="checkbox">
-                                        <label><input type="checkbox" class="ingest_chkbox" value="Symphony_Claims"></label>
+                                        <label><input type="checkbox" class="ingest_chkbox" value="{{$val->source_id}}"></label>
                                       </div>
                                   </td>
-                                  <td class="val">Symphony_Claims</td>
+                                  <td class="val">{{$val->source_table}}</td>
                                   <td>
-                                      <select class="form-control source_name">
-                                        <option>DCube_Claims</option>
-                                        <option>DCube_Claim_RejRsn_Dim</option>
-                                        <option>DCube_Claim_Dim</option>
-                                      </select>
+                                    <?php
+                                      $source_name = implode(",",json_decode($val->dcube_tables));
+                                    ?>
+                                    <input type="hidden" name="source_name_string" id="source_name_string" value="<?php echo $source_name ?>">
+                                    <div id="sourceName"></div>
                                   </td>
                                   <td>
                                       <button class="btn btn-info " data-toggle="modal" data-target="#claim">Edit Mapping</button>
                                   </td>
                                 </tr>
-                                <tr class="each_row" style="display: none;" id='IMS_Claims'>
-                                  <td>
-                                      <div class="checkbox">
-                                        <label><input type="checkbox" class="ingest_chkbox" value="IMS_Claims"></label>
-                                      </div>
-                                  </td>
-                                  <td class="val">IMS_Claims</td>
-                                  <td>
-                                      <select class="form-control source_name">
-                                        <option>DCube_Claims</option>
-                                        <option>DCube_Claim_RejRsn_Dim</option>
-                                        <option>DCube_Claim_Dim</option>
-                                      </select>
-                                  </td>
-                                  <td>
-                                      <button class="btn btn-info " data-toggle="modal" data-target="#claim">edit mapping</button>
-                                  </td>
-                                </tr>
-                                <tr class="each_row" style="display: none" id='Prescriber_Source'>
-                                  <td>
-                                      <div class="checkbox">
-                                        <label><input type="checkbox" class="ingest_chkbox"></label>
-                                      </div>
-                                  </td>
-                                  <td class="val">Symphony_PrescSrc</td>
-                                  
-                                  <td>
-                                      <select class="form-control source_name">
-                                        <option>DCube_PrescSrc</option>
-                                        <option>DCube_Presc_Dim</option>
-                                        <option>DCube_Presc</option>
-                                     
-                                        
-                                      </select>
-                                  </td>
-                                  
+                              @endforeach
 
-                                  <td>
-                                      <button class="btn btn-info " data-toggle="modal" data-target="#presrc">edit mapping</button>
-                                  </td>
-                                  </td>
-                                </tr>
-                                <tr class="each_row" style="display: none" id='MMIT_Payor_Plan_Data'>
-                                  <td>
-                                      <div class="checkbox">
-                                        <label><input type="checkbox" class="ingest_chkbox"></label>
-                                      </div>
-                                  </td>
-                                  <td class="val">MMIT</td>
-                                  
-                                  <td>
-                                      <select class="form-control source_name">
-                                        <option>DCube_MMIT</option>
-                                        <option>DCube_MMIT_Claims</option>
-                                        <option>DCube_MMIT_Dim</option>
-                                     
-                                        
-                                      </select>
-                                  </td>
-                                  
-
-                                  <td>
-                                      <button class="btn btn-info " data-toggle="modal" data-target="#mmits" >edit mapping</button>
-                                  </td>
-                                </tr>
-                                <tr class="each_row" style="display: none" id= 'MMIT_Payor_Plan_to_Claims'>
-                                  <td>
-                                      <div class="checkbox">
-                                        <label><input type="checkbox" class="ingest_chkbox"></label>
-                                      </div>
-                                  </td>
-                                  <td class="val">MMIT to CLAIMS</td>
-                                  
-                                  <td>
-                                      <select class="form-control source_name">
-                                        <option>DCube_MMIT_Claims</option>
-                                        <option>DCube_MMIT</option>
-                                        <option>DCube_MMIT_Claims</option>
-                                     
-                                        
-                                      </select>
-                                  </td>
-                                  
-
-                                  <td>
-                                      <button class="btn btn-info " data-toggle="modal" data-target="#mmits" >edit mapping</button>
-                                  </td>
-                                </tr>
-                                <tr class="each_row" style="display: none" id= 'Symphony_Product_Dimension'>
-                                  <td>
-                                      <div class="checkbox">
-                                        <label><input type="checkbox" class="ingest_chkbox"></label>
-                                      </div>
-                                  </td>
-                                  <td class="val">Symphony Product Dimension</td>
-                                  
-                                  <td>
-                                      <select class="form-control source_name">
-                                        <option>DCube_Product_Dim</option>
-                                        <option>DCube_Prod </option>
-                                        <option>DCube_Prod_Branded</option>
-                                     
-                                        
-                                      </select>
-                                  </td>
-                                  <td>
-                                      <button class="btn btn-info " data-toggle="modal" data-target="#prodim" >edit mapping</button>
-                                  </td>
-                                  
-                                </tr>
-                                <tr class="each_row" style="display: none" id= 'IMS_Product_Dimension'>
-                                  <td>
-                                      <div class="checkbox">
-                                        <label><input type="checkbox" class="ingest_chkbox"></label>
-                                      </div>
-                                  </td>
-                                  <td class="val">IMS Product Dimension</td>
-                                  
-                                  <td>
-                                      <select class="form-control source_name">
-                                        <option>DCube_Product_Dim</option>
-                                        <option>DCube_Prod </option>
-                                        <option>DCube_Prod_Branded</option>
-                                     
-                                        
-                                      </select>
-                                  </td>
-                                  <td>
-                                      <button class="btn btn-info " data-toggle="modal" data-target="#prodim" >edit mapping</button>
-                                  </td>
-                                  
-                                </tr>
-                                <tr class="each_row" style="display: none" id= 'Symphony_Plan_Dimension'>
-                                  <td>
-                                      <div class="checkbox">
-                                        <label><input type="checkbox" class="ingest_chkbox"></label>
-                                      </div>
-                                  </td>
-                                  <td class="val">Symphony Plan Dimension</td>
-                                  
-                                  <td>
-                                      <select class="form-control source_name">
-                                        <option>DCube_Plan_Dim</option>
-                                        <option>DCube_Plan_Hier</option>
-                                        <option>DCube_Plan_Status</option>
-                                     
-                                        
-                                      </select>
-                                  </td>
-                                  
-                                  
-                                  <td>
-                                      <button class="btn btn-info " data-toggle="modal" data-target="#plndim" >edit mapping</button>
-                                  </td>
-                                </tr>
-                                <tr class="each_row" style="display: none" id= 'IMS_Plan_Dimension'>
-                                  <td>
-                                      <div class="checkbox">
-                                        <label><input type="checkbox" class="ingest_chkbox"></label>
-                                      </div>
-                                  </td>
-                                  <td class="val">IMS Plan Dimension</td>
-                                  
-                                  <td>
-                                      <select class="form-control source_name">
-                                        <option>DCube_Plan_Dim</option>
-                                        <option>DCube_Plan_Hier</option>
-                                        <option>DCube_Plan_Status</option>
-                                     
-                                        
-                                      </select>
-                                  </td>
-                                  
-                                  
-                                  <td>
-                                      <button class="btn btn-info " data-toggle="modal" data-target="#plndim" >edit mapping</button>
-                                  </td>
-                                </tr>
-                                <tr class="each_row" style="display: none" id= 'Symphony_Rejection_Reason'>
-                                  <td>
-                                      <div class="checkbox">
-                                        <label><input type="checkbox" class="ingest_chkbox"></label>
-                                      </div>
-                                  </td>
-                                  <td class="val">Symphony Rejection Reason Dimension</td>
-                                  
-                                  <td>
-                                      <select class="form-control source_name">
-                                        <option>DCube_Claim_RejRsn_Dim</option>
-                                        <option>DCube_Claim_Dim</option>
-                                        <option>DCube_Claims</option>
-                                        
-                                      </select>
-                                  </td>
-                                  
-                                  
-                                  <td>
-                                      <button class="btn btn-info " data-toggle="modal" data-target="#rrdim">edit mapping</button>
-                                  </td>
-                                  
-                                </tr>
-                                <tr class="each_row" style="display: none" id= 'IMS_Rejection_Reason'>
-                                  <td>
-                                      <div class="checkbox">
-                                        <label><input type="checkbox" class="ingest_chkbox"></label>
-                                      </div>
-                                  </td>
-                                  <td class="val">IMS Rejection Reason Dimension</td>
-                                  
-                                  <td>
-                                      <select class="form-control source_name">
-                                        <option>DCube_Claim_RejRsn_Dim</option>
-                                        <option>DCube_Claim_Dim</option>
-                                        <option>DCube_Claims</option>
-                                        
-                                      </select>
-                                  </td>
-                                  
-                                  
-                                  <td>
-                                      <button class="btn btn-info " data-toggle="modal" data-target="#rrdim">edit mapping</button>
-                                  </td>
-                                  
-                                </tr>
-
-                                <tr class="each_row" style="display: none" id='Symphony_Prescriber_Dimension'>
-                                  <td>
-                                      <div class="checkbox">
-                                        <label><input type="checkbox" class="ingest_chkbox"></label>
-                                      </div>
-                                  </td>
-                                  <td class="val">Symphony Prescriber Dimension</td>
-                                  
-                                  <td>
-                                      <select class="form-control source_name">
-                                         <option>DCube_Presc_Dim</option>
-                                        <option>DCube_PrescSrc</option>
-                                        <option>DCube_Presc</option>
-                                        
-                                      </select>
-                                  </td>
-                                  
-                                  
-                                  <td>
-                                      <button class="btn btn-info " data-toggle="modal" data-target="#prsdim">edit mapping</button>
-                                  </td>
-                                  
-                                </tr>
-                                <tr class="each_row" style="display: none" id='IMS_Prescriber_Dimension'>
-                                  <td>
-                                      <div class="checkbox">
-                                        <label><input type="checkbox" class="ingest_chkbox"></label>
-                                      </div>
-                                  </td>
-                                  <td class="val">IMS Prescriber Dimension</td>
-                                  
-                                  <td>
-                                      <select class="form-control source_name">
-                                         <option>DCube_Presc_Dim</option>
-                                        <option>DCube_PrescSrc</option>
-                                        <option>DCube_Presc</option>
-                                        
-                                      </select>
-                                  </td>
-                                  
-                                  
-                                  <td>
-                                      <button class="btn btn-info " data-toggle="modal" data-target="#prsdim">edit mapping</button>
-                                  </td>
-                                  
-                                </tr>
-
-                                <tr class="each_row" style="display: none" id='Symphony_Prescriber Alignment'>
-                                  <td>
-                                      <div class="checkbox">
-                                        <label><input type="checkbox" class="ingest_chkbox"></label>
-                                      </div>
-                                  </td>
-                                  <td class="val">Prescriber Allignment</td>
-                                  
-                                  <td>
-                                      <select class="form-control source_name">
-                                        <option>DCube_Presc_Allign</option>
-                                        <option>DCube_Presc_Dim</option>
-                                        <option>DCube_PrescSrc</option>
-                                        
-                                      </select>
-                                  </td>
-                                  
-                                  
-                                  <td>
-                                      <button class="btn btn-info " data-toggle="modal" data-target="#allign">edit mapping</button>
-                                  </td>
-                                  
-                                </tr>
-                                <tr class="each_row" style="display: none" id='IMS_Prescriber Alignment'>
-                                  <td>
-                                      <div class="checkbox">
-                                        <label><input type="checkbox" class="ingest_chkbox"></label>
-                                      </div>
-                                  </td>
-                                  <td class="val">Prescriber Allignment</td>
-                                  
-                                  <td>
-                                      <select class="form-control source_name">
-                                        <option>DCube_Presc_Allign</option>
-                                        <option>DCube_Presc_Dim</option>
-                                        <option>DCube_PrescSrc</option>
-                                        
-                                      </select>
-                                  </td>
-                                  
-                                  
-                                  <td>
-                                      <button class="btn btn-info " data-toggle="modal" data-target="#allign">edit mapping</button>
-                                  </td>
-                                  
-                                </tr>
-                                <tr class="each_row" style="display: none" id='IMS_Patient_Dimension'>
-                                  <td>
-                                      <div class="checkbox">
-                                        <label><input type="checkbox" class="ingest_chkbox"></label>
-                                      </div>
-                                  </td>
-                                  <td class="val">IMS Patient Dimension</td>
-                                  
-                                  <td>
-                                      <select class="form-control source_name">
-                                        <option>DCube_Patient_Dim</option>
-                                        <option>DCube_Patient</option>
-                                        
-                                        
-                                      </select>
-                                  </td>
-                                  
-                                  
-                                  <td>
-                                      <button class="btn btn-info " data-toggle="modal" data-target="#ptndim">edit mapping</button>
-                                  </td>
-                                  
-                                </tr>
-                                <tr class="each_row" style="display: none" id='Symphony_Patient_Dimension'>
-                                  <td>
-                                      <div class="checkbox">
-                                        <label><input type="checkbox" class="ingest_chkbox"></label>
-                                      </div>
-                                  </td>
-                                  <td class="val">Symphony Patient Dimension</td>
-                                  
-                                  <td>
-                                      <select class="form-control source_name">
-                                        <option>DCube_Patient_Dim</option>
-                                        <option>DCube_Patient</option>
-                                        
-                                        
-                                      </select>
-                                  </td>
-                                  
-                                  
-                                  <td>
-                                      <button class="btn btn-info " data-toggle="modal" data-target="#ptndim">edit mapping</button>
-                                  </td>
-                                  
-                                </tr>
-                                <tr class="each_row" style="display: none" id='Symphony_Physican_Rx_Data'>
-                                  <td>
-                                      <div class="checkbox">
-                                        <label><input type="checkbox" class="ingest_chkbox"></label>
-                                      </div>
-                                  </td>
-                                  <td class="val">Symphony Physican Rx Data</td>
-                                  
-                                  <td>
-                                      <select class="form-control source_name">
-                                        <option>DCube_Phys_Rx_Data</option>
-                                        <option>DCube_Phys_Dim</option>
-                                        
-                                        
-                                      </select>
-                                  </td>
-                                  
-                                  
-                                  <td>
-                                      <button class="btn btn-info " data-toggle="modal" data-target="#prrxdt">edit mapping</button>
-                                  </td>
-                                  
-                                </tr>
-                                <tr class="each_row" style="display: none" id='IMS_Physican_Rx_Data'>
-                                  <td>
-                                      <div class="checkbox">
-                                        <label><input type="checkbox" class="ingest_chkbox"></label>
-                                      </div>
-                                  </td>
-                                  <td class="val">IMS Physican Rx Data</td>
-                                  
-                                  <td>
-                                      <select class="form-control source_name">
-                                        <option>DCube_Phys_Rx_Data</option>
-                                        <option>DCube_Phys_Dim</option>
-                                        
-                                        
-                                      </select>
-                                  </td>
-                                  
-                                  
-                                  <td>
-                                      <button class="btn btn-info " data-toggle="modal" data-target="#prrxdt">edit mapping</button>
-                                  </td>
-                                  
-                                </tr>
-                                <tr class="each_row" style="display: none" id='CLIENT_Territory_Alignment'>
-                                  <td>
-                                      <div class="checkbox">
-                                        <label><input type="checkbox" class="ingest_chkbox"></label>
-                                      </div>
-                                  </td>
-                                  <td class="val">Territory Alignment</td>
-                                  
-                                  <td>
-                                      <select class="form-control source_name">
-                                        <option>DCube_Terr_Align</option>
-                                        <option>DCube_Terr_Zip</option>
-                                        <option>DCube_Terr_City</option>
-                                        
-                                      </select>
-                                  </td>
-                                  
-                                  
-                                  <td>
-                                      <button class="btn btn-info " data-toggle="modal" data-target="#allign">edit mapping</button>
-                                  </td>
-                                  
-                                </tr>
-                                <tr class="each_row" style="display: none" id='Symphony_Aggregated_Rx_Data'>
-                                  <td>
-                                      <div class="checkbox">
-                                        <label><input type="checkbox" class="ingest_chkbox"></label>
-                                      </div>
-                                  </td>
-                                  <td class="val">Symphony Aggregated Rx Data</td>
-                                  
-                                  <td>
-                                      <select class="form-control source_name">
-                                        <option>DCube_Aggre_Rx_Data</option>
-                                        <option>DCube_Aggre_Rx_Data_Dim</option>
-                                        
-                                        
-                                      </select>
-                                  </td>
-                                  
-                                  
-                                  <td>
-                                      <button class="btn btn-info " data-toggle="modal" data-target="#agrxdt">edit mapping</button>
-                                  </td>
-                                  
-                                </tr>
-                                <tr class="each_row" style="display: none" id='IMS_Aggregated_Rx_Data'>
-                                  <td>
-                                      <div class="checkbox">
-                                        <label><input type="checkbox" class="ingest_chkbox"></label>
-                                      </div>
-                                  </td>
-                                  <td class="val">IMS Aggregated Rx Data</td>
-                                  
-                                  <td>
-                                      <select class="form-control source_name">
-                                        <option>DCube_Aggre_Rx_Data</option>
-                                        <option>DCube_Aggre_Rx_Data_Dim</option>
-                                        
-                                        
-                                      </select>
-                                  </td>
-                                  
-                                  
-                                  <td>
-                                      <button class="btn btn-info " data-toggle="modal" data-target="#agrxdt">edit mapping</button>
-                                  </td>
-                                  
-                                </tr>
-
-                                
                               </tbody>
                             </table>
                             <form action="{{url()}}/kpi_map_new">
@@ -587,7 +111,7 @@
         <div class="modal-body" style="padding: 10px 50px">
           <div id= 'text_add'></div>
           <div>
-            <input type="hidden" name="mapData" id="mapData">
+            <input type="text" name="mapData" id="mapData">
           </div>
         </div>
         <div class="modal-footer">
@@ -5953,8 +5477,59 @@
 @section('BaseJSLib')
 <script type="text/javascript">
     $(document).ready(function(){
-      var str = $('#checkedVal').val();
 
+      $('#mainTable').find('input[type="checkbox"]:checked').each(function(){
+        console.log('Each one is: '+$(this).val());
+      });
+
+      if ($('#exeMapData').val() != undefined) {
+        var exeMapData = $('#exeMapData').val();
+      } else {
+        var exeMapData = $('#source_name_string').val();
+      }
+
+      if (exeMapData != 'Empty') {
+          exeMapData = exeMapData.split(",");
+
+          var filteredStable = exeMapData.filter(function(element, index, array) {
+            return (index % 2 === 0);
+          });
+
+          var filteredDtable = exeMapData.filter(function(element, index, array) {
+            return (index % 2 !== 0);
+          });
+      }
+
+      $('.each_row').each(function(){
+        var source_name = $(this).find('#source_name_string').val();
+        source_name = source_name.split(",");
+
+        var srcName = '';
+        srcName += '<select class="form-control source_name">';
+
+        var value = $(this).find('.val').text();
+
+        for (var i = 0; i < filteredStable.length; i++) {
+          if (value == filteredStable[i]) {
+            $(this).find('.ingest_chkbox').prop('checked', true);
+          }
+        }
+          for (var val = 0; val < source_name.length; val++) {
+            var i = filteredDtable.indexOf(source_name[val]);
+            if (filteredDtable.indexOf(source_name[val])!= null && filteredDtable[i] == source_name[val]) {
+              srcName += '<option value="'+source_name[val]+'" selected>'+source_name[val]+'</option>';
+            } else if(filteredDtable.indexOf(source_name[val])!= null){
+              srcName += '<option value="'+source_name[val]+'">'+source_name[val]+'</option>';
+            }
+          }
+          
+        srcName += '</select>';
+        $(this).find('#sourceName').html(srcName);
+
+      });
+
+      var str = $('#checkedVal').val();
+      // console.log(str);
       $('a.DCube_struct').addClass('active');
       
       var val = str.split(",");
@@ -5968,60 +5543,39 @@
         
         id = val[i];
         
-        $('tbody').find('#'+id).show();
+        // $('tbody').find('#'+id).show();
 
-        var exeMapData = $('#exeMapData').val();
+        // $('#'+id).each(function(){
+        //   if (exeMapData != 'Empty') {
+        //     exeMapData = exeMapData.split(",");
 
-        $('#'+id).each(function(){
-          if (exeMapData != 'Empty') {
-            exeMapData = exeMapData.split(",")
+        //     var filteredStable = exeMapData.filter(function(element, index, array) {
+        //       return (index % 2 === 0);
+        //     });
 
-            var filteredStable = exeMapData.filter(function(element, index, array) {
-              return (index % 2 === 0);
-            });
+        //     var filteredDtable = exeMapData.filter(function(element, index, array) {
+        //       return (index % 2 !== 0);
+        //     });
 
-            console.log('Array of checked values: '+filteredStable);
+        //   }
+        //   var value = $(this).find('.val').text();
+        //   var exeVal = '';
+        //     for(var j = 0 ; j < filteredStable.length ;j++){
+        //       if(filteredStable[j]==value){
+        //         $(this).closest('.each_row').find('.ingest_chkbox').prop('checked', true);
+        //         // console.log(filteredDtable[j]);
+        //         // exeVal += $(this).closest('.each_row').find('.source_name').val();
+        //         // exeVal += '<option selected>'+filteredDtable[j]+'</option>';
+        //         // $(this).closest('.each_row').find('.source_name').html(exeVal);
+        //       }
+        //     }
 
-            var filteredDtable = exeMapData.filter(function(element, index, array) {
-              return (index % 2 !== 0);
-            });
-
-          }
-
-          var value = $(this).find('.val').text();
-            for(var j = 0 ; j < filteredStable.length ;j++){
-              if(filteredStable[j]==value){
-                $(this).closest('.each_row').find('.ingest_chkbox').prop('checked', true);
-              }
-                // $(this).closest('.each_row').find('.source_name').val(filteredDtable[j]);
-            }
-            for (var dCubeEle = 0; dCubeEle < filteredDtable.length; dCubeEle++) {
-              if (filteredDtable[dCubeEle] == $(this).closest('.each_row').find('.source_name').val()) {
-                // $(this).closest('.each_row').find('.source_name').val(filteredDtable[j]);
-                // alert(filteredDtable[dCubeEle]);
-                exeVal = '<option selected>'+filteredDtable[dCubeEle]+'</option>';
-                // $(this).closest('.each_row').find('.source_name').html(exeVal);
-              }
-            }
-
-        });
+        // });
         
       }      
       
 
     });
-
-    /*$('.ingest_chkbox').change(function(){
-
-      if($(' input[type="checkbox" ]:checked').length > 0){
-
-          $('.mapping_selected_btn').attr('disabled', false);
-          
-       }else{
-
-          $('.mapping_selected_btn').attr('disabled', false);
-       }
-    });*/
 
     $('#map_data').click(function(){
         var sourceTable = dCubeTable = [];
@@ -6048,7 +5602,10 @@
 
       var mapData = $('#mapData').val();
       var projectId = $('#project_id').val();
-      $('.mapping_selected_btn').attr('disabled', false);
+
+      if (mapData != '') {
+        $('.mapping_selected_btn').attr('disabled', false);
+      }
 
       $.ajax({
             url: '{{url()}}/saveMapData',

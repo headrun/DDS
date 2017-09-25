@@ -395,8 +395,6 @@
   </div>
 </div>
 
-
-
 <div id="JSON" class="modal fade" role="dialog">
   <div class="modal-dialog modal-md">
 
@@ -404,7 +402,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Json Modal</h4>
+        <h4 class="modal-title">API Modal</h4>
       </div>
       <div class="modal-body">
           
@@ -458,7 +456,7 @@
                   <div class="row">
                       <div class="col-md-12">
                           <div class="form-group">
-                            <label for="jsonPassword">JSON Path:</label>
+                            <label for="jsonPassword">API Path:</label>
                             <input type="password" id="jsonPassword" name="jsonPassword" class="form-control">
                           </div>  
                       </div>
@@ -493,132 +491,67 @@
 
   </div>
 </div>
-<!-- Modal --><!-- 
-                        <div class="modal fade" id="myModal" role="dialog">
-                        <div class="modal-dialog">
-                          <div class="modal-content">
-                            <div class="modal-header">
 
-
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h4 class="modal-title">Modal Header</h4>
-                            </div>
-                            <div class="modal-body">
-                              <div id='file'>
-                                <br>
-                                <div ><input class = 'btn btn-primary' type='file' ></div>
-                              </div>
-                              <hr>
-                            </div>
-                            <div class="modal-body">
-                              <h4>
-                              <span class="label label-primary">Readen Options</span>
-                              </h4>
-                              <br>
-                              <div class="row">
-                                <div class ='col-md-6'>
-                                  <div>
-                                    <input class = 'btn btn-default' type='text' style="width: 50px"/> 
-                                    <span >Column Delimiter</span>
-                                  </div>
-                                </div>
-                                <div class ='col-md-6'>
-                                  <div>
-                                    <input class = 'btn btn-default' type='text' style="width: 50px"/> 
-                                    <span >Row Delimiter</span>
-                                  </div>
-                                </div>
-                              </div>
-                              <br>
-                              <div class="row">
-                                <div class ='col-md-6'>
-                                  <div>
-                                    <input class = 'btn btn-default' type='text' style="width: 50px"/> 
-                                    <span >Quote Char</span>
-                                  </div>
-                                </div>
-                                <div class ='col-md-6'>
-                                  <div>
-                                    <input class = 'btn btn-default' type='text' style="width: 50px"/> 
-                                    <span >Comment Char</span>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="modal-body">
-                              <div class="row">
-                                <div class ='col-md-6 '>
-                                  <div class ='checkbox'>
-                                    <label><input class = 'btn-primary' type='checkbox'>Has Column Header
-                                  </label>
-                                  </div>
-                                </div>
-                                <div class ='col-md-6'>
-                                  <div class ='checkbox'>
-                                  <label><input class = 'btn btn-default' type='checkbox'>Has Row Header
-                                  </label>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="row">
-                                <div class ='col-md-6 '>
-                                  <div class ='checkbox'>
-                                  <label><input class = 'btn btn-default' type='checkbox'>Support Short Lines
-                                  </label>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="row">
-                                <div class ='col-md-6 checkbox'>
-                                  <label><input class = 'btn btn-default' type='checkbox'>Skip First Lines
-                                  </label>
-                                </div>
-                                <div class ='col-md-6'>
-                                  <div class='btn-default'>
-                                  <label><select class="form-control" id="sel2" >
-                                    
-                                    @for($i= 0 ; $i<=10; $i++)
-                                        <option>{{$i}}</option>
-                                    @endfor
-                                    </label>
-                                  </select>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="row">
-                                <div class ='col-md-6 '>
-                                  <div class ='checkbox'>
-                                  <label><input class = 'btn btn-default' type='checkbox'>Limit rows
-                                  </label>
-                                  </div>
-                                </div>
-                                <div class ='col-md-6'>
-                                  <div class='btn-default'>
-                                  <label>
-                                    <select class="form-control" id="sel2" >
-                                    
-                                    @for($i= 0 ; $i<=50; $i++)
-                                        <option>{{$i}}</option>
-                                    @endfor
-                                    </select>
-
-                                  </label>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="modal-footer">
-                              <button type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
-                              <button type="button" class="btn btn-default" data-dismiss="modal">Apply</button>
-                              <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                              <span style="margin-right: 60px;"><i class="fa fa-question-circle-o" aria-hidden="true"></i></span>
-                            </div>
-                            </div>
-                            
-                          </div>
-      
-                        </div> -->
-
+<!-- S3 Modal Starts -->
+<div class="modal fade" id="S3" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">S3 Modal</h4>
+      </div>
+      <form name="s3SubTypeData" id="s3SubTypeData" method="post" enctype="multipart/form-data">
+      <div class="modal-body">
+          <div id='file'>
+            <br>
+            <input type="hidden" name="ext_name" id="s3_ext_name">
+            <input type="hidden" name="s3TypeName" id="s3TypeName">
+            <div ><input type='hidden' id="s3DataKey" name="s3DataKey"></div>
+          </div>
+          <div class="row">
+              <div class="col-md-12">
+                  <div class="form-group">
+                    <label for="userName">Key:</label>
+                    <input type="text" id="s3Key" name="s3Key" class="form-control">
+                  </div>  
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-md-12">
+                  <div class="form-group">
+                    <label for="userName">Secret:</label>
+                    <input type="text" id="s3Secret" name="s3Secret" class="form-control">
+                  </div>  
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-md-12">
+                  <div class="form-group">
+                    <label for="userName">Bucket:</label>
+                    <input type="text" id="s3Bucket" name="s3Bucket" class="form-control">
+                  </div>  
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-md-12">
+                  <div class="form-group">
+                    <label for="userName">File:</label>
+                    <input type="text" id="s3File" name="s3File" class="form-control">
+                  </div>  
+              </div>
+          </div>        
+      </div>
+      <div class="modal-footer">
+        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+        <button type="button" class="btn btn-default modal_ok">Ok</button>
+        <button type="button" class="btn btn-default">Apply</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <span style="margin-right: 60px;"><i class="fa fa-question-circle-o" aria-hidden="true"></i></span>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
 
 <div class="modal fade" id="CSV" role="dialog">
   <div class="modal-dialog">
@@ -632,7 +565,6 @@
           <div id='file'>
             <br>
             <input type="hidden" name="ext_name" id="csv_ext_name">
-            <input type="hidden" name="csvTypeName" id="csvTypeName">
             <input type="hidden" name="csvTypeName" id="csvTypeName">
             <div ><input type='hidden' id="csvDataKey" name="csvDataKey"></div>
             <!-- <img id="output"> -->
@@ -790,7 +722,8 @@
       var reader = new FileReader();
       reader.onload = function(){
         var dataURL = reader.result;
-        if ($('#jsonTypeName').val() == 'JSON') {
+
+        if ($('#jsonTypeName').val() == 'API') {
           $('#jsonFileName').val(dataURL);
         } else {
           $('#csvFileName').val(dataURL);
@@ -871,7 +804,7 @@
                         $('input[value="'+misc_arr[dim]+'"]').attr('checked', 'true');
                     }
 
-                  } else if (type == 'JSON') {
+                  } else if (type == 'API') {
                     var pathAndCommentsArr = JSON.parse(res.path_not_found_and_allow_comments);
                     var jsonRememberMe = res.remember_me;
 
@@ -901,7 +834,13 @@
                     for (var dim = 0; dim < pathAndCommentsArr.length; dim++) {
                         $('input[value="'+pathAndCommentsArr[dim]+'"]').attr('checked', 'true');
                     }
-                  } else {
+                  } else if (type == 'S3') {
+
+                    $('#s3Key').val(res.s3_key);
+                    $('#s3Secret').val(res.s3_ecret);
+                    $('#s3Bucket').val(res.s3_bucket);
+                    $('#s3File').val(res.s3_file);
+                  }  else {
                     var viewResult = JSON.parse(res.view_res);
 
                     $('#colDelimiter').val(res.col_delimiter);
@@ -954,6 +893,7 @@
         if (type_name == "Database") {
             $('#dbTypeName').val(type_name);
             $('#jsonTypeName').val('');
+            $('#s3TypeName').val('');
             $('#csvTypeName').val('');
             $('#db_ext_name').val(extractor_name);
             $('#dbDataKey').val(dataKey);
@@ -964,8 +904,9 @@
 
             $('#Database').modal('show');
 
-        }else if(type_name == 'JSON'){
+        }else if(type_name == 'API'){
             $('#jsonTypeName').val(type_name);
+            $('#s3TypeName').val('');
             $('#dbTypeName').val('');
             $('#csvTypeName').val('');
             $('#json_ext_name').val(extractor_name);
@@ -979,6 +920,7 @@
         
         }else if(type_name == 'FLAT FILE' || subtype_name == 'CSV'){
             $('#csvTypeName').val(type_name);
+            $('#s3TypeName').val('');
             $('#dbTypeName').val('');
             $('#jsonTypeName').val('');
             $('#csv_ext_name').val(extractor_name);
@@ -989,7 +931,21 @@
             }
 
             $('#CSV').modal('show');
+        }else if(type_name == 'S3'){
+            $('#s3TypeName').val(type_name);
+            $('#csvTypeName').val('');
+            $('#dbTypeName').val('');
+            $('#jsonTypeName').val('');
+            $('#s3_ext_name').val(extractor_name);
+            $('#s3DataKey').val(dataKey);
+
+            if (newPrj != 'New Project') {
+              sendAjaxToGetPopupDate(project_id, extractor_name, type_name);
+            }
+
+            $('#S3').modal('show');
         }
+
         
     });
     
@@ -1003,6 +959,7 @@
         var dbTypeName = $('#dbTypeName').val();
         var jsonTypeName = $('#jsonTypeName').val();
         var csvTypeName = $('#csvTypeName').val();
+        var s3TypeName = $('#s3TypeName').val();
         var project_id = $('#project_id').val();
 
         // Database type data
@@ -1022,6 +979,9 @@
         } else if(csvTypeName){
           serializedData = $('#csvSubTypeData').serialize();
           console.log('CSV Data: \n'+serializedData);
+        } else if(s3TypeName){
+          serializedData = $('#s3SubTypeData').serialize();
+          console.log('S3 Data: \n'+serializedData);
         }
 
 
