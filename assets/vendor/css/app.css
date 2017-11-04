@@ -1,11 +1,31 @@
+.btn-md{
+    border-radius: 50px;
+    height: 50px;
+}
+
+.Check{
+    background-color: #FCFCFC;
+    padding: 20px;
+    border-radius: 0px;
+    /*border-style: inset;*/
+    border-width: 1px;
+    border-color: black;
+    font-weight: 600;
+    margin: 0px -20px -30px -20px;
+    text-align: center;
+}
+  
+
 .navbar {
-	background-color: #fff;
+	background-color: #C8CAD2;
     box-shadow: 0 5px 24px -10px rgba(0,0,0,.1);
     border-bottom: none;
     padding: 0 20px;
     height: 70px;
-    color: #eaeaeb;
+    color: #C8CAD2;
 }
+
+
 
 .navbar > a.menubutton {
 	position: relative;
@@ -120,13 +140,102 @@
     box-shadow: 2px 3px 10px 0 rgba(0,0,0,.12);
 }
 
-.visualization {
-	/*height: 100%;*/
-    padding: 0 2px 50px 2px;
-    overflow: auto;
-    margin-top: 70px;
-    background: #EAEAEB;
+
+.shadow{
+    
+    box-shadow: 0px 1px 13.5px 1.5px rgba(0, 0, 0, 0.05);
 }
+
+.box{
+
+    padding: 20px;
+    border-radius: 0px;
+    border-style: inset;
+    border-width: 1px;
+    border-color: black;
+    font-weight: 600;
+    background-color: #fff
+
+
+}
+.box:hover {
+  transform: scale(1.02);
+  border-color: green;
+  border-width: 3px;
+
+}
+
+.progress-bar{
+    background-color: green;
+}
+.progress{
+    height : 7px;
+    width: 65%;
+    position: absolute;
+    left : 180px;
+    top : 100px; 
+    margin-top: 20px;
+}
+a{
+    color : black;
+    font-family: ProximaNova;
+}
+
+.progress1{
+    background-color: #fff;
+    height: 50px;
+    width: 50px;
+
+    /*padding: 20px;*/
+}
+
+.box img{
+    height: 50px;
+    width: 50px;
+
+    /*padding: 20px;*/
+}
+.head{
+    font-size: 13px;
+    color: #666666;
+    font-weight: 600;    
+}
+.body{
+    font-size: 10px;
+    color: #666666;
+    font-weight: 600;    
+}
+
+.visualization {
+	height: 100%;
+    padding: 0 2px 50px 2px;
+
+    /*overflow: auto;*/
+    margin-top: 70px;
+    background: #ffffff;
+
+
+}
+.box-left {
+    /*height: 100%;*/
+    margin-left: 80px;
+    margin-right: -80px;
+    /*overflow: auto;*/
+    margin-top:150px;
+    /*margin-bottom: -210px;*/
+    background: #ffffff;
+}
+.welcome{
+    font-size: 30px;
+    font-family: Arial;
+    font-weight: 500;
+}
+.message{
+    font-size: 25px;
+    color: #666666;
+    font-weight: 600;
+}
+
 .widget-1 {
 	font-family: ProximaNova;
 	padding-top: 10px;
@@ -144,12 +253,29 @@
     margin-left: 0px;
 }
 
+.widget-title-box{
+    /*padding: 20px;*/
+
+    border-radius: 0px;
+    border-style: inset;
+    border-width: 1px;
+    border-color: #161C32;
+    font-weight: 600;
+    background-color: #161C32
+}
+
+
 .widget-title {
+    font-family: ProximaNova;
+    color:  #ffffff;
+    /*font-size: 2.5em; Approximation due to font substitution */
+    font-weight: 700;
+    text-align: left;
 	color: #fff;
     margin-left: 75px;
     margin-bottom: 20px;
     font-size: 20px;
-    font-weight: 600;
+    /*font-weight: 600;*/
 }
 
 .widget-icon img {
@@ -187,6 +313,20 @@ tbody>tr:nth-child(even) {
     margin-top: 5px;
 	border-radius:50%;
 	background-color: green;
+}
+.dLogin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 20px 20px;
+}
+.d-gray-sec{
+    border-left: 1px solid #f3f3f3;
+    padding-left: 30px;
+    padding-top: 0px;
+    padding-bottom: 5px;
+    max-width: 500px;
 }
 
 /*.logout-dropdown{

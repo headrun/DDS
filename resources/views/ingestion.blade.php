@@ -6,20 +6,37 @@
 <link rel="stylesheet" href="{{url()}}/assets/vendor/css/breadcrumb.css">
 @stop
 @section('BaseContent')
-<div class="container-fluid dashboard-content">
+<div class="container-fluid">
   <div class="visualization">
-      <div class="top-div">
-          <div class="breadcrumb flat">
-            @if(isset($proj_id))
-              <a href="{{ url()}}/setup_new_proj/{{$proj_id}}" class="active">Setup New Project</a>
-            @else
-              <a href="{{ url()}}/setup_new_proj" class="active">Setup New Project</a>
-            @endif
-             <!-- <a href="{{ url()}}/setup_new_proj/" class="active">Setup New Project</a> -->
-             <a href="#" class="active">Ingest Data</a>
-             <!-- <a href="#">Validate Data</a> -->
-             <a href="#">Map Data</a>
-             <a href="#">Mapping KPI</a>
+      <div class="" style="padding: 10px">
+          <div class="panel panel-default" style=" background-color: #FCFCFC;">
+            <div class="panel-body  ">
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70"
+                aria-valuemin="0" aria-valuemax="100" style="width:35%;">
+                  
+                </div>
+              </div>
+              <div class="row" style="margin-left: 100px">
+                <div class="col-md-3">
+                  @if(isset($proj_id))
+                    <a href="{{ url()}}/setup_new_proj/{{$proj_id}}" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/set_ up_new_project.png"><br>Setup New Project</a>
+                  @else
+                    <a href="{{ url()}}/setup_new_proj/{{$proj_id}}" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/set_ up_new_project.png"><br>Setup New Project</a>
+                  @endif
+                  
+                </div>
+                <div class="col-md-3">
+                  <a href="#" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/ingest.png"><br>Ingeset Data</a>
+                </div>
+                <div class="col-md-3">
+                  <a href="#" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/map.png"><br>Map Data</a>
+                </div>
+                <div class="col-md-3">
+                  <a href="#" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/kpi.png"><br>Mapping KPI</a>
+                </div>
+              </div>
+            </div>
          </div>
           <div class="row widget-1" style="padding-top: 30px">
               

@@ -4,9 +4,9 @@
 @stop
 
 @section('BaseContent')
-    <div class="container-fluid dashboard-content">
+    <div class="container-fluid">
         <div class="visualization">
-            <div class="top-div">
+            <div class="top-div1">
                 <div class="row widget-1">
                     <div class="widget-icon"><img src="{{url()}}/assets/vendor/img/new_document_add.png"></div>
                     <h3 class="widget-title">

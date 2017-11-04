@@ -7,22 +7,41 @@
 <link rel="stylesheet" href="{{url()}}/assets/vendor/css/breadcrumb.css">
 @stop
 @section('BaseContent')
-<div class="container-fluid dashboard-content">
+<div class="container-fluid">
   <div class="visualization">
-      <div class="top-div">
-          <div class="breadcrumb flat">
-             <a href="#" class="active">Setup New Project</a>
-             <a href="#">Ingest Data</a>
-             <!-- <a href="#">Validate Data</a> -->
-             <a href="#">Map Data</a>
-             <a href="#">Mapping KPI</a>
+      <div class="" style="padding: 10px">
+
+          <div class="panel panel-default" style=" background-color: #FCFCFC;">
+            <div class="panel-body  ">
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70"
+                aria-valuemin="0" aria-valuemax="100" style="width:0%;">
+                  
+                </div>
+              </div>
+              <div class="row" style="margin-left: 100px">
+                <div class="col-md-3">
+                  <a href="#" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/set_ up_new_project.png"><br>Setup New Project</a>
+                </div>
+                <div class="col-md-3">
+                  <a href="#" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/ingest.png"><br>Ingeset Data</a>
+                </div>
+                <div class="col-md-3">
+                  <a href="#" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/map.png"><br>Map Data</a>
+                </div>
+                <div class="col-md-3">
+                  <a href="#" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/kpi.png"><br>Mapping KPI</a>
+                </div>
+              </div>
+            </div>
          </div>
-          <div class="row widget-1" style="padding-top: 30px">
+          <div class="row widget-11">
+              <div class="widget-title-box">
               <div class="widget-icon"><img src="{{url()}}/assets/vendor/img/new_document_add.png"></div>
-              <h3 class="widget-title">Setup New Project</h3>
-              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                  <div class="panel panel-default" style="border-bottom: 4px solid #8bc34a; padding: 20px;">
-                    <div class = 'project ' style="padding: 20px">
+              <h3 class="widget-title">Setup New Project</h3></div>
+              <div>
+                  <div class="panel panel-default" style="border-bottom: 4px solid #8bc34a; padding: 10px; background-color: #F8F8F8">
+                    <div class = 'project ' style="padding: 10px">
                       <div class= 'row' >
                         <div class = 'col-md-4'>
                           @if(isset($exePrjData))
@@ -134,15 +153,15 @@
                                   @endif
                                   
                                 </div>
-                                <div class="Check">
-                                  <button class="btn btn-success btn-md  pull-right" id= "sidq" type = "submit" disabled>Proceed to Ingest</button>
-                                </div>
+                                
+                                
+                                  <div class="Check">
+                                    <button class="btn btn-success btn-md" id= "sidq" type = "submit" disabled>Proceed to Ingest</button>
+                                  </div>
+                                
                               </form>
                                 
-                      <br>
-                      <div class="row">  
-                          
-                      </div>
+                      
                   </div>
               </div>
           </div>
@@ -1651,30 +1670,35 @@ $(document).on('change', '#project_text', function(){
 
       $('.proj_nam').val($(this).val());
       console.log($('.proj_nam').val());
+      $('.progress-bar').css("width","5%");
 
 });
 $(document).on('change', '#ta', function()
    {
       $('.ta').val($(this).val());
       console.log($('.ta').val());
+      $('.progress-bar').css("width","7%");
     });
 $(document).on('change', '#fa', function()
    {
       $('.fa').val($(this).val());
       console.log($('.fa').val());
+      $('.progress-bar').css("width","10%");
     });
 
 $(document).on('change', '.optradio', function()
    {
       $('.proj_type').val($(this).val());
       console.log($('.fa').val());
+      $('.progress-bar').css("width","15%");
+      
     });
 
   $(document).on('change', '.sid', function()
    {
       var widget_array1 =  [];
       var widget_array =  [];
-
+      $('.progress-bar').css("width","30%");
       widget_array1 = [$('#project_text').val(),$('#ta').val(),$('#fa').val()];
       // console.log(widget_array1);
       $('.form-group input[type="checkbox"]:checked').each(function(){ 
