@@ -119,6 +119,9 @@
     background-color: #2196f3;
     box-shadow: 2px 3px 10px 0 rgba(0,0,0,.12);
 }
+.shadow{
+    box-shadow: 0px 1px 13.5px 1.5px rgba(0, 0, 0, 0.05);
+}
 
 .visualization {
 	/*height: 100%;*/

@@ -1,7 +1,7 @@
 body {
   background-image: url(../img/bg.jpg);
+  overflow-x: hidden;
 }
-
 .login-box {
   margin-top: 5%;
   color: #fff;
@@ -13,11 +13,20 @@ body {
 }
 
 .login-label {
+    padding:20px;
     font-family: sans-serif; 
     font-weight: 700;
     font-size: 16px;
 }
+.abu{
+  margin-left: 0px;
+  margin-right: 0px;
+}
 .email {
+  padding:20px;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
     background-image: url(../img/user_name.png);
     background-repeat: no-repeat;
     text-indent: 27px;
@@ -25,6 +34,10 @@ body {
     background-position: 10px;
 }
 .password {
+  padding:20px;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
     background-image: url(../img/password.png);
     background-repeat: no-repeat;
     text-indent: 27px;
@@ -33,20 +46,66 @@ body {
 }
 
 .forgot-pass {
-    font-size: smaller; 
-    margin-bottom: 10px; 
-    color: #fff;
+    padding:20px;
+    width:100%;
+    text-align:center;
+    /*font-size: smaller; */
+    margin-bottom: 60px; 
+    font-family: ProximaNova;
+    color:  #666666;
+    font-size: 14px;/* Approximation due to font substitution 
+    font-weight: 300;
+    line-height: 20.988px;/* Approximation due to font substitution */
 }
 
-.copyright {
-  color: #fff;
+.footer {
+  bottom:0;
+  position:relative;
+  height: 50px;
+  text-align: center; 
+
 }
-.login-btn {
-  font-size: 14px;
-  font-weight: 500;
-  margin-bottom: 15px;
-  color: #000;
+.container-fluid
+{
+  padding-right: 0;
+   padding-left: 0;
+}
+
+.mob{
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.btn-success {
+    text-align: center;
+    /*width: 325px;
+    height: 40px;*/
+    padding: 10px 20px;
+    font-size: 15px;
+    border-radius: 10px;
+    font-family: ProximaNova;
+    background-color:  #6b9840;
 }
 .logo-img {
-  margin-bottom: 15px;
+  height:75px;
+  margin-bottom: 30px;
+  margin-right:20px;
+}
+.lhs-img {
+  position: fixed;
+  width: 50%;
+  height: 100%;
+  /*margin: auto;*/
+}
+
+.bottom{
+  border-bottom-color: #cc0000; 
+}
+.alert
+{
+  /*width:100%;*/
+font-family: ProximaNova;
+color:  #cc0000;
+font-size: 12px;/* Approximation due to font substitution */
+font-weight: 200;
+text-align: center;
 }

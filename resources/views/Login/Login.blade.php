@@ -12,39 +12,48 @@
 @stop
 @section('BaseContent')
 <div class="container-fluid">
-  <div class="row">
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-      <img class="logo-img pull-right" src="{{url()}}/assets/vendor/img/dcube_new.png" style="height:80px">
-    </div>
-  </div>
-  <div class="row">
-    <div class=" col-lg-5 col-md-5 col-sm-8 col-xs-8 login-box center-block panel panel-default">
-    <center><img src="{{url()}}/DDS Logo-02.png" class="primarylogo img-responsive" style="margin-top: -40px ;
-    margin-bottom:  -40px ; padding: 40px"></center>
-    <!--{!! Form::open(array('url' => '/vault/adminlogin', 'id'=>"adminLoginForm", "class"=>"", 'method' => 'post')) !!}-->
-    <form action="{{url()}}/login1" method="post">
-      {!! csrf_field() !!}
 
-      @if (Session::has('message'))
-        <div class="alert alert-danger">
-          <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>&nbsp;
-          {{ Session::get('message') }}
-        </div>
-      @endif
+  <div class="row">
+      <div class="col-lg-6 col-md-6 visible-md visible-lg">
+        <img class="lhs-img" src="{{url()}}/assets/vendor/img/lhs.png"> 
+      </div>
 
-      <label class="login-label">Login to Your Account</label>
-      <input type="email" class="form-control email" placeholder="Email" name="email" required />
-      <br>
-      <input type="password" class="form-control password" placeholder="Password" name="password" required />
-      <br>
-      <a class="pull-right forgot-pass" href="#">Forgot password ?</a>
-      <br>
-      <button  type="submit" class="btn btn-default form-control login-btn"> Login</button>
-    </form>
-    <!--{!! Form::close() !!}-->
-      <center><small class="copyright">&copy; <?php echo date("Y"); ?> Dcube. All Rights Reserved</small></center>
-    </div>
-  </div>
+      <div class="col-lg-6 col-sm-12 col-md-6 col-xs-12">
+          <div class="row">
+            <img class="logo-img pull-right" src="{{url()}}/assets/vendor/img/dcube_new.png">
+          </div>
+          <div class="row abu">
+                <div class="col-lg-2 col-md-2 visible-lg visible-md">
+            
+                </div>
+                <div class="col-lg-8 col-sm-12 col-md-8 col-xs-12 shadow">
+                  <form action="{{url()}}/login1" method="post">
+                    {!! csrf_field() !!}
+
+
+                    <label class="login-label">Login to Your Account</label><br>
+                    <input type="email" class="form-control email @if (Session::has('message')) bottom @endif" placeholder="Email" name="email" required />
+                    <br>
+                    <input type="password" class="form-control password @if (Session::has('message')) bottom @endif" placeholder="Password" name="password" required />
+                    <br>
+                    <button  type="submit" class="btn btn-success form-control login-btn"> Submit </button>
+                    <br>
+                    <a class="pull-right forgot-pass" href="#">Forgot password ?</a>
+                    <br>
+                    @if (Session::has('message'))
+                  
+                      <p class="alert"><span class="fa fa-exclamation-triangle" aria-hidden="true"></span>&nbsp;  {{ Session::get('message') }}</p>
+                  
+                    @endif
+                  </form>
+                </div>
+                <div class="col-lg-2 col-md-2 visible-md visible-lg"></div>
+          </div>
+            <br>
+            <div>
+            <footer class="footer"><small class="copyright">&copy; <?php echo date("Y"); ?> Dcube. All Rights Reserved</small></footer></div>
+      </div>  
+  </div>      
 </div>
 @stop
 @section('BaseJSLib')
