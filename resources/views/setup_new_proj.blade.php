@@ -55,7 +55,7 @@ $(document).ready(function(){
 @show
 @stop
 @section('BaseContent')
-<div class="container-fluid dashboard-content">
+<div class="container-fluid">
   <div class="visualization">
       <div class="top-div">
           <div class="row widget-1">

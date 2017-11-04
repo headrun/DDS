@@ -1,14 +1,15 @@
-@extends('Template.HtmlSkeleton')
+<!-- @extends('Template.HtmlSkeleton')  -->
+
 @section('Title')
 <title>Dcube | Login</title>
 @stop
 @section('BaseCSSLib')
 <link rel="stylesheet" href="{{url()}}/assets/vendor/css/login.css">
-<style type="text/css">
+<!-- <style type="text/css">
     .master-layout-class {
         display: none;
     }
-</style>
+</style> -->
 @stop
 @section('BaseContent')
 <div class="container-fluid">

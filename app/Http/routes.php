@@ -24,8 +24,10 @@ Route::get('/login',function(){
 Route::any('/login1', 'AjaxCallTest@login');
 
 Route::group(['middleware' => 'auth'], function () {
-
-	Route::get('/dashboard', 'AjaxCallTest@dash');
+	 Route::get('/landing',function(){
+		return view('landing');
+	});
+	 Route::get('/dashboard', 'AjaxCallTest@dash');
 
 	Route::get('/extractor_library',function(){
 		return view('extractor_library');

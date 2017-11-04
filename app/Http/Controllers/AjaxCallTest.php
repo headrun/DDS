@@ -142,6 +142,7 @@ class AjaxCallTest extends Controller
     return view('Dashboard.index', compact($data));
 
   }
+  
 
   public function validate1(){
     $inputs =Input::all();

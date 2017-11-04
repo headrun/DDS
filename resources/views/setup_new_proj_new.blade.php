@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="{{url()}}/assets/vendor/css/breadcrumb.css">
 @stop
 @section('BaseContent')
-<div class="container-fluid dashboard-content">
+<div class="container-fluid">re
   <div class="visualization">
       <div class="top-div">
         <div class="breadcrumb flat" style="margin-right: 5px">

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -44,6 +44,14 @@
       .dropdown-logout:hover .dropdown-logout-content {
           display: block;
       }
+      .nav-right{
+        padding: 10px;
+        color: #fff
+
+      }
+      .nav-items{
+        color: #C8CAD2
+      }
     </style>
 
   </head>
@@ -53,92 +61,19 @@
     @else
     <div class="container-fluid master-layout-class">
   <!-- Fixed navbar -->
-    <nav class="clearfix navbar navbar-default navbar-fixed-top collapsed"">
+    <nav class="clearfix navbar navbar-default navbar-fixed-top collapsed" style="background-color: #252E55">
       <!--<a class="pull-left menubutton toggle-collapse">
         <i aria-hidden="true" class="fa fa-bars"></i> 
       </a>-->
+      
       <a href="{{url()}}/dashboard" class="pull-left brand more-padding">
-        <img src="{{url()}}/DDS Logo-02.png" class="primarylogo" style="margin-top: -40px ; padding: 20px">
+          <img src="{{url()}}/assets/vendor/img/dcube_new.png" class="primarylogo"  style="margin-top: -40px ; padding: 20px">
         
       </a>
-      <div class="pull-left center-contetnt"></div>
-      <div class="sidenav" id="mySidenav">
-        <!--<a class="closebtn" href="javascript:void(0)">×</a>-->
-        <a class="home" href="{{url()}}/dashboard">
-          <span>
-            <i class="fa fa-home fa-lg" aria-hidden="true"></i>
-          </span>
-          <span style="margin-left: 35px">Home</span>
-        </a>
-        <a class="analytics" href="{{url()}}/setup_new_proj">
-          <span>
-            <i class="fa fa-th-list" aria-hidden="true"></i>
-          </span>
-          <span style="margin-left: 35px">Project Setup</span>
-        </a>
-
-        <!-- <a class="ingest" href="#">
-          <span>
-            <i class="fa fa-reply fa-lg" aria-hidden="true"></i>
-          </span>
-          <span style="margin-left: 35px">Ingest</span>
-        </a>
-        <a class="mapping" href="#">
-          <span>
-            <img src="{{ url('/assets/vendor/img/mapping.png') }}" width="18px">
-          </span>
-          <span style="margin-left: 12px">Mapping</span>
-        </a>
-        <a class="kpi_election" href="#">
-          <span>
-            <i class="fa fa-th-list" aria-hidden="true"></i>
-          </span>
-          <span style="margin-left: 35px">KPI Selection</span>
-        </a> -->
-        <a class="analytics" target="_blank" href="https://54.241.166.219:8443/knime/">
-          <span>
-            <i class="fa fa-line-chart" aria-hidden="true"></i>
-          </span>
-          <span style="margin-left: 35px">Analytics Sandbox</span>
-        </a>
-        <a class="transform" target="_blank" href="http://www.hyperbase.dcubeanalytics.com/">
-          <span>
-            <i class="fa fa-area-chart fa-lg" aria-hidden="true"></i>
-          </span>
-          <span style="margin-left: 35px">Hyperbase D</span>
-        </a>
-        <a class="self_service" href="#">
-          <span>
-            <!-- <i class="fa fa-refresh fa-lg" aria-hidden="true"></i> -->
-            <img src="{{ url('/assets/vendor/img/Self-Service-Icon.png') }}" width="20px">
-          </span>
-          <span style="margin-left: 12px">Self Service</span>
-        </a>
-        <a class="extractor_library" href="{{url()}}/extractor_library">
-          <span>
-            <i class="fa fa-book fa-lg" aria-hidden="true"></i>
-          </span>
-          <span style="margin-left: 35px">Extractor Library</span>
-        </a>
-        <a class="validate" href="{{url()}}/kpilib">
-          <span>
-            <i class="fa fa-address-card-o fa-lg" aria-hidden="true"></i>
-          </span>
-          <span style="margin-left: 35px">KPI Library</span>
-        </a>
-        
-      </div>
-      <div class="aside-overlay"></div>
-      <ul class="pull-right nav navbar-nav">
-        <!-- <li class="btn label" style="margin-top: 20px; margin-left: 5px"></li> -->
-        <li>
-          <img src="{{url()}}/assets/vendor/img/dcube_new.png" width="145px">
-        </li>
-        
-        <li class="dropdown-logout">
-          <a href="#" class="dropdown-logout" data-toggle="dropdown-logout" style="padding: 28px 0 0 15px; color: #0D596B; font-size: 15px; font-weight: 600">
-            <i class="fa fa-user-circle-o" aria-hidden="true" style="font-size: 18px"></i>
-              {{ Auth::user()->name }} <span class="caret"></span>
+      <li class="dropdown-logout">
+          <a href="#" class="dropdown-logout" data-toggle="dropdown-logout" style="padding: 28px 0 0 15px; color: #C8CAD2; font-size: 15px; font-weight: 600">
+            <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+             Hi, {{ Auth::user()->name }} <span class="caret"></span>
           </a>
 
           <ul class="dropdown-logout-content">
@@ -158,6 +93,107 @@
           <!-- <div class="nav navbar-nav" style="padding: 28px 0 0 15px; color: #0D596B; font-size: 15px; font-weight: 600">
             <i class="fa fa-user-circle-o" aria-hidden="true" style="font-size: 18px"></i> vinay</div> -->
         </li>
+      <div class="pull-left center-content"></div>
+      <!-- <div class="sidenav" id="mySidenav"> -->
+        <!--<a class="closebtn" href="javascript:void(0)">×</a>-->
+        <!-- <a class="home" href="{{url()}}/dashboard">
+          <span>
+            <i class="fa fa-home fa-lg" aria-hidden="true"></i>
+          </span>
+          <span style="margin-left: 35px">Home</span>
+        </a>
+        <a class="analytics" href="{{url()}}/setup_new_proj">
+          <span>
+            <i class="fa fa-th-list" aria-hidden="true"></i>
+          </span>
+          <span style="margin-left: 35px">Project Setup</span>
+        </a> -->
+
+        <!-- <a class="ingest" href="#">
+          <span>
+            <i class="fa fa-reply fa-lg" aria-hidden="true"></i>
+          </span>
+          <span style="margin-left: 35px">Ingest</span>
+        </a>
+        <a class="mapping" href="#">
+          <span>
+            <img src="{{ url('/assets/vendor/img/mapping.png') }}" width="18px">
+          </span>
+          <span style="margin-left: 12px">Mapping</span>
+        </a>
+        <a class="kpi_election" href="#">
+          <span>
+            <i class="fa fa-th-list" aria-hidden="true"></i>
+          </span>
+          <span style="margin-left: 35px">KPI Selection</span>
+        </a> -->
+        <!-- <a class="analytics" target="_blank" href="https://54.241.166.219:8443/knime/">
+          <span>
+            <i class="fa fa-line-chart" aria-hidden="true"></i>
+          </span>
+          <span style="margin-left: 35px">Analytics Sandbox</span>
+        </a>
+        <a class="transform" target="_blank" href="http://www.hyperbase.dcubeanalytics.com/">
+          <span>
+            <i class="fa fa-area-chart fa-lg" aria-hidden="true"></i>
+          </span>
+          <span style="margin-left: 35px">Hyperbase D</span>
+        </a>
+        <a class="self_service" href="#">
+          <span> -->
+            <!-- <i class="fa fa-refresh fa-lg" aria-hidden="true"></i> -->
+            <!-- <img src="{{ url('/assets/vendor/img/Self-Service-Icon.png') }}" width="20px">
+          </span>
+          <span style="margin-left: 12px">Self Service</span>
+        </a>
+        <a class="extractor_library" href="{{url()}}/extractor_library">
+          <span>
+            <i class="fa fa-book fa-lg" aria-hidden="true"></i>
+          </span>
+          <span style="margin-left: 35px">Extractor Library</span>
+        </a>
+        <a class="validate" href="{{url()}}/kpilib">
+          <span>
+            <i class="fa fa-address-card-o fa-lg" aria-hidden="true"></i>
+          </span>
+          <span style="margin-left: 35px">KPI Library</span>
+        </a>
+        
+      </div> -->
+      <div class="aside-overlay"></div>
+
+      <ul class="pull-right nav navbar-nav">
+        <!-- <li class="btn label" style="margin-top: 20px; margin-left: 5px"></li> -->
+        <li class="nav-right">
+          <a  target="_blank" href="http://www.hyperbase.dcubeanalytics.com/">
+          
+            <label class="nav-items">DDS IRIS</label>
+          </a>
+        </li>
+        <li class="nav-right">
+          <a target="_blank" href="http://www.hyperbase.dcubeanalytics.com/">
+          
+            <label class="nav-items">Hyperbase</label>
+          </a>
+        </li>
+        <li class="nav-right">
+          <a target="_blank" href="http://www.hyperbase.dcubeanalytics.com/">
+          
+            <label class="nav-items">Data Science Sandbox</label>
+          </a>
+        </li>
+        <li class="nav-right">
+          <a target="_blank" href="http://www.hyperbase.dcubeanalytics.com/">
+          
+            <label class="nav-items">Project Moniter</label>
+          </a>
+        </li>
+        <li>
+          <img src="{{url()}}/DDS Logo-02.png" width="145px" >
+          
+      </li>        
+        
+        
       </ul>
       <!-- <div class="secondary-logo ng-scope">
         <img src="{{url()}}/assets/vendor/img/dcube_new.png">
