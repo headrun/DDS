@@ -1,8 +1,15 @@
 .btn-md{
     border-radius: 50px;
-    height: 50px;
+    height: 40px;
+    margin-top:20px;
 }
-
+.btn-default{
+    width:150px;
+}
+.btn{
+    border-radius: 30px;
+    font-weight: 400;   
+}
 .Check{
     background-color: #FCFCFC;
     padding: 20px;
@@ -199,14 +206,34 @@ a{
     /*padding: 20px;*/
 }
 .head{
+    display:block;
+    font-family: ProximaNova;
+    color:  #000000;
+    font-size: 16px;/* Approximation due to font substitution */
+    font-weight: 600;
+    /*line-height: 21px; Approximation due to font substitution */
+    text-align: left;
+}
+.img-center {
+    display: block;
+    margin: 0 auto;
+}
+/*.head{
     font-size: 13px;
     color: #666666;
-    font-weight: 600;    
-}
-.body{
+    font-weight: 600; 
+}*/
+/*.body{
     font-size: 10px;
     color: #666666;
-    font-weight: 600;    
+    font-weight: 600; 
+}*/
+.body{
+    font-family: ProximaNova;
+    color:  #000000;
+    font-size: 12.96px;/* Approximation due to font substitution */
+    font-weight: 400;
+    text-align: left;       
 }
 
 .visualization {
@@ -288,11 +315,11 @@ a{
     padding-top: 15px;
 }
 thead tr th {
-	color: #004269;
+	color:  #000000;
 }
 .table>tbody>tr>td {
 	border-top: 0px !important;
-	padding: 15px 10px;
+	padding: 10px 10px;
 }
 .table>thead>tr>th {
 	border-bottom: 0px !important;

@@ -9,7 +9,7 @@
 <div class="container-fluid">
   <div class="visualization">
       <div class="" style="padding: 10px">
-          <div class="panel panel-default" style=" background-color: #FCFCFC;">
+          <div class="panel panel-default" style=" background-color: #FCFCFC; margin-left: -15px; margin-right: -15px;">
             <div class="panel-body  ">
               <div class="progress">
                 <div class="progress-bar" role="progressbar" aria-valuenow="70"
@@ -38,12 +38,18 @@
               </div>
             </div>
          </div>
-          <div class="row widget-1" style="padding-top: 30px">
+         <div class="row widget-11" >
+            <div class="panel panel-default">
+              <div class="widget-title-box">
+                <div class="widget-icon"><img src="{{url()}}/assets/vendor/img/ingest_data1.png"></div>
+                <h3 class="widget-title">Ingest Data</h3>
+              </div>
+              <div class="row widget-1" style="margin-top: -10px;">
               
-              <a href="{{url()}}/extractor_library" target="_blank" class="btn btn-danger pull-right" style="margin-top: 20px;margin-right: 50px;" >Extractor Library</a>
+                  <a href="{{url()}}/extractor_library" target="_blank" class="btn btn-danger pull-right" style="margin-top: 15px;" >Extractor Library</a>
                 
-              <h3 class="widget-title" style="margin-left: 20px; margin-bottom: 10px;">
-                  <select class="form-control" style="width: 150px">
+                  <h3 class="widget-title" style="margin-bottom: 10px;">
+                  <select class="form-control" style="width: 250px; height:30px; margin-left: -70px;">
                       @foreach($final_array1 as $value)
                         @if($projName == $value)
                           <option selected>{{$projName}}</option>  
@@ -52,16 +58,12 @@
                         @endif
                       @endforeach
                   </select>
-                  
-              </h3>
-
-              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                  <div class="panel panel-default" style="border-bottom: 4px solid #8bc34a;     padding: 20px;">
+                  </h3>
                       
                       <div class="row">  
                           <div class="widget col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <table class="table" style="font-size:14px" id="mainTable">
-                              <thead>
+                          <table class="table" style="font-size:14px" id="mainTable">
+                              <thead >
                                 <tr>
                                   <th></th>
                                   <th>Data</th>
@@ -228,13 +230,14 @@
                             </table>
                           </div>
                           <div class="row">
-                            <div class="col-md-5">
-                              <button class="btn btn-success btn-md pull-right">Save Info</button>
+                            <div class="col-md-6">
+                              <button class="btn btn-default btn-md pull-right">Save Info</button>
                             </div>
-                            <div class="col-md-2 text-center">
-                              <button class="btn btn-warning btn-md select_ingest_btn" disabled>Ingest Selected Data</button>
+                            <div class="col-md-6">
+                              <button class="btn btn-default btn-md select_ingest_btn" disabled>Ingest Selected Data</button>
                             </div>
-                            <div class="col-md-5">
+                            <div class="row text-center" style="padding:20px;">
+                            <!-- <div class="col-md-12"> -->
                               <form action='{{url()}}/struct'>
                                 <div id= 'hidden'></div>
                                     <input type="hidden" name="project_id" id="project_id" value="{{  $proj_id }}">
@@ -243,7 +246,9 @@
                                     @else
                                       <input type="hidden" name="newPrj" id="newPrj" value="Empty">
                                     @endif
-                                <button class="btn btn-primary btn-md move_to_validate pull-left" disabled>Move to Map Data</button>
+                                      <button class="btn btn-success btn-md move_to_validate " disabled>
+                                      Move to Map Data</button>
+                                    <!-- </div> -->
                               </form>
                             </div>
                           </div>

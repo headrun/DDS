@@ -1,6 +1,6 @@
 @extends('Template.HtmlSkeleton')
 @section('Title')
-<title>Dcube | Landing Page</title>
+<title>Dcube | DDS Page</title>
 @stop
 @section('BaseContent')
 
@@ -8,13 +8,13 @@
   <div class="visualization">
     <div class="row">
       <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 box-left" >
-          <label class="welcome"> Hello <b>{{ Auth::user()->name }},</b><br>
-            <span class="message">Welcome to D-Cube's <br>Digital Discovery Suite.</span>
+          <label class="welcome"> DDS <br> Data Foundation </b><br>
+            <span class="message">Setup Projects, edit <br> and conduct maintanace <br> of data Foundation.</span>
           </label>
           
       </div>
       <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7" >
-         <div class="row" style="margin-top:  20px">
+         <div class="row" style="margin-top:  70px">
            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
               <div class="panel panel-default">
                 <button class="box" value="1"><div class="panel-body">
@@ -24,7 +24,7 @@
                       <img src="{{url()}}/assets/vendor/img/setting.png" >
                     </div>
                     <div class="col-md-9">
-                      <label class="head">DDS Data Foundation<br></label>
+                      <label class="head">Setup Project<br></label>
                         <label class="body">Setup Projects, edit and conduct maintanace of data Foundation 
                       </label>
                     </div>
@@ -43,7 +43,7 @@
                     <img src="{{url()}}/assets/vendor/img/iris.png" >
                   </div>
                   <div class="col-md-9">
-                    <label class="head">DDS Iris<br></label>
+                    <label class="head">Manage Extractor Library<br></label>
                       <label class="body">Create new data sets to visualize new KPIs and implement custom models 
                     </label>
                   </div>
@@ -64,7 +64,7 @@
                     <img src="{{url()}}/assets/vendor/img/analytics.png" >
                   </div>
                   <div class="col-md-9">
-                    <label class="head">Analytics Work Bench<br></label>
+                    <label class="head">Rule Engine<br></label>
                       <label class="body">Publish, edit or customize pre-built dashboards for organization 
                     </label>
                   </div>
@@ -83,7 +83,7 @@
                     <img src="{{url()}}/assets/vendor/img/data.png" >
                   </div>
                   <div class="col-md-9">
-                    <label class="head">Data Science Sandbox <br></label>
+                    <label class="head">Data Catalog <br></label>
                       <label class="body">Collabrate, build and publish advance analytics workflows 
                     </label>
                   </div>
@@ -94,29 +94,6 @@
            </div>
 
          </div>
-         <div class="row">
-          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-            <div class="panel panel-default">
-              <button class="box" value="5">
-              <div class="panel-body">
-                <div class="row">
-                  <div class="col-md-3">
-                
-                  <img src="{{url()}}/assets/vendor/img/project.png">
-                  </div>
-                    <div class="col-md-9">
-                      <label class="head">Project Monitor<br></label>
-                        <label class="body">Monitor cluster, connections and overall project health 
-                        </label>
-                      </div>
-                    </div>
-                </div>   
-              </button>
-            </div>
-          </div>
-        </div>
-
-           
 
          </div>
       </div>
@@ -131,10 +108,15 @@
       console.log('reached');
       if($(this).val() == '1')
       {
-        window.location.href ="{{url()}}/ddspage";
+        window.location.href ="{{url()}}/setup_new_proj";
+      }
+      else if($(this).val() == '2')
+      {
+        window.location.href ="{{url()}}/extractor_library";
       }
     });
     
   });
 </script>
+
 @stop

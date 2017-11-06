@@ -39,6 +39,7 @@
           box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
           padding: 12px 16px;
           z-index: 1;
+          margin-left: 90px;
       }
 
       .dropdown-logout:hover .dropdown-logout-content {
@@ -67,11 +68,11 @@
       </a>-->
       
       <a href="{{url()}}/dashboard" class="pull-left brand more-padding">
-          <img src="{{url()}}/assets/vendor/img/dcube_new.png" class="primarylogo"  style="margin-top: -40px ; padding: 20px">
+          <img src="{{url()}}/assets/vendor/img/dcube_new.png" class="primarylogo"  style="width: 100px; height: 50px; margin-top: -10px; margin-left: -10px">
         
       </a>
       <li class="dropdown-logout">
-          <a href="#" class="dropdown-logout" data-toggle="dropdown-logout" style="padding: 28px 0 0 15px; color: #C8CAD2; font-size: 15px; font-weight: 600">
+          <a href="#" class="dropdown-logout" data-toggle="dropdown-logout" style="padding: 28px 0 0 15px; color: #C8CAD2; font-size: 15px; font-weight: 600; margin-left: 90px">
             <i class="fa fa-user-circle-o" aria-hidden="true"></i>
              Hi, {{ Auth::user()->name }} <span class="caret"></span>
           </a>
@@ -189,7 +190,7 @@
           </a>
         </li>
         <li>
-          <img src="{{url()}}/DDS Logo-02.png" width="145px" >
+          <img class="pull-right" src="{{url()}}/DDS Logo-02.png" style="width:100px; height:50px; margin-top:10px;">
           
       </li>        
         

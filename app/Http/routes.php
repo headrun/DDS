@@ -27,6 +27,10 @@ Route::group(['middleware' => 'auth'], function () {
 	 Route::get('/landing',function(){
 		return view('landing');
 	});
+	 Route::get('/ddspage',function(){
+		return view('DDSPage');
+	});
+
 	 Route::get('/dashboard', 'AjaxCallTest@dash');
 
 	Route::get('/extractor_library',function(){

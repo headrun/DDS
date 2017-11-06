@@ -11,8 +11,8 @@
   <div class="visualization">
       <div class="" style="padding: 10px">
 
-          <div class="panel panel-default" style=" background-color: #FCFCFC;">
-            <div class="panel-body  ">
+          <div class="panel panel-default" style=" background-color: #FCFCFC; margin-left: -15px; margin-right: -15px">
+            <div class="panel-body">
               <div class="progress">
                 <div class="progress-bar" role="progressbar" aria-valuenow="70"
                 aria-valuemin="0" aria-valuemax="100" style="width:0%;">

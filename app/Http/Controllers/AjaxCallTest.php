@@ -281,7 +281,7 @@ class AjaxCallTest extends Controller
     $inputs = $request->all();
 
     if(Auth::attempt(array('email' => $inputs['email'], 'password' => $inputs['password']))){
-      return redirect('/dashboard');
+      return redirect('/landing');
     } else {
       Session::flash('message', 'Please login with valid credentials...!');
       return redirect('login');
