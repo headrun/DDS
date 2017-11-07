@@ -274,7 +274,7 @@
       <div class="modal-body">
         <div class="row">
             <div class="col-md-12">
-                <h4><span class="label label-primary">Connection</span></h4>
+                <h4><label>Connection</label></h4>
                 <div class="row">
                     <div class="col-md-10">
                         <div class="form-group">
@@ -311,7 +311,7 @@
 
                 <!-- second row-->
 
-                <h4 style="padding-top: 20px;"><span class="label label-primary">Authentication</span></h4>
+                <h4 style="padding-top: 20px;"><label>Authentication</label></h4>
                 <!-- <div class="radio-inline">
                   <input type="radio" name="optradio">Use Credintials
                 </div>
@@ -343,7 +343,7 @@
 
                 <!-- third row-->
 
-                <h4 style="padding-top: 20px;"><span class="label label-primary">Timezone Correction</span></h4>
+                <h4 style="padding-top: 20px;"><label>Timezone Correction</label></h4>
                 <div class="row">
                     <div class="col-md-6" id="time_zone">
                         <div class="radio-inline">
@@ -371,7 +371,7 @@
 
                 <!-- foutth row-->
 
-                <h4><span class="label label-primary">Misc</span></h4>
+                <h4><label>Misc</label></h4>
                 <div class="row">
                     <div class="col-md-12" id="miscChckbox">
                         <div class="checkbox">
@@ -437,7 +437,7 @@
         <form name="jsonSubTypeData" id="jsonSubTypeData" enctype="multipart/form-data">
           <div class="tab-content">
               <div id="home" class="tab-pane fade in active">
-                  <h4 style="padding-top: 20px;"><span class="label label-primary" >Input Location</span></h4>
+                  <h4 style="padding-top: 20px;"><label>Input Location</label></h4>
                   <div class="row">
                       <div class="col-md-7">
                           <input type="hidden" name="ext_name" id="json_ext_name">
@@ -454,12 +454,13 @@
                       <div class="col-md-5">
                           <div class="form-group">
                             <div ><input type='hidden' id="jsonFileName" name="jsonFileName"></div>
-                            <div><input type='file' accept='image/*' onchange='openFile(event)'></div>
+                            <div><input type='file'  accept='image/*' onchange='openFile(event)' id="choosefile1" style="display: none"></div>
+                            <div><button class="btn btn-primary" id="choosefile" type="button">Click To Upload File</button></div>
                           </div>
                       </div>
                   </div>
                   <!-- second row-->
-                  <h4 style="padding-top: 20px;"><span class="label label-primary" >reader page</span></h4>
+                  <h4 style="padding-top: 20px;"><label>reader page</label></h4>
                   <div class="row">
                       <div class="col-md-12">
                           <div class="form-group">
@@ -580,7 +581,7 @@
     <div class="modal-content">
       <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">CSV Modal</h4>
+          <h4 class="modal-title">CSV</h4>
       </div>
       <form name="csvSubTypeData" id="csvSubTypeData" method="post" enctype="multipart/form-data">
       <div class="modal-body">
@@ -591,23 +592,26 @@
             <div ><input type='hidden' id="csvDataKey" name="csvDataKey"></div>
             <!-- <img id="output"> -->
             <div ><input type='hidden' id="csvFileName" name="csvFileName"></div>
-            <div><input type='file' accept='image/*' onchange='openFile(event)'></div>
+            <div><input type='file'  accept='image/*' onchange='openFile(event)' id="choosefil1" style="display: none"></div>
+            <div><button class="btn btn-default" id="choosefil" type="button">Click To Upload File</button></div>
 
           </div>
           <hr>
-          <h4><span class="label label-primary">Readen Options</span></h4>
+          <h4><label>Readen Options</label></h4>
         <br>
         <div class="row">
           <div class ='col-md-6'>
             <div>
-              <input class = 'btn btn-default' type='text' id="colDelimiter" name="colDelimiter" style="width: 50px"/> 
-              <span >Column Delimiter</span>
+              <label for="colDelimiter">Column Delimiter</label>
+              <input class = 'form-control' type='text' id="colDelimiter" name="colDelimiter" style="width: 50px"/> 
+              
             </div>
           </div>
           <div class ='col-md-6'>
             <div>
-              <input class = 'btn btn-default' id="rowDelimiter" name="rowDelimiter" type='text' style="width: 50px"/> 
-              <span >Row Delimiter</span>
+              <label for="rowDelimiter">Row Delimiter</label>
+              <input class = 'form-control' id="rowDelimiter" name="rowDelimiter" type='text' style="width: 50px"/> 
+              
             </div>
           </div>
         </div>
@@ -615,47 +619,48 @@
         <div class="row">
           <div class ='col-md-6'>
             <div>
-              <input class = 'btn btn-default' id="quoteChar" name="quoteChar" type='text' style="width: 50px"/> 
-              <span >Quote Char</span>
+              <label for="quoteChar">Quote Char</label>
+              <input class = 'form-control' id="quoteChar" name="quoteChar" type='text' style="width: 50px"/> 
+              
             </div>
           </div>
           <div class ='col-md-6'>
             <div>
-              <input class = 'btn btn-default' id="commentChar" name="commentChar" type='text' style="width: 50px"/> 
-              <span >Comment Char</span>
+              <label for="commentChar">Comment Char</label>
+              <input class = 'form-control' id="commentChar" name="commentChar" type='text' style="width: 50px"/> 
             </div>
           </div>
         </div>
         <div class="row">
           <div class ='col-md-6' id="viewResult">
             <div class ='checkbox'>
-              <label><input class = 'btn-primary' name="viewResult[]" type='checkbox' value="Has Column Header">Has Column Header
+              <label><input name="viewResult[]" type='checkbox' value="Has Column Header">Has Column Header
             </label>
             </div>
 
             <div class ='checkbox'>
-            <label><input class = 'btn btn-default' name="viewResult[]" type='checkbox' value="Has Row Header">Has Row Header
+            <label><input name="viewResult[]" type='checkbox' value="Has Row Header">Has Row Header
             </label>
             </div>
 
             <div class ='checkbox'>
-            <label><input class = 'btn btn-default' name="viewResult[]" type='checkbox' value="Support Short Lines">Support Short Lines
+            <label><input name="viewResult[]" type='checkbox' value="Support Short Lines">Support Short Lines
             </label>
             </div>
 
             <div class ='checkbox'>
-            <label><input class = 'btn btn-default' name="viewResult[]" type='checkbox' value="Skip First Lines">Skip First Lines
+            <label><input name="viewResult[]" type='checkbox' value="Skip First Lines">Skip First Lines
             </label>
             </div>
 
             <div class ='checkbox'>
-            <label><input class = 'btn btn-default' name="viewResult[]" type='checkbox' value="Limit rows">Limit rows
+            <label><input name="viewResult[]" type='checkbox' value="Limit rows">Limit rows
             </label>
             </div>
 
           </div>
           <div class ='col-md-6' style="margin-top: 15px">
-            <div class='btn-default'>
+            <div>
                 <label>
                   <select name="sel1" class="form-control" id="sel1" >
                     @for($i= 0 ; $i<=10; $i++)
@@ -665,7 +670,7 @@
                 </label>
             </div>
 
-            <div class='btn-default'>
+            <div>
             <label>
               <select name="sel2" class="form-control" id="sel2" >
               
@@ -738,6 +743,7 @@
       });
     });
 */
+var progress_bar = 35;
     var openFile = function(event) {
       var input = event.target;
 
@@ -1069,7 +1075,8 @@
     });
 
     $(document).on('change', '.source_name', function(){
-        
+        progress_bar = 40;
+        $('.progress-bar').css("width",progress_bar+"%");
         var source_name = $(this).val();
 
         var that = $(this);
@@ -1114,7 +1121,8 @@
 
 
     $(document).on('change', '.type_name', function(){
-        
+        progress_bar = 45;
+        $('.progress-bar').css("width",progress_bar+"%");
         var type_name = $(this).val();
 
         var that = $(this);
@@ -1161,7 +1169,8 @@
 
 
     $(document).on('change', '.subtype_name', function(){
-        
+        progress_bar = 50;
+        $('.progress-bar').css("width",progress_bar+"%");
         var subtype_name = $(this).val();
 
         var that = $(this);
@@ -1219,6 +1228,8 @@
     });
 
     $('.select_ingest_btn').click(function(){
+        progress_bar = 55;
+        $('.progress-bar').css("width",progress_bar+"%");
         var html ='<ul class="list-group"><span class="btn btn-default">Selected Extractors</span>';
         for (var i = 0; i < window.extract.length; i++)
         {
@@ -1256,5 +1267,11 @@
  $(document).on('click', '.select_ingest_btn', function(){
       $('.move_to_validate').attr('disabled', false);
     });
+ $( "#choosefile" ).on( "click", function() {
+  $( "#choosefile1" ).trigger( "click" );
+});
+ $( "#choosefil1" ).on( "click", function() {
+  $( "#choosefil1" ).trigger( "click" );
+});
 </script>
 @stop
