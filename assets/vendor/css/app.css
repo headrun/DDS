@@ -173,6 +173,12 @@
     box-shadow: 0px 1px 13.5px 1.5px rgba(0, 0, 0, 0.05);
 }
 
+.tt{
+    background-color: #EBEBEB;
+    padding: 0px;
+    border-width: 0px 0px 0px 0px;
+    /*max-height: 145px;*/
+}
 .box{
 
     padding: 20px;
@@ -247,7 +253,7 @@ a{
     font-family: ProximaNova;
     color:  #000000;
     font-size: 12.96px;/* Approximation due to font substitution */
-    font-weight: 400;
+    /*font-weight: 500;*/
     text-align: left;       
 }
 
@@ -268,15 +274,15 @@ a{
     /*overflow: auto;*/
     margin-top:150px;
     /*margin-bottom: -210px;*/
-    background: #ffffff;
+    /*background: #ffffff;*/
 }
 .welcome{
-    font-size: 30px;
+    font-size: 37px;
     font-family: Arial;
     font-weight: 500;
 }
 .message{
-    font-size: 25px;
+    font-size: 27px;
     color: #666666;
     font-weight: 600;
 }
