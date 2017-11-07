@@ -11,35 +11,51 @@
 </style>
 @stop
 @section('BaseContent')
-<div class="container-fluid dashboard-content">
+<div class="container-fluid">
   <div class="visualization">
-      <div class="top-div">
-          <div class="breadcrumb flat">
-             
-             @if(isset($proj_id))
-             <a href="{{url()}}/setup_new_proj/{{ $proj_id }}" class="active">Setup New Project</a>
-              <a href="{{url()}}/ingestion/{{ $proj_id }}" class="active">Ingest Data</a>
-             @else
-             <a href="{{url()}}/setup_new_proj" class="active">Setup New Project</a>
-              <a href="{{url()}}/ingestion" class="active">Ingest Data</a>
-             @endif
-             <!-- <a href="javascript:history.back()" class="active">Validate Data</a> -->
-             <a href="#" class="active">Map Data</a>
-             <a href="#">Mapping KPI</a>
+      <div class="" style="padding: 10px">
+          <div class="panel panel-default" style=" background-color: #FCFCFC; margin-left: -15px; margin-right: -15px;">
+            <div class="panel-body  ">
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70"
+                aria-valuemin="0" aria-valuemax="100" style="width:65%;">
+                  
+                </div>
+              </div>
+              <div class="row" style="margin-left: 100px">
+                <div class="col-md-3">
+                  @if(isset($proj_id))
+                    <a href="{{ url()}}/setup_new_proj/{{$proj_id}}" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/set_ up_new_project.png"><br>Setup New Project</a>
+                  @else
+                    <a href="{{ url()}}/setup_new_proj/{{$proj_id}}" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/set_ up_new_project.png"><br>Setup New Project</a>
+                  @endif
+                  
+                </div>
+                <div class="col-md-3">
+                  <a href="{{url()}}/ingestion/{{ $proj_id }}" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/ingest.png"><br>Ingeset Data</a>
+                </div>
+                <div class="col-md-3">
+                  <a href="#" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/map.png"><br>Map Data</a>
+                </div>
+                <div class="col-md-3">
+                  <a href="#" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/kpi.png"><br>Mapping KPI</a>
+                </div>
+              </div>
+            </div>
          </div>
-          <div class="row widget-1" style="padding-top: 30px">
-          <div class="row widget-1">
-              <div class="widget-icon"><img src="{{url()}}/assets/vendor/img/new_document_add.png"></div>
-              <h3 class="widget-title">
-                DCube Structure Mapping
-              </h3>
-              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                  <div class="panel panel-default" style="border-bottom: 4px solid #8bc34a;     padding: 20px;">
-                      <div class="row">  
-                          <div class="widget col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <input type="hidden" name="checkedVal" id="checkedVal" value="{{json_encode($d_struct_id)}}">
+          <div class="row widget-11" style="padding-top: 30px">
+          <div class="panel panel-default">
+            <div class="widget-title-box">
+              <div class="widget-icon"><img src="{{url()}}/assets/vendor/img/map_data.png" style="width:15px;height:45px; margin-left: 40px;"></div>
+              <h3 class="widget-title">D-Cube Structure Mapping</h3>
+            </div>
+            <div class="row" style="margin-top: 30px;">  
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <!-- <div class="panel panel-default" style="border-bottom: 4px solid #8bc34a;padding: 20px;">
+                        <div class="widget col-lg-12 col-md-12 col-sm-12 col-xs-12"> -->
+                          <input type="hidden" name="checkedVal" id="checkedVal" value="{{json_encode($d_struct_id)}}">
 
-                            @if(isset($proj_id))
+                          @if(isset($proj_id))
                               <input type="hidden" name="project_id" id="project_id" value="{{ $proj_id }}">
                             @endif
                             <table class="table" style="font-size:14px" id="mainTable">
@@ -48,7 +64,7 @@
                                   <th></th>
                                   <th>Source Table</th>
                                   <th>DCube Table</th>
-                                  <th>Mapping</th>
+                                  <th style="text-align: center;">Mapping</th>
                                   </center>
                                 </tr>
                               </thead>
@@ -64,7 +80,7 @@
                               @foreach($map_data as $val)
                                 <tr class="each_row" id='{{$val->source_id}}'>
                                   <td>
-                                      <div class="checkbox">
+                                      <div class="checkbox pull-right">
                                         <label><input type="checkbox" class="ingest_chkbox" value="{{$val->source_id}}"></label>
                                       </div>
                                   </td>
@@ -76,8 +92,9 @@
                                     <input type="hidden" name="source_name_string" id="source_name_string" value="<?php echo $source_name ?>">
                                     <div id="sourceName"></div>
                                   </td>
-                                  <td>
-                                      <button class="btn btn-info " data-toggle="modal" data-target="#claim">Edit Mapping</button>
+                                  <td style="text-align: center;">
+                                      <span class="glyphicon glyphicon-pencil" data-target="#claim" data-toggle="modal" title="Edit Mapping"></span>
+                                      <!-- <button class="btn btn-info "  ></button> -->
                                   </td>
                                 </tr>
                               @endforeach
@@ -85,11 +102,15 @@
                               </tbody>
                             </table>
                             <form action="{{url()}}/kpi_map_new">
+                              <div class="row">
                               <input type="hidden" name="forword_project_id" id="forword_project_id" value="{{ $proj_id }}">
-                              <button type="submit" class= 'btn btn-primary pull-right mapping_selected_btn' disabled>KPI Mapping</button>
+                              <button type="submit" class= 'btn btn-default mapping_selected_btn center-block' disabled>KPI Mapping</button>
+                            </div>
                             </form>
 
-                            <button class= 'btn btn-info pull-left' id="map_data" data-toggle="modal" data-target="#mpsldt" style="margin-left: 30px" >Map Selected Data</button>
+                            <div class="row">
+                              <button class= 'btn btn-success center-block' id="map_data" data-toggle="modal" data-target="#mpsldt" style="margin-bottom: 30px; margin-top: 30px; width: 230px" >Map Selected Data</button>
+                            </div>
                           </div>
                           
                       </div>

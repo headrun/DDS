@@ -37,7 +37,7 @@
          </div>
           <div class="row widget-11" >
               <div class="widget-title-box" >
-              <div class="widget-icon"><img src="{{url()}}/assets/vendor/img/new_document_add.png"></div>
+              <div class="widget-icon"><img src="{{url()}}/assets/vendor/img/setup_new_project.png" style="width:25px;height:45px; margin-left: 27px;"></div>
               <h3 class="widget-title">Setup New Project</h3></div>
               <div>
                   <div class="panel panel-default" style="border-bottom: 4px solid #8bc34a; padding: 10px; background-color: #Fff; ">
