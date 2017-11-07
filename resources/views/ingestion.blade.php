@@ -46,8 +46,8 @@
               </div>
               <div class="row widget-1" style="margin-top: -10px;">
               
-                  <a href="{{url()}}/extractor_library" target="_blank" class="btn btn-danger pull-right" style="margin-top: 15px;" >Extractor Library</a>
-                
+                <!--   <a href="{{url()}}/extractor_library" target="_blank" class="btn btn-danger pull-right" style="margin-top: 15px;" >Extractor Library</a>
+                 -->
                   <h3 class="widget-title" style="margin-bottom: 10px;">
                   <select class="form-control" style="width: 250px; height:30px; margin-left: -70px;">
                       @foreach($final_array1 as $value)
@@ -104,12 +104,12 @@
                                             <div class="checkbox">
                                               <label><input type="checkbox" class="ingest_chkbox" value="{{$value['data']}}" disabled checked></label>
                                             </div>
-                                        </td>
-                                        <td>
+                                        <!-- </td> -->
+                                        <!-- <td> -->
                                           {{$value['data']}}
                                           <input type="hidden" class="data_name" id="dataKey" value="{{$value['data']}}">
-                                        </td>
-                                        <td>
+                                        <!-- </td> -->
+                                        <!-- <td> -->
                                           <select class="form-control source_name sourceName">
                                               <option></option>
                                                 @foreach($value['sources'] as $src)
@@ -135,7 +135,7 @@
                                             {{ $exeData->extractor_name }}
                                         </td>
                                         <td>
-                                            <button class="btn btn-warning btn-sm give_inputs">Give Inputs</button>
+                                            <button class="btn btn-default btn-sm give_inputs">Give Inputs</button>
                                         </td>
                                         <td class="last_col_tick">
                                           <i class="fa fa-check fa-2x" style="color: green" aria-hidden="true"></i>
