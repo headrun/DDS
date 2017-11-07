@@ -700,12 +700,12 @@
 <div class="modal fade" id="ingest_started" role="dialog">
   <div class="modal-dialog modal-sm">
     <div class="modal-content">
-      <!--<div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title"></h4>
-      </div>-->
+      <div class="modal-header">
+          <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+          <h4 class="modal-title"><label>Ingestion Started</label></h4>
+      </div>
       <div class="modal-body">
-          <h4>Ingestion Started</h4>
+          
       </div>
       <hr>
       <div id= 'ing'></div>
@@ -1230,7 +1230,7 @@ var progress_bar = 35;
     $('.select_ingest_btn').click(function(){
         progress_bar = 55;
         $('.progress-bar').css("width",progress_bar+"%");
-        var html ='<ul class="list-group"><span class="btn btn-default">Selected Extractors</span>';
+        var html ='<ul class="list-group"><label>Selected Extractors</label><br>';
         for (var i = 0; i < window.extract.length; i++)
         {
             html += "<li class='list-group-item'>"+window.extract[i]+"</li>"

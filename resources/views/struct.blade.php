@@ -131,12 +131,12 @@
         </div>
         <div class="modal-body" style="padding: 10px 50px">
           <div id= 'text_add'></div>
-          <div>
-            <input type="text" name="mapData" id="mapData">
-          </div>
+          <!-- <div>
+            <input type="text" name="mapData" id="mapData" class="form-control">
+          </div> -->
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" id="saveMapData" data-dismiss="modal">Ok</button>
+          <button style="width: 100px" type="button" class="btn btn-success center-block" id="saveMapData" data-dismiss="modal">Ok</button>
           <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
         </div>
       </div>
@@ -5600,14 +5600,14 @@
 
     $('#map_data').click(function(){
         var sourceTable = dCubeTable = [];
-        var html ='<ul class="list-group"><span class="label label-info">Selected</span>';
+        var html ='<ul class="list-group"><label >Selected</label>';
         $('.each_row').find('input[type="checkbox"]:checked').each(function(){
             // console.log($(this).closest('.each_row').find('.val').text());
 
             sourceTable.push($(this).closest('.each_row').find('.val').text());
             dCubeTable.push($(this).closest('.each_row').find('.source_name').val());
             
-            html += "<li class='list-group-item' style='margin: 10px 0'>"+$(this).closest('.each_row').find('.val').text()+
+            html += "<li class='list-group-item form-control' style='margin: 10px 0; font-weight: 500'>"+$(this).closest('.each_row').find('.val').text()+
             "    ->    "+$(this).closest('.each_row').find('.source_name').val()+"</li>";
 
         })

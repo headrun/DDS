@@ -7,32 +7,68 @@
 <link rel="stylesheet" href="{{url()}}/assets/vendor/css/breadcrumb.css">
 @stop
 @section('BaseContent')
-<div class="container-fluid">re
+<div class="container-fluid">
   <div class="visualization">
-      <div class="top-div">
-        <div class="breadcrumb flat" style="margin-right: 5px">
-          @if($project_id)
-             <a href="{{url()}}/setup_new_proj/{{$project_id}}" class="active">Setup New Project</a>
-             <a href="{{url()}}/ingestion/{{$project_id}}" class="active">Ingest Data</a>
-             <!-- <a href="{{url()}}/validate" class="active">Validate Data</a> -->
-             <a href="javascript:history.back()" class="active">Map Data</a>
-             <a href="#" class="active">Mapping KPI</a>
-          @else
-            <a href="{{url()}}/setup_new_proj" class="active">Setup New Project</a>
-             <a href="{{url()}}/ingestion" class="active">Ingest Data</a>
-             <!-- <a href="{{url()}}/validate" class="active">Validate Data</a> -->
-             <a href="javascript:history.back()" class="active">Map Data</a>
-             <a href="#" class="active">Mapping KPI</a>
-          @endif
+      <div class="" style="padding: 10px">
+          <div class="panel panel-default" style=" background-color: #FCFCFC; margin-left: -15px; margin-right: -15px;">
+            <div class="panel-body  ">
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70"
+                aria-valuemin="0" aria-valuemax="100" style="width:75%;">
+                  
+                </div>
+              </div>
+              <div class="row" style="margin-left: 100px">
+                @if(isset($proj_id))
+                <div class="col-md-3">
+                 <a href="{{url()}}/setup_new_proj/{{$project_id}}" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/set_ up_new_project.png"><br>Setup New Project</a>
+                </div>
+                <div class="col-md-3">
+                  <a href="{{url()}}/ingestion/{{$project_id}}" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/ingest.png"><br>Ingeset Data</a>
+                </div>
+                <div class="col-md-3">
+                  <a href="javascript:history.back()" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/map.png"><br>Map Data</a> 
+                </div>
+                <div class="col-md-3">
+                  <a href="#" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/kpi.png"><br>Mapping KPI</a>
+                </div>
+                @else
+                <div class="col-md-3">
+                 <a href="{{url()}}/setup_new_proj" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/set_ up_new_project.png"><br>Setup New Project</a>
+                </div>
+                <div class="col-md-3">
+                  <a href="{{url()}}/ingestion" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/ingest.png"><br>Ingeset Data</a>
+                </div>
+                <div class="col-md-3">
+                  <a href="javascript:history.back()" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/map.png"><br>Map Data</a>
+                </div>
+                <div class="col-md-3">
+                  <a href="#" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/kpi.png"><br>Mapping KPI</a>
+                </div>
+                @endif
+              </div>
+            </div>
          </div>
-         <div class="row widget-1" style="padding-top: 30px">
-              <div class="widget-icon"><img src="{{url()}}/assets/vendor/img/new_document_add.png"></div>
+         
+         <div class="row widget-11" >
+            <div class="panel panel-default">
+              <div class="widget-title-box">
+                <div class="widget-icon"><img src="{{url()}}/assets/vendor/img/ingest_data1.png"></div>
                 <h3 class="widget-title">Mapping KPI</h3>
+              </div>
+              
 
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                  <div class="panel panel-default" style="border-bottom: 4px solid #8bc34a;     padding: 20px;">
+         
+                <div class="panel panel-default" style="border-bottom: 4px solid #8bc34a;     padding: 20px;">
                       @if(isset($project_type))
-                        <p><strong>Project Type: </strong>{{$project_type}}</p>
+                      <div class = "row">
+                        <div class= "col-md-2">
+                          <label style="padding: 5px">Project Type:</label>
+                        </div>
+                        <div class="col-md-3">
+                          <p>{{$project_type}}</p>
+                        </div>
+                      </div>    
                       @endif
                       <div class = "row">
                         <div class= "col-md-2">
@@ -47,15 +83,7 @@
                             <option>Marketing</option>
                           </select>
                         </div>
-                        <div class = "col-md-5">
-                          
-                          <a href="{{url()}}/kpilib" target="_blank" class ='btn btn-warning  pull-right' >View KPI Library</a>
-                          
-                        </div>
-                        <div class = "col-md-2">
-                          <button class ='btn btn-info  pull-right' data-toggle="modal" data-target="#myModal" >View Workflow</button>
-                          
-                        </div>
+                        
                       </div>
 
                         <br>
@@ -69,8 +97,8 @@
                           <form id='kpimap'>
                           <div class="row">
                             <div class="widget col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                                <h4><span class="label label-primary">KPI</span></h4>
-                                <br>
+                                <h4><label>KPI</label></h4>
+                                
                                 <div id="choose_project">
                                   <div class="radio">
                                     <input type="hidden" name="view_id" id="viewId" value="0">
@@ -82,8 +110,8 @@
                                 </div>
                             </div>
                             <div class="widget col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                                <h4><span class="label label-primary">Sub KPI</span></h4>
-                                <br>
+                                <h4><label>Sub KPI</label></h4>
+                                
                                 <div>
                                   <div id="calSubKpi">
                                     <div class="selectingSubKpi calSubKpi radio"></div>
@@ -94,28 +122,28 @@
                           <hr>
                           <div class="row" id="dimensionInfo">  
                           <div class="widget col-lg-12 col-md-12 col-sm-12 col-xs-12d">
-                              <h4><span class="label label-primary">Dimension</span></h4>
+                              <h4><label>Dimension</label></h4>
                               <br>
                               <div class="row">
                                 <div class="widget col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                                  <h4><span class="label label-primary">Product Selection</span></h4>
-                                  <br>
+                                  <h4><label>Product Selection</label></h4>
+                                  
                                   <div id="product_selection">
                                     <div class="radio product_selection kpi_dim"></div>
                                   </div>
                                 </div>
 
                                 <div class="widget col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                                  <h4><span class="label label-primary">Time Period Selection</span></h4>
-                                  <br>
+                                  <h4><label>Time Period Selection</label></h4>
+                                  
                                   <div id="time_period_selection">
                                     <div class="radio time_period_selection kpi_dim"></div>
                                   </div>
                                 </div>
 
                                 <div class="widget col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                                  <h4><span class="label label-primary">Geography</span></h4>
-                                  <br>
+                                  <h4><label>Geography</label></h4>
+                                  
                                   <div id="geography">
                                     <div class="radio geography kpi_dim"></div>
                                     <div class="radio">
@@ -125,8 +153,8 @@
                                 </div>
 
                                 <div class="widget col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                                  <h4><span class="label label-primary">Calculation</span></h4>
-                                  <br>
+                                  <h4><label>Calculation</label></h4>
+                                  
                                   <div id="product_selection_calculation">
                                     <div class="radio calculateSubKpi kpi_dim"></div>
                                   </div>
@@ -136,13 +164,13 @@
                         </div>
                         <hr>
 
-                          <div class ='row'>
-                            <div class="col-md-6">
-                            <input type="reset" name="newKpi" value="Add New KPI" id="addNewKpi" class="btn btn-primary">
+                          <div class ="row center-block">
+                            <div class="col-md-2 col-md-offset-4">
+                            <input type="reset" name="newKpi" value="Add New KPI" id="addNewKpi" class="btn btn-success">
                               <!-- <button class ='btn btn-primary pull-left' data-toggle="modal" data-target="#addnewkpi" id='addkpi_btn'>Add New KPI</button> -->
                             </div>
                             <div class="col-md-6">
-                              <button class ='btn btn-primary pull-right' type="button" id='save_btn'>Save &amp; Send for Workflow</button>
+                              <button style="width: 200px" class ='btn btn-default' type="button" id='save_btn' data-toggle="modal" data-target="#send_to_workflow">Save &amp; Send for Workflow</button>
                             </div>
                           </div>
                           </form>
@@ -168,11 +196,27 @@
                               </div>
                             </div>
                           </div>
+                          <div class="row">
+                        <div class = "col-md-5">
+                            
+                        <a href="{{url()}}/kpilib" target="_blank" class ='btn btn-success  pull-right' >View KPI Library</a>
+                        
                       </div>
+                      <div class = "col-md-2">
+                        <button class ='btn  pull-right' data-toggle="modal" data-target="#myModal" style="background-color: #004256; color: #fff" >View Workflow</button>
+                        
+                      </div>
+                    
+                    </div>
+                      </div>
+
+
                     </div>
 
                   </div>
                 </div>
+
+
           </div>
       </div>
  <div id="myModal" class="modal fade" role="dialog">
@@ -195,19 +239,19 @@
   </div>
 </div>
 <div id="send_to_workflow" class="modal fade" role="dialog">
-  <div class="modal-dialog modal-lg" style="width: 170px;">
+  <div class="modal-dialog modal-lg" style="width: 500px; top: 150px;">
 
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Work Flow</h4>
+        <h4 class="modal-title">Success</h4>
       </div>
       <div class="modal-body">
         <label>Sent to Workflow</label>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="center-block btn btn-success" data-dismiss="modal" style="width: 100px">OK</button>
       </div>
     </div>
 
@@ -343,7 +387,7 @@ $(document).ready(function(){
                           kpi_arr+
                           subKpiArr+
                           dim_arr+
-                          '<div class="col-md-2"><input type="hidden" value="'+flowId+'" class="flowId"><button type="button" class="btn-xs btn-primary edit-flow"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button>&nbsp;&nbsp;<button type="button" class="btn-xs btn-danger delete-flow confirm-delete"><i class="fa fa-trash-o" aria-hidden="true"></i></button></div>'+
+                          '<div class="col-md-2"><input type="hidden" value="'+flowId+'" class="flowId"><i class="fa fa-pencil-square-o edit-flow" aria-hidden="true" title="Click to Edit"></i>&nbsp;&nbsp;<i class="fa fa-trash-o delete-flow confirm-delete" aria-hidden="true" title="Click to Delete"></i></div>'+
                         '</div><hr><br>';
 
             }
@@ -355,7 +399,8 @@ $(document).ready(function(){
         }
 
     });
-
+// '<div class="col-md-2"><input type="hidden" value="'+flowId+'" class="flowId"><button type="button" class="btn-xs btn-primary edit-flow"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button>&nbsp;&nbsp;<button type="button" class="btn-xs btn-danger delete-flow confirm-delete"><i class="fa fa-trash-o" aria-hidden="true"></i></button></div>'+
+//                         '</div><hr><br>';
 
 
   $('#addNewKpi').click(function(){
@@ -656,7 +701,7 @@ $('#proj_name').change(function(){
                           kpi_arr+
                           subKpiArr+
                           dim_arr+
-                          '<div class="col-md-2"><input type="hidden" value="'+flowId+'" class="flowId"><button type="button" class="btn-xs btn-primary edit-flow"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button>&nbsp;&nbsp;<button type="button" class="btn-xs btn-danger delete-flow confirm-delete"><i class="fa fa-trash-o" aria-hidden="true"></i></button></div>'+
+                          '<div class="col-md-2"><input type="hidden" value="'+flowId+'" class="flowId"><i class="fa fa-pencil-square-o edit-flow" aria-hidden="true" title="Click to Edit"></i>&nbsp;&nbsp;<i class="fa fa-trash-o delete-flow confirm-delete" aria-hidden="true" title="Click to Delete"></i></div>'+
                         '</div><hr><br>';
 
             }

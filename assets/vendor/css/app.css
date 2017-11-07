@@ -176,14 +176,12 @@
 .box{
 
     padding: 20px;
-    border-radius: 0px;
+    border-radius: 3px;
     border-style: inset;
     border-width: 1px;
     border-color: black;
     font-weight: 600;
-    background-color: #fff
-
-
+    background-color: #fff;
 }
 .box:hover {
   transform: scale(1.02);
