@@ -35,12 +35,12 @@
               </div>
             </div>
          </div>
-          <div class="row widget-11">
-              <div class="widget-title-box">
+          <div class="row widget-11" >
+              <div class="widget-title-box" >
               <div class="widget-icon"><img src="{{url()}}/assets/vendor/img/new_document_add.png"></div>
               <h3 class="widget-title">Setup New Project</h3></div>
               <div>
-                  <div class="panel panel-default" style="border-bottom: 4px solid #8bc34a; padding: 10px; background-color: #F8F8F8">
+                  <div class="panel panel-default" style="border-bottom: 4px solid #8bc34a; padding: 10px; background-color: #F8F8F8; ">
                     <div class = 'project ' style="padding: 10px">
                       <div class= 'row' >
                         <div class = 'col-md-4'>
@@ -93,7 +93,7 @@
                       </div>
                     </div>
                       <div class="row">  
-                          <div class="widget col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                          <div class="widget col-lg-3 col-md-3 col-sm-3 col-xs-3">
                               <h4><span class="label label-primary">Choose a Project</span></h4>
                               <br>
                               <form style="padding-left: 50px" id="choose_project">
@@ -113,25 +113,28 @@
 
                               </form>
                           </div>
-                          <div class="widget col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                          <div class="widget col-lg-3 col-md-3 col-sm-3 col-xs-3">
                               <h4><span class="label label-primary">Choose Project Subtype</span></h4>
                               <br>
                               <div class="selecting" id="selecting"></div>
                           </div>
 
-                      </div>
-                      <br>
-                      <hr>
-                      <div class="row">  
-                          <div class="widget col-lg-12 col-md-12 col-sm-12 col-xs-12d">
+                      
+                      
+                      
+                      
+                          <div class="widget col-lg-5 col-md-5 col-sm-5 col-xs-5">
                               <h4><span class="label label-primary">Data Tables</span></h4>
                               <br>
                               <form action='{{url()}}/ingestion' method='post' id = 'group'>
                               {{ csrf_field() }}
                                 <div id="d-tables" class="row">
-                                      <div class="col-md-4 data" id="data1"></div>
-                                      <div class="col-md-4 bdf" id="bdf1"></div>
-                                      <div class="col-md-4 dim" id="dim1"></div>
+                                    
+                                      <div class="row data" id="data1"></div>
+                                      <div class="row bdf" id="bdf1"></div>
+                                      <div class="row dim" id="dim1"></div>
+                                    
+                                    
                                 </div>
                                 <div class = 'hide-'>
                                   @if(isset($exePrjData))
@@ -154,15 +157,18 @@
                                   
                                 </div>
                                 
-                                
-                                  <div class="Check">
-                                    <button class="btn btn-success btn-md" id= "sidq" type = "submit" disabled>Proceed to Ingest</button>
+                                  
+                                  <div class=" row">
+                                    <button class="btn btn-success btn-md" id= "sidq1" type = "submit" style="display: none">Proceed to Ingest</button>
                                   </div>
                                 
                               </form>
                                 
                       
                   </div>
+                  </div>
+              <div class="row" style="text-align: center; padding: 20px">
+              <button class="btn btn-success btn-md" id= "sidq" type = "submit" disabled>Proceed to Ingest</button>
               </div>
           </div>
       </div>
@@ -1726,25 +1732,29 @@ $(document).on('change', '.optradio', function()
 
             var d = response.data;
             var test = response.data;
-            var data ='<h4>Data Tables</h4>';
-            var bdf = '<h4>Bridge Files</h4>';
-            var dim = '<h4>Dimension table (Optional)</h4>';
-
+            var data ='<div class="row"><div class="col-md-6"><h4>Data Tables</h4></div>';
+            var bdf = '<div class="row"><div class="col-md-6"><h4>Bridge Files</h4></div><div class="col-md-6">';
+            var dim = '<div class="row"><div class="col-md-6"><h4>Dimension table (Optional)</h4></div><div class="col-md-6">';
+            data += "<div class = 'col-md-6'>";
             for (var ele = 0; ele < test.length; ele++) {
               d = test[ele];
               for (var i = 0; i < d.length; i++) {
                 if (d[i].category==='Data'){
                   if (d[i].description != 'Aggregated Rx Data') { 
+                    
                     data += "<div class = 'checkbox'>"+
                     //"<a href ='#' data-toggle = 'popover'>"+
                     "<label class = 'active' style='margin-bottom: -5px;'>"+
                     "<input type='checkbox'  class='test2' checked  name = 'check_box[]' value='"+d[i].description+"'>";
                     data +="</label>";
-                    data +="<span class='text' style='cursor: pointer;'>"+d[i].description+"</span><br>";
+                    data +="<span class='text' style='cursor: pointer;'>"+d[i].description+"</span>";
                     data +="</div>";
-                  }
                     
+                    
+                  }
+                  
                 }
+
                 if (d[i].category==='Bridging File'){
                     bdf += "<div class = 'checkbox'>"+
                    // "<a href ='#' data-toggle = 'popover'>"+
@@ -1804,7 +1814,12 @@ $(document).on('change', '.optradio', function()
                   
             //   }
             // }
-            
+            data +="</div>";
+            data +="</div>";
+            bdf +="</div>";
+            bdf +="</div>";
+            dim +="</div>";
+            dim +="</div>";
             var data1= data+bdf+dim;
             $('#d-tables .data').html(data).contents();
             $('#d-tables .bdf').html(bdf);
@@ -1882,6 +1897,10 @@ $(document).on('click','.text',function(){
     $('#setUpNewProject').find('#'+id).css('display', 'table');
     $('#setUpNewProject').modal('show');
 });
+$( "#sidq" ).on( "click", function() {
+  $( "#sidq1" ).trigger( "click" );
+});
+
 
 </script>
 @stop
