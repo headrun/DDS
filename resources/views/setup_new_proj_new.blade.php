@@ -63,7 +63,7 @@
                       @if(isset($project_type))
                       <div class = "row">
                         <div class= "col-md-2">
-                          <label style="padding: 5px">Project Type:</label>
+                          <label style="padding: 5px">Enter Project Name</label>
                         </div>
                         <div class="col-md-3">
                           <p>{{$project_type}}</p>
@@ -72,10 +72,10 @@
                       @endif
                       <div class = "row">
                         <div class= "col-md-2">
-                          <label style="padding: 5px">Select View:</label>
+                          <label style="padding: 5px">Select View</label>
                         </div>
                         <div class="col-md-3">
-                          <select class="form-control .proj_name" id='proj_name' style="margin-top: -5px; width: 220px; margin-left: -70px">
+                          <select class="form-control .proj_name" id='proj_name' style="margin-top: -5px; width: 220px; margin-left: -15px">
                             <option></option>
                             <option>Market Overview</option>
                             <option>Market Access</option>
@@ -197,13 +197,13 @@
                             </div>
                           </div>
                           <div class="row">
-                        <div class = "col-md-5">
+                        <div class = "col-md-6">
                             
                         <a href="{{url()}}/kpilib" target="_blank" class ='btn btn-success  pull-right' >View KPI Library</a>
                         
                       </div>
                       <div class = "col-md-2">
-                        <button class ='btn  pull-right' data-toggle="modal" data-target="#myModal" style="background-color: #004256; color: #fff" >View Workflow</button>
+                        <button class ='btn  pull-left' data-toggle="modal" data-target="#myModal" style="background-color: #004256; color: #fff" >View Workflow</button>
                         
                       </div>
                     
@@ -387,7 +387,7 @@ $(document).ready(function(){
                           kpi_arr+
                           subKpiArr+
                           dim_arr+
-                          '<div class="col-md-2"><input type="hidden" value="'+flowId+'" class="flowId"><i class="fa fa-pencil-square-o edit-flow" aria-hidden="true" title="Click to Edit"></i>&nbsp;&nbsp;<i class="fa fa-trash-o delete-flow confirm-delete" aria-hidden="true" title="Click to Delete"></i></div>'+
+                          '<div class="col-md-2"><input type="hidden" value="'+flowId+'" class="flowId"><i class="glyphicon glyphicon-pencil" aria-hidden="true" title="Click to Edit"></i>&nbsp;&nbsp;<i class="fa fa-trash-o delete-flow confirm-delete" aria-hidden="true" title="Click to Delete"></i></div>'+
                         '</div><hr><br>';
 
             }
@@ -701,7 +701,7 @@ $('#proj_name').change(function(){
                           kpi_arr+
                           subKpiArr+
                           dim_arr+
-                          '<div class="col-md-2"><input type="hidden" value="'+flowId+'" class="flowId"><i class="fa fa-pencil-square-o edit-flow" aria-hidden="true" title="Click to Edit"></i>&nbsp;&nbsp;<i class="fa fa-trash-o delete-flow confirm-delete" aria-hidden="true" title="Click to Delete"></i></div>'+
+                          '<div class="col-md-2"><input type="hidden" value="'+flowId+'" class="flowId"><i class="glyphicon glyphicon-pencil" aria-hidden="true" title="Click to Edit"></i>&nbsp;&nbsp;<i class="fa fa-trash-o delete-flow confirm-delete" aria-hidden="true" title="Click to Delete"></i></div>'+
                         '</div><hr><br>';
 
             }
