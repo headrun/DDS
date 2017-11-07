@@ -61,7 +61,7 @@
                   </h3>
                       
                       <div class="row">  
-                          <div class="widget col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                          <!-- <div class="widget col-lg-12 col-md-12 col-sm-12 col-xs-12"> -->
                           <table class="table" style="font-size:14px" id="mainTable">
                               <thead >
                                 <tr>
@@ -102,7 +102,7 @@
                                       <tr class="each_row">
                                         <td>
                                             <div class="checkbox">
-                                              <label><input type="checkbox" class="ingest_chkbox" value="{{$value['data']}}" disabled checked></label>
+                                              <label><input type="checkbox" class="ingest_chkbox" value="{{$value['data']}}" disabled checked style="margin-left: 20px"></label>
                                             </div>
                                         <!-- </td> -->
                                         <!-- <td> -->
@@ -154,8 +154,8 @@
                                       @if($test != $value['data'])
                                       <tr class="each_row">
                                         <td>
-                                            <div class="checkbox">
-                                              <label><input type="checkbox" class="ingest_chkbox" value="{{$value['data']}}" disabled></label>
+                                            <div class="checkbox" >
+                                              <label><input type="checkbox" class="ingest_chkbox" value="{{$value['data']}}" disabled style="margin-left: 20px"></label>
                                             </div>
                                         </td>
                                         <td>
@@ -181,7 +181,7 @@
                                         <td class="extractor_name">
                                         </td>
                                         <td>
-                                            <button class="btn btn-warning btn-sm give_inputs" disabled>Give Inputs</button>
+                                            <button class="btn btn-default btn-sm give_inputs" disabled>Give Inputs</button>
                                         </td>
                                         <td class="last_col_tick"></td>
                                       </tr>
@@ -194,7 +194,7 @@
                                     <tr class="each_row">
                                         <td>
                                             <div class="checkbox">
-                                              <label><input type="checkbox" class="ingest_chkbox" value="{{$value['data']}}" disabled></label>
+                                              <label><input type="checkbox" class="ingest_chkbox" value="{{$value['data']}}" disabled style="margin-left: 20px"></label>
                                             </div>
                                         </td>
                                         <td>
@@ -220,7 +220,7 @@
                                         <td class="extractor_name">
                                         </td>
                                         <td>
-                                            <button class="btn btn-warning btn-sm give_inputs" disabled>Give Inputs</button>
+                                            <button class="btn btn-default btn-sm give_inputs" disabled>Give Inputs</button>
                                         </td>
                                         <td class="last_col_tick"></td>
                                       </tr>

@@ -40,16 +40,16 @@
               <div class="widget-icon"><img src="{{url()}}/assets/vendor/img/new_document_add.png"></div>
               <h3 class="widget-title">Setup New Project</h3></div>
               <div>
-                  <div class="panel panel-default" style="border-bottom: 4px solid #8bc34a; padding: 10px; background-color: #F8F8F8; ">
+                  <div class="panel panel-default" style="border-bottom: 4px solid #8bc34a; padding: 10px; background-color: #Fff; ">
                     <div class = 'project ' style="padding: 10px">
                       <div class= 'row' >
                         <div class = 'col-md-4'>
                           @if(isset($exePrjData))
                             @foreach($exePrjData as $data)
-                              <input type = 'text' class ='btn btn-default' style="width: 100% ; text-align: left;" placeholder="Enter Project Name" id= 'project_text' value="{{$data->proj_name}}">
+                              <input type = 'text' class ='form-control' style="width: 100% ; text-align: left;" placeholder="Enter Project Name" id= 'project_text' value="{{$data->proj_name}}">
                             @endforeach
                           @else
-                            <input type = 'text' class ='btn btn-default' style="width: 100% ; text-align: left;" placeholder="Enter Project Name" id= 'project_text'>
+                            <input type = 'text' class ='form-control' style="width: 100% ; text-align: left;" placeholder="Enter Project Name" id= 'project_text'>
                           @endif
                         </div>
                         
@@ -1486,28 +1486,29 @@
 
   function projectType(){
     var prjType = ['Pre Launch','Brand Launch','RWE','Digital Analytics','Social Media','Supply Chain','New Projecct'];
-    var prjTypeArr = '';
+    var prjTypeArr = '<select class="form-control" id="choose_project1" style="margin-left: -30px;">';
 
     for (var i = 0; i < prjType.length; i++) {
       if ($('#exeProjTypeCheck').val() == prjType[i]) {
-        prjTypeArr += '<div class="radio">'+
-                      '<input type="radio" name="optradio" class="optradio" value="'+prjType[i]+'" checked="checked">'+prjType[i]+
-                    '</div>';
+        prjTypeArr += 
+                      '<option name="optradio" class="optradio" value="'+prjType[i]+'" selected>'+prjType[i]+'</option>';
+                    
 
       } else {
-        prjTypeArr += '<div class="radio">'+
-                      '<input type="radio" name="optradio" class="optradio" value="'+prjType[i]+'">'+prjType[i]+
-                    '</div>';
+        prjTypeArr += 
+                      '<option name="optradio" class="optradio" value="'+prjType[i]+'">'+prjType[i]+
+                    '</option>';
       }
       
     }
+    prjTypeArr += '</select>';
     $('#projectType').html(prjTypeArr);
   }
 
-  $('#choose_project').find('input[type="radio"]').change(function(){ 
+  $(document).on('change','#choose_project1',function(){ 
       
       var value = $(this).val();
-
+      console.log(value);
       $.ajax({
           method: 'POST', 
           url: '{{url()}}/save_proj_into_session',
@@ -1548,7 +1549,8 @@
             },
         });
       }
-        $('input[type=radio][name=optradio]').change(function(){
+        $(document).on('change','#choose_project1',function(){ 
+          console.log($(this).val());
         $.ajax({
             method: 'POST', // Type of response and matches what we said in the route
             url: '{{url()}}/test', // This is the url we gave in the route
@@ -1582,10 +1584,10 @@
               // console.log(response);
               var d = response.data;
               var test = response.data;
-              var data ='<h4>Data Tables</h4>';
-              var bdf = '<h4>Bridge Files</h4>';
-              var dim = '<h4>Dimension table (Optional)</h4>';
-              
+              var data ='<div class="row"><div class="col-md-6"><h4>Data Tables</h4></div>';
+              var bdf = '<div class="row"><div class="col-md-6"><h4>Bridge Files</h4></div><div class="col-md-6">';
+              var dim = '<div class="row"><div class="col-md-6"><h4>Dimension table (Optional)</h4></div><div class="col-md-6">';
+              data += "<div class = 'col-md-6'>";
               for (var ele = 0; ele < test.length; ele++) {
                 d = test[ele];
                 for (var i = 0; i < d.length; i++) {
@@ -1625,6 +1627,12 @@
                 }
               }
               
+              data +="</div>";
+            data +="</div>";
+            bdf +="</div>";
+            bdf +="</div>";
+            dim +="</div>";
+            dim +="</div>";
               var data1= data+bdf+dim;
               $('#d-tables .data').html(data).contents();
               $('#d-tables .bdf').html(bdf);
@@ -1692,7 +1700,7 @@ $(document).on('change', '#fa', function()
       $('.progress-bar').css("width","10%");
     });
 
-$(document).on('change', '.optradio', function()
+$(document).on('change', '#choose_project1', function()
    {
       $('.proj_type').val($(this).val());
       console.log($('.fa').val());
