@@ -21,7 +21,7 @@ class AjaxCallTest extends Controller
  		$data = $request->all(); // This will get all the request data.
  				//Input::all();
     // return $data;
-    $users = '<h4><label style="font-size: 15px;">Choose Project Subtype</label></h4>';
+    $users = '<h5><label style="font-size: 15px;">Choose Project Subtype</label></h5>';
  		$users .= $this->check_array($data['id'],$data['checkProjSubType']);
     return $users;
     return Response::json($users);

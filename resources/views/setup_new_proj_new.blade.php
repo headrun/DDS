@@ -88,7 +88,7 @@
 
                         <br>
                       <div class="panel panel-default">
-                        <div class="panel-heading">KPI Selection</div>
+                        <div class="panel-heading"><h4><label>KPI Selection</label></h4></div>
                         <div class="panel-body">
                         <div class="wrongSelection"></div>
                           <div class="radio">
@@ -180,7 +180,7 @@
                         <div class="row" id="savedFlows">
                           <div class="col-md-12">
                               <div class="panel panel-default" id='addkpi' >
-                                <div class="panel-heading">Saved KPI'S</div>
+                                <div class="panel-heading"><h4><label>Saved KPI's</label></h4></div>
                                     <div class="panel-body flowsInfo">
                                       <div class="row" style="margin-bottom: 7px;">
                                         <div class="col-md-1"><label>Id</label></div>

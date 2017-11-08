@@ -3,10 +3,24 @@
 <title>Dcube | DDS Page</title>
 @stop
 @section('BaseContent')
+<style type="text/css">
+body{
+  background-image: url(../../assets/vendor/img/bg.png);
+   min-height: 500px;
+    /* Set background image to fixed (don't scroll along with the page) */
+    background-attachment: fixed;
+    /* Center the background image */
+    background-position: center;
+    /* Set the background image to no repeat */
+    background-repeat: no-repeat;
+    /* Scale the background image to be as large as possible */
+    background-size: cover;
 
+}
+</style>  
 <div class="container-fluid">
-  <div class="visualization">
-    <div class="row">
+  <!-- <div class="visualization"> -->
+    <div class="row" style="margin-top: 100px">
       <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 box-left" >
           <label class="welcome">DDS<br><b>Data Foundation</b><br>
             <span class="message">Setup Projects, edit <br> and conduct maintanace <br> of data Foundation.</span>

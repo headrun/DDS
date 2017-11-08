@@ -94,7 +94,7 @@
                     </div>
                       <div class="row">  
                           <div class="widget col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                              <h4><label class="kpi-label">Choose a Project</label></h4>
+                              <h5><label class="kpi-label">Choose A Project</label></h5>
                               <form style="padding-left: 50px" id="choose_project">
                                   @if(isset($exePrjData))
                                     @foreach($exePrjData as $data)
@@ -1736,7 +1736,7 @@ $(document).on('change', '#choose_project1', function()
 
             var d = response.data;
             var test = response.data;
-            var data ='<h4><label style="font-size: 15px;">Data Tables</label></h4>';
+            var data ='<h5><label style="font-size: 15px;">Data Tables</label></h5>';
             data +='<div class="row"><div class="col-md-6"><h5>Data Tables</h5></div>';
             var bdf = '<div class="row"><div class="col-md-6"><h5>Bridge Files</h5></div><div class="col-md-6">';
             var dim = '<div class="row"><div class="col-md-6"><h5>Dimension table (Optional)</h5></div><div class="col-md-6">';
