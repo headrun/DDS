@@ -21,7 +21,8 @@
               </div>
               <div class="row" style="margin-left: 100px">
                 <div class="col-md-3">
-                  <a href="#" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/setting.png"><br>Setup New Project</a>
+                  <a href="#" class="active">
+                    <img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/set_up_new_project.png"><br>Setup New Project</a>
                 </div>
                 <div class="col-md-3">
                   <a href="#" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/ingest.png"><br>Ingeset Data</a>

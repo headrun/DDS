@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="{{url()}}/assets/vendor/css/breadcrumb.css">
 @stop
 @section('BaseContent')
-<div class="container-fluid">
+<div class="container-fluid bg">
   <div class="visualization">
       <div class="" style="padding: 10px">
           <div class="panel panel-default" style=" background-color: #FCFCFC; margin-left: -15px; margin-right: -15px;">
@@ -20,14 +20,14 @@
               <div class="row" style="margin-left: 100px">
                 <div class="col-md-3">
                   @if(isset($proj_id))
-                    <a href="{{ url()}}/setup_new_proj/{{$proj_id}}" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/set_ up_new_project.png"><br>Setup New Project</a>
+                    <a href="{{ url()}}/setup_new_proj/{{$proj_id}}" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/set_up_new_project.png"><br>Setup New Project</a>
                   @else
-                    <a href="{{ url()}}/setup_new_proj/{{$proj_id}}" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/set_ up_new_project.png"><br>Setup New Project</a>
+                    <a href="{{ url()}}/setup_new_proj/{{$proj_id}}" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/set_up_new_project.png"><br>Setup New Project</a>
                   @endif
                   
                 </div>
                 <div class="col-md-3">
-                  <a href="#" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/ingest.png"><br>Ingeset Data</a>
+                  <a href="#" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/ingest_data.png"><br>Ingeset Data</a>
                 </div>
                 <div class="col-md-3">
                   <a href="#" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/map.png"><br>Map Data</a>
@@ -418,7 +418,7 @@
 </div>
 
 <div id="JSON" class="modal fade" role="dialog">
-  <div class="modal-dialog modal-md">
+  <div class="modal-dialog">
 
     <!-- Modal content-->
     <div class="modal-content">
@@ -697,20 +697,25 @@
   </div>
 </div>
 
-<div class="modal fade" id="ingest_started" role="dialog">
-  <div class="modal-dialog modal-sm">
-    <div class="modal-content">
+<div class="modal fade" id="ingest_started" role="dialog">  
+  <div class="modal-dialog">
+    <div class="modal-content" style="width:600px;">
       <div class="modal-header">
-          <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title"><label>Ingestion Started</label></h4>
       </div>
       <div class="modal-body">
           
+      <div class="row">
+        <div class="col-md-12">
+          <div id="ing">
+            
+          </div>
+        </div>
       </div>
-      <hr>
-      <div id= 'ing'></div>
+    </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
+        <button type="button" class="btn btn-success center-block" data-dismiss="modal" style="width: 150px; height: 50px; text-align: center;">Ok</button>
       </div>
     </div>
   </div>
@@ -1235,7 +1240,7 @@ var progress_bar = 35;
         {
             html += "<li class='list-group-item'>"+window.extract[i]+"</li>"
         }
-        html += '</ul></div>'
+        html += '</ul>';
         $('#ing').html(html);
         $('#ingest_started').modal('show'); 
     });

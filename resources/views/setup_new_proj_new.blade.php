@@ -21,26 +21,26 @@
               <div class="row" style="margin-left: 100px">
                 @if(isset($proj_id))
                 <div class="col-md-3">
-                 <a href="{{url()}}/setup_new_proj/{{$project_id}}" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/set_ up_new_project.png"><br>Setup New Project</a>
+                 <a href="{{url()}}/setup_new_proj/{{$project_id}}" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/set_up_new_project.png"><br>Setup New Project</a>
                 </div>
                 <div class="col-md-3">
-                  <a href="{{url()}}/ingestion/{{$project_id}}" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/ingest.png"><br>Ingeset Data</a>
+                  <a href="{{url()}}/ingestion/{{$project_id}}" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/ingest_data.png"><br>Ingeset Data</a>
                 </div>
                 <div class="col-md-3">
-                  <a href="javascript:history.back()" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/map.png"><br>Map Data</a> 
+                  <a href="javascript:history.back()" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/mappingkpi.png"><br>Map Data</a> 
                 </div>
                 <div class="col-md-3">
                   <a href="#" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/kpi.png"><br>Mapping KPI</a>
                 </div>
                 @else
                 <div class="col-md-3">
-                 <a href="{{url()}}/setup_new_proj" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/set_ up_new_project.png"><br>Setup New Project</a>
+                 <a href="{{url()}}/setup_new_proj" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/set_up_new_project.png"><br>Setup New Project</a>
                 </div>
                 <div class="col-md-3">
-                  <a href="{{url()}}/ingestion" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/ingest.png"><br>Ingeset Data</a>
+                  <a href="{{url()}}/ingestion" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/ingest_data.png"><br>Ingeset Data</a>
                 </div>
                 <div class="col-md-3">
-                  <a href="javascript:history.back()" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/map.png"><br>Map Data</a>
+                  <a href="javascript:history.back()" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/mapdata.png"><br>Map Data</a>
                 </div>
                 <div class="col-md-3">
                   <a href="#" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/kpi.png"><br>Mapping KPI</a>
@@ -53,7 +53,7 @@
          <div class="row widget-11" >
             <div class="panel panel-default">
               <div class="widget-title-box">
-                <div class="widget-icon"><img src="{{url()}}/assets/vendor/img/ingest_data1.png"></div>
+                <div class="widget-icon"><img src="{{url()}}/assets/vendor/img/map_kpi.png"></div>
                 <h3 class="widget-title">Mapping KPI</h3>
               </div>
               

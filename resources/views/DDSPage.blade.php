@@ -3,7 +3,7 @@
 <title>Dcube | DDS Page</title>
 @stop
 @section('BaseContent')
-<style type="text/css">
+<!-- <style type="text/css">
 body{
   background-image: url(../../assets/vendor/img/bg.png);
    min-height: 500px;
@@ -17,8 +17,8 @@ body{
     background-size: cover;
 
 }
-</style>  
-<div class="container-fluid">
+</style>  --> 
+<div class="container-fluid bg">
   <!-- <div class="visualization"> -->
     <div class="row" style="margin-top: 100px">
       <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 box-left" >
