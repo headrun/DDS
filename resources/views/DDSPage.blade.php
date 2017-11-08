@@ -8,7 +8,7 @@
   <div class="visualization">
     <div class="row">
       <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 box-left" >
-          <label class="welcome"> DDS <br> Data Foundation </b><br>
+          <label class="welcome">DDS<br><b>Data Foundation</b><br>
             <span class="message">Setup Projects, edit <br> and conduct maintanace <br> of data Foundation.</span>
           </label>
           

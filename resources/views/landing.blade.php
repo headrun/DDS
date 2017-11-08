@@ -3,9 +3,10 @@
 <title>Dcube | Landing Page</title>
 @stop
 @section('BaseContent')
-
+<body>
 <div class="container-fluid">
   <div class="visualization">
+    <div class="panel-body">
     <div class="row">
       <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 box-left" >
           <label class="welcome"> Hello <b>{{ Auth::user()->name }},</b><br>
@@ -17,14 +18,15 @@
          <div class="row" style="margin-top:  20px">
            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
               <div class="panel panel-default">
-                <button class="box" value="1"><div class="panel-body">
-                  <div class="row">
-                    <div class="col-md-3">
+                <button class="box" value="1">
+                  <div class="panel-body">
+                    <div class="row">
+                      <div class="col-md-3">
                   
                       <img src="{{url()}}/assets/vendor/img/setting.png" >
-                    </div>
+                      </div>
                     <div class="col-md-9">
-                      <label class="head">DDS Data Foundation<br></label>
+                      <label class="head">DDS Data Foundation</label>
                         <label class="body">Setup Projects, edit and conduct maintanace of data Foundation 
                       </label>
                     </div>
@@ -43,7 +45,7 @@
                     <img src="{{url()}}/assets/vendor/img/iris.png" >
                   </div>
                   <div class="col-md-9">
-                    <label class="head">DDS Iris<br></label>
+                    <label class="head">DDS Iris</label>
                       <label class="body">Create new data sets to visualize new KPIs and implement custom models 
                     </label>
                   </div>
@@ -64,7 +66,7 @@
                     <img src="{{url()}}/assets/vendor/img/analytics.png" >
                   </div>
                   <div class="col-md-9">
-                    <label class="head">Analytics Work Bench<br></label>
+                    <label class="head">Analytics Work Bench</label>
                       <label class="body">Publish, edit or customize pre-built dashboards for organization 
                     </label>
                   </div>
@@ -83,7 +85,7 @@
                     <img src="{{url()}}/assets/vendor/img/data.png" >
                   </div>
                   <div class="col-md-9">
-                    <label class="head">Data Science Sandbox <br></label>
+                    <label class="head">Data Science Sandbox</label>
                       <label class="body">Collabrate, build and publish advance analytics workflows 
                     </label>
                   </div>
@@ -104,8 +106,8 @@
                 
                   <img src="{{url()}}/assets/vendor/img/project.png">
                   </div>
-                    <div class="col-md-9">
-                      <label class="head">Project Monitor<br></label>
+                     <div class="col-md-9">
+                      <label class="head">Project Monitor</label>
                         <label class="body">Monitor cluster, connections and overall project health 
                         </label>
                       </div>
@@ -122,7 +124,9 @@
       </div>
     </div>
   </div>
+  </div>
 </div>
+</body>
 @stop
 @section('BaseJSLib')
 <script type="text/javascript">

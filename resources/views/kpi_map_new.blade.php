@@ -21,7 +21,7 @@
               </div>
               <div class="row" style="margin-left: 100px">
                 <div class="col-md-3">
-                  <a href="#" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/set_ up_new_project.png"><br>Setup New Project</a>
+                  <a href="#" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/setting.png"><br>Setup New Project</a>
                 </div>
                 <div class="col-md-3">
                   <a href="#" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/ingest.png"><br>Ingeset Data</a>
@@ -94,8 +94,7 @@
                     </div>
                       <div class="row">  
                           <div class="widget col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                              <h4><span class="label label-primary">Choose a Project</span></h4>
-                              <br>
+                              <h4><label class="kpi-label">Choose a Project</label></h4>
                               <form style="padding-left: 50px" id="choose_project">
                                   @if(isset($exePrjData))
                                     @foreach($exePrjData as $data)
@@ -114,8 +113,6 @@
                               </form>
                           </div>
                           <div class="widget col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                              <h4><span class="label label-primary">Choose Project Subtype</span></h4>
-                              <br>
                               <div class="selecting" id="selecting"></div>
                           </div>
 
@@ -123,9 +120,7 @@
                       
                       
                       
-                          <div class="widget col-lg-5 col-md-5 col-sm-5 col-xs-5">
-                              <h4><span class="label label-primary">Data Tables</span></h4>
-                              <br>
+                          <div class="widget col-lg-5 col-md-5 col-sm-5 col-xs-5">                                
                               <form action='{{url()}}/ingestion' method='post' id = 'group'>
                               {{ csrf_field() }}
                                 <div id="d-tables" class="row">
@@ -1487,6 +1482,7 @@
   function projectType(){
     var prjType = ['Pre Launch','Brand Launch','RWE','Digital Analytics','Social Media','Supply Chain','New Projecct'];
     var prjTypeArr = '<select class="form-control" id="choose_project1" style="margin-left: -30px;">';
+    prjTypeArr += '<option selected disabled></option>';
 
     for (var i = 0; i < prjType.length; i++) {
       if ($('#exeProjTypeCheck').val() == prjType[i]) {
@@ -1740,9 +1736,10 @@ $(document).on('change', '#choose_project1', function()
 
             var d = response.data;
             var test = response.data;
-            var data ='<div class="row"><div class="col-md-6"><h4>Data Tables</h4></div>';
-            var bdf = '<div class="row"><div class="col-md-6"><h4>Bridge Files</h4></div><div class="col-md-6">';
-            var dim = '<div class="row"><div class="col-md-6"><h4>Dimension table (Optional)</h4></div><div class="col-md-6">';
+            var data ='<h4><label style="font-size: 15px;">Data Tables</label></h4>';
+            data +='<div class="row"><div class="col-md-6"><h5>Data Tables</h5></div>';
+            var bdf = '<div class="row"><div class="col-md-6"><h5>Bridge Files</h5></div><div class="col-md-6">';
+            var dim = '<div class="row"><div class="col-md-6"><h5>Dimension table (Optional)</h5></div><div class="col-md-6">';
             data += "<div class = 'col-md-6'>";
             for (var ele = 0; ele < test.length; ele++) {
               d = test[ele];
