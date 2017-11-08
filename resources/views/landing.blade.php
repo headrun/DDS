@@ -3,25 +3,38 @@
 <title>Dcube | Landing Page</title>
 @stop
 @section('BaseContent')
-<body>
+<style type="text/css">
+body{
+  background-image: url(../../assets/vendor/img/bg.png);
+   min-height: 500px;
+    /* Set background image to fixed (don't scroll along with the page) */
+    background-attachment: fixed;
+    /* Center the background image */
+    background-position: center;
+    /* Set the background image to no repeat */
+    background-repeat: no-repeat;
+    /* Scale the background image to be as large as possible */
+    background-size: cover;
+
+}
+</style>
+
 <div class="container-fluid">
-  <div class="visualization">
-    <div class="panel-body">
-    <div class="row">
+  <!-- <div class="visualization"> -->
+    <div class="row" style="margin-top: 100px">
       <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 box-left" >
           <label class="welcome"> Hello <b>{{ Auth::user()->name }},</b><br>
             <span class="message">Welcome to D-Cube's <br>Digital Discovery Suite.</span>
           </label>
           
       </div>
-      <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7" >
+      <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7 " >
          <div class="row" style="margin-top:  20px">
            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-              <div class="panel panel-default">
-                <button class="box" value="1">
-                  <div class="panel-body">
-                    <div class="row">
-                      <div class="col-md-3">
+              <button class="tt" value="1"><div class="panel panel-default box">
+                <div class="panel-body">
+                  <div class="row">
+                    <div class="col-md-3">
                   
                       <img src="{{url()}}/assets/vendor/img/setting.png" >
                       </div>
@@ -31,13 +44,13 @@
                       </label>
                     </div>
                   </div>   
-                </div></button>
-              </div>
+                </div>
+              </div></button>
            </div>
 
            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-              <div class="panel panel-default">
-                <button class="box" value="2">
+              <button class="tt" value="2"><div class="panel panel-default box">
+                
                 <div class="panel-body">
                 <div class="row">
                   <div class="col-md-3">
@@ -50,15 +63,15 @@
                     </label>
                   </div>
                 </div>   
-              </div></button>
-            </div>
+              </div>
+            </div></button>
            </div>
 
          </div>
          <div class="row">
            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-              <div class="panel panel-default">
-                <button class="box" value="3">
+              <button class="tt" value="3"><div class="panel panel-default box">
+                
                 <div class="panel-body">
                 <div class="row">
                   <div class="col-md-3">
@@ -71,19 +84,18 @@
                     </label>
                   </div>
                 </div>   
-              </div></button>
-            </div>
+              </div>
+            </div></button>
            </div>
 
            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-              <div class="panel panel-default">
-                <button class="box" value="4">
-                <div class="panel-body">
-                <div class="row">
-                  <div class="col-md-3">
-                
-                    <img src="{{url()}}/assets/vendor/img/data.png" >
-                  </div>
+              <button class="tt" value="4">
+                <div class="panel panel-default box">
+                  <div class="panel-body">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <img src="{{url()}}/assets/vendor/img/data.png" >
+                    </div>
                   <div class="col-md-9">
                     <label class="head">Data Science Sandbox</label>
                       <label class="body">Collabrate, build and publish advance analytics workflows 
@@ -91,15 +103,16 @@
                   </div>
                 </div>   
               </div>
-            </button>
             </div>
+            </button>
            </div>
 
          </div>
-         <div class="row">
-          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-            <div class="panel panel-default">
-              <button class="box" value="5">
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            
+            <button class="tt" value="5">  
+            <div class="panel panel-default box">
               <div class="panel-body">
                 <div class="row">
                   <div class="col-md-3">
@@ -113,10 +126,11 @@
                       </div>
                     </div>
                 </div>   
-              </button>
+              
+            </div>
+            </button>
             </div>
           </div>
-        </div>
 
            
 
@@ -131,8 +145,8 @@
 @section('BaseJSLib')
 <script type="text/javascript">
   $(document).ready(function(){
-    $('.box').on('click',function(){
-      console.log('reached');
+    $('.tt').on('click',function(){
+      // console.log('$(this).val()');
       if($(this).val() == '1')
       {
         window.location.href ="{{url()}}/ddspage";
