@@ -9,11 +9,11 @@
       <div class="top-div1">
           <div class="row widget-1">
             <div class="widget-title-box" >
-              <div class="widget-icon"><img src="{{url()}}/assets/vendor/img/new_document_add.png"></div>	
+              <div class="widget-icon"><img src="{{url()}}/assets/vendor/img/extlibrary.png" style="width:25px;height:40px; margin-left: 27px;"></div>	
               	<h3 class="widget-title">KPI LIBRARY</h3>
             </div>
               	<!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> -->
-                  <div class="panel panel-default" style="border-bottom: 4px solid #8bc34a;     padding: 20px;">
+                  <div class="panel panel-default" style="padding: 20px;">
                     <div class="panel-body">
                       <div class = "row">
                         <div class= "col-md-2">
