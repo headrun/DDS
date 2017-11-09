@@ -72,15 +72,15 @@
         
       </a>
       <li class="dropdown-logout">
-          <a href="#" class="dropdown-logout" data-toggle="dropdown-logout" style="padding: 28px 0 0 15px; color: #C8CAD2; font-size: 15px; font-weight: 600; margin-left: 90px">
+          <a href="#" class="dropdown-logout" style="padding: 28px 0 0 15px; color: #C8CAD2; font-size: 15px; font-weight: 600; margin-left: 90px">
             
              Logged In as , {{ Auth::user()->name }}</span>
           </a>
 
-          <ul class="dropdown-logout-content">
-              <!-- <li><a href="{{ url('/new-invent/'.Auth::User()->id) }}">New invention</a></li> -->
+          <!-- <ul class="dropdown-logout-content">
+              <li><a href="{{ url('/new-invent/'.Auth::User()->id) }}">New invention</a></li>
               
-          </ul>
+          </ul> -->
           <!-- <div class="nav navbar-nav" style="padding: 28px 0 0 15px; color: #0D596B; font-size: 15px; font-weight: 600">
             <i class="fa fa-user-circle-o" aria-hidden="true" style="font-size: 18px"></i> vinay</div> -->
         </li>
