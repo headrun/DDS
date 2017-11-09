@@ -67,29 +67,19 @@
         <i aria-hidden="true" class="fa fa-bars"></i> 
       </a>-->
       
-      <a href="{{url()}}/dashboard" class="pull-left brand more-padding">
+      <a href="{{url()}}/landing" class="pull-left brand more-padding">
           <img src="{{url()}}/assets/vendor/img/dcube_new.png" class="primarylogo"  style="width: 100px; height: 50px; margin-top: -10px; margin-left: -10px">
         
       </a>
       <li class="dropdown-logout">
           <a href="#" class="dropdown-logout" data-toggle="dropdown-logout" style="padding: 28px 0 0 15px; color: #C8CAD2; font-size: 15px; font-weight: 600; margin-left: 90px">
-            <i class="fa fa-user-circle-o" aria-hidden="true"></i>
-             Hi, {{ Auth::user()->name }} <span class="caret"></span>
+            
+             Logged In as , {{ Auth::user()->name }}</span>
           </a>
 
           <ul class="dropdown-logout-content">
               <!-- <li><a href="{{ url('/new-invent/'.Auth::User()->id) }}">New invention</a></li> -->
-              <li>
-                  <a href="{{ url('/logout') }}"
-                     onclick="event.preventDefault();
-                           document.getElementById('logout-form').submit();">
-                      Logout
-                  </a>
-
-                  <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-                      {{ csrf_field() }}
-                  </form>
-              </li>
+              
           </ul>
           <!-- <div class="nav navbar-nav" style="padding: 28px 0 0 15px; color: #0D596B; font-size: 15px; font-weight: 600">
             <i class="fa fa-user-circle-o" aria-hidden="true" style="font-size: 18px"></i> vinay</div> -->
@@ -190,9 +180,22 @@
           </a>
         </li>
         <li>
-          <img class="pull-right" src="{{url()}}/DDS Logo-02.png" style="width:100px; height:50px; margin-top:10px;">
+            <a href="{{ url('/logout') }}"
+               onclick="event.preventDefault();
+                     document.getElementById('logout-form').submit();">
+                <img class="pull-right" src="{{url()}}/logout.png" style="width:20px; height:20px; margin-top: 10px; " title="Logout">
+            </a>
+
+            <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                {{ csrf_field() }}
+            </form>
+        </li>
+
+        <li style="padding: 5px;margin-left: 20px; border-width: 0px 0px  0px 1px; border-style: inset">
+          <img class="pull-right" src="{{url()}}/DDS Logo-02.png" style="width:100px; height:50px; margin-top:5px;">
           
-      </li>        
+      </li>   
+
         
         
       </ul>
