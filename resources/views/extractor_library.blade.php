@@ -3,16 +3,19 @@
 <title>Dcube | Extractor Library</title>
 @stop
 @section('BaseContent')
-<div class="container-fluid dashboard-content">
+<div class="container-fluid bg">
   <div class="visualization">
-      <div class="top-div">
+      <div class="top-div1">
           <div class="row widget-1">
-              <div class="widget-icon"><img src="{{url()}}/assets/vendor/img/new_document_add.png"></div>
+            <div class="widget-title-box">
+              <div class="widget-icon"><img src="{{url()}}/assets/vendor/img/extlibrary.png" style="width:25px;height:40px; margin-left: 27px;">
+              </div>
               <h3 class="widget-title">Extract Library</h3>
-              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                  <div class="panel panel-default" style="border-bottom: 4px solid #8bc34a;     padding: 20px;">
+            </div>
+              <!-- <div class="col-lg-1 2 col-md-12 col-sm-12 col-xs-12"> -->
+                  <div class="panel panel-default" style="padding: 30px;">
                       <div class="row">
-                          <div class="widget col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                          <!-- <div class="widget col-lg-12 col-md-12 col-sm-12 col-xs-12"> -->
                             <table class="table" style="font-size:14px" id="mainTable">
                               <thead>
                                 <tr>
