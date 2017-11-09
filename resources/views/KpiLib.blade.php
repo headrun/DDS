@@ -3,18 +3,23 @@
 <title>Dcube | KPI Library</title>
 @stop
 @section('BaseContent')
-<div class="container-fluid dashboard-content">
+
+<div class="container-fluid bg">
   <div class="visualization">
-      <div class="top-div">
+      <div class="top-div1">
           <div class="row widget-1">
+            <div class="widget-title-box" >
               <div class="widget-icon"><img src="{{url()}}/assets/vendor/img/new_document_add.png"></div>	
               	<h3 class="widget-title">KPI LIBRARY</h3>
-              	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            </div>
+              	<!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> -->
                   <div class="panel panel-default" style="border-bottom: 4px solid #8bc34a;     padding: 20px;">
+                    <div class="panel-body">
                       <div class = "row">
                         <div class= "col-md-2">
                           <label style="padding: 5px">Select View:</label>
                         </div>
+
                         <div class="col-md-3">
                           <select class="form-control " id='proj_name' style="margin-top: -5px; width: 220px; margin-left: -70px">
                                 <option></option>
@@ -28,21 +33,22 @@
                                 </select>
                               </div>
                             </div>
+                          <hr>
                             <div class ='row'>
                         <div class = "col-md-2">
-                          <label class=''>View Name</label>
+                          <label class='headers'>View Name</label>
                         </div>
                         <div class = "col-md-2">
-                          <label class =''>KPI</label>
+                          <label class ='headers'>KPI</label>
                         </div>
                         <div class = "col-md-3">
-                          <label class =''>KPI Description</label>
+                          <label class ='headers'>KPI Description</label>
                         </div>
                         <div class = "col-md-2">
-                          <label class =''>Calculations</label>
+                          <label class ='headers'>Calculations</label>
                         </div>
                         <div class = "col-md-3">
-                          <label class =''>Dimensions</label>
+                          <label class ='headers'>Dimensions</label>
                         </div>
                       </div>
                       <div id="adding">

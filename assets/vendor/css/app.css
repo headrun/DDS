@@ -306,6 +306,13 @@ a{
     margin-left: 0px;
 }
 
+.headers{
+    font-size: 20px;
+    text-align: center;
+    padding: 20px;
+    font-family: ProximaNova;
+}
+
 .widget-2 {
 	font-family: ProximaNova;
     padding-left: 20px;
@@ -317,7 +324,7 @@ a{
 .widget-title-box{
     border-radius: 0px;
     border-style: inset;
-    border-width: 1px;
+    border-width: 2px;
     border-color: #161C32;
     font-weight: 600;
     background-color: #161C32
