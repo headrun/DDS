@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="{{url()}}/assets/vendor/css/breadcrumb.css">
 @stop
 @section('BaseContent')
-<div class="container-fluid">
+<div class="container-fluid bg">
   <div class="visualization">
       <div class="" style="padding: 10px">
           <div class="panel panel-default" style=" background-color: #FCFCFC; margin-left: -15px; margin-right: -15px;">
@@ -18,7 +18,7 @@
                   
                 </div>
               </div>
-              <div class="row" style="margin-left: 100px">
+              <div class="row" style="text-align: center">
                 @if(isset($proj_id))
                 <div class="col-md-3">
                  <a href="{{url()}}/setup_new_proj/{{$project_id}}" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/set_up_new_project.png"><br>Setup New Project</a>

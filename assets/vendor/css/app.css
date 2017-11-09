@@ -218,7 +218,7 @@
 }
 .progress{
     height : 7px;
-    width: 65%;
+    width: 73%;
     position: absolute;
     left : 180px;
     top : 100px; 
@@ -276,7 +276,7 @@ a{
 	height: 100%;
     padding: 0 2px 50px 2px;
     margin-top: 70px;
-    background: #ffffff;
+    /*background: #ffffff;*/
 
 
 }

@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="{{url()}}/assets/vendor/css/breadcrumb.css">
 @stop
 @section('BaseContent')
-<div class="container-fluid">
+<div class="container-fluid bg">
   <div class="visualization">
       <div class="" style="padding: 10px">
 
@@ -19,9 +19,9 @@
                   
                 </div>
               </div>
-              <div class="row" style="margin-left: 100px">
+              <div class="row" style="text-align: center">
                 <div class="col-md-3">
-                  <a href="#" class="active">
+                  <a href="#" class="active ">
                     <img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/set_up_new_project.png"><br>Setup New Project</a>
                 </div>
                 <div class="col-md-3">
@@ -41,10 +41,10 @@
               <div class="widget-icon"><img src="{{url()}}/assets/vendor/img/setup_new_project.png" style="width:25px;height:45px; margin-left: 27px;"></div>
               <h3 class="widget-title">Setup New Project</h3></div>
               <div>
-                  <div class="panel panel-default" style="border-bottom: 4px solid #8bc34a; padding: 10px; background-color: #Fff; ">
+                  <div class="panel panel-default" style="border-bottom: 4px solid #8bc34a; padding: 30px; background-color: #Fff; ">
                     <div class = 'project ' style="padding: 10px">
                       <div class= 'row' >
-                        <div class = 'col-md-4'>
+                        <div class = 'col-md-3'>
                           @if(isset($exePrjData))
                             @foreach($exePrjData as $data)
                               <input type = 'text' class ='form-control' style="width: 100% ; text-align: left;" placeholder="Enter Project Name" id= 'project_text' value="{{$data->proj_name}}">
@@ -55,9 +55,9 @@
                         </div>
                         
                         
-                        <div class = 'col-md-3' style = 'display: -webkit-inline-box;'>
+                        <div class = 'col-md-4' style = 'display: -webkit-inline-box;'>
                         <span class='btn btn default'>TA:</span>
-                        <select class='form-control' " id= 'ta' style="width: 90%">
+                        <select class='form-control' id= 'ta' style="width: 90%">
                           <option></option>
                           @if(isset($exePrjData))
                             @foreach($exePrjData as $data)
@@ -72,7 +72,7 @@
                           @endif
                         </select>
                         </div>
-                        <div class = 'col-md-3' style = 'display: -webkit-inline-box;''>
+                        <div class = 'col-md-4' style = 'display: -webkit-inline-box;''>
                         <span class='btn btn default'>FA:</span>
                         
                         <select class='form-control' " id = 'fa' style="width: 90%";>
@@ -94,9 +94,9 @@
                       </div>
                     </div>
                       <div class="row">  
-                          <div class="widget col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                          <div class="widget col-lg-4 col-md-4 col-sm-4 col-xs-4">
                               <h5><label class="kpi-label">Choose A Project</label></h5>
-                              <form style="padding-left: 50px" id="choose_project">
+                              <form style="padding-left: 40px" id="choose_project">
                                   @if(isset($exePrjData))
                                     @foreach($exePrjData as $data)
                                       <input type="hidden" name="exeProjTypeCheck" id="exeProjTypeCheck" value="{{$data->proj_type}}">
@@ -113,7 +113,7 @@
 
                               </form>
                           </div>
-                          <div class="widget col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                          <div class="widget col-lg-4 col-md-4 col-sm-4 col-xs-4">
                               <div class="selecting" id="selecting"></div>
                           </div>
 
@@ -121,7 +121,7 @@
                       
                       
                       
-                          <div class="widget col-lg-5 col-md-5 col-sm-5 col-xs-5">                                
+                          <div class="widget col-lg-4 col-md-4 col-sm-4 col-xs-4">                                
                               <form action='{{url()}}/ingestion' method='post' id = 'group'>
                               {{ csrf_field() }}
                                 <div id="d-tables" class="row">

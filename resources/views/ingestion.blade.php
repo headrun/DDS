@@ -17,7 +17,7 @@
                   
                 </div>
               </div>
-              <div class="row" style="margin-left: 100px">
+              <div class="row" style="text-align: center">
                 <div class="col-md-3">
                   @if(isset($proj_id))
                     <a href="{{ url()}}/setup_new_proj/{{$proj_id}}" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/set_up_new_project.png"><br>Setup New Project</a>
