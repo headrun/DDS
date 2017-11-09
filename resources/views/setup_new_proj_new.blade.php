@@ -14,7 +14,7 @@
             <div class="panel-body  ">
               <div class="progress">
                 <div class="progress-bar" role="progressbar" aria-valuenow="70"
-                aria-valuemin="0" aria-valuemax="100" style="width:75%;">
+                aria-valuemin="0" aria-valuemax="100" style="width:65%;">
                   
                 </div>
               </div>
@@ -30,7 +30,7 @@
                   <a href="javascript:history.back()" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/mappingkpi.png"><br>Map Data</a> 
                 </div>
                 <div class="col-md-3">
-                  <a href="#" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/kpi.png"><br>Mapping KPI</a>
+                  <a href="#" class="active"><img class="progress1 img-circle mapping_kpi" src="{{url()}}/assets/vendor/img/kpi.png"><br>Mapping KPI</a>
                 </div>
                 @else
                 <div class="col-md-3">
@@ -43,7 +43,7 @@
                   <a href="javascript:history.back()" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/mapdata.png"><br>Map Data</a>
                 </div>
                 <div class="col-md-3">
-                  <a href="#" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/kpi.png"><br>Mapping KPI</a>
+                  <a href="#" class="active" id="mapping_kpi"><img class="progress1 img-circle mapping_kpi" src="{{url()}}/assets/vendor/img/kpi.png"><br>Mapping KPI</a>
                 </div>
                 @endif
               </div>
@@ -306,7 +306,7 @@
 <script type="text/javascript">
   
 $(document).ready(function(){
-
+    var progress_bar = 65;
   // $('#kpimap').hide();
   // $('#savedFlows').hide();
   // $('.savedData').hide();
@@ -620,10 +620,28 @@ $(document).on('change', '.geo1', function()
         $(this).closest('.dime').find('.geoo').val(x+"("+widget_array1+")");
         console.log($(this).closest('.dime').find('.geoo').val()); 
 });
+$('.kpiArr').change(function(){
+  if (progress_bar < 80) {
+  progress_bar = progress_bar + 5;
+  $('.progress-bar').css("width",progress_bar+"%");}
+});
+$('.calSubKpi').change(function(){
+  if (progress_bar < 85) {
+  progress_bar = progress_bar + 5;
+  $('.progress-bar').css("width",progress_bar+"%");}
+});
+$('.kpi_dim').change(function(){
+  if (progress_bar < 95) {
+  progress_bar = progress_bar + 5;
+  $('.progress-bar').css("width",progress_bar+"%");}
+});
+ 
 
 // change view
 $('#proj_name').change(function(){
   var kpiKey = $(this).val();
+  progress_bar = progress_bar + 10;
+  $('.progress-bar').css("width",progress_bar+"%");
   $('#viewType').val(kpiKey);
   if (kpiKey != '') {
     $('.wrongSelection').hide(); // wrong selection message
@@ -849,6 +867,7 @@ $('body').on('click', '.edit-flow', function(){
 
   $('#save_btn').click(function(e){
       e.preventDefault();
+  
       var dim_arr = [],
           kpi_arr = [],
           sub_kpi_arr = [],
@@ -944,7 +963,8 @@ $('body').on('click', '.edit-flow', function(){
           }
         }
       });
-      
+      $('.progress-bar').css("width","100%");   
+      $('.mapping_kpi').attr("src","{{url()}}/assets/vendor/img/mappingkpi.png");   
   });
 });
 </script>
