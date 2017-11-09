@@ -59,7 +59,7 @@
               
 
          
-                <div class="panel panel-default" style="border-bottom: 4px solid #8bc34a;     padding: 20px;">
+                <div class="panel" style="padding: 20px;">
                       @if(isset($project_type))
                       <div class = "row">
                         <div class= "col-md-2">
