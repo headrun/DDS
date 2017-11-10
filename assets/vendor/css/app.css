@@ -75,6 +75,30 @@ body{
     color: #000;
     cursor: pointer;
 }
+.lab {
+  font-family: ProximaNova;
+  color:  #666666;
+  font-size: 12px;/* Approximation due to font substitution */
+  font-weight: 300;
+  line-height: 20.988px;/* Approximation due to font substitution */
+  text-align: left;
+}
+.lab2{
+    font-family: ProximaNova;
+    color:  #666666;
+    font-size: 13px;/* Approximation due to font substitution */
+    font-weight: 300;
+    line-height: 20.988px;/* Approximation due to font substitution */
+    text-align: left
+}
+.lab1{
+    font-family: ProximaNova;
+    color:  rgba(0, 0, 0, 0.8);
+    font-size: 18px;/* Approximation due to font substitution */
+    font-weight: 700;
+    line-height: 20.988px;/* Approximation due to font substitution */
+    text-align: left;
+}
 .kpi-label{
     padding-left: 20px; 
     font-size: 15px;

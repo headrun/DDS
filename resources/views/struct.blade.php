@@ -101,16 +101,18 @@
 
                               </tbody>
                             </table>
+                            <div class="row" style="padding-top:20px;">
+                              <button class= 'btn btn-default center-block' id="map_data" data-toggle="modal" data-target="#mpsldt">Map Selected Data</button>
+                            </div>
                             <form action="{{url()}}/kpi_map_new">
-                              <div class="row">
+                              <div class="row" style="padding-top:20px;">
                               <input type="hidden" name="forword_project_id" id="forword_project_id" value="{{ $proj_id }}">
-                              <button type="submit" class= 'btn btn-default mapping_selected_btn center-block' disabled>KPI Mapping</button>
+                              <button type="submit" class= 'btn btn-success mapping_selected_btn center-block' style="margin-bottom: 30px; margin-top: 30px; width: 230px"  disabled>
+                              Proceed To KPI Mapping</button>
                             </div>
                             </form>
 
-                            <div class="row">
-                              <button class= 'btn btn-success center-block' id="map_data" data-toggle="modal" data-target="#mpsldt" style="margin-bottom: 30px; margin-top: 30px; width: 230px" >Map Selected Data</button>
-                            </div>
+                            
                           </div>
                           
                       </div>

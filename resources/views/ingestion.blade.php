@@ -138,7 +138,7 @@
                                             <button class="btn btn-default btn-sm give_inputs">Give Inputs</button>
                                         </td>
                                         <td class="last_col_tick">
-                                          <i class="fa fa-check fa-2x" style="color: green" aria-hidden="true"></i>
+                                          <i class="fa fa-check fa-2x" style="color: #AFC69B" aria-hidden="true"></i>
                                         </td>
                                       </tr>
                                       
@@ -274,20 +274,20 @@
       <div class="modal-body">
         <div class="row">
             <div class="col-md-12">
-                <h4><label>Connection</label></h4>
+                <h4><label class="lab1">Connection</label></h4>
                 <div class="row">
-                    <div class="col-md-10">
+                    <div class="col-md-8">
                         <div class="form-group">
-                          <label for="hostName">Host Name:</label>
+                          <label class="lab" for="hostName">Host Name</label>
                           <input type="text" id="hostName" name="hostName" class="form-control">
                           <input type="hidden" name="ext_name" id="db_ext_name">
                           <input type="hidden" name="dbTypeName" id="dbTypeName">
                           <input type="hidden" name="dbDataKey" id="dbDataKey">
                         </div>  
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-4">
                         <div class="form-group">
-                          <label for="portNo">Port:</label>
+                          <label class="lab" for="portNo">Port</label>
                           <input type="text" id="portNo" name="portNo" class="form-control">
                         </div>
                     </div>
@@ -295,7 +295,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group">
-                          <label for="dbTypeEmail">Database Name:</label>
+                          <label class="lab" for="dbTypeEmail">Database Name</label>
                           <input type="text" id="dbTypeEmail" name="dbTypeEmail" class="form-control">
                         </div>  
                     </div>
@@ -303,7 +303,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group">
-                          <label for="tableName">Table Name:</label>
+                          <label class="lab" for="tableName">Table Name</label>
                           <input type="text" id="tableName" name="tableName" class="form-control">
                         </div>  
                     </div>
@@ -311,7 +311,7 @@
 
                 <!-- second row-->
 
-                <h4 style="padding-top: 20px;"><label>Authentication</label></h4>
+                <h4 style="padding-top: 10px;"><label class="lab1">Authentication</label></h4>
                 <!-- <div class="radio-inline">
                   <input type="radio" name="optradio">Use Credintials
                 </div>
@@ -326,7 +326,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group">
-                          <label for="userName">Username:</label>
+                          <label class="lab" for="userName">Username</label>
                           <input type="text" id="userName" name="userName" class="form-control">
                         </div>  
                     </div>
@@ -335,30 +335,20 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group">
-                          <label for="dbTypePassword">Password:</label>
+                          <label class="lab" for="dbTypePassword">Password</label>
                           <input type="password" id="dbTypePassword" name="dbTypePassword" class="form-control">
                         </div>  
                     </div>
                 </div>
 
                 <!-- third row-->
-
-                <h4 style="padding-top: 20px;"><label>Timezone Correction</label></h4>
                 <div class="row">
+                  <div class="col-md-12">
                     <div class="col-md-6" id="time_zone">
-                        <div class="radio-inline">
-                          <input type="radio" name="optradio" class="optradio" value="No Correction (Use UTC)">No Correction (Use UTC)
-                        </div>
-                        <br>
-                        <div class="radio-inline">
-                          <input type="radio" name="optradio" class="optradio" value="Use Local Timezone">Use Local Timezone
-                        </div>
-                        <br>
-                        <div class="radio-inline">
-                          <input type="radio" name="optradio" class="optradio" value="Use Slected Timezone">Use Selected Timezone
-                        </div>
+                    <h4 style="padding-top: 10px; margin-left: -15px; "><label class="lab1">Timezone Correction</label></h4>
                     </div>
-                    <div class="col-md-6">
+
+                    <div class="col-md-6" style="padding-top: 10px;">
                         <div class="form-group">
                           <select name="dbTimeZoneLocation" id="dbTimeZoneLocation" class="form-control">
                               <option>Asia</option>
@@ -367,22 +357,41 @@
                           </select>
                         </div> 
                     </div>
+                  </div>
+                </div>  
+                <div class="row">
+                        <div class="col-md-4">
+                          <div class="radio-inline lab2">
+                          <input type="radio" name="optradio" class="optradio" value="No Correction (Use UTC)">No Correction (Use UTC)
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="radio-inline lab2">
+                          <input type="radio" name="optradio" class="optradio" value="Use Local Timezone">Use Local Timezone
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="radio-inline lab2">
+                          <input type="radio" name="optradio" class="optradio" value="Use Slected Timezone">Use Selected Timezone
+                          </div>
+                        </div>
                 </div>
+                    
 
                 <!-- foutth row-->
 
-                <h4><label>Misc</label></h4>
+                <h4 style="padding-top: 10px;"><label class="lab1">Misc</label></h4>
                 <div class="row">
                     <div class="col-md-12" id="miscChckbox">
-                        <div class="checkbox">
-                          <label><input type="checkbox" class="time_zone" name="miscChecked[]" value="Allow Spaces in column names">Allow Spaces in column names</label>
-                        </div>
-                        <div class="checkbox">
-                          <label><input type="checkbox" class="time_zone" name="miscChecked[]" value="Validate connections on close">Validate connections on close</label>
-                        </div>
-                        <div class="checkbox">
-                          <label><input type="checkbox" class="time_zone" name="miscChecked[]" value="Retrieve metadata in config">Retrieve metadata in config</label>
-                        </div>
+                        <!-- <div class="checkbox"> -->
+                          <label class="lab2"><input type="checkbox" class="time_zone" name="miscChecked[]" value="Allow Spaces in column names">Allow Spaces In Column Names</label>
+                        <!-- </div> -->
+                        <!-- <div class="checkbox"> -->
+                          <label class="lab2" style="margin-left: 20px"><input type="checkbox" class="time_zone" name="miscChecked[]" value="Validate connections on close">Validate Connections On Close</label><br>
+                        <!-- </div> -->
+                        <!-- <div class="checkbox"> -->
+                          <label class="lab2"><input type="checkbox" class="time_zone" name="miscChecked[]" value="Retrieve metadata in config">Retrieve Metadata In Config</label>
+                        <!-- </div> -->
                     </div>
                 </div>
                 @if(isset($values))
@@ -400,16 +409,15 @@
                       </div>
                   </div>
                 @endif
-
             </div>
         </div>
       </div>
-      <div class="modal-footer">
+      <div class="modal-footer" style="text-align: center;  ">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
-        <button type="button" class="btn btn-default modal_ok">Ok</button>
-        <button type="button" class="btn btn-default">Apply</button>
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-        <span style="margin-right: 60px;"><i class="fa fa-question-circle-o" aria-hidden="true"></i></span>
+        <button type="button" class="btn btn-default modal_ok" style="width:15%;">Ok</button>
+        <button type="button" class="btn btn-success" style="width:20%;">Apply</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal" style="width:20%;">Cancel</button>
+        <!-- <span style="margin-right: 60px;"><i class="fa fa-question-circle-o" aria-hidden="true"></i></span> -->
       </div>
       </form>
     </div>
@@ -1041,7 +1049,7 @@ var progress_bar = 35;
 
             if ($(this).closest('.each_row').find('.extractor_name').text() == window.tick) {
 
-                $(this).closest('.each_row').find('.last_col_tick').html('<i class="fa fa-check fa-2x" style="color: green" aria-hidden="true"></i>');
+                $(this).closest('.each_row').find('.last_col_tick').html('<img src="{{url()}}/assets/vendor/img/tick.png" style="width:25px;height:20px">');
 
                 $(this).closest('.each_row').find('.ingest_chkbox').prop('checked', true);
 

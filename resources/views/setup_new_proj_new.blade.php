@@ -66,7 +66,7 @@
                           <label style="padding: 5px">Enter Project Name</label>
                         </div>
                         <div class="col-md-3">
-                          <p>{{$project_type}}</p>
+                          <label style="padding-top: 10px;">{{$project_type}}</label>
                         </div>
                       </div>    
                       @endif
