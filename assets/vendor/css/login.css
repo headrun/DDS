@@ -9,38 +9,46 @@ body {
   color: #fff;
   border-radius: 0px;
   float: none !important;
-  background-color: #2C9BF4;
+  /*background-color: #FCFCFC;*/
   padding: 10px 75px 40px 75px;
   max-width: 450px;
 }
-
+.pad{
+  padding: 50px;
+  background-color: #FCFCFC;
+}
 .login-label {
-    padding:20px;
+    /*padding:20px;*/
+
+    margin-bottom: 30px;
     font-family: sans-serif; 
     font-weight: 700;
-    font-size: 16px;
+    font-size: 20px;
 }
 .abu{
   margin-left: 0px;
   margin-right: 0px;
 }
 .email {
+  background-color: #FCFCFC;
   padding:20px;
     border-top: 0;
     border-right: 0;
     border-left: 0;
-    background-image: url(../img/user_name.png);
+    background-image: url(../img/user_name.jpg);
     background-repeat: no-repeat;
     text-indent: 27px;
     background-size: 15px 18px;
     background-position: 10px;
 }
+
 .password {
+  background-color: #FCFCFC;
   padding:20px;
     border-top: 0;
     border-right: 0;
     border-left: 0;
-    background-image: url(../img/password.png);
+    background-image: url(../img/password.jpg);
     background-repeat: no-repeat;
     text-indent: 27px;
     background-size: 15px 18px;
@@ -61,10 +69,11 @@ body {
 }
 
 .footer {
-  bottom:0;
-  position:relative;
+  bottom: 0px;
+  position:absolute;
   height: 50px;
   text-align: center; 
+  vertical-align: bottom;
 
 }
 .container-fluid
@@ -77,6 +86,7 @@ body {
 }
 
 .copyright {
+  margin-left: 100px;
   color: #666;
 }
 
@@ -101,9 +111,26 @@ body {
 }
 .lhs-img {
   position: fixed;
-  width: 50%;
+  width: 40%;
   height: 100%;
   /*margin: auto;*/
+}
+.circl{
+  margin-top:  100px;
+  height: 70%;
+  width: 30%;
+}
+.logo{
+  margin-top:  170px;
+  margin-left:  70px;
+  height: 19%;
+  width: 19%; 
+}
+.text{
+  margin-top:  310px;
+  margin-left:  70px;
+  height: 19%;
+  width: 19%;  
 }
 
 .bottom{
