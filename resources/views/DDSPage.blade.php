@@ -6,7 +6,7 @@
 <!-- <style type="text/css">
 body{
   background-image: url(../../assets/vendor/img/bg.png);
-   min-height: 500px;
+   min-height: 600px;
     /* Set background image to fixed (don't scroll along with the page) */
     background-attachment: fixed;
     /* Center the background image */
@@ -21,21 +21,21 @@ body{
 <div class="container-fluid bg">
   <!-- <div class="visualization"> -->
     <div class="row" style="margin-top: 100px">
-      <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 box-left" >
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 box-left" >
           <label class="welcome">DDS<br><b>Data Foundation</b><br>
             <span class="message">Setup Projects, edit <br> and conduct maintanace <br> of data Foundation.</span>
           </label>
           
       </div>
-      <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7" >
-         <div class="row" style="margin-top:  70px">
+      <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+         <div class="row" style="margin-top:70px; margin-right: 30px; margin-left: 30px;">
            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
               <div class="panel panel-default">
                 <button class="box" value="1"><div class="panel-body">
                   <div class="row">
                     <div class="col-md-3">
                   
-                      <img src="{{url()}}/assets/vendor/img/setting.png" >
+                      <img src="{{url()}}/assets/vendor/img/set.png" >
                     </div>
                     <div class="col-md-9">
                       <label class="head">Setup Project<br></label>
@@ -54,7 +54,7 @@ body{
                 <div class="row">
                   <div class="col-md-3">
                 
-                    <img src="{{url()}}/assets/vendor/img/iris.png" >
+                    <img src="{{url()}}/assets/vendor/img/extlib.png" >
                   </div>
                   <div class="col-md-9">
                     <label class="head">Manage Extractor Library<br></label>
@@ -67,7 +67,7 @@ body{
            </div>
 
          </div>
-         <div class="row">
+         <div class="row" style="margin-right: 30px; margin-left: 30px;">
            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
               <div class="panel panel-default">
                 <button class="box" value="3">
@@ -75,7 +75,7 @@ body{
                 <div class="row">
                   <div class="col-md-3">
                 
-                    <img src="{{url()}}/assets/vendor/img/analytics.png" >
+                    <img src="{{url()}}/assets/vendor/img/rules.png" >
                   </div>
                   <div class="col-md-9">
                     <label class="head">Rule Engine<br></label>
@@ -94,7 +94,7 @@ body{
                 <div class="row">
                   <div class="col-md-3">
                 
-                    <img src="{{url()}}/assets/vendor/img/data.png" >
+                    <img src="{{url()}}/assets/vendor/img/datacat.png" >
                   </div>
                   <div class="col-md-9">
                     <label class="head">Data Catalog <br></label>

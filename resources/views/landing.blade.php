@@ -19,7 +19,7 @@
           
       </div>
       <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7 " >
-         <div class="row" style="margin-top:  20px">
+         <div class="row" style="margin-top:20px;margin-right: 20px;">
            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
               <button class="tt" value="1"><div class="panel panel-default box">
                 <div class="panel-body">
@@ -58,7 +58,7 @@
            </div>
 
          </div>
-         <div class="row">
+         <div class="row" style="margin-right: 20px;">
            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
               <button class="tt" value="3"><div class="panel panel-default box">
                 
@@ -98,7 +98,7 @@
            </div>
 
          </div>
-          <div class="row">
+          <div class="row" style="margin-right: 20px;">
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
             
             <button class="tt" value="5">  

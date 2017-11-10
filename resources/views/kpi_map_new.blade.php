@@ -25,7 +25,7 @@
                     <img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/set_up_new_project.png"><br>Setup New Project</a>
                 </div>
                 <div class="col-md-3">
-                  <a href="#" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/ingest.png"><br>Ingeset Data</a>
+                  <a href="#" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/ingest.png"><br>Ingest Data</a>
                 </div>
                 <div class="col-md-3">
                   <a href="#" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/map.png"><br>Map Data</a>
@@ -1709,7 +1709,7 @@ $(document).on('change', '#choose_project1', function()
    {
       var widget_array1 =  [];
       var widget_array =  [];
-      $('.progress-bar').css("width","30%");
+      $('.progress-bar').css("width","35%");
       widget_array1 = [$('#project_text').val(),$('#ta').val(),$('#fa').val()];
       // console.log(widget_array1);
       $('.form-group input[type="checkbox"]:checked').each(function(){ 

@@ -24,7 +24,7 @@
                  <a href="{{url()}}/setup_new_proj/{{$project_id}}" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/set_up_new_project.png"><br>Setup New Project</a>
                 </div>
                 <div class="col-md-3">
-                  <a href="{{url()}}/ingestion/{{$project_id}}" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/ingest_data.png"><br>Ingeset Data</a>
+                  <a href="{{url()}}/ingestion/{{$project_id}}" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/ingest_data.png"><br>Ingest Data</a>
                 </div>
                 <div class="col-md-3">
                   <a href="javascript:history.back()" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/mappingkpi.png"><br>Map Data</a> 

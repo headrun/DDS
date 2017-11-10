@@ -32,7 +32,7 @@
                   
                 </div>
                 <div class="col-md-3">
-                  <a href="{{url()}}/ingestion/{{ $proj_id }}" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/ingest_data.png"><br>Ingeset Data</a>
+                  <a href="{{url()}}/ingestion/{{ $proj_id }}" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/ingest_data.png"><br>Ingest Data</a>
                 </div>
                 <div class="col-md-3">
                   <a href="#" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/mapdata.png"><br>Map Data</a>

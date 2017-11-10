@@ -26,6 +26,15 @@
     @yield('BaseCSSLib')
 
     <style>
+    p{
+      font-family: ProximaNova; 
+      color: #ffffff; 
+      padding: 28px 0 0 15px;
+      color: #C8CAD2;
+      font-size: 13px; 
+      font-weight: 600; 
+      margin-left: 50px
+    }
       .dropdown-logout {
           position: relative;
           display: inline-block;
@@ -72,10 +81,10 @@
         
       </a>
       <li class="dropdown-logout">
-          <a href="#" class="dropdown-logout" style="padding: 28px 0 0 15px; color: #C8CAD2; font-size: 15px; font-weight: 600; margin-left: 90px">
+          <p href="#" class="dropdown-logout">
             
              Logged In as , {{ Auth::user()->name }}</span>
-          </a>
+          </p>
 
           <!-- <ul class="dropdown-logout-content">
               <li><a href="{{ url('/new-invent/'.Auth::User()->id) }}">New invention</a></li>
@@ -156,7 +165,7 @@
       <ul class="pull-right nav navbar-nav">
         <!-- <li class="btn label" style="margin-top: 20px; margin-left: 5px"></li> -->
         <li class="nav-right">
-          <a  target="_blank" href="http://www.hyperbase.dcubeanalytics.com/">
+          <a  target="_blank" href="http://13.56.146.191:8400/">
           
             <label class="nav-items">DDS IRIS</label>
           </a>
@@ -168,13 +177,13 @@
           </a>
         </li>
         <li class="nav-right">
-          <a target="_blank" href="http://www.hyperbase.dcubeanalytics.com/">
+          <a target="_blank" href="https://54.241.166.219:8443/knime/">
           
             <label class="nav-items">Data Science Sandbox</label>
           </a>
         </li>
         <li class="nav-right">
-          <a target="_blank" href="http://www.hyperbase.dcubeanalytics.com/">
+          <a target="" href="">
           
             <label class="nav-items">Project Moniter</label>
           </a>
