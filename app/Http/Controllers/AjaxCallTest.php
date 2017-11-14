@@ -172,13 +172,14 @@ class AjaxCallTest extends Controller
 
   public function struct() {
     $inputs =Input::all();
-    // return $inputs;
+    //return $inputs;
     $proj_id = array($inputs['project_id']);
     $val = $inputs['checkbox'];
     // $val = implode(",",$val);
     // return $val;
     $d_struct_id = [];
     $map_data = [];
+    $sour_data = [];
 
     for ($i=0; $i < count($val); $i++) {
       $result = substr($val[$i], 0, 9);
@@ -186,29 +187,33 @@ class AjaxCallTest extends Controller
         array_push($d_struct_id, str_replace(' ', '_', $val[$i]));
       }
     }
-
+    // return $d_struct_id;
     for ($dStrEle=0; $dStrEle < count($d_struct_id); $dStrEle++) { 
       if ($d_struct_id[$dStrEle] == 'Fingertip_Formulary_Payor_Plan_Data') {
         $d_struct_id[$dStrEle] = 'MMIT_Payor_Plan_Data';
       }
       $data = DB::table('d_struc_map')->where('source_id', $d_struct_id[$dStrEle])->get();
+      $data1 = DB::table('sour_col_map')->where('source_id', $d_struct_id[$dStrEle])->get();
       if (!empty($data)) {
         array_push($map_data, $data[0]); 
       }
+      if (!empty($data1)) {
+        array_push($sour_data, $data1[0]); 
+      }
     }
-    // return $map_data;
+     // return $sour_data;
     $proj_id = (int)trim($proj_id[0], '"');
     
     $checkedData = DB::table('map_data')->where('proj_id', $proj_id)->get();
     // return $checkedData;
     if (isset($checkedData)) {
       // return $checkedData;
-      $data1 = array('d_struct_id','proj_id', 'checkedData', 'map_data');
+      $data1 = array('d_struct_id','proj_id', 'checkedData', 'map_data','sour_data');
       
     } else {
-      $data1 = array('d_struct_id','proj_id', 'map_data');
+      $data1 = array('d_struct_id','proj_id', 'map_data','sour_data');
     }
-    
+    // return $data1;
     return view('struct', compact($data1));
   }
 

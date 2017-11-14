@@ -94,7 +94,7 @@
                                     <div id="sourceName"></div>
                                   </td>
                                   <td style="text-align: center;">
-                                      <span class="glyphicon glyphicon-pencil" data-target="#claim" data-toggle="modal" title="Edit Mapping"></span>
+                                      <span class="glyphicon glyphicon-pencil" data-target="#{{$val->source_id}}_mod" data-toggle="modal" title="Edit Mapping"></span>
                                       <!-- <button class="btn btn-info "  ></button> -->
                                   </td>
                                 </tr>
@@ -145,6 +145,58 @@
       </div>
     </div>
   </div>
+
+@foreach($sour_data as $val)
+<div id="{{$val->source_id}}_mod" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body" style="padding: 10px 50px">
+          <div class = "row">
+            
+              <table class ='table stripped modal_table'>
+                <thead>
+                  <tr>
+                    <th>Source Column</th>
+                    <th>DCube Column</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <?php $source_column = (explode(",",$val->source_col))?> 
+                  <?php $dcube_column = (explode(",",$val->dcube_col))?> 
+                  @foreach($source_column as $key1 => $so_col)
+                  <tr>
+                    <td>{{$so_col}}</td>
+                    <td>
+                      <select class="form-control source_name"><span>DCube Column</span>
+                       <option>Exclude</option>
+                       <option>Import As If</option>
+                       @foreach($dcube_column as $key2 => $dc_col)
+                       <option @if($key1 == $key2) selected @endif>{{$dc_col}}</option>
+                       @endforeach
+                    </td>
+                  </tr>
+                  @endforeach
+
+                  
+                </tbody>
+              </table>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Save Mappings</button>
+        </div>
+      </div>
+      </div>
+    </div>
+</div>
+@endforeach
+
 <!-- Modal -->
   <div id="prodim" class="modal fade" role="dialog">
     <div class="modal-dialog">
