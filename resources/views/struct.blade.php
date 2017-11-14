@@ -14,7 +14,6 @@
 
 <div class="container-fluid bg">
   <div class="visualization">
-    <?php print_r($d_struct_id) ?>
       <div class="" style="padding: 10px">
           <div class="panel panel-default" style=" background-color: #FCFCFC; margin-left: -15px; margin-right: -15px;">
             <div class="panel-body  ">
