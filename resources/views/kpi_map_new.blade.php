@@ -48,9 +48,11 @@
                           @if(isset($exePrjData))
                             @foreach($exePrjData as $data)
                               <input type = 'text' class ='form-control' style="width: 100% ; text-align: left;" placeholder="Enter Project Name" id= 'project_text' value="{{$data->proj_name}}">
+                              <label style="font-size: 10px ; text-align: center;" id="warn"></label>
                             @endforeach
                           @else
                             <input type = 'text' class ='form-control' style="width: 100% ; text-align: left;" placeholder="Enter Project Name" id= 'project_text'>
+                            <label style="font-size: 10px;text-align: center;" id="warn"></label>
                           @endif
                         </div>
                         
@@ -1676,12 +1678,35 @@
     });
   });
 });*/
+$(document).on('change', '#project_text', function(){
+    $.ajax({
+        method: 'POST', // Type of response and matches what we said in the route
+        url: '{{url()}}/test2', // This is the url we gave in the route
+        dataType:'json',
+        headers: {
+          'X-CSRF-TOKEN': "{{ csrf_token() }}",
+        },
+        data: {'id' : $(this).val()}, // a JSON object to send back
+        success: function(response)
+        { 
+          if(response.data.length)
+          {
+             $('#warn').html("Project Name Already Exists");
+          }
+          else
+          {
+            $('#warn').html("");
+          }
+        }
 
+    });
+});
 $(document).on('change', '#project_text', function(){
 
       $('.proj_nam').val($(this).val());
       console.log($('.proj_nam').val());
       $('.progress-bar').css("width","5%");
+
 
 });
 $(document).on('change', '#ta', function()
@@ -1734,7 +1759,7 @@ $(document).on('change', '#choose_project1', function()
             // var data ='<h4>Data Tables</h4>';
             // var bdf = '<h4>Bridge Files</h4>';
             // var dim = '<h4>Dimension table (Optional)</h4>';
-
+            var desc_array = [];
             var d = response.data;
             var test = response.data;
             var data ='<h5><label style="font-size: 15px;">Data Tables</label></h5>';
@@ -1745,8 +1770,14 @@ $(document).on('change', '#choose_project1', function()
             for (var ele = 0; ele < test.length; ele++) {
               d = test[ele];
               for (var i = 0; i < d.length; i++) {
+
+                 if(desc_array.indexOf(d[i].description) == -1)
+                 {  
+                    desc_array.push(d[i].description);  
+                    
                 if (d[i].category==='Data'){
-                  if (d[i].description != 'Aggregated Rx Data') { 
+                          
+
                     
                     data += "<div class = 'checkbox'>"+
                     //"<a href ='#' data-toggle = 'popover'>"+
@@ -1757,7 +1788,7 @@ $(document).on('change', '#choose_project1', function()
                     data +="</div>";
                     
                     
-                  }
+                  
                   
                 }
 
@@ -1782,7 +1813,7 @@ $(document).on('change', '#choose_project1', function()
                     dim +="</div>";
                     
                 }
-              }
+              }}
             }
 
             // for (var i = 0; i < d.length; i++) {

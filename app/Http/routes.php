@@ -57,6 +57,7 @@ Route::group(['middleware' => 'auth'], function () {
 
 	Route::any('test', 'AjaxCallTest@test');
 	Route::any('test1', 'AjaxCallTest@test1');
+	Route::any('test2', 'AjaxCallTest@test2');
 
 	Route::any('/ingestion', 'CommonController@ingestion');
 	Route::any('/ingestion/{id}', 'CommonController@ingestionBackStep');

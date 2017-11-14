@@ -133,6 +133,12 @@ class AjaxCallTest extends Controller
         return Response::json(array('status'=> 'failure'));
     }
   }
+  public function test2(Request $request)
+  {
+    $inputs = Input::all();
+    $q1 = DB::table('active_proj')->where('proj_name', $inputs['id'])->get();
+    return Response::Json(array('status'=> 'success', 'data'=> $q1));
+  }
   public function dash()
   {
     $q1 = DB::table('active_proj')->orderBy('active_down', 'desc')->get();    
