@@ -83,7 +83,7 @@
       <li class="dropdown-logout">
           <p href="{{url()}}/landing" class="nav-head">
             
-             Logged In as, {{ Auth::user()->name }}</span>
+             Logged in as, {{ Auth::user()->name }}</span>
           </p>
 
           <!-- <ul class="dropdown-logout-content">

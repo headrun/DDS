@@ -9,9 +9,11 @@ body{
     background-repeat: no-repeat;
     /* Scale the background image to be as large as possible */
     background-size: cover;
+
+    background-color: #F0F0F0;
 }
 .nav-head{
-    font-size: 15px;
+    font-size: 13px;
     /*font-weight: 500;*/
     font-style: 'ariel';
 
@@ -39,6 +41,7 @@ body{
     border-radius: 50px;
     height: 40px;
     margin-top:20px;
+    outline: none !important;
 }
 .btn-default{
     width:150px;
@@ -70,11 +73,11 @@ body{
     cursor: pointer; 
 }
 .tt{
-    background-color: #EBEBEB;
+    background-color: #F0F0F0;
     padding: 0px;
     border-width: 0px 0px 0px 0px;
     border: none;
-        outline:none;
+    outline:none;
 
     /*max-height: 145px;*/
 }

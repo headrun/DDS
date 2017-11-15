@@ -141,6 +141,18 @@
       {
         window.location.href ="{{url()}}/ddspage";
       }
+      else if($(this).val() == '2')
+      {
+        window.open('http://13.56.146.191:8400/','_blank');
+      }
+      else if($(this).val() == '3')
+      {
+        window.open('http://www.hyperbase.dcubeanalytics.com/','_blank');
+      }
+      else if($(this).val() == '4')
+      {
+        window.open('https://54.241.166.219:8443/knime/','_blank'); 
+      } 
     });
     
   });
