@@ -16,10 +16,12 @@
 
   <div class="row">
       <div class="col-lg-5 col-md-5 visible-md visible-lg">
-        <img class="lhs-img" src="{{url()}}/assets/vendor/img/green_back_for_white.png"> 
-        <img class="lhs-img circl" src="{{url()}}/assets/vendor/img/white_circle.png"> 
-        <img class="lhs-img logo" src="{{url()}}/assets/vendor/img/dds_logo.jpg"> 
-        <div class="lhs-img text">
+        <!-- <img class="lhs-img" src="{{url()}}/assets/vendor/img/green_back_for_white.png">  -->
+        <img class="lhs-img" src="{{url()}}/assets/vendor/img/lhs_bg.png"> 
+
+        <!-- <img class="lhs-img circl" src="{{url()}}/assets/vendor/img/white_circle.png">  -->
+        <img class="lhs-img circl logo" src="{{url()}}/assets/vendor/img/dds_logo.jpg"> 
+        <div class="lhs-img circl text">
             
               The D Cube Analytics Platform is built grounds up leveraging key business process knowledge at various functional levels while providing accelerator capabilities to disrupt the cost-time framework from an implementation standpoint
             

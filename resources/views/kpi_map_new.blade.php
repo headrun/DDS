@@ -13,7 +13,7 @@
 
           <div class="panel panel-default" style=" background-color: #FCFCFC; margin-left: -15px; margin-right: -15px">
             <div class="panel-body">
-              <div class="progress">
+              <div class="progress" style="text-align: center;">
                 <div class="progress-bar" role="progressbar" aria-valuenow="70"
                 aria-valuemin="0" aria-valuemax="100" style="width:0%;">
                   
@@ -1874,7 +1874,7 @@ $(document).on('change', '#choose_project1', function()
    });
 
 
-$(document).on('change', '#group, #project_text, #ta, #fa', function()
+$(document).on('change', '#group', function()
  {
       var widget_array1 =  [];
       var widget_array2 =  [];

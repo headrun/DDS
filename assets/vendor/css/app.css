@@ -10,6 +10,15 @@ body{
     /* Scale the background image to be as large as possible */
     background-size: cover;
 }
+.nav-head{
+    font-size: 15px;
+    /*font-weight: 500;*/
+    font-style: 'ariel';
+
+}
+.nav-head:hover{
+    transform: scale(1.02);
+}
 .modal-header{
     background-color: #6C9841;
 }
@@ -58,11 +67,15 @@ body{
     padding: 0 20px;
     height: 70px;
     color: #C8CAD2;
+    cursor: pointer; 
 }
 .tt{
     background-color: #EBEBEB;
     padding: 0px;
     border-width: 0px 0px 0px 0px;
+    border: none;
+        outline:none;
+
     /*max-height: 145px;*/
 }
 
@@ -236,8 +249,9 @@ body{
     background-color: #9BC138;
 }
 .progress{
+
     height : 7px;
-    width: 73%;
+    width: 74%;
     position: absolute;
     left : 180px;
     top : 100px; 
@@ -261,6 +275,7 @@ a{
     width: 50px;
 }
 .head{
+    cursor: pointer; 
     display:block;
     font-family: ProximaNova;
     color:  #000000;
@@ -284,6 +299,7 @@ a{
     font-weight: 600; 
 }*/
 .body{
+    cursor: pointer; 
     font-family: ProximaNova;
     color:  #000000;
     font-size: 12.96px;/* Approximation due to font substitution */

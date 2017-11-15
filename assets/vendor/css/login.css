@@ -121,16 +121,17 @@ body {
   width: 30%;
 }
 .logo{
-  margin-top:  170px;
-  margin-left:  70px;
-  height: 19%;
-  width: 19%; 
+  top:  110px;
+  left:  100px;
+  height: 15%;
+  width: 15%; 
 }
 .text{
-  margin-top:  310px;
-  margin-left:  70px;
-  height: 19%;
-  width: 19%;  
+  /*position: absolute;*/
+  top:  250px;
+  left:  100px;
+  height: 18%;
+  width: 18%;  
 }
 
 .bottom{

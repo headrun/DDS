@@ -81,9 +81,9 @@
         
       </a>
       <li class="dropdown-logout">
-          <p href="#" class="dropdown-logout">
+          <p href="{{url()}}/landing" class="nav-head">
             
-             Logged In as , {{ Auth::user()->name }}</span>
+             Logged In as, {{ Auth::user()->name }}</span>
           </p>
 
           <!-- <ul class="dropdown-logout-content">
@@ -185,7 +185,7 @@
         <li class="nav-right">
           <a target="" href="">
           
-            <label class="nav-items">Project Moniter</label>
+            <label class="nav-items">Project Monitor</label>
           </a>
         </li>
         <li>
@@ -200,7 +200,7 @@
             </form>
         </li>
 
-        <li style="padding: 5px;margin-left: 20px; border-width: 0px 0px  0px 1px; border-style: inset">
+        <li style="padding: 5px;margin-left: 20px; border-width: 0px 0px  0px 0.002em; border-style: inset ; border-color: black" >
           <img class="pull-right" src="{{url()}}/DDS Logo-02.png" style="width:100px; height:50px; margin-top:5px;">
           
       </li>   

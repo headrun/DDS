@@ -201,6 +201,7 @@ class AjaxCallTest extends Controller
         array_push($sour_data, $data1[0]); 
       }
     }
+    // return $map_data;
      // return $sour_data;
     $proj_id = (int)trim($proj_id[0], '"');
     
