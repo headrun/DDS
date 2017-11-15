@@ -945,7 +945,66 @@ $('body').on('click', '.edit-flow', function(){
 
   $('#save_btn').click(function(e){
       e.preventDefault();
-  
+      kpiKey = $('#proj_name').val();
+      $.ajax({
+        url : "{{url()}}/getExeFlow",
+        type: "POST",
+        dataType: 'json',
+        headers: {
+             'X-CSRF-TOKEN': "{{ csrf_token() }}",
+        },
+        data: {'kpiKey':kpiKey},
+        success: function(response){
+          var html = '';
+          console.log(response);
+          if (response.status == 'success') {
+            var flowRes = response.data.getKpiMaps;
+
+            for (var i = 0; i < flowRes.length; i++) {
+              var viewName = flowRes[i]['project_name'];
+              var kpiFlow = flowRes[i]['kpi'];
+              var subKpiFlow = flowRes[i]['sub_kpi'];
+              var dimFlow = flowRes[i]['dimension'];
+              var flowId = flowRes[i]['id'];
+              
+              $('.savedData').show();
+
+              var kpi_arr = '<div class="col-md-2">';
+              // for (var kpi = 0; kpi < kpiFlow.length; kpi++) {
+                kpi_arr += kpiFlow+'<br>';
+              // }
+              kpi_arr += '</div>';
+
+              var subKpiArr = '<div class="col-md-2">';
+              // for (var subkpi = 0; subkpi < subKpiFlow.length; subkpi++) {
+                subKpiArr += subKpiFlow+'<br>';
+              // }
+              subKpiArr += '</div>';
+
+              var dim_arr = '<div class="col-md-2">';
+              // for (var dim = 0; dim < dimFlow.length; dim++) {
+                dim_arr += dimFlow+'<br>';
+              // }
+              dim_arr += '</div>';            
+              
+              html += '<div class="row">'+
+                          '<div class="col-md-1 ">'+flowId+'</div>'+
+                          '<div class="col-md-3 ">'+viewName+'</div>'+
+                          kpi_arr+
+                          subKpiArr+
+                          dim_arr+
+                          '<div class="col-md-2"><input type="hidden" value="'+flowId+'" class="flowId"><i class="glyphicon glyphicon-pencil" aria-hidden="true" title="Click to Edit"></i>&nbsp;&nbsp;<i class="fa fa-trash-o delete-flow confirm-delete" aria-hidden="true" title="Click to Delete"></i></div>'+
+                        '</div><hr><br>';
+
+            }
+            
+          }else{
+            html += '<b>No data to show.<br>Please insert data to '+kpiKey+' view.</b>';
+          }
+          $('.savedData').html(html).contents();
+        }
+
+    });  
       var dim_arr = [],
           kpi_arr = [],
           sub_kpi_arr = [],
