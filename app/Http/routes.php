@@ -143,6 +143,8 @@ Route::group(['middleware' => 'auth'], function () {
 
 	Route::get('/kpi_map_new','AjaxCallTest@kpi');
 
+	Route::any('/updateKpi','AjaxCallTest@updateKpi');
+
 	Route::any('/kpi','AjaxCallTest@kpi1');
 
 	Route::get('/Prescriber_Dimension',function(){

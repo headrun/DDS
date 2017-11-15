@@ -63,10 +63,10 @@
                       @if(isset($project_type))
                       <div class = "row">
                         <div class= "col-md-2">
-                          <label style="padding: 5px">Enter Project Name</label>
+                          <label style="padding: 5px">Project Name</label>
                         </div>
                         <div class="col-md-3">
-                          <label style="padding-top: 10px;">{{$project_type}}</label>
+                          <label style="padding-top: 10px;" id= "proj_type">{{$project_type}}</label>
                         </div>
                       </div>    
                       @endif
@@ -77,10 +77,13 @@
                         <div class="col-md-3">
                           <select class="form-control .proj_name" id='proj_name' style="margin-top: -5px; width: 220px; margin-left: -15px">
                             <option></option>
-                            <option>Market Overview</option>
+                            @foreach($options as $option)
+                            <option>{{$option}}</option>
+                            @endforeach
+                            <!-- <option>Market Overview</option>
                             <option>Market Access</option>
                             <option>SOB</option>
-                            <option>Marketing</option>
+                            <option>Marketing</option> -->
                           </select>
                         </div>
                         
@@ -106,58 +109,85 @@
                                   <div class="radio">
                                     <input type="hidden" name="sub_kpi_val" id="sub_kpi_val" value="0">
                                   </div>
-                                  <div class="radio kpiArr"></div>
+                                  <div class="radio kpiArr1">
+                                    <?php $kpis = explode(",",$project_kpi['kpi_name']); ?>
+                                    @foreach($kpis as $kpi)
+                                    <input type="checkbox" class="kpi_type" name="checkSubKPI" value="{{$kpi}}"> {{$kpi}}<br>
+                                    @endforeach
+                                  </div>
                                 </div>
                             </div>
                             <div class="widget col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                 <h4><label>Sub KPI</label></h4>
                                 
                                 <div>
-                                  <div id="calSubKpi">
-                                    <div class="selectingSubKpi calSubKpi radio"></div>
+                                  <div id="calSubKpi1">
+                                    <!-- <div class="selectingSubKpi calSubKpi radio"></div> -->
+                                    <div>
+                                      <?php $kpis = explode(",",$project_kpi['kpi_subtype']); 
+
+                                        ?>
+                                        @if($kpis[0] != "")
+                                        @foreach($kpis as $kpi)
+                                        <input type="checkbox" class="kpi_sub_type" name="checkSubKPI" value="{{$kpi}}"> {{$kpi}}<br>
+                                        @endforeach
+                                        @endif
+                                    </div>
                                   </div>
                                 </div>
                             </div>
                           </div>
                           <hr>
-                          <div class="row" id="dimensionInfo">  
+                          <div class="row" id="1dimensionInfo">  
                           <div class="widget col-lg-12 col-md-12 col-sm-12 col-xs-12d">
                               <h4><label>Dimension</label></h4>
                               <br>
                               <div class="row">
                                 <div class="widget col-lg-3 col-md-3 col-sm-3 col-xs-3">
                                   <h4><label>Product Selection</label></h4>
-                                  
-                                  <div id="product_selection">
+                                  <?php $kpis = explode(",",$project_kpi['Product']); ?>
+                                    @foreach($kpis as $kpi)
+                                    <input type="checkbox" class="prod_sel" name="checkSubKPI" value="{{$kpi}}"> {{$kpi}}<br>
+                                    @endforeach
+                                  <!-- <div id="product_selection">
                                     <div class="radio product_selection kpi_dim"></div>
-                                  </div>
+                                  </div> -->
                                 </div>
 
                                 <div class="widget col-lg-3 col-md-3 col-sm-3 col-xs-3">
                                   <h4><label>Time Period Selection</label></h4>
-                                  
-                                  <div id="time_period_selection">
+                                  <?php $kpis = explode(",",$project_kpi['Time_Period']); ?>
+                                    @foreach($kpis as $kpi)
+                                    <input type="checkbox" class="time_period" name="checkSubKPI" value="{{$kpi}}"> {{$kpi}}<br>
+                                    @endforeach
+                                  <!-- <div id="time_period_selection">
                                     <div class="radio time_period_selection kpi_dim"></div>
-                                  </div>
+                                  </div> -->
                                 </div>
 
                                 <div class="widget col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                                  <h4><label>Geography</label></h4>
-                                  
+                                  <h4><label>Demographics</label></h4>
+                                  <?php $kpis = explode(",",$project_kpi['Demographics']); ?>
+                                    @foreach($kpis as $kpi)
+                                    <input type="checkbox" class="demo_grap" name="checkSubKPI" value="{{$kpi}}"> {{$kpi}}<br>
+                                    @endforeach
                                   <div id="geography">
-                                    <div class="radio geography kpi_dim"></div>
+                                    <!-- <div class="radio geography kpi_dim"></div>
                                     <div class="radio">
                                       <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                    </div>
+                                    </div> -->
                                   </div>
                                 </div>
 
                                 <div class="widget col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                                  <h4><label>Calculation</label></h4>
-                                  
-                                  <div id="product_selection_calculation">
+                                  <h4><label>Clinical Factors</label></h4>
+                                  <?php $kpis = explode(",",$project_kpi['Clinical_Factors']); ?>
+                                    @foreach($kpis as $kpi)
+                                    <input type="checkbox" class="clic_fac" name="checkSubKPI" value="{{$kpi}}"> {{$kpi}}<br>
+                                    @endforeach
+                                  <!-- <div id="product_selection_calculation">
                                     <div class="radio calculateSubKpi kpi_dim"></div>
-                                  </div>
+                                  </div> -->
                                 </div>
                               </div>
                             </div>
@@ -306,12 +336,75 @@
 <script type="text/javascript">
   
 $(document).ready(function(){
+  var kpiKey = 'Market Overview';
+  $('#proj_name').on('change',function(){
+    kpiKey = $(this).val();
+    $.ajax({
+        url : "{{url()}}/getExeFlow",
+        type: "POST",
+        dataType: 'json',
+        headers: {
+             'X-CSRF-TOKEN': "{{ csrf_token() }}",
+        },
+        data: {'kpiKey':kpiKey},
+        success: function(response){
+          var html = '';
+          console.log(response);
+          if (response.status == 'success') {
+            var flowRes = response.data.getKpiMaps;
+
+            for (var i = 0; i < flowRes.length; i++) {
+              var viewName = flowRes[i]['project_name'];
+              var kpiFlow = flowRes[i]['kpi'];
+              var subKpiFlow = flowRes[i]['sub_kpi'];
+              var dimFlow = flowRes[i]['dimension'];
+              var flowId = flowRes[i]['id'];
+              
+              $('.savedData').show();
+
+              var kpi_arr = '<div class="col-md-2">';
+              // for (var kpi = 0; kpi < kpiFlow.length; kpi++) {
+                kpi_arr += kpiFlow+'<br>';
+              // }
+              kpi_arr += '</div>';
+
+              var subKpiArr = '<div class="col-md-2">';
+              // for (var subkpi = 0; subkpi < subKpiFlow.length; subkpi++) {
+                subKpiArr += subKpiFlow+'<br>';
+              // }
+              subKpiArr += '</div>';
+
+              var dim_arr = '<div class="col-md-2">';
+              // for (var dim = 0; dim < dimFlow.length; dim++) {
+                dim_arr += dimFlow+'<br>';
+              // }
+              dim_arr += '</div>';            
+              
+              html += '<div class="row">'+
+                          '<div class="col-md-1 ">'+flowId+'</div>'+
+                          '<div class="col-md-3 ">'+viewName+'</div>'+
+                          kpi_arr+
+                          subKpiArr+
+                          dim_arr+
+                          '<div class="col-md-2"><input type="hidden" value="'+flowId+'" class="flowId"><i class="glyphicon glyphicon-pencil" aria-hidden="true" title="Click to Edit"></i>&nbsp;&nbsp;<i class="fa fa-trash-o delete-flow confirm-delete" aria-hidden="true" title="Click to Delete"></i></div>'+
+                        '</div><hr><br>';
+
+            }
+            
+          }else{
+            html += '<b>No data to show.<br>Please insert data to '+kpiKey+' view.</b>';
+          }
+          $('.savedData').html(html).contents();
+        }
+
+    });
+  })
     var progress_bar = 65;
   // $('#kpimap').hide();
   // $('#savedFlows').hide();
   // $('.savedData').hide();
   // $('#dimensionInfo').hide();
-  var kpiKey = 'Market Overview';
+  
   $('.wrongSelection').hide(); // wrong selection message
     $('#kpimap').show();  // KPI checkbox division
     $('.savedData').show(); // view flows of data
@@ -340,80 +433,65 @@ $(document).ready(function(){
 
     });
 
+    
+
+    
+// '<div class="col-md-2"><input type="hidden" value="'+flowId+'" class="flowId"><button type="button" class="btn-xs btn-primary edit-flow"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button>&nbsp;&nbsp;<button type="button" class="btn-xs btn-danger delete-flow confirm-delete"><i class="fa fa-trash-o" aria-hidden="true"></i></button></div>'+
+//                         '</div><hr><br>';
+
+  $('#addNewKpi').click(function(){
+    var value = 'kpi';
+    // $('#kpimap').find('input, select').not(':button, :submit, :reset, :hidden').val('').removeAttr('checked').removeAttr('selected');
+    var kpi_types = [];
+    var kpi_sub_type = [];
+    var dim= [];
+    
+    result = $('.kpi_type:checkbox:checked');
+    for(var i = 0 ; i < result.length ; i++)      
+    {
+      kpi_types.push(result[i].value);
+    }
+    result = $('.kpi_sub_type:checkbox:checked');
+    for(var i = 0 ; i < result.length ; i++)      
+    {
+      kpi_sub_type.push(result[i].value);
+    }
+    result = $('.prod_sel:checkbox:checked');
+    for(var i = 0 ; i < result.length ; i++)      
+    {
+      dim.push(result[i].value);
+    }
+    result = $('.time_period:checkbox:checked');
+    for(var i = 0 ; i < result.length ; i++)      
+    {
+      dim.push(result[i].value);
+    }
+    result = $('.demo_grap:checkbox:checked');
+    for(var i = 0 ; i < result.length ; i++)      
+    {
+      dim.push(result[i].value);
+    }
+    var project_name = ($('#proj_name').val());
     $.ajax({
-        url : "{{url()}}/getExeFlow",
+        url : "{{url()}}/updateKpi",
         type: "POST",
         dataType: 'json',
         headers: {
              'X-CSRF-TOKEN': "{{ csrf_token() }}",
         },
-        data: {'kpiKey':kpiKey},
+        data: {'project_name': project_name , 'kpi' : kpi_types , 'sub_kpi' : kpi_sub_type , 'dim' : dim},
         success: function(response){
-          var html = '';
+          console.log(response);
 
-          if (response.status == 'success') {
-            var flowRes = response.data.getKpiMaps;
-
-            for (var i = 0; i < flowRes.length; i++) {
-              var viewName = flowRes[i]['project_name'];
-              var kpiFlow = JSON.parse(flowRes[i]['kpi']);
-              var subKpiFlow = JSON.parse(flowRes[i]['sub_kpi']);
-              var dimFlow = JSON.parse(flowRes[i]['dimension']);
-              var flowId = flowRes[i]['id'];
-              
-              $('.savedData').show();
-
-              var kpi_arr = '<div class="col-md-2">';
-              for (var kpi = 0; kpi < kpiFlow.length; kpi++) {
-                kpi_arr += kpiFlow[kpi]+'<br>';
-              }
-              kpi_arr += '</div>';
-
-              var subKpiArr = '<div class="col-md-2">';
-              for (var subkpi = 0; subkpi < subKpiFlow.length; subkpi++) {
-                subKpiArr += subKpiFlow[subkpi]+'<br>';
-              }
-              subKpiArr += '</div>';
-
-              var dim_arr = '<div class="col-md-2">';
-              for (var dim = 0; dim < dimFlow.length; dim++) {
-                dim_arr += dimFlow[dim]+'<br>';
-              }
-              dim_arr += '</div>';            
-              
-              html += '<div class="row">'+
-                          '<div class="col-md-1 ">'+flowId+'</div>'+
-                          '<div class="col-md-3 ">'+viewName+'</div>'+
-                          kpi_arr+
-                          subKpiArr+
-                          dim_arr+
-                          '<div class="col-md-2"><input type="hidden" value="'+flowId+'" class="flowId"><i class="glyphicon glyphicon-pencil" aria-hidden="true" title="Click to Edit"></i>&nbsp;&nbsp;<i class="fa fa-trash-o delete-flow confirm-delete" aria-hidden="true" title="Click to Delete"></i></div>'+
-                        '</div><hr><br>';
-
-            }
-            
-          }else{
-            html += '<b>No data to show.<br>Please insert data to '+kpiKey+' view.</b>';
-          }
-          $('.savedData').html(html).contents();
         }
-
-    });
-// '<div class="col-md-2"><input type="hidden" value="'+flowId+'" class="flowId"><button type="button" class="btn-xs btn-primary edit-flow"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button>&nbsp;&nbsp;<button type="button" class="btn-xs btn-danger delete-flow confirm-delete"><i class="fa fa-trash-o" aria-hidden="true"></i></button></div>'+
-//                         '</div><hr><br>';
-
-
-  $('#addNewKpi').click(function(){
-    var value = 'kpi';
-    $('#kpimap').find('input, select').not(':button, :submit, :reset, :hidden').val('').removeAttr('checked').removeAttr('selected');
-
-    kpiFunction();
-    subKpiFunction(value);
-    productSelection(value);
-    timePeriodSelection(value);
-    geography(value);
-    dimeCalculation();
-    $('#product_selection_calculation').hide(); // dimension calculations
+      });
+    // kpiFunction();
+    // subKpiFunction(value);
+    // productSelection(value);
+    // timePeriodSelection(value);
+    // geography(value);
+    // dimeCalculation();
+    // $('#product_selection_calculation').hide(); // dimension calculations
   });
 
   // kpi fields

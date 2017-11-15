@@ -244,14 +244,50 @@ class AjaxCallTest extends Controller
 
     $project_id = $inputs['forword_project_id'];
 
-    $project_type = DB::table('active_proj')->select('proj_type')->where('id', $project_id)->get();
-    $project_type = $project_type[0]->proj_type;
-
+    $project = DB::table('active_proj')->where('id', $project_id)->get();
+    $project_type = $project[0]->proj_type;
+    $project_kpi = DB::table('kpi')->where('project_type', $project_type)->get();
+    $project_kpi = (array)$project_kpi[0];
+    $options = $this->check_array_1($project_type);
     $view = DB::table('mapping_kpi')->select('view')->distinct()->get();
 
-    $data1 = array('view', 'project_id', 'project_type');
+    $data1 = array('view', 'project_id', 'project_type','project_kpi','options');
 
     return view('setup_new_proj_new', compact($data1));
+  }
+  private function check_array_1($data)
+  {
+    $brand = array('Market Overview','Market Access','Source of Business','Sales Force Effectiveness','Marketing');
+    $pre = array('Market Overview','Market Access','Source of Business','Marketing');
+    $rew = array('Unmet Need Identifier','Cohort Generator','Cohort Analyzer','Patient Journey Tracker');
+    $digital_ana = array('Campaign Tracking','Campaign Effectiveness Measurement');
+    $social_media =array('Sentiment Analysis','Social Influencer Mapping & Tracking');
+    $supply_chain = array('Portfolio performance','Service level Monitoring','Inventory Health');
+    //return $data;
+    switch ($data) {
+      case 'Brand Launch':
+        return $brand;
+        break;
+      case 'Pre Launch':
+        return $pre;
+        break;
+      case 'RWE':
+        return $rew;
+        break;
+      case 'Digital Analytics':
+        return $digital_ana;
+        break;
+      case 'Social Media':
+        return $social_media;
+        break;
+      case 'Supply Chain':
+        return $supply_chain;
+        break;
+      
+      default:
+        return "empty";
+        
+    }
   }
 
   public function kpi1()
@@ -309,6 +345,42 @@ class AjaxCallTest extends Controller
     
     return redirect('/');
 
+  }
+  public function updateKpi()
+  {
+    $inputs = Input::all();
+    $name = "";
+    $kpi = "Empty";
+    $sub_kpi = "Empty";
+    $dim = "Empty";
+    
+    if($inputs['project_name'] != "")
+    {
+        $name = $inputs['project_name'];
+    }
+    else
+    {
+        return "Project Name Not Available";
+    }
+    if(isset($inputs['kpi']))
+    {
+        $kpi = $inputs['kpi'];
+        $kpi = implode(",",$kpi);
+        // return $kpi;
+    }
+    if(isset($inputs['sub_kpi']))
+    {
+        $sub_kpi = $inputs['sub_kpi'];
+        $sub_kpi = implode(",",$sub_kpi);
+    }
+    if(isset($inputs['dim']))
+    {
+        $dim = $inputs['dim'];
+        $dim = implode(",",$dim);
+    }
+
+    return DB::table('kpi_selection_info')->insert(
+            ['project_name' => $name, 'kpi' => $kpi, 'sub_kpi' => $sub_kpi, 'dimension' => $dim]);    
   }
 
 }
