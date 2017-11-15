@@ -146,9 +146,11 @@
                                 <div class="widget col-lg-3 col-md-3 col-sm-3 col-xs-3">
                                   <h4><label>Product Selection</label></h4>
                                   <?php $kpis = explode(",",$project_kpi['Product']); ?>
+                                    @if($kpis[0] != "")
                                     @foreach($kpis as $kpi)
                                     <input type="checkbox" class="prod_sel" name="checkSubKPI" value="{{$kpi}}"> {{$kpi}}<br>
                                     @endforeach
+                                    @endif
                                   <!-- <div id="product_selection">
                                     <div class="radio product_selection kpi_dim"></div>
                                   </div> -->
@@ -157,9 +159,11 @@
                                 <div class="widget col-lg-3 col-md-3 col-sm-3 col-xs-3">
                                   <h4><label>Time Period Selection</label></h4>
                                   <?php $kpis = explode(",",$project_kpi['Time_Period']); ?>
+                                  @if($kpis[0] != "")
                                     @foreach($kpis as $kpi)
                                     <input type="checkbox" class="time_period" name="checkSubKPI" value="{{$kpi}}"> {{$kpi}}<br>
                                     @endforeach
+                                    @endif
                                   <!-- <div id="time_period_selection">
                                     <div class="radio time_period_selection kpi_dim"></div>
                                   </div> -->
@@ -168,9 +172,11 @@
                                 <div class="widget col-lg-3 col-md-3 col-sm-3 col-xs-3">
                                   <h4><label>Demographics</label></h4>
                                   <?php $kpis = explode(",",$project_kpi['Demographics']); ?>
+                                  @if($kpis[0] != "")
                                     @foreach($kpis as $kpi)
                                     <input type="checkbox" class="demo_grap" name="checkSubKPI" value="{{$kpi}}"> {{$kpi}}<br>
                                     @endforeach
+                                  @endif
                                   <div id="geography">
                                     <!-- <div class="radio geography kpi_dim"></div>
                                     <div class="radio">
@@ -181,10 +187,13 @@
 
                                 <div class="widget col-lg-3 col-md-3 col-sm-3 col-xs-3">
                                   <h4><label>Clinical Factors</label></h4>
+
                                   <?php $kpis = explode(",",$project_kpi['Clinical_Factors']); ?>
+                                  @if($kpis[0] != "")
                                     @foreach($kpis as $kpi)
                                     <input type="checkbox" class="clic_fac" name="checkSubKPI" value="{{$kpi}}"> {{$kpi}}<br>
                                     @endforeach
+                                  @endif
                                   <!-- <div id="product_selection_calculation">
                                     <div class="radio calculateSubKpi kpi_dim"></div>
                                   </div> -->
