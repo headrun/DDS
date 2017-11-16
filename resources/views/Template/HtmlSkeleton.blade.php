@@ -1,6 +1,12 @@
 
 <html lang="en">
   <head>
+    <?php
+    if(!empty(SESSION('user_id')))
+    {
+      return view('login');
+    }
+    ?>
     <meta charset="utf-8">
     @section('Favicon')
     <link rel="shortcut icon" type="image/x-icon" href="{{url()}}/assets/vendor/favicon/favicon.ico" />
