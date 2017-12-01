@@ -177,7 +177,9 @@
                        <option>Exclude</option>
                        <option>Import As If</option>
                        @foreach($dcube_column as $key2 => $dc_col)
-                       <option @if($key1 == $key2) selected @endif>{{$dc_col}}</option>
+                       @if($dc_col == "0")
+                        <option @if($key1 == $key2) selected @endif>{{$dc_col}}</option>
+                       @endif
                        @endforeach
                     </td>
                   </tr>

@@ -1017,6 +1017,69 @@ $('body').on('click', '.edit-flow', function(){
       e.preventDefault();
       kpiKey = $('#proj_name').val();
       $.ajax({
+        url : "{{url()}}/saveMappingKpi",
+        type: "POST",
+        dataType: 'json',
+        headers: {
+             'X-CSRF-TOKEN': "{{ csrf_token() }}",
+        },
+        data: {'kpi_arr':kpi_arr,'sub_kpi_arr':sub_kpi_arr,'dim_arr':dim_arr,'view_type':view_type,'viewId':viewId},
+        success: function(response){
+          var html = '';
+          
+          if (response.status == 'success') {
+            // console.log(response.data);
+
+            // alert('Saved Successfully...!');
+            $('#sucessMsg').modal('show'); 
+
+            var flowRes = response.data.getKpiMaps;
+
+            for (var i = 0; i < flowRes.length; i++) {
+              var viewName = flowRes[i]['project_name'];
+              var viewId = flowRes[i]['id'];
+              var kpiFlow = JSON.parse(flowRes[i]['kpi']);
+              var subKpiFlow = JSON.parse(flowRes[i]['sub_kpi']);
+              var dimFlow = JSON.parse(flowRes[i]['dimension']);
+              
+              $('.savedData').show();
+
+              var kpi_arr = '<div class="col-md-2">';
+              for (var kpi = 0; kpi < kpiFlow.length; kpi++) {
+                kpi_arr += kpiFlow[kpi]+'<br>';
+              }
+              kpi_arr += '</div>';
+
+              var subKpiArr = '<div class="col-md-2">';
+              for (var subkpi = 0; subkpi < subKpiFlow.length; subkpi++) {
+                subKpiArr += subKpiFlow[subkpi]+'<br>';
+              }
+              subKpiArr += '</div>';
+
+              var dim_arr = '<div class="col-md-2">';
+              for (var dim = 0; dim < dimFlow.length; dim++) {
+                dim_arr += dimFlow[dim]+'<br>';
+              }
+              dim_arr += '</div>';            
+              
+              html += '<div class="row">'+
+                          '<div class="col-md-1 ">'+viewId+'</div>'+
+                          '<div class="col-md-3 ">'+viewName+'</div>'+
+                          kpi_arr+
+                          subKpiArr+
+                          dim_arr+
+                          '<div class="col-md-2"><input type="hidden" value="'+viewId+'" class="flowId"><button type="button" class="btn-xs btn-primary edit-flow"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button>&nbsp;&nbsp;<button type="button" class="btn-xs btn-danger delete-flow confirm-delete"><i class="fa fa-trash-o" aria-hidden="true"></i></button></div>'+
+                        '</div><hr><br>';
+
+            }
+
+            $('.savedData').html(html).contents();
+
+          }
+        }
+      });
+
+      $.ajax({
         url : "{{url()}}/getExeFlow",
         type: "POST",
         dataType: 'json',
@@ -1108,68 +1171,7 @@ $('body').on('click', '.edit-flow', function(){
       console.log(sub_kpi_arr);
       console.log(dim_arr);
 
-      $.ajax({
-        url : "{{url()}}/saveMappingKpi",
-        type: "POST",
-        dataType: 'json',
-        headers: {
-             'X-CSRF-TOKEN': "{{ csrf_token() }}",
-        },
-        data: {'kpi_arr':kpi_arr,'sub_kpi_arr':sub_kpi_arr,'dim_arr':dim_arr,'view_type':view_type,'viewId':viewId},
-        success: function(response){
-          var html = '';
-          
-          if (response.status == 'success') {
-            // console.log(response.data);
-
-            // alert('Saved Successfully...!');
-            $('#sucessMsg').modal('show'); 
-
-            var flowRes = response.data.getKpiMaps;
-
-            for (var i = 0; i < flowRes.length; i++) {
-              var viewName = flowRes[i]['project_name'];
-              var viewId = flowRes[i]['id'];
-              var kpiFlow = JSON.parse(flowRes[i]['kpi']);
-              var subKpiFlow = JSON.parse(flowRes[i]['sub_kpi']);
-              var dimFlow = JSON.parse(flowRes[i]['dimension']);
-              
-              $('.savedData').show();
-
-              var kpi_arr = '<div class="col-md-2">';
-              for (var kpi = 0; kpi < kpiFlow.length; kpi++) {
-                kpi_arr += kpiFlow[kpi]+'<br>';
-              }
-              kpi_arr += '</div>';
-
-              var subKpiArr = '<div class="col-md-2">';
-              for (var subkpi = 0; subkpi < subKpiFlow.length; subkpi++) {
-                subKpiArr += subKpiFlow[subkpi]+'<br>';
-              }
-              subKpiArr += '</div>';
-
-              var dim_arr = '<div class="col-md-2">';
-              for (var dim = 0; dim < dimFlow.length; dim++) {
-                dim_arr += dimFlow[dim]+'<br>';
-              }
-              dim_arr += '</div>';            
-              
-              html += '<div class="row">'+
-                          '<div class="col-md-1 ">'+viewId+'</div>'+
-                          '<div class="col-md-3 ">'+viewName+'</div>'+
-                          kpi_arr+
-                          subKpiArr+
-                          dim_arr+
-                          '<div class="col-md-2"><input type="hidden" value="'+viewId+'" class="flowId"><button type="button" class="btn-xs btn-primary edit-flow"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button>&nbsp;&nbsp;<button type="button" class="btn-xs btn-danger delete-flow confirm-delete"><i class="fa fa-trash-o" aria-hidden="true"></i></button></div>'+
-                        '</div><hr><br>';
-
-            }
-
-            $('.savedData').html(html).contents();
-
-          }
-        }
-      });
+      
       $('.progress-bar').css("width","100%");   
       $('.mapping_kpi').attr("src","{{url()}}/assets/vendor/img/mappingkpi.png");   
   });

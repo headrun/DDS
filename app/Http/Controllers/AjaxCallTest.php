@@ -193,6 +193,7 @@ class AjaxCallTest extends Controller
         $d_struct_id[$dStrEle] = 'MMIT_Payor_Plan_Data';
       }
       $data = DB::table('d_struc_map')->where('source_id', $d_struct_id[$dStrEle])->get();
+      // return $d_struct_id[$dStrEle];
       $data1 = DB::table('sour_col_map')->where('source_id', $d_struct_id[$dStrEle])->get();
       if (!empty($data)) {
         array_push($map_data, $data[0]); 
