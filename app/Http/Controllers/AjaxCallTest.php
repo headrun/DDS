@@ -1,21 +1,22 @@
 <?php
 
 namespace App\Http\Controllers;
-use DB;
-use Illuminate\Http\Request;
-use Response;
-use App\Category;
-use Session;
-use Input;
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
+
 use Auth;
+use DB;
+use Input;
+use Response;
+use Session;
+
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+
+use App\Category;
+use App\Http\Requests;
 
 class AjaxCallTest extends Controller
 {
 
-  
-	
  	public function test(Request $request){
 
  		$data = $request->all(); // This will get all the request data.
@@ -61,13 +62,13 @@ class AjaxCallTest extends Controller
  				break;
  			case 'Supply Chain':
  				return $this->html_change($supply_chain,$data,$checkedData);
- 				break;
- 			
+ 				break;		
  			default:
  				return "empty";
- 				
  		}
+
  	}
+
  	private function html_change($content,$data,$checkedData)
  	{
     $var = "<form><div class='form-group'>";
@@ -113,8 +114,7 @@ class AjaxCallTest extends Controller
           array_push($q1, DB::table('cat')->where('sub_type', $dataVal[$i])->groupBy('description')->get());
         }
       }
-    } else {
-      if (count($dataVal) > 0) {
+    } else if (count($dataVal) > 0) {
         $q1 = [];
         // return $dataVal;
         for ($j=0; $j < count($dataVal); $j++) {
@@ -125,14 +125,13 @@ class AjaxCallTest extends Controller
         $q1 = DB::table('cat')->where('sub_type', $dataVal)->groupBy('description')->get();
       }
       // return $q1;
-    }
     
     if ($q1) {
         return Response::Json(array('status'=> 'success', 'data'=> $q1));
-    }else{
-        return Response::json(array('status'=> 'failure'));
     }
+    return Response::json(array('status'=> 'failure'));
   }
+
   public function test2(Request $request)
   {
     $inputs = Input::all();
@@ -222,21 +221,32 @@ class AjaxCallTest extends Controller
   public function saveMapData(){
     $inputs = Input::all();
     $proj_id = (int)trim($inputs['projectId'], '"');
+    $data = [];
+    $source = [];
+    foreach ($inputs['mapData'] as $key => $value) {
+      
+      $source[] = str_replace(" ","_",$value['source']);
+      // $source[] = $value['source'];
+      $data[] = $value['dcube'];
 
-    $exeMapData = DB::table('map_data')->where('proj_id', $proj_id)->get();
-  
-    if (count($exeMapData) > 0) {
-      $exeMapData = $exeMapData[0];
-      if ($exeMapData->map_data != $inputs['mapData']) {
-        DB::table('map_data')
-            ->where('proj_id', '=', $inputs['projectId'])
-            ->update(['map_data'=>$inputs['mapData']]);
-      }
-    } else {
-      DB::table('map_data')->insert(
-            ['proj_id' => $inputs['projectId'], 'map_data' => $inputs['mapData']]);
+      
     }
-
+    $map_data = implode(",", $data);
+    $dcube_data = implode(",", $source);
+    $exeMapData = DB::table('map_data')->where('proj_id', $proj_id)->get();
+    if (count($exeMapData) > 0) {
+        $exeMapData = $exeMapData[0];
+        if ($exeMapData->map_data != $map_data) {
+          DB::table('map_data')
+              ->where('proj_id', '=', $inputs['projectId'])
+              ->update(['map_data'=>$map_data , 'dcube_data'=>$dcube_data]);
+          
+        }
+      } else {
+        DB::table('map_data')->insert(
+              ['proj_id' => $inputs['projectId'], 'map_data' => $map_data , 'dcube_data'=>$dcube_data]);
+      }
+    
     return Response::json(array('status'=> 'success', 'data'=> $inputs));
   }
   
@@ -256,6 +266,7 @@ class AjaxCallTest extends Controller
 
     return view('setup_new_proj_new', compact($data1));
   }
+  
   private function check_array_1($data)
   {
     $brand = array('Market Overview','Market Access','Source of Business','Sales Force Effectiveness','Marketing');

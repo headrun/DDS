@@ -177,7 +177,7 @@
                        <option>Exclude</option>
                        <option>Import As If</option>
                        @foreach($dcube_column as $key2 => $dc_col)
-                       @if($dc_col == "0")
+                       @if($dc_col != "0")
                         <option @if($key1 == $key2) selected @endif>{{$dc_col}}</option>
                        @endif
                        @endforeach
@@ -5554,6 +5554,9 @@
 @stop
 @section('BaseJSLib')
 <script type="text/javascript">
+  var dcube_Table = [];
+  var source_Table = [];
+
     $(document).ready(function(){
 
       $('#mainTable').find('input[type="checkbox"]:checked').each(function(){
@@ -5656,13 +5659,13 @@
     });
 
     $('#map_data').click(function(){
-        var sourceTable = dCubeTable = [];
+        var sourceTable = [];
+        var dCubeTable = [];
         var html ='<ul class="list-group"><label >Selected</label>';
         $('.each_row').find('input[type="checkbox"]:checked').each(function(){
-            // console.log($(this).closest('.each_row').find('.val').text());
+            // console.log($(this).closest('.each_row').find('.source_name').val());
 
-            sourceTable.push($(this).closest('.each_row').find('.val').text());
-            dCubeTable.push($(this).closest('.each_row').find('.source_name').val());
+            sourceTable.push({'dcube' : $(this).closest('.each_row').find('.source_name').val(), 'source' : $(this).closest('.each_row').find('.val').text()});
             
             html += "<li class='list-group-item form-control' style='margin: 10px 0; font-weight: 500'>"+$(this).closest('.each_row').find('.val').text()+
             "    ->    "+$(this).closest('.each_row').find('.source_name').val()+"</li>";
@@ -5670,21 +5673,22 @@
         })
         html += '</ul>';
         
-        // console.log(dCubeTable);
-        $('#mapData').val(dCubeTable);
+        
+        dcube_Table = (dCubeTable);
+        source_Table = (sourceTable);
 
         $('#text_add').html(html);
     });
 
     $('#saveMapData').click(function(){
 
-      var mapData = $('#mapData').val();
+      var mapData = source_Table;
       var projectId = $('#project_id').val();
 
       if (mapData != '') {
         $('.mapping_selected_btn').attr('disabled', false);
       }
-
+      
       $.ajax({
             url: '{{url()}}/saveMapData',
             type: "POST",
@@ -5700,6 +5704,20 @@
                 if (resp.status == "success") {
                   $('#forword_project_id').val(resp.data.projectId);
                 }
+            }
+        });
+      $.ajax({
+            url: 'http://176.9.181.46:5005/inge_data?proj_id='+projectId,
+            type: "GET",
+            dataType: 'json',
+            headers: {
+                
+                'X-CSRF-TOKEN': "{{ csrf_token() }}",
+            },
+            
+
+            success:function(resp){
+
             }
         });
 
