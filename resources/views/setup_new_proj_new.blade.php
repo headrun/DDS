@@ -447,8 +447,9 @@ $(document).ready(function(){
     
 // '<div class="col-md-2"><input type="hidden" value="'+flowId+'" class="flowId"><button type="button" class="btn-xs btn-primary edit-flow"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button>&nbsp;&nbsp;<button type="button" class="btn-xs btn-danger delete-flow confirm-delete"><i class="fa fa-trash-o" aria-hidden="true"></i></button></div>'+
 //                         '</div><hr><br>';
-
-  $('#addNewKpi').click(function(){
+  function addNewKpi() 
+  {
+  // $('#addNewKpi').click(function(){
     var value = 'kpi';
     // $('#kpimap').find('input, select').not(':button, :submit, :reset, :hidden').val('').removeAttr('checked').removeAttr('selected');
     var kpi_types = [];
@@ -501,7 +502,7 @@ $(document).ready(function(){
     // geography(value);
     // dimeCalculation();
     // $('#product_selection_calculation').hide(); // dimension calculations
-  });
+  }
 
   // kpi fields
   function kpiFunction(){
@@ -1015,6 +1016,7 @@ $('body').on('click', '.edit-flow', function(){
 
   $('#save_btn').click(function(e){
       e.preventDefault();
+      addNewKpi();
       kpiKey = $('#proj_name').val();
       $.ajax({
         url : "{{url()}}/saveMappingKpi",
