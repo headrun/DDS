@@ -761,25 +761,22 @@
 var progress_bar = 35;
     $('.upload_image').on('change',function() {
       var formData = new FormData();
+      $('#message').html('loading...');
       formData.append('file', $(this)[0].files[0]);
       $.ajax({
              url: "http://13.57.91.69/DDS/storeFile",
              type : 'POST',
              data : formData,
+             dataType: 'json',
              processData: false,  // tell jQuery not to process the data
              contentType: false,  // tell jQuery not to set contentType
-             // headers: {
-                  
-           //         'X-CSRF-TOKEN': "{{ csrf_token() }}",
-                 // },
-             success : function() {
+           }).done(function(){
                     $( "#message" ).text( "successfully uploaded..." );
                      setTimeout(function(){
                         $( "#message" ).text(" ");
                      }, 10000);
-                 // alert(data);
-             }
-      });
+                 alert(res);
+          });
       console.log($(this).val());
     });
     var openFile = function(event) {

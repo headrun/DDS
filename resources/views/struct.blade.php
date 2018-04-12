@@ -82,7 +82,7 @@
                                 <tr class="each_row" id='{{$val->source_id}}'>
                                   <td>
                                       <div class="checkbox pull-right">
-                                        <label><input type="checkbox" class="ingest_chkbox" value="{{$val->source_id}}"></label>
+                                        <label><input type="checkbox" class="ingest_chkbox {{$val->source_id}}" value="{{$val->source_id}}" disabled></label>
                                       </div>
                                   </td>
                                   <td class="val">{{$val->source_table}}</td>
@@ -171,9 +171,9 @@
                   <?php $dcube_column = (explode(",",$val->dcube_col))?> 
                   @foreach($source_column as $key1 => $so_col)
                   <tr>
-                    <td>{{$so_col}}</td>
+                    <td class="source_name">{{$so_col}}</td>
                     <td>
-                      <select class="form-control source_name"><span>DCube Column</span>
+                      <select class="form-control dcube_name"><span>DCube Column</span>
                        <option>Exclude</option>
                        <option>Import As Is</option>
                        @foreach($dcube_column as $key2 => $dc_col)
@@ -191,7 +191,7 @@
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Save Mappings</button>
+          <button type="button" class="btn btn-default save_mapping" data-dismiss="modal">Save Mappings</button>
         </div>
       </div>
       </div>
@@ -5556,7 +5556,7 @@
 <script type="text/javascript">
   var dcube_Table = [];
   var source_Table = [];
-
+  var editMapData = [];
     $(document).ready(function(){
 
       $('#mainTable').find('input[type="checkbox"]:checked').each(function(){
@@ -5664,8 +5664,19 @@
         var html ='<ul class="list-group"><label >Selected</label>';
         $('.each_row').find('input[type="checkbox"]:checked').each(function(){
             // console.log($(this).closest('.each_row').find('.source_name').val());
-
-            sourceTable.push({'dcube' : $(this).closest('.each_row').find('.source_name').val(), 'source' : $(this).closest('.each_row').find('.val').text()});
+            var editMap = {};
+            var dcube = $(this).closest('.each_row').find('.source_name').val();
+            var source = $(this).closest('.each_row').find('.val').text();
+            for (var i = editMapData.length - 1; i >= 0; i--) {
+              if(editMapData[i].id == source)
+                  editMap = editMapData[i];
+            }
+            
+            sourceTable.push( {
+                'dcube' : dcube, 
+                'source' : source,
+                'editMap' : editMap
+            } );
             
             html += "<li class='list-group-item form-control' style='margin: 10px 0; font-weight: 500'>"+$(this).closest('.each_row').find('.val').text()+
             "    ->    "+$(this).closest('.each_row').find('.source_name').val()+"</li>";
@@ -5676,7 +5687,7 @@
         
         dcube_Table = (dCubeTable);
         source_Table = (sourceTable);
-
+        
         $('#text_add').html(html);
     });
 
@@ -5726,5 +5737,24 @@
         });
 
     });
+    $('.save_mapping').on('click',function() {
+      var source_name = [];
+      var dcube_name = [];
+      var id = $(this).parent().parent().parent().parent().attr('id').replace("_mod","");
+      $(this).parent().parent().parent().parent().find('.modal_table').find('tbody').find('tr').each(function(){
+          source_name.push($(this).find('.source_name').html());
+          dcube_name.push($(this).find('.dcube_name').val());
+          
+      });
+      var checkbox = '.'+id.replace(/ /gi,"_");
+      $(checkbox).prop('checked', true);
+      var obj = {
+        'id' : id.replace(/_/gi," "),
+        'source' : source_name,
+        'dcube' : dcube_name,
+      };
+      editMapData.push(obj);
+    } );
+
 </script>
 @stop

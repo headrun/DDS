@@ -223,31 +223,54 @@ class AjaxCallTest extends Controller
     $proj_id = (int)trim($inputs['projectId'], '"');
     $data = [];
     $source = [];
+    $editMapDataSource = [];
+    $editMapDataDcube = [];
     foreach ($inputs['mapData'] as $key => $value) {
-      
-      $source[] = str_replace(" ","_",$value['source']);
+      $src = str_replace(" ","_",$value['source']);
+      $source[] = $src;
       // $source[] = $value['source'];
-      $data[] = $value['dcube'];
-
+      $data = $value['dcube'];
       
-    }
-    $map_data = implode(",", $data);
-    $dcube_data = implode(",", $source);
-    $exeMapData = DB::table('map_data')->where('proj_id', $proj_id)->get();
-    if (count($exeMapData) > 0) {
-        $exeMapData = $exeMapData[0];
-        if ($exeMapData->map_data != $map_data) {
-          DB::table('map_data')
-              ->where('proj_id', '=', $inputs['projectId'])
-              ->update(['map_data'=>$map_data , 'dcube_data'=>$dcube_data]);
-          
-        }
-      } else {
-        DB::table('map_data')->insert(
-              ['proj_id' => $inputs['projectId'], 'map_data' => $map_data , 'dcube_data'=>$dcube_data]);
+        
+      foreach ($value['editMap']['source'] as $k => &$v) {
+        $v = trim($v);
       }
-    
-    return Response::json(array('status'=> 'success', 'data'=> $inputs));
+      $map_data = $data;
+      $dcube_data = $src;
+      $editMapSource = (implode(",", $value['editMap']['source']));
+      $editMapDcube = implode(",", $value['editMap']['dcube']);
+      $exeMapData = DB::table('map_data')->where('proj_id', $proj_id)->where('dcube_data',$src)->get();
+      
+      if (count($exeMapData) > 0) {
+          $exeMapData = $exeMapData[0];
+          
+          // if ($exeMapData->map_data != $map_data) {
+            DB::table('map_data')
+                ->where('proj_id', '=', $inputs['projectId'])
+                ->where('dcube_data', '=', $src)
+                ->update(
+                    [
+                      'map_data'=>$map_data , 
+                      'dcube_data'=>$dcube_data,
+                      'source'=>$editMapSource,
+                      'dcube'=>$editMapDcube,
+                    ]
+                );
+            
+          // }
+        } else {
+          DB::table('map_data')->insert(
+                    [
+                      'proj_id' => $inputs['projectId'],
+                      'map_data'=>$map_data , 
+                      'dcube_data'=>$dcube_data,
+                      'source'=>$editMapSource,
+                      'dcube'=>$editMapDcube
+                    ]
+                );
+        }
+    }  
+      return Response::json(array('status'=> 'success', 'data'=> $inputs));
   }
   
   public function kpi(){
