@@ -597,12 +597,14 @@
             <br>
             <input type="hidden" name="ext_name" id="csv_ext_name">
             <input type="hidden" name="csvTypeName" id="csvTypeName">
+            <input type="hidden" name="fileName" id="fileName" value="">
             <div ><input type='hidden' id="csvDataKey" name="csvDataKey"></div>
             <!-- <img id="output"> -->
             <div ><input type='hidden' id="csvFileName" name="csvFileName"></div>
-            <div><input type='file'  accept='image/*' onchange='openFile(event)' id="choosefil1" style="display: none"></div>
-            <div><button class="btn btn-default" id="choosefil" type="button">Click To Upload File</button></div>
-
+            <div><input type='file' class="upload_image" accept='image/*' id="choosefil1" style="display: none"></div>
+            <div><button class="btn btn-default" id="choosefil" type="button">Click To Upload File</button>
+            <label id="message"></label>
+            </div>
           </div>
           <hr>
           <h4><label>Readen Options</label></h4>
@@ -757,6 +759,29 @@
     });
 */
 var progress_bar = 35;
+    $('.upload_image').on('change',function() {
+      var formData = new FormData();
+      formData.append('file', $(this)[0].files[0]);
+      $.ajax({
+             url: "http://13.57.91.69/DDS/storeFile",
+             type : 'POST',
+             data : formData,
+             processData: false,  // tell jQuery not to process the data
+             contentType: false,  // tell jQuery not to set contentType
+             // headers: {
+                  
+           //         'X-CSRF-TOKEN': "{{ csrf_token() }}",
+                 // },
+             success : function() {
+                    $( "#message" ).text( "successfully uploaded..." );
+                     setTimeout(function(){
+                        $( "#message" ).text(" ");
+                     }, 10000);
+                 // alert(data);
+             }
+      });
+      console.log($(this).val());
+    });
     var openFile = function(event) {
       var input = event.target;
 
@@ -1002,6 +1027,7 @@ var progress_bar = 35;
         var csvTypeName = $('#csvTypeName').val();
         var s3TypeName = $('#s3TypeName').val();
         var project_id = $('#project_id').val();
+        var filename = $('#fileName').val();
 
         // Database type data
         var serializedData = '';
@@ -1035,7 +1061,7 @@ var progress_bar = 35;
                 
                 'X-CSRF-TOKEN': "{{ csrf_token() }}",
             },
-            data: {'serializedData': serializedData, 'project_id': project_id},
+            data: {'serializedData': serializedData, 'project_id': project_id, 'name':filename},
 
             success:function(resp){
 
@@ -1194,6 +1220,12 @@ var progress_bar = 35;
 
         var type_name = $(this).closest('.each_row').find('.type_name').val();
 
+        if(subtype_name == 'CSV'){
+            $('#choosefil1').attr('accept', '.csv');
+        }else if(subtype_name == 'TEXT'){
+            $('#choosefil1').attr('accept', '.txt');
+        }
+
         $.ajax({
 
             url: '{{url()}}/getExtractor',
@@ -1283,8 +1315,12 @@ var progress_bar = 35;
  $( "#choosefile" ).on( "click", function() {
   $( "#choosefile1" ).trigger( "click" );
 });
- $( "#choosefil1" ).on( "click", function() {
+ $( "#choosefil" ).on( "click", function() {
   $( "#choosefil1" ).trigger( "click" );
 });
+ $('input[type="file"]').change(function(e){
+    var fileName = e.target.files[0].name;
+    $('#fileName').val(fileName);
+ });
 </script>
 @stop

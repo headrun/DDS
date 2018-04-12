@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="{{url()}}/assets/vendor/css/breadcrumb.css">
 @stop
 @section('BaseContent')
+
 <div class="container-fluid bg">
   <div class="visualization">
       <div class="" style="padding: 10px">
@@ -18,8 +19,11 @@
                   
                 </div>
               </div>
+
               <div class="row" style="text-align: center">
+                <input type="hidden" value="{{$_GET['forword_project_id']}}" id="projectID">
                 @if(isset($proj_id))
+                
                 <div class="col-md-3">
                  <a href="{{url()}}/setup_new_proj/{{$project_id}}" class="active"><img class="progress1 img-circle" src="{{url()}}/assets/vendor/img/set_up_new_project.png"><br>Setup New Project</a>
                 </div>
@@ -76,9 +80,9 @@
                         </div>
                         <div class="col-md-3">
                           <select class="form-control .proj_name" id='proj_name' style="margin-top: -5px; width: 220px; margin-left: -15px">
-                            <option></option>
+                            <option value=""></option>
                             @foreach($options as $option)
-                            <option>{{$option}}</option>
+                            <option value="{{$option}}">{{$option}}</option>
                             @endforeach
                             <!-- <option>Market Overview</option>
                             <option>Market Access</option>
@@ -268,7 +272,7 @@
         <h4 class="modal-title">DDS Orchestrator</h4>
       </div>
       <div class="modal-body">
-        <iframe src="http://176.9.181.46:8080/admin/" style="width: 100%; height: 500px;"></iframe>
+        <iframe src="http://13.57.91.69:8080/admin/" style="width: 100%; height: 500px;"></iframe>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -395,7 +399,7 @@ $(document).ready(function(){
                           kpi_arr+
                           subKpiArr+
                           dim_arr+
-                          '<div class="col-md-2"><input type="hidden" value="'+flowId+'" class="flowId"><i class="glyphicon glyphicon-pencil" aria-hidden="true" title="Click to Edit"></i>&nbsp;&nbsp;<i class="fa fa-trash-o delete-flow confirm-delete" aria-hidden="true" title="Click to Delete"></i></div>'+
+                          '<div class="col-md-2"><input type="hidden" value="'+flowId+'" class="flowId"><i class="glyphicon glyphicon-pencil edit-data" aria-hidden="true" title="Click to Edit"></i>&nbsp;&nbsp;<i class="fa fa-trash-o delete-flow confirm-delete" aria-hidden="true" title="Click to Delete"></i></div>'+
                         '</div><hr><br>';
 
             }
@@ -482,19 +486,33 @@ $(document).ready(function(){
       dim.push(result[i].value);
     }
     var project_name = ($('#proj_name').val());
+    var project_id = ($('#projectID').val());
     $.ajax({
         url : "{{url()}}/updateKpi",
         type: "POST",
         dataType: 'json',
         headers: {
-             'X-CSRF-TOKEN': "{{ csrf_token() }}",
+             //'X-CSRF-TOKEN': "{{ csrf_token() }}",
         },
-        data: {'project_name': project_name , 'kpi' : kpi_types , 'sub_kpi' : kpi_sub_type , 'dim' : dim},
+        data: {'projectID' : project_id,'project_name': project_name , 'kpi' : kpi_types , 'sub_kpi' : kpi_sub_type , 'dim' : dim},
         success: function(response){
-          console.log(response);
-
+          //$('input[type=checkbox]').each(function() {
+            //          this.checked = false;
+          //});
+          $('#proj_name option').prop("enabled", true);
+          $('input:checkbox').removeAttr('checked');
         }
-      });
+    });
+ //    $.ajax({
+ //        url: 'http://176.9.181.38:5005/kpi_script',
+ //        method: "POST",
+ //        dataType: 'json',
+ //        data : {'proj_id' : project_id },
+
+ //        success:function(resp){
+
+ //        }
+	// });
     // kpiFunction();
     // subKpiFunction(value);
     // productSelection(value);
@@ -807,7 +825,7 @@ $('#proj_name').change(function(){
                           kpi_arr+
                           subKpiArr+
                           dim_arr+
-                          '<div class="col-md-2"><input type="hidden" value="'+flowId+'" class="flowId"><i class="glyphicon glyphicon-pencil" aria-hidden="true" title="Click to Edit"></i>&nbsp;&nbsp;<i class="fa fa-trash-o delete-flow confirm-delete" aria-hidden="true" title="Click to Delete"></i></div>'+
+                          '<div class="col-md-2"><input type="hidden" value="'+flowId+'" class="flowId"><i class="glyphicon glyphicon-pencil edit-data" aria-hidden="true" title="Click to Edit"></i>&nbsp;&nbsp;<i class="fa fa-trash-o delete-flow confirm-delete" aria-hidden="true" title="Click to Delete"></i></div>'+
                         '</div><hr><br>';
 
             }
@@ -944,7 +962,7 @@ $('.flowsInfo').on('click', '.delete-flow', function(){
                           kpi_arr+
                           subKpiArr+
                           dim_arr+
-                          '<div class="col-md-2"><input type="hidden" value="'+flowId+'" class="flowId"><i class="glyphicon glyphicon-pencil" aria-hidden="true" title="Click to Edit"></i>&nbsp;&nbsp;<i class="fa fa-trash-o delete-flow confirm-delete" aria-hidden="true" title="Click to Delete"></i></div>'+
+                          '<div class="col-md-2"><input type="hidden" value="'+flowId+'" class="flowId"><i class="glyphicon glyphicon-pencil edit-data" aria-hidden="true" title="Click to Edit"></i>&nbsp;&nbsp;<i class="fa fa-trash-o delete-flow confirm-delete" aria-hidden="true" title="Click to Delete"></i></div>'+
                         '</div><hr><br>';
 
             }
@@ -1016,8 +1034,40 @@ $('body').on('click', '.edit-flow', function(){
 
   $('#save_btn').click(function(e){
       e.preventDefault();
-      addNewKpi();
-      kpiKey = $('#proj_name').val();
+     // addNewKpi();
+     // kpiKey = $('#proj_name').val();
+     viewType = $('#proj_name').val();
+     viewId = $('#viewId').val();
+     projectId = $('#projectID').val();
+     var kpi_arr = [];
+     var sub_kpi_arr = [];
+     var dim= [];
+
+      result = $('.kpi_type:checkbox:checked');
+      for(var i = 0 ; i < result.length ; i++)      
+      {
+          kpi_arr.push(result[i].value);
+      }
+      result = $('.kpi_sub_type:checkbox:checked');
+      for(var i = 0 ; i < result.length ; i++)
+      {
+          sub_kpi_arr.push(result[i].value);
+      }
+      result = $('.prod_sel:checkbox:checked');
+      for(var i = 0 ; i < result.length ; i++)
+      {
+          dim.push(result[i].value);
+      }
+      result = $('.time_period:checkbox:checked');
+      for(var i = 0 ; i < result.length ; i++)
+      {
+          dim.push(result[i].value);
+      }
+      result = $('.demo_grap:checkbox:checked');
+      for(var i = 0 ; i < result.length ; i++)
+      {
+          dim.push(result[i].value);
+      }
       $.ajax({
         url : "{{url()}}/saveMappingKpi",
         type: "POST",
@@ -1025,15 +1075,19 @@ $('body').on('click', '.edit-flow', function(){
         headers: {
              'X-CSRF-TOKEN': "{{ csrf_token() }}",
         },
-        data: {'kpi_arr':kpi_arr,'sub_kpi_arr':sub_kpi_arr,'dim_arr':dim_arr,'view_type':view_type,'viewId':viewId},
+        data: {'kpi_arr':kpi_arr,'sub_kpi_arr':sub_kpi_arr,'dim_arr':dim,'view_type':viewType,'viewId':viewId,'project_id':projectId},
         success: function(response){
+            $('input:checkbox').each(function() {
+                this.checked = false;
+            });
+            $('#viewId').val("0");
           var html = '';
           
           if (response.status == 'success') {
             // console.log(response.data);
 
             // alert('Saved Successfully...!');
-            $('#sucessMsg').modal('show'); 
+           // $('#sucessMsg').modal('show'); 
 
             var flowRes = response.data.getKpiMaps;
 
@@ -1128,7 +1182,7 @@ $('body').on('click', '.edit-flow', function(){
                           kpi_arr+
                           subKpiArr+
                           dim_arr+
-                          '<div class="col-md-2"><input type="hidden" value="'+flowId+'" class="flowId"><i class="glyphicon glyphicon-pencil" aria-hidden="true" title="Click to Edit"></i>&nbsp;&nbsp;<i class="fa fa-trash-o delete-flow confirm-delete" aria-hidden="true" title="Click to Delete"></i></div>'+
+                          '<div class="col-md-2"><input type="hidden" value="'+flowId+'" class="flowId"><i class="glyphicon glyphicon-pencil edit-data" aria-hidden="true" title="Click to Edit"></i>&nbsp;&nbsp;<i class="fa fa-trash-o delete-flow confirm-delete" aria-hidden="true" title="Click to Delete"></i></div>'+
                         '</div><hr><br>';
 
             }
@@ -1177,6 +1231,39 @@ $('body').on('click', '.edit-flow', function(){
       $('.progress-bar').css("width","100%");   
       $('.mapping_kpi').attr("src","{{url()}}/assets/vendor/img/mappingkpi.png");   
   });
+});
+
+$('.flowsInfo').on('click', '.edit-data', function() {
+    //$('#proj_name option').prop("disabled", true);
+    var flowId = $(this).closest('.col-md-2').find('.flowId').val();
+    $('#viewId').val(flowId);
+    $('input:checkbox').each(function() {
+        this.checked = false;
+    });
+
+    $.ajax({
+        url : "{{url()}}/getDataForEdit",
+        type: "POST",
+        dataType: 'json',
+        headers: {
+                    'X-CSRF-TOKEN': "{{ csrf_token() }}",
+                 },
+        data: {'flowId':flowId},
+        success: function(response){
+            var kpi = response.data[0]['kpi'].split(",");
+            for(var i = 0 ; i < kpi.length ; i++){
+                $('.kpiArr1 input[value = "'+kpi[i]+'"]').prop('checked', true);
+            }
+            var subKpi = response.data[0]['sub_kpi'].split(",");
+            for(var i = 0 ; i < subKpi.length ; i++){
+                $('#calSubKpi1 input[value = "'+subKpi[i]+'"]').prop('checked', true);
+            }
+            var dimension = response.data[0]['dimension'].split(",");
+            for(var i = 0 ; i < dimension.length ; i++){
+                $('#1dimensionInfo input[value = "'+dimension[i]+'"]').prop('checked', true);
+            }
+                                                                                                                                                  }
+    });
 });
 </script>
 @stop

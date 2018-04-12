@@ -175,7 +175,7 @@
                     <td>
                       <select class="form-control source_name"><span>DCube Column</span>
                        <option>Exclude</option>
-                       <option>Import As If</option>
+                       <option>Import As Is</option>
                        @foreach($dcube_column as $key2 => $dc_col)
                        @if($dc_col != "0")
                         <option @if($key1 == $key2) selected @endif>{{$dc_col}}</option>
@@ -5688,7 +5688,6 @@
       if (mapData != '') {
         $('.mapping_selected_btn').attr('disabled', false);
       }
-      
       $.ajax({
             url: '{{url()}}/saveMapData',
             type: "POST",
@@ -5707,17 +5706,22 @@
             }
         });
       $.ajax({
-            url: 'http://176.9.181.46:5005/inge_data?proj_id='+projectId,
-            type: "GET",
+            url: 'http://176.9.181.38:5005/spark_script',
+            method: "POST",
             dataType: 'json',
-            headers: {
-                
-                'X-CSRF-TOKEN': "{{ csrf_token() }}",
-            },
-            
+            data : {'proj_id' : projectId },
 
             success:function(resp){
 
+            }
+        });
+      $.ajax({
+            url: 'http://176.9.181.38:5005/inge_data',
+            method: "POST",
+            dataType: 'json',
+            data : {'proj_id' : projectId },
+
+            success:function(resp){
             }
         });
 

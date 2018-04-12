@@ -370,11 +370,11 @@ class CommonController extends Controller
                     ->where('id', $exeIngId->id)
                     ->update(array(
                         'ing_id' => $ing_data->id, 'ext_name' => $ext_name,
-                        'csv_file' => $params['csvFileName'], 'col_delimiter' => $params['colDelimiter'], 'row_delimiter' => $params['rowDelimiter'],'quote_char' => $params['quoteChar'], 'comment_char' => $params['commentChar'], 'view_res' => $view_result, 'num_1' => $params['sel1'],'num_2' => $params['sel2']
+                        'csv_file' => $inputs['name'], 'col_delimiter' => $params['colDelimiter'], 'row_delimiter' => $params['rowDelimiter'],'quote_char' => $params['quoteChar'], 'comment_char' => $params['commentChar'], 'view_res' => $view_result, 'num_1' => $params['sel1'],'num_2' => $params['sel2']
                     ));
             } else {
                 DB::table('ingestion_data')->insert([
-                    'proj_id' => $inputs['project_id'], 'ing_id' => $ing_data->id, 'ext_name' => $ext_name, 'key' => $params['csvDataKey'], 'csv_file' => $params['csvFileName'], 'col_delimiter' => $params['colDelimiter'], 'row_delimiter' => $params['rowDelimiter'],'quote_char' => $params['quoteChar'], 'comment_char' => $params['commentChar'], 'view_res' => $view_result, 'num_1' => $params['sel1'],'num_2' => $params['sel2']
+                    'proj_id' => $inputs['project_id'], 'ing_id' => $ing_data->id, 'ext_name' => $ext_name, 'key' => $params['csvDataKey'], 'csv_file' => $inputs['name'], 'col_delimiter' => $params['colDelimiter'], 'row_delimiter' => $params['rowDelimiter'],'quote_char' => $params['quoteChar'], 'comment_char' => $params['commentChar'], 'view_res' => $view_result, 'num_1' => $params['sel1'],'num_2' => $params['sel2']
                 ]);
             }
         }
@@ -422,6 +422,19 @@ class CommonController extends Controller
                         ->where('id', '=', $inputs['flowId'])
                         ->get();
         
+        if (count($flowInfo) > 0) {
+            return Response::json(array('status'=> 'success', 'data'=> $flowInfo));
+        }else{
+            return Response::json(array('status'=> 'fail'));
+        }
+    }
+
+    public function getDataForEdit(){
+         $inputs = Input::all();
+         $flowInfo = DB::table('kpi_selection_info')
+                        ->where('id', '=', $inputs['flowId'])
+                        ->get();
+
         if (count($flowInfo) > 0) {
             return Response::json(array('status'=> 'success', 'data'=> $flowInfo));
         }else{
@@ -482,28 +495,61 @@ class CommonController extends Controller
 
     public function saveMappingKpi(){
         $inputs =  Input::all();
-        
+        $name = "";
+        $kpi = "Empty";
+        $sub_kpi = "Empty";
+        $dim = "Empty";
+
+        if($inputs['view_type'] != "")
+        {
+            $name = $inputs['view_type'];
+        }else{
+            return "Project Name Not Available";
+        }
+        if($inputs['project_id'] != "")
+        {
+            $proj_id = $inputs['project_id'];
+        }else{
+            return "Project ID Not Available";
+        }
+        if(isset($inputs['kpi_arr']))
+        {
+            $kpi = $inputs['kpi_arr'];
+            $kpi = implode(",",$kpi);
+            // return $kpi;
+        }
+        if(isset($inputs['sub_kpi_arr']))
+        {
+            $sub_kpi = $inputs['sub_kpi_arr'];
+            $sub_kpi = implode(",",$sub_kpi);
+        }
+        if(isset($inputs['dim_arr']))
+        {
+            $dim = $inputs['dim_arr'];
+            $dim = implode(",",$dim);
+        }
         if ($inputs['viewId'] != 0) {
             // update query
             DB::table('kpi_selection_info')
-                ->where('id', '=', $inputs['viewId'])
-                ->update([
-                    'kpi'=>json_encode($inputs['kpi_arr']),
-                    'sub_kpi'=>json_encode($inputs['sub_kpi_arr']),
-                    'dimension'=>json_encode($inputs['dim_arr'])
-                ]);
+            ->where('id', '=', $inputs['viewId'])
+            ->update([
+                    'kpi'=>$kpi,
+                    'sub_kpi'=>$sub_kpi,
+                    'dimension'=>$dim
+            ]);
 
         }else{
             // insert query
             DB::table('kpi_selection_info')->insert([
-                'id'=> '',
-                'project_name'=> $inputs['view_type'],
-                'kpi'=> json_encode($inputs['kpi_arr']),
-                'sub_kpi'=>json_encode($inputs['sub_kpi_arr']),
-                'dimension'=>json_encode($inputs['dim_arr'])
+                    'id'=> '',
+                    'project_name'=> $inputs['view_type'],
+                    'kpi'=> $kpi,
+                    'sub_kpi'=>$sub_kpi,
+                    'dimension'=>$dim,
+                    'proj_id'=>$proj_id
             ]);
-
         }
+        
         $getKpiMaps = DB::table('kpi_selection_info')
                     ->where('project_name', '=', $inputs['view_type'])
                     ->get();

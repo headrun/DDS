@@ -368,12 +368,21 @@ class AjaxCallTest extends Controller
     
     if($inputs['project_name'] != "")
     {
-        $name = $inputs['project_name'];
+      $name = $inputs['project_name'];
     }
     else
     {
-        return "Project Name Not Available";
+      return "Project Name Not Available";
     }
+    if(isset($inputs['projectID']))
+    {
+        $project_id = $inputs['projectID'];
+    }
+    else
+    {
+      return "Project ID Not Available";
+    }
+
     if(isset($inputs['kpi']))
     {
         $kpi = $inputs['kpi'];
@@ -391,8 +400,8 @@ class AjaxCallTest extends Controller
         $dim = implode(",",$dim);
     }
 
-    return DB::table('kpi_selection_info')->insert(
-            ['project_name' => $name, 'kpi' => $kpi, 'sub_kpi' => $sub_kpi, 'dimension' => $dim]);    
+    DB::table('kpi_selection_info')->insert(
+            ['proj_id'=>$project_id,'project_name' => $name, 'kpi' => $kpi, 'sub_kpi' => $sub_kpi, 'dimension' => $dim]);    
   }
 
 }
