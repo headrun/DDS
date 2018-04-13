@@ -235,15 +235,16 @@ class AjaxCallTest extends Controller
       foreach ($value['editMap']['source'] as $k => &$v) {
         $v = trim($v);
       }
+      $value['editMap']['id'] = str_replace(" ", "_", $value['editMap']['id']);
       $map_data = $data;
       $dcube_data = $src;
       $editMapSource = (implode(",", $value['editMap']['source']));
       $editMapDcube = implode(",", $value['editMap']['dcube']);
-      $exeMapData = DB::table('map_data')->where('proj_id', $proj_id)->where('dcube_data',$src)->get();
+      $exeMapData = DB::table('map_data')->where('proj_id', $proj_id)->where('dcube_data',$value['editMap']['id'])->get();
       
       if (count($exeMapData) > 0) {
           $exeMapData = $exeMapData[0];
-          
+
           // if ($exeMapData->map_data != $map_data) {
             DB::table('map_data')
                 ->where('proj_id', '=', $inputs['projectId'])
@@ -251,7 +252,7 @@ class AjaxCallTest extends Controller
                 ->update(
                     [
                       'map_data'=>$map_data , 
-                      'dcube_data'=>$dcube_data,
+                      'dcube_data'=>$value['editMap']['id'],
                       'source'=>$editMapSource,
                       'dcube'=>$editMapDcube,
                     ]
@@ -263,7 +264,7 @@ class AjaxCallTest extends Controller
                     [
                       'proj_id' => $inputs['projectId'],
                       'map_data'=>$map_data , 
-                      'dcube_data'=>$dcube_data,
+                      'dcube_data'=>$value['editMap']['id'],
                       'source'=>$editMapSource,
                       'dcube'=>$editMapDcube
                     ]
@@ -426,5 +427,6 @@ class AjaxCallTest extends Controller
     DB::table('kpi_selection_info')->insert(
             ['proj_id'=>$project_id,'project_name' => $name, 'kpi' => $kpi, 'sub_kpi' => $sub_kpi, 'dimension' => $dim]);    
   }
+
 
 }

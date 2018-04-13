@@ -5668,7 +5668,7 @@
             var dcube = $(this).closest('.each_row').find('.source_name').val();
             var source = $(this).closest('.each_row').find('.val').text();
             for (var i = editMapData.length - 1; i >= 0; i--) {
-              if(editMapData[i].id == source)
+              if(editMapData[i].id.indexOf(source) != -1)
                   editMap = editMapData[i];
             }
             
