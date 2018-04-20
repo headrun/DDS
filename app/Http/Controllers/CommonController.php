@@ -50,7 +50,8 @@ class CommonController extends Controller
      public function ingestion()
      {
         $inputs = Input::all();
-        // return $inputs;
+        // echo "<pre>";
+        // print_r( $inputs);die;
         $values = array();
         $proj_name = $ta = $fa= $proj_type = $proj_sub_type = '';
 
@@ -73,7 +74,7 @@ class CommonController extends Controller
                 $proj_type = $inputs['proj_type'];
 
             if (isset($inputs['proj_sub_type']) && !empty($inputs['proj_sub_type']))
-                $proj_sub_type = $inputs['proj_sub_type'];
+                $proj_sub_type = implode(",", $inputs['proj_sub_type']);
 
             $final_array = array();
             $values = Session::get('values');
@@ -124,8 +125,8 @@ class CommonController extends Controller
             $addProjId = array_push($values,$proj_id);
             
             $newPrj = 'New Project';
-            $data1 = array('final_array1', 'final_array', 'projName', 'proj_id', 'newPrj', 'values');
-            return view('ingestion', compact($data1));
+            $data1 = array('allProjects'=> $final_array1,'thisProject'=>$final_array, 'projectName'=>$projName, 'projectId'=>$proj_id, 'projectType' =>$newPrj);
+            return Response::json(array('status'=> 'success', 'data'=> $data1));
         } else {
             if (isset($inputs['check_box']) && !empty($inputs['check_box'])){
                 Session::put('values', $inputs['check_box']);
@@ -152,7 +153,7 @@ class CommonController extends Controller
             // return $values;
             foreach ($values as $key => $value) 
             {
-                $data = Ingestion::where('data', '=', $value)->groupBy('source')->get();
+                $data = Ingestion::select('source')->where('data', '=', $value)->groupBy('source')->get();
                 $arr = array('data'=> $value, 'sources'=> $data);
                 // return $arr;
                 array_push($final_array, $arr);
@@ -458,7 +459,13 @@ class CommonController extends Controller
         }
 
     }
+    public function createNewProj(){
+        $fa = DB::table('ta_fa')->where('fa', '!=', '')->distinct('fa')->lists('fa');
+        $ta = DB::table('ta_fa')->where('ta', '!=', '')->distinct('ta')->lists('ta');
 
+        $data1 = array('ta', 'fa');
+        return view('createProj/createNewProj', compact($data1));
+    }
     public function setup_new_proj(){
         $fa = DB::table('ta_fa')->where('fa', '!=', '')->distinct('fa')->lists('fa');
         $ta = DB::table('ta_fa')->where('ta', '!=', '')->distinct('ta')->lists('ta');

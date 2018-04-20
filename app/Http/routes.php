@@ -19,6 +19,9 @@ Route::get('/login',function(){
 	return view('Login.Login');
 });
 
+Route::any('/storeFile','AjaxCallTest@storeFile');
+	
+
 // Auth::routes();
 
 Route::any('/login1', 'AjaxCallTest@login');
@@ -37,7 +40,7 @@ Route::group(['middleware' => 'auth'], function () {
 		return view('extractor_library');
 	});
 
-
+	Route::get('/create_new_proj','CommonController@createNewProj');
 	Route::get('/setup_new_proj','CommonController@setup_new_proj');
 	Route::get('/setup_new_proj/{id}','CommonController@update_exe_proj');
 
@@ -166,7 +169,7 @@ Route::group(['middleware' => 'auth'], function () {
 
 	Route::get('/kpilib','AjaxCallTest@kpiLib');
 
-	Route::get('/struct','AjaxCallTest@struct');
+	Route::any('/struct','AjaxCallTest@struct');
 	Route::any('/saveMapData','AjaxCallTest@saveMapData');
 
 	Route::any('/logout','AjaxCallTest@logout');

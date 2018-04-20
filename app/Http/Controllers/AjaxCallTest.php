@@ -78,20 +78,20 @@ class AjaxCallTest extends Controller
         if (in_array($value, $checkedData)) {
           $var = $var."<div class='checkbox'>";
           $var = $var."<label>";
-          $var = $var."<input  type ='checkbox' class = 'sid' name='proj_sub_type[]' value = '".$value."' id = 'sid' checked>".$value;
+          $var = $var."<input  type ='checkbox' class = 'sid' name='proj_sub_type[]' value = '".$value."'   checked>".$value;
           $var = $var."</label>";
           $var = $var."</div>";
         } else {
           $var = $var."<div class='checkbox'>";
           $var = $var."<label>";
-          $var = $var."<input  type ='checkbox' class = 'sid' name='proj_sub_type[]' value = '".$value."' id = 'sid'>".$value;
+          $var = $var."<input  type ='checkbox' class = 'sid' name='proj_sub_type[]' value = '".$value."'  >".$value;
           $var = $var."</label>";
           $var = $var."</div>";
         }
       } else {
         $var = $var."<div class='checkbox'>";
         $var = $var."<label>";
-        $var = $var."<input  type ='checkbox' class = 'sid' name='proj_sub_type[]' value = '".$value."' id = 'sid'>".$value;
+        $var = $var."<input  type ='checkbox' class = 'sid' name='proj_sub_type[]' value = '".$value."'  >".$value;
         $var = $var."</label>";
         $var = $var."</div>";
       }
@@ -195,9 +195,16 @@ class AjaxCallTest extends Controller
       // return $d_struct_id[$dStrEle];
       $data1 = DB::table('sour_col_map')->where('source_id', $d_struct_id[$dStrEle])->get();
       if (!empty($data)) {
+        $data[0]->dcube_tables = str_replace("[", "", $data[0]->dcube_tables);
+        $data[0]->dcube_tables = str_replace("]", "", $data[0]->dcube_tables);
+        $data[0]->dcube_tables = str_replace("\"", "", $data[0]->dcube_tables);
+        $data[0]->dcube_tables = explode(",", $data[0]->dcube_tables);
         array_push($map_data, $data[0]); 
       }
+      // return $data1;
       if (!empty($data1)) {
+        $data1[0]->dcube_col = explode(",", trim($data1[0]->dcube_col));
+        $data1[0]->source_col = explode(",", trim($data1[0]->source_col));
         array_push($sour_data, $data1[0]); 
       }
     }
@@ -209,13 +216,14 @@ class AjaxCallTest extends Controller
     // return $checkedData;
     if (isset($checkedData)) {
       // return $checkedData;
-      $data1 = array('d_struct_id','proj_id', 'checkedData', 'map_data','sour_data');
+      $data1 = array('ids'=>$d_struct_id, 'mainMap' => $map_data, 'editMap' => $sour_data);
       
     } else {
-      $data1 = array('d_struct_id','proj_id', 'map_data','sour_data');
+      $data1 = array('ids'=>$d_struct_id, 'mainMap' => $map_data, 'editMap' => $sour_data)  ;
     }
     // return $data1;
-    return view('struct', compact($data1));
+    return Response::json(array('status'=> 'success', 'data'=> $data1));
+    // return view('struct', compact($data1));
   }
 
   public function saveMapData(){
